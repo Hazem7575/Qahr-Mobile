@@ -302,3 +302,4 @@
 # Incoming-only alias ("serverId mobileId in ..."): the mobile's CMsgRouletteBet 10187 carries 2348's body (count u8,
 # then {number u8, price u32}); the server keeps sending 2348 as 10090.
 2348 10187 in MsgRoulettePlayerBet CMsgRouletteBet
+2430 10412 MsgInnerWebPage CMsgInnerWebPage

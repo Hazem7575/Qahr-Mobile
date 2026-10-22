@@ -56,7 +56,7 @@ namespace Qahr.Mobile.Login
             await Send(s, "text/html; charset=utf-8", Encoding.UTF8.GetBytes(html), ct);
         }
 
-        static async Task Send(NetworkStream s, string type, byte[] body, CancellationToken ct, string status = "200 OK", string cache = "no-store")
+        internal static async Task Send(NetworkStream s, string type, byte[] body, CancellationToken ct, string status = "200 OK", string cache = "no-store")
         {
             byte[] head = Encoding.ASCII.GetBytes("HTTP/1.1 " + status + "\r\nContent-Type: " + type + "\r\nCache-Control: " + cache + "\r\nContent-Length: "
                 + body.Length + "\r\nConnection: close\r\n\r\n");
@@ -230,7 +230,7 @@ namespace Qahr.Mobile.Login
         }
 
         // image column: a full http(s) link, a file of web\shop (pack_780000.png), or empty = the big chest
-        static string ImageUrl(string image)
+        internal static string ImageUrl(string image)
         {
             image = (image ?? "").Trim();
             if (image.StartsWith("http://", StringComparison.OrdinalIgnoreCase) || image.StartsWith("https://", StringComparison.OrdinalIgnoreCase))
@@ -240,10 +240,10 @@ namespace Qahr.Mobile.Login
             return "/qahr/shopart/pack_780057.png";
         }
 
-        static string Esc(string s) { return WebUtility.HtmlEncode(s ?? ""); }
+        internal static string Esc(string s) { return WebUtility.HtmlEncode(s ?? ""); }
 
         // the phone Mall: blurred shelf background, grey card with a title strip, gold price bar with corner ornaments
-        static string Page(string content)
+        internal static string Page(string content)
         {
             return "<!doctype html><html><head><meta charset='utf-8'>" +
                 "<meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'><title>Credit</title><style>" +
@@ -279,7 +279,7 @@ namespace Qahr.Mobile.Login
                 ".empty{background:#1e2024e6;border:1px solid #5d5f63;padding:30px 40px;font-size:18px}" +
                 "@media (max-width:640px){.wrap{flex-direction:column}.card{flex:none}.pic{min-height:180px}}" +
                 ".x{position:fixed;top:10px;right:12px;width:46px;height:46px;background:url('/qahr/shopart/close.png') center/contain no-repeat;z-index:9}" +
-                "</style></head><body><a class='x' href='#' onclick=\"try{Qahr.close()}catch(e){history.back()}return false\"></a>" + content + "</body></html>";
+                "</style></head><body><a class='x' href='#' onclick=\"if(window.Qahr){Qahr.close()}else if(window.objNotifyClient){objNotifyClient.Notify(1,0)}else{history.back()}return false\"></a>" + content + "</body></html>";
         }
     }
 }

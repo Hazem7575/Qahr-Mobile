@@ -105,6 +105,7 @@ namespace Qahr.Mobile.Login
                 string head = Encoding.ASCII.GetString(buf, 0, headerEnd);
                 string[] lines = head.Split("\r\n");
                 if (MobileShopPage.Matches(lines[0])) { await MobileShopPage.Handle(s, lines[0], cts.Token); return; }// QahrMobile: in-game recharge page (GET)
+                if (MobileHubPage.Matches(lines[0])) { await MobileHubPage.Handle(s, lines[0], cts.Token); return; }// QahrMobile: WebHub page (GET)
                 bool google = lines[0].StartsWith("POST /qahr/google ", StringComparison.Ordinal);// QahrMobile: MobileGoogleLogin.cs
                 bool forgot = lines[0].StartsWith("POST /qahr/forgot ", StringComparison.Ordinal);// QahrMobile: MobileRecovery.cs
                 bool reset = lines[0].StartsWith("POST /qahr/reset ", StringComparison.Ordinal);

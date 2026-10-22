@@ -234,7 +234,31 @@ namespace Qahr.Mobile.Unanswered.B5
         {
             if (req == null || (req.f1 != 0 && req.f1 != 2)) return null; // 1/3 = toggle, not answered
             if (!Allow(uid, MsgInnerWebPage, 0, 1000)) return null;
-            return new B5InlinePagePB { f1 = req.f1, f2 = req.f2, f3 = 0 }; // no URL: client logs "Open InnerWeb Fail"
+            // QahrMobile: the phone's WebHub button sends f1=0 f2=2 (mobile 10412). Data\mobile_webpages.txt "page url" gives
+            // the link ({uid} is filled in); f3=1 + f4=[url] opens it, f3=0 = "Open InnerWeb Fail".
+            string url = WebPageUrl(req.f2, uid);
+            if (url == null) return new B5InlinePagePB { f1 = req.f1, f2 = req.f2, f3 = 0 };
+            return new B5InlinePagePB { f1 = req.f1, f2 = req.f2, f3 = 1, f4 = new List<string> { url } };
+        }
+
+        static string WebPageUrl(uint page, uint uid)
+        {
+            try
+            {
+                string file = System.IO.Path.Combine(Program.ServerConfig.DbLocation, "mobile_webpages.txt");
+                if (!System.IO.File.Exists(file)) return null;
+                foreach (string line in System.IO.File.ReadAllLines(file))
+                {
+                    string l = line.Trim();
+                    if (l.Length == 0 || l[0] == '#') continue;
+                    int sp = l.IndexOfAny(new[] { ' ', '\t' });
+                    uint id;
+                    if (sp <= 0 || !uint.TryParse(l.Substring(0, sp), out id) || id != page) continue;
+                    return l.Substring(sp + 1).Trim().Replace("{uid}", uid.ToString());
+                }
+            }
+            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            return null;
         }
 
         [PacketAttribute(MsgInnerWebPage)]
