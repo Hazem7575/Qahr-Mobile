@@ -1,0 +1,2 @@
+[04:04:36 PM]: 2026-10-22 16:04:36 | UID=1001023 | Name=test22 | Old=1000 | New=990 | Diff=-10 | Method=Qahr.Mobile.Game.MsgServer.MsgShopClan.Process | File=MsgShopClan.cs | Line=130
+[04:06:57 PM]: 2026-10-22 16:06:57 | UID=1001023 | Name=test22 | Old=990 | New=989 | Diff=-1 | Method=Qahr.Mobile.Game.MsgServer.MsgShopClan.Process | File=MsgShopClan.cs | Line=130

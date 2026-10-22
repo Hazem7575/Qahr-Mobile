@@ -1,0 +1,9 @@
+----Exception message----
+Object reference not set to an instance of an object.
+----End of exception message----
+
+----Stack trace----
+   at GameServer.Game.MsgServer.MsgTrade.HandlerTrade(GameClient user, Packet stream)
+   at GameServer.Program.Game_Receive(SecuritySocket obj, Packet stream)
+----End of stack trace----
+

@@ -1,0 +1,1 @@
+[10:58:47 PM]: [UID Player] >> ( 1001018 ) [Name Player] >> ( Wander2 ) sent a trade packet with his own UID, Action 2.

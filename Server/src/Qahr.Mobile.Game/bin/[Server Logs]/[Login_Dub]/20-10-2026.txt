@@ -1,0 +1,2 @@
+[02:53:31 PM]:  0 >> Recv Not IN GamePoll On Game IP : [ 127.0.0.1 ] On Game MacAddress [  ]  [The Clock] 14:53:31
+[03:01:24 PM]:  0 >> Recv Not IN GamePoll On Game IP : [ 127.0.0.1 ] On Game MacAddress [  ]  [The Clock] 15:1:24

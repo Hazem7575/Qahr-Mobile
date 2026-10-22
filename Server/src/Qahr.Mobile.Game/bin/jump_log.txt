@@ -1,0 +1,8 @@
+12:06:46.623 mohamed2 map=1002 from=484,318 to=495,319 reason=3
+12:06:47.449 mohamed2 map=1002 from=484,318 to=495,320 reason=3
+12:06:52.829 mohamed2 map=1002 from=491,325 to=500,322 reason=3
+12:07:09.783 mohamed2 map=1002 from=495,325 to=504,320 reason=3
+12:07:10.760 mohamed2 map=1002 from=495,325 to=505,320 reason=3
+12:07:15.731 mohamed2 map=1002 from=489,321 to=498,322 reason=3
+12:07:17.226 mohamed2 map=1002 from=496,326 to=505,321 reason=3
+12:07:18.206 mohamed2 map=1002 from=496,326 to=508,322 reason=3

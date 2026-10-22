@@ -1,0 +1,7 @@
+[09:13:01 PM]: 2026-10-13 21:13:01 | UID=1000005 | Name=zzzz | Old=0 | New=100000000 | Diff=+100000000 | Method=GameServer.AdminApi.AdminApiServer.Cps | File=AdminApi.cs | Line=812
+[09:17:39 PM]: 2026-10-13 21:17:39 | UID=1000005 | Name=zzzz | Old=0 | New=100000000 | Diff=+100000000 | Method=GameServer.Database.ServerDatabase.LoadCharacterCore | File=ServerDatabase.cs | Line=1031
+[09:35:18 PM]: 2026-10-13 21:35:18 | UID=1000005 | Name=zzzz | Old=0 | New=99999055 | Diff=+99999055 | Method=GameServer.Database.ServerDatabase.LoadCharacterCore | File=ServerDatabase.cs | Line=1032
+[10:28:16 PM]: 2026-10-13 22:28:16 | UID=1000005 | Name=zzzz | Old=0 | New=99999055 | Diff=+99999055 | Method=GameServer.Database.ServerDatabase.LoadCharacterCore | File=ServerDatabase.cs | Line=1033
+[10:59:58 PM]: 2026-10-13 22:59:58 | UID=1000005 | Name=zzzz | Old=0 | New=99999055 | Diff=+99999055 | Method=GameServer.Database.ServerDatabase.LoadCharacterCore | File=ServerDatabase.cs | Line=1033
+[11:03:18 PM]: 2026-10-13 23:03:18 | UID=1000005 | Name=zzzz | Old=0 | New=99999055 | Diff=+99999055 | Method=GameServer.Database.ServerDatabase.LoadCharacterCore | File=ServerDatabase.cs | Line=1033
+[11:08:37 PM]: 2026-10-13 23:08:37 | UID=1000005 | Name=zzzz | Old=0 | New=99999055 | Diff=+99999055 | Method=GameServer.Database.ServerDatabase.LoadCharacterCore | File=ServerDatabase.cs | Line=1033

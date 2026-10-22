@@ -1,0 +1,21 @@
+[05:00:37 PM]: Player Name: mohamed2 Mode ADD |Name: Stone(+2): UID: 88638174 | ID: 730002 | Plus: 2 | Bless: 0 | Anima: 0 | Perfection Level: 0 | S1: NoSocket | S2: NoSocket| Stake [ 0 ]   at System.Environment.get_StackTrace()
+   at GameServer.Role.Instance.Inventory.Update(MsgGameItem ItemDat, AddMode mode, Packet stream, Boolean Removefull) in D:\conquer-3d\Sourse\Infinity [Sourse]\Role\Instance\Inventory.cs:line 1680
+   at GameServer.Role.Instance.Inventory.Add(Packet stream, UInt32 ID, Byte count, Byte plus, Byte bless, Byte Enchant, Gem sockone, Gem socktwo, Boolean bound, ItemEffect Effect, Boolean SendMessage, String another_text, UInt32 TimeLeftInMinutes) in D:\conquer-3d\Sourse\Infinity [Sourse]\Role\Instance\Inventory.cs:line 323
+   at GameServer.PuppetTheater.PuppetEvents.<>c__DisplayClass16_0.<UseItem>b__1() in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\PuppetTheater\PuppetPopups.cs:line 237
+   at GameServer.PuppetTheater.PuppetEvents.Consume(GameClient c, Packet s, UInt32 id, Func`1 grant, Int32 slots) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\PuppetTheater\PuppetPopups.cs:line 248
+   at GameServer.PuppetTheater.PuppetEvents.UseItem(GameClient c, MsgGameItem item, Packet s) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\PuppetTheater\PuppetPopups.cs:line 237
+   at GameServer.PuppetTheater.PT.OnUse(GameClient c, MsgGameItem item, Packet s) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\PuppetTheater\PuppetTheaterGame.cs:line 280
+   at GameServer.FoolsKit.Kit.OnUse(GameClient c, MsgGameItem item, Packet stream) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\AprilFools2023\FoolsKit.cs:line 224
+   at GameServer.AdminApi.AdminApiServer.FestTestOp(AdminArgs a) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\AdminApi\AdminApi.FestTest.cs:line 32
+   at GameServer.AdminApi.AdminApiServer.Dispatch(String op, AdminArgs a) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\AdminApi\AdminApi.cs:line 290
+   at GameServer.AdminApi.AdminApiServer.Handle(TcpClient c) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\AdminApi\AdminApi.cs:line 163
+   at GameServer.AdminApi.AdminApiServer.Loop() in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\AdminApi\AdminApi.cs:line 115
+   at System.Threading.Thread.StartHelper.Callback(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+[05:11:04 PM]: Player Name: mohamed2 Mode REMOVE |Name: Stone(+2): UID: 88638174 | ID: 730002 | Plus: 2 | Bless: 0 | Anima: 0 | Perfection Level: 0 | S1: NoSocket | S2: NoSocket| Stake [ 1 ]   at System.Environment.get_StackTrace()
+   at GameServer.Role.Instance.Inventory.Update(MsgGameItem ItemDat, AddMode mode, Packet stream, Boolean Removefull) in D:\conquer-3d\Sourse\Infinity [Sourse]\Role\Instance\Inventory.cs:line 1680
+   at GameServer.AdminApi.AdminApiServer.RemoveItem(AdminArgs a) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\AdminApi\AdminApi.cs:line 961
+   at GameServer.AdminApi.AdminApiServer.Handle(TcpClient c) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\AdminApi\AdminApi.cs:line 163
+   at GameServer.AdminApi.AdminApiServer.Loop() in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\AdminApi\AdminApi.cs:line 115
+   at System.Threading.Thread.StartHelper.Callback(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)

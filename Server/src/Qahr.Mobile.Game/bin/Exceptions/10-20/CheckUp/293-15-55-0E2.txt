@@ -1,0 +1,8 @@
+----Exception message----
+Object reference not set to an instance of an object.
+----End of exception message----
+
+----Stack trace----
+   at GameServer.Game.MsgTournaments.MsgSchedules.CheckUp() in D:\conquer\QahrMobile\Qahr.GameServer\World\Tournaments\MsgSchedules.cs:line 281
+----End of stack trace----
+

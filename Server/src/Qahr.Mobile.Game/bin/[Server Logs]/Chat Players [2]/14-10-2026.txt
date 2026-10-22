@@ -1,0 +1,14 @@
+[12:02:51 PM]:LB001 to ALL loadbot LB001 hello 975
+[12:25:12 PM]:LB009 to ALL loadbot LB009 hello 725
+[12:25:22 PM]:LB010 to ALL loadbot LB010 hello 911
+[12:25:48 PM]:LB001 to ALL loadbot LB001 hello 917
+[12:25:58 PM]:LB002 to ALL loadbot LB002 hello 906
+[12:26:09 PM]:LB003 to ALL loadbot LB003 hello 380
+[12:26:19 PM]:LB004 to ALL loadbot LB004 hello 680
+[12:26:30 PM]:LB005 to ALL loadbot LB005 hello 347
+[12:26:40 PM]:LB006 to ALL loadbot LB006 hello 663
+[12:26:51 PM]:LB007 to ALL loadbot LB007 hello 614
+[12:27:01 PM]:LB008 to ALL loadbot LB008 hello 812
+[01:51:43 PM]:mohamed2 to All  reloadnpcs@
+[01:51:47 PM]:mohamed2 to All  @reloadnpcs
+[02:02:28 PM]:mohamed2 to All  @tele 1002 303 313 0

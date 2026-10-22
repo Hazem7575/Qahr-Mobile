@@ -1,0 +1,23 @@
+----Exception message----
+Invalid wire-type (Variant); this usually means you have over-written a file without truncating or setting the length; see https://stackoverflow.com/q/2152978/23354
+----End of exception message----
+
+----Stack trace----
+   at ProtoBuf.ProtoReader.State.ThrowProtoException(String message) in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 996
+   at ProtoBuf.ProtoReader.State.ThrowWireTypeException() in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 990
+   at proto_102(State&, Entry)
+   at ProtoBuf.Internal.Serializers.SimpleCompiledSerializer`1.ProtoBuf.Serializers.ISerializer<T>.Read(State& state, T value) in /_1/protobuf-net/Internal/Serializers/CompiledSerializer.cs:line 107
+   at ProtoBuf.ProtoReader.State.ReadMessage[TSerializer,T](SerializerFeatures features, T value, TSerializer& serializer) in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 1219
+   at ProtoBuf.ProtoReader.State.FillBuffer[TSerializer,T](SerializerFeatures features, TSerializer& serializer, T initialValue) in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 478
+   at ProtoBuf.Serializers.RepeatedSerializer`2.ReadRepeated(State& state, SerializerFeatures features, TCollection values, ISerializer`1 serializer) in /_1/protobuf-net.Core/Serializers/RepeatedSerializer.cs:line 366
+   at proto_100(State&, MsgRankMemberShowProto)
+   at ProtoBuf.Internal.Serializers.SimpleCompiledSerializer`1.ProtoBuf.Serializers.ISerializer<T>.Read(State& state, T value) in /_1/protobuf-net/Internal/Serializers/CompiledSerializer.cs:line 107
+   at ProtoBuf.ProtoReader.State.ReadAsRoot[T](T value, ISerializer`1 serializer) in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 1354
+   at ProtoBuf.ProtoReader.State.DeserializeRoot[T](T value, ISerializer`1 serializer) in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 1334
+   at ProtoBuf.Serializer.Deserialize[T](Stream source) in /_1/protobuf-net/Serializer.Deserialize.cs:line 21
+   at GameServer.ServerSockets.Packet.ProtoBufferDeserialize[T](T obj) in D:\conquer\QahrMobile\Qahr.GameServer\Infrastructure\Networking\ServerSockets\Packet.cs:line 381
+   at GameServer.Game.MsgServer.MsgRankMemberShow.GetRankMemberShow(Packet stream, MsgRankMemberShowProto& pQuery) in D:\conquer\QahrMobile\Qahr.GameServer\Networking\Handlers\MsgServer\MsgBestOfTheWorld.cs:line 89
+   at GameServer.Game.MsgServer.MsgRankMemberShow.Process(GameClient client, Packet stream) in D:\conquer\QahrMobile\Qahr.GameServer\Networking\Handlers\MsgServer\MsgBestOfTheWorld.cs:line 96
+   at GameServer.Program.Game_Receive(SecuritySocket obj, Packet stream) in D:\conquer\QahrMobile\Qahr.GameServer\Bootstrap\Program.cs:line 1802
+----End of stack trace----
+

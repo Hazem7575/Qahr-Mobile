@@ -1,0 +1,1 @@
+[09:49:56 AM]: 2026-10-19 09:49:56 | UID=1000026 | Name=mohamed2 | Old=0 | New=99990167 | Diff=+99990167 | Method=GameServer.Database.ServerDatabase.LoadCharacterCore | File=ServerDatabase.cs | Line=1037

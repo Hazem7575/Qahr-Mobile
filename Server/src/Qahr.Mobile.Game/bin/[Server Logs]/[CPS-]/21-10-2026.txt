@@ -1,0 +1,8 @@
+[09:21:38 AM]: 2026-10-21 09:21:38 | UID=1001016 | Name=TrojanQ1 | Old=5010 | New=4650 | Diff=-360 | Method=GameServer.GuildAuction.GuildAuctionModule.TrySpend | File=Unknown | Line=0
+[09:21:42 AM]: 2026-10-21 09:21:42 | UID=1001016 | Name=TrojanQ1 | Old=4650 | New=4230 | Diff=-420 | Method=GameServer.GuildAuction.GuildAuctionModule.TrySpend | File=Unknown | Line=0
+[09:21:51 AM]: 2026-10-21 09:21:51 | UID=1001016 | Name=TrojanQ1 | Old=4590 | New=4530 | Diff=-60 | Method=GameServer.GuildAuction.GuildAuctionModule.TrySpend | File=Unknown | Line=0
+[09:22:03 AM]: 2026-10-21 09:22:03 | UID=1001016 | Name=TrojanQ1 | Old=4530 | New=4529 | Diff=-1 | Method=GameServer.Game.MsgServer.MsgOsShop.Process | File=Unknown | Line=0
+[09:22:08 AM]: 2026-10-21 09:22:08 | UID=1001016 | Name=TrojanQ1 | Old=4529 | New=3029 | Diff=-1500 | Method=GameServer.GuildAuction.GuildAuctionModule.TrySpend | File=Unknown | Line=0
+[09:30:27 AM]: 2026-10-21 09:30:27 | UID=1001016 | Name=TrojanQ1 | Old=5009 | New=4631 | Diff=-378 | Method=GameServer.GuildAuction.GuildAuctionModule.TrySpend | File=Unknown | Line=0
+[09:30:45 AM]: 2026-10-21 09:30:45 | UID=1001016 | Name=TrojanQ1 | Old=4631 | New=3131 | Diff=-1500 | Method=GameServer.GuildAuction.GuildAuctionModule.TrySpend | File=Unknown | Line=0
+[09:48:34 AM]: 2026-10-21 09:48:34 | UID=1001016 | Name=TrojanQ1 | Old=5010 | New=4960 | Diff=-50 | Method=GameServer.Role.Instance.Trade.AddConquerPoints | File=Unknown | Line=0

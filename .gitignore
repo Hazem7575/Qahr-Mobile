@@ -1,12 +1,2 @@
 obj/
 .vs/
-*.user
-*.log
-*.pdb
-logs/
-PacketLogs/
-*_log.txt
-Server/Data/adminapi.txt
-Server/src/*/obj/
-**/PacketLogs/
-**/Exceptions/

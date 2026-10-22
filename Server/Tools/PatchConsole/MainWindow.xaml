@@ -1,0 +1,809 @@
+<Window x:Class="PatchConsole.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="قهر - مركز التحديثات" Width="1360" Height="880" MinWidth="1100" MinHeight="720"
+        WindowStartupLocation="CenterScreen" FlowDirection="RightToLeft" FontFamily="Segoe UI" FontSize="14"
+        Background="{StaticResource Bg}" Foreground="{StaticResource Text}" Icon="Assets/app.ico"
+        UseLayoutRounding="True" TextOptions.TextFormattingMode="Display">
+    <Window.Resources>
+        <!-- status pill used by several tables: Tag = New/Changed/Same/Bad/Ok/Info -->
+        <Style x:Key="StatusPill" TargetType="Border" BasedOn="{StaticResource Pill}">
+            <Setter Property="Background" Value="{StaticResource InfoSoft}"/>
+            <Style.Triggers>
+                <Trigger Property="Tag" Value="New"><Setter Property="Background" Value="{StaticResource InfoSoft}"/></Trigger>
+                <Trigger Property="Tag" Value="Changed"><Setter Property="Background" Value="{StaticResource WarnSoft}"/></Trigger>
+                <Trigger Property="Tag" Value="Same"><Setter Property="Background" Value="#22FFFFFF"/></Trigger>
+                <Trigger Property="Tag" Value="Bad"><Setter Property="Background" Value="{StaticResource BadSoft}"/></Trigger>
+                <Trigger Property="Tag" Value="Ok"><Setter Property="Background" Value="{StaticResource OkSoft}"/></Trigger>
+            </Style.Triggers>
+        </Style>
+        <Style x:Key="StepDot" TargetType="Border">
+            <Setter Property="Width" Value="38"/>
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="CornerRadius" Value="19"/>
+            <Setter Property="BorderThickness" Value="2"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Line}"/>
+            <Setter Property="Background" Value="{StaticResource Card}"/>
+        </Style>
+        <Style x:Key="Lamp" TargetType="Ellipse">
+            <Setter Property="Width" Value="12"/>
+            <Setter Property="Height" Value="12"/>
+            <Setter Property="Fill" Value="{StaticResource Bad}"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="250"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ============================================================== sidebar -->
+        <Border Background="{StaticResource Side}" BorderBrush="{StaticResource Line}" BorderThickness="0,0,1,0">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top" Margin="22,26,22,22">
+                    <StackPanel Orientation="Horizontal">
+                        <Image Source="Assets/app.png" Width="54" Height="54" RenderOptions.BitmapScalingMode="HighQuality"/>
+                        <StackPanel Margin="12,0,0,0" VerticalAlignment="Center">
+                            <TextBlock Text="قهر" FontSize="30" FontWeight="Bold" Foreground="{StaticResource GoldGrad}" Margin="0,-6,0,-4"/>
+                            <TextBlock Text="مركز التحديثات" FontSize="13" Foreground="{StaticResource Muted}"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <Border Height="1" Background="{StaticResource Line}" Margin="0,22,0,0"/>
+                </StackPanel>
+                <Border DockPanel.Dock="Bottom" Margin="16" Padding="14" CornerRadius="12" Background="{StaticResource Card}" BorderBrush="{StaticResource Line}" BorderThickness="1">
+                    <StackPanel>
+                        <StackPanel Orientation="Horizontal">
+                            <Ellipse x:Name="SideLamp" Style="{StaticResource Lamp}"/>
+                            <TextBlock x:Name="SideLampText" Text="..." Margin="8,0,0,0" FontWeight="SemiBold"/>
+                        </StackPanel>
+                        <TextBlock x:Name="SideVersion" Text="" Style="{StaticResource Sub}" Margin="0,6,0,0"/>
+                    </StackPanel>
+                </Border>
+                <StackPanel>
+                    <RadioButton x:Name="NavHome" Style="{StaticResource Nav}" Tag="&#xE80F;" Content="الرئيسية" IsChecked="True" Checked="Nav_Checked"/>
+                    <RadioButton x:Name="NavNew" Style="{StaticResource Nav}" Tag="&#xE898;" Content="تحديث جديد" Checked="Nav_Checked"/>
+                    <RadioButton x:Name="NavHistory" Style="{StaticResource Nav}" Tag="&#xE81C;" Content="سجل التحديثات" Checked="Nav_Checked"/>
+                    <RadioButton x:Name="NavOfficial" Style="{StaticResource Nav}" Tag="&#xE774;" Content="التحديثات الرسمية" Checked="Nav_Checked"/>
+                    <RadioButton x:Name="NavStats" Style="{StaticResource Nav}" Tag="&#xE9D2;" Content="الإحصائيات" Checked="Nav_Checked"/>
+                    <RadioButton x:Name="NavSettings" Style="{StaticResource Nav}" Tag="&#xE713;" Content="الإعدادات والاختبار" Checked="Nav_Checked"/>
+                    <RadioButton x:Name="NavLog" Style="{StaticResource Nav}" Tag="&#xE8FD;" Content="سجل العمليات" Checked="Nav_Checked"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <!-- ============================================================== content -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <DockPanel Margin="30,24,30,6">
+                <Button DockPanel.Dock="Right" Click="Refresh_Click" ToolTip="تحديث البيانات">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Style="{StaticResource Icon}" Text="&#xE72C;" FontSize="14"/>
+                        <TextBlock Text="تحديث" Margin="8,0,0,0"/>
+                    </StackPanel>
+                </Button>
+                <StackPanel>
+                    <TextBlock x:Name="PageTitle" Style="{StaticResource H1}" Text="الرئيسية"/>
+                    <TextBlock x:Name="PageSub" Style="{StaticResource Sub}" FontSize="14" Text=""/>
+                </StackPanel>
+            </DockPanel>
+
+            <Grid Grid.Row="1" x:Name="Pages" Margin="22,6,22,22">
+
+                <!-- ====================================================== dashboard -->
+                <ScrollViewer x:Name="PageHome" VerticalScrollBarVisibility="Auto">
+                    <StackPanel>
+                        <Border CornerRadius="18" Margin="8" Padding="30,26" Background="{StaticResource HeroGrad}" BorderBrush="#5A2A33" BorderThickness="1" ClipToBounds="True">
+                            <Grid>
+                                <TextBlock Text="قهر" FontSize="190" FontWeight="Bold" Foreground="#12FFFFFF" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-60,10,-70"/>
+                                <StackPanel>
+                                    <TextBlock Text="الإصدار الحالي عند اللاعبين" Foreground="#D8C9B0" FontSize="15"/>
+                                    <StackPanel Orientation="Horizontal" Margin="0,4,0,0">
+                                        <TextBlock x:Name="HeroVersion" Text="5150" FontSize="58" FontWeight="Bold" Foreground="{StaticResource GoldGrad}"/>
+                                        <Border x:Name="HeroModeBadge" Style="{StaticResource Pill}" Background="{StaticResource OkSoft}" Margin="16,0,0,0" Padding="12,4">
+                                            <TextBlock x:Name="HeroMode" Text="" FontWeight="SemiBold"/>
+                                        </Border>
+                                    </StackPanel>
+                                    <TextBlock x:Name="HeroSub" Text="" Foreground="#C9BCA8" FontSize="14" Margin="0,2,0,18"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Button Style="{StaticResource Primary}" Click="GoNew_Click" Padding="22,11">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Style="{StaticResource Icon}" Text="&#xE898;" Foreground="#1A1308"/>
+                                                <TextBlock Text="نشر تحديث جديد" Margin="10,0,0,0" Foreground="#1A1308"/>
+                                            </StackPanel>
+                                        </Button>
+                                        <Button Click="GoTest_Click" AutomationProperties.Name="اختبار التحديث" Padding="22,11" Background="#33000000">
+                                            <StackPanel Orientation="Horizontal">
+                                                <TextBlock Style="{StaticResource Icon}" Text="&#xE768;"/>
+                                                <TextBlock Text="اختبار التحديث" Margin="10,0,0,0"/>
+                                            </StackPanel>
+                                        </Button>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
+
+                        <UniformGrid Columns="4">
+                            <Border Style="{StaticResource CardBox}">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="36" Height="36" CornerRadius="10" Background="{StaticResource GoldSoft}"><TextBlock Style="{StaticResource Icon}" Text="&#xE7B8;" HorizontalAlignment="Center"/></Border>
+                                        <TextBlock Text="التحديثات المنشورة" Style="{StaticResource Sub}" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="CardCount" Style="{StaticResource Big}" Text="0" Margin="0,14,0,0"/>
+                                    <TextBlock x:Name="CardCountSub" Style="{StaticResource Sub}" Text=""/>
+                                </StackPanel>
+                            </Border>
+                            <Border Style="{StaticResource CardBox}">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="36" Height="36" CornerRadius="10" Background="{StaticResource GoldSoft}"><TextBlock Style="{StaticResource Icon}" Text="&#xE968;" HorizontalAlignment="Center"/></Border>
+                                        <TextBlock Text="سيرفر التحديث" Style="{StaticResource Sub}" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0,14,0,0">
+                                        <Grid Width="22" Height="22" VerticalAlignment="Center">
+                                            <Ellipse x:Name="LampHalo" Width="22" Height="22" Fill="{StaticResource Bad}" Opacity="0.3"/>
+                                            <Ellipse x:Name="Lamp" Width="12" Height="12" Fill="{StaticResource Bad}"/>
+                                        </Grid>
+                                        <TextBlock x:Name="CardServer" Style="{StaticResource Big}" Text="..." Margin="10,0,0,0"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="CardServerSub" Style="{StaticResource Sub}" Text=""/>
+                                </StackPanel>
+                            </Border>
+                            <Border Style="{StaticResource CardBox}">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="36" Height="36" CornerRadius="10" Background="{StaticResource GoldSoft}"><TextBlock Style="{StaticResource Icon}" Text="&#xE8EA;" HorizontalAlignment="Center"/></Border>
+                                        <TextBlock Text="نزّلوا آخر تحديث" Style="{StaticResource Sub}" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="CardDownloads" Style="{StaticResource Big}" Text="0" Margin="0,14,0,0"/>
+                                    <TextBlock x:Name="CardDownloadsSub" Style="{StaticResource Sub}" Text="جهاز"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Style="{StaticResource CardBox}">
+                                <StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <Border Width="36" Height="36" CornerRadius="10" Background="{StaticResource GoldSoft}"><TextBlock Style="{StaticResource Icon}" Text="&#xE823;" HorizontalAlignment="Center"/></Border>
+                                        <TextBlock Text="آخر نشاط" Style="{StaticResource Sub}" Margin="10,0,0,0" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <TextBlock x:Name="CardLast" Style="{StaticResource Big}" FontSize="22" Text="-" Margin="0,18,0,4"/>
+                                    <TextBlock x:Name="CardLastSub" Style="{StaticResource Sub}" Text=""/>
+                                </StackPanel>
+                            </Border>
+                        </UniformGrid>
+
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+                            <Border Style="{StaticResource Panel}">
+                                <StackPanel>
+                                    <TextBlock Style="{StaticResource H2}" Text="آخر نشاط الموبايلات"/>
+                                    <ItemsControl x:Name="HomeEvents">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <DockPanel Margin="0,5">
+                                                    <Border DockPanel.Dock="Left" Style="{StaticResource StatusPill}" Tag="{Binding ResultKey}" Width="96">
+                                                        <TextBlock Text="{Binding KindText}" FontSize="12" HorizontalAlignment="Center"/>
+                                                    </Border>
+                                                    <TextBlock DockPanel.Dock="Right" Text="{Binding TimeText}" Style="{StaticResource Sub}" FontSize="12" VerticalAlignment="Center" FlowDirection="LeftToRight"/>
+                                                    <StackPanel Orientation="Horizontal" Margin="10,0" VerticalAlignment="Center">
+                                                        <TextBlock Text="{Binding Version}" FontWeight="SemiBold" Width="44"/>
+                                                        <TextBlock Text="{Binding ResultText}"/>
+                                                        <TextBlock Text="{Binding IpText}" Foreground="{StaticResource Muted}" Margin="12,0,0,0" FontSize="12.5"/>
+                                                    </StackPanel>
+                                                </DockPanel>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <TextBlock x:Name="HomeEventsEmpty" Style="{StaticResource Sub}" Text="لا يوجد نشاط مسجل بعد." Visibility="Collapsed"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Grid.Column="1" Style="{StaticResource Panel}">
+                                <StackPanel>
+                                    <TextBlock Style="{StaticResource H2}" Text="آخر العمليات"/>
+                                    <ItemsControl x:Name="HomeOps">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <DockPanel Margin="0,5">
+                                                    <TextBlock DockPanel.Dock="Right" Text="{Binding [0]}" Style="{StaticResource Sub}" FontSize="12" VerticalAlignment="Center" FlowDirection="LeftToRight"/>
+                                                    <Border DockPanel.Dock="Left" Style="{StaticResource Pill}" Background="{StaticResource GoldSoft}" MinWidth="60">
+                                                        <TextBlock Text="{Binding [1]}" FontSize="12" HorizontalAlignment="Center"/>
+                                                    </Border>
+                                                    <TextBlock Text="{Binding [3]}" Margin="10,0" VerticalAlignment="Center" TextTrimming="CharacterEllipsis"/>
+                                                </DockPanel>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                    <TextBlock x:Name="HomeOpsEmpty" Style="{StaticResource Sub}" Text="لا توجد عمليات بعد." Visibility="Collapsed"/>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
+                    </StackPanel>
+                </ScrollViewer>
+
+                <!-- ====================================================== new patch wizard -->
+                <Grid x:Name="PageNew" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!-- steps -->
+                    <Border Style="{StaticResource Panel}" Padding="24,16">
+                        <Grid x:Name="StepBar">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                        </Grid>
+                    </Border>
+
+                    <Grid Grid.Row="1" x:Name="Steps">
+                        <!-- step 1: files -->
+                        <Grid x:Name="Step1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="6*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Style="{StaticResource Panel}">
+                                <DockPanel>
+                                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource H2}" Text="ملفات الكلاينت"/>
+                                    <DockPanel DockPanel.Dock="Top" Margin="0,0,0,10">
+                                        <Button DockPanel.Dock="Right" Content="تغيير..." Click="PickSource_Click" Margin="6,0,0,0"/>
+                                        <TextBox x:Name="SourceBox" IsReadOnly="True" FlowDirection="LeftToRight" FontSize="12.5"/>
+                                    </DockPanel>
+                                    <TextBlock DockPanel.Dock="Top" Style="{StaticResource Sub}" Margin="0,0,0,8" Text="علّم على الملفات أو المجلدات اللي عايز تبعتها. المسار داخل التحديث بيتحسب من المجلد ده."/>
+                                    <Border Background="{StaticResource Input}" CornerRadius="10" Padding="6">
+                                        <TreeView x:Name="FileTree" Background="Transparent" BorderThickness="0" FlowDirection="LeftToRight">
+                                            <TreeView.ItemTemplate>
+                                                <HierarchicalDataTemplate ItemsSource="{Binding Children}">
+                                                    <StackPanel Orientation="Horizontal" Margin="0,1">
+                                                        <CheckBox IsChecked="{Binding IsChecked}" Click="TreeCheck_Click" Tag="{Binding}" Margin="0,0,6,0"/>
+                                                        <TextBlock Text="{Binding Glyph}" FontFamily="{StaticResource Icons}" Foreground="{StaticResource Gold}" Margin="0,0,6,0" VerticalAlignment="Center" FontSize="13"/>
+                                                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="{Binding SizeText}" Foreground="{StaticResource Muted}" FontSize="11.5" Margin="8,0,0,0" VerticalAlignment="Center"/>
+                                                    </StackPanel>
+                                                </HierarchicalDataTemplate>
+                                            </TreeView.ItemTemplate>
+                                        </TreeView>
+                                    </Border>
+                                </DockPanel>
+                            </Border>
+                            <Grid Grid.Column="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <Border x:Name="DropZone" Margin="8" CornerRadius="14" BorderThickness="2" BorderBrush="#55D9AE5C" Background="#0CD9AE5C"
+                                        AllowDrop="True" Drop="Drop_Drop" DragEnter="Drop_DragEnter" DragLeave="Drop_DragLeave" Padding="20,26">
+                                    <StackPanel HorizontalAlignment="Center">
+                                        <TextBlock Style="{StaticResource Icon}" Text="&#xE896;" FontSize="38" HorizontalAlignment="Center"/>
+                                        <TextBlock Text="اسحب الملفات أو المجلدات هنا" FontSize="17" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,10,0,4"/>
+                                        <TextBlock Style="{StaticResource Sub}" HorizontalAlignment="Center" TextAlignment="Center"
+                                                   Text="مجلد فيه ini أو luaui ... يتحط زي ما هو. ملف لوحده بيتحط في نفس مكانه في النسخة الأساسية لو اسمه موجود هناك."/>
+                                        <Button Content="أو اختر ملفات..." Click="AddFiles_Click" HorizontalAlignment="Center" Margin="0,12,0,0"/>
+                                    </StackPanel>
+                                </Border>
+                                <Border Grid.Row="1" Style="{StaticResource Panel}">
+                                    <DockPanel>
+                                        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,8">
+                                            <Button DockPanel.Dock="Right" Content="مسح الكل" Click="ClearStage_Click"/>
+                                            <TextBlock x:Name="StageCount" Style="{StaticResource H2}" Text="الملفات المختارة (0)" VerticalAlignment="Center" Margin="0"/>
+                                        </DockPanel>
+                                        <ListBox x:Name="StageList" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                                            <ListBox.ItemTemplate>
+                                                <DataTemplate>
+                                                    <DockPanel Margin="0,3">
+                                                        <Button DockPanel.Dock="Right" Click="RemoveStage_Click" Tag="{Binding}" Padding="8,3" Margin="0" ToolTip="إزالة">
+                                                            <TextBlock Style="{StaticResource Icon}" Text="&#xE711;" FontSize="11" Foreground="{StaticResource Muted}"/>
+                                                        </Button>
+                                                        <TextBlock DockPanel.Dock="Right" Text="{Binding SizeText}" Style="{StaticResource Sub}" Margin="10,0" VerticalAlignment="Center"/>
+                                                        <TextBlock Text="{Binding Target}" FlowDirection="LeftToRight" VerticalAlignment="Center" TextTrimming="CharacterEllipsis" FontFamily="{StaticResource Mono}" FontSize="13"/>
+                                                    </DockPanel>
+                                                </DataTemplate>
+                                            </ListBox.ItemTemplate>
+                                        </ListBox>
+                                    </DockPanel>
+                                </Border>
+                            </Grid>
+                        </Grid>
+
+                        <!-- step 2: compare -->
+                        <Border x:Name="Step2" Style="{StaticResource Panel}" Visibility="Collapsed">
+                            <DockPanel>
+                                <StackPanel DockPanel.Dock="Top" Orientation="Horizontal" Margin="0,0,0,12">
+                                    <TextBlock Style="{StaticResource H2}" Text="المقارنة مع النسخة الحالية" Margin="0,0,16,0" VerticalAlignment="Center"/>
+                                    <Border Style="{StaticResource StatusPill}" Tag="New" Margin="4,0"><TextBlock x:Name="ChipNew" Text="جديد 0"/></Border>
+                                    <Border Style="{StaticResource StatusPill}" Tag="Changed" Margin="4,0"><TextBlock x:Name="ChipChanged" Text="معدّل 0"/></Border>
+                                    <Border Style="{StaticResource StatusPill}" Tag="Same" Margin="4,0"><TextBlock x:Name="ChipSame" Text="مطابق 0"/></Border>
+                                    <Border Style="{StaticResource StatusPill}" Tag="Bad" Margin="4,0"><TextBlock x:Name="ChipBad" Text="مرفوض 0"/></Border>
+                                </StackPanel>
+                                <TextBlock DockPanel.Dock="Top" Style="{StaticResource Sub}" Margin="0,0,0,10"
+                                           Text="كل ملف اتقارن بالنسخة اللي عند اللاعبين دلوقتي (آخر تحديث منشور فيه الملف، وإلا ملف النسخة الأساسية 5150). المطابق بيتشال تلقائي. تقدر تعدّل المسار بدبل كليك."/>
+                                <DataGrid x:Name="CompareGrid" CanUserSortColumns="True">
+                                    <DataGrid.Columns>
+                                        <DataGridTemplateColumn Header="إرسال" Width="70">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate><CheckBox IsChecked="{Binding Include, UpdateSourceTrigger=PropertyChanged}" HorizontalAlignment="Center"/></DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="الحالة" Width="130" SortMemberPath="StatusKey">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate>
+                                                    <Border Style="{StaticResource StatusPill}" Tag="{Binding StatusKey}"><TextBlock Text="{Binding StatusText}" FontSize="12.5"/></Border>
+                                                </DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTemplateColumn Header="المسار داخل التحديث" Width="2*" SortMemberPath="Target">
+                                            <DataGridTemplateColumn.CellTemplate>
+                                                <DataTemplate><TextBlock Text="{Binding Target}" FlowDirection="LeftToRight" FontFamily="{StaticResource Mono}" FontSize="13" HorizontalAlignment="Right"/></DataTemplate>
+                                            </DataGridTemplateColumn.CellTemplate>
+                                            <DataGridTemplateColumn.CellEditingTemplate>
+                                                <DataTemplate><TextBox Text="{Binding Target, UpdateSourceTrigger=LostFocus}" FlowDirection="LeftToRight" Padding="4,2"/></DataTemplate>
+                                            </DataGridTemplateColumn.CellEditingTemplate>
+                                        </DataGridTemplateColumn>
+                                        <DataGridTextColumn Header="الحجم" Binding="{Binding SizeText}" Width="90" IsReadOnly="True"/>
+                                        <DataGridTextColumn Header="التفاصيل" Binding="{Binding Reason}" Width="2*" IsReadOnly="True"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                            </DockPanel>
+                        </Border>
+
+                        <!-- step 3: notes -->
+                        <Border x:Name="Step3" Style="{StaticResource Panel}" Visibility="Collapsed">
+                            <Grid MaxWidth="900" HorizontalAlignment="Left">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="رقم الإصدار" Margin="0,8,20,8" VerticalAlignment="Center"/>
+                                <StackPanel Grid.Column="1" Orientation="Horizontal" Margin="0,8">
+                                    <TextBox x:Name="VersionBox" AutomationProperties.Name="حقل رقم الإصدار" Width="110" FlowDirection="LeftToRight" FontSize="18" FontWeight="Bold" HorizontalContentAlignment="Center"/>
+                                    <TextBlock x:Name="VersionHint" Style="{StaticResource Sub}" Margin="12,0,0,0" VerticalAlignment="Center"/>
+                                </StackPanel>
+                                <TextBlock Grid.Row="1" Text="العنوان" Margin="0,8,20,8" VerticalAlignment="Center"/>
+                                <TextBox Grid.Row="1" Grid.Column="1" x:Name="TitleBox" AutomationProperties.Name="حقل العنوان" Margin="0,8" MaxLength="120"/>
+                                <TextBlock Grid.Row="2" Text="ملاحظات التحديث" Margin="0,16,20,8" VerticalAlignment="Top"/>
+                                <DockPanel Grid.Row="2" Grid.Column="1" Margin="0,8">
+                                    <TextBlock DockPanel.Dock="Bottom" Style="{StaticResource Sub}" Margin="0,6,0,0" Text="الملاحظات بتتحفظ مع التحديث في السجل (مش بتروح للاعبين)."/>
+                                    <TextBox x:Name="NotesBox" AutomationProperties.Name="حقل الملاحظات" AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" MinHeight="220" VerticalContentAlignment="Top"/>
+                                </DockPanel>
+                            </Grid>
+                        </Border>
+
+                        <!-- step 4: review + publish -->
+                        <Grid x:Name="Step4" Visibility="Collapsed">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <UniformGrid Columns="4">
+                                <Border Style="{StaticResource Panel}">
+                                    <StackPanel><TextBlock Style="{StaticResource Sub}" Text="الإصدار"/><TextBlock x:Name="RevVersion" Style="{StaticResource Big}" Foreground="{StaticResource GoldGrad}"/></StackPanel>
+                                </Border>
+                                <Border Style="{StaticResource Panel}">
+                                    <StackPanel><TextBlock Style="{StaticResource Sub}" Text="عدد الملفات"/><TextBlock x:Name="RevFiles" Style="{StaticResource Big}"/></StackPanel>
+                                </Border>
+                                <Border Style="{StaticResource Panel}">
+                                    <StackPanel><TextBlock Style="{StaticResource Sub}" Text="حجم التحديث (مضغوط)"/><TextBlock x:Name="RevSize" Style="{StaticResource Big}"/></StackPanel>
+                                </Border>
+                                <Border Style="{StaticResource Panel}">
+                                    <StackPanel>
+                                        <TextBlock Style="{StaticResource Sub}" Text="SHA-256"/>
+                                        <TextBlock x:Name="RevSha" FontFamily="{StaticResource Mono}" FontSize="12" TextWrapping="Wrap" FlowDirection="LeftToRight" Margin="0,6,0,0"/>
+                                    </StackPanel>
+                                </Border>
+                            </UniformGrid>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Border Style="{StaticResource Panel}">
+                                    <DockPanel>
+                                        <TextBlock DockPanel.Dock="Top" Style="{StaticResource H2}" Text="التحقق قبل النشر"/>
+                                        <ItemsControl x:Name="RevChecks">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <DockPanel Margin="0,5">
+                                                        <TextBlock DockPanel.Dock="Left" Text="{Binding Glyph}" FontFamily="{StaticResource Icons}" Foreground="{Binding Brush}" FontSize="15" VerticalAlignment="Top" Margin="0,3,0,0"/>
+                                                        <TextBlock Text="{Binding Text}" Margin="10,0,0,0" TextWrapping="Wrap" VerticalAlignment="Center"/>
+                                                    </DockPanel>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </DockPanel>
+                                </Border>
+                                <Border Grid.Column="1" Style="{StaticResource Panel}">
+                                    <Grid>
+                                        <DockPanel x:Name="PublishPanel">
+                                            <StackPanel DockPanel.Dock="Bottom" Margin="0,12,0,0">
+                                                <ProgressBar x:Name="PublishProgress" Maximum="1" Value="0" Margin="0,0,0,8"/>
+                                                <TextBlock x:Name="PublishStatus" Style="{StaticResource Sub}" Text="جاهز للنشر."/>
+                                            </StackPanel>
+                                            <TextBlock DockPanel.Dock="Top" Style="{StaticResource H2}" Text="محتوى التحديث"/>
+                                            <ListBox x:Name="RevList" FlowDirection="LeftToRight" FontFamily="{StaticResource Mono}" FontSize="13"/>
+                                        </DockPanel>
+                                        <StackPanel x:Name="DonePanel" VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed">
+                                            <Grid Width="96" Height="96" HorizontalAlignment="Center" RenderTransformOrigin="0.5,0.5" x:Name="DoneBadge">
+                                                <Grid.RenderTransform><ScaleTransform x:Name="DoneScale" ScaleX="0" ScaleY="0"/></Grid.RenderTransform>
+                                                <Ellipse Fill="{StaticResource OkSoft}" Stroke="{StaticResource Ok}" StrokeThickness="2"/>
+                                                <TextBlock Style="{StaticResource Icon}" Text="&#xE73E;" FontSize="44" Foreground="{StaticResource Ok}" HorizontalAlignment="Center"/>
+                                            </Grid>
+                                            <TextBlock x:Name="DoneText" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,16,0,4"/>
+                                            <TextBlock x:Name="DoneSub" Style="{StaticResource Sub}" HorizontalAlignment="Center" TextAlignment="Center" MaxWidth="420"/>
+                                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,16,0,0">
+                                                <Button Style="{StaticResource Primary}" Content="تحديث جديد" Click="NewAgain_Click"/>
+                                                <Button Content="عرض السجل" Click="GoHistory_Click"/>
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+
+                    <DockPanel Grid.Row="2" Margin="8,4,8,0" x:Name="WizardNav">
+                        <Button x:Name="NextBtn" AutomationProperties.Name="التالي" DockPanel.Dock="Left" Style="{StaticResource Primary}" Click="Next_Click" MinWidth="150" Padding="20,10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock x:Name="NextText" Text="التالي" Foreground="#1A1308"/>
+                                <TextBlock x:Name="NextIcon" Style="{StaticResource Icon}" Text="&#xE72B;" Foreground="#1A1308" Margin="10,0,0,0" FontSize="13"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="BackBtn" AutomationProperties.Name="السابق" DockPanel.Dock="Left" Click="Back_Click" MinWidth="110" Padding="20,10">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Style="{StaticResource Icon}" Text="&#xE72A;" Margin="0,0,10,0" FontSize="13"/>
+                                <TextBlock Text="السابق"/>
+                            </StackPanel>
+                        </Button>
+                        <TextBlock x:Name="WizardHint" Style="{StaticResource Sub}" VerticalAlignment="Center" Margin="14,0"/>
+                    </DockPanel>
+                </Grid>
+
+                <!-- ====================================================== history -->
+                <Grid x:Name="PageHistory" Visibility="Collapsed">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="300"/>
+                    </Grid.ColumnDefinitions>
+                    <Border Style="{StaticResource Panel}">
+                        <DockPanel>
+                            <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" Margin="0,10,0,0">
+                                <Button Click="Rollback_Click" AutomationProperties.Name="رجوع">
+                                    <StackPanel Orientation="Horizontal"><TextBlock Style="{StaticResource Icon}" Text="&#xE7A7;"/><TextBlock Text="رجوع (سحب آخر تحديث)" Margin="8,0,0,0"/></StackPanel>
+                                </Button>
+                                <Button Style="{StaticResource Danger}" Click="Delete_Click" AutomationProperties.Name="حذف المحدد">
+                                    <StackPanel Orientation="Horizontal"><TextBlock Style="{StaticResource Icon}" Text="&#xE74D;" Foreground="#FFB3B5"/><TextBlock Text="حذف المحدد" Margin="8,0,0,0" Foreground="#FFB3B5"/></StackPanel>
+                                </Button>
+                                <Button Click="OpenDir_Click">
+                                    <StackPanel Orientation="Horizontal"><TextBlock Style="{StaticResource Icon}" Text="&#xE838;"/><TextBlock Text="فتح المجلد" Margin="8,0,0,0"/></StackPanel>
+                                </Button>
+                            </StackPanel>
+                            <DataGrid x:Name="HistoryGrid" SelectionChanged="HistoryGrid_SelectionChanged" IsReadOnly="True">
+                                <DataGrid.Columns>
+                                    <DataGridTemplateColumn Header="الإصدار" Width="64" SortMemberPath="Version">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate><TextBlock Text="{Binding Version}" FontWeight="Bold" Foreground="{StaticResource Gold}" FontSize="15"/></DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTemplateColumn Header="النوع" Width="76" SortMemberPath="KindText">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Border Style="{StaticResource StatusPill}" Tag="{Binding KindKey}"><TextBlock Text="{Binding KindText}" FontSize="12.5"/></Border>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="الرسمي" Binding="{Binding OfficialText}" Width="80"/>
+                                    <DataGridTemplateColumn Header="التاريخ" Width="128" SortMemberPath="Date">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate><TextBlock Text="{Binding DateShort}" FlowDirection="LeftToRight" HorizontalAlignment="Right"/></DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="العنوان" Binding="{Binding Title}" Width="*" MinWidth="80"/>
+                                    <DataGridTextColumn Header="الحجم" Binding="{Binding SizeText}" Width="66"/>
+                                    <DataGridTextColumn Header="تنزيلات" Binding="{Binding Downloads}" Width="62"/>
+                                    <DataGridTemplateColumn Header="الحالة" Width="72">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Border CornerRadius="10" Padding="9,2" HorizontalAlignment="Left">
+                                                    <Border.Style>
+                                                        <Style TargetType="Border">
+                                                            <Setter Property="Background" Value="{StaticResource OkSoft}"/>
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding Ok}" Value="False"><Setter Property="Background" Value="{StaticResource BadSoft}"/></DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Border.Style>
+                                                    <TextBlock Text="{Binding StateText}" FontSize="12.5" TextTrimming="CharacterEllipsis"/>
+                                                </Border>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Border>
+                    <Border Grid.Column="1" Style="{StaticResource Panel}">
+                        <ScrollViewer VerticalScrollBarVisibility="Auto">
+                            <StackPanel x:Name="Detail">
+                                <TextBlock x:Name="DetVersion" FontSize="34" FontWeight="Bold" Foreground="{StaticResource GoldGrad}" Text="-"/>
+                                <TextBlock x:Name="DetTitle" FontSize="16" FontWeight="SemiBold" TextWrapping="Wrap" Margin="0,2,0,8"/>
+                                <TextBlock x:Name="DetMeta" Style="{StaticResource Sub}"/>
+                                <TextBlock Style="{StaticResource H2}" Text="الملاحظات" Margin="0,16,0,6"/>
+                                <TextBlock x:Name="DetNotes" TextWrapping="Wrap" LineHeight="22"/>
+                                <TextBlock Style="{StaticResource H2}" Text="الملفات" Margin="0,16,0,6"/>
+                                <ItemsControl x:Name="DetFiles" FlowDirection="LeftToRight">
+                                    <ItemsControl.ItemTemplate>
+                                        <DataTemplate><TextBlock Text="{Binding}" FontFamily="{StaticResource Mono}" FontSize="12.5" Margin="0,2" TextTrimming="CharacterEllipsis"/></DataTemplate>
+                                    </ItemsControl.ItemTemplate>
+                                </ItemsControl>
+                                <TextBlock Style="{StaticResource H2}" Text="SHA-256" Margin="0,16,0,6"/>
+                                <TextBox x:Name="DetSha" IsReadOnly="True" FlowDirection="LeftToRight" FontFamily="{StaticResource Mono}" FontSize="11.5" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Border>
+                </Grid>
+
+                <!-- ====================================================== official (patchmirror) -->
+                <Grid x:Name="PageOfficial" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <UniformGrid Columns="4">
+                        <Border Style="{StaticResource CardBox}">
+                            <StackPanel><TextBlock Style="{StaticResource Sub}" Text="آخر إصدار رسمي (TQ)"/><TextBlock x:Name="OffLatest" Style="{StaticResource Big}" Text="-"/></StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource CardBox}">
+                            <StackPanel><TextBlock Style="{StaticResource Sub}" Text="باتشات رسمية منشورة عندنا"/><TextBlock x:Name="OffCount" Style="{StaticResource Big}" Text="0"/></StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource CardBox}">
+                            <StackPanel><TextBlock Style="{StaticResource Sub}" Text="هوتفكس بتاعنا"/><TextBlock x:Name="OffOurs" Style="{StaticResource Big}" Text="0"/></StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource CardBox}">
+                            <StackPanel><TextBlock Style="{StaticResource Sub}" Text="آخر فحص للسيرفر الرسمي"/><TextBlock x:Name="OffChecked" Style="{StaticResource Big}" FontSize="20" Text="-" Margin="0,8,0,0"/></StackPanel>
+                        </Border>
+                    </UniformGrid>
+                    <Border Grid.Row="1" Style="{StaticResource Panel}">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top" Style="{StaticResource Sub}" Margin="0,0,0,10" x:Name="OffHint"
+                                       Text="كل باتش رسمي (حتى لو نطاق زي 5151-5171) بيتنشر عندنا كملف واحد باسم رقم النهاية، وأي hotfix بتاعنا بياخد الرقم الفاضي اللي بعده. البيانات دي بتيجي من مرآة التحديثات الرسمية (patchmirror)."/>
+                            <Grid>
+                                <DataGrid x:Name="OfficialGrid" IsReadOnly="True">
+                                    <DataGrid.Columns>
+                                        <DataGridTextColumn Header="الرقم الرسمي" Binding="{Binding OfficialText}" Width="130"/>
+                                        <DataGridTextColumn Header="منشور عندنا كـ" Binding="{Binding OursText}" Width="130"/>
+                                        <DataGridTextColumn Header="الحجم" Binding="{Binding SizeText}" Width="100"/>
+                                        <DataGridTextColumn Header="التاريخ" Binding="{Binding CreatedText}" Width="170"/>
+                                        <DataGridTextColumn Header="الحالة" Binding="{Binding Status}" Width="*"/>
+                                    </DataGrid.Columns>
+                                </DataGrid>
+                                <StackPanel x:Name="OffEmpty" VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Style="{StaticResource Icon}" Text="&#xE774;" FontSize="44" HorizontalAlignment="Center" Foreground="{StaticResource Muted}"/>
+                                    <TextBlock Text="لسه مفيش بيانات من السيرفر الرسمي" FontSize="17" FontWeight="SemiBold" HorizontalAlignment="Center" Margin="0,12,0,4"/>
+                                    <TextBlock x:Name="OffEmptySub" Style="{StaticResource Sub}" HorizontalAlignment="Center" TextAlignment="Center" MaxWidth="560"/>
+                                </StackPanel>
+                            </Grid>
+                        </DockPanel>
+                    </Border>
+                </Grid>
+
+                <!-- ====================================================== stats -->
+                <Grid x:Name="PageStats" Visibility="Collapsed">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <UniformGrid Columns="4">
+                        <Border Style="{StaticResource CardBox}">
+                            <StackPanel><TextBlock Style="{StaticResource Sub}" Text="تنزيلات ناجحة"/><TextBlock x:Name="StOk" Style="{StaticResource Big}" Text="0"/></StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource CardBox}">
+                            <StackPanel><TextBlock Style="{StaticResource Sub}" Text="تنزيلات فشلت أو انقطعت"/><TextBlock x:Name="StFail" Style="{StaticResource Big}" Text="0"/></StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource CardBox}">
+                            <StackPanel><TextBlock Style="{StaticResource Sub}" Text="أجهزة مختلفة"/><TextBlock x:Name="StDevices" Style="{StaticResource Big}" Text="0"/></StackPanel>
+                        </Border>
+                        <Border Style="{StaticResource CardBox}">
+                            <StackPanel><TextBlock Style="{StaticResource Sub}" Text="فحوصات إصدار اليوم"/><TextBlock x:Name="StChecks" Style="{StaticResource Big}" Text="0"/></StackPanel>
+                        </Border>
+                    </UniformGrid>
+                    <Border Grid.Row="1" Style="{StaticResource Panel}">
+                        <DockPanel>
+                            <DockPanel DockPanel.Dock="Top">
+                                <CheckBox DockPanel.Dock="Right" x:Name="StIncludeTests" Content="إظهار اختبارات الأداة" Click="StatsFilter_Click"/>
+                                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" Margin="0,0,24,0">
+                                    <Rectangle Width="12" Height="12" RadiusX="3" RadiusY="3" Fill="{StaticResource Gold}" VerticalAlignment="Center"/>
+                                    <TextBlock Text="نجح" Margin="6,0,14,0" Style="{StaticResource Sub}"/>
+                                    <Rectangle Width="12" Height="12" RadiusX="3" RadiusY="3" Fill="{StaticResource Bad}" VerticalAlignment="Center"/>
+                                    <TextBlock Text="فشل" Margin="6,0,0,0" Style="{StaticResource Sub}"/>
+                                </StackPanel>
+                                <TextBlock Style="{StaticResource H2}" Text="التنزيلات آخر 14 يوم"/>
+                            </DockPanel>
+                            <Canvas x:Name="Chart" Height="210" FlowDirection="LeftToRight" ClipToBounds="False" SizeChanged="Chart_SizeChanged" Background="Transparent"/>
+                        </DockPanel>
+                    </Border>
+                    <Border Grid.Row="2" Style="{StaticResource Panel}">
+                        <DockPanel>
+                            <TextBlock DockPanel.Dock="Top" Style="{StaticResource H2}" Text="السجل التفصيلي (الـ IP مخفي جزئيا)"/>
+                            <DataGrid x:Name="StatsGrid" IsReadOnly="True">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="الوقت" Binding="{Binding TimeText}" Width="170"/>
+                                    <DataGridTextColumn Header="النوع" Binding="{Binding KindText}" Width="100"/>
+                                    <DataGridTextColumn Header="الإصدار" Binding="{Binding Version}" Width="80"/>
+                                    <DataGridTemplateColumn Header="النتيجة" Width="170">
+                                        <DataGridTemplateColumn.CellTemplate>
+                                            <DataTemplate>
+                                                <Border Style="{StaticResource StatusPill}" Tag="{Binding ResultKey}"><TextBlock Text="{Binding ResultText}" FontSize="12.5"/></Border>
+                                            </DataTemplate>
+                                        </DataGridTemplateColumn.CellTemplate>
+                                    </DataGridTemplateColumn>
+                                    <DataGridTextColumn Header="الحجم" Binding="{Binding BytesText}" Width="90"/>
+                                    <DataGridTextColumn Header="IP" Binding="{Binding IpText}" Width="120"/>
+                                    <DataGridTextColumn Header="الجهاز" Binding="{Binding DeviceText}" Width="*"/>
+                                </DataGrid.Columns>
+                            </DataGrid>
+                        </DockPanel>
+                    </Border>
+                </Grid>
+
+                <!-- ====================================================== settings -->
+                <ScrollViewer x:Name="PageSettings" Visibility="Collapsed" VerticalScrollBarVisibility="Auto">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel>
+                            <Border Style="{StaticResource Panel}">
+                                <StackPanel>
+                                    <TextBlock Style="{StaticResource H2}" Text="وضع التحديث"/>
+                                    <Border Background="{StaticResource Input}" CornerRadius="12" HorizontalAlignment="Left" Padding="2">
+                                        <StackPanel Orientation="Horizontal">
+                                            <RadioButton x:Name="ModeUpdate" Style="{StaticResource Segment}" GroupName="mode" Content="Update - التحديثات شغالة" Click="Mode_Click"/>
+                                            <RadioButton x:Name="ModeReady" Style="{StaticResource Segment}" GroupName="mode" Content="Ready - موقوفة" Click="Mode_Click"/>
+                                        </StackPanel>
+                                    </Border>
+                                    <Border x:Name="RestartBanner" Background="{StaticResource WarnSoft}" CornerRadius="10" Padding="12,9" Margin="0,12,0,0">
+                                        <DockPanel>
+                                            <TextBlock DockPanel.Dock="Left" Style="{StaticResource Icon}" Text="&#xE7BA;" Foreground="{StaticResource Warn}" VerticalAlignment="Top" Margin="0,3,0,0"/>
+                                            <TextBlock x:Name="RestartText" Margin="10,0,0,0" TextWrapping="Wrap"
+                                                       Text="تغيير الوضع أو البورتات أو المجلد بيشتغل بعد إعادة تشغيل الـ AccServer (إعادة التشغيل بتخرج اللاعبين). نشر تحديث جديد مش محتاج إعادة تشغيل."/>
+                                        </DockPanel>
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+                            <Border Style="{StaticResource Panel}">
+                                <StackPanel>
+                                    <TextBlock Style="{StaticResource H2}" Text="البورتات"/>
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="120"/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Text="فحص الإصدار (TCP)" VerticalAlignment="Center" Margin="0,6,16,6"/>
+                                        <TextBox Grid.Column="1" x:Name="CheckPortBox" FlowDirection="LeftToRight" Margin="0,6"/>
+                                        <StackPanel Grid.Column="2" Orientation="Horizontal" Margin="14,0,0,0">
+                                            <Ellipse x:Name="CheckLamp" Style="{StaticResource Lamp}"/>
+                                            <TextBlock x:Name="CheckLampText" Margin="8,0,0,0" VerticalAlignment="Center" Style="{StaticResource Sub}"/>
+                                        </StackPanel>
+                                        <TextBlock Grid.Row="1" Text="تحميل الملفات (HTTP)" VerticalAlignment="Center" Margin="0,6,16,6"/>
+                                        <TextBox Grid.Row="1" Grid.Column="1" x:Name="HttpPortBox" FlowDirection="LeftToRight" Margin="0,6"/>
+                                        <StackPanel Grid.Row="1" Grid.Column="2" Orientation="Horizontal" Margin="14,0,0,0">
+                                            <Ellipse x:Name="HttpLamp" Style="{StaticResource Lamp}"/>
+                                            <TextBlock x:Name="HttpLampText" Margin="8,0,0,0" VerticalAlignment="Center" Style="{StaticResource Sub}"/>
+                                        </StackPanel>
+                                    </Grid>
+                                    <TextBlock x:Name="PortProblems" Foreground="{StaticResource Bad}" TextWrapping="Wrap" Margin="0,6,0,0"/>
+                                    <TextBlock Style="{StaticResource Sub}" Margin="0,8,0,0">
+                                        <Run Text="رابط التحميل اللي بيوصل للموبايل:"/>
+                                    </TextBlock>
+                                    <TextBox x:Name="UrlBox" IsReadOnly="True" FlowDirection="LeftToRight" FontFamily="{StaticResource Mono}" FontSize="12.5" Margin="0,4,0,0"/>
+                                    <Button HorizontalAlignment="Left" Content="حفظ البورتات" Click="SavePorts_Click" Margin="0,10,0,0"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Style="{StaticResource Panel}">
+                                <StackPanel>
+                                    <TextBlock Style="{StaticResource H2}" Text="المجلدات"/>
+                                    <TextBlock Style="{StaticResource Sub}" Text="ملف إعدادات السيرفر (ServerConfig.ini)"/>
+                                    <DockPanel Margin="0,4,0,10">
+                                        <Button DockPanel.Dock="Right" Content="تغيير..." Click="PickConfig_Click" Margin="6,0,0,0"/>
+                                        <TextBox x:Name="ConfigBox" IsReadOnly="True" FlowDirection="LeftToRight" FontSize="12.5"/>
+                                    </DockPanel>
+                                    <TextBlock Style="{StaticResource Sub}" Text="مجلد التحديثات على السيرفر (PatchDir)"/>
+                                    <DockPanel Margin="0,4,0,10">
+                                        <Button DockPanel.Dock="Right" Content="تغيير..." Click="PickPatchDir_Click" Margin="6,0,0,0"/>
+                                        <TextBox x:Name="PatchDirBox" IsReadOnly="True" FlowDirection="LeftToRight" FontSize="12.5"/>
+                                    </DockPanel>
+                                    <TextBlock Style="{StaticResource Sub}" Text="النسخة الأساسية للكلاينت 5150 (ConquerRes من الـ APK) - للمقارنة"/>
+                                    <DockPanel Margin="0,4,0,10">
+                                        <Button DockPanel.Dock="Right" Content="تغيير..." Click="PickBase_Click" Margin="6,0,0,0"/>
+                                        <TextBox x:Name="BaseBox" IsReadOnly="True" FlowDirection="LeftToRight" FontSize="12.5"/>
+                                    </DockPanel>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1">
+                            <Border Style="{StaticResource Panel}">
+                                <StackPanel>
+                                    <TextBlock Style="{StaticResource H2}" Text="الاختبار"/>
+                                    <TextBlock Style="{StaticResource Sub}" Text="اختبار التحديث بيعمل زي موبايل نسخته 5150: يسأل عن الإصدار، ينزّل كل ملف، يجرب استكمال تنزيل مقطوع، ويتأكد من version.dat والـ checksum. التنزيلات دي بتتعلّم كاختبار في الإحصائيات."/>
+                                    <StackPanel Orientation="Horizontal" Margin="0,12,0,0">
+                                        <Button Style="{StaticResource Primary}" Click="FullTest_Click" x:Name="FullTestBtn" AutomationProperties.Name="اختبار تحديث كامل">
+                                            <StackPanel Orientation="Horizontal"><TextBlock Style="{StaticResource Icon}" Text="&#xE768;" Foreground="#1A1308"/><TextBlock Text="اختبار تحديث كامل" Margin="8,0,0,0" Foreground="#1A1308"/></StackPanel>
+                                        </Button>
+                                        <Button Click="ConnTest_Click">
+                                            <StackPanel Orientation="Horizontal"><TextBlock Style="{StaticResource Icon}" Text="&#xE701;"/><TextBlock Text="اختبار الاتصال" Margin="8,0,0,0"/></StackPanel>
+                                        </Button>
+                                    </StackPanel>
+                                    <Border Background="{StaticResource Input}" CornerRadius="10" Padding="12" Margin="0,12,0,0" MinHeight="260">
+                                        <ItemsControl x:Name="TestResults">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <DockPanel Margin="0,4">
+                                                        <TextBlock DockPanel.Dock="Left" Text="{Binding Glyph}" FontFamily="{StaticResource Icons}" Foreground="{Binding Brush}" FontSize="14" VerticalAlignment="Top" Margin="0,3,0,0"/>
+                                                        <TextBlock Text="{Binding Text}" Margin="10,0,0,0" TextWrapping="Wrap"/>
+                                                    </DockPanel>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </Border>
+                                </StackPanel>
+                            </Border>
+                        </StackPanel>
+                    </Grid>
+                </ScrollViewer>
+
+                <!-- ====================================================== operations log -->
+                <Border x:Name="PageLog" Style="{StaticResource Panel}" Visibility="Collapsed">
+                    <DockPanel>
+                        <DockPanel DockPanel.Dock="Top" Margin="0,0,0,8">
+                            <Button DockPanel.Dock="Right" Content="فتح الملف" Click="OpenLog_Click"/>
+                            <TextBlock x:Name="LogPath" Style="{StaticResource Sub}" VerticalAlignment="Center" FlowDirection="LeftToRight" HorizontalAlignment="Right"/>
+                        </DockPanel>
+                        <DataGrid x:Name="LogGrid" IsReadOnly="True">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="الوقت" Binding="{Binding [0]}" Width="170"/>
+                                <DataGridTextColumn Header="العملية" Binding="{Binding [1]}" Width="90"/>
+                                <DataGridTextColumn Header="المستخدم" Binding="{Binding [2]}" Width="110"/>
+                                <DataGridTextColumn Header="التفاصيل" Binding="{Binding [3]}" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </Border>
+            </Grid>
+
+            <!-- toast -->
+            <Border x:Name="Toast" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="30" Padding="16,12" CornerRadius="12"
+                    Background="#2A2533" BorderBrush="{StaticResource Gold}" BorderThickness="1" Visibility="Collapsed" IsHitTestVisible="False">
+                <Border.RenderTransform><TranslateTransform x:Name="ToastMove" Y="0"/></Border.RenderTransform>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock x:Name="ToastIcon" Style="{StaticResource Icon}" Text="&#xE73E;"/>
+                    <TextBlock x:Name="ToastText" Margin="10,0,0,0" FontWeight="SemiBold"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</Window>

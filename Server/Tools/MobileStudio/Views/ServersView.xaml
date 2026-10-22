@@ -1,0 +1,197 @@
+<UserControl x:Class="MobileStudio.Views.ServersView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:kit="clr-namespace:ScriptHazem.Kit"
+             xmlns:core="clr-namespace:MobileStudio.Core">
+    <Grid Margin="24,20,24,24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Margin="0,0,0,16">
+            <TextBlock Text="{kit:T srv.title}" Style="{StaticResource PageTitle}"/>
+            <TextBlock Text="{kit:T srv.sub}" Style="{StaticResource PageSub}"/>
+        </StackPanel>
+
+        <!-- ================= CDN mirror (run_cdn.ps1) ================= -->
+        <!-- above the server cards, so it stays visible when the window is shorter than the page -->
+        <Border Grid.Row="1" Style="{StaticResource Card}" Padding="16,12" Margin="0,0,0,12">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                    <Button x:Name="CStart" Style="{StaticResource GhostButton}" Margin="0,0,8,0" Click="CStart_Click">
+                        <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE768;" Style="{StaticResource BtnGlyph}"/><TextBlock Text="{kit:T srv.start}"/></StackPanel>
+                    </Button>
+                    <Button x:Name="CStop" Style="{StaticResource GhostButton}" Click="CStop_Click">
+                        <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE71A;" Style="{StaticResource BtnGlyph}" Foreground="{StaticResource ErrBrush}"/><TextBlock Text="{kit:T srv.stop}"/></StackPanel>
+                    </Button>
+                </StackPanel>
+                <Border Style="{StaticResource IconTile}">
+                    <TextBlock Text="&#xE753;" Style="{StaticResource TileGlyph}"/>
+                </Border>
+                <StackPanel Margin="12,0" VerticalAlignment="Center">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{kit:T srv.cdnTitle}" Style="{StaticResource CardTitle}"/>
+                        <Border Style="{StaticResource Pill}" Margin="10,0,0,0" Padding="8,1,9,2" VerticalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Ellipse x:Name="CDot" Width="7" Height="7" Margin="0,1,7,0" VerticalAlignment="Center" Fill="{StaticResource FaintBrush}"/>
+                                <TextBlock x:Name="CState" Text="…" FontSize="11.5" FontWeight="Medium"/>
+                            </StackPanel>
+                        </Border>
+                    </StackPanel>
+                    <TextBlock x:Name="CInfo" FontSize="12" Foreground="{StaticResource SubtleBrush}" TextWrapping="Wrap" Margin="0,2,0,0"/>
+                </StackPanel>
+            </DockPanel>
+        </Border>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="16"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- ================= GameServer ================= -->
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Style="{StaticResource Card}" Padding="20,18,20,16" Margin="0,0,0,12">
+                    <StackPanel>
+                        <DockPanel>
+                            <Border DockPanel.Dock="Right" Style="{StaticResource Pill}" VerticalAlignment="Center" Padding="9,3,10,4">
+                                <StackPanel Orientation="Horizontal">
+                                    <Ellipse x:Name="GDot" Width="7" Height="7" Margin="0,1,8,0" VerticalAlignment="Center" Fill="{StaticResource FaintBrush}"/>
+                                    <TextBlock x:Name="GState" Text="…" FontSize="12" FontWeight="Medium"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Style="{StaticResource IconTile}" Width="40" Height="40">
+                                <TextBlock Text="&#xE7FC;" Style="{StaticResource TileGlyph}" FontSize="18"/>
+                            </Border>
+                            <StackPanel Margin="12,0" VerticalAlignment="Center">
+                                <TextBlock Text="GameServer" Style="{StaticResource CardTitle}" FontSize="15" FlowDirection="LeftToRight" HorizontalAlignment="Left"/>
+                                <TextBlock Text="{kit:T srv.gameRole}" FontSize="12" Foreground="{StaticResource SubtleBrush}" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <TextBlock x:Name="GPath" Style="{StaticResource LtrText}" FontSize="11.5" Foreground="{StaticResource FaintBrush}" Margin="0,12,0,0" TextTrimming="CharacterEllipsis"/>
+                        <Border Height="1" Background="{StaticResource LineBrush}" Margin="0,12,0,14"/>
+                        <UniformGrid Columns="4">
+                            <StackPanel Margin="0,0,8,0"><TextBlock Style="{StaticResource StatK}" Text="PID"/><TextBlock x:Name="GPid" Style="{StaticResource StatV}" kit:Bidi.Ltr="True" Text="—"/></StackPanel>
+                            <StackPanel Margin="0,0,8,0"><TextBlock Style="{StaticResource StatK}" Text="{kit:T dash.uptime}"/><TextBlock x:Name="GUptime" Style="{StaticResource StatV}" Text="—"/></StackPanel>
+                            <StackPanel Margin="0,0,8,0"><TextBlock Style="{StaticResource StatK}" Text="{kit:T dash.online}"/><TextBlock x:Name="GOnline" Style="{StaticResource StatV}" kit:Bidi.Ltr="True" Text="—"/></StackPanel>
+                            <StackPanel Margin="0,0,8,0"><TextBlock Style="{StaticResource StatK}" Text="Hot Reload"/><TextBlock x:Name="GHr" Style="{StaticResource StatV}" Text="—"/></StackPanel>
+                        </UniformGrid>
+                        <Border x:Name="GNote" Style="{StaticResource InfoBanner}" Margin="0,14,0,0">
+                            <DockPanel>
+                                <TextBlock Text="&#xE946;" FontFamily="{StaticResource IconFont}" FontSize="12" Foreground="{StaticResource InfoBrush}" Margin="0,2,9,0" VerticalAlignment="Top"/>
+                                <TextBlock x:Name="GNoteText" FontSize="12" Foreground="{StaticResource TextBrush}" TextWrapping="Wrap" LineHeight="18"/>
+                            </DockPanel>
+                        </Border>
+                        <WrapPanel Margin="0,14,0,0">
+                            <Button x:Name="GStart" Style="{StaticResource GoldButton}" Margin="0,0,8,6" Click="GStart_Click">
+                                <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE768;" Style="{StaticResource GoldGlyph}"/><TextBlock Text="{kit:T srv.start}"/></StackPanel>
+                            </Button>
+                            <Button x:Name="GRestart" Style="{StaticResource GhostButton}" Margin="0,0,8,6" Click="GRestart_Click" ToolTip="{kit:T srv.safeRestartTip}">
+                                <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE72C;" Style="{StaticResource BtnGlyph}"/><TextBlock Text="{kit:T srv.safeRestart}"/></StackPanel>
+                            </Button>
+                            <Button x:Name="GStop" Style="{StaticResource GhostButton}" Margin="0,0,8,6" Click="GStop_Click">
+                                <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE71A;" Style="{StaticResource BtnGlyph}" Foreground="{StaticResource ErrBrush}"/><TextBlock Text="{kit:T srv.stop}"/></StackPanel>
+                            </Button>
+                            <Button x:Name="GSave" Style="{StaticResource GhostButton}" Margin="0,0,8,6" Click="GSave_Click" ToolTip="{kit:T srv.saveTip}">
+                                <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE74E;" Style="{StaticResource BtnGlyph}"/><TextBlock Text="{kit:T srv.save}"/></StackPanel>
+                            </Button>
+                        </WrapPanel>
+                        <TextBlock x:Name="GProgress" FontSize="12" Foreground="{StaticResource SubtleBrush}" TextWrapping="Wrap" Margin="0,2,0,0"/>
+                    </StackPanel>
+                </Border>
+                <DockPanel Grid.Row="1">
+                    <DockPanel DockPanel.Dock="Top" Margin="2,0,0,8">
+                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                            <RadioButton x:Name="GSrcLog" Style="{StaticResource ChipToggle}" GroupName="gsrc" Content="watch.log" IsChecked="True" Checked="GSrc_Changed" Margin="0,0,6,0"/>
+                            <RadioButton x:Name="GSrcErr" Style="{StaticResource ChipToggle}" GroupName="gsrc" Content="watch.err.log" Checked="GSrc_Changed"/>
+                            <core:CopyAllButton Target="{Binding ElementName=GConsole}"/>
+                        </StackPanel>
+                        <TextBlock Text="{kit:T srv.console}" Style="{StaticResource SectionTitle}" VerticalAlignment="Center"/>
+                    </DockPanel>
+                    <ListBox x:Name="GConsole" Style="{StaticResource LogList}" ItemContainerStyle="{StaticResource LogItem}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate><TextBlock Text="{Binding Text}" Foreground="{Binding Brush}"/></DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </Grid>
+
+            <!-- ================= AccServer ================= -->
+            <Grid Grid.Column="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Style="{StaticResource Card}" Padding="20,18,20,16" Margin="0,0,0,12">
+                    <StackPanel>
+                        <DockPanel>
+                            <Border DockPanel.Dock="Right" Style="{StaticResource Pill}" VerticalAlignment="Center" Padding="9,3,10,4">
+                                <StackPanel Orientation="Horizontal">
+                                    <Ellipse x:Name="ADot" Width="7" Height="7" Margin="0,1,8,0" VerticalAlignment="Center" Fill="{StaticResource FaintBrush}"/>
+                                    <TextBlock x:Name="AState" Text="…" FontSize="12" FontWeight="Medium"/>
+                                </StackPanel>
+                            </Border>
+                            <Border Style="{StaticResource IconTile}" Width="40" Height="40">
+                                <TextBlock Text="&#xE77B;" Style="{StaticResource TileGlyph}" FontSize="18"/>
+                            </Border>
+                            <StackPanel Margin="12,0" VerticalAlignment="Center">
+                                <TextBlock Text="AccServer" Style="{StaticResource CardTitle}" FontSize="15" FlowDirection="LeftToRight" HorizontalAlignment="Left"/>
+                                <TextBlock Text="{kit:T srv.accRole}" FontSize="12" Foreground="{StaticResource SubtleBrush}" TextWrapping="Wrap"/>
+                            </StackPanel>
+                        </DockPanel>
+                        <TextBlock x:Name="APath" Style="{StaticResource LtrText}" FontSize="11.5" Foreground="{StaticResource FaintBrush}" Margin="0,12,0,0" TextTrimming="CharacterEllipsis"/>
+                        <Border Height="1" Background="{StaticResource LineBrush}" Margin="0,12,0,14"/>
+                        <UniformGrid Columns="4">
+                            <StackPanel Margin="0,0,8,0"><TextBlock Style="{StaticResource StatK}" Text="PID"/><TextBlock x:Name="APid" Style="{StaticResource StatV}" kit:Bidi.Ltr="True" Text="—"/></StackPanel>
+                            <StackPanel Margin="0,0,8,0"><TextBlock Style="{StaticResource StatK}" Text="{kit:T dash.uptime}"/><TextBlock x:Name="AUptime" Style="{StaticResource StatV}" Text="—"/></StackPanel>
+                            <StackPanel Margin="0,0,8,0"><TextBlock Style="{StaticResource StatK}" Text="{kit:T dash.ram}"/><TextBlock x:Name="ARam" Style="{StaticResource StatV}" kit:Bidi.Ltr="True" Text="—"/></StackPanel>
+                            <StackPanel Margin="0,0,8,0"><TextBlock Style="{StaticResource StatK}" Text="{kit:T srv.ports}"/><TextBlock x:Name="APorts" Style="{StaticResource StatV}" FontSize="13" kit:Bidi.Ltr="True" Text="—"/></StackPanel>
+                        </UniformGrid>
+                        <Border Style="{StaticResource InfoBanner}" Margin="0,14,0,0">
+                            <DockPanel>
+                                <TextBlock Text="&#xE946;" FontFamily="{StaticResource IconFont}" FontSize="12" Foreground="{StaticResource InfoBrush}" Margin="0,2,9,0" VerticalAlignment="Top"/>
+                                <TextBlock Text="{kit:T srv.accNote}" FontSize="12" Foreground="{StaticResource TextBrush}" TextWrapping="Wrap" LineHeight="18"/>
+                            </DockPanel>
+                        </Border>
+                        <WrapPanel Margin="0,14,0,0">
+                            <Button x:Name="AStart" Style="{StaticResource GoldButton}" Margin="0,0,8,6" Click="AStart_Click">
+                                <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE768;" Style="{StaticResource GoldGlyph}"/><TextBlock Text="{kit:T srv.start}"/></StackPanel>
+                            </Button>
+                            <Button x:Name="ARebuild" Style="{StaticResource GhostButton}" Margin="0,0,8,6" Click="ARebuild_Click" ToolTip="{kit:T srv.rebuildTip}">
+                                <StackPanel Orientation="Horizontal"><TextBlock Text="&#xEC7A;" Style="{StaticResource BtnGlyph}"/><TextBlock Text="{kit:T srv.rebuild}"/></StackPanel>
+                            </Button>
+                            <Button x:Name="ARestart" Style="{StaticResource GhostButton}" Margin="0,0,8,6" Click="ARestart_Click">
+                                <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE72C;" Style="{StaticResource BtnGlyph}"/><TextBlock Text="{kit:T srv.restart}"/></StackPanel>
+                            </Button>
+                            <Button x:Name="AStop" Style="{StaticResource GhostButton}" Margin="0,0,8,6" Click="AStop_Click">
+                                <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE71A;" Style="{StaticResource BtnGlyph}" Foreground="{StaticResource ErrBrush}"/><TextBlock Text="{kit:T srv.stop}"/></StackPanel>
+                            </Button>
+                        </WrapPanel>
+                        <TextBlock x:Name="AProgress" FontSize="12" Foreground="{StaticResource SubtleBrush}" TextWrapping="Wrap" Margin="0,2,0,0"/>
+                    </StackPanel>
+                </Border>
+                <DockPanel Grid.Row="1">
+                    <DockPanel DockPanel.Dock="Top" Margin="2,0,0,8">
+                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                            <RadioButton x:Name="ASrcLog" Style="{StaticResource ChipToggle}" GroupName="asrc" Content="acc.log" IsChecked="True" Checked="ASrc_Changed" Margin="0,0,6,0"/>
+                            <RadioButton x:Name="ASrcBuild" Style="{StaticResource ChipToggle}" GroupName="asrc" Content="{kit:T srv.buildOut}" Checked="ASrc_Changed"/>
+                            <core:CopyAllButton Target="{Binding ElementName=AConsole}"/>
+                        </StackPanel>
+                        <TextBlock Text="{kit:T srv.console}" Style="{StaticResource SectionTitle}" VerticalAlignment="Center"/>
+                    </DockPanel>
+                    <ListBox x:Name="AConsole" Style="{StaticResource LogList}" ItemContainerStyle="{StaticResource LogItem}">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate><TextBlock Text="{Binding Text}" Foreground="{Binding Brush}"/></DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </DockPanel>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

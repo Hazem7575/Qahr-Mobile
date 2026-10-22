@@ -1,0 +1,343 @@
+2026-10-15 11:07:03	PuppetTheater	GRANT	1000026 mohamed2	daily SP 3354702x150
+2026-10-15 11:07:16	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 3 3600813x1
+2026-10-15 11:07:18	PuppetTheater	GRANT	1000026 mohamed2	maze L1 event 4 3600813x1
+2026-10-15 11:07:20	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 5 3600813x1
+2026-10-15 11:07:33	PuppetTheater	GRANT	1000026 mohamed2	maze L1 event 42 3600813x1
+2026-10-15 11:08:16	PuppetTheater	BUY	1000026 mohamed2	Papet for 30999 CPs
+2026-10-15 11:08:16	PuppetTheater	GRANT	1000026 mohamed2	store 4330005x1
+2026-10-15 11:08:29	PuppetTheater	BUY	1000026 mohamed2	Papet for 30999 CPs
+2026-10-15 11:08:29	PuppetTheater	GRANT	1000026 mohamed2	store 4330005x1
+2026-10-15 11:08:50	PuppetTheater	BUY	1000026 mohamed2	Random Soulthread Pack for 95 CPs
+2026-10-15 11:08:50	PuppetTheater	GRANT	1000026 mohamed2	store 3354671x1
+2026-10-15 11:08:52	PuppetTheater	GRANT	1000026 mohamed2	open 3354671 3600813x3
+2026-10-15 11:14:19	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 11:14:19	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 11:14:23	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 11:14:23	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 11:20:02	PuppetTheater	GRANT	1000026 mohamed2	maze L1 event 29 3600813x2
+2026-10-15 11:20:14	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 11:20:14	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 11:20:15	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 11:20:15	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 11:20:23	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 11:20:23	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 11:20:25	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 11:20:25	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 11:20:26	PuppetTheater	CLEAR	1000026 mohamed2	L1
+2026-10-15 11:20:29	PuppetTheater	BOSS	1000026 mohamed2	L1 start
+2026-10-15 11:45:41	PuppetTheater	BOSS	1000026 mohamed2	L1 start
+2026-10-15 11:45:46	PuppetTheater	GRANT	1000026 mohamed2	boss first L1 3600813x3
+2026-10-15 11:45:46	PuppetTheater	BOSS	1000026 mohamed2	L1 cleared 4s rating 3
+2026-10-15 11:46:01	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 3 3600813x1
+2026-10-15 12:29:40	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:29:40	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:29:42	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:29:42	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:29:46	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:29:46	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:29:48	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:29:48	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:29:51	PuppetTheater	GRANT	1000026 mohamed2	maze L2 event 4 3600813x1
+2026-10-15 12:30:01	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 31 3600813x1
+2026-10-15 12:33:44	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:33:44	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:34:14	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:34:14	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:34:15	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:34:15	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:34:15	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:34:15	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:34:17	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 27 3600813x1
+2026-10-15 12:34:18	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 34 3600813x1
+2026-10-15 12:34:19	PuppetTheater	GRANT	1000026 mohamed2	maze L2 event 42 3600813x1
+2026-10-15 12:34:22	PuppetTheater	GRANT	1000026 mohamed2	maze L2 event 29 3600813x2
+2026-10-15 12:34:22	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 38 3600813x1
+2026-10-15 12:34:25	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 46 3600813x1
+2026-10-15 12:34:28	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:34:28	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:34:29	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:34:29	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:34:32	PuppetTheater	CLEAR	1000026 mohamed2	L2
+2026-10-15 12:37:51	PuppetTheater	BUY	1000026 mohamed2	Violet Dreamkey (2H) Box for 8999 CPs
+2026-10-15 12:37:51	PuppetTheater	GRANT	1000026 mohamed2	store 3354690x1
+2026-10-15 12:37:53	PuppetTheater	GRANT	1000026 mohamed2	open 3354690 -> 1x350230 (-1 bless)
+2026-10-15 12:38:07	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:38:07	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:38:08	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:38:08	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:38:15	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 13 3600813x1
+2026-10-15 12:38:17	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:38:17	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:38:20	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:38:20	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:38:22	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:38:22	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:38:24	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:38:24	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:38:24	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:38:24	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:38:25	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:38:25	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:38:27	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 31 3600813x1
+2026-10-15 12:38:29	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 20 3600813x1
+2026-10-15 12:38:31	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 30 3600813x1
+2026-10-15 12:38:53	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 45 3600813x1
+2026-10-15 12:38:57	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 12:38:57	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 12:38:58	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 12:38:58	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 12:39:01	PuppetTheater	CLEAR	1000026 mohamed2	L2
+2026-10-15 12:39:05	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 35 3600813x1
+2026-10-15 12:52:13	PuppetTheater	BOSS	1000026 mohamed2	L2 start
+2026-10-15 12:52:18	PuppetTheater	GRANT	1000026 mohamed2	boss first L2 3600813x3
+2026-10-15 12:52:18	PuppetTheater	BOSS	1000026 mohamed2	L2 cleared 5s rating 3
+2026-10-15 12:52:26	PuppetTheater	BOSS	1000026 mohamed2	L2 start
+2026-10-15 12:52:31	PuppetTheater	BOSS	1000026 mohamed2	L2 cleared 5s rating 3
+2026-10-15 12:52:38	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 34 3600813x1
+2026-10-15 12:52:45	PuppetTheater	BOSS	1000026 mohamed2	L2 start
+2026-10-15 12:53:26	PuppetTheater	BOSS	1000026 mohamed2	L2 cleared 40s rating 3
+2026-10-15 14:19:49	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 34 3600813x1
+2026-10-15 14:19:50	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 35 3600813x1
+2026-10-15 14:19:55	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:19:55	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:19:57	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:19:57	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:20:00	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:20:00	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:22:03	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 29 3600813x1
+2026-10-15 14:22:04	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 44 3600813x1
+2026-10-15 14:22:05	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 30 3600813x1
+2026-10-15 14:22:06	PuppetTheater	GRANT	1000026 mohamed2	maze L1 encounter 52 3009100x1(B)
+2026-10-15 14:35:18	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:35:18	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:35:22	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:35:22	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:35:23	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:35:23	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:35:28	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 34 3600813x1
+2026-10-15 14:35:30	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 29 3600813x1
+2026-10-15 14:35:31	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 30 3600813x1
+2026-10-15 14:35:32	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 44 3600813x1
+2026-10-15 14:35:34	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 38 3600813x1
+2026-10-15 14:35:36	PuppetTheater	GRANT	1000026 mohamed2	maze L1 event 53 3600813x2
+2026-10-15 14:42:57	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:42:57	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:42:59	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:42:59	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:43:02	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:43:02	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:43:02	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:43:02	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:43:05	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 35 3600813x1
+2026-10-15 14:43:07	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 29 3600813x1
+2026-10-15 14:43:09	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 30 3600813x1
+2026-10-15 14:43:21	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:43:21	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:43:22	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:43:22	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:43:24	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 44 3600813x1
+2026-10-15 14:43:25	PuppetTheater	CLEAR	1000026 mohamed2	L1
+2026-10-15 14:43:26	PuppetTheater	BOSS	1000026 mohamed2	L1 won in 7 rounds
+2026-10-15 14:52:02	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 27 3600813x1
+2026-10-15 14:52:03	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 28 3600813x1
+2026-10-15 14:52:05	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:52:05	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:52:07	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:52:07	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:52:09	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:52:09	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:52:11	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:52:11	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:52:13	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:52:13	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:52:14	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:52:14	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:52:14	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:52:14	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:52:18	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 21 3600813x1
+2026-10-15 14:52:18	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 13 3600813x1
+2026-10-15 14:52:24	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 23 3600813x1
+2026-10-15 14:52:25	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 36 3600813x1
+2026-10-15 14:52:26	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 44 3600813x1
+2026-10-15 14:52:28	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 60 3600813x1
+2026-10-15 14:52:29	PuppetTheater	GRANT	1000026 mohamed2	maze L2 event 59 3600813x2
+2026-10-15 14:52:33	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 53 3600813x1
+2026-10-15 14:52:33	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 50 3600813x1
+2026-10-15 14:52:37	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:52:37	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:52:39	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 14:52:39	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 14:52:40	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:52:40	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:52:41	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:52:41	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:52:42	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 14:52:42	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 14:52:44	PuppetTheater	CLEAR	1000026 mohamed2	L2
+2026-10-15 14:52:46	PuppetTheater	BOSS	1000026 mohamed2	L2 lost
+2026-10-15 14:58:20	PuppetTheater	BOSS	1000026 mohamed2	L2 lost
+2026-10-15 14:58:29	PuppetTheater	BOSS	1000026 mohamed2	L2 lost
+2026-10-15 15:14:41	PuppetTheater	BOSS	1000026 mohamed2	L2 lost
+2026-10-15 16:12:06	PuppetTheater	BOSS	1000026 mohamed2	L2 lost
+2026-10-15 16:12:27	PuppetTheater	BUY	1000026 mohamed2	Random Soulthread Pack for 95 CPs
+2026-10-15 16:12:27	PuppetTheater	GRANT	1000026 mohamed2	store 3354671x1
+2026-10-15 16:12:29	PuppetTheater	GRANT	1000026 mohamed2	open 3354671 3600813x4
+2026-10-15 16:15:45	PuppetTheater	GRANT	1000026 mohamed2	train x64 3328247x240(B)
+2026-10-15 16:15:45	PuppetTheater	GRANT	1000026 mohamed2	train x64 3347151x150(B)
+2026-10-15 16:15:45	PuppetTheater	GRANT	1000026 mohamed2	train x64 3347158x16(B)
+2026-10-15 16:15:45	PuppetTheater	GRANT	1000026 mohamed2	train x64 3314207x11(B)
+2026-10-15 16:15:45	PuppetTheater	GRANT	1000026 mohamed2	train x64 3003126x7(B)
+2026-10-15 16:15:53	PuppetTheater	BUY	1000026 mohamed2	Random Soulthread Pack for 95 CPs
+2026-10-15 16:15:53	PuppetTheater	GRANT	1000026 mohamed2	store 3354671x1
+2026-10-15 16:15:58	PuppetTheater	GRANT	1000026 mohamed2	open 3354671 3600813x8
+2026-10-15 16:15:58	PuppetTheater	GRANT	1000026 mohamed2	use 3314207 -> 1000 Chi Points
+2026-10-15 16:15:59	PuppetTheater	GRANT	1000026 mohamed2	use 3314207 -> 1000 Chi Points
+2026-10-15 16:16:01	PuppetTheater	GRANT	1000026 mohamed2	train x8 3328247x32(B)
+2026-10-15 16:16:01	PuppetTheater	GRANT	1000026 mohamed2	train x8 3003126x3(B)
+2026-10-15 16:16:01	PuppetTheater	GRANT	1000026 mohamed2	train x8 3347158x2(B)
+2026-10-15 16:16:01	PuppetTheater	GRANT	1000026 mohamed2	train x8 3347151x10(B)
+2026-10-15 16:16:10	PuppetTheater	BOSS	1000026 mohamed2	L2 won in 4 rounds
+2026-10-15 16:19:17	PuppetTheater	BOSS	1000026 mohamed2	L2 won in 4 rounds
+2026-10-15 16:19:17	PuppetTheater	GRANT	1000026 mohamed2	boss first L2 3354663x1(B)
+2026-10-15 16:19:23	PuppetTheater	GRANT	1000026 mohamed2	maze L3 cell 27 3600813x1
+2026-10-15 16:19:24	PuppetTheater	GRANT	1000026 mohamed2	maze L3 cell 28 3600813x1
+2026-10-15 16:19:25	PuppetTheater	GRANT	1000026 mohamed2	maze L3 event 20 3009100x1(B)
+2026-10-15 16:19:31	PuppetTheater	GRANT	1000026 mohamed2	maze L3 cell 37 3600813x1
+2026-10-15 16:19:33	PuppetTheater	GRANT	1000026 mohamed2	maze L3 cell 46 3600813x1
+2026-10-15 16:19:34	PuppetTheater	GRANT	1000026 mohamed2	maze L3 cell 47 3600813x1
+2026-10-15 16:19:36	PuppetTheater	GRANT	1000026 mohamed2	maze L3 event 53 3009100x1(B)
+2026-10-15 16:19:39	PuppetTheater	GRANT	1000026 mohamed2	maze L3 event 62 3600813x2
+2026-10-15 16:19:42	PuppetTheater	CLEAR	1000026 mohamed2	L3
+2026-10-15 16:19:42	PuppetTheater	BOSS	1000026 mohamed2	L3 won in 7 rounds
+2026-10-15 16:19:42	PuppetTheater	GRANT	1000026 mohamed2	boss first L3 3354663x1(B)
+2026-10-15 16:19:52	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 16:19:52	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 16:19:56	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 16:19:56	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 16:19:59	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 16:19:59	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 16:20:01	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 16:20:01	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 16:20:02	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 16:20:02	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 16:20:08	PuppetTheater	GRANT	1000026 mohamed2	maze L4 cell 27 3600813x1
+2026-10-15 16:20:11	PuppetTheater	GRANT	1000026 mohamed2	maze L4 cell 46 3600813x1
+2026-10-15 16:20:12	PuppetTheater	GRANT	1000026 mohamed2	maze L4 event 38 3009100x1(B)
+2026-10-15 16:20:14	PuppetTheater	GRANT	1000026 mohamed2	maze L4 event 53 3600813x2
+2026-10-15 16:20:21	PuppetTheater	GRANT	1000026 mohamed2	maze L4 event 20 3009100x1(B)
+2026-10-15 16:20:26	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 16:20:26	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 16:20:27	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 16:20:27	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 16:20:28	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 16:20:28	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 16:20:28	PuppetTheater	CLEAR	1000026 mohamed2	L4
+2026-10-15 16:20:28	PuppetTheater	BOSS	1000026 mohamed2	L4 won in 10 rounds
+2026-10-15 16:20:28	PuppetTheater	GRANT	1000026 mohamed2	boss first L4 3354663x1(B)
+2026-10-15 16:20:42	PuppetTheater	BOSS	1000026 mohamed2	L4 won in 10 rounds
+2026-10-15 16:20:47	PuppetTheater	GRANT	1000026 mohamed2	finale 3600813x2
+2026-10-15 16:20:47	PuppetTheater	FINALE	1000026 mohamed2	dealt 7192
+2026-10-15 16:20:57	PuppetTheater	GRANT	1000026 mohamed2	maze L5 cell 19 3600813x1
+2026-10-15 16:21:00	PuppetTheater	GRANT	1000026 mohamed2	maze L5 event 29 3009100x1(B)
+2026-10-15 16:21:02	PuppetTheater	GRANT	1000026 mohamed2	maze L5 cell 37 3600813x1
+2026-10-15 16:21:04	PuppetTheater	GRANT	1000026 mohamed2	maze L5 cell 47 3600813x1
+2026-10-15 16:21:08	PuppetTheater	GRANT	1000026 mohamed2	maze L5 event 53 3600813x2
+2026-10-15 16:21:09	PuppetTheater	GRANT	1000026 mohamed2	maze L5 cell 39 3600813x1
+2026-10-15 16:21:12	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 16:21:12	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 16:21:13	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 16:21:13	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 16:21:15	PuppetTheater	CLEAR	1000026 mohamed2	L5
+2026-10-15 16:21:15	PuppetTheater	BOSS	1000026 mohamed2	L5 lost
+2026-10-15 16:21:20	PuppetTheater	GRANT	1000026 mohamed2	train x19 3314207x2(B)
+2026-10-15 16:21:20	PuppetTheater	GRANT	1000026 mohamed2	train x19 3347158x5(B)
+2026-10-15 16:21:20	PuppetTheater	GRANT	1000026 mohamed2	train x19 3003126x5(B)
+2026-10-15 16:21:20	PuppetTheater	GRANT	1000026 mohamed2	train x19 3347151x50(B)
+2026-10-15 16:21:20	PuppetTheater	GRANT	1000026 mohamed2	train x19 3328247x32(B)
+2026-10-15 16:46:09	PuppetTheater	BOSS	1000026 mohamed2	L2 won in 4 rounds
+2026-10-15 16:48:22	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 27 3600813x1
+2026-10-15 16:49:20	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 21 3600813x1
+2026-10-15 16:50:12	PuppetTheater	GRANT	1000026 mohamed2	maze L6 event 35 3009100x2(B)
+2026-10-15 16:50:30	PuppetTheater	BOSS	1000026 mohamed2	L5 lost
+2026-10-15 16:51:53	PuppetTheater	GRANT	1000026 mohamed2	train x2 3328247x16(B)
+2026-10-15 16:51:53	PuppetTheater	GRANT	1000026 mohamed2	train x2 3347151x10(B)
+2026-10-15 16:52:23	PuppetTheater	GRANT	1000026 mohamed2	train x1 3347151x10(B)
+2026-10-15 16:59:13	PuppetTheater	GRANT	1000026 mohamed2	bell exchange 3354682x1(B)
+2026-10-15 16:59:13	PuppetTheater	BELL	1000026 mohamed2	exchange 30 bells + 0 CPs -> 3354682
+2026-10-15 16:59:31	PuppetTheater	BELL	1000026 mohamed2	exchange 60 bells + 0 CPs -> 194155
+2026-10-15 16:59:34	PuppetTheater	GRANT	1000026 mohamed2	bell exchange 3354683x1
+2026-10-15 16:59:34	PuppetTheater	BELL	1000026 mohamed2	exchange 80 bells + 0 CPs -> 3354683
+2026-10-15 16:59:37	PuppetTheater	GRANT	1000026 mohamed2	bell exchange 4330005x1
+2026-10-15 16:59:37	PuppetTheater	BELL	1000026 mohamed2	exchange 100 bells + 0 CPs -> 4330005
+2026-10-15 16:59:48	PuppetTheater	BELL	1000026 mohamed2	used 1, not doubled
+2026-10-15 16:59:50	PuppetTheater	GRANT	1000026 mohamed2	bell doubled 3354663x2(B)
+2026-10-15 16:59:53	PuppetTheater	BELL	1000026 mohamed2	used 1, not doubled
+2026-10-15 17:00:04	PuppetTheater	GRANT	1000026 mohamed2	refund 3600815 3600815x1
+2026-10-15 17:00:19	PuppetTheater	GRANT	1000026 mohamed2	refund 3349209 3349209x1
+2026-10-15 17:00:34	PuppetTheater	GRANT	1000026 mohamed2	open 3341018 3346828x1(B)
+2026-10-15 17:01:18	PuppetTheater	GRANT	1000026 mohamed2	vault palace statues 3354702x30
+2026-10-15 17:01:41	PuppetTheater	FRAGMENT	1000026 mohamed2	2
+2026-10-15 17:02:38	PuppetTheater	FINALE	1000026 mohamed2	dealt 10591
+2026-10-15 17:03:23	PuppetTheater	GRANT	1000026 mohamed2	finale 3600813x2
+2026-10-15 17:03:23	PuppetTheater	FINALE	1000026 mohamed2	dealt 10925
+2026-10-15 17:07:54	PuppetTheater	GRANT	1000026 mohamed2	bell exchange 3354682x1(B)
+2026-10-15 17:07:54	PuppetTheater	BELL	1000026 mohamed2	exchange 30 bells + 0 CPs -> 3354682
+2026-10-15 17:08:13	PuppetTheater	GRANT	1000026 mohamed2	3D Puppet Avatar Pack -> hairface 9:6 until 1792332492
+2026-10-15 17:08:17	PuppetTheater	GRANT	1000026 mohamed2	7D Cute Emoji Pack -> hairface 10:3 until 1792678097
+2026-10-15 17:08:50	PuppetTheater	EXPIRE	1000026 mohamed2	hairface 9:6
+2026-10-15 17:08:50	PuppetTheater	EXPIRE	1000026 mohamed2	hairface 10:3
+2026-10-15 17:09:02	PuppetTheater	GRANT	1000026 mohamed2	festtest -> hairface 10:3 until 1792073342
+2026-10-15 17:09:02	PuppetTheater	GRANT	1000026 mohamed2	festtest -> hairface 9:6 until 1792073342
+2026-10-15 17:09:14	PuppetTheater	FINALE	1000026 mohamed2	dealt 10830
+2026-10-15 21:00:47	PuppetTheater	GRANT	1000026 mohamed2	daily SP 3354702x110
+2026-10-15 21:00:54	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 35 3600813x1
+2026-10-15 21:01:00	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 30 3600813x1
+2026-10-15 21:01:01	PuppetTheater	GRANT	1000026 mohamed2	maze L1 cell 38 3600813x1
+2026-10-15 21:01:03	PuppetTheater	GRANT	1000026 mohamed2	maze L1 event 46 3009100x2(B)
+2026-10-15 21:01:05	PuppetTheater	GRANT	1000026 mohamed2	maze L1 event 53 3600813x2
+2026-10-15 21:01:07	PuppetTheater	GRANT	1000026 mohamed2	maze L1 event 52 3009100x2(B)
+2026-10-15 21:09:27	PuppetTheater	CLEAR	1000026 mohamed2	L1
+2026-10-15 21:09:27	PuppetTheater	BOSS	1000026 mohamed2	L1 won in 8 rounds
+2026-10-15 21:09:27	PuppetTheater	GRANT	1000026 mohamed2	boss first L1 3354663x1(B)
+2026-10-15 21:18:21	PuppetTheater	GRANT	1000026 mohamed2	maze L2 cell 36 3600813x1
+2026-10-15 21:18:23	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 21:18:23	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 21:18:28	PuppetTheater	BUY	1000026 mohamed2	SP Awakening Pack for 28 CPs
+2026-10-15 21:18:28	PuppetTheater	GRANT	1000026 mohamed2	store 3354672x1
+2026-10-15 21:18:29	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 21:18:29	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 21:18:29	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3354702x50
+2026-10-15 21:18:29	PuppetTheater	GRANT	1000026 mohamed2	open 3354672 3328247x1
+2026-10-15 21:33:30	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-15 21:33:46	PuppetTheater	GRANT	1000026 mohamed2	vault palace visit 3354702x30
+2026-10-15 21:34:01	PuppetTheater	FRAGMENT	1000026 mohamed2	0
+2026-10-15 22:10:50	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-15 23:30:39	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 12:38:01	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 12:40:27	PuppetTheater	GRANT	1000026 mohamed2	daily SP 3354702x30
+2026-10-16 12:40:27	PuppetTheater	GRANT	1000026 mohamed2	finale top dmg 3600813x2
+2026-10-16 12:40:27	PuppetTheater	GRANT	1000026 mohamed2	finale top dmg 3354673x1(B)
+2026-10-16 12:58:33	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 13:39:01	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 13:55:27	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 19:32:43	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 19:55:43	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 20:17:59	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 20:36:10	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 20:39:55	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 20:44:03	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 20:47:57	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 20:51:27	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-16 21:21:36	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 10:31:16	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 10:55:24	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 16:42:34	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 17:20:57	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 17:31:31	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 17:37:02	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 17:59:38	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 18:12:28	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 18:26:00	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-17 20:08:30	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-19 09:50:02	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot
+2026-10-20 12:55:13	PuppetTheater	HERO	1000026 mohamed2	statue on the Global Halloween spot

@@ -1,0 +1,62 @@
+﻿[08:48:36] Please Wait The Sourse is Loading ...
+[08:48:37] [Migrate] database `qahr_mobile` is ready.
+[08:48:37] [Storage] Player binary storage ready (blob mode; normalized mirror tables removed).
+[08:48:37] [Storage] Social mirror tables ready (guilds/unions/clans, 8 tables).
+[08:48:37] [Storage] Async DB mirror ON (2 workers, max queue 20000)
+[08:48:37] [Migrate] 3 already applied, 0 new, 3 file(s) total.
+[08:48:37] [Storage] Player read source: Db
+[08:48:37] [Storage] Player backend: MySql (players table ready, 270 cols)
+[08:48:37] [Boot] slow step: Pool.ItemsBase.Loading 308 ms
+[08:48:37] [FileDrops] file drops OFF (no drops.txt).
+[08:48:38] [FestivalMaps] 96 official festival map ids loaded from maps.txt
+[08:48:38] [QuestEngine] 2190 quests, 3038 objectives (96.3% typed: Talk=1573 Kill=699 Collect=285 Gather=8 Visit=245 Unknown=113 State=76 Event=25 Counter=12 KillPoints=2), engine-owned 1627 (workable 783), hand-coded 420 (engine kill counting for 180), quests.json entries 731, talk slots fixed 93, chain prizes trimmed 60, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 2
+[08:48:38] [Boot] slow step: QuestEngine.Load 588 ms
+[08:48:38] [QuizShow] quiz data loaded.
+[08:48:38] [Modules] loaded module: QuizShow v1.0
+[08:48:38] [RechargeShop] recharge-shop data loaded.
+[08:48:38] [Modules] loaded module: RechargeShop v1.0
+[08:48:38] [ShareVIP] shared-VIP list loaded.
+[08:48:38] [Modules] loaded module: ShareVIP v1.0
+[08:48:38] [VoteSystem] vote data loaded.
+[08:48:38] [Modules] loaded module: VoteSystem v1.0
+[08:48:38] [Modules] loaded module: FestivalIcons v1.0
+[08:48:38] [Modules] 5 module(s) loaded.
+[08:48:38]   slow load: QuestEngine.Load 590 ms
+[08:48:38]   slow load: Pool.ItemsBase.Loading 309 ms
+[08:48:38]   slow load: InnerPowerTable.Load 85 ms
+[08:48:38]   slow load: Database.Shops.EShopV2File.Load 58 ms
+[08:48:38]   slow load: Server.LoadMonsters 44 ms
+[08:48:38] -------- The Sourse Version [ 7957 ]       --------
+[08:48:38] -------- The Sourse Edit By [ Mohy ElDin ] --------
+[08:48:38] --------   [ Archive Trojan ]              --------
+[08:48:38] --------   [ Archive Ninja ]               --------
+[08:48:38] --------   [ Archive Warrior ]             --------
+[08:48:38] --------   [ Archive Archer ]              --------
+[08:48:38] --------   [ Archive Taoist ]              --------
+[08:48:38] --------   [ Archive Pirate ]              --------
+[08:48:38] --------   [ Archive Dragon Warrior ]      --------
+[08:48:38] --------   [ Archive Monk ]                --------
+[08:48:38] --------   [ Archive Dune Wanderer ]       --------
+[08:48:38] --------   [ New Character Dune Wanderer ] --------
+[08:48:38] --------   [ Eonspirit System ]            --------
+[08:48:38] --------   [ Emoji System ]                --------
+[08:48:38] --------   [ LoveForEver System ]          --------
+[08:48:38] --------   [ HeartLock System ]            --------
+[08:48:38] --------   [ New Relics System ]           --------
+[08:48:38] --------   [ New Runes System ]            --------
+[08:48:38] Loading TQProtect Files !
+[08:48:38] [ The Source has Completed Downloading ]
+[08:48:38] [Mobile] 283 renumbered packets from D:\conquer\QahrMobile\Data\mobile_ids.txt
+[08:48:38] [Mobile] 1 server packet ids blocked by D:\conquer\QahrMobile\Data\mobile_block.txt
+[08:48:38] [Mobile] 23 packet layouts from 8 files in D:\conquer\QahrMobile\Data\mobile_layouts
+[08:48:38] [Threads] WakePool=1 (event-driven, kernel wait, smart timer)
+[08:48:38] [Network] NetEngine=V2 (async receive + send queue) on port 5828
+[08:48:38] [AdminApi] listening on 127.0.0.1:5897 (local only, PlayerStudio).
+[08:48:38] [HotReload] ready (console/@/AdminApi: reloadnpcs, reloadportals, reloadshops, reloaditems, reloadmonsters, reloaddrops, reloadall). Auto-watch off.
+[08:48:38] [DreamTheater] module ready (theater management, Wish Fountain, click mini-games).
+[08:48:38] [QuellDemons] ready: map 11885, ServerType 3, week kills 0, pending rewards 0
+[08:48:39] [Festivals] 58 festival(s), 58 valid (Infinity[DB]\Festivals). Schedules checked every minute. Commands: festival list|info|on|off|auto|reload.
+[08:48:39] [NewGuildWar] on - Sunday 14:30 for 30 min on map 1038 (Infinity[DB]\NewGuildWar\config.ini).
+[08:48:39] [GiftCenter] 5 giftable item(s), 0 record(s)
+[08:48:39] [Lottery] Golden Tree 3 bloom(s)/day, 109 client conditions | Turnover 8 usable type(s)
+[08:48:39] [Boot] slow step: AdminApi 390 ms

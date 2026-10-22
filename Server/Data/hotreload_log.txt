@@ -1,0 +1,1523 @@
+﻿2026-10-13 18:24:50 | OK   | reloadnpcs | No NPC changes on the 6 loaded map(s) (995 NPCs in Npcs.txt). | 159 ms
+        40 line(s) repeat an id on the same map (the server keeps the first one of each); on loaded maps:
+          line 702: id 8 is already on map 1002 (line 688) - the server keeps the first one
+          line 712: id 1 is already on map 1002 (line 700) - the server keeps the first one
+          line 714: id 4 is already on map 1002 (line 701) - the server keeps the first one
+          line 716: id 4490 is already on map 1002 (line 686) - the server keeps the first one
+          line 728: id 423 is already on map 1002 (line 703) - the server keeps the first one
+          line 732: id 1002 is already on map 1002 (line 682) - the server keeps the first one
+          line 763: id 8715 is already on map 1002 (line 681) - the server keeps the first one
+          line 767: id 4434 is already on map 1002 (line 689) - the server keeps the first one
+          line 771: id 1 is already on map 1002 (line 700) - the server keeps the first one
+          line 772: id 20005 is already on map 1002 (line 766) - the server keeps the first one
+          line 773: id 4 is already on map 1002 (line 701) - the server keeps the first one
+          line 774: id 423 is already on map 1002 (line 703) - the server keeps the first one
+          line 775: id 43 is already on map 1002 (line 717) - the server keeps the first one
+          line 776: id 1002 is already on map 1002 (line 682) - the server keeps the first one
+          line 777: id 10050 is already on map 1002 (line 738) - the server keeps the first one
+          line 778: id 10050 is already on map 1002 (line 738) - the server keeps the first one
+          line 779: id 4434 is already on map 1002 (line 689) - the server keeps the first one
+          line 780: id 8713 is already on map 1002 (line 762) - the server keeps the first one
+          line 781: id 4488 is already on map 1002 (line 685) - the server keeps the first one
+          line 782: id 380 is already on map 1002 (line 726) - the server keeps the first one
+          line 783: id 4490 is already on map 1002 (line 686) - the server keeps the first one
+          line 785: id 101905 is already on map 1002 (line 744) - the server keeps the first one
+          line 786: id 112 is already on map 1002 (line 678) - the server keeps the first one
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-13 19:07:06 | OK   | reloadnpcs | No NPC changes on the 10 loaded map(s) (995 NPCs in Npcs.txt). | 159 ms
+        40 line(s) repeat an id on the same map (the server keeps the first one of each); on loaded maps:
+          line 86: id 20508 is already on map 10137 (line 83) - the server keeps the first one
+          line 702: id 8 is already on map 1002 (line 688) - the server keeps the first one
+          line 712: id 1 is already on map 1002 (line 700) - the server keeps the first one
+          line 714: id 4 is already on map 1002 (line 701) - the server keeps the first one
+          line 716: id 4490 is already on map 1002 (line 686) - the server keeps the first one
+          line 728: id 423 is already on map 1002 (line 703) - the server keeps the first one
+          line 732: id 1002 is already on map 1002 (line 682) - the server keeps the first one
+          line 763: id 8715 is already on map 1002 (line 681) - the server keeps the first one
+          line 767: id 4434 is already on map 1002 (line 689) - the server keeps the first one
+          line 771: id 1 is already on map 1002 (line 700) - the server keeps the first one
+          line 772: id 20005 is already on map 1002 (line 766) - the server keeps the first one
+          line 773: id 4 is already on map 1002 (line 701) - the server keeps the first one
+          line 774: id 423 is already on map 1002 (line 703) - the server keeps the first one
+          line 775: id 43 is already on map 1002 (line 717) - the server keeps the first one
+          line 776: id 1002 is already on map 1002 (line 682) - the server keeps the first one
+          line 777: id 10050 is already on map 1002 (line 738) - the server keeps the first one
+          line 778: id 10050 is already on map 1002 (line 738) - the server keeps the first one
+          line 779: id 4434 is already on map 1002 (line 689) - the server keeps the first one
+          line 780: id 8713 is already on map 1002 (line 762) - the server keeps the first one
+          line 781: id 4488 is already on map 1002 (line 685) - the server keeps the first one
+          line 782: id 380 is already on map 1002 (line 726) - the server keeps the first one
+          line 783: id 4490 is already on map 1002 (line 686) - the server keeps the first one
+          line 785: id 101905 is already on map 1002 (line 744) - the server keeps the first one
+          line 786: id 112 is already on map 1002 (line 678) - the server keeps the first one
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-13 19:07:06 | OK   | reloadportals | No portal changes on the 10 loaded map(s). | 168 ms
+        Portal destinations are server-side: players use the new ones on their next step into the portal.
+2026-10-13 19:07:32 | OK   | reloadnpcs | Applied live: 1 removed. | 163 ms
+        40 line(s) repeat an id on the same map (the server keeps the first one of each); on loaded maps:
+          line 86: id 20508 is already on map 10137 (line 83) - the server keeps the first one
+          line 702: id 8 is already on map 1002 (line 688) - the server keeps the first one
+          line 712: id 1 is already on map 1002 (line 700) - the server keeps the first one
+          line 714: id 4 is already on map 1002 (line 701) - the server keeps the first one
+          line 716: id 4490 is already on map 1002 (line 686) - the server keeps the first one
+          line 728: id 423 is already on map 1002 (line 703) - the server keeps the first one
+          line 732: id 1002 is already on map 1002 (line 682) - the server keeps the first one
+          line 763: id 8715 is already on map 1002 (line 681) - the server keeps the first one
+          line 767: id 4434 is already on map 1002 (line 689) - the server keeps the first one
+          line 771: id 1 is already on map 1002 (line 700) - the server keeps the first one
+          line 772: id 20005 is already on map 1002 (line 766) - the server keeps the first one
+          line 773: id 4 is already on map 1002 (line 701) - the server keeps the first one
+          line 774: id 423 is already on map 1002 (line 703) - the server keeps the first one
+          line 775: id 43 is already on map 1002 (line 717) - the server keeps the first one
+          line 776: id 1002 is already on map 1002 (line 682) - the server keeps the first one
+          line 777: id 10050 is already on map 1002 (line 738) - the server keeps the first one
+          line 778: id 10050 is already on map 1002 (line 738) - the server keeps the first one
+          line 779: id 4434 is already on map 1002 (line 689) - the server keeps the first one
+          line 780: id 8713 is already on map 1002 (line 762) - the server keeps the first one
+          line 781: id 4488 is already on map 1002 (line 685) - the server keeps the first one
+          line 782: id 380 is already on map 1002 (line 726) - the server keeps the first one
+          line 783: id 4490 is already on map 1002 (line 686) - the server keeps the first one
+          line 785: id 101905 is already on map 1002 (line 744) - the server keeps the first one
+          line 786: id 112 is already on map 1002 (line 678) - the server keeps the first one
+        removed 9570008 @1002 (341,401) mesh 1054686 type 2
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-13 19:58:32 | OK   | reloadnpcs | Applied live: 59 added. | 175 ms
+        40 line(s) repeat an id on the same map (the server keeps the first one of each); on loaded maps:
+          line 702: id 8 is already on map 1002 (line 688) - the server keeps the first one
+          line 712: id 1 is already on map 1002 (line 700) - the server keeps the first one
+          line 714: id 4 is already on map 1002 (line 701) - the server keeps the first one
+          line 716: id 4490 is already on map 1002 (line 686) - the server keeps the first one
+          line 728: id 423 is already on map 1002 (line 703) - the server keeps the first one
+          line 732: id 1002 is already on map 1002 (line 682) - the server keeps the first one
+          line 763: id 8715 is already on map 1002 (line 681) - the server keeps the first one
+          line 767: id 4434 is already on map 1002 (line 689) - the server keeps the first one
+          line 771: id 1 is already on map 1002 (line 700) - the server keeps the first one
+          line 772: id 20005 is already on map 1002 (line 766) - the server keeps the first one
+          line 773: id 4 is already on map 1002 (line 701) - the server keeps the first one
+          line 774: id 423 is already on map 1002 (line 703) - the server keeps the first one
+          line 775: id 43 is already on map 1002 (line 717) - the server keeps the first one
+          line 776: id 1002 is already on map 1002 (line 682) - the server keeps the first one
+          line 777: id 10050 is already on map 1002 (line 738) - the server keeps the first one
+          line 778: id 10050 is already on map 1002 (line 738) - the server keeps the first one
+          line 779: id 4434 is already on map 1002 (line 689) - the server keeps the first one
+          line 780: id 8713 is already on map 1002 (line 762) - the server keeps the first one
+          line 781: id 4488 is already on map 1002 (line 685) - the server keeps the first one
+          line 782: id 380 is already on map 1002 (line 726) - the server keeps the first one
+          line 783: id 4490 is already on map 1002 (line 686) - the server keeps the first one
+          line 785: id 101905 is already on map 1002 (line 744) - the server keeps the first one
+          line 786: id 112 is already on map 1002 (line 678) - the server keeps the first one
+        added   2000 @1002 (251,482) mesh 1290 type 2 (line 1040)
+        added   2001 @1002 (439,464) mesh 1746 type 2 (line 1041)
+        added   3215 @1002 (275,483) mesh 1314 type 2 (line 1042)
+        added   4436 @1002 (440,339) mesh 4740 type 2 (line 1046)
+        added   4466 @1002 (459,331) mesh 1056830 type 2 (line 1047)
+        added   4470 @1002 (431,331) mesh 1054350 type 2 (line 1048)
+        added   4484 @1002 (425,331) mesh 7590 type 2 (line 1049)
+        added   4486 @1002 (440,343) mesh 6880 type 2 (line 1050)
+        added   4504 @1002 (468,309) mesh 1054330 type 2 (line 1051)
+        added   4505 @1002 (440,334) mesh 5640 type 2 (line 1052)
+        added   4704 @1002 (466,331) mesh 4570 type 2 (line 1054)
+        added   5673 @1002 (432,397) mesh 1054440 type 2 (line 1058)
+        added   5674 @1002 (440,371) mesh 1054430 type 2 (line 1059)
+        added   7927 @1002 (435,661) mesh 8630 type 2 (line 1061)
+        added   7991 @1002 (525,318) mesh 1054450 type 2 (line 1062)
+        added   7993 @1002 (495,622) mesh 9640 type 2 (line 1063)
+        added   7994 @1002 (509,624) mesh 9650 type 2 (line 1064)
+        added   8233 @1002 (253,455) mesh 7790 type 2 (line 1065)
+        added   8615 @1002 (342,228) mesh 14050 type 2 (line 1066)
+        added   9534 @1002 (303,542) mesh 17987 type 2 (line 1068)
+        added   9998 @1002 (275,470) mesh 19936 type 2 (line 1069)
+        added   10019 @1002 (421,352) mesh 240 type 2 (line 1070)
+        added   10062 @1002 (372,488) mesh 5014 type 2 (line 1071)
+        added   10579 @1002 (425,298) mesh 29190 type 2 (line 1072)
+        added   17222 @1002 (436,397) mesh 32520 type 2 (line 1074)
+        added   18786 @1002 (202,416) mesh 1054630 type 2 (line 1075)
+        added   19256 @1002 (132,550) mesh 41330 type 2 (line 1077)
+        added   19259 @1002 (132,549) mesh 41360 type 2 (line 1078)
+        added   21670 @1002 (509,570) mesh 21670 type 2 (line 1080)
+        added   22050 @1002 (344,442) mesh 19936 type 2 (line 1086)
+        added   22677 @1002 (368,451) mesh 1060520 type 2 (line 1088)
+        added   23021 @1002 (378,383) mesh 49290 type 2 (line 1089)
+        added   23492 @1002 (355,401) mesh 1063970 type 2 (line 1091)
+        added   23656 @1002 (449,412) mesh 1064410 type 2 (line 1092)
+        added   23670 @1002 (448,412) mesh 14720 type 2 (line 1093)
+        added   23746 @1002 (355,409) mesh 1062680 type 2 (line 1094)
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-13 20:18:19 | OK   | reloadnpcs | Applied live: 1 moved, 148 removed. | 159 ms
+        39 line(s) repeat an id on the same map (the server keeps the first one of each); on loaded maps:
+          line 86: id 20508 is already on map 10137 (line 83) - the server keeps the first one
+          line 701: id 8 is already on map 1002 (line 687) - the server keeps the first one
+          line 711: id 1 is already on map 1002 (line 699) - the server keeps the first one
+          line 713: id 4 is already on map 1002 (line 700) - the server keeps the first one
+          line 715: id 4490 is already on map 1002 (line 685) - the server keeps the first one
+          line 727: id 423 is already on map 1002 (line 702) - the server keeps the first one
+          line 731: id 1002 is already on map 1002 (line 681) - the server keeps the first one
+          line 761: id 8715 is already on map 1002 (line 680) - the server keeps the first one
+          line 764: id 4434 is already on map 1002 (line 688) - the server keeps the first one
+          line 767: id 1 is already on map 1002 (line 699) - the server keeps the first one
+          line 768: id 20005 is already on map 1002 (line 763) - the server keeps the first one
+          line 769: id 4 is already on map 1002 (line 700) - the server keeps the first one
+          line 770: id 423 is already on map 1002 (line 702) - the server keeps the first one
+          line 771: id 43 is already on map 1002 (line 716) - the server keeps the first one
+          line 772: id 1002 is already on map 1002 (line 681) - the server keeps the first one
+          line 773: id 10050 is already on map 1002 (line 737) - the server keeps the first one
+          line 774: id 10050 is already on map 1002 (line 737) - the server keeps the first one
+          line 775: id 4434 is already on map 1002 (line 688) - the server keeps the first one
+          line 776: id 8713 is already on map 1002 (line 760) - the server keeps the first one
+          line 777: id 4488 is already on map 1002 (line 684) - the server keeps the first one
+          line 778: id 380 is already on map 1002 (line 725) - the server keeps the first one
+          line 779: id 4490 is already on map 1002 (line 685) - the server keeps the first one
+          line 781: id 101905 is already on map 1002 (line 743) - the server keeps the first one
+        removed 112 @1002 (370,481) mesh 1086 type 16
+        removed 350161 @1002 (340,414) mesh 11100156 type 2
+        removed 2070 @1002 (340,406) mesh 1054566 type 2
+        removed 4450 @1002 (340,401) mesh 8736 type 2
+        removed 51 @1002 (330,425) mesh 1086 type 16
+        removed 150 @1002 (330,481) mesh 1086 type 16
+        removed 52 @1002 (330,421) mesh 1086 type 16
+        removed 53 @1002 (330,417) mesh 1086 type 16
+        removed 54 @1002 (330,413) mesh 1086 type 16
+        removed 55 @1002 (330,409) mesh 1086 type 16
+        removed 56 @1002 (330,405) mesh 1086 type 16
+        removed 57 @1002 (330,401) mesh 1086 type 16
+        removed 58 @1002 (322,401) mesh 1086 type 16
+        removed 59 @1002 (322,405) mesh 1086 type 16
+        removed 60 @1002 (322,409) mesh 1086 type 16
+        removed 61 @1002 (322,413) mesh 1086 type 16
+        removed 62 @1002 (322,417) mesh 1086 type 16
+        removed 63 @1002 (322,421) mesh 1086 type 16
+        removed 64 @1002 (322,425) mesh 1086 type 16
+        removed 65 @1002 (322,429) mesh 1086 type 16
+        removed 66 @1002 (314,429) mesh 1086 type 16
+        removed 67 @1002 (314,425) mesh 1086 type 16
+        removed 68 @1002 (314,421) mesh 1086 type 16
+        removed 69 @1002 (314,417) mesh 1086 type 16
+        removed 70 @1002 (314,413) mesh 1086 type 16
+        removed 71 @1002 (314,409) mesh 1086 type 16
+        removed 72 @1002 (314,405) mesh 1086 type 16
+        removed 73 @1002 (314,401) mesh 1086 type 16
+        removed 74 @1002 (378,429) mesh 1086 type 16
+        removed 75 @1002 (378,425) mesh 1086 type 16
+        removed 76 @1002 (378,421) mesh 1086 type 16
+        removed 77 @1002 (378,417) mesh 1086 type 16
+        removed 78 @1002 (378,413) mesh 1086 type 16
+        removed 79 @1002 (378,409) mesh 1086 type 16
+        removed 80 @1002 (378,405) mesh 1086 type 16
+        removed 81 @1002 (378,401) mesh 1086 type 16
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-13 20:37:00 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 2190 quests; engine: 2190 quests, 3126 objectives (95.0% typed: Talk=1773 Kill=695 Collect=291 Visit=212 Unknown=155), engine-owned 1770 (workable 894), hand-coded 420 (engine kill counting for 176), quests.json entries 0 | 694 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-13 20:45:23 | OK   | reloadmapcells | Map 10348 is not loaded - it will read the new DMap when a player first enters it. | 1 ms
+2026-10-13 20:45:23 | OK   | reloadmapcells | Map 13069 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:46:45 | OK   | reloadmonsters | Applied live: 12 monster type(s) changed, 0 new; 1 spawned monster(s) updated (looks/HP show on their next respawn). | 1162 ms
+        3976 BloodyBanshee: Defense 0->65535
+        3977 ChillingSpook: Defense 0->65535
+        3971 DragonWraith: Defense 0->65535
+        4220 NemesisTyrant: Defense 0->65535
+        3978 NetherTyrant: Defense 0->65535
+        3970 QueenofEvil: Defense 0->65535
+        7990 RuthlessAsura(Elite): DropMoney 0->65535
+        7980 RuthlessAsura(Nor.): DropMoney 0->65535
+        4171 SnowBanshee: Defense 0->65535
+        4170 SwordMaster: DropMoney 0->65535
+        4212 ThrillingSpook: Defense 0->65535
+        66432 UltimatePluto: DropMoney 0->65535
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-13 20:48:29 | OK   | reloadshops | Applied live: 171 shops (Shop.dat) + 17 emoney shops, 6577 items. | 2284 ms
+        Shop.dat: 171 -> 171 shops; emoneyshop: 17 -> 17 shops.
+        The server now sells/validates the new lists. The shop WINDOW is drawn by the client from its own shop files: an item missing from the client's list can't be clicked until the client is patched.
+2026-10-13 20:50:59 | OK   | reloadnpcs | No NPC changes on the 8 loaded map(s) (1114 NPCs in Npcs.txt). | 163 ms
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-13 20:51:14 | OK   | reloadmapcells | Applied live: map 1002 walkability reloaded (253 cell(s) changed). | 16 ms
+        Server-side only: the game client still uses its own map file - ship the patched client map so players can walk/see the change.
+2026-10-13 20:51:14 | OK   | reloadmapcells | Map 1015 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:51:15 | OK   | reloadmapcells | Map 44455 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:51:15 | OK   | reloadmapcells | Map 1000 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:51:15 | OK   | reloadmapcells | Map 10137 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:51:15 | OK   | reloadmapcells | Map 10088 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:51:15 | OK   | reloadmapcells | Map 1020 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:51:16 | OK   | reloadmapcells | Map 1700 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:51:16 | OK   | reloadmapcells | Map 1806 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:51:16 | OK   | reloadmapcells | Map 1036 is not loaded - it will read the new DMap when a player first enters it. | 0 ms
+2026-10-13 20:59:21 | OK   | reloaddrops | file drops OFF (no drops.txt). | 1 ms
+2026-10-13 21:27:53 | OK   | reloadmonsters | Applied live: 0 monster type(s) changed, 10 new; 0 spawned monster(s) updated (looks/HP show on their next respawn). | 1582 ms
+        new monster type 9030 Andrew (usable by new spawns/commands)
+        new monster type 4195 AoBing (usable by new spawns/commands)
+        new monster type 4196 DragonKing (usable by new spawns/commands)
+        new monster type 4173 GrislySpecter (usable by new spawns/commands)
+        new monster type 19 HawKing (usable by new spawns/commands)
+        new monster type 4851 Hawkman (usable by new spawns/commands)
+        new monster type 4193 WearyApeKing (usable by new spawns/commands)
+        new monster type 4192 WearyApeL53 (usable by new spawns/commands)
+        new monster type 4186 WearyGiantApe (usable by new spawns/commands)
+        new monster type 4194 Yaksa (usable by new spawns/commands)
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-13 21:34:46 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 2190 quests; engine: 2190 quests, 3126 objectives (95.0% typed: Talk=1773 Kill=696 Collect=291 Visit=211 Unknown=155), engine-owned 1749 (workable 902), hand-coded 420 (engine kill counting for 176), quests.json entries 21 | 954 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-13 21:45:44 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 2190 quests; engine: 2190 quests, 3126 objectives (95.0% typed: Talk=1773 Kill=696 Collect=291 Visit=211 Unknown=155), engine-owned 1713 (workable 879), hand-coded 420 (engine kill counting for 176), quests.json entries 57 | 907 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-13 22:32:08 | OK   | reloadmonsters | No monster type changes (511 files checked). | 1049 ms
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-13 22:32:08 | OK   | reloadnpcs | No NPC changes on the 7 loaded map(s) (1214 NPCs in Npcs.txt). | 163 ms
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-13 22:32:09 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 2190 quests; engine: 2190 quests, 3035 objectives (96.3% typed: Talk=1581 Kill=699 Collect=286 Gather=8 Visit=242 Unknown=113 State=67 Event=25 Counter=12 KillPoints=2), engine-owned 1636 (workable 770), hand-coded 420 (engine kill counting for 180), quests.json entries 701, talk slots fixed 96, chain prizes trimmed 61, parsed CPs blocked 3, hidden by server type 101, aliases 5, instances 1 | 561 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-13 23:04:00 | OK   | reloadnpcs | Applied live: 3 moved, 7 added, 2 removed. | 184 ms
+        removed 9570003 @1002 (397,358) mesh 4180 type 2
+        removed 9570005 @1002 (258,442) mesh 35960 type 2
+        moved   20028 1002(333,623) -> 1002(429,742)
+        moved   19424 1002(294,165) -> 1002(331,452)
+        moved   6297 1002(306,452) -> 1002(350,440)
+        added   6135 @1002 (397,358) mesh 4180 type 2 (line 988)
+        added   10123 @1002 (258,442) mesh 35960 type 2 (line 990)
+        added   31 @1002 (416,278) mesh 316 type 2 (line 1220)
+        added   805 @1002 (400,340) mesh 1056 type 2 (line 1221)
+        added   1881 @1002 (449,295) mesh 9430 type 2 (line 1222)
+        added   10020 @1002 (303,416) mesh 250 type 5 (line 1223)
+        added   30161 @1002 (350,538) mesh 8120 type 2 (line 1224)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-14 11:31:46 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 2190 quests; engine: 2190 quests, 3032 objectives (96.3% typed: Talk=1572 Kill=698 Collect=286 Gather=8 Visit=244 Unknown=112 State=72 Event=26 Counter=12 KillPoints=2), engine-owned 1591 (workable 768), hand-coded 420 (engine kill counting for 180), quests.json entries 765, talk slots fixed 96, chain prizes trimmed 60, parsed CPs blocked 3, hidden by server type 101, aliases 5, instances 1 | 963 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-14 11:39:49 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 2190 quests; engine: 2190 quests, 3029 objectives (96.3% typed: Talk=1569 Kill=698 Collect=286 Gather=8 Visit=244 Unknown=112 State=72 Event=26 Counter=12 KillPoints=2), engine-owned 1591 (workable 771), hand-coded 420 (engine kill counting for 180), quests.json entries 768, talk slots fixed 93, chain prizes trimmed 60, parsed CPs blocked 3, hidden by server type 101, aliases 5, instances 2 | 721 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-14 11:58:15 | OK   | reloadnpcs | Applied live: 8 removed. | 178 ms
+        removed 101897 @1038 (44,60) mesh 8160 type 2
+        removed 2072 @1002 (307,443) mesh 11100146 type 2
+        removed 2542 @1002 (262,370) mesh 1054640 type 2
+        removed 45 @1002 (215,220) mesh 417 type 29
+        removed 3085 @1002 (210,208) mesh 22340 type 2
+        removed 4699 @1002 (443,246) mesh 51484 type 2
+        removed 200810 @1002 (279,458) mesh 1051596 type 2
+        removed 78955 @1002 (209,418) mesh 1054640 type 2
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-14 12:07:34 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 2190 quests; engine: 2190 quests, 3035 objectives (96.3% typed: Talk=1569 Kill=698 Collect=286 Gather=8 Visit=246 Unknown=112 State=76 Event=26 Counter=12 KillPoints=2), engine-owned 1591 (workable 771), hand-coded 420 (engine kill counting for 180), quests.json entries 774, talk slots fixed 93, chain prizes trimmed 60, parsed CPs blocked 3, hidden by server type 101, aliases 5, instances 2 | 671 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-14 13:51:47 | OK   | reloadnpcs | Applied live: 1 added. | 165 ms
+        added   22972 @1002 (303,313) mesh 1054836 type 2 (line 1204)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-14 14:35:07 | OK   | reloadnpcs | Applied live: 6 added. | 157 ms
+        added   26694 @1002 (392,403) mesh 26230 type 2 (line 1204)
+        added   26695 @1002 (392,409) mesh 26240 type 2 (line 1205)
+        added   26696 @1002 (392,415) mesh 26250 type 2 (line 1206)
+        added   26698 @1002 (392,425) mesh 26270 type 2 (line 1207)
+        added   26700 @1002 (392,432) mesh 26290 type 2 (line 1208)
+        added   26701 @1002 (392,442) mesh 26300 type 2 (line 1209)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-14 15:21:53 | OK   | reloadnpcs | Applied live: 6 changed. | 169 ms
+        changed 26694 @1002: mesh 26230->26230, type 2->122
+        changed 26695 @1002: mesh 26240->26240, type 2->122
+        changed 26696 @1002: mesh 26250->26250, type 2->122
+        changed 26698 @1002: mesh 26270->26270, type 2->122
+        changed 26700 @1002: mesh 26290->26290, type 2->122
+        changed 26701 @1002: mesh 26300->26300, type 2->122
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-14 17:51:17 | OK   | reloadnpcs | Applied live: 31 added. | 161 ms
+        added   23325 @1002 (378,430) mesh 1086 type 16 (line 145)
+        added   23326 @1002 (378,426) mesh 1086 type 16 (line 146)
+        added   23327 @1002 (378,422) mesh 1086 type 16 (line 147)
+        added   23328 @1002 (378,418) mesh 1086 type 16 (line 148)
+        added   23329 @1002 (378,414) mesh 1086 type 16 (line 149)
+        added   23330 @1002 (378,410) mesh 1086 type 16 (line 150)
+        added   23331 @1002 (378,406) mesh 1086 type 16 (line 151)
+        added   23332 @1002 (378,402) mesh 1086 type 16 (line 152)
+        added   23333 @1002 (370,402) mesh 1086 type 16 (line 153)
+        added   23334 @1002 (370,406) mesh 1086 type 16 (line 154)
+        added   23335 @1002 (370,410) mesh 1086 type 16 (line 155)
+        added   23336 @1002 (370,414) mesh 1086 type 16 (line 156)
+        added   23337 @1002 (370,418) mesh 1086 type 16 (line 157)
+        added   23338 @1002 (370,422) mesh 1086 type 16 (line 158)
+        added   23339 @1002 (370,426) mesh 1086 type 16 (line 159)
+        added   23340 @1002 (370,430) mesh 1086 type 16 (line 160)
+        added   23341 @1002 (362,430) mesh 1086 type 16 (line 161)
+        added   23351 @1002 (378,477) mesh 1086 type 16 (line 162)
+        added   23352 @1002 (378,473) mesh 1086 type 16 (line 163)
+        added   23353 @1002 (378,469) mesh 1086 type 16 (line 164)
+        added   23354 @1002 (378,465) mesh 1086 type 16 (line 165)
+        added   23355 @1002 (378,461) mesh 1086 type 16 (line 166)
+        added   23356 @1002 (378,457) mesh 1086 type 16 (line 167)
+        added   23357 @1002 (370,457) mesh 1086 type 16 (line 168)
+        added   23358 @1002 (370,461) mesh 1086 type 16 (line 169)
+        added   23359 @1002 (370,465) mesh 1086 type 16 (line 170)
+        added   23360 @1002 (370,469) mesh 1086 type 16 (line 171)
+        added   23391 @1002 (370,473) mesh 1086 type 16 (line 172)
+        added   23400 @1002 (362,465) mesh 1086 type 16 (line 173)
+        added   23401 @1002 (362,461) mesh 1086 type 16 (line 174)
+        added   23402 @1002 (362,457) mesh 1086 type 16 (line 175)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-14 18:42:10 | OK   | reloaditems | Applied live: 67 item type(s) updated (76 values). | 583 ms
+        700003 PhoenixGem: StackSize 0->10000
+        700013 DragonGem: StackSize 0->10000
+        700023 FuryGem: ConquerPointsWorth 215->195, StackSize 0->10000
+        700033 RainbowGem: StackSize 0->10000
+        700043 KylinGem: ConquerPointsWorth 215->180, StackSize 0->10000
+        700053 VioletGem: ConquerPointsWorth 215->195, StackSize 0->10000
+        700063 MoonGem: ConquerPointsWorth 215->195, StackSize 0->10000
+        700073 TortoiseGem: StackSize 0->10000
+        700103 ThunderGem: StackSize 0->10000
+        700123 GloryGem: StackSize 0->10000
+        700133 SuperInfinityGem: StackSize 0->10000
+        720027 MeteorScroll: Sort 14040->0, ConquerPointsWorth 30->0
+        720028 DBScroll: ConquerPointsWorth 2150->0
+        722136 ExpBall(Event): StackSize 100->10000, Type Dropable->Others, Description rare[exp]->questitem
+        723694 PermanentStone: ConquerPointsWorth 1500->395
+        723695 BigPermanentStone: ConquerPointsWorth 7000->3950
+        723717 Class5MoneyBag: ConquerPointsWorth 1000->100
+        725065 7StarOintment: StackSize 100->5
+        725066 SerenityPill: StackSize 100->5
+        730001 Stone(+1): ConquerPointsWorth 75->8
+        730002 Stone(+2): ConquerPointsWorth 225->37
+        730003 Stone(+3): ConquerPointsWorth 675->108
+        730004 Stone(+4): ConquerPointsWorth 2025->324
+        730005 Stone(+5): ConquerPointsWorth 6075->972
+        730006 Stone(+6): ConquerPointsWorth 18225->2916
+        730007 Stone(+7): ConquerPointsWorth 54675->8748
+        730008 Stone(+8): ConquerPointsWorth 164025->26244
+        1003010 7StarOintment: StackSize 10000->5
+        1004010 SerenityPill: StackSize 10000->5
+        1080001 Emerald: StackSize 0->10000
+        1088000 DragonBall: Sort 11000->0, StackSize 0->10000
+        1088001 Meteor: Sort 11070->0, StackSize 0->10000
+        1200005 ToughDrill: ConquerPointsWorth 3000->1990
+        3303373 KnowledgePill: ConquerPointsWorth 1500->100
+        3314214 +1SteedPack: ConquerPointsWorth 75->0
+        3314215 +2SteedPack: ConquerPointsWorth 225->0
+        3314216 +3SteedPack: ConquerPointsWorth 675->0
+        3314217 +4SteedPack: ConquerPointsWorth 2025->0
+        3314218 +5SteedPack: ConquerPointsWorth 6075->0
+        3314219 +6SteedPack: ConquerPointsWorth 18225->0
+        3314220 +7SteedPack: ConquerPointsWorth 54675->0
+        3314221 +8SteedPack: ConquerPointsWorth 164025->0
+        3321098 LegendaryEssence: ConquerPointsWorth 200->10
+        3321107 SpiritStone: ConquerPointsWorth 100->9
+        3324226 Cosmos Hammer: ConquerPointsWorth 1500->999
+        3329514 Immense Zest: ConquerPointsWorth 1800->288
+        3333403 Super Soul Stone: ConquerPointsWorth 1800->288
+        3335128 Saint Trigger: ConquerPointsWorth 1800->288
+        3339456 Solar Orb: ConquerPointsWorth 1800->288
+        3344446 Mystic Flame: ConquerPointsWorth 1800->288
+        3347154 Dawn Oracle: ConquerPointsWorth 1800->0
+        3347157 Light Rune: ConquerPointsWorth 3000->135
+        3347158 Shadow Rune: ConquerPointsWorth 2500->14
+        3351311 Virtuousness Sutra: ConquerPointsWorth 1800->288
+        3353634 Prism Stone: ConquerPointsWorth 2500->15
+        4200001 P1Anima: ConquerPointsWorth 315->6
+        4200002 P2Anima: ConquerPointsWorth 630->11
+        4200003 P3Anima: ConquerPointsWorth 1260->21
+        4200004 P4Anima: ConquerPointsWorth 2520->41
+        4200005 P5Anima: ConquerPointsWorth 5040->81
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-14 18:42:11 | OK   | reloadmonsters | Applied live: 3 monster type(s) changed, 0 new; 1 spawned monster(s) updated (looks/HP show on their next respawn). | 683 ms
+        4220 NemesisTyrant: MaxHealth 100000000->240000000
+        4171 SnowBanshee: MaxHealth 80000000->180000000
+        4212 ThrillingSpook: MaxHealth 60000000->180000000
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-14 18:47:56 | OK   | reloadmonsters | Applied live: 1 monster type(s) changed, 0 new; 0 spawned monster(s) updated (looks/HP show on their next respawn). | 733 ms
+        2686 OceanGhost: Level 95->137, MaxHealth 15000->98000
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-14 18:53:03 | OK   | reloadnpcs | Applied live: 101 added. | 165 ms
+        added   23301 @1002 (354,426) mesh 1086 type 16 (line 145)
+        added   23302 @1002 (354,422) mesh 1086 type 16 (line 146)
+        added   23303 @1002 (354,418) mesh 1086 type 16 (line 147)
+        added   23304 @1002 (354,414) mesh 1086 type 16 (line 148)
+        added   23305 @1002 (354,406) mesh 1086 type 16 (line 149)
+        added   23306 @1002 (346,402) mesh 1086 type 16 (line 150)
+        added   23307 @1002 (346,406) mesh 1086 type 16 (line 151)
+        added   23308 @1002 (346,410) mesh 1086 type 16 (line 152)
+        added   23309 @1002 (346,414) mesh 1086 type 16 (line 153)
+        added   23310 @1002 (346,418) mesh 1086 type 16 (line 154)
+        added   23311 @1002 (346,422) mesh 1086 type 16 (line 155)
+        added   23312 @1002 (346,426) mesh 1086 type 16 (line 156)
+        added   23313 @1002 (346,430) mesh 1086 type 16 (line 157)
+        added   23314 @1002 (338,426) mesh 1086 type 16 (line 158)
+        added   23315 @1002 (338,422) mesh 1086 type 16 (line 159)
+        added   23316 @1002 (338,418) mesh 1086 type 16 (line 160)
+        added   23317 @1002 (338,414) mesh 1086 type 16 (line 161)
+        added   23318 @1002 (338,410) mesh 1086 type 16 (line 162)
+        added   23319 @1002 (338,406) mesh 1086 type 16 (line 163)
+        added   23320 @1002 (330,402) mesh 1086 type 16 (line 164)
+        added   23321 @1002 (330,406) mesh 1086 type 16 (line 165)
+        added   23322 @1002 (330,410) mesh 1086 type 16 (line 166)
+        added   23323 @1002 (330,414) mesh 1086 type 16 (line 167)
+        added   23324 @1002 (330,418) mesh 1086 type 16 (line 168)
+        added   23342 @1002 (362,426) mesh 1086 type 16 (line 186)
+        added   23343 @1002 (362,422) mesh 1086 type 16 (line 187)
+        added   23344 @1002 (362,418) mesh 1086 type 16 (line 188)
+        added   23345 @1002 (362,414) mesh 1086 type 16 (line 189)
+        added   23346 @1002 (362,410) mesh 1086 type 16 (line 190)
+        added   23347 @1002 (362,406) mesh 1086 type 16 (line 191)
+        added   23348 @1002 (362,402) mesh 1086 type 16 (line 192)
+        added   23349 @1002 (378,485) mesh 1086 type 16 (line 193)
+        added   23350 @1002 (378,481) mesh 1086 type 16 (line 194)
+        added   23392 @1002 (370,477) mesh 1086 type 16 (line 206)
+        added   23393 @1002 (370,481) mesh 1086 type 16 (line 207)
+        added   23394 @1002 (370,485) mesh 1086 type 16 (line 208)
+        added   23395 @1002 (362,485) mesh 1086 type 16 (line 209)
+        added   23396 @1002 (362,481) mesh 1086 type 16 (line 210)
+        added   23397 @1002 (362,477) mesh 1086 type 16 (line 211)
+        added   23398 @1002 (362,473) mesh 1086 type 16 (line 212)
+        added   23399 @1002 (362,469) mesh 1086 type 16 (line 213)
+        added   23403 @1002 (354,485) mesh 1086 type 16 (line 217)
+        added   23404 @1002 (354,481) mesh 1086 type 16 (line 218)
+        added   23405 @1002 (354,477) mesh 1086 type 16 (line 219)
+        added   23406 @1002 (354,473) mesh 1086 type 16 (line 220)
+        added   23407 @1002 (354,465) mesh 1086 type 16 (line 221)
+        added   23408 @1002 (354,461) mesh 1086 type 16 (line 222)
+        added   23409 @1002 (354,457) mesh 1086 type 16 (line 223)
+        added   23410 @1002 (346,457) mesh 1086 type 16 (line 224)
+        added   23411 @1002 (346,461) mesh 1086 type 16 (line 225)
+        added   23412 @1002 (346,465) mesh 1086 type 16 (line 226)
+        added   23413 @1002 (346,469) mesh 1086 type 16 (line 227)
+        added   23414 @1002 (346,473) mesh 1086 type 16 (line 228)
+        added   23415 @1002 (346,477) mesh 1086 type 16 (line 229)
+        added   23416 @1002 (346,481) mesh 1086 type 16 (line 230)
+        added   23417 @1002 (346,485) mesh 1086 type 16 (line 231)
+        added   23418 @1002 (338,485) mesh 1086 type 16 (line 232)
+        added   23419 @1002 (338,481) mesh 1086 type 16 (line 233)
+        added   23420 @1002 (338,477) mesh 1086 type 16 (line 234)
+        added   23421 @1002 (338,473) mesh 1086 type 16 (line 235)
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-14 18:53:14 | OK   | reloadnpcs | No NPC changes on the 15 loaded map(s) (1337 NPCs in Npcs.txt). | 151 ms
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-14 18:56:48 | OK   | reloadnpcs | Applied live: 101 removed. | 157 ms
+        removed 23301 @1002 (354,426) mesh 1086 type 16
+        removed 23302 @1002 (354,422) mesh 1086 type 16
+        removed 23303 @1002 (354,418) mesh 1086 type 16
+        removed 23304 @1002 (354,414) mesh 1086 type 16
+        removed 23305 @1002 (354,406) mesh 1086 type 16
+        removed 23306 @1002 (346,402) mesh 1086 type 16
+        removed 23307 @1002 (346,406) mesh 1086 type 16
+        removed 23308 @1002 (346,410) mesh 1086 type 16
+        removed 23309 @1002 (346,414) mesh 1086 type 16
+        removed 23310 @1002 (346,418) mesh 1086 type 16
+        removed 23311 @1002 (346,422) mesh 1086 type 16
+        removed 23312 @1002 (346,426) mesh 1086 type 16
+        removed 23313 @1002 (346,430) mesh 1086 type 16
+        removed 23314 @1002 (338,426) mesh 1086 type 16
+        removed 23315 @1002 (338,422) mesh 1086 type 16
+        removed 23316 @1002 (338,418) mesh 1086 type 16
+        removed 23317 @1002 (338,414) mesh 1086 type 16
+        removed 23318 @1002 (338,410) mesh 1086 type 16
+        removed 23319 @1002 (338,406) mesh 1086 type 16
+        removed 23320 @1002 (330,402) mesh 1086 type 16
+        removed 23321 @1002 (330,406) mesh 1086 type 16
+        removed 23322 @1002 (330,410) mesh 1086 type 16
+        removed 23323 @1002 (330,414) mesh 1086 type 16
+        removed 23324 @1002 (330,418) mesh 1086 type 16
+        removed 23342 @1002 (362,426) mesh 1086 type 16
+        removed 23343 @1002 (362,422) mesh 1086 type 16
+        removed 23344 @1002 (362,418) mesh 1086 type 16
+        removed 23345 @1002 (362,414) mesh 1086 type 16
+        removed 23346 @1002 (362,410) mesh 1086 type 16
+        removed 23347 @1002 (362,406) mesh 1086 type 16
+        removed 23348 @1002 (362,402) mesh 1086 type 16
+        removed 23349 @1002 (378,485) mesh 1086 type 16
+        removed 23350 @1002 (378,481) mesh 1086 type 16
+        removed 23392 @1002 (370,477) mesh 1086 type 16
+        removed 23393 @1002 (370,481) mesh 1086 type 16
+        removed 23394 @1002 (370,485) mesh 1086 type 16
+        removed 23395 @1002 (362,485) mesh 1086 type 16
+        removed 23396 @1002 (362,481) mesh 1086 type 16
+        removed 23397 @1002 (362,477) mesh 1086 type 16
+        removed 23398 @1002 (362,473) mesh 1086 type 16
+        removed 23399 @1002 (362,469) mesh 1086 type 16
+        removed 23403 @1002 (354,485) mesh 1086 type 16
+        removed 23404 @1002 (354,481) mesh 1086 type 16
+        removed 23405 @1002 (354,477) mesh 1086 type 16
+        removed 23406 @1002 (354,473) mesh 1086 type 16
+        removed 23407 @1002 (354,465) mesh 1086 type 16
+        removed 23408 @1002 (354,461) mesh 1086 type 16
+        removed 23409 @1002 (354,457) mesh 1086 type 16
+        removed 23410 @1002 (346,457) mesh 1086 type 16
+        removed 23411 @1002 (346,461) mesh 1086 type 16
+        removed 23412 @1002 (346,465) mesh 1086 type 16
+        removed 23413 @1002 (346,469) mesh 1086 type 16
+        removed 23414 @1002 (346,473) mesh 1086 type 16
+        removed 23415 @1002 (346,477) mesh 1086 type 16
+        removed 23416 @1002 (346,481) mesh 1086 type 16
+        removed 23417 @1002 (346,485) mesh 1086 type 16
+        removed 23418 @1002 (338,485) mesh 1086 type 16
+        removed 23419 @1002 (338,481) mesh 1086 type 16
+        removed 23420 @1002 (338,477) mesh 1086 type 16
+        removed 23421 @1002 (338,473) mesh 1086 type 16
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-14 19:02:04 | OK   | reloadnpcs | Applied live: 2 added. | 152 ms
+        added   27814 @1002 (382,396) mesh 19510 type 2 (line 1241)
+        added   27815 @1002 (378,396) mesh 19520 type 2 (line 1242)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-14 19:06:00 | OK   | reloadnpcs | Applied live: 65 added. | 156 ms
+        added   23301 @1002 (333,430) mesh 1086 type 16 (line 145)
+        added   23302 @1002 (333,426) mesh 1086 type 16 (line 146)
+        added   23303 @1002 (333,422) mesh 1086 type 16 (line 147)
+        added   23304 @1002 (333,418) mesh 1086 type 16 (line 148)
+        added   23305 @1002 (333,414) mesh 1086 type 16 (line 149)
+        added   23306 @1002 (333,410) mesh 1086 type 16 (line 150)
+        added   23307 @1002 (333,406) mesh 1086 type 16 (line 151)
+        added   23308 @1002 (333,402) mesh 1086 type 16 (line 152)
+        added   23309 @1002 (325,402) mesh 1086 type 16 (line 153)
+        added   23310 @1002 (325,406) mesh 1086 type 16 (line 154)
+        added   23311 @1002 (325,410) mesh 1086 type 16 (line 155)
+        added   23312 @1002 (325,414) mesh 1086 type 16 (line 156)
+        added   23313 @1002 (325,418) mesh 1086 type 16 (line 157)
+        added   23314 @1002 (325,422) mesh 1086 type 16 (line 158)
+        added   23315 @1002 (325,426) mesh 1086 type 16 (line 159)
+        added   23316 @1002 (325,430) mesh 1086 type 16 (line 160)
+        added   23317 @1002 (317,430) mesh 1086 type 16 (line 161)
+        added   23318 @1002 (317,426) mesh 1086 type 16 (line 162)
+        added   23319 @1002 (317,422) mesh 1086 type 16 (line 163)
+        added   23320 @1002 (317,418) mesh 1086 type 16 (line 164)
+        added   23321 @1002 (317,414) mesh 1086 type 16 (line 165)
+        added   23322 @1002 (317,410) mesh 1086 type 16 (line 166)
+        added   23323 @1002 (317,406) mesh 1086 type 16 (line 167)
+        added   23324 @1002 (317,402) mesh 1086 type 16 (line 168)
+        added   23342 @1002 (362,426) mesh 1086 type 16 (line 186)
+        added   23343 @1002 (362,422) mesh 1086 type 16 (line 187)
+        added   23344 @1002 (362,418) mesh 1086 type 16 (line 188)
+        added   23345 @1002 (362,414) mesh 1086 type 16 (line 189)
+        added   23346 @1002 (362,410) mesh 1086 type 16 (line 190)
+        added   23347 @1002 (362,406) mesh 1086 type 16 (line 191)
+        added   23348 @1002 (362,402) mesh 1086 type 16 (line 192)
+        added   23349 @1002 (378,485) mesh 1086 type 16 (line 193)
+        added   23350 @1002 (378,481) mesh 1086 type 16 (line 194)
+        added   23392 @1002 (370,477) mesh 1086 type 16 (line 206)
+        added   23393 @1002 (370,481) mesh 1086 type 16 (line 207)
+        added   23394 @1002 (370,485) mesh 1086 type 16 (line 208)
+        added   23395 @1002 (362,485) mesh 1086 type 16 (line 209)
+        added   23396 @1002 (362,481) mesh 1086 type 16 (line 210)
+        added   23397 @1002 (362,477) mesh 1086 type 16 (line 211)
+        added   23398 @1002 (362,473) mesh 1086 type 16 (line 212)
+        added   23399 @1002 (362,469) mesh 1086 type 16 (line 213)
+        added   23403 @1002 (333,485) mesh 1086 type 16 (line 217)
+        added   23404 @1002 (333,481) mesh 1086 type 16 (line 218)
+        added   23405 @1002 (333,477) mesh 1086 type 16 (line 219)
+        added   23406 @1002 (333,473) mesh 1086 type 16 (line 220)
+        added   23407 @1002 (333,469) mesh 1086 type 16 (line 221)
+        added   23408 @1002 (333,465) mesh 1086 type 16 (line 222)
+        added   23409 @1002 (333,461) mesh 1086 type 16 (line 223)
+        added   23410 @1002 (333,457) mesh 1086 type 16 (line 224)
+        added   23411 @1002 (325,457) mesh 1086 type 16 (line 225)
+        added   23412 @1002 (325,461) mesh 1086 type 16 (line 226)
+        added   23413 @1002 (325,465) mesh 1086 type 16 (line 227)
+        added   23414 @1002 (325,469) mesh 1086 type 16 (line 228)
+        added   23415 @1002 (325,473) mesh 1086 type 16 (line 229)
+        added   23416 @1002 (325,477) mesh 1086 type 16 (line 230)
+        added   23417 @1002 (325,481) mesh 1086 type 16 (line 231)
+        added   23418 @1002 (325,485) mesh 1086 type 16 (line 232)
+        added   23419 @1002 (317,485) mesh 1086 type 16 (line 233)
+        added   23420 @1002 (317,481) mesh 1086 type 16 (line 234)
+        added   23421 @1002 (317,477) mesh 1086 type 16 (line 235)
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-15 10:01:10 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 2190 quests; engine: 2190 quests, 3038 objectives (96.3% typed: Talk=1562 Kill=708 Collect=285 Gather=8 Visit=237 Unknown=112 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 1448 (workable 792), hand-coded 420 (engine kill counting for 180), quests.json entries 926, talk slots fixed 93, chain prizes trimmed 47, parsed CPs blocked 3, hidden by server type 101, aliases 5, instances 2 | 400 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-15 10:10:33 | OK   | reloadshops | Applied live: 171 shops (Shop.dat) + 504 emoney shops, 14100 items. | 1493 ms
+        Shop.dat: 171 -> 171 shops; emoneyshop: 17 -> 504 shops.
+        The server now sells/validates the new lists. The shop WINDOW is drawn by the client from its own shop files: an item missing from the client's list can't be clicked until the client is patched.
+2026-10-15 12:03:24 | OK   | reloadmapcells | Applied live: map 1002 walkability reloaded (129 cell(s) changed). | 11 ms
+        Server-side only: the game client still uses its own map file - ship the patched client map so players can walk/see the change.
+2026-10-15 12:23:34 | OK   | reloadmonsters | No monster type changes (526 files checked). | 623 ms
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-15 12:39:06 | OK   | reloadmonsters | No monster type changes (526 files checked). | 661 ms
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-15 12:39:11 | OK   | reloadmonsters | No monster type changes (526 files checked). | 639 ms
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-15 13:08:26 | OK   | reloadnpcs | No NPC changes on the 6 loaded map(s) (1312 NPCs in Npcs.txt). | 164 ms
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-15 13:08:26 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 2190 quests; engine: 2190 quests, 3038 objectives (96.3% typed: Talk=1559 Kill=720 Collect=285 Gather=8 Visit=228 Unknown=112 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 1390 (workable 770), hand-coded 420 (engine kill counting for 180), quests.json entries 968, talk slots fixed 93, chain prizes trimmed 47, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 2 | 518 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-17 15:56:17 | OK   | reloadrates | UserExpRate=2 ExpRateSpell=3 ExpRateProf=3 | 0 ms
+2026-10-20 21:45:26 | OK   | reloadnpcs | Applied live: 11 added. | 163 ms
+        added   9600001 @1002 (425,378) mesh 1063226 type 2 (line 1317)
+        added   9600002 @1002 (433,379) mesh 3666 type 2 (line 1318)
+        added   9600003 @1002 (430,369) mesh 15376 type 2 (line 1319)
+        added   9600004 @1002 (414,387) mesh 1065116 type 2 (line 1320)
+        added   9600005 @1002 (451,380) mesh 1051376 type 2 (line 1321)
+        added   9600006 @1002 (454,391) mesh 1056246 type 2 (line 1322)
+        added   9600007 @1002 (434,404) mesh 1386 type 2 (line 1323)
+        added   9600008 @1002 (459,400) mesh 1050156 type 2 (line 1324)
+        added   9600009 @1002 (439,427) mesh 14666 type 2 (line 1325)
+        added   9600010 @1002 (450,439) mesh 1063046 type 2 (line 1326)
+        added   9600011 @1002 (435,439) mesh 10936 type 2 (line 1327)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-20 21:47:26 | OK   | reloadnpcs | Applied live: 1 moved, 2 added. | 154 ms
+        moved   9072 1036(210,212) -> 1036(211,212) + look changed
+        added   9600012 @1036 (206,212) mesh 1052616 type 2 (line 1328)
+        added   9600013 @1036 (212,209) mesh 19776 type 2 (line 1329)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-20 22:06:15 | OK   | reloadnpcs | Applied live: 14 moved, 3 added, 3 changed. | 161 ms
+        moved   5600 1002(429,404) -> 1002(427,405) + look changed
+        moved   9600002 1002(433,379) -> 1002(434,379)
+        moved   9600003 1002(430,369) -> 1002(430,368)
+        moved   9600004 1002(414,387) -> 1002(413,389)
+        moved   9600005 1002(451,380) -> 1002(451,379)
+        moved   9600006 1002(454,391) -> 1002(455,392)
+        moved   9600007 1002(434,404) -> 1002(433,404)
+        moved   9600008 1002(459,400) -> 1002(461,401)
+        moved   9600010 1002(450,439) -> 1002(452,441)
+        moved   9600011 1002(435,439) -> 1002(435,440)
+        changed 45 @1036: mesh 417->10937, type 29->29
+        moved   7935 1036(195,202) -> 1036(201,196) + look changed
+        moved   923 1036(214,190) -> 1036(212,188)
+        changed 432 @1036: mesh 9230->1054870, type 2->2
+        moved   9072 1036(211,212) -> 1036(210,212)
+        changed 3825 @1036: mesh 1054526->1053556, type 2->2
+        moved   9600012 1036(206,212) -> 1036(205,212)
+        added   9600015 @1002 (430,404) mesh 1064867 type 2 (line 1331)
+        added   9600016 @1002 (456,368) mesh 1064640 type 2 (line 1332)
+        added   9600014 @1036 (199,212) mesh 1052170 type 2 (line 1330)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-20 22:49:39 | OK   | reloadquests | Applied live: Questinfo.ini 2190 -> 4247 quests; engine: 4247 quests, 5227 objectives (76.2% typed: Talk=2101 Kill=853 Collect=659 Gather=8 Visit=238 Unknown=1242 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 3463 (workable 799), hand-coded 420 (engine kill counting for 180), quests.json entries 968, talk slots fixed 96, chain prizes trimmed 45, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 8 | 744 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-20 22:51:50 | OK   | reloadnpcs | Applied live: 1 added, 1 removed. | 152 ms
+        removed 9600013 @1036 (212,209) mesh 19776 type 2
+        added   9817 @1036 (212,209) mesh 19776 type 60 (line 1329)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-20 22:52:12 | OK   | reloadquests | Applied live: Questinfo.ini 4247 -> 4247 quests; engine: 4247 quests, 5227 objectives (84.1% typed: Talk=2356 Kill=1007 Collect=659 Gather=8 Visit=238 Unknown=833 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 3463 (workable 801), hand-coded 420 (engine kill counting for 180), quests.json entries 968, talk slots fixed 96, chain prizes trimmed 45, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 8 | 759 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-20 22:52:59 | OK   | reloadnpcs | Applied live: 2 moved. | 154 ms
+        moved   23656 1002(449,412) -> 1002(445,411)
+        moved   23670 1002(448,412) -> 1002(445,413)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-20 23:07:05 | OK   | reloadnpcs | Applied live: 5 moved, 200 added. | 205 ms
+        moved   8439 1000(486,346) -> 1000(493,304)
+        moved   8438 1000(481,341) -> 1000(491,256)
+        moved   8442 1000(490,328) -> 1000(486,261)
+        moved   8440 1000(475,331) -> 1000(511,256)
+        moved   8437 1000(472,345) -> 1000(501,304)
+        added   16196 @1002 (381,323) mesh 64150 type 2 (line 1333)
+        added   18944 @1002 (381,318) mesh 64790 type 2 (line 1334)
+        added   18945 @1002 (385,392) mesh 64770 type 2 (line 1335)
+        added   19634 @1002 (394,315) mesh 1051587 type 2 (line 1336)
+        added   20536 @1002 (428,405) mesh 11640 type 2 (line 1340)
+        added   24091 @1002 (393,292) mesh 19150 type 2 (line 1341)
+        added   24095 @1002 (424,288) mesh 1029280 type 2 (line 1342)
+        added   24392 @1002 (562,791) mesh 54530 type 2 (line 1352)
+        added   24393 @1002 (447,440) mesh 63040 type 2 (line 1353)
+        added   24394 @1002 (506,643) mesh 36450 type 2 (line 1354)
+        added   25057 @1002 (440,387) mesh 65400 type 2 (line 1356)
+        added   25058 @1002 (460,332) mesh 26980 type 2 (line 1357)
+        added   25059 @1002 (478,360) mesh 26990 type 2 (line 1358)
+        added   25060 @1002 (426,336) mesh 27000 type 2 (line 1359)
+        added   25062 @1002 (443,531) mesh 27020 type 2 (line 1360)
+        added   25063 @1002 (545,578) mesh 27030 type 2 (line 1361)
+        added   25064 @1002 (563,581) mesh 27030 type 2 (line 1362)
+        added   25065 @1002 (571,596) mesh 27030 type 2 (line 1363)
+        added   25066 @1002 (512,571) mesh 27040 type 2 (line 1364)
+        added   25067 @1002 (620,591) mesh 27050 type 2 (line 1365)
+        added   25068 @1002 (496,726) mesh 27060 type 2 (line 1366)
+        added   25069 @1002 (556,748) mesh 27070 type 2 (line 1367)
+        added   25070 @1002 (572,790) mesh 27080 type 2 (line 1368)
+        added   25074 @1002 (491,809) mesh 27100 type 2 (line 1369)
+        added   25075 @1002 (444,713) mesh 27110 type 2 (line 1370)
+        added   25076 @1002 (216,559) mesh 27120 type 2 (line 1371)
+        added   25080 @1002 (137,545) mesh 27140 type 2 (line 1372)
+        added   25081 @1002 (51,416) mesh 27150 type 2 (line 1373)
+        added   25082 @1002 (41,421) mesh 27160 type 2 (line 1374)
+        added   25083 @1002 (439,250) mesh 27170 type 2 (line 1375)
+        added   25084 @1002 (636,414) mesh 27180 type 2 (line 1376)
+        added   25085 @1002 (636,380) mesh 27190 type 2 (line 1377)
+        added   25086 @1002 (466,332) mesh 27200 type 2 (line 1378)
+        added   25087 @1002 (422,353) mesh 27210 type 2 (line 1379)
+        added   25088 @1002 (554,376) mesh 27220 type 2 (line 1380)
+        added   25089 @1002 (636,418) mesh 27230 type 2 (line 1381)
+        added   25090 @1002 (448,449) mesh 27240 type 2 (line 1382)
+        added   25091 @1002 (555,339) mesh 27250 type 2 (line 1383)
+        added   25092 @1002 (573,426) mesh 27260 type 2 (line 1384)
+        added   25093 @1002 (543,433) mesh 27270 type 2 (line 1385)
+        added   25094 @1002 (440,507) mesh 27280 type 2 (line 1386)
+        added   25095 @1002 (674,379) mesh 27290 type 2 (line 1387)
+        added   25096 @1002 (722,412) mesh 27300 type 2 (line 1388)
+        added   25317 @1002 (425,270) mesh 42260 type 2 (line 1478)
+        added   26486 @1002 (450,387) mesh 19150 type 2 (line 1480)
+        added   26571 @1002 (386,330) mesh 19150 type 2 (line 1481)
+        added   26809 @1002 (449,372) mesh 19150 type 2 (line 1482)
+        added   27788 @1002 (464,387) mesh 20450 type 2 (line 1483)
+        added   30887 @1002 (546,296) mesh 44410 type 2 (line 1484)
+        added   30893 @1002 (441,290) mesh 44470 type 2 (line 1485)
+        added   30916 @1002 (373,347) mesh 19050 type 2 (line 1486)
+        added   30917 @1002 (437,296) mesh 64290 type 2 (line 1487)
+        added   30918 @1002 (424,325) mesh 18930 type 2 (line 1488)
+        added   30919 @1002 (409,392) mesh 42260 type 2 (line 1489)
+        added   31038 @1002 (455,392) mesh 56350 type 2 (line 1494)
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-20 23:07:06 | OK   | reloadquests | Applied live: Questinfo.ini 4247 -> 4247 quests; engine: 4247 quests, 5227 objectives (84.1% typed: Talk=2356 Kill=1007 Collect=659 Gather=8 Visit=238 Unknown=833 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 3463 (workable 1534), hand-coded 420 (engine kill counting for 180), quests.json entries 968, talk slots fixed 96, chain prizes trimmed 45, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 8 | 713 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-21 09:29:12 | OK   | reloadnpcs | Applied live: 1 moved, 6 added. | 167 ms
+        moved   25089 1002(636,418) -> 1002(498,315)
+        added   9600018 @1002 (499,330) mesh 1050156 type 2 (line 1723)
+        added   9600019 @1002 (390,347) mesh 26976 type 2 (line 1724)
+        added   9600020 @1002 (442,334) mesh 1061446 type 2 (line 1725)
+        added   9600021 @1002 (437,342) mesh 12186 type 2 (line 1726)
+        added   9600022 @1002 (440,340) mesh 21556 type 2 (line 1727)
+        added   9600023 @1002 (443,347) mesh 46836 type 2 (line 1728)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 09:36:24 | OK   | reloadquests | Applied live: Questinfo.ini 4247 -> 4247 quests; engine: 4247 quests, 5227 objectives (85.1% typed: Talk=2356 Kill=1063 Collect=659 Gather=8 Visit=238 Unknown=777 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 3463 (workable 1590), hand-coded 420 (engine kill counting for 180), quests.json entries 1817, talk slots fixed 96, chain prizes trimmed 45, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 8 | 516 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-21 12:23:50 | OK   | reloadnpcs | Applied live: 122 moved, 118 removed, 7 changed. | 185 ms
+        removed 23301 @1002 (333,430) mesh 1086 type 16
+        removed 23302 @1002 (333,426) mesh 1086 type 16
+        removed 23303 @1002 (333,422) mesh 1086 type 16
+        removed 23304 @1002 (333,418) mesh 1086 type 16
+        removed 23305 @1002 (333,414) mesh 1086 type 16
+        removed 23306 @1002 (333,410) mesh 1086 type 16
+        removed 23307 @1002 (333,406) mesh 1086 type 16
+        removed 23308 @1002 (333,402) mesh 1086 type 16
+        removed 23309 @1002 (325,402) mesh 1086 type 16
+        removed 23310 @1002 (325,406) mesh 1086 type 16
+        removed 23311 @1002 (325,410) mesh 1086 type 16
+        removed 23312 @1002 (325,414) mesh 1086 type 16
+        removed 23313 @1002 (325,418) mesh 1086 type 16
+        removed 23314 @1002 (325,422) mesh 1086 type 16
+        removed 23315 @1002 (325,426) mesh 1086 type 16
+        removed 23316 @1002 (325,430) mesh 1086 type 16
+        removed 23317 @1002 (317,430) mesh 1086 type 16
+        removed 23318 @1002 (317,426) mesh 1086 type 16
+        removed 23319 @1002 (317,422) mesh 1086 type 16
+        removed 23320 @1002 (317,418) mesh 1086 type 16
+        removed 23321 @1002 (317,414) mesh 1086 type 16
+        removed 23322 @1002 (317,410) mesh 1086 type 16
+        removed 23323 @1002 (317,406) mesh 1086 type 16
+        removed 23324 @1002 (317,402) mesh 1086 type 16
+        removed 23325 @1002 (378,430) mesh 1086 type 16
+        removed 23326 @1002 (378,426) mesh 1086 type 16
+        removed 23327 @1002 (378,422) mesh 1086 type 16
+        removed 23328 @1002 (378,418) mesh 1086 type 16
+        removed 23329 @1002 (378,414) mesh 1086 type 16
+        removed 23330 @1002 (378,410) mesh 1086 type 16
+        removed 23331 @1002 (378,406) mesh 1086 type 16
+        removed 23332 @1002 (378,402) mesh 1086 type 16
+        removed 23333 @1002 (370,402) mesh 1086 type 16
+        removed 23334 @1002 (370,406) mesh 1086 type 16
+        removed 23335 @1002 (370,410) mesh 1086 type 16
+        removed 23336 @1002 (370,414) mesh 1086 type 16
+        removed 23337 @1002 (370,418) mesh 1086 type 16
+        removed 23338 @1002 (370,422) mesh 1086 type 16
+        removed 23339 @1002 (370,426) mesh 1086 type 16
+        removed 23340 @1002 (370,430) mesh 1086 type 16
+        removed 23341 @1002 (362,430) mesh 1086 type 16
+        removed 23342 @1002 (362,426) mesh 1086 type 16
+        removed 23343 @1002 (362,422) mesh 1086 type 16
+        removed 23344 @1002 (362,418) mesh 1086 type 16
+        removed 23345 @1002 (362,414) mesh 1086 type 16
+        removed 23346 @1002 (362,410) mesh 1086 type 16
+        removed 23347 @1002 (362,406) mesh 1086 type 16
+        removed 23348 @1002 (362,402) mesh 1086 type 16
+        removed 23349 @1002 (378,485) mesh 1086 type 16
+        removed 23350 @1002 (378,481) mesh 1086 type 16
+        removed 23351 @1002 (378,477) mesh 1086 type 16
+        removed 23352 @1002 (378,473) mesh 1086 type 16
+        removed 23353 @1002 (378,469) mesh 1086 type 16
+        removed 23354 @1002 (378,465) mesh 1086 type 16
+        removed 23355 @1002 (378,461) mesh 1086 type 16
+        removed 23356 @1002 (378,457) mesh 1086 type 16
+        removed 23357 @1002 (370,457) mesh 1086 type 16
+        removed 23358 @1002 (370,461) mesh 1086 type 16
+        removed 23359 @1002 (370,465) mesh 1086 type 16
+        removed 23360 @1002 (370,469) mesh 1086 type 16
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-21 12:24:58 | OK   | reloadnpcs | Applied live: 64 moved. | 162 ms
+        moved   19424 1002(364,460) -> 1002(362,461)
+        moved   9071 1002(373,470) -> 1002(375,472)
+        moved   923 1002(371,418) -> 1002(372,419)
+        moved   10050 1002(436,441) -> 1002(437,442)
+        moved   10065 1002(369,470) -> 1002(371,472)
+        moved   7879 1002(431,246) -> 1002(431,247)
+        moved   3825 1002(378,470) -> 1002(378,469)
+        moved   4467 1002(601,672) -> 1002(600,672)
+        moved   8796 1002(468,297) -> 1002(462,297)
+        moved   19127 1002(366,469) -> 1002(368,471)
+        moved   19166 1002(368,465) -> 1002(369,466)
+        moved   10123 1002(368,449) -> 1002(369,450)
+        moved   2000 1002(366,463) -> 1002(367,464)
+        moved   4436 1002(438,338) -> 1002(438,336)
+        moved   4466 1002(463,331) -> 1002(464,336)
+        moved   4484 1002(424,330) -> 1002(422,330)
+        moved   4486 1002(439,344) -> 1002(438,348)
+        moved   4505 1002(439,333) -> 1002(437,333)
+        moved   4704 1002(468,329) -> 1002(469,329)
+        moved   8233 1002(366,455) -> 1002(366,459)
+        moved   10062 1002(381,467) -> 1002(384,466)
+        moved   19259 1002(133,543) -> 1002(132,541)
+        moved   21670 1002(509,570) -> 1002(508,569)
+        moved   22050 1002(369,438) -> 1002(371,439)
+        moved   22677 1002(448,378) -> 1002(447,377)
+        moved   23670 1002(445,414) -> 1002(445,415)
+        moved   27267 1002(372,463) -> 1002(378,457)
+        moved   28524 1002(379,464) -> 1002(383,462)
+        moved   28830 1002(373,458) -> 1002(374,459)
+        moved   30767 1002(367,442) -> 1002(368,443)
+        moved   33238 1002(378,461) -> 1002(379,462)
+        moved   34266 1002(375,460) -> 1002(376,461)
+        moved   35016 1002(372,424) -> 1002(373,425)
+        moved   35992 1002(375,464) -> 1002(380,465)
+        moved   30161 1002(385,467) -> 1002(388,466)
+        moved   27364 1002(370,461) -> 1002(371,462)
+        moved   27367 1002(369,452) -> 1002(367,454)
+        moved   29788 1002(368,445) -> 1002(369,446)
+        moved   20536 1002(428,402) -> 1002(429,399)
+        moved   24095 1002(424,289) -> 1002(423,289)
+        moved   25058 1002(459,331) -> 1002(463,331)
+        moved   25060 1002(426,336) -> 1002(427,337)
+        moved   25080 1002(136,545) -> 1002(135,544)
+        moved   25083 1002(439,250) -> 1002(438,250)
+        moved   25086 1002(466,332) -> 1002(467,333)
+        moved   25087 1002(423,354) -> 1002(424,355)
+        moved   25088 1002(555,375) -> 1002(555,374)
+        moved   30918 1002(423,323) -> 1002(422,323)
+        moved   32309 1002(332,697) -> 1002(332,698)
+        moved   32323 1002(476,344) -> 1002(475,343)
+        moved   32368 1002(355,351) -> 1002(356,352)
+        moved   32379 1002(442,442) -> 1002(442,443)
+        moved   32385 1002(467,101) -> 1002(466,100)
+        moved   33080 1002(498,319) -> 1002(499,320)
+        moved   33821 1002(439,439) -> 1002(440,439)
+        moved   33822 1002(456,334) -> 1002(455,333)
+        moved   33964 1002(439,439) -> 1002(440,439)
+        moved   34163 1002(460,398) -> 1002(459,397)
+        moved   34602 1002(364,437) -> 1002(369,437)
+        moved   34604 1002(466,295) -> 1002(467,296)
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-21 12:27:01 | OK   | reloadnpcs | Applied live: 52 moved. | 158 ms
+        moved   15987 1002(370,415) -> 1002(378,426)
+        moved   5533 1002(376,402) -> 1002(375,417)
+        moved   1002 1002(375,399) -> 1002(372,420)
+        moved   4362 1002(386,396) -> 1002(372,432)
+        moved   1611 1002(392,396) -> 1002(378,432)
+        moved   4488 1002(396,396) -> 1002(390,420)
+        moved   4490 1002(400,396) -> 1002(384,432)
+        moved   35630 1002(382,470) -> 1002(387,459)
+        moved   15988 1002(386,470) -> 1002(393,453)
+        moved   19424 1002(362,461) -> 1002(384,450)
+        moved   5004 1002(364,445) -> 1002(381,447)
+        moved   7935 1002(366,427) -> 1002(375,441)
+        moved   15805 1002(366,431) -> 1002(387,429)
+        moved   43 1002(390,470) -> 1002(396,450)
+        moved   9071 1002(375,472) -> 1002(378,468)
+        moved   9072 1002(370,411) -> 1002(375,423)
+        moved   923 1002(372,419) -> 1002(384,426)
+        moved   30000 1002(376,467) -> 1002(399,441)
+        moved   30156 1002(372,467) -> 1002(387,453)
+        moved   10065 1002(371,472) -> 1002(393,447)
+        moved   1503 1002(364,453) -> 1002(375,459)
+        moved   6002 1002(364,425) -> 1002(381,429)
+        moved   3825 1002(378,469) -> 1002(381,465)
+        moved   8713 1002(372,407) -> 1002(372,426)
+        moved   19127 1002(368,471) -> 1002(384,456)
+        moved   19166 1002(369,466) -> 1002(375,465)
+        moved   6297 1002(365,448) -> 1002(390,438)
+        moved   10123 1002(369,450) -> 1002(378,456)
+        moved   2000 1002(367,464) -> 1002(396,438)
+        moved   8233 1002(366,459) -> 1002(387,447)
+        moved   8615 1002(388,398) -> 1002(384,420)
+        moved   10062 1002(384,466) -> 1002(384,462)
+        moved   22050 1002(371,439) -> 1002(384,444)
+        moved   23021 1002(382,404) -> 1002(381,423)
+        moved   23492 1002(374,409) -> 1002(375,429)
+        moved   23746 1002(374,413) -> 1002(375,435)
+        moved   27267 1002(378,457) -> 1002(378,462)
+        moved   28524 1002(383,462) -> 1002(405,435)
+        moved   28830 1002(374,459) -> 1002(372,468)
+        moved   28972 1002(368,433) -> 1002(387,435)
+        moved   30767 1002(368,443) -> 1002(387,441)
+        moved   33238 1002(379,462) -> 1002(390,450)
+        moved   34266 1002(376,461) -> 1002(381,459)
+        moved   35016 1002(373,425) -> 1002(378,444)
+        moved   35992 1002(380,465) -> 1002(402,438)
+        moved   24135 1002(369,428) -> 1002(396,420)
+        moved   10020 1002(369,423) -> 1002(387,423)
+        moved   30161 1002(388,466) -> 1002(390,456)
+        moved   10495 1002(378,404) -> 1002(378,420)
+        moved   27364 1002(371,462) -> 1002(405,429)
+        moved   27367 1002(367,454) -> 1002(381,453)
+        moved   29788 1002(369,446) -> 1002(372,462)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:27:36 | OK   | reloadnpcs | Applied live: 2 moved. | 154 ms
+        moved   24393 1002(447,440) -> 1002(452,441)
+        moved   34163 1002(459,397) -> 1002(461,401)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:29:03 | OK   | reloadnpcs | Applied live: 15 moved, 10 removed, 2 changed. | 156 ms
+        removed 9071 @1036 (178,199) mesh 1054514 type 33
+        removed 9550003 @1036 (183,212) mesh 5517 type 2
+        removed 9550005 @1036 (186,199) mesh 8736 type 2
+        removed 9550006 @1036 (187,179) mesh 1816 type 2
+        removed 9550008 @1036 (285,220) mesh 1054546 type 2
+        removed 9550009 @1036 (252,242) mesh 9236 type 2
+        removed 9550010 @1036 (196,91) mesh 10931 type 2
+        removed 9550011 @1036 (191,91) mesh 5806 type 2
+        removed 9550012 @1036 (206,90) mesh 10100 type 2
+        removed 9550015 @1036 (182,199) mesh 8736 type 2
+        moved   3085 1036(198,212) -> 1036(197,210)
+        moved   6002 1036(204,179) -> 1036(202,178)
+        moved   30156 1036(199,87) -> 1036(204,180)
+        moved   300000 1036(240,249) -> 1036(236,249)
+        moved   923 1036(212,188) -> 1036(211,189)
+        moved   9072 1036(210,212) -> 1036(210,213)
+        moved   3825 1036(212,204) -> 1036(211,205)
+        moved   5004 1036(182,183) -> 1036(187,179)
+        changed 6297 @1036: mesh 9236->990150, type 2->2
+        moved   6168 1036(316,246) -> 1036(316,236)
+        moved   23269 1036(275,251) -> 1036(275,236)
+        moved   35016 1036(290,251) -> 1036(290,236)
+        changed 35015 @1036: mesh 19150->990120, type 2->2
+        moved   36546 1036(210,212) -> 1036(210,213)
+        moved   15805 1002(387,429) -> 1036(198,191)
+        moved   390 1002(332,547) -> 1036(191,192)
+        moved   10062 1002(384,462) -> 1036(205,212)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:29:33 | OK   | reloadnpcs | Applied live: 15 moved. | 155 ms
+        moved   5600 1002(425,401) -> 1002(424,401)
+        moved   7879 1002(431,247) -> 1002(431,248)
+        moved   6001 1002(416,246) -> 1002(416,247)
+        moved   4436 1002(438,336) -> 1002(435,337)
+        moved   19256 1002(140,549) -> 1002(144,546)
+        moved   23670 1002(445,415) -> 1002(445,416)
+        moved   26695 1002(394,405) -> 1002(395,405)
+        moved   27814 1002(382,396) -> 1002(383,396)
+        moved   30918 1002(422,323) -> 1002(422,322)
+        moved   32309 1002(332,698) -> 1002(332,699)
+        moved   36480 1002(385,318) -> 1002(385,319)
+        moved   3085 1036(197,210) -> 1036(197,209)
+        moved   6002 1036(202,178) -> 1036(201,178)
+        moved   9550004 1036(178,204) -> 1036(177,204)
+        moved   9550014 1036(189,212) -> 1036(189,211)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:30:26 | OK   | reloadnpcs | Applied live: 40 moved. | 158 ms
+        moved   4362 1002(372,432) -> 1002(371,433)
+        moved   1611 1002(378,432) -> 1002(378,433)
+        moved   4490 1002(384,432) -> 1002(384,433)
+        moved   15988 1002(393,453) -> 1002(393,454)
+        moved   19424 1002(384,450) -> 1002(383,451)
+        moved   7935 1002(375,441) -> 1002(375,442)
+        moved   5600 1002(424,401) -> 1002(423,401)
+        moved   7879 1002(431,248) -> 1002(431,249)
+        moved   6002 1002(381,429) -> 1002(381,430)
+        moved   6001 1002(416,247) -> 1002(416,246)
+        moved   10123 1002(378,456) -> 1002(380,459)
+        moved   4486 1002(438,348) -> 1002(437,348)
+        moved   4704 1002(469,329) -> 1002(469,330)
+        moved   19256 1002(144,546) -> 1002(144,545)
+        moved   23492 1002(375,429) -> 1002(375,430)
+        moved   23670 1002(445,416) -> 1002(444,416)
+        moved   23746 1002(375,435) -> 1002(375,436)
+        moved   28972 1002(387,435) -> 1002(389,433)
+        moved   34266 1002(381,459) -> 1002(383,462)
+        moved   35016 1002(378,444) -> 1002(377,447)
+        moved   30161 1002(390,456) -> 1002(393,460)
+        moved   26695 1002(395,405) -> 1002(396,405)
+        moved   26700 1002(392,432) -> 1002(392,431)
+        moved   27367 1002(381,453) -> 1002(379,454)
+        moved   25088 1002(555,374) -> 1002(555,373)
+        moved   30918 1002(422,322) -> 1002(422,321)
+        moved   32309 1002(332,699) -> 1002(332,700)
+        moved   33821 1002(440,439) -> 1002(440,438)
+        moved   33964 1002(440,439) -> 1002(440,438)
+        moved   36480 1002(385,319) -> 1002(385,318)
+        moved   36752 1002(445,381) -> 1002(445,382)
+        moved   3085 1036(197,209) -> 1036(196,209)
+        moved   6002 1036(201,178) -> 1036(200,178)
+        moved   3 1036(198,181) -> 1036(197,181)
+        moved   2070 1036(212,184) -> 1036(211,184)
+        moved   923 1036(211,189) -> 1036(210,189)
+        moved   9072 1036(210,213) -> 1036(209,214)
+        moved   3825 1036(211,205) -> 1036(210,205)
+        moved   9550004 1036(177,204) -> 1036(176,204)
+        moved   36546 1036(210,213) -> 1036(209,214)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:34:58 | OK   | reloadnpcs | Applied live: 1 moved. | 155 ms
+        moved   4704 1002(469,330) -> 1002(473,336)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:36:46 | OK   | reloadnpcs | Applied live: 1 moved. | 156 ms
+        moved   33822 1002(455,333) -> 1002(456,339)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:37:51 | OK   | reloadnpcs | Applied live: 12 moved, 4 removed, 1 changed. | 155 ms
+        removed 9520006 @1011 (178,271) mesh 9236 type 2
+        removed 9520012 @1011 (324,187) mesh 9637 type 2
+        removed 9520013 @1011 (907,546) mesh 1290 type 2
+        removed 9600017 @1011 (228,255) mesh 10936 type 2
+        moved   3216 1011(154,238) -> 1011(158,237)
+        changed 10052 @1011: mesh 287->10936, type 29->29
+        moved   8269 1011(770,460) -> 1011(766,459)
+        moved   9520002 1011(779,467) -> 1011(778,466)
+        moved   9520010 1011(783,456) -> 1011(782,458)
+        moved   23965 1011(161,260) -> 1011(159,262)
+        moved   25932 1011(763,476) -> 1011(763,477)
+        moved   36642 1011(786,457) -> 1011(785,457)
+        moved   25104 1011(176,535) -> 1011(176,534)
+        moved   25106 1011(218,312) -> 1011(220,311)
+        moved   25115 1011(308,214) -> 1011(307,214)
+        moved   25116 1011(306,216) -> 1011(305,217)
+        moved   25120 1011(191,260) -> 1011(190,261)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:40:06 | OK   | reloadnpcs | Applied live: 1 changed. | 151 ms
+        changed 23269 @1036: mesh 13790->990160, type 2->2
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:41:05 | OK   | reloadnpcs | Applied live: 25 moved, 11 removed, 2 changed. | 161 ms
+        removed 9530001 @1020 (381,33) mesh 1227 type 2
+        removed 9530002 @1020 (566,509) mesh 50 type 2
+        removed 9530003 @1020 (535,533) mesh 1766 type 2
+        removed 9530004 @1020 (545,509) mesh 8210 type 2
+        removed 9530005 @1020 (543,544) mesh 1766 type 2
+        removed 9530007 @1020 (369,309) mesh 6876 type 2
+        removed 9510003 @1000 (520,620) mesh 4296 type 2
+        removed 9510006 @1000 (77,326) mesh 1314 type 2
+        removed 9510011 @1000 (496,578) mesh 4644 type 2
+        removed 6135 @1000 (471,650) mesh 4196 type 2
+        removed 9540003 @1015 (697,595) mesh 4296 type 2
+        changed 10053 @1020: mesh 286->10936, type 29->29
+        moved   2003 1020(566,620) -> 1020(568,618)
+        moved   24141 1020(535,497) -> 1020(536,498)
+        moved   25154 1020(574,621) -> 1020(576,620)
+        moved   25261 1020(577,557) -> 1020(576,558)
+        moved   32373 1020(782,436) -> 1020(780,437)
+        moved   34612 1020(546,621) -> 1020(548,623)
+        moved   9 1000(512,633) -> 1000(511,630)
+        moved   10 1000(486,621) -> 1000(486,625)
+        moved   4583 1000(490,618) -> 1000(490,617)
+        moved   30104 1000(519,615) -> 1000(519,620)
+        moved   10015 1000(489,623) -> 1000(492,624)
+        moved   10051 1000(478,631) -> 1000(480,633) + look changed
+        moved   21116 1000(472,645) -> 1000(472,648)
+        moved   8447 1000(311,478) -> 1000(312,476)
+        moved   4353 1000(496,611) -> 1000(496,612)
+        moved   4358 1000(486,627) -> 1000(488,629)
+        moved   4359 1000(493,616) -> 1000(495,618)
+        moved   9510001 1000(324,456) -> 1000(324,455)
+        moved   9510010 1000(486,618) -> 1000(489,621)
+        moved   27591 1000(548,618) -> 1000(548,619)
+        moved   8520 1015(748,580) -> 1015(748,574)
+        moved   10023 1015(721,541) -> 1015(721,542)
+        changed 10056 @1015: mesh 280->10936, type 29->29
+        moved   2005 1015(791,566) -> 1015(793,564)
+        moved   24332 1015(717,579) -> 1015(717,580)
+        moved   25286 1015(684,563) -> 1015(685,562)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 12:59:00 | OK   | reloadquests | Applied live: Questinfo.ini 4247 -> 4247 quests; engine: 4247 quests, 5227 objectives (85.1% typed: Talk=2356 Kill=1063 Collect=659 Gather=8 Visit=238 Unknown=777 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 3463 (workable 1590), hand-coded 420 (engine kill counting for 180), quests.json entries 1817, talk slots fixed 96, chain prizes trimmed 45, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 8 | 602 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-21 13:07:55 | OK   | reloadquests | Applied live: Questinfo.ini 4247 -> 4247 quests; engine: 4247 quests, 5227 objectives (89.2% typed: Talk=2450 Kill=1181 Collect=659 Gather=8 Visit=238 Unknown=565 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 3463 (workable 1634), hand-coded 420 (engine kill counting for 180), quests.json entries 1817, talk slots fixed 96, chain prizes trimmed 45, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 8 | 626 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-21 13:09:23 | OK   | reloadquests | Applied live: Questinfo.ini 4247 -> 4247 quests; engine: 4247 quests, 5225 objectives (89.2% typed: Talk=2448 Kill=1181 Collect=659 Gather=8 Visit=238 Unknown=565 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 3463 (workable 1634), hand-coded 420 (engine kill counting for 180), quests.json entries 1819, talk slots fixed 96, chain prizes trimmed 45, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 8 | 608 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-21 13:10:31 | OK   | reloadmonsters | Applied live: 0 monster type(s) changed, 25 new; 0 spawned monster(s) updated (looks/HP show on their next respawn). | 680 ms
+        new monster type 21755 AlienDemon (usable by new spawns/commands)
+        new monster type 21739 BloodDemon (usable by new spawns/commands)
+        new monster type 21736 Careerist (usable by new spawns/commands)
+        new monster type 21754 CrazyBear (usable by new spawns/commands)
+        new monster type 21790 DarkTower (usable by new spawns/commands)
+        new monster type 21747 Demon (usable by new spawns/commands)
+        new monster type 21752 Demon (usable by new spawns/commands)
+        new monster type 21749 Devilman (usable by new spawns/commands)
+        new monster type 21743 ElfGirl (usable by new spawns/commands)
+        new monster type 21762 EnigmaFlyer (usable by new spawns/commands)
+        new monster type 21764 EnigmaScorpion (usable by new spawns/commands)
+        new monster type 21761 EnigmaSerpent (usable by new spawns/commands)
+        new monster type 21763 EnigmaSpider (usable by new spawns/commands)
+        new monster type 21759 Haka (usable by new spawns/commands)
+        new monster type 21768 HellDemon (usable by new spawns/commands)
+        new monster type 21734 Marauder (usable by new spawns/commands)
+        new monster type 21738 MutantKelpie (usable by new spawns/commands)
+        new monster type 22407 MutantPheasant (usable by new spawns/commands)
+        new monster type 21792 Nightmare (usable by new spawns/commands)
+        new monster type 21733 PhantomKing (usable by new spawns/commands)
+        new monster type 5749 RobinKing (usable by new spawns/commands)
+        new monster type 21791 Sentry (usable by new spawns/commands)
+        new monster type 21751 Vampire (usable by new spawns/commands)
+        new monster type 21750 Werewolf (usable by new spawns/commands)
+        new monster type 21753 Wolf (usable by new spawns/commands)
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:12:41 | OK   | reloadnpcs | Applied live: 52 added. | 167 ms
+        added   24104 @1002 (601,410) mesh 19150 type 2 (line 1582)
+        added   34729 @1002 (662,492) mesh 41310 type 2 (line 1588)
+        added   34730 @1002 (828,604) mesh 41310 type 2 (line 1589)
+        added   34731 @1002 (751,704) mesh 41310 type 2 (line 1590)
+        added   34732 @1002 (516,535) mesh 41310 type 2 (line 1591)
+        added   34733 @1002 (665,356) mesh 41310 type 2 (line 1592)
+        added   34734 @1002 (374,120) mesh 41310 type 2 (line 1593)
+        added   34735 @1002 (489,150) mesh 41310 type 2 (line 1594)
+        added   34736 @1002 (522,873) mesh 41310 type 2 (line 1595)
+        added   34737 @1002 (357,645) mesh 41310 type 2 (line 1596)
+        added   34738 @1002 (135,505) mesh 41310 type 2 (line 1597)
+        added   34739 @1002 (169,367) mesh 41310 type 2 (line 1598)
+        added   34784 @1002 (662,492) mesh 41310 type 2 (line 1643)
+        added   34785 @1002 (828,604) mesh 41310 type 2 (line 1644)
+        added   34786 @1002 (751,705) mesh 41310 type 2 (line 1645)
+        added   34787 @1002 (516,535) mesh 41310 type 2 (line 1646)
+        added   34788 @1002 (665,356) mesh 41310 type 2 (line 1647)
+        added   34789 @1002 (374,120) mesh 41310 type 2 (line 1648)
+        added   34790 @1002 (489,150) mesh 41310 type 2 (line 1649)
+        added   34791 @1002 (522,873) mesh 41310 type 2 (line 1650)
+        added   34792 @1002 (357,645) mesh 41310 type 2 (line 1651)
+        added   34793 @1002 (135,506) mesh 41310 type 2 (line 1652)
+        added   34794 @1002 (169,367) mesh 41310 type 2 (line 1653)
+        added   34839 @1002 (662,492) mesh 41310 type 2 (line 1698)
+        added   34840 @1002 (828,604) mesh 41310 type 2 (line 1699)
+        added   34841 @1002 (751,706) mesh 41310 type 2 (line 1700)
+        added   34842 @1002 (516,535) mesh 41310 type 2 (line 1701)
+        added   34843 @1002 (665,356) mesh 41310 type 2 (line 1702)
+        added   34844 @1002 (374,120) mesh 41310 type 2 (line 1703)
+        added   34845 @1002 (489,150) mesh 41310 type 2 (line 1704)
+        added   34846 @1002 (522,873) mesh 41310 type 2 (line 1705)
+        added   34847 @1002 (357,645) mesh 41310 type 2 (line 1706)
+        added   34848 @1002 (136,506) mesh 41310 type 2 (line 1707)
+        added   34849 @1002 (169,367) mesh 41310 type 2 (line 1708)
+        added   5682 @1002 (434,246) mesh 64100 type 2 (line 1753)
+        added   9439 @1002 (457,347) mesh 16500 type 2 (line 1755)
+        added   15389 @1002 (436,390) mesh 19150 type 2 (line 1756)
+        added   18965 @1002 (450,390) mesh 39080 type 2 (line 1757)
+        added   21351 @1002 (435,368) mesh 19150 type 2 (line 1759)
+        added   28187 @1002 (464,387) mesh 38590 type 2 (line 1760)
+        added   28329 @1002 (461,387) mesh 45990 type 2 (line 1761)
+        added   28948 @1002 (385,332) mesh 54930 type 2 (line 1762)
+        added   29235 @1002 (421,289) mesh 55320 type 2 (line 1763)
+        added   30750 @1002 (359,345) mesh 60970 type 2 (line 1764)
+        added   30760 @1002 (731,327) mesh 19150 type 2 (line 1765)
+        added   31861 @1002 (434,404) mesh 18850 type 2 (line 1767)
+        added   31940 @1002 (434,404) mesh 60190 type 2 (line 1768)
+        added   31975 @1002 (434,404) mesh 60190 type 2 (line 1769)
+        added   32124 @1002 (368,440) mesh 49480 type 2 (line 1770)
+        added   33371 @1002 (455,366) mesh 60320 type 2 (line 1772)
+        added   34113 @1002 (454,379) mesh 50940 type 2 (line 1773)
+        added   6261 @1036 (279,249) mesh 19150 type 2 (line 1754)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 13:12:42 | OK   | reloadquests | Applied live: Questinfo.ini 4247 -> 4247 quests; engine: 4247 quests, 5225 objectives (89.7% typed: Talk=2446 Kill=1211 Collect=659 Gather=8 Visit=237 Unknown=538 State=76 Event=36 Counter=12 KillPoints=2), engine-owned 3463 (workable 1884), hand-coded 420 (engine kill counting for 180), quests.json entries 1819, talk slots fixed 96, chain prizes trimmed 45, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 8 | 584 ms
+        Players see new/removed quests in the quest panel after their next login (the panel list is sent at login).
+2026-10-21 13:15:16 | OK   | reloadmonsters | No monster type changes (551 files checked). | 671 ms
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:16:00 | OK   | reloadmonsters | No monster type changes (551 files checked). | 672 ms
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:16:17 | OK   | reloadmonsters | No monster type changes (551 files checked). | 675 ms
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:19:34 | OK   | reloadnpcs | Applied live: 2 moved. | 163 ms
+        moved   25060 1002(427,337) -> 1002(429,341)
+        moved   33961 1002(509,374) -> 1002(512,371)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 13:34:53 | OK   | reloadmonsters | Applied live: 2 monster type(s) changed, 0 new; 2 spawned monster(s) updated (looks/HP show on their next respawn). | 714 ms
+        22407 MutantPheasant: Level 20->5, MaxAttack 20->8, MinAttack 15->6, MaxHealth 730->180
+        5749 RobinKing: MaxAttack 28->16, MinAttack 20->12, MaxHealth 300->250, ViewRange 16->0
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:43:15 | OK   | reloadmonsters | Applied live: 18 monster type(s) changed, 1 new; 833 spawned monster(s) updated (looks/HP show on their next respawn). | 667 ms
+        21755 AlienDemon: ViewRange 16->0
+        7 Bandit: ViewRange 16->0
+        21739 BloodDemon: ViewRange 16->0
+        21736 Careerist: ViewRange 16->0
+        21790 DarkTower: ViewRange 16->0
+        21747 Demon: ViewRange 16->0
+        21752 Demon: ViewRange 16->0
+        21749 Devilman: ViewRange 16->0
+        21743 ElfGirl: ViewRange 16->0
+        21759 Haka: ViewRange 16->0
+        21768 HellDemon: ViewRange 16->0
+        21734 Marauder: ViewRange 16->0
+        21738 MutantKelpie: ViewRange 16->0
+        21792 Nightmare: ViewRange 16->0
+        21733 PhantomKing: ViewRange 16->0
+        21791 Sentry: ViewRange 16->0
+        21751 Vampire: ViewRange 16->0
+        21750 Werewolf: ViewRange 16->0
+        new monster type 21793 Bandit (usable by new spawns/commands)
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:44:47 | OK   | reloadmonsters | Applied live: 1 monster type(s) changed, 0 new; 0 spawned monster(s) updated (looks/HP show on their next respawn). | 681 ms
+        7 Bandit: ViewRange 0->16
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:47:59 | OK   | reloadmonsters | Applied live: 0 monster type(s) changed, 1 new; 0 spawned monster(s) updated (looks/HP show on their next respawn). | 713 ms
+        new monster type 5748 MutantPheasant (usable by new spawns/commands)
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:48:23 | OK   | reloadmonsters | Applied live: 1 monster type(s) changed, 0 new; 1 spawned monster(s) updated (looks/HP show on their next respawn). | 680 ms
+        5748 MutantPheasant: Mesh 104->132
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:48:43 | OK   | reloadmonsters | Applied live: 1 monster type(s) changed, 0 new; 1 spawned monster(s) updated (looks/HP show on their next respawn). | 666 ms
+        22407 MutantPheasant: Mesh 104->132
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 13:51:50 | OK   | reloadmonsters | Applied live: 4 monster type(s) changed, 0 new; 4 spawned monster(s) updated (looks/HP show on their next respawn). | 695 ms
+        21755 AlienDemon: Mesh 168->217
+        21738 MutantKelpie: Mesh 273->155
+        21792 Nightmare: Mesh 230->227
+        21791 Sentry: Mesh 405->201
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 14:17:11 | OK   | reloadmonsters | Applied live: 5 monster type(s) changed, 0 new; 7 spawned monster(s) updated (looks/HP show on their next respawn). | 712 ms
+        21790 DarkTower: Boss 1->0
+        22407 MutantPheasant: Boss 1->0
+        21792 Nightmare: Boss 1->0
+        21733 PhantomKing: Boss 1->0
+        5749 RobinKing: Boss 1->0
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 14:30:40 | OK   | reloadmonsters | Applied live: 75 monster type(s) changed, 0 new; 1078 spawned monster(s) updated (looks/HP show on their next respawn). | 762 ms
+        21755 AlienDemon: ViewRange 0->16
+        2421 AncientDemon: ViewRange 0->16
+        2984 AncientDragon: ViewRange 0->16
+        2133 ArenaSentinel1: ViewRange 0->16
+        2134 ArenaSentinel2: ViewRange 0->16
+        2135 ArenaSentinel3: ViewRange 0->16
+        2136 ArenaSentinel4: ViewRange 0->16
+        2137 ArenaSentinel5: ViewRange 0->16
+        2138 ArenaSentinel6: ViewRange 0->16
+        2139 ArenaSentinel7: ViewRange 0->16
+        2438 AuroraDemon: ViewRange 0->16
+        7486 AwakeFlameDevastator: ViewRange 0->16
+        2225 BanditCourier: ViewRange 0->16
+        2226 BanditDeliverer: ViewRange 0->16
+        2224 BanditLeaderL97: ViewRange 0->16
+        21793 Bandit: ViewRange 0->16
+        21739 BloodDemon: ViewRange 0->16
+        2157 BloodyShawn: ViewRange 0->16
+        2168 Brigand: ViewRange 0->16
+        2232 BullMaster: ViewRange 0->16
+        2163 CapriceLeader: ViewRange 0->16
+        21736 Careerist: ViewRange 0->16
+        2436 ChaosDemon: ViewRange 0->16
+        4140 ChaosOx: ViewRange 0->16
+        7488 CitySoldier: ViewRange 0->16
+        7022 CoinsStealer: ViewRange 0->16
+        2169 CrimsonClaw: ViewRange 0->16
+        2170 CrimsonViper: ViewRange 0->16
+        21790 DarkTower: ViewRange 0->16
+        2420 Demon: ViewRange 0->16
+        21747 Demon: ViewRange 0->16
+        21752 Demon: ViewRange 0->16
+        2179 DesertCondor: ViewRange 0->16
+        21749 Devilman: ViewRange 0->16
+        21743 ElfGirl: ViewRange 0->16
+        7484 EvilMonkMisery: ViewRange 0->16
+        2180 EvilSpirit: ViewRange 0->16
+        7485 FlameDevastator: ViewRange 0->16
+        2422 FloodDemon: ViewRange 0->16
+        7487 FuriousFlameDevastator: ViewRange 0->16
+        7483 GhostReaver: ViewRange 0->16
+        2700 GoldenOctopus: ViewRange 0->16
+        21759 Haka: ViewRange 0->16
+        2435 HeavenDemon: ViewRange 0->16
+        7696 HeavenRoc: ViewRange 0->16
+        21768 HellDemon: ViewRange 0->16
+        2171 JadeCourtesan: ViewRange 0->16
+        2189 JinxTombBat: ViewRange 0->16
+        2173 LyraGhost: ViewRange 0->16
+        2231 MadBull: ViewRange 0->16
+        21734 Marauder: ViewRange 0->16
+        2159 MausoleumGeneral1: ViewRange 0->16
+        2161 MausoleumGeneral2: ViewRange 0->16
+        2166 MausoleumGeneral3: ViewRange 0->16
+        2178 MausoleumGeneral4: ViewRange 0->16
+        21738 MutantKelpie: ViewRange 0->16
+        22407 MutantPheasant: ViewRange 0->16
+        21792 Nightmare: ViewRange 0->16
+        21733 PhantomKing: ViewRange 0->16
+        1 Pheasant: ViewRange 0->16
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-21 14:43:23 | OK   | reloadmonsters | Applied live: 1 monster type(s) changed, 0 new; 44 spawned monster(s) updated (looks/HP show on their next respawn). | 740 ms
+        4 Apparition: Level 22->17, MaxAttack 60->30, MinAttack 53->24, MaxHealth 205->94
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 14:44:40 | OK   | reloadmonsters | Applied live: 5 monster type(s) changed, 0 new; 189 spawned monster(s) updated (looks/HP show on their next respawn). | 725 ms
+        7 Bandit: Level 32->27, MaxAttack 89->75, MinAttack 81->68, MaxHealth 545->142
+        66 BanditL33: Level 33->28, MaxAttack 94->80, MinAttack 86->73, MaxHealth 1635->145
+        3 Robin: MaxHealth 122->81
+        2 Turtledove: MaxHealth 81->58
+        6 WingedSnake: MaxHealth 445->118
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 14:44:56 | OK   | reloadmonsters | Applied live: 8 monster type(s) changed, 0 new; 9 spawned monster(s) updated (looks/HP show on their next respawn). | 727 ms
+        21749 Devilman: MaxHealth 700900->527170
+        21763 EnigmaSpider: Level 115->95, MaxAttack 2530->2090, MinAttack 2024->1672, MaxHealth 100660->25050
+        21759 Haka: MaxHealth 1317060->465080
+        21734 Marauder: Level 39->32, MaxAttack 150->123, MinAttack 125->103, MaxHealth 970->790
+        8 Ratling: Level 37->10, MaxAttack 114->31, MinAttack 103->28, MaxHealth 666->300
+        21751 Vampire: Level 136->32, MaxAttack 3030->1426, MinAttack 2424->1141, MaxHealth 705810->8000
+        21750 Werewolf: Level 136->32, MaxAttack 3030->1426, MinAttack 2424->1141, MaxHealth 705810->8000
+        21753 Wolf: Level 136->45, MaxAttack 3939->1303, MinAttack 3151->1043, MaxHealth 994990->2040
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 14:45:12 | OK   | reloadmonsters | Applied live: 3 monster type(s) changed, 0 new; 0 spawned monster(s) updated (looks/HP show on their next respawn). | 744 ms
+        21751 Vampire: MaxAttack 1426->130, MinAttack 1141->110
+        21750 Werewolf: MaxAttack 1426->130, MinAttack 1141->110
+        21753 Wolf: MaxAttack 1303->180, MinAttack 1043->150
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 19:26:55 | OK   | reloadnpcs | No NPC changes on the 10 loaded map(s) (1773 NPCs in Npcs.txt). | 161 ms
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 19:40:03 | OK   | reloadnpcs | Applied live: 1 moved. | 159 ms
+        moved   805 1002(400,340) -> 1002(401,340)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 19:51:10 | OK   | reloadnpcs | Applied live: 1 moved. | 154 ms
+        moved   805 1002(401,340) -> 1002(400,340)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 22:15:11 | OK   | reloadnpcs | Applied live: 8 added. | 155 ms
+        added   15459 @1002 (460,352) mesh 19776 type 60 (line 1774)
+        added   15460 @1002 (463,352) mesh 19786 type 60 (line 1775)
+        added   15461 @1002 (466,352) mesh 19796 type 60 (line 1776)
+        added   15462 @1002 (469,352) mesh 19806 type 60 (line 1777)
+        added   4699 @1002 (443,246) mesh 1064200 type 2 (line 1781)
+        added   9826 @1036 (214,211) mesh 19786 type 60 (line 1778)
+        added   9827 @1036 (214,213) mesh 19796 type 60 (line 1779)
+        added   9828 @1036 (214,215) mesh 19806 type 60 (line 1780)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 22:15:11 | OK   | reloadnpcs | No NPC changes on the 13 loaded map(s) (1781 NPCs in Npcs.txt). | 152 ms
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 22:18:59 | OK   | reloadmonsters | No monster type changes (552 files checked). | 734 ms
+        MonsterSpawns (where / how many / respawn time) are NOT reloaded live: spawns are created once when a map loads and the server has no safe way to remove live spawns players may be fighting. Spawn edits apply after a restart.
+2026-10-21 22:21:43 | OK   | reloadnpcs | No NPC changes on the 9 loaded map(s) (1781 NPCs in Npcs.txt). | 157 ms
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 22:28:20 | OK   | reloadnpcs | Applied live: 5 added. | 155 ms
+        added   999990 @1002 (406,358) mesh 991016 type 2 (line 1782)
+        added   999992 @1002 (409,358) mesh 991026 type 2 (line 1783)
+        added   999993 @1002 (412,358) mesh 991036 type 2 (line 1784)
+        added   999994 @1002 (415,358) mesh 991046 type 2 (line 1785)
+        added   999995 @1002 (418,358) mesh 991056 type 2 (line 1786)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 22:29:46 | OK   | reloadnpcs | Applied live: 5 moved. | 157 ms
+        moved   999990 1002(406,358) -> 1002(413,358)
+        moved   999992 1002(409,358) -> 1002(416,358)
+        moved   999993 1002(412,358) -> 1002(419,358)
+        moved   999994 1002(415,358) -> 1002(422,358)
+        moved   999995 1002(418,358) -> 1002(425,358)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 22:31:58 | OK   | reloadnpcs | Applied live: 1 moved. | 154 ms
+        moved   999990 1002(413,358) -> 1002(428,358)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 22:33:32 | OK   | reloadnpcs | Applied live: 3 moved. | 152 ms
+        moved   9826 1036(214,211) -> 1036(216,209)
+        moved   9827 1036(214,213) -> 1036(220,209)
+        moved   9828 1036(214,215) -> 1036(224,209)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-21 22:34:02 | OK   | reloadnpcs | Applied live: 3 moved. | 154 ms
+        moved   15459 1002(460,352) -> 1002(459,352)
+        moved   15461 1002(466,352) -> 1002(467,352)
+        moved   15462 1002(469,352) -> 1002(471,352)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-22 15:18:35 | OK   | reloadnpcs | Applied live: 86 moved, 2 added, 8 removed. | 170 ms
+        removed 80591 @1002 (104,443) mesh 55076 type 2
+        removed 75582 @1002 (204,381) mesh 14056 type 2
+        removed 100939 @1002 (426,265) mesh 9340 type 31
+        removed 101903 @1002 (329,134) mesh 9340 type 31
+        removed 101905 @1002 (345,134) mesh 7910 type 31
+        removed 15189 @1002 (255,168) mesh 20130 type 2
+        removed 15190 @1002 (240,168) mesh 20130 type 2
+        removed 30161 @1002 (393,460) mesh 8120 type 2
+        moved   4488 1002(390,420) -> 1002(390,347)
+        moved   5674 1002(440,371) -> 1002(407,324)
+        moved   19634 1002(394,315) -> 1002(429,388)
+        moved   25060 1002(429,341) -> 1002(426,336)
+        moved   30918 1002(422,321) -> 1002(424,325)
+        moved   33822 1002(456,339) -> 1002(456,334)
+        moved   34602 1002(369,437) -> 1002(365,439)
+        moved   15987 1002(378,426) -> 11412(52,36)
+        moved   5533 1002(375,417) -> 11412(36,48)
+        moved   1002 1002(372,420) -> 11412(48,44)
+        moved   4362 1002(371,433) -> 11412(52,56)
+        moved   1611 1002(378,433) -> 11412(40,52)
+        moved   4490 1002(384,433) -> 11412(44,60)
+        moved   4434 1002(480,370) -> 11412(56,52)
+        moved   35630 1002(387,459) -> 11412(28,60)
+        moved   15988 1002(393,454) -> 11412(60,44)
+        moved   19424 1002(383,451) -> 11412(44,68)
+        moved   423 1002(428,311) -> 11412(48,56)
+        moved   5004 1002(381,447) -> 11412(60,52)
+        moved   7935 1002(375,442) -> 11412(56,44)
+        moved   43 1002(396,450) -> 11412(44,52)
+        moved   9071 1002(378,468) -> 11412(48,68)
+        moved   9072 1002(375,423) -> 11412(52,64)
+        moved   923 1002(384,426) -> 11412(44,48)
+        moved   30000 1002(399,441) -> 11412(36,36)
+        moved   30156 1002(387,453) -> 11412(44,28)
+        moved   10065 1002(393,447) -> 11412(60,56)
+        moved   1503 1002(375,459) -> 11412(52,48)
+        moved   6002 1002(381,430) -> 11412(40,44)
+        moved   3825 1002(381,465) -> 11412(48,60)
+        moved   8713 1002(372,426) -> 11412(40,60)
+        moved   8796 1002(462,297) -> 11412(44,64)
+        moved   17400 1002(397,344) -> 11412(28,52)
+        moved   19127 1002(384,456) -> 11412(32,56)
+        moved   19166 1002(375,465) -> 11412(40,64)
+        moved   6297 1002(390,438) -> 11412(48,36)
+        moved   10580 1002(468,400) -> 11412(48,32)
+        moved   6135 1002(397,358) -> 11412(44,40)
+        moved   10123 1002(380,459) -> 11412(32,48)
+        moved   2000 1002(396,438) -> 11412(44,56)
+        moved   4436 1002(435,337) -> 11412(40,48)
+        moved   4466 1002(464,336) -> 11412(44,44)
+        moved   4470 1002(431,331) -> 11412(52,44)
+        moved   4484 1002(422,330) -> 11412(56,48)
+        moved   4486 1002(437,348) -> 11412(40,56)
+        moved   4504 1002(472,309) -> 11412(48,64)
+        moved   4505 1002(437,333) -> 11412(52,60)
+        moved   4704 1002(473,336) -> 11412(56,56)
+        moved   8233 1002(387,447) -> 11412(60,48)
+        moved   8615 1002(384,420) -> 11412(32,52)
+        moved   10579 1002(425,298) -> 11412(44,36)
+        moved   17222 1002(436,397) -> 11412(64,48)
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-22 15:21:59 | OK   | reloadnpcs | Applied live: 79 moved. | 155 ms
+        moved   15987 11412(52,36) -> 11412(43,51)
+        moved   5533 11412(36,48) -> 11412(48,46)
+        moved   1002 11412(48,44) -> 11412(48,56)
+        moved   4362 11412(52,56) -> 11412(53,51)
+        moved   1611 11412(40,52) -> 11412(38,51)
+        moved   4490 11412(44,60) -> 11412(43,46)
+        moved   4434 11412(56,52) -> 11412(43,56)
+        moved   35630 11412(28,60) -> 11412(48,41)
+        moved   15988 11412(60,44) -> 11412(48,61)
+        moved   19424 11412(44,68) -> 11412(53,46)
+        moved   423 11412(48,56) -> 11412(53,56)
+        moved   5004 11412(60,52) -> 11412(58,51)
+        moved   7935 11412(56,44) -> 11412(33,51)
+        moved   43 11412(44,52) -> 11412(38,46)
+        moved   9071 11412(48,68) -> 11412(38,56)
+        moved   9072 11412(52,64) -> 11412(43,41)
+        moved   923 11412(44,48) -> 11412(43,61)
+        moved   30000 11412(36,36) -> 11412(48,36)
+        moved   30156 11412(44,28) -> 11412(48,66)
+        moved   10065 11412(60,56) -> 11412(53,41)
+        moved   1503 11412(52,48) -> 11412(53,61)
+        moved   6002 11412(40,44) -> 11412(58,46)
+        moved   3825 11412(48,60) -> 11412(58,56)
+        moved   8713 11412(40,60) -> 11412(63,51)
+        moved   8796 11412(44,64) -> 11412(28,51)
+        moved   17400 11412(28,52) -> 11412(33,46)
+        moved   19127 11412(32,56) -> 11412(33,56)
+        moved   19166 11412(40,64) -> 11412(38,61)
+        moved   6297 11412(48,36) -> 11412(43,36)
+        moved   10580 11412(48,32) -> 11412(43,66)
+        moved   6135 11412(44,40) -> 11412(48,31)
+        moved   10123 11412(32,48) -> 11412(48,71)
+        moved   2000 11412(44,56) -> 11412(53,36)
+        moved   4436 11412(40,48) -> 11412(53,66)
+        moved   4466 11412(44,44) -> 11412(58,41)
+        moved   4470 11412(52,44) -> 11412(58,61)
+        moved   4484 11412(56,48) -> 11412(63,46)
+        moved   4486 11412(40,56) -> 11412(63,56)
+        moved   4504 11412(48,64) -> 11412(68,51)
+        moved   4505 11412(52,60) -> 11412(28,46)
+        moved   4704 11412(56,56) -> 11412(28,56)
+        moved   8233 11412(60,48) -> 11412(33,61)
+        moved   8615 11412(32,52) -> 11412(38,66)
+        moved   10579 11412(44,36) -> 11412(43,31)
+        moved   17222 11412(64,48) -> 11412(43,71)
+        moved   22050 11412(48,72) -> 11412(48,26)
+        moved   23021 11412(52,68) -> 11412(48,76)
+        moved   23492 11412(56,64) -> 11412(53,31)
+        moved   23656 11412(60,60) -> 11412(53,71)
+        moved   23670 11412(68,52) -> 11412(58,66)
+        moved   23746 11412(28,48) -> 11412(63,41)
+        moved   26228 11412(48,28) -> 11412(63,61)
+        moved   27267 11412(40,68) -> 11412(68,46)
+        moved   28524 11412(60,64) -> 11412(68,56)
+        moved   28830 11412(68,56) -> 11412(73,51)
+        moved   28972 11412(72,52) -> 11412(28,41)
+        moved   30767 11412(48,24) -> 11412(33,36)
+        moved   33238 11412(60,36) -> 11412(38,31)
+        moved   33768 11412(64,40) -> 11412(43,26)
+        moved   34266 11412(72,48) -> 11412(53,76)
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-22 15:34:54 | OK   | reloadshops | Applied live: 171 shops (Shop.dat) + 504 emoney shops, 14100 items. | 1549 ms
+        Shop.dat: 171 -> 171 shops; emoneyshop: 504 -> 504 shops.
+        new_shop_goods: 3064 -> 3495 goods.
+        The server now sells/validates the new lists. The shop WINDOW is drawn by the client from its own shop files: an item missing from the client's list can't be clicked until the client is patched.
+2026-10-22 15:36:37 | OK   | reloaditems | Applied live: 1 item type(s) updated (2 values). | 539 ms
+        3356451 Field Whistle Pack: MagicDamageDecrease 0->6, BonusAttribute 8->7
+        597 new item id(s) in itemtype.txt (3342879, 3342876, 3342874, 3342877, 3344334, 3344397, 3344280, 3344281, 3344333, 3344335, ...) - NEW item types need a server restart.
+        2 line(s) could not be parsed and were ignored (the startup loader skips them too).
+        Only item TYPE values changed (prices, stats, names on the server). Players' items are untouched; the client shows its own itemtype data.
+2026-10-22 15:36:39 | OK   | reloadshops | Applied live: 171 shops (Shop.dat) + 504 emoney shops, 14100 items. | 1560 ms
+        Shop.dat: 171 -> 171 shops; emoneyshop: 504 -> 504 shops.
+        new_shop_goods: 3495 -> 4142 goods.
+        The server now sells/validates the new lists. The shop WINDOW is drawn by the client from its own shop files: an item missing from the client's list can't be clicked until the client is patched.
+2026-10-22 17:01:50 | OK   | reloadshops | Applied live: 171 shops (Shop.dat) + 504 emoney shops, 14100 items. | 1491 ms
+        Shop.dat: 171 -> 171 shops; emoneyshop: 504 -> 504 shops.
+        new_shop_goods: 4253 -> 4253 goods.
+        The server now sells/validates the new lists. The shop WINDOW is drawn by the client from its own shop files: an item missing from the client's list can't be clicked until the client is patched.
+2026-10-22 17:09:51 | OK   | reloadshops | Applied live: 171 shops (Shop.dat) + 504 emoney shops, 14100 items. | 1497 ms
+        Shop.dat: 171 -> 171 shops; emoneyshop: 504 -> 504 shops.
+        new_shop_goods: 4253 -> 4253 goods.
+        The server now sells/validates the new lists. The shop WINDOW is drawn by the client from its own shop files: an item missing from the client's list can't be clicked until the client is patched.

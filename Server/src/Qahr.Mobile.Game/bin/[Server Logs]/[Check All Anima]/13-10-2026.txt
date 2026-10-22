@@ -1,0 +1,22 @@
+[09:17:52 PM]: Player Name: zzzz Mode ADD |Name: P1Anima: UID: 83334774 | ID: 4200001 | Plus: 0 | Bless: 0 | Anima: 0 | Perfection Level: 0 | S1: NoSocket | S2: NoSocket| Stake [ 0 ]   at System.Environment.get_StackTrace()
+   at GameServer.Role.Instance.Inventory.Update(MsgGameItem ItemDat, AddMode mode, Packet stream, Boolean Removefull) in D:\conquer-3d\Sourse\Infinity [Sourse]\Role\Instance\Inventory.cs:line 1669
+   at GameServer.Role.Instance.Inventory.Add(UInt32 ID, Byte Plus, DBItem ITEMDB, Packet stream, Boolean bound) in D:\conquer-3d\Sourse\Infinity [Sourse]\Role\Instance\Inventory.cs:line 504
+   at GameServer.Game.MsgServer.MsgItemUsuagePacket.ItemUsuage(GameClient client, Packet stream) in D:\conquer-3d\Sourse\Infinity [Sourse]\MY System\MsgItem\MsgItemUsuagePacket.cs:line 2894
+   at GameServer.Program.Game_Receive(SecuritySocket obj, Packet stream) in D:\conquer-3d\Sourse\Infinity [Sourse]\MY System\Program.cs:line 1702
+   at GameServer.ServerSockets.SecuritySocket.HandlerBufferCore(Int32 maxPackets) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\ServerSockets\SecuritySocket.cs:line 487
+   at GameServer.ServerSockets.Thread4K.connectionReceive(SecuritySocket wrapper, Int32 time) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\Thread4K.cs:line 75
+   at GameServer.Threading4K.PoolSubscription`1.Invoke() in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\Threading\WakePool.cs:line 92
+   at GameServer.Threading4K.WakePool.Work() in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\Threading\WakePool.cs:line 297
+   at System.Threading.Thread.StartHelper.Callback(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+[09:17:55 PM]: Player Name: zzzz Mode ADD |Name: P2Anima: UID: 83334775 | ID: 4200002 | Plus: 0 | Bless: 0 | Anima: 0 | Perfection Level: 0 | S1: NoSocket | S2: NoSocket| Stake [ 0 ]   at System.Environment.get_StackTrace()
+   at GameServer.Role.Instance.Inventory.Update(MsgGameItem ItemDat, AddMode mode, Packet stream, Boolean Removefull) in D:\conquer-3d\Sourse\Infinity [Sourse]\Role\Instance\Inventory.cs:line 1669
+   at GameServer.Role.Instance.Inventory.Add(UInt32 ID, Byte Plus, DBItem ITEMDB, Packet stream, Boolean bound) in D:\conquer-3d\Sourse\Infinity [Sourse]\Role\Instance\Inventory.cs:line 504
+   at GameServer.Game.MsgServer.MsgItemUsuagePacket.ItemUsuage(GameClient client, Packet stream) in D:\conquer-3d\Sourse\Infinity [Sourse]\MY System\MsgItem\MsgItemUsuagePacket.cs:line 2894
+   at GameServer.Program.Game_Receive(SecuritySocket obj, Packet stream) in D:\conquer-3d\Sourse\Infinity [Sourse]\MY System\Program.cs:line 1702
+   at GameServer.ServerSockets.SecuritySocket.HandlerBufferCore(Int32 maxPackets) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\ServerSockets\SecuritySocket.cs:line 487
+   at GameServer.ServerSockets.Thread4K.connectionReceive(SecuritySocket wrapper, Int32 time) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\Thread4K.cs:line 75
+   at GameServer.Threading4K.PoolSubscription`1.Invoke() in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\Threading\WakePool.cs:line 92
+   at GameServer.Threading4K.WakePool.Work() in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\Threading\WakePool.cs:line 297
+   at System.Threading.Thread.StartHelper.Callback(Object state)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)

@@ -382,6 +382,10 @@ namespace Qahr.Mobile.Game.MsgServer
                 }
                 else
                 {
+                    // QahrMobile: Welfare > Daily Packs (467 buy/free, 468 week reward, 469 buy all) has no DataAttribute;
+                    // routed from here so it works without a restart (466/470 come through GiveOrder/ReturnReward).
+                    if (global::Qahr.Mobile.Phone.MobileDailyGift.Handle(user, stream, data))
+                        return;
 
 #if TEST
                         if (user.ProjectManager)
@@ -3122,6 +3126,9 @@ namespace Qahr.Mobile.Game.MsgServer
         [DataAttribute(ActionType.GiveOrder)]
         public unsafe static void GiveOrder(Client.GameClient user, ServerSockets.Packet msg, ActionQuery data)
         {
+            // QahrMobile: on the phone 466 is the Daily Packs query (CDailyGiftMgr::QueryGift), not a guild-war order.
+            if (global::Qahr.Mobile.Phone.MobileDailyGift.Handle(user, msg, data))
+                return;
             foreach (var client in Pool.GamePoll.Values.Where(p => p.Fake == false))
             {
                 if (client.Player.Map == 1038 || client.Player.Map == 6001)
@@ -3376,6 +3383,10 @@ namespace Qahr.Mobile.Game.MsgServer
         [DataAttribute(ActionType.ReturnReward)]
         public unsafe static void ReturnReward(Client.GameClient user, ServerSockets.Packet msg, ActionQuery data)
         {
+            // QahrMobile: on the phone 470 is Daily Packs "Buy All (7 Days)" (CDailyGiftMgr::ActionBuy7AllDailyGift).
+            // Without this the phone got the free PC return reward below on every tap.
+            if (global::Qahr.Mobile.Phone.MobileDailyGift.Handle(user, msg, data))
+                return;
             if (data.dwParam == 1)
             {
                 if (user.Inventory.HaveSpace(2))

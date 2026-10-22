@@ -1,0 +1,16 @@
+----Exception message----
+Invalid wire-type (String); this usually means you have over-written a file without truncating or setting the length; see https://stackoverflow.com/q/2152978/23354
+----End of exception message----
+
+----Stack trace----
+   at ProtoBuf.ProtoReader.State.ThrowProtoException(String message) in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 996
+   at ProtoBuf.ProtoReader.State.ThrowWireTypeException() in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 990
+   at proto_106(State&, MsgGouYuOptProto)
+   at ProtoBuf.ProtoReader.State.DeserializeRoot[T](T value, ISerializer`1 serializer) in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 1334
+   at ProtoBuf.Serializer.Deserialize[T](Stream source) in /_1/protobuf-net/Serializer.Deserialize.cs:line 20
+   at GameServer.ServerSockets.Packet.ProtoBufferDeserialize[T](T obj)
+   at GameServer.Game.MsgServer.MsgGouYuOpt.GetNinjaInfo(Packet stream, MsgGouYuOptProto& pQuery)
+   at GameServer.Game.MsgServer.MsgGouYuOpt.MsgGouYuOptProto.Process(GameClient user, Packet stream)
+   at GameServer.Program.Game_Receive(SecuritySocket obj, Packet stream)
+----End of stack trace----
+

@@ -1,0 +1,10 @@
+----Exception message----
+Object reference not set to an instance of an object.
+----End of exception message----
+
+----Stack trace----
+   at GameServer.AdminApi.AdminApiServer.ClientPacket(AdminArgs a) in D:\conquer\QahrMobile\Qahr.GameServer\Admin\AdminApi\AdminApi.Tester2.cs:line 42
+   at GameServer.AdminApi.AdminApiServer.Dispatch(String op, AdminArgs a) in D:\conquer\QahrMobile\Qahr.GameServer\Admin\AdminApi\AdminApi.cs:line 329
+   at GameServer.AdminApi.AdminApiServer.Handle(TcpClient c) in D:\conquer\QahrMobile\Qahr.GameServer\Admin\AdminApi\AdminApi.cs:line 184
+----End of stack trace----
+

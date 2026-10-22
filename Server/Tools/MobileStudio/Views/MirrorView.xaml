@@ -1,0 +1,155 @@
+<UserControl x:Class="MobileStudio.Views.MirrorView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:kit="clr-namespace:ScriptHazem.Kit"
+             xmlns:core="clr-namespace:MobileStudio.Core">
+    <Grid Margin="24,20,24,24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel Margin="0,0,0,14">
+            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" VerticalAlignment="Top">
+                <Button x:Name="CheckBtn" Style="{StaticResource GoldButton}" Click="Check_Click" ToolTip="{kit:T mir.checkTip}">
+                    <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE721;" Style="{StaticResource GoldGlyph}"/><TextBlock Text="{kit:T mir.check}"/></StackPanel>
+                </Button>
+                <Button x:Name="FetchBtn" Style="{StaticResource GhostButton}" Margin="8,0,0,0" Click="Fetch_Click" ToolTip="{kit:T mir.fetchTip}">
+                    <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE896;" Style="{StaticResource BtnGlyph}"/><TextBlock Text="{kit:T mir.fetch}"/></StackPanel>
+                </Button>
+                <Button x:Name="CancelBtn" Style="{StaticResource IconButton}" MinWidth="34" Margin="8,0,0,0" Click="Cancel_Click" IsEnabled="False"
+                        ToolTip="{kit:T build.cancelTip}" Content="&#xE711;" Foreground="{StaticResource ErrBrush}"/>
+            </StackPanel>
+            <StackPanel>
+                <TextBlock Text="{kit:T mir.title}" Style="{StaticResource PageTitle}"/>
+                <TextBlock Text="{kit:T mir.sub}" Style="{StaticResource PageSub}"/>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- summary -->
+        <Grid Grid.Row="1" Margin="0,0,0,14">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border Style="{StaticResource Card}" Margin="0,0,12,0">
+                <StackPanel>
+                    <TextBlock Text="{kit:T mir.latest}" Style="{StaticResource StatK}"/>
+                    <TextBlock x:Name="LatestText" Text="—" Style="{StaticResource StatV}" FontSize="24" kit:Bidi.Ltr="True"/>
+                    <TextBlock x:Name="LatestSub" Style="{StaticResource Hint}" Margin="0,4,0,0"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="1" Style="{StaticResource Card}" Margin="0,0,12,0">
+                <StackPanel>
+                    <TextBlock Text="{kit:T mir.lastCheck}" Style="{StaticResource StatK}"/>
+                    <TextBlock x:Name="CheckText" Text="—" Style="{StaticResource StatV}" FontSize="15" kit:Bidi.Ltr="True"/>
+                    <TextBlock x:Name="CheckSub" Style="{StaticResource Hint}" Margin="0,4,0,0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="2" Style="{StaticResource Card}" Margin="0,0,12,0">
+                <StackPanel>
+                    <TextBlock Text="{kit:T mir.republished}" Style="{StaticResource StatK}"/>
+                    <TextBlock x:Name="RepubText" Text="—" Style="{StaticResource StatV}" FontSize="15" kit:Bidi.Ltr="True"/>
+                    <TextBlock x:Name="RepubSub" Style="{StaticResource Hint}" Margin="0,4,0,0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+            <Border Grid.Column="3" Style="{StaticResource Card}">
+                <StackPanel>
+                    <DockPanel>
+                        <Button DockPanel.Dock="Right" x:Name="CdnBtn" Style="{StaticResource QuietButton}" Padding="6,2" Click="CdnVerify_Click" ToolTip="{kit:T mir.cdnVerifyTip}">
+                            <TextBlock Text="&#xE9D9;" FontFamily="{StaticResource IconFont}" Foreground="{StaticResource IconBrush}"/>
+                        </Button>
+                        <TextBlock Text="{kit:T mir.cdn}" Style="{StaticResource StatK}"/>
+                    </DockPanel>
+                    <TextBlock x:Name="CdnText" Text="—" Style="{StaticResource StatV}" FontSize="15"/>
+                    <TextBlock x:Name="CdnSub" Style="{StaticResource Hint}" Margin="0,4,0,0" TextWrapping="Wrap"/>
+                </StackPanel>
+            </Border>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="16"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top" Text="{kit:T mir.patches}" Style="{StaticResource SectionTitle}" Margin="2,0,0,8"/>
+                <StackPanel DockPanel.Dock="Bottom" Margin="0,12,0,0">
+                    <WrapPanel>
+                        <Button x:Name="AnalyseBtn" Style="{StaticResource GhostButton}" Margin="0,0,8,6" Click="Analyse_Click">
+                            <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE9D9;" Style="{StaticResource BtnGlyph}"/><TextBlock Text="{kit:T mir.analyse}"/></StackPanel>
+                        </Button>
+                        <Button x:Name="RepubBtn" Style="{StaticResource GhostButton}" Margin="0,0,8,6" Click="Republish_Click">
+                            <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE898;" Style="{StaticResource BtnGlyph}"/><TextBlock Text="{kit:T mir.republish}"/></StackPanel>
+                        </Button>
+                    </WrapPanel>
+                    <TextBlock Text="{kit:T mir.asVersion}" Style="{StaticResource FieldLabel}" Margin="0,6,0,6"/>
+                    <TextBox x:Name="AsBox" Style="{StaticResource LtrField}" Tag="{kit:T mir.asPh}"/>
+                </StackPanel>
+                <ListView x:Name="PatchList" SelectionChanged="Patch_Selected">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Width="100"><GridViewColumn.Header><TextBlock Text="{kit:T mir.col.name}"/></GridViewColumn.Header>
+                                <GridViewColumn.CellTemplate><DataTemplate><TextBlock Text="{Binding Name}" FontWeight="SemiBold" FontFamily="{StaticResource MonoFont}"/></DataTemplate></GridViewColumn.CellTemplate></GridViewColumn>
+                            <GridViewColumn Width="80"><GridViewColumn.Header><TextBlock Text="{kit:T mir.col.files}"/></GridViewColumn.Header>
+                                <GridViewColumn.CellTemplate><DataTemplate><TextBlock Text="{Binding Files}"/></DataTemplate></GridViewColumn.CellTemplate></GridViewColumn>
+                            <GridViewColumn Width="90"><GridViewColumn.Header><TextBlock Text="{kit:T mir.col.size}"/></GridViewColumn.Header>
+                                <GridViewColumn.CellTemplate><DataTemplate><TextBlock Text="{Binding SizeText}"/></DataTemplate></GridViewColumn.CellTemplate></GridViewColumn>
+                            <GridViewColumn Width="110"><GridViewColumn.Header><TextBlock Text="{kit:T mir.col.state}"/></GridViewColumn.Header>
+                                <GridViewColumn.CellTemplate><DataTemplate><TextBlock Text="{Binding State}" Foreground="{Binding StateBrush}"/></DataTemplate></GridViewColumn.CellTemplate></GridViewColumn>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </DockPanel>
+            <TabControl x:Name="RightTabs" Grid.Column="2">
+                <TabItem Header="{kit:T mir.tab.report}" x:Name="TabReport">
+                    <Border Style="{StaticResource Card}" Margin="0,12,0,0" Padding="4">
+                        <Grid>
+                            <FlowDocumentScrollViewer x:Name="ReportView" VerticalScrollBarVisibility="Auto" IsToolBarVisible="False" Foreground="{StaticResource TextBrush}"/>
+                            <StackPanel x:Name="NoReport" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                <Border Style="{StaticResource IconTile}" Width="44" Height="44" HorizontalAlignment="Center">
+                                    <TextBlock Text="&#xE8A5;" Style="{StaticResource TileGlyph}"/>
+                                </Border>
+                                <TextBlock Text="{kit:T mir.noReport}" Style="{StaticResource CardTitle}" HorizontalAlignment="Center" Margin="0,10,0,0"/>
+                                <TextBlock Text="{kit:T mir.noReportHint}" Style="{StaticResource Hint}" HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </TabItem>
+                <TabItem Header="{kit:T mir.tab.cdnLog}" x:Name="TabCdnLog">
+                    <DockPanel Margin="0,12,0,0">
+                        <DockPanel DockPanel.Dock="Top" Margin="2,0,0,8">
+                            <Button DockPanel.Dock="Right" Style="{StaticResource QuietButton}" Padding="8,3" Click="CdnLogRefresh_Click">
+                                <StackPanel Orientation="Horizontal"><TextBlock Text="&#xE72C;" Style="{StaticResource BtnGlyph}"/><TextBlock Text="{kit:T logs.reload}" FontSize="12"/></StackPanel>
+                            </Button>
+                            <core:CopyAllButton Target="{Binding ElementName=CdnLogList}" DockPanel.Dock="Right"/>
+                            <TextBlock x:Name="CdnLogSummary" Style="{StaticResource Hint}" VerticalAlignment="Center" TextWrapping="Wrap"/>
+                        </DockPanel>
+                        <ListBox x:Name="CdnLogList" Style="{StaticResource LogList}" ItemContainerStyle="{StaticResource LogItem}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate><TextBlock Text="{Binding Text}" Foreground="{Binding Brush}"/></DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </DockPanel>
+                </TabItem>
+                <TabItem Header="{kit:T mir.tab.output}" x:Name="TabOutput">
+                    <DockPanel Margin="0,12,0,0"><DockPanel DockPanel.Dock="Top" Margin="0,0,0,6"><core:CopyAllButton Target="{Binding ElementName=OutputBox}" DockPanel.Dock="Right"/><Grid/></DockPanel>
+                    <TextBox x:Name="OutputBox" Style="{StaticResource MonoArea}" IsReadOnly="True" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" VerticalContentAlignment="Top"/></DockPanel>
+                </TabItem>
+            </TabControl>
+            <Border Grid.Row="1" Grid.ColumnSpan="3" x:Name="Banner" Style="{StaticResource InfoBanner}" Margin="0,12,0,0">
+                <DockPanel>
+                    <TextBlock x:Name="BannerGlyph" Text="&#xE946;" FontFamily="{StaticResource IconFont}" FontSize="13" Foreground="{StaticResource InfoBrush}" Margin="0,1,10,0"/>
+                    <TextBlock x:Name="BannerText" FontSize="12.5" TextWrapping="Wrap"/>
+                </DockPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>

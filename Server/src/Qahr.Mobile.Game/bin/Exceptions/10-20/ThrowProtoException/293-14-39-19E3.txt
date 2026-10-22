@@ -1,0 +1,19 @@
+----Exception message----
+Invalid field in source data: 0
+----End of exception message----
+
+----Stack trace----
+   at ProtoBuf.Internal.ThrowHelper.ThrowProtoException(String message, Exception inner) in /_1/protobuf-net.Core/Internal/ThrowHelper.cs:line 86
+   at ProtoBuf.ProtoReader.ThrowInvalidField(Int32 fieldNumber) in /_1/protobuf-net.Core/ProtoReader.cs:line 340
+   at ProtoBuf.ProtoReader.State.ReadFieldHeaderFallback() in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 946
+   at proto_8(State&, MsgItemProto)
+   at ProtoBuf.Internal.Serializers.SimpleCompiledSerializer`1.ProtoBuf.Serializers.ISerializer<T>.Read(State& state, T value) in /_1/protobuf-net/Internal/Serializers/CompiledSerializer.cs:line 107
+   at ProtoBuf.ProtoReader.State.ReadAsRoot[T](T value, ISerializer`1 serializer) in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 1354
+   at ProtoBuf.ProtoReader.State.DeserializeRoot[T](T value, ISerializer`1 serializer) in /_1/protobuf-net.Core/ProtoReader.State.ReadMethods.cs:line 1334
+   at ProtoBuf.Serializer.Deserialize[T](Stream source) in /_1/protobuf-net/Serializer.Deserialize.cs:line 21
+   at GameServer.ServerSockets.Packet.ProtoBufferDeserialize[T](T obj) in D:\conquer\QahrMobile\Qahr.GameServer\Infrastructure\Networking\ServerSockets\Packet.cs:line 381
+   at GameServer.Game.MsgServer.MsgItemUsuagePacket.GetUsageItem(Packet msg, ItemUsuageID& action, UInt32& id, UInt64& dwParam, UInt32& timestamp, UInt32& dwParam2, UInt32& dwParam3, UInt32& dwparam4, UInt64& Money, UInt32& dwparam5, List`1& args, MsgItemProto& Proto) in D:\conquer\QahrMobile\Qahr.GameServer\Networking\Handlers\MsgItem\MsgItemUsuagePacket.cs:line 188
+   at GameServer.Game.MsgServer.MsgItemUsuagePacket.ItemUsuage(GameClient client, Packet stream) in D:\conquer\QahrMobile\Qahr.GameServer\Networking\Handlers\MsgItem\MsgItemUsuagePacket.cs:line 275
+   at GameServer.Program.Game_Receive(SecuritySocket obj, Packet stream) in D:\conquer\QahrMobile\Qahr.GameServer\Bootstrap\Program.cs:line 1792
+----End of stack trace----
+

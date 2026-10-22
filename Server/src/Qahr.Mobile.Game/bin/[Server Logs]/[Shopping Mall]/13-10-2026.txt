@@ -1,0 +1,2 @@
+[09:17:52 PM]: Item Purchased | Player : [ zzzz ] UID : [ 1000005 ] Item : [ P1Anima ] ID : [ 4200001 ] Amount : [ 1 ] CP Before : [ 100000000 ] CP Cost : [ 315 ] CP After : [ 99999685 ] Date : [ 2026-10-13 21:17:52 ] Map : [ 1002 ] X : [ 345 ] Y : [ 414 ]
+[09:17:55 PM]: Item Purchased | Player : [ zzzz ] UID : [ 1000005 ] Item : [ P2Anima ] ID : [ 4200002 ] Amount : [ 1 ] CP Before : [ 99999685 ] CP Cost : [ 630 ] CP After : [ 99999055 ] Date : [ 2026-10-13 21:17:55 ] Map : [ 1002 ] X : [ 345 ] Y : [ 414 ]

@@ -1,0 +1,2 @@
+[11:48:05 AM]: Item Purchased | Player : [ TrojanQ1 ] UID : [ 1001016 ] Item : [ DragonTail ] ID : [ 721157 ] Amount : [ 1 ] CP Before : [ 4960 ] CP Cost : [ 0 ] CP After : [ 4960 ] Date : [ 2026-10-21 11:48:05 ] Map : [ 1002 ] X : [ 428 ] Y : [ 315 ]
+[12:34:39 PM]: Item Purchased | Player : [ TrojanQ1 ] UID : [ 1001016 ] Item : [ Stancher ] ID : [ 1000000 ] Amount : [ 1 ] CP Before : [ 4960 ] CP Cost : [ 0 ] CP After : [ 4960 ] Date : [ 2026-10-21 12:34:39 ] Map : [ 1002 ] X : [ 464 ] Y : [ 331 ]

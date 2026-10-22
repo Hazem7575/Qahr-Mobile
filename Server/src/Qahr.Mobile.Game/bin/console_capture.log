@@ -1,0 +1,38 @@
+[01:46:30] Please Wait The Sourse is Loading ...
+[01:46:31] [Storage] Player binary mirror tables ready (7 tables).
+[01:46:31] [Storage] Social mirror tables ready (guilds/unions/clans, 8 tables).
+[01:46:31] [Storage] Player backend: Dual (players table ready, 270 cols)
+[01:46:32] [QuizShow] quiz data loaded.
+[01:46:32] [Modules] loaded module: QuizShow v1.0
+[01:46:32] [RechargeShop] recharge-shop data loaded.
+[01:46:32] [Modules] loaded module: RechargeShop v1.0
+[01:46:32] [ShareVIP] shared-VIP list loaded.
+[01:46:32] [Modules] loaded module: ShareVIP v1.0
+[01:46:32] [VoteSystem] vote data loaded.
+[01:46:32] [Modules] loaded module: VoteSystem v1.0
+[01:46:32] [Modules] 4 module(s) loaded.
+[01:46:32]   slow load: Pool.ItemsBase.Loading 308 ms
+[01:46:32]   slow load: Server.LoadMonsters 161 ms
+[01:46:32]   slow load: Role.Statue.Load 105 ms
+[01:46:32]   slow load: Game.MsgTournaments.MsgSchedules.GuildWar.CreateFurnitures 74 ms
+[01:46:32]   slow load: Pool.Magic.Load 63 ms
+[01:46:32] -------- The Sourse Version [ 7957 ]       --------
+[01:46:32] -------- The Sourse Edit By [ Mohy ElDin ] --------
+[01:46:32] --------   [ Archive Trojan ]              --------
+[01:46:32] --------   [ Archive Ninja ]               --------
+[01:46:32] --------   [ Archive Warrior ]             --------
+[01:46:32] --------   [ Archive Archer ]              --------
+[01:46:32] --------   [ Archive Taoist ]              --------
+[01:46:32] --------   [ Archive Pirate ]              --------
+[01:46:32] --------   [ Archive Dragon Warrior ]      --------
+[01:46:32] --------   [ Archive Monk ]                --------
+[01:46:32] --------   [ Archive Dune Wanderer ]       --------
+[01:46:32] --------   [ New Character Dune Wanderer ] --------
+[01:46:32] --------   [ Eonspirit System ]            --------
+[01:46:32] --------   [ Emoji System ]                --------
+[01:46:32] --------   [ LoveForEver System ]          --------
+[01:46:32] --------   [ HeartLock System ]            --------
+[01:46:32] --------   [ New Relics System ]           --------
+[01:46:32] --------   [ New Runes System ]            --------
+Loading TQProtect Files !
+[01:46:32] [ The Source has Completed Downloading ]

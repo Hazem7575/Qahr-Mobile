@@ -1,0 +1,32 @@
+Hazem [26.31.69.47:5818]
+Infinity [26.31.69.47:5818]
+Listening On Port : [16000] .
+----------------------------------------
+
+[Auth] 2026-10-16 21:18:49 127.0.0.1 [] connected
+[Auth] 2026-10-16 21:18:49 127.0.0.1 [lbot001] OK -> Infinity 26.31.69.47:5818
+lbot001 is Logging to to [Infinity:26.31.69.47:5818]. (47.2 ms)
+[Auth] 2026-10-16 21:18:52 127.0.0.1 [] connected
+[Auth] 2026-10-16 21:18:52 127.0.0.1 [lbot001] OK -> Infinity 26.31.69.47:5818
+lbot001 is Logging to to [Infinity:26.31.69.47:5818]. (13.3 ms)
+[Auth] 2026-10-16 21:18:55 127.0.0.1 [] connected
+[Auth] 2026-10-16 21:18:55 127.0.0.1 [lbot001] OK -> Infinity 26.31.69.47:5818
+lbot001 is Logging to to [Infinity:26.31.69.47:5818]. (12.7 ms)
+[Auth] 2026-10-16 21:18:58 127.0.0.1 [] connected
+[Auth] 2026-10-16 21:18:58 127.0.0.1 [lbot001] OK -> Infinity 26.31.69.47:5818
+lbot001 is Logging to to [Infinity:26.31.69.47:5818]. (12.2 ms)
+[Auth] 2026-10-16 21:19:01 127.0.0.1 [] connected
+[Auth] 2026-10-16 21:19:01 127.0.0.1 [lbot001] OK -> Infinity 26.31.69.47:5818
+lbot001 is Logging to to [Infinity:26.31.69.47:5818]. (12.1 ms)
+[Auth] 2026-10-16 21:21:14 127.0.0.1 [] connected
+[Auth] 2026-10-16 21:21:14 127.0.0.1 [lbot001] OK -> Infinity 26.31.69.47:5818
+lbot001 is Logging to to [Infinity:26.31.69.47:5818]. (13.0 ms)
+[Auth] 2026-10-16 21:21:17 127.0.0.1 [] connected
+[Auth] 2026-10-16 21:21:17 127.0.0.1 [lbot001] OK -> Infinity 26.31.69.47:5818
+lbot001 is Logging to to [Infinity:26.31.69.47:5818]. (12.0 ms)
+[Auth] 2026-10-16 21:21:20 127.0.0.1 [] connected
+[Auth] 2026-10-16 21:21:20 127.0.0.1 [lbot001] OK -> Infinity 26.31.69.47:5818
+lbot001 is Logging to to [Infinity:26.31.69.47:5818]. (12.3 ms)
+[Auth] 2026-10-16 21:21:32 26.31.69.47 [] connected
+[Auth] 2026-10-16 21:21:32 26.31.69.47 [7] OK -> Infinity 26.31.69.47:5818
+7 is Logging to to [Infinity:26.31.69.47:5818]. (12.3 ms)

@@ -1,0 +1,4 @@
+[09:48:47 AM]://Money=>[1001018:Wander2] Sent 1000 Money To [1001016:TrojanQ1].
+[09:48:47 AM]://CPS=>[[1001016:TrojanQ1] Sent 50 ConquerPoints To [1001018:Wander2].
+[10:01:56 AM]://Money=>[1001018:Wander2] Sent 1000 Money To [1001016:TrojanQ1].//Item=>[[1001018:Wander2] Sent To [1001016:TrojanQ1] Item => Meteor StackSize => 1.
+[10:01:56 AM]://Money=>[1001016:TrojanQ1] Sent 1000 Money To [1001018:Wander2].//Item=>[[1001016:TrojanQ1] Sent To [1001018:Wander2] Item => 7StarOintment StackSize => 5.

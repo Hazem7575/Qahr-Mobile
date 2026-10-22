@@ -1,0 +1,1 @@
+[01:07:03 PM]: 2026-10-14 13:07:03 | UID=1000005 | Name=zzzz | Old=0 | New=99999055 | Diff=+99999055 | Method=GameServer.Database.ServerDatabase.LoadCharacterCore | File=ServerDatabase.cs | Line=1033

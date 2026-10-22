@@ -1,0 +1,244 @@
+﻿2026-10-13 23:07:37 | ACCEPT | 5735 Theater Recruitment 1 | 1000005 zzzz lv140 | 
+2026-10-13 23:09:27 | FINISH | 5735 Theater Recruitment 1 | 1000005 zzzz lv140 | npc=8830001 took=[] gave=[]
+2026-10-13 23:09:27 | ACCEPT | 5736 Theater Recruitment 1 | 1000005 zzzz lv140 | 
+2026-10-14 13:19:03 | ACCEPT | 4675 Patrol: Clear Snow Drift | 1000026 mohamed2 lv140 | 
+2026-10-14 13:25:08 | ACCEPT | 5735 Theater Recruitment 1 | 1000026 mohamed2 lv140 | 
+2026-10-14 13:25:20 | FINISH | 5735 Theater Recruitment 1 | 1000026 mohamed2 lv140 | npc=32606 took=[] gave=[]
+2026-10-14 13:25:20 | ACCEPT | 5736 Theater Recruitment 1 | 1000026 mohamed2 lv140 | 
+2026-10-14 13:33:10 | FINISH | 5736 Theater Recruitment 1 | 1000026 mohamed2 lv140 | npc=32607 took=[] gave=[]
+2026-10-14 13:33:10 | ACCEPT | 5803 Theater Recruitment 1 | 1000026 mohamed2 lv140 | 
+2026-10-14 13:33:10 | ACTION | 5803 Theater Recruitment 1 | 1000026 mohamed2 lv140 | accept: instance BlackBearWoods
+2026-10-15 10:28:18 | ACCEPT | 8422 Castle Mystery I | 1000026 mohamed2 lv140 | 
+2026-10-15 10:28:18 | ACTION | 8422 Castle Mystery I | 1000026 mohamed2 lv140 | accept: instance SecretCastle
+2026-10-15 12:34:34 | ACCEPT | 9186 Puppet Garden I | 1000026 mohamed2 lv140 | 
+2026-10-15 12:34:34 | ACTION | 9186 Puppet Garden I | 1000026 mohamed2 lv140 | accept: instance PT_Garden
+2026-10-15 12:35:57 | FINISH | 9186 Puppet Garden I | 1000026 mohamed2 lv140 | npc=8893101 took=[] gave=[]
+2026-10-15 12:45:02 | ACCEPT | 9187 Puppet Garden II | 1000026 mohamed2 lv140 | 
+2026-10-15 12:45:02 | ACTION | 9187 Puppet Garden II | 1000026 mohamed2 lv140 | accept: instance PT_Garden
+2026-10-15 16:20:17 | ACCEPT | 9189 Midnight Stage I | 1000026 mohamed2 lv140 | 
+2026-10-15 16:20:17 | ACTION | 9189 Midnight Stage I | 1000026 mohamed2 lv140 | accept: instance PT_Stage
+2026-10-15 20:11:00 | ACCEPT | 5735 Theater Recruitment 1 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:13:15 | FINISH | 5735 Theater Recruitment 1 | 1000026 mohamed2 lv140 | npc=32606 took=[] gave=[]
+2026-10-15 20:13:15 | ACCEPT | 5736 Theater Recruitment 1 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:13:42 | FINISH | 5736 Theater Recruitment 1 | 1000026 mohamed2 lv140 | npc=32607 took=[] gave=[]
+2026-10-15 20:13:42 | ACCEPT | 5803 Theater Recruitment 1 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:13:42 | ACTION | 5803 Theater Recruitment 1 | 1000026 mohamed2 lv140 | accept: instance BlackBearWoods
+2026-10-15 20:19:59 | ACTION | 5803 Theater Recruitment 1 | 1000026 mohamed2 lv140 | complete: left instance
+2026-10-15 20:20:24 | FINISH | 5803 Theater Recruitment 1 | 1000026 mohamed2 lv140 | npc=32606 took=[] gave=[]
+2026-10-15 20:20:24 | ACCEPT | 5737 Theater Recruitment 1 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:20:34 | FINISH | 5737 Theater Recruitment 1 | 1000026 mohamed2 lv140 | npc=32606 took=[] gave=[Wish Gold Coin]
+2026-10-15 20:33:30 | ACCEPT | 5738 Theater Recruitment 2 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:33:50 | FINISH | 5738 Theater Recruitment 2 | 1000026 mohamed2 lv140 | npc=32608 took=[] gave=[]
+2026-10-15 20:33:50 | ACCEPT | 5739 Theater Recruitment 2 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:35:32 | FINISH | 5739 Theater Recruitment 2 | 1000026 mohamed2 lv140 | npc=32609 took=[] gave=[]
+2026-10-15 20:35:32 | ACCEPT | 5740 Theater Recruitment 2 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:36:03 | FINISH | 5740 Theater Recruitment 2 | 1000026 mohamed2 lv140 | npc=32608 took=[] gave=[Wish Gold Coin]
+2026-10-15 20:36:31 | ACCEPT | 5743 Theater Recruitment 3 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:36:38 | FINISH | 5743 Theater Recruitment 3 | 1000026 mohamed2 lv140 | npc=32612 took=[] gave=[]
+2026-10-15 20:36:38 | ACCEPT | 5744 Theater Recruitment 3 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:36:38 | ACTION | 5744 Theater Recruitment 3 | 1000026 mohamed2 lv140 | accept: instance HorseTrainingField
+2026-10-15 20:37:04 | FINISH | 5744 Theater Recruitment 3 | 1000026 mohamed2 lv140 | npc=0 took=[] gave=[]
+2026-10-15 20:37:04 | ACCEPT | 5745 Theater Recruitment 3 | 1000026 mohamed2 lv140 | panel
+2026-10-15 20:37:26 | FINISH | 5745 Theater Recruitment 3 | 1000026 mohamed2 lv140 | npc=32612 took=[] gave=[Wish Gold Coin]
+2026-10-15 20:37:48 | ACCEPT | 5741 Theater Recruitment 4 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:37:54 | FINISH | 5741 Theater Recruitment 4 | 1000026 mohamed2 lv140 | npc=32610 took=[] gave=[]
+2026-10-15 20:37:54 | ACCEPT | 5742 Theater Recruitment 4 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:38:01 | FINISH | 5742 Theater Recruitment 4 | 1000026 mohamed2 lv140 | npc=32611 took=[] gave=[Wish Gold Coin]
+2026-10-15 20:38:16 | ACCEPT | 5746 Theater Recruitment 5 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:38:22 | FINISH | 5746 Theater Recruitment 5 | 1000026 mohamed2 lv140 | npc=32615 took=[] gave=[Wish Gold Coin]
+2026-10-15 20:38:43 | ACCEPT | 5747 Theater Recruitment 6 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:38:48 | FINISH | 5747 Theater Recruitment 6 | 1000026 mohamed2 lv140 | npc=32616 took=[] gave=[]
+2026-10-15 20:38:48 | ACCEPT | 5748 Theater Recruitment 6 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:38:49 | ACTION | 5748 Theater Recruitment 6 | 1000026 mohamed2 lv140 | accept: instance BirdmanOutskirts
+2026-10-15 20:39:11 | ACTION | 5748 Theater Recruitment 6 | 1000026 mohamed2 lv140 | complete: left instance
+2026-10-15 20:39:27 | FINISH | 5748 Theater Recruitment 6 | 1000026 mohamed2 lv140 | npc=32616 took=[] gave=[]
+2026-10-15 20:39:27 | ACCEPT | 5749 Theater Recruitment 6 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:39:30 | FINISH | 5749 Theater Recruitment 6 | 1000026 mohamed2 lv140 | npc=32616 took=[] gave=[Wish Gold Coin]
+2026-10-15 20:39:43 | ACCEPT | 5750 Theater Recruitment 7 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:39:49 | FINISH | 5750 Theater Recruitment 7 | 1000026 mohamed2 lv140 | npc=32618 took=[] gave=[]
+2026-10-15 20:39:49 | ACCEPT | 5751 Theater Recruitment 7 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:39:53 | FINISH | 5751 Theater Recruitment 7 | 1000026 mohamed2 lv140 | npc=32617 took=[] gave=[Wish Gold Coin]
+2026-10-15 20:40:31 | ACCEPT | 5796 Cleaning Theater | 1000026 mohamed2 lv140 | 
+2026-10-15 20:41:27 | FINISH | 5796 Cleaning Theater | 1000026 mohamed2 lv140 | npc=0 took=[] gave=[Wish Silver Coin]
+2026-10-15 20:41:47 | ACCEPT | 5757 Comforting Mia | 1000026 mohamed2 lv140 | 
+2026-10-15 20:42:00 | FINISH | 5757 Comforting Mia | 1000026 mohamed2 lv140 | npc=32621 took=[] gave=[Wish Silver Coin]
+2026-10-15 20:43:01 | FINISH | 5753 Something Lost 1 | 1000026 mohamed2 lv140 | npc=32619 took=[] gave=[]
+2026-10-15 20:43:01 | ACCEPT | 5754 Something Lost 2 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:43:49 | FINISH | 5754 Something Lost 2 | 1000026 mohamed2 lv140 | npc=32619 took=[] gave=[]
+2026-10-15 20:43:49 | ACCEPT | 5755 Something Lost 3 | 1000026 mohamed2 lv140 | 
+2026-10-15 20:44:19 | FINISH | 5760 Knight's Covenant | 1000026 mohamed2 lv140 | npc=32624 took=[] gave=[Wish Silver Coin]
+2026-10-15 20:44:26 | FINISH | 5755 Something Lost 3 | 1000026 mohamed2 lv140 | npc=32619 took=[] gave=[Wish Silver Coin]
+2026-10-20 23:09:11 | MAINSTORY | 1001018 Wander2 finished 13507 (dialog)
+2026-10-21 09:21:19 | MAINSTORY | 1001016 TrojanQ1 finished 13507 (dialog)
+2026-10-21 09:41:10 | MAINSTORY | 1001016 TrojanQ1 finished 13513 (DBG click active=True src=True)
+2026-10-21 09:41:10 | MAINSTORY | 1001016 TrojanQ1 13513 reward [141137029 EXP, 300 silver]
+2026-10-21 09:41:10 | MAINSTORY | 1001016 TrojanQ1 finished 13513 (click)
+2026-10-21 09:41:26 | BOUNTY ACCEPT | 8657 | 1001016 TrojanQ1 lv120 | 
+2026-10-21 09:41:59 | BOUNTY FINISH | 8657 | 1001016 TrojanQ1 lv120 | star 3 gave [50809330 EXP, 8000 silver, Meteor x3, Stone(+1)]
+2026-10-21 09:42:17 | BOUNTY ACCEPT | 8661 | 1001016 TrojanQ1 lv120 | 
+2026-10-21 09:42:20 | BOUNTY GIVEUP | 8661 | 1001016 TrojanQ1 lv120 | 
+2026-10-21 09:42:22 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 1
+2026-10-21 13:02:57 | MAINSTORY | 1001019 NewHero1 13507 reward [24 EXP, 100 silver]
+2026-10-21 13:02:57 | MAINSTORY | 1001019 NewHero1 finished 13507 (dialog)
+2026-10-21 13:03:55 | FINISH | 13508 Twin City | 1001019 NewHero1 lv1 | npc=32411 took=[] gave=[]
+2026-10-21 13:08:03 | MAINSTORY | 1001019 NewHero1 13509 reward [24 EXP, 100 silver]
+2026-10-21 13:08:03 | MAINSTORY | 1001019 NewHero1 finished 13509 (dialog)
+2026-10-21 13:08:38 | MAINSTORY | 1001019 NewHero1 13510 reward [24 EXP, 100 silver]
+2026-10-21 13:08:38 | MAINSTORY | 1001019 NewHero1 finished 13510 (dialog)
+2026-10-21 13:08:58 | MAINSTORY | 1001019 NewHero1 13511 reward [24 EXP, 100 silver]
+2026-10-21 13:08:58 | MAINSTORY | 1001019 NewHero1 finished 13511 (dialog)
+2026-10-21 13:09:41 | MAINSTORY | 1001019 NewHero1 13512 reward [24 EXP, 100 silver]
+2026-10-21 13:09:41 | MAINSTORY | 1001019 NewHero1 finished 13512 (dialog)
+2026-10-21 13:30:16 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 2
+2026-10-21 13:30:49 | MAINSTORY | 1001019 NewHero1 13509 reward [24 EXP, 100 silver]
+2026-10-21 13:30:49 | MAINSTORY | 1001019 NewHero1 finished 13509 (dialog)
+2026-10-21 13:30:55 | BOUNTY ACCEPT | 5215 | 1001016 TrojanQ1 lv120 | 
+2026-10-21 13:31:03 | MAINSTORY | 1001019 NewHero1 13510 reward [24 EXP, 100 silver]
+2026-10-21 13:31:03 | MAINSTORY | 1001019 NewHero1 finished 13510 (dialog)
+2026-10-21 13:31:17 | MAINSTORY | 1001019 NewHero1 13511 reward [24 EXP, 100 silver]
+2026-10-21 13:31:17 | MAINSTORY | 1001019 NewHero1 finished 13511 (dialog)
+2026-10-21 13:31:43 | BOUNTY GOAL | 5215 | 1001016 TrojanQ1 | STEP ReliefSupply npc 9720141 -> ReliefSupply 1/1
+2026-10-21 13:31:57 | MAINSTORY | 1001019 NewHero1 13512 reward [24 EXP, 100 silver]
+2026-10-21 13:31:57 | MAINSTORY | 1001019 NewHero1 finished 13512 (dialog)
+2026-10-21 13:32:02 | BOUNTY FINISH | 5215 | 1001016 TrojanQ1 lv120 | star 1 gave [22581924 EXP, 3000 silver, Meteor]
+2026-10-21 13:32:15 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 3
+2026-10-21 13:32:18 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 4
+2026-10-21 13:32:22 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 5
+2026-10-21 13:32:26 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 6
+2026-10-21 13:32:30 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 7
+2026-10-21 13:32:33 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 8
+2026-10-21 13:32:57 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 9
+2026-10-21 13:33:09 | BOUNTY ACCEPT | 9927 | 1001016 TrojanQ1 lv120 | 
+2026-10-21 13:33:17 | BOUNTY GOAL | 9927 | 1001016 TrojanQ1 | STEP LiuYi npc 9720902 -> LiuYi 1/1
+2026-10-21 13:33:21 | BOUNTY FINISH | 9927 | 1001016 TrojanQ1 lv120 | star 1 gave [22581924 EXP, 3000 silver, Meteor]
+2026-10-21 13:33:38 | BOUNTY REFRESH | 0 | 1001016 TrojanQ1 lv120 | reload 10
+2026-10-21 13:33:54 | BOUNTY ACCEPT | 5141 | 1001016 TrojanQ1 lv120 | 
+2026-10-21 13:34:01 | BOUNTY GOAL | 5141 | 1001016 TrojanQ1 | STEP Hostage npc 9720011 -> Hostage 1/2
+2026-10-21 13:34:07 | BOUNTY GOAL | 5141 | 1001016 TrojanQ1 | STEP Hostage npc 9720012 -> Hostage 2/2
+2026-10-21 13:34:11 | BOUNTY FINISH | 5141 | 1001016 TrojanQ1 lv120 | star 1 gave [22581924 EXP, 3000 silver, Meteor]
+2026-10-21 13:36:12 | MAINSTORY | 1001019 NewHero1 13513 reward [120 EXP, 300 silver]
+2026-10-21 13:36:12 | MAINSTORY | 1001019 NewHero1 finished 13513 (click)
+2026-10-21 13:36:59 | MAINSTORY | 1001019 NewHero1 13514 reward [48 EXP, 100 silver, ThornSpear, Coat, IronRing]
+2026-10-21 13:36:59 | MAINSTORY | 1001019 NewHero1 finished 13514 (dialog)
+2026-10-21 13:37:09 | MAINSTORY | 1001019 NewHero1 13515 reward [84 EXP, 300 silver]
+2026-10-21 13:37:09 | MAINSTORY | 1001019 NewHero1 finished 13515 (click)
+2026-10-21 13:37:58 | MAINSTORY | 1001019 NewHero1 13516 reward [72 EXP, 100 silver]
+2026-10-21 13:37:58 | MAINSTORY | 1001019 NewHero1 finished 13516 (dialog)
+2026-10-21 13:41:36 | MAINSTORY | 1001019 NewHero1 13517 reward [480 EXP, 300 silver]
+2026-10-21 13:41:36 | MAINSTORY | 1001019 NewHero1 finished 13517 (click)
+2026-10-21 13:43:41 | MAINSTORY | 1001019 NewHero1 13518 reward [240 EXP, 100 silver]
+2026-10-21 13:43:41 | MAINSTORY | 1001019 NewHero1 finished 13518 (dialog)
+2026-10-21 13:45:46 | MAINSTORY | 1001019 NewHero1 13519 reward [420 EXP, 300 silver]
+2026-10-21 13:45:46 | MAINSTORY | 1001019 NewHero1 finished 13519 (click)
+2026-10-21 13:46:40 | MAINSTORY | 1001019 NewHero1 13520 reward [240 EXP, 100 silver]
+2026-10-21 13:46:40 | MAINSTORY | 1001019 NewHero1 finished 13520 (dialog)
+2026-10-21 13:49:56 | MAINSTORY | 1001019 NewHero1 13910 reward [1200 EXP, 300 silver]
+2026-10-21 13:49:56 | MAINSTORY | 1001019 NewHero1 finished 13910 (click)
+2026-10-21 13:50:40 | MAINSTORY | 1001019 NewHero1 13522 reward [720 EXP, 100 silver]
+2026-10-21 13:50:40 | MAINSTORY | 1001019 NewHero1 finished 13522 (dialog)
+2026-10-21 13:51:08 | MAINSTORY | 1001019 NewHero1 13523 reward [720 EXP, 100 silver]
+2026-10-21 13:51:08 | MAINSTORY | 1001019 NewHero1 finished 13523 (dialog)
+2026-10-21 13:55:50 | MAINSTORY | 1001019 NewHero1 13890 reward [1800 EXP, 300 silver]
+2026-10-21 13:55:50 | MAINSTORY | 1001019 NewHero1 finished 13890 (dialog)
+2026-10-21 13:58:12 | MAINSTORY | 1001019 NewHero1 13525 reward [1680 EXP, 100 silver]
+2026-10-21 13:58:12 | MAINSTORY | 1001019 NewHero1 finished 13525 (dialog)
+2026-10-21 13:58:24 | MAINSTORY | 1001019 NewHero1 14081 reward [2940 EXP, 300 silver]
+2026-10-21 13:58:24 | MAINSTORY | 1001019 NewHero1 finished 14081 (click)
+2026-10-21 13:58:41 | MAINSTORY | 1001019 NewHero1 14082 reward [2940 EXP, 300 silver]
+2026-10-21 13:58:41 | MAINSTORY | 1001019 NewHero1 finished 14082 (click)
+2026-10-21 14:04:03 | MAINSTORY | 1001019 NewHero1 14077 reward [2400 EXP, 100 silver]
+2026-10-21 14:04:03 | MAINSTORY | 1001019 NewHero1 finished 14077 (dialog)
+2026-10-21 14:04:39 | MAINSTORY | 1001019 NewHero1 13526 reward [2400 EXP, 100 silver, Meteor x5]
+2026-10-21 14:04:39 | MAINSTORY | 1001019 NewHero1 finished 13526 (dialog)
+2026-10-21 14:04:43 | MAINSTORY | 1001019 NewHero1 13527 reward [4200 EXP, 300 silver]
+2026-10-21 14:04:43 | MAINSTORY | 1001019 NewHero1 finished 13527 (click)
+2026-10-21 14:06:04 | MAINSTORY | 1001019 NewHero1 13528 reward [4200 EXP, 300 silver]
+2026-10-21 14:06:04 | MAINSTORY | 1001019 NewHero1 finished 13528 (click)
+2026-10-21 14:08:54 | MAINSTORY | 1001019 NewHero1 14091 reward [5040 EXP, 300 silver]
+2026-10-21 14:09:36 | MAINSTORY | 1001019 NewHero1 13529 reward [2880 EXP, 100 silver]
+2026-10-21 14:09:36 | MAINSTORY | 1001019 NewHero1 finished 13529 (dialog)
+2026-10-21 14:12:13 | MAINSTORY | 1001019 NewHero1 13530 reward [9000 EXP, 300 silver]
+2026-10-21 14:12:13 | MAINSTORY | 1001019 NewHero1 finished 13530 (click)
+2026-10-21 14:12:51 | MAINSTORY | 1001019 NewHero1 13531 reward [3600 EXP, 100 silver, DragonBall]
+2026-10-21 14:12:51 | MAINSTORY | 1001019 NewHero1 finished 13531 (dialog)
+2026-10-21 14:12:55 | MAINSTORY | 1001019 NewHero1 13532 reward [6300 EXP, 300 silver]
+2026-10-21 14:12:55 | MAINSTORY | 1001019 NewHero1 finished 13532 (click)
+2026-10-21 14:13:36 | MAINSTORY | 1001019 NewHero1 13533 reward [4320 EXP, 100 silver]
+2026-10-21 14:13:36 | MAINSTORY | 1001019 NewHero1 finished 13533 (dialog)
+2026-10-21 14:17:02 | MAINSTORY | 1001019 NewHero1 13534 reward [10800 EXP, 300 silver]
+2026-10-21 14:17:02 | MAINSTORY | 1001019 NewHero1 finished 13534 (click)
+2026-10-21 14:17:41 | MAINSTORY | 1001019 NewHero1 13535 reward [4529 EXP, 100 silver, Stone(+1) x5]
+2026-10-21 14:17:41 | MAINSTORY | 1001019 NewHero1 finished 13535 (dialog)
+2026-10-21 14:17:44 | MAINSTORY | 1001019 NewHero1 13536 reward [7926 EXP, 300 silver]
+2026-10-21 14:17:44 | MAINSTORY | 1001019 NewHero1 finished 13536 (click)
+2026-10-21 14:18:16 | MAINSTORY | 1001019 NewHero1 13537 reward [7926 EXP, 300 silver]
+2026-10-21 14:18:16 | MAINSTORY | 1001019 NewHero1 finished 13537 (click)
+2026-10-21 14:18:47 | MAINSTORY | 1001019 NewHero1 14078 reward [11271 EXP, 300 silver]
+2026-10-21 14:18:47 | MAINSTORY | 1001019 NewHero1 finished 14078 (click)
+2026-10-21 14:19:19 | MAINSTORY | 1001019 NewHero1 14083 reward [11271 EXP, 300 silver]
+2026-10-21 14:19:19 | MAINSTORY | 1001019 NewHero1 finished 14083 (click)
+2026-10-21 14:20:08 | MAINSTORY | 1001019 NewHero1 13538 reward [6440 EXP, 100 silver]
+2026-10-21 14:20:08 | MAINSTORY | 1001019 NewHero1 finished 13538 (dialog)
+2026-10-21 14:20:40 | MAINSTORY | 1001019 NewHero1 13539 reward [6440 EXP, 100 silver]
+2026-10-21 14:20:40 | MAINSTORY | 1001019 NewHero1 finished 13539 (dialog)
+2026-10-21 14:20:50 | MAINSTORY | 1001019 NewHero1 13540 reward [7486 EXP, 100 silver]
+2026-10-21 14:20:50 | MAINSTORY | 1001019 NewHero1 finished 13540 (dialog)
+2026-10-21 14:21:01 | MAINSTORY | 1001019 NewHero1 13541 reward [7486 EXP, 100 silver]
+2026-10-21 14:21:01 | MAINSTORY | 1001019 NewHero1 finished 13541 (dialog)
+2026-10-21 14:21:17 | MAINSTORY | 1001019 NewHero1 13542 reward [7486 EXP, 100 silver]
+2026-10-21 14:21:17 | MAINSTORY | 1001019 NewHero1 finished 13542 (dialog)
+2026-10-21 14:21:54 | MAINSTORY | 1001019 NewHero1 13940 reward [13101 EXP, 300 silver]
+2026-10-21 14:21:54 | MAINSTORY | 1001019 NewHero1 finished 13940 (click)
+2026-10-21 14:22:56 | MAINSTORY | 1001019 NewHero1 13543 reward [9511 EXP, 100 silver]
+2026-10-21 14:22:56 | MAINSTORY | 1001019 NewHero1 finished 13543 (dialog)
+2026-10-21 14:29:45 | MAINSTORY | 1001019 NewHero1 13911 reward [23778 EXP, 300 silver]
+2026-10-21 14:29:45 | MAINSTORY | 1001019 NewHero1 finished 13911 (click)
+2026-10-21 14:30:37 | MAINSTORY | 1001019 NewHero1 13545 reward [11321 EXP, 100 silver]
+2026-10-21 14:30:37 | MAINSTORY | 1001019 NewHero1 finished 13545 (dialog)
+2026-10-21 14:30:56 | MAINSTORY | 1001019 NewHero1 13546 reward [11321 EXP, 100 silver]
+2026-10-21 14:30:56 | MAINSTORY | 1001019 NewHero1 finished 13546 (dialog)
+2026-10-21 14:53:43 | MAINSTORY | 1001019 NewHero1 13547 reward [28304 EXP, 300 silver]
+2026-10-21 14:53:43 | MAINSTORY | 1001019 NewHero1 finished 13547 (click)
+2026-10-21 14:54:21 | MAINSTORY | 1001019 NewHero1 13919 reward [24070 EXP, 300 silver]
+2026-10-21 14:54:21 | MAINSTORY | 1001019 NewHero1 finished 13919 (click)
+2026-10-21 14:59:31 | BOUNTY ACCEPT | 5140 | 1001019 NewHero1 lv20 | 
+2026-10-21 15:01:23 | BOUNTY GOAL | 5140 | 1001019 NewHero1 | STEP TheWounded npc 9720004 -> TheWounded 1/5
+2026-10-21 15:01:58 | BOUNTY GOAL | 5140 | 1001019 NewHero1 | STEP TheWounded npc 9720003 -> TheWounded 2/5
+2026-10-21 15:02:13 | BOUNTY GOAL | 5140 | 1001019 NewHero1 | STEP TheWounded npc 9720001 -> TheWounded 3/5
+2026-10-21 15:02:38 | BOUNTY GOAL | 5140 | 1001019 NewHero1 | STEP TheWounded npc 9720005 -> TheWounded 4/5
+2026-10-21 15:02:46 | BOUNTY GOAL | 5140 | 1001019 NewHero1 | STEP TheWounded npc 9720006 -> TheWounded 5/5
+2026-10-21 15:03:21 | BOUNTY FINISH | 5140 | 1001019 NewHero1 lv20 | star 5 gave [20631 EXP, 15000 silver, DragonBall, Stone(+1) x2]
+2026-10-21 15:04:01 | BOUNTY ACCEPT | 5160 | 1001019 NewHero1 lv20 | 
+2026-10-21 15:06:37 | BOUNTY GIVEUP | 5160 | 1001019 NewHero1 lv20 | 
+2026-10-21 15:06:53 | BOUNTY REFRESH | 0 | 1001019 NewHero1 lv20 | reload 1
+2026-10-21 15:07:03 | BOUNTY ACCEPT | 8447 | 1001019 NewHero1 lv20 | 
+2026-10-21 15:07:34 | BOUNTY GOAL | 8447 | 1001019 NewHero1 | STEP JerkWang npc 4504 -> JerkWang 1/1, WineKiddo 0/1
+2026-10-21 15:08:43 | BOUNTY GOAL | 8447 | 1001019 NewHero1 | STEP WineKiddo npc 4596 -> JerkWang 1/1, WineKiddo 1/1
+2026-10-21 15:09:11 | BOUNTY FINISH | 8447 | 1001019 NewHero1 lv20 | star 1 gave [5501 EXP, 3000 silver, Meteor]
+2026-10-21 15:09:35 | BOUNTY ACCEPT | 8450 | 1001019 NewHero1 lv20 | 
+2026-10-21 15:09:38 | BOUNTY GOAL | 8450 | 1001019 NewHero1 | STEP WineKiddo npc 4596 -> WineKiddo 1/1, CaptainChang 0/1, LittleBen 0/1
+2026-10-21 15:13:38 | BOUNTY GOAL | 8450 | 1001019 NewHero1 | STEP CaptainChang npc 24340 -> WineKiddo 1/1, CaptainChang 1/1, LittleBen 0/1
+2026-10-21 15:14:09 | BOUNTY GOAL | 8450 | 1001019 NewHero1 | STEP LittleBen npc 8520 -> WineKiddo 1/1, CaptainChang 1/1, LittleBen 1/1
+2026-10-21 15:14:25 | BOUNTY FINISH | 8450 | 1001019 NewHero1 lv20 | star 1 gave [5501 EXP, 3000 silver, Meteor]
+2026-10-21 15:14:37 | BOUNTY ACCEPT | 8545 | 1001019 NewHero1 lv20 | 
+2026-10-21 15:15:09 | BOUNTY GOAL | 8545 | 1001019 NewHero1 | STEP AFish npc 9720151 -> AFish 1/5
+2026-10-21 15:15:18 | BOUNTY GOAL | 8545 | 1001019 NewHero1 | STEP AFish npc 9720152 -> AFish 2/5
+2026-10-21 15:15:36 | BOUNTY GOAL | 8545 | 1001019 NewHero1 | STEP AFish npc 9720157 -> AFish 3/5
+2026-10-21 15:19:10 | BOUNTY GOAL | 8545 | 1001019 NewHero1 | STEP AFish npc 9720156 -> AFish 4/5
+2026-10-21 15:19:31 | BOUNTY GOAL | 8545 | 1001019 NewHero1 | STEP AFish npc 9720158 -> AFish 5/5
+2026-10-21 15:20:01 | BOUNTY FINISH | 8545 | 1001019 NewHero1 lv20 | star 3 gave [5501 EXP, 2000 silver, Meteor x2]
+2026-10-21 15:20:01 | MAINSTORY | 1001019 NewHero1 13920 reward [24070 EXP, 300 silver]
+2026-10-21 15:28:37 | MAINSTORY | 1001019 NewHero1 13548 reward [14103 EXP, 100 silver]
+2026-10-21 15:28:37 | MAINSTORY | 1001019 NewHero1 finished 13548 (dialog)
+2026-10-21 15:28:47 | MAINSTORY | 1001019 NewHero1 13549 reward [14103 EXP, 100 silver]
+2026-10-21 15:28:47 | MAINSTORY | 1001019 NewHero1 finished 13549 (dialog)
+2026-10-21 15:28:58 | MAINSTORY | 1001019 NewHero1 13550 reward [14103 EXP, 100 silver]
+2026-10-21 15:28:58 | MAINSTORY | 1001019 NewHero1 finished 13550 (dialog)
+2026-10-21 15:29:40 | MAINSTORY | 1001019 NewHero1 13941 reward [24680 EXP, 300 silver]
+2026-10-21 15:29:40 | MAINSTORY | 1001019 NewHero1 finished 13941 (click)
+2026-10-21 15:30:48 | MAINSTORY | 1001019 NewHero1 13551 reward [15187 EXP, 100 silver]
+2026-10-21 15:30:48 | MAINSTORY | 1001019 NewHero1 finished 13551 (click)
+2026-10-21 15:37:39 | MAINSTORY | 1001019 NewHero1 13892 reward [15187 EXP, 100 silver]
+2026-10-21 15:37:39 | MAINSTORY | 1001019 NewHero1 finished 13892 (dialog)
+2026-10-21 22:25:50 | MAINSTORY | 1001016 TrojanQ1 13508 reward [56454811 EXP, 100 silver]
+2026-10-21 22:25:50 | MAINSTORY | 1001016 TrojanQ1 finished 13508 (dialog)

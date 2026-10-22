@@ -1,0 +1,67 @@
+﻿09:20:06 LOAD 227 items, 66 types, 0 lots, 0 pending
+09:21:05 SESSION guild 1001 type 6 group 3 lots 1:70,2:71,3:51,4:58,5:72,6:53,7:59,8:66,9:70,10:56 begin 1792563685 end 1792563985
+09:21:38 TrojanQ1(1001016) CPs -360 bid lot 1 5010 -> 4650
+09:21:38 BID lot 1 row 70 TrojanQ1(1001016) 360 money 1
+09:21:42 TrojanQ1(1001016) CPs -420 bid lot 1 4650 -> 4230
+09:21:42 PENDING 11 uid 1001016 cps 360 0x0
+09:21:42 BID lot 1 row 70 TrojanQ1(1001016) 420 money 1 prev 1001016:360
+09:21:42 DELIVER 11 to TrojanQ1(1001016) cps 360 0x0
+09:21:51 TrojanQ1(1001016) CPs -60 bid lot 2 4590 -> 4530
+09:21:51 BID lot 2 row 71 TrojanQ1(1001016) 60 money 1
+09:22:08 TrojanQ1(1001016) CPs -1500 bid lot 1 4529 -> 3029
+09:22:08 PENDING 12 uid 1001016 cps 420 0x0
+09:22:08 BID lot 1 row 70 TrojanQ1(1001016) 1500 money 1 prev 1001016:420 FIXED
+09:22:08 DELIVER 12 to TrojanQ1(1001016) cps 420 0x0
+09:22:08 PENDING 13 uid 1001016 item 0 3355113x1
+09:22:08 PENDING 14 uid 1001016 cps 1500 0x0
+09:22:08 END lot 1 row 70 sold to TrojanQ1(1001016) for 1500 money 1, share 1500 x 1
+09:22:08 DELIVER 13 to TrojanQ1(1001016) item 0 3355113x1
+09:22:08 DELIVER 14 to TrojanQ1(1001016) cps 1500 0x0
+09:24:58 LOAD 227 items, 66 types, 10 lots, 0 pending
+09:26:26 PENDING 15 uid 1001016 item 0 3355114x1
+09:26:26 PENDING 16 uid 1001016 cps 60 0x0
+09:26:26 END lot 2 row 71 sold to TrojanQ1(1001016) for 60 money 1, share 60 x 1
+09:26:26 END lot 3 unsold
+09:26:26 END lot 4 unsold
+09:26:26 END lot 5 unsold
+09:26:26 END lot 6 unsold
+09:26:26 END lot 7 unsold
+09:26:26 END lot 8 unsold
+09:26:26 END lot 9 unsold
+09:26:26 END lot 10 unsold
+09:26:57 DELIVER 16 to TrojanQ1(1001016) cps 60 0x0
+09:29:04 SESSION guild 1001 type 6 group 3 lots 17:63,18:65,19:57,20:62,21:64,22:54,23:69,24:59,25:67,26:56 begin 1792564164 end 1792564764
+09:30:27 TrojanQ1(1001016) CPs -378 bid lot 22 5009 -> 4631
+09:30:27 BID lot 22 row 54 TrojanQ1(1001016) 378 money 1
+09:30:45 TrojanQ1(1001016) CPs -1500 bid lot 19 4631 -> 3131
+09:30:45 BID lot 19 row 57 TrojanQ1(1001016) 1500 money 1 FIXED
+09:30:45 PENDING 27 uid 1001016 item 0 1200005x1
+09:30:45 PENDING 28 uid 1001016 cps 1500 0x0
+09:30:45 END lot 19 row 57 sold to TrojanQ1(1001016) for 1500 money 1, share 1500 x 1
+09:30:45 DELIVER 27 to TrojanQ1(1001016) item 0 1200005x1
+09:30:45 DELIVER 28 to TrojanQ1(1001016) cps 1500 0x0
+09:39:26 END lot 17 unsold
+09:39:26 END lot 18 unsold
+09:39:26 END lot 20 unsold
+09:39:26 END lot 21 unsold
+09:39:26 PENDING 29 uid 1001016 item 0 730006x1
+09:39:26 PENDING 30 uid 1001016 cps 378 0x0
+09:39:26 END lot 22 row 54 sold to TrojanQ1(1001016) for 378 money 1, share 378 x 1
+09:39:26 END lot 23 unsold
+09:39:26 END lot 24 unsold
+09:39:26 END lot 25 unsold
+09:39:26 END lot 26 unsold
+09:39:26 DELIVER 29 to TrojanQ1(1001016) item 0 730006x1
+09:39:26 DELIVER 30 to TrojanQ1(1001016) cps 378 0x0
+10:27:09 LOAD 227 items, 66 types, 20 lots, 1 pending
+11:24:26 LOAD 227 items, 66 types, 20 lots, 1 pending
+11:45:06 LOAD 227 items, 66 types, 20 lots, 1 pending
+13:06:57 LOAD 227 items, 66 types, 20 lots, 1 pending
+13:21:21 LOAD 227 items, 66 types, 20 lots, 1 pending
+13:29:45 LOAD 227 items, 66 types, 20 lots, 1 pending
+13:45:32 LOAD 227 items, 66 types, 20 lots, 1 pending
+14:37:30 LOAD 227 items, 66 types, 20 lots, 1 pending
+18:27:27 LOAD 227 items, 66 types, 20 lots, 1 pending
+19:50:22 LOAD 227 items, 66 types, 20 lots, 1 pending
+22:22:29 LOAD 227 items, 66 types, 20 lots, 1 pending
+22:43:25 LOAD 227 items, 66 types, 20 lots, 1 pending

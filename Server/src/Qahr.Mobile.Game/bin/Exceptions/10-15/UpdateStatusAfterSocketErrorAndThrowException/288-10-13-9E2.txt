@@ -1,0 +1,12 @@
+----Exception message----
+Only one usage of each socket address (protocol/network address/port) is normally permitted.
+----End of exception message----
+
+----Stack trace----
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at GameServer.ServerSockets.ServerSocket.Open(String IpAddres, UInt16 port, Int32 backlog) in D:\conquer-3d\Sourse\Infinity [Sourse]\Base\ServerSockets\ServerSocket.cs:line 109
+   at GameServer.Program.Main(String[] args) in D:\conquer-3d\Sourse\Infinity [Sourse]\MY System\Program.cs:line 452
+----End of stack trace----
+

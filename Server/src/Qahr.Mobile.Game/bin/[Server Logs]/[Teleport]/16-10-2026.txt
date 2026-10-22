@@ -1,0 +1,5 @@
+[01:54:10 PM]: Name: mohamed2 Current Location: (1002,365,443) | Teleport Location: (12818,230,239)
+[02:03:31 PM]: Name: mohamed2 Current Location: (12818,229,223) | Teleport Location: (1002,273,482)
+[02:07:54 PM]: Name: mohamed2 Current Location: (1002,273,482) | Teleport Location: (12818,190,305)
+[02:08:33 PM]: Name: mohamed2 Current Location: (12818,190,305) | Teleport Location: (12818,229,223)
+[08:18:02 PM]: Name: mohamed2 Current Location: (12818,213,235) | Teleport Location: (1002,410,354)
