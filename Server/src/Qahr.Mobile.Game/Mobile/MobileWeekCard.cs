@@ -21,6 +21,11 @@
 //  All times are compared with CHero::CalcServerTimeStamp = MsgData (2227) type 0 field 9 (unix seconds), which
 //  the server did not send before; ServerTimerCreate now sends it (TimeProto below).
 //
+//  Monthly Cards (client CDlgFundMonth, ini\luacfg\fund.dat fund_month_reward): cards 376 Basic (iap 782111) and
+//  377 Deluxe (iap 782117), 30 days; same 2251/2275 packets (GetCardAction 0 = buy, 1 = claim). "onbuy" items are given
+//  once per Grant (c:pend<card>, delivered online or at login); the login "claim all" popup (CFDlgMonthGet) sends a
+//  claim per card. GrantProduct(uid, iap id) maps the real-money products ("product" lines) to cards.
+//  Items missing from itemtype.txt are owed (c:owed<itemId>) and delivered at login once the item type exists.
 //  State: EventStore event "mweekcard": t:to<id> card end, t:next<id> next claim, c:buys<id> purchases.
 //  Written (flushNow) before items are given; nothing is given when the write fails.
 // ============================================================================

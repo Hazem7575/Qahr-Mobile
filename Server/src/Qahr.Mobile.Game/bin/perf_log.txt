@@ -4718,3 +4718,5 @@
 2026-10-22 18:01:48 [Perf 60s] online=1 | in 0pk/s 0.0KB/s | out 0pk/s 0.0KB/s | save n=0 avg=0.0ms max=0ms | db pend=0 fail=0(+0) | tick n=597 avg=0.05ms max=0.6ms | gc 0/0/0 | mem ws=493MB heap=129MB | thr=159 | cpu=0.0%
 2026-10-22 18:02:48 [Perf 60s] online=1 | in 0pk/s 0.0KB/s | out 0pk/s 0.0KB/s | save n=0 avg=0.0ms max=0ms | db pend=0 fail=0(+0) | tick n=595 avg=0.05ms max=0.7ms | gc 0/0/0 | mem ws=494MB heap=132MB | thr=157 | cpu=0.0%
 2026-10-22 18:03:48 [Perf 60s] online=1 | in 1pk/s 0.6KB/s | out 6pk/s 0.9KB/s | save n=1 avg=8.0ms max=8ms | db pend=0 fail=0(+0) | tick n=596 avg=0.02ms max=0.6ms | gc 0/0/0 | mem ws=496MB heap=178MB | thr=159 | cpu=0.0%
+2026-10-22 18:04:48 [Perf 60s] online=1 | in 0pk/s 0.0KB/s | out 1pk/s 0.0KB/s | save n=0 avg=0.0ms max=0ms | db pend=0 fail=0(+0) | tick n=597 avg=0.06ms max=0.7ms | gc 0/0/0 | mem ws=498MB heap=181MB | thr=157 | cpu=0.0%
+2026-10-22 18:05:48 [Perf 60s] online=1 | in 0pk/s 0.0KB/s | out 0pk/s 0.0KB/s | save n=0 avg=0.0ms max=0ms | db pend=0 fail=0(+0) | tick n=597 avg=0.05ms max=0.5ms | gc 0/0/0 | mem ws=499MB heap=182MB | thr=158 | cpu=0.0%
