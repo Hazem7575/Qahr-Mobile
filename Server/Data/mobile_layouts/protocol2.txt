@@ -1,0 +1,69 @@
+# QahrMobile packet layouts: protobuf messages whose field numbers differ between the server (PC 7957 [ProtoContract]
+# classes) and the mobile CMsgXxxPB. Review of all of them: D:\conquer\conquer-mobile\docs\audit\protobuf_review.md.
+# The format is described in Networking\Mobile\MobileLayouts.Loader.cs. Unlisted fields are dropped both ways.
+
+# CMsgHairFaceStorage 10282 (CMsgHairFaceStoragePB: 1 UnAction, 2 Param {UnType, UnHairFaceID}, 3 repeated Info
+# {UnType, UnHairFaceID, BEquiped, UnDelTime}). Server MsgHairfaceStorage.MsgHairfaceStorageProto (Features\Wardrobe):
+# 1 Type, 2 Hair (Operation {ID, dwParam}), 3 HairColor, 4 RuleParam, 5 Items[] {Type, ID, Equipped, Unk4, Colors[]}, 6 UID.
+# The owned list is server 5 -> mobile 3 (sub-message fields 1-4 match, Colors is skipped by the mobile).
+# Server 3 (HairColor), 4 (RuleParam), 6 (UID) have no mobile field.
+[2077 MsgHairFaceStorage proto]
+1 1        # Type -> UnAction
+2 2        # Hair -> Param
+5 3        # Items -> Info
+
+# CMsgInstanceInfo 10382 (CMsgInstanceInfoPB: 1 UsAction, 2 repeated CUserInstanceInfo, 3 repeated CCompleteInstanceInfo).
+# Server B4InfoPanels.InstanceInfo (Networking\Unanswered\B4) echoes 1 Action + 2 InstanceId (a varint where the mobile
+# has a sub-message): keep only the action, the server has no instance data to fill 2/3.
+[2007 MsgInstanceInfo proto]
+1 1        # Action -> UsAction
+
+# CMsgGouYuInfo 10429 (CMsgGouYuInfoPB: 1 UnAction, 2 IdTarUser, 3 SzUserName, 4 repeated CGouYuInfoPB {UnGouYuType,
+# UnGouYuLev, UnPos, UnExp, UnTempExp}). Server MsgGouYuInfo.MsgGouYuInfoProto (Features\ArchivesNinja): 1 Type, 2 UID,
+# 3 Items[] {ID, Level, Position, Points, UK} (same sub-message numbering). The list moved from 3 to 4.
+[2448 MsgGouYuInfo proto]
+1 1        # Type -> UnAction
+2 2        # UID -> IdTarUser
+3 4        # Items -> Info
+
+# CMsgNpcInfoEX 10166 (CMsgNpcInfoExPB: 1 Id, 2 IdRecord, 3 IdServer, 4 UnMaxLife, 5 UnLife, 6 UnCellX, 7 UnCellY,
+# 8 UnLook, 9 UnType, 10 UnSort, 11 IdOwner, 12 Ndata3 (int32), 13 repeated SzBuf; CMsgNpcInfoEX::Process: SzBuf[0] ->
+# CRole::SetName). Server SobNpc.SobNpcSpawnProto (World\Entities\Players\SobNpc.cs): 1-10 the same, 12 Name (string,
+# which the mobile would skip as the wrong wire type for Ndata3) -> SzBuf.
+[2326 MsgNpcInfoEX proto]
+1 1        # UID -> Id
+2 2        # OwnerUID -> IdRecord
+3 3        # Unknown2 -> IdServer
+4 4        # MaxHitpoints -> UnMaxLife
+5 5        # Hitpoints -> UnLife
+6 6        # X -> UnCellX
+7 7        # Y -> UnCellY
+8 8        # Mesh -> UnLook
+9 9        # Type -> UnType
+10 10      # Sort -> UnSort
+12 13      # Name -> SzBuf[0]
+
+# CMsgGouYuAptitude 10431 (CMsgGouYuAptitudePB: 1 UnAction, 2 IdUser, 3 UnPos, 4 UnEssence, 5-9 UnFire UnWater UnSoil
+# UnWind UnThunder, 10 UnTotalScore, 11-15 UnJingXiu{Fire,Water,Soil,Wind,Thunder}, 16 UnJingXiuFlag, 17 UnXuZuoLev,
+# 18 UnXuZuoExp, 19 UnSex, 20 UnProf, 21 UnHitRate). Server MsgGouYuAptitude.MsgGouYuAptitudeProto (Features\ArchivesNinja):
+# 1 Type, 2 UID, 3 Flag (opened gates), 4 Points (Ninja.Exp), 5-9 elements, 10-14 tmp_ elements (no mobile field),
+# 15 Score, 16-20 masteries, 21 UnlockMastery, 22 SusanooLevel, 23 SusanooExp, 24/25 unknown.
+[2284 MsgGouYuAptitude proto]
+1 1        # Type -> UnAction
+2 2        # UID -> IdUser
+3 3        # Flag -> UnPos
+4 4        # Points -> UnEssence
+5 5        # Fire
+6 6        # Water
+7 7        # Earth -> UnSoil
+8 8        # Wind
+9 9        # Lightning -> UnThunder
+15 10      # Score -> UnTotalScore
+16 11      # FireMastery -> UnJingXiuFire
+17 12      # WaterMastery -> UnJingXiuWater
+18 13      # EarthMastery -> UnJingXiuSoil
+19 14      # WindMastery -> UnJingXiuWind
+20 15      # LightningMastery -> UnJingXiuThunder
+21 16      # UnlockMastery -> UnJingXiuFlag
+22 17      # SusanooLevel -> UnXuZuoLev
+23 18      # SusanooExp -> UnXuZuoExp

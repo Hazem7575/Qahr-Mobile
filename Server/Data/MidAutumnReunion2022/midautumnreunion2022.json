@@ -1,0 +1,42 @@
+{
+  "_readme": "[MidAutumnReunion2022 2026-10-15] Reunion Under Moon (Global Mid-Autumn 2022). Re-read on change. OFFICIAL = from the client (luaUiRes[1272]/[1273][10049], dlgshootingsunui, MidAutumn_Config[10049], Server_Key). DERIVED = chosen here because the official server value is not in the client.",
+  "festival": "MidAutumnReunion2022",
+  "minLevel": 80,
+  "_minLevel": "OFFICIAL Open_error[102] 'Please upgrade to level 80 first.'",
+
+  "beastMap": 12176, "beastX": 0, "beastY": 0, "beastMinutes": 10,
+  "_beastMap": "DERIVED: the Illusion Realm instance map is not named in any client file. 12176 = GameMap.dat 2019midaut_new (the unnamed Mid-Autumn doc of the 2022 block next to 12170/12227 MoonPalace). 0,0 = map centre (nearest walkable cell). Private copy per player, 10 minutes.",
+  "beastTypes": [996601, 996602, 996603, 996604, 996605, 996606],
+  "_beastTypes": "Boss index 1..6 = Yayu/Zaochi/Jiuying/Dafeng/Fengxi/Xiushe (OFFICIAL names). Types in Festivals/MidAutumnReunion2022/monsters (DERIVED looks/stats).",
+  "beastsPerDay": 4,
+  "_beastsPerDay": "OFFICIAL max: the window has 4 beast slots. Which 4 of the 6 = random per player per day (DERIVED).",
+  "beastArrows": [2, 2, 2, 3],
+  "_beastArrows": "DERIVED: Sun-chasing Arrows for the 1st..4th beast of a day = 9 = the 9 Sun Ravens that can be shot.",
+  "beastPoints": 100,
+  "_beastPoints": "DERIVED Reunion Points per beast (KillBossTip shows '%d points').",
+  "beastDrop": "3336640 0 1 3",
+  "_beastDrop": "OFFICIAL item (Beast Core = pill material 1 of the window, tItemInfo); amount DERIVED.",
+
+  "sunGroupItems": ["730004 0 1 3", "730004 0 1 3", "3009002 0 1 0", "3328247 0 300 0", "723694 0 1 3"],
+  "_sunGroupItems": "OFFICIAL: DlgShootingSunUi tRewardItemInfo shown on the suns (group 1..5 = btn_sun4/6/3/2/5). Suns 1-2 = group 1, 3-4 = 2, 5-6 = 3, 7-8 = 4, 9 = 5; sun 10 is 'the first sun' and cannot be shot (SunLongSon).",
+  "sunEssence": "3336644 0 2 3",
+  "_sunEssence": "OFFICIAL item Sun Raven Essence (RewardTitle 'Shoot Reward: Sun Raven Essences'); amount 2 DERIVED.",
+  "bonusPoints": [100, 200, 300, 400, 500], "bonusWeights": [40, 25, 18, 10, 7],
+  "_bonus": "OFFICIAL range 'Reward: 100 - 500 Reunion Points' when the arrow mark stops in the bonus band; the distribution is DERIVED.",
+
+  "moonStart": 50, "moonPerHour": 10, "moonMax": 100, "compassCost": 50, "daysPerDay": 3,
+  "_moon": "OFFICIAL: 50 Moon Points per Illusion Compass use, bar max 100 (nEnergyMax), 'increase a bit every 60 minutes', [ChgLimit] daily limit exists. DERIVED: start 50, +10 per hour, 3 compass uses per day.",
+  "nightItems": ["3336641 0 2 3", "3336642 0 2 3"],
+  "_nightItems": "DERIVED: the night side (Moon Palace: Wu Kang's laurel -> Celestial Twigs 3336641, Moon Hare's medicine -> Hare Herbs 3336642, OFFICIAL materials) is not in this client (its window was re-used by Valentine). Passing the night with the compass gives these.",
+
+  "refinePoints3": 30, "refinePoints2": 20,
+  "_refinePoints": "DERIVED Reunion Points per refine (ActScoreTip: points come from the Illusion Realm and refining).",
+  "pool3": ["3336639 0 1", "730002 0 1 3 7200 1", "3009100 0 3", "4060001 0 10 3", "3009001 0 1 0 2880 1", "730003 0 1 3 7200 1", "3009102 0 1", "730005 0 1 3 7200 1", "3009002 0 1 0 2880 1", "3314219 0 1 3", "723695 0 1 3", "200725 0 1 3 0 0 0 0 1"],
+  "weights3": [2, 140, 150, 150, 120, 80, 120, 12, 40, 5, 10, 1],
+  "pool2": ["3336639 0 1", "730002 0 1 3 7200 1", "3009100 0 3", "4060001 0 10 3", "3009001 0 1 0 2880 1", "730003 0 1 3 7200 1", "3009102 0 1", "730005 0 1 3 7200 1", "3009002 0 1 0 2880 1", "3314219 0 1 3", "723694 0 1 3"],
+  "weights2": [1, 170, 170, 160, 110, 60, 120, 6, 25, 3, 20],
+  "_pools": "OFFICIAL pools MidAutumn_Config[10049].PreviewReward[1] (3-Material Reward) / [2] (2-Material Reward); weights DERIVED (rare: Immortality Pill 3336639 with the official broadcast, Jade Chariot, +6 Steed Pack). Timed +Stones: 'All the +Stones are time-limited' (7200 min, OFFICIAL).",
+  "stagePoints": [1000, 3000, 5000, 10000, 30000, 50000, 100000], "stageEvery": 2000,
+  "stageRewards": [["730004 0 1 3 7200 1", "3336644 0 1"], ["4060001 0 100 3", "3336644 0 1"], ["3009002 0 1 0 2880 1", "3336644 0 1"], ["3009104 0 1", "3336644 0 2"], ["3328247 0 500", "3336644 0 3"], ["198045 0 1 3 0 0 0 0 1", "3336644 0 5"], ["198055 0 1 3 0 0 0 0 1", "3336644 0 10"], ["3325756 0 1 0 0 0 0 0 1", "3336644 0 1"]],
+  "_stages": "OFFICIAL: luaUiRes[1273][10049].Total (1000 ... 100000, every 2000 more) and MidAutumn_Config[10049].Rank.Total."
+}

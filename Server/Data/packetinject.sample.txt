@@ -1,0 +1,20 @@
+# PacketStudio packet INJECTOR — DEVELOPER TEST TOOL.
+# Lets PacketStudio ask the server to send a raw packet to ONE online player's client,
+# so you can test "which packet opens window X" live, without rebuild/restart.
+#
+# To enable: copy this file as  packetinject.txt  in the same folder (Infinity[DB]\),
+# set a secret and an allow list, then restart the server once (the code loads on boot).
+# To disable: delete packetinject.txt  (re-checked every ~3 seconds).
+#
+# SAFETY: listens on 127.0.0.1 ONLY, needs the secret below, and can ONLY ever hit the
+# characters you list in allow=. With no allow= line every send is refused. Use TEST chars.
+
+# shared secret, 8+ characters (required). Put the same value in PacketStudio.
+secret=change-me-to-8-or-more
+
+# TCP port on 127.0.0.1 (default 17958).
+port=17958
+
+# ALLOWLIST — the ONLY players injection may target. Names and/or UIDs, comma separated.
+# Example: allow=TestWarrior,TestMage,1000001
+allow=

@@ -1,0 +1,27 @@
+{
+  "key": "AnniversaryJubilee2025",
+  "name_ar": "العيد السنوي 2025: دعوة الاحتفال (Jubilee)",
+  "name_en": "CO Anniversary 2025: Anniversary Revelry",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Anniversary: only the newest official edition (Anniversary2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on AnniversaryJubilee2025. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ احتفال العيد السنوي (Anniversary Invitation)! دوس على الزرار اللي فوق.",
+  "announce_en": "To celebrate our anniversary, we cordially invite you to join in the celebration! Click the anniversary button at the top.",
+  "end_ar": "انتهى احتفال العيد السنوي. نشوفكم السنة الجاية!",
+  "end_en": "Thank you for journeying with us! Though the anniversary celebration has concluded, we wish you continued adventures in the world of CO. See you next year!",
+  "maps": [],
+  "notes": "AnniversaryJubilee2025 (2026-10-14, batch 3): official English 2025 anniversary 'Anniversary Invitation' (Jubilee/Carnival) entry only - top-bar Fgui button 10631 (AnniversaryCarnival_CelebrationAttend, msg 10631 25Jubilee), main window JubileeMain + official Anniversary Guide (JubileeRule). Same code as AnniversaryWindblownSand2025 (Base/AnniversaryWindblownSand2025/AnniversaryWindblownSand2025Ui.cs). Real data: bag counts of Wish Butterfly 3352961, Celebration Medal 3352962, Anniversary Point 3353247, Anniv Coin 3353040; stage 1/2 from the official dates. Recall, Rivalry, Wish, Silver Carnival, sign-in, token, promotion, shops: polite message, nothing granted.",
+  "_owner": "AnniversaryWindblownSand2025",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='10631',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='10631',['Show']=false,['Red']=0}}",
+  "icon_click": "10631</S>AnniversaryCarnival_CelebrationAttend",
+  "_icon": "[AnniversaryWindblownSand2025 2026-10-14] official top-bar Fgui button 10631 (img lua2025znqtitle_btn); clicks msg 10631 -> Base/AnniversaryWindblownSand2025/AnniversaryWindblownSand2025Ui.cs.",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "05-13",
+    "end": "06-09",
+    "_note": "Official English CO: Cn_Res STR_LUAUI_25JUBILEEMAIN_TIME 'May 13 - June 9' (ERP627502 【英文征服】周年庆主题活动 5.13-6.9, 2025). Celebration Stage May 13-26, Carnival Stage May 27 - June 9. Server local time."
+  }
+}

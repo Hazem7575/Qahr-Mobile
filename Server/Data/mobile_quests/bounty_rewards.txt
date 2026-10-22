@@ -1,0 +1,19 @@
+# QahrMobile: Chinju daily bounty rewards per star (MobileQuestBounty.cs), re-read when saved.
+# star  expPct (per cent of the EXP the player needs for its current level)  silver  items "id[xN];..." (bound, shown in the window)  [lv<N>]
+# A line with "lv<N>" at the end is for players of level N and up; the line with the highest band not above the
+# player's level is used (no "lv" = level 0). Without items, write the band in the 4th column.
+# ---- levels 1-49 (a new player: about a tenth of a level per bounty, small silver, Meteors)
+1	4	800	1088001x1
+2	6	1200	1088001x1
+3	8	2000	1088001x2
+5	12	3000	1088001x2;730001x1
+# ---- levels 50-89
+1	6	2000	1088001x1	lv50
+2	9	3500	1088001x2	lv50
+3	13	5000	1088001x3	lv50
+5	20	8000	1088001x3;730001x1	lv50
+# ---- levels 90+ (the first values)
+1	8	3000	1088001x1	lv90
+2	12	5000	1088001x2	lv90
+3	18	8000	1088001x3;730001x1	lv90
+5	30	15000	1088000x1;730001x2	lv90

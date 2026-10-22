@@ -1,0 +1,70 @@
+{
+  "_note": "[2026-10-15] The custom '3 Heart Grass -> EXP Ball' exchange was removed (not official): Heart Grass feeds the Jade Rabbit in the Lunar Voyage exploration (Base/JadeRabbit/JadeRabbitVoyage.cs), like the official event.",
+  "npcText": {
+    "8830100": {
+      "ar": "عيد منتصف خريف سعيد! قصر القمر مفتوح للزوار من لفل 80.",
+      "en": "Happy Mid-Autumn! The Moon Palace is open to visitors of level 80 and above."
+    },
+    "33273": {
+      "ar": "أهلاً بيك في قصر القمر! عندي شغل كتير النهارده.",
+      "en": "Welcome to the Moon Palace! I have plenty to do today."
+    },
+    "33275": {
+      "ar": "نبيذ الأوسمانثوس بتاعي أحلى نبيذ في القمر.",
+      "en": "My Osmanthus Wine is the best on the moon."
+    },
+    "33276": {
+      "ar": "الفوانيس جاهزة تقريباً... تحب تحل فزورة؟",
+      "en": "The lanterns are almost ready... want to guess a riddle?"
+    },
+    "33278": {
+      "ar": "القمر منوّر النهارده.",
+      "en": "The moon is bright tonight."
+    },
+    "33279": {
+      "ar": "خيزران؟ عندي أحسن خيزران.",
+      "en": "Bamboo? I have the finest bamboo."
+    },
+    "33280": {
+      "ar": "فزورة الفانوس الأولى.",
+      "en": "Lantern riddle no. 1."
+    },
+    "33281": {
+      "ar": "فزورة الفانوس التانية.",
+      "en": "Lantern riddle no. 2."
+    },
+    "33282": {
+      "ar": "فزورة الفانوس التالتة.",
+      "en": "Lantern riddle no. 3."
+    },
+    "33284": {
+      "ar": "ورد وفاكهة للمهرجان.",
+      "en": "Flowers and fruit for the festival."
+    },
+    "33286": {
+      "ar": "مكان عبادة القمر.",
+      "en": "The Moon Worship site."
+    },
+    "36981": {
+      "ar": "عود خيزران صغير.",
+      "en": "A young bamboo shoot."
+    },
+    "33274": {
+      "ar": "عايز تبني نبيذ أوسمانثوس؟ اقطف من شجرة الأوسمانثوس، بس خلي بالك من حشرات الورد!",
+      "en": "So it`s for brewing osmanthus wine. No problem! Just pick some from the osmanthus tree. But be careful, you might encounter Flower Bugs!"
+    },
+    "33277": {
+      "ar": "بركة القمر.",
+      "en": "The Moon Pool."
+    },
+    "36978": {
+      "ar": "الفرن جاهز لشوي اللحمة.",
+      "en": "The stove is ready to roast the ham."
+    },
+    "33283": {
+      "ar": "ضفة النهر... مكان حلو لإطلاق الفوانيس.",
+      "en": "The riverbank... a lovely place to float lanterns."
+    }
+  },
+  "exchanges": []
+}

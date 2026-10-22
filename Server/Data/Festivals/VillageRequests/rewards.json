@@ -1,0 +1,20 @@
+{
+  "_note": "No exchanges: the official Wishflake / Christmas Tree draw, Material Converter and Snowman store are not on this server and their tables are not in the client. Greetings = each citizen's official request text (Questinfo IntentionDesp).",
+  "npcText": {
+    "8858001": { "ar": "ساعد Lillian تلاقي العقد الضايع.", "en": "Help Lillian find the missing necklace." },
+    "8858002": { "ar": "ساعد Jeana تجهّز الشوي.", "en": "Help Jeana prepare barbecue." },
+    "8858003": { "ar": "ساعد Thompson يلاقي صورة العيلة.", "en": "Help Thompson find the missing family photo." },
+    "8858004": { "ar": "الأرواح الشريرة بتضايق Leo وهو بيصلّح بيته.", "en": "When Leo renovates his house, some Wicked Spirits always come to make trouble." },
+    "8858005": { "ar": "ساعد Kallir يلاقي أثر Rebee.", "en": "Help Kallir find Rebee`s relic." },
+    "8858006": { "ar": "Zach نفسه حيوانه الأليف يرتاح في سلام.", "en": "Zach asked for your help, hoping that his dead pet could rest in peace." },
+    "8858007": { "ar": "ساعد Lucy تلاقي تذكارها الغالي.", "en": "Help Lucy find her beloved souvenir." },
+    "8858008": { "ar": "اقطف فاكهة حلوة لـ Jean.", "en": "Pick some tasty fruits for Jean." },
+    "8858009": { "ar": "هات خضار طازة لـ Scott.", "en": "Find some fresh vegetable for Scott." },
+    "8858010": { "ar": "David عايز يجمع خشب يبني بيت، والأرواح الشريرة بتضايقه.", "en": "David wants to collect wood to build a house, but some Wicked Spirits always come to make trouble." },
+    "8858011": { "ar": "Kura نفسها في شوربة فراخ حلوة.", "en": "Kura wants to have delicious chicken soup." },
+    "8858012": { "ar": "Mia عايزة روح قريبها اللي مات تهدى.", "en": "Mia hopes that you can calm down the ghost of her deceased family." },
+    "8858013": { "ar": "الأرواح الشريرة بتضايق Seymour وهو بيكبّر بيته.", "en": "When Seymour enlarges his house, some Wicked Spirits always come to make trouble." },
+    "8858014": { "ar": "Ramon عايز روح صاحبه اللي مات تهدى.", "en": "Ramon hopes that you can pacify the ghost of his deceased friend." }
+  },
+  "exchanges": []
+}

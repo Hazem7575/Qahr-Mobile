@@ -1,0 +1,14 @@
+# Packet logger between the game and the server (PacketLogger.cs)
+# To turn it ON: copy this file as  packetlog.txt  in the same folder (Infinity[DB]).
+# To turn it OFF: delete packetlog.txt. Takes effect within 3 seconds, no restart needed.
+# Output: D:\conquer-3d\Sourse\Infinity [Sourse]\bin\Debug\PacketLogs\yyyy-MM-dd.log
+#
+# Each line in the log:  time  direction  [player]  id  packet_name  len=size | hex
+#   C->S = from the game to the server   S->C = from the server to the game
+#
+# Options (remove the # to use one):
+# ids=2226,2015            only these packets (e.g. NPC click + dialog response)
+# skip=2036,2020           never these packets (default: MsgPing and MsgTick, because they are frequent)
+# player=StarlitVoyage     only this player
+# hex=96                   hex bytes per packet (0=none, -1=whole packet)
+# dir=both                 both / in (game->server only) / out (server->game only)

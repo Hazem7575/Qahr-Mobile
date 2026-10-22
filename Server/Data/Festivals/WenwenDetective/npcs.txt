@@ -1,0 +1,45 @@
+# WenwenDetective (2026-10-14). Format id,type,mesh,map,x,y  - every NPC of these quests is -1 (instance NPC) in Questinfo -> festival range 8853xxx.
+# Maps = the official ids 1002614-1002619 (Infinity[DB]\FestivalMaps\maps.txt -> doc 12519 TitanRealm(CS), 2024tsf_new), used directly as
+#   shared event maps (nothing else stands on them; each quest has its own map id, like the official instances).
+# Positions = client Questinfo.ini (official), every cell walkable (r0) on the server DMap.
+# LOOKS = PROXIES (review in game / MapStudio, replace if a better one is found). No client npc.ini / NpcX.ini type is named after these NPCs:
+#   Wenwen / Mimi (goosies) -> npc.ini 3076 Yoyo [GoslingTransformed] (ft 鵝瑤瑤【幼崽鵝幻化】 = the gosling NPC of the same 2024 Children's Day event).
+#     (ft npc.ini 1680 is named 雯雯 but is the English 'VIPEnvoy', SimpleObjID 3 = not a goosie.)
+#   The click spots use the official invisible 'spot' model (SimpleObjID 9970, motion 9999970100 - every 9970 type looks the same);
+#   only the name label differs: Footprints -> 10515 GiantPrints (ft 碩大的腳印 'huge footprint'), DetectiveTool -> 10082 ClueSpot,
+#   Feathers -> 2199 FinePlume, TastyGrass -> 4097 CenturyGrass, YummyBerry -> 3870 WildBerry, WayHome -> 10089 MarkSpot (official 'Marking...').
+# ---- 5847 Huge Footprint, map 1002614
+8853001,2,30760,1002614,196,113  # Wenwen
+8853002,2,105150,1002614,203,160  # Footprints
+# ---- 5848 Detective Tool, map 1002615 (official FinishNpc point 203,168; the Intention point 212,182 is used for the one Wenwen)
+8853011,2,30760,1002615,212,182  # Wenwen
+8853012,2,100820,1002615,195,231  # DetectiveTool
+# ---- 5849 Goose Feather, map 1002616
+8853021,2,30760,1002616,147,226  # Wenwen
+8853022,2,21990,1002616,132,251  # Feathers (x2)
+# ---- 5850 Baiting Plan, map 1002617
+8853031,2,30760,1002617,147,226  # Wenwen
+8853032,2,40970,1002617,255,185  # TastyGrass
+8853033,2,38700,1002617,246,159  # YummyBerry
+# ---- 5851 Mysterious Figure, map 1002618 (Mimi = the 'figure' unmasked; official DynaNpcName1 'Mimi')
+8853041,2,30760,1002618,172,290  # Mimi
+# ---- 5852 The Way Home, map 1002619
+8853051,2,30760,1002619,173,290  # Mimi
+8853052,2,100890,1002619,195,257  # WayHome (x3)
+# ==== [2026-10-15] Journey of Wonder (merged from the JourneyOfWonder folder): Dinowolf Isle caves = island 2 of the window.
+# Maps = official ids 1002628 / 1002629 (FestivalMaps\maps.txt -> docs 12511 / 12512, epicmission-nrz02/03), used as shared event maps
+#   like the Titan Realm chapters above. Positions = client Questinfo.ini 5861/5862 (official), all walkable on the server DMap.
+# Ids 8853101-8853199 = Journey block of this festival. LOOKS = PROXIES like the rest of this file: goosies -> npc.ini 3076 Yoyo,
+#   chests -> npc.ini 4131 Chest (7 'Chest' types exist, none tied to this event).
+# ---- 5861 Journey of Wonder I, map 1002628: Flynn = the goosie (official FinishNpc 'Flynn' at the Goosie spot 31,49)
+8853101,2,30760,1002628,31,49  # Flynn (Goosie)
+8853102,2,41310,1002628,23,34  # Wonder Chest (official DynaNpcName 'Wonder Chest')
+# ---- 5862 Journey of Wonder II, map 1002629: the goosie = Wenwen (official FinishNpc 'Wenwen' at the Goosie spot 37,49)
+8853111,2,30760,1002629,37,49  # Wenwen (Goosie)
+8853112,2,41310,1002629,22,35  # RealChests (open it 3 times: the 3 real chests)
+8853113,2,41310,1002629,25,30  # Chest (fake, official 'Chest 1..9': snakes)
+8853114,2,41310,1002629,29,33  # Chest (fake)
+8853115,2,41310,1002629,17,36  # Chest (fake)
+8853116,2,41310,1002629,26,38  # Chest (fake)
+8853117,2,41310,1002629,31,36  # Chest (fake)
+8853118,2,41310,1002629,21,32  # Chest (fake)

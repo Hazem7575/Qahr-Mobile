@@ -1,0 +1,157 @@
+{
+  "_note": "JadeRabbit overlay (2026-10-14). Order, slots, maps, points and prizes come from client Questinfo.ini. Every text comes from the official server script strings in client ini\\Server_Key.lua tPlotEditorPlotEvent_DelText[8066/8067/8073]. Questinfo BeginNpcId=0: officially the quest is handed over when you arrive. Here the Lunar Voyage window (Base\\JadeRabbit\\JadeRabbitUi.cs) accepts it at the area's JadeRabbit and moves you there, or you click JadeRabbit on the map. Once per character (Server_Key tMidAutumnAdventure_DelText[Sys][4]: 'already completed the exploration of this area'). Prize = Questinfo [item 3349968] Dewy Beauty Fragment x1, parsed by the engine.",
+  "npcTeleports": {
+    "8865001": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ],
+    "8865011": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ],
+    "8865021": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ]
+  },
+  "quests": {
+    "8066": {
+      "_name": "Rainbow Bay (Lunar Voyage area 1, ending 'Dreamy Rainbow')",
+      "beginNpc": 8865001,
+      "finishNpc": 8865001,
+      "finishMap": 1003074,
+      "finishX": 89,
+      "finishY": 37,
+      "beginText": "The lake in Rainbow Bay shows seven colors. It`s beautiful! I want to paint a rainbow picture to record the beauty of Rainbow Bay! In this Flower Garden, there are flowers of various colors. Please collect some flowers of different colors for me. I want to make them into pigments of various colors!",
+      "progressText": "You still need to collect some Rose to make red pigment, and some Lavender to make purple pigment.",
+      "finishText": "Great! I`m missing these three colors! Thank you!",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8865001,
+          "slot": 1,
+          "name": "JadeRabbit"
+        },
+        {
+          "type": "talk",
+          "npc": 8865002,
+          "slot": 2,
+          "name": "Tulip"
+        },
+        {
+          "type": "talk",
+          "npc": 8865003,
+          "slot": 3,
+          "name": "Rose"
+        },
+        {
+          "type": "talk",
+          "npc": 8865004,
+          "slot": 4,
+          "name": "Lavender"
+        },
+        {
+          "type": "talk",
+          "npc": 8865001,
+          "slot": 5,
+          "after": 4,
+          "name": "JadeRabbit"
+        }
+      ]
+    },
+    "8067": {
+      "_name": "Ring Mountain (Lunar Voyage area 2, ending 'Bound Foes')",
+      "beginNpc": 8865011,
+      "finishNpc": 8865011,
+      "finishMap": 1003075,
+      "finishX": 43,
+      "finishY": 46,
+      "beginText": "I was in a good mood. Who knew I`d run into this arrogant and rude fellow! Nasty fox! I`m going to pluck all its fox fur! Nasty Flame Fox! You must help me teach it a harsh lesson!",
+      "progressText": "Jade Rabbit has encountered its nemesis, Flame Fox, but Jade Rabbit is no match for the fox. Go help it! (59,59)",
+      "finishText": "You did great, really satisfying! Thank you for helping me out!",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8865011,
+          "slot": 2,
+          "name": "JadeRabbit"
+        },
+        {
+          "type": "kill",
+          "monster": "FlameFox",
+          "count": 1,
+          "slot": 1
+        },
+        {
+          "type": "talk",
+          "npc": 8865011,
+          "slot": 4,
+          "after": 1,
+          "name": "JadeRabbit"
+        }
+      ],
+      "_note": "[2026-10-15] official 'Defeat [mob FlameFox,1003075,59,59]': FlameFox = festival monster 22790 (official monster.dat 22790 lv120 120000 HP, DERIVED look FireRat 602), spawned for the player at (59,59) when the quest is taken.",
+      "onAccept": {
+        "spawn": {
+          "monster": "FlameFox",
+          "map": 1003075,
+          "x": 59,
+          "y": 59,
+          "count": 1,
+          "minutes": 15
+        }
+      }
+    },
+    "8073": {
+      "_name": "Clean Trash (Lunar Voyage area 6, ending 'Lunar Guardian')",
+      "beginNpc": 8865021,
+      "finishNpc": 8865021,
+      "finishMap": 1003078,
+      "finishX": 149,
+      "finishY": 152,
+      "beginText": "The trash left by the tourists not only affects the beauty but also emits a foul smell. We must take action and make all this trash disappear! Will you help me clean up the trash?",
+      "progressText": "There are still some leftover noodles over there. Please clean them up!",
+      "finishText": "Protecting the environment is everyone`s responsibility. I hope everyone can work together to protect the ecology of the moon. Thank you!",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8865021,
+          "slot": 1,
+          "name": "JadeRabbit"
+        },
+        {
+          "type": "talk",
+          "npc": 8865022,
+          "slot": 2,
+          "name": "Discarded Bottle"
+        },
+        {
+          "type": "talk",
+          "npc": 8865023,
+          "slot": 3,
+          "after": 2,
+          "name": "Leftover Noodle"
+        },
+        {
+          "type": "talk",
+          "npc": 8865021,
+          "slot": 4,
+          "after": 3,
+          "name": "JadeRabbit"
+        }
+      ]
+    }
+  }
+}

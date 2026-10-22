@@ -1,0 +1,7 @@
+{
+  "_note": "[Summer2023 2026-10-15] Base/Summer2023/Summer2023Cruise.cs (re-read when the file changes). OFFICIAL: 31 islets in 6 areas, fog per area, 30 Dream Points per cruise and per Anniversary Wish (tSummerActive2023Npc[31769][Text315]), wish cost 1/10 Dream Conch and the 20 wheel items (client Dialog_Info 1220-other). DERIVED (all values below): cruise cost and islet reward = the client's own sample islet block (yangfanyuanhangproxy test2), ark level = 1 + areas fully cruised, daily sign-in amount, wheel weights by slot colour (yellow 2, purple 8, blue 20, green 35, white 50).",
+  "cruiseCost": 1,
+  "isletReward": [ "3342541 0 1", "3009101 0 3", "3303373 0 1", "730002 0 2 3 7200 1", "3009001 0 1 0 2880 1", "3321077 0 3 3" ],
+  "signInPerDay": 5,
+  "wishWeights": [ 2, 8, 50, 8, 50, 35, 50, 35, 20, 50, 2, 8, 50, 8, 35, 2, 8, 2, 50, 50 ]
+}

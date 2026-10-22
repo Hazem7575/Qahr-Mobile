@@ -1,0 +1,35 @@
+{
+ "_note": "[2026-10-15 Vault Palace pass] video 03:05-03:30: SilkSpecters swarm the Global Mid-Autumn statue plaza (player at 190,311, ~15+ on screen); WeepWood around the golden urn near 250,276; BoneSnapper (red robes) around the golden urn + golden tree near 210,164. Counts/areas/respawn DERIVED from the frames.",
+ "spawns": [
+  {
+   "monster": "SilkSpecter",
+   "map": 12818,
+   "x": 172,
+   "y": 288,
+   "w": 40,
+   "h": 34,
+   "count": 20,
+   "respawn": 20
+  },
+  {
+   "monster": "WeepWood",
+   "map": 12818,
+   "x": 232,
+   "y": 262,
+   "w": 32,
+   "h": 26,
+   "count": 12,
+   "respawn": 20
+  },
+  {
+   "monster": "BoneSnapper",
+   "map": 12818,
+   "x": 192,
+   "y": 148,
+   "w": 36,
+   "h": 28,
+   "count": 12,
+   "respawn": 20
+  }
+ ]
+}

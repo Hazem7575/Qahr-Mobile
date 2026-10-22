@@ -1,0 +1,11 @@
+# WhiteSnakeLegend (Spring Festival 2025 "Bless All" - White Snake Mark story). id,type,mesh,map,x,y   (2026-10-14)
+# Every NPC is -1 in Questinfo (instance NPC) -> festival range 8863001-8863099.
+# Map = the official instance id 1003905; Infinity[DB]\FestivalMaps\maps.txt sends doc 12734 (2025tsf_new, Snake year).
+# Positions = the official Questinfo points, all walkable (r0) on 2025tsf_new.dmap.
+# mesh = client npc.ini [NpcTypeN] x10 / NpcX.ini [N] x10.
+8863001,2,1100010,1003905,539,398  # WhiteSnake (NpcX 110001 [WhiteSnakeMark]) - every begin/finish of the story
+8863002,2,36330,1003905,525,380    # WonderLingzhi - PROXY: no client entry; npc.ini 3633 Herb (ft 靈草, spirit herb = lingzhi)
+8863003,2,35660,1003905,305,586    # TraceOfMark - PROXY: no client entry; npc.ini 3566 TrailSpot (ft 蹤跡點 = trace spot)
+8863004,2,100550,1003905,702,531   # BottomOfLeifengTower - PROXY: no client entry; npc.ini 10055 SearchingPoint (search spot)
+8863005,2,33740,1003905,475,490    # EarthDeity (npc.ini 3374 [WhiteSnakeMark]); 8354 finish point 477,503 = the same NPC
+8863006,2,1100020,1003905,472,691  # XuXian (NpcX 110002 [WhiteSnakeMark]); 8356 finish point 492,718 = the same NPC

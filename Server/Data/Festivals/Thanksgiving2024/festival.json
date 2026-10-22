@@ -1,0 +1,29 @@
+{
+  "key": "Thanksgiving2024",
+  "name_ar": "عيد الشكر 2024",
+  "name_en": "Thanksgiving Feast",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Thanksgiving: only the newest official edition (ThanksgivingFashion2025) runs on its yearly dates, like the official server; this older edition runs only with @festival on Thanksgiving2024. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ مهرجان عيد الشكر! دوس على زرار عيد الشكر اللي فوق.",
+  "announce_en": "The Thanksgiving Feast in Mythic Domain has begun!",
+  "end_ar": "انتهى مهرجان عيد الشكر. نشوفكم السنة الجاية!",
+  "end_en": "The Thanksgiving story in Mythic Domain has come to an end, and more exciting stories will continue at Christmas. Stay tuned!",
+  "maps": [],
+  "notes": "Thanksgiving2024 (2026-10-14): official 2024 Global Thanksgiving (Mythic Domain / Lady Coco) entry only - top-bar Fgui button 150184, main window Fui24GanenMain (msg 10486 tMsg_Info['Fui24Ge'], Base/Thanksgiving2024/Thanksgiving2024Ui.cs), official rule page RuleText['10486-1']. Fertility Points are 0 (nothing awards them); points bar max 120000 = top cumulative tier of pointsrankdata CONST_POINTS_AWARD_DATA[10486]. Finale Feast story, Turkey Refuge, Wish of Fertility (CS), rankings and shops are official server scripts we do not have -> polite system message. No Questinfo quests.",
+  "_quests": [],
+  "_officialMaps": [],
+  "_owner": "Thanksgiving2024-agent",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150184',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150184',['Show']=false,['Red']=0}}",
+  "icon_click": "10486</S>ThanksGiving2024View_MainView",
+  "_icon": "[Thanksgiving2024 2026-10-14] official top-bar Fgui button 150184 (client fguibtnconfig, img lua_2024qqgeru1); clicks: Base/Thanksgiving2024/Thanksgiving2024Ui.cs",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "11-19",
+    "end": "12-02",
+    "_note": "Official: Cn_Res STR_FUI_24GANEN_TIME 'Duration: Nov. 19, 2024 - Dec. 2, 2024' (= ERP601000 comment 11.19-12.2). Server local time."
+  }
+}

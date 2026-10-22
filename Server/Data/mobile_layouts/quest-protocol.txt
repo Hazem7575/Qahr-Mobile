@@ -1,0 +1,37 @@
+# QahrMobile packet layouts: quest packets (owner: quest-protocol). Format: Networking\Mobile\MobileLayouts.Loader.cs.
+# CMsgTaskStatus 2126 stays in quests.txt.
+
+# CMsgTaskDetailInfo 10136 (quest progress counters). Mobile (Process / Create(t,j) / Create()+Append(j)):
+# action u16 4 (only 0 is processed), count u16 6, units of 32 bytes from 8: task id u32 +0, 7 counters u32 +4..+28
+# (keys 1..7 of the mission data, then PostCmd 0xc17). The mobile asks with the same struct (count = 1..31 ids, the
+# counters empty) after every task list.
+# Server: MsgQuestDataCreate(UnKnow, UID, intents) = u16 0, u16 intents count, task id 8, intents from 12, u32 0;
+# MsgQuestDataCreate(UnKnow, UID, OwnerUID) (the answer to a request) = UnKnow u32 4 (the request's action+count
+# echoed), task id 8, 6 intents 12..35, owner uid 36. The server reads action+count u32 4, task id 8, intent 12.
+# Every unit is carried both ways (units line, MobileLayouts.StructStruct.cs): in, the mobile's count and all its
+# 32-byte units reach the server (8 + 32 * count bytes; today's handler still answers only the first id); out, the
+# count is cut to the units the server packet really holds (at least one: the intents builder writes its intents
+# count there), 0 -> 1, and only the first 28 bytes of each unit are copied (task id + 6 counters; the answer's owner
+# uid at 36 stays out of counter 7).
+[2339 MsgTaskDetailInfo struct 16 40]
+4 4 u16
+6 6 u16 map 0>1
+8 8 units:32:28 count 6 6 u16 out
+8 8 units:32 count 6 6 u16 in
+
+# CMsgTaskReward 10038 (task reward lottery, CDlgTaskReward): action u8 4, param u32 5 (Create(i)/Create(i,j), size 13);
+# Process: 0 = free lottery for task ids 30002..39998, 1 = reward index u8 5, 6 = PostCmd 0xd75 param, 9 = index.
+# Server: MsgTaskReward.CreateTaskReward = action u8 4, dwParam u32 5, count u8 9; reader the same offsets.
+[2044 MsgTaskReward same]
+
+# CMsgProcessGoalTaskOpt 10077 (stage goals = the server's Hero Biography): mode u8 4, param u32 5, size 9.
+# Mobile sends 0 = query stage (CStageGoalData::QueryStageInfo), 1 = goal prize (GetGoalPrize), 2 = stage prize
+# (GetStagePrize); Process reads 1 / 2 with the param. Server MsgHeroReward: Show 0, ClaimPrize 1 (goal id, stage =
+# id/100), ClaimSubPrize 2 (stage) = HeroRewardCreate(mode u8 4, prize u32 5). Same layout and numbers.
+[2378 MsgProcessGoalTaskOpt same]
+
+# CMsgProcessGoalTask 10063 (stage goal list): stage u32 4, all done u8 8, count u16 9, units of 6 bytes from 11:
+# goal id u32 +0, u8 +4, u8 +5 (CStageGoalData::UpdateGoalDate). Server HeroRewardlistCreate: stage u32 4, all done
+# u8 8, count u16 9, units of 9 bytes from 11: goal id u32, UnKnow u32 (always 0), claim u8. Not translated: the server
+# never sends it (the Hero Biography is closed in MsgHeroReward), and the meaning of the two mobile bytes is not
+# checked yet, so it stays dropped.

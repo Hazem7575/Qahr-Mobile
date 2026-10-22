@@ -1,0 +1,18 @@
+# BandsTrouble (2026-10-15) Antonio`s stories (Base\BandsTrouble\AntonioStory.cs). id,type,mesh,map,x,y
+# Block 8851013-8851028 (8851001-8851012 = the instance NPCs of quests.json). Cells: walkable, DERIVED (no official cell: 7978-7984 are not in Questinfo).
+# 1003043 = Antonio`s home (doc 12547 family, maps.txt), 1003045 = the Stage (doc 12549 2024stage_new, the base map; the 7985 story runs in private copies).
+8851013,2,1050770,1003043,110,118  # Antonio. PROXY: no Antonio type in any client; NpcX 105077 'Antony'
+8851014,2,12300,1003043,92,112  # Antonio`s Father. PROXY: npc.ini 1230 Chilly`sFather
+8851015,2,34010,1003043,110,92  # Chest (7979 theremin). npc.ini 3401 MusicalNoteChest (2024 music event chest)
+8851016,2,34010,1003043,97,77  # Chest (7979 flute, guarded by the NotePixie)
+8851017,2,34010,1003043,120,110  # Chest (7979 triangle)
+8851018,2,1050770,1003045,50,56  # Antonio (stage). PROXY NpcX 105077
+8851019,2,103240,1003045,66,62  # Conner. PROXY: no Conner type in any client; npc.ini 10324 Musician
+8851020,2,1061460,1003045,46,48  # Miko (NpcX 106146 Miko, official)
+8851021,2,1061470,1003045,62,52  # Maria (NpcX 106147 Maria, official)
+8851022,2,24510,1003045,52,52  # Player (7981 DynaNpcName1 'Player' = npc.ini 2451 Player, official name)
+8851023,2,35820,1003045,47,61  # Clutter Heap (7982 DynaNpcName1) = npc.ini 3582 MessyStage
+8851025,2,38470,1003045,62,60  # Nook (7982 DynaNpcName2 = npc.ini 3847 Nook, official name)
+8851026,2,38480,1003045,57,58  # Drumbeat (7983 = npc.ini 3848 Drumbeat, official name)
+8851027,2,38490,1003045,58,62  # Bass (7983 = npc.ini 3849 Bass, official name)
+8851028,2,39440,1003045,62,56  # Saxophone (7983 = npc.ini 3944 Saxophone, official name)

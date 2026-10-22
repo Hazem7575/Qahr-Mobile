@@ -1,0 +1,434 @@
+{
+  "_note": "LunarNewYear2023 (Agent 4). Overlay on top of QuestEngine/quests.json while the festival runs. Questinfo gives NO prize for any of these quests, so no 'prize' is set (the server still gives its normal per-quest EXP ball under level 130). Instance NPCs (-1) are festival NPCs 8840002-8840012 standing on the official docs 12021/12022/12023 (shared event maps). [2026-10-15 COMPLETE] 5445 BrigandChief on 12024 (tiger01 = official 1002213), 5451 beasts, Grand Spring Bag on the 3 story ends (official text).",
+  "npcTeleports": {
+    "31153": [
+      {
+        "text": "Maple Forest (Tiger Farewell)",
+        "map": 12021,
+        "x": 296,
+        "y": 236,
+        "minLevel": 80
+      },
+      {
+        "text": "Bunny Village (Bunny Spring)",
+        "map": 12022,
+        "x": 75,
+        "y": 76,
+        "minLevel": 80
+      },
+      {
+        "text": "Tiger Lair (Brigand Chief)",
+        "map": 12024,
+        "x": 52,
+        "y": 60,
+        "minLevel": 80,
+        "requireQuest": 5445
+      },
+      {
+        "text": "Dragon Realm (Poised Dragon)",
+        "map": 12023,
+        "x": 65,
+        "y": 62,
+        "minLevel": 80,
+        "requireQuest": 5450
+      }
+    ],
+    "8840002": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 387,
+        "y": 386
+      },
+      {
+        "text": "Tiger Lair (Brigand Chief)",
+        "map": 12024,
+        "x": 52,
+        "y": 60,
+        "requireQuest": 5445
+      }
+    ],
+    "8840003": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 387,
+        "y": 386
+      }
+    ],
+    "8840009": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 387,
+        "y": 386
+      }
+    ]
+  },
+  "quests": {
+    "5442": {
+      "_name": "Reluctant Tiger King",
+      "beginNpc": 8840002,
+      "finishNpc": 8840002,
+      "finishMap": 12021,
+      "finishX": 300,
+      "finishY": 232,
+      "beginText": "The Year of the Tiger is over, but I don't want to leave yet... Will you listen to me?",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8840002,
+          "slot": 1,
+          "name": "Tiger King"
+        }
+      ],
+      "next": 5443,
+      "autoAccept": true
+    },
+    "5443": {
+      "_name": "Listen to Wishes",
+      "_deviation": "official finish NPC Woodcutter (-1) has no mesh in the client npc.ini/NpcX.ini: the step is reaching his hut (official point 259,266) and reporting to the Tiger King",
+      "beginNpc": 8840002,
+      "finishNpc": 8840002,
+      "finishMap": 12021,
+      "finishX": 300,
+      "finishY": 232,
+      "beginText": "Help me ask the Woodcutter what he wishes for. His hut is south-west of here (259,266).",
+      "objectives": [
+        {
+          "type": "visit",
+          "map": 12021,
+          "x": 259,
+          "y": 266,
+          "range": 3,
+          "slot": 1,
+          "name": "Woodcutter's hut"
+        }
+      ],
+      "next": 5444,
+      "autoAccept": true
+    },
+    "5444": {
+      "_name": "Achieve Wish 1",
+      "beginNpc": 8840002,
+      "finishNpc": 8840002,
+      "finishMap": 12021,
+      "finishX": 300,
+      "finishY": 232,
+      "beginText": "Go to drive away Brigands in Maple Forest! (around 391,324)",
+      "objectives": [
+        {
+          "type": "kill",
+          "monster": "Brigand",
+          "count": 10,
+          "slot": 1,
+          "map": 12021
+        }
+      ],
+      "next": 5445,
+      "autoAccept": true
+    },
+    "5445": {
+      "_name": "Achieve Wish 2",
+      "_deviation": "[2026-10-15] official 'defeat BrigandChief' in instance 1002213 (doc 12024 tiger01, official point 48,50): the quest now teleports to map 12024 and summons BrigandChief there (festival monster 998301, DERIVED look/stats: no monster.dat row). The map is shared (no private copy); the summon is personal (only this player's quest counts it).",
+      "beginNpc": 8840002,
+      "finishNpc": 8840002,
+      "finishMap": 12021,
+      "finishX": 300,
+      "finishY": 232,
+      "beginText": "Go to strike down Brigand Chief first! He hides in the Tiger Lair behind the village.",
+      "progressText": "Go to strike down Brigand Chief first!",
+      "onAccept": {
+        "teleport": {
+          "map": 12024,
+          "x": 52,
+          "y": 60
+        },
+        "spawn": {
+          "monster": "BrigandChief",
+          "map": 12024,
+          "x": 48,
+          "y": 50,
+          "count": 1,
+          "minutes": 15
+        }
+      },
+      "onComplete": {
+        "teleport": {
+          "map": 12021,
+          "x": 296,
+          "y": 236
+        }
+      },
+      "objectives": [
+        {
+          "type": "kill",
+          "monster": "BrigandChief",
+          "count": 1,
+          "slot": 1,
+          "map": 12024,
+          "spawnedBy": "quest"
+        }
+      ],
+      "next": 5446,
+      "autoAccept": true
+    },
+    "5446": {
+      "_name": "Farewell",
+      "beginNpc": 8840002,
+      "finishNpc": 8840002,
+      "finishMap": 12021,
+      "finishX": 300,
+      "finishY": 232,
+      "beginText": "You have driven away all Brigands. Go to tell the good news and bid farewell to Tiger King.",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8840002,
+          "slot": 1,
+          "name": "Tiger King"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3340333,
+            "count": 1
+          }
+        ],
+        "_note": "official tSpringFestival2023Story_DelText[Sys][Complete]: 'You completed the story %s and received 1 Grand Spring Bag.' (sent by mail officially)"
+      }
+    },
+    "5447": {
+      "_name": "Bunny Spring",
+      "beginNpc": 8840003,
+      "finishNpc": 8840003,
+      "finishMap": 12022,
+      "finishX": 71,
+      "finishY": 72,
+      "beginText": "Everyone looks happy in Bunny Village. Talk to the Village Head.",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8840003,
+          "slot": 1,
+          "name": "Bunny Village Head"
+        }
+      ],
+      "next": 5448,
+      "autoAccept": true
+    },
+    "5448": {
+      "_name": "Bunny Spring (decorate)",
+      "beginNpc": 8840003,
+      "finishNpc": 8840003,
+      "finishMap": 12022,
+      "finishX": 71,
+      "finishY": 72,
+      "beginText": "Lend a hand in decorating Bunny Village: the east, west, north, south and center of the village.",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8840004,
+          "slot": 1,
+          "name": "East of Bunny Village"
+        },
+        {
+          "type": "talk",
+          "npc": 8840005,
+          "slot": 2,
+          "name": "West of Bunny Village"
+        },
+        {
+          "type": "talk",
+          "npc": 8840006,
+          "slot": 3,
+          "name": "North of Bunny Village"
+        },
+        {
+          "type": "talk",
+          "npc": 8840007,
+          "slot": 4,
+          "name": "South of Bunny Village"
+        },
+        {
+          "type": "talk",
+          "npc": 8840008,
+          "slot": 5,
+          "name": "Center of Bunny Village"
+        }
+      ],
+      "next": 5449,
+      "autoAccept": true
+    },
+    "5449": {
+      "_name": "Bunny Spring (good news)",
+      "beginNpc": 8840003,
+      "finishNpc": 8840003,
+      "finishMap": 12022,
+      "finishX": 71,
+      "finishY": 72,
+      "beginText": "Go and tell the good news to the Village Head!",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8840003,
+          "slot": 1,
+          "name": "Bunny Village Head"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3340333,
+            "count": 1
+          }
+        ],
+        "_note": "official story-complete reward: 1 Grand Spring Bag"
+      }
+    },
+    "5450": {
+      "_name": "Poised Dragon",
+      "beginNpc": 31153,
+      "finishNpc": 8840009,
+      "finishMap": 12023,
+      "finishX": 65,
+      "finishY": 58,
+      "beginText": "The Gold Dragon King cannot fly. Go to the Dragon Realm and find out why.",
+      "onAccept": {
+        "teleport": {
+          "map": 12023,
+          "x": 65,
+          "y": 62
+        }
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8840009,
+          "slot": 1,
+          "name": "Gold Dragon King"
+        }
+      ],
+      "next": 5451,
+      "autoAccept": true
+    },
+    "5451": {
+      "_name": "Suppress Eyes",
+      "_deviation": "[2026-10-15] official: each eye is watched by a beast (Server_Key CreateMonster 20655/20656/20657); defeat it, then suppress the eye (3 clicks = the official count 3). The 3 beasts are summoned for this player when the quest is accepted (festival monsters 998302-998304, DERIVED looks/stats); the eye clicks count only after its beast is down (hidden slots 4-6). Official order Bolt -> Blizzard -> Blaze is not forced.",
+      "beginNpc": 8840009,
+      "finishNpc": 8840009,
+      "finishMap": 12023,
+      "finishX": 65,
+      "finishY": 58,
+      "beginText": "Three eyes hold me down. Bolt Eye is watched by Bolt Beast, Blizzard Eye by Blizzard Beast and Blaze Eye by Blaze Beast. Defeat the beasts, then suppress the eyes.",
+      "progressText": "The Gold Dragon cannot fly. Go to figure out why.",
+      "onAccept": {
+        "spawn": [
+          {
+            "monster": "BoltBeast",
+            "map": 12023,
+            "x": 67,
+            "y": 84,
+            "count": 1,
+            "minutes": 20
+          },
+          {
+            "monster": "BlizzardBeast",
+            "map": 12023,
+            "x": 84,
+            "y": 66,
+            "count": 1,
+            "minutes": 20
+          },
+          {
+            "monster": "BlazeBeast",
+            "map": 12023,
+            "x": 64,
+            "y": 47,
+            "count": 1,
+            "minutes": 20
+          }
+        ]
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8840010,
+          "slot": 1,
+          "count": 3,
+          "name": "Bolt Eye",
+          "after": 4
+        },
+        {
+          "type": "talk",
+          "npc": 8840011,
+          "slot": 2,
+          "count": 3,
+          "name": "Blizzard Eye",
+          "after": 5
+        },
+        {
+          "type": "talk",
+          "npc": 8840012,
+          "slot": 3,
+          "count": 3,
+          "name": "Blaze Eye",
+          "after": 6
+        },
+        {
+          "type": "kill",
+          "monster": "BoltBeast",
+          "count": 1,
+          "slot": 4,
+          "map": 12023,
+          "spawnedBy": "quest"
+        },
+        {
+          "type": "kill",
+          "monster": "BlizzardBeast",
+          "count": 1,
+          "slot": 5,
+          "map": 12023,
+          "spawnedBy": "quest"
+        },
+        {
+          "type": "kill",
+          "monster": "BlazeBeast",
+          "count": 1,
+          "slot": 6,
+          "map": 12023,
+          "spawnedBy": "quest"
+        }
+      ],
+      "next": 5452,
+      "autoAccept": true
+    },
+    "5452": {
+      "_name": "Flying Dragon",
+      "beginNpc": 8840009,
+      "finishNpc": 8840009,
+      "finishMap": 12023,
+      "finishX": 65,
+      "finishY": 58,
+      "beginText": "The Gold Dragon King passed the test! Congratulate him.",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8840009,
+          "slot": 1,
+          "name": "Gold Dragon King"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3340333,
+            "count": 1
+          }
+        ],
+        "_note": "official story-complete reward: 1 Grand Spring Bag"
+      }
+    }
+  }
+}

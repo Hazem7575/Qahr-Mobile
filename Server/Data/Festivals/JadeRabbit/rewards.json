@@ -1,0 +1,14 @@
+{
+  "_note": "No exchanges: the official prize is the quest prize (Questinfo [item 3349968] Dewy Beauty Fragment), paid by the quest engine. Greetings = official Server_Key lines (tPlotEditorPlotEvent_DelText) where there is one.",
+  "npcText": {
+    "8865001": { "en": "The lake in Rainbow Bay shows seven colors. It`s beautiful!", "ar": "بحيرة Rainbow Bay فيها سبع ألوان. حلوة أوي!" },
+    "8865002": { "en": "These Tulips can be used to make yellow pigment.", "ar": "التوليب ده بيعمل لون أصفر." },
+    "8865003": { "en": "These Roses can be used to make red pigment.", "ar": "الورد ده بيعمل لون أحمر." },
+    "8865004": { "en": "Lavender makes purple pigment.", "ar": "اللافندر بيعمل لون بنفسجي." },
+    "8865011": { "en": "Nasty fox! I`m going to pluck all its fox fur!", "ar": "الثعلب الوحش ده! هنتف فروته كلها!" },
+    "8865021": { "en": "Protecting the environment is everyone`s responsibility.", "ar": "حماية البيئة مسؤولية الكل." },
+    "8865022": { "en": "Discarded Bottle", "ar": "إزازة مرمية." },
+    "8865023": { "en": "Leftover Noodle", "ar": "بقايا نودلز." }
+  },
+  "exchanges": []
+}

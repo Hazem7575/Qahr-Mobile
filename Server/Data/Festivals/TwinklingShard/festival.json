@@ -1,0 +1,21 @@
+{
+  "key": "TwinklingShard",
+  "name_ar": "مهرجان التلألؤ (شظايا التلألؤ)",
+  "name_en": "Twinkling Fest",
+  "enabled": true,
+  "schedule": { "type": "manual" },
+  "announce_ar": "بدأ مهرجان التلألؤ! افتح زرار Twinkling Fest فوق ودوّر على شظايا التلألؤ الخمسة.",
+  "announce_en": "The Twinkling Fest has begun! Join the festivities and search for Twinkling Shards (Twinkling Fest button).",
+  "end_ar": "انتهى مهرجان الكريسماس. شكرًا لمشاركتكم!",
+  "end_en": "The Christmas event has come to a close. Thank you for joining us. May joy follow you wherever you go!",
+  "maps": [ 1002, 1005565, 1005566, 1005567, 1005568, 1005569 ],
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150381',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150381',['Show']=false,['Red']=0}}",
+  "icon_click": "10831</S>Christmas2025Interface_ClientOpenMain",
+  "highlight_acts": [ 10831 ],
+  "_icon": "[TwinklingShard 2026-10-14] official top-bar Fgui button 150381 'Twinkling Fest' (fguibtnconfig, fguiname ChristmasMainUI) + Highlight Events page ActInfo 10831; clicks: Base/TwinklingShard/TwinklingShardUi.cs (msg 10831 tMsg_Info['Christmas25'])",
+  "notes": "2026-10-14. Christmas 2025 'Twinkling Fest' - the Twinkling Shard Search part (Questinfo 9500-9514, 5 areas x 3 quests, no Prize). Official maps 1005565-1005569 = docs 13150-13154 (FestivalMaps\\maps.txt, confidence A). Schedule manual: the official end is Jan. 14, 2026 (Aurora Crystal/Dew item texts) but the start date is in no client file. Official reward for collecting the 5 shards = Wuqu Snow Box 3355342 (client luauirewardshow 341006000 + Server_Key Text133), once per character per run, from the window. NOT on this server: Aurora Fireworks/cannons, Twinkling Points + ranking, Feeding Olaf, Vault Palace Visit/Fireworks, Stellar Court encounters (ImmortalityDivinity2025), the Starlight Store. See README_AR.md.",
+  "_owner": "TwinklingShard 2026-10-14",
+  "_quests": [ 9500, 9501, 9502, 9503, 9504, 9505, 9506, 9507, 9508, 9509, 9510, 9511, 9512, 9513, 9514 ],
+  "_officialMaps": { "1005565": 13150, "1005566": 13151, "1005567": 13152, "1005568": 13153, "1005569": 13154 }
+}

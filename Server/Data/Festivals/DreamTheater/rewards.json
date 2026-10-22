@@ -1,0 +1,702 @@
+{
+  "_note": "DreamTheater exchanges + greetings (official rebuild 2026-10-14). Wish Gold/Silver Coins are spent at the Wish Fountain (Agnes, module Base\\DreamTheater). Rates = official item texts / video: 10 Wish Twinkle Coins = 1 Wish Silver Coin, 100 = 1 Wish Gold Coin (item 3347478); Flori: 1 Tulip Certificate = 1 Twinkle, 3 Orchid / 3 Lily Certificates = 1, 1 Peony Certificate = 2. Not here (owner decision): the CP shop of Fluffy and the Love Velvet garment exchanges (those garment items have no use handler on this server), the Anima -> 512/256/128 Silver Coin rows (> 40 items per exchange) and the 500/day flower cap.",
+  "npcText": {
+    "8830000": {
+      "ar": "مسرح الأحلام هيعرض أوبرا \"قصة بحيرة البجع\". ساعدني أرجّع المسرح لمجده.",
+      "en": "The romantic and beautiful opera `Swan Lake Romance` will be performed at [Dream Theater]. If you can assist me in rebuilding the theater, I will share the profits earned from the performances with you."
+    },
+    "8830001": {
+      "ar": "المسرح بيتجدد. هات عملات Twinkle وأنا أبدّلها لك.",
+      "en": "The romantic opera `Swan Lake Romance` is currently in hot performance. You can purchase the latest theater merchandise from me to cheer for your favorite performer!"
+    },
+    "8830002": {
+      "ar": "بدّل شهادات الورد بعملات Wish Twinkle.",
+      "en": "Today you can exchange flowers/gifts for Wish Twinkle Coins. If you want more, please use Flower Certificates to exchange."
+    },
+    "8830003": {
+      "ar": "ليون: إنت مدير المسرح اللي أختي عزمته؟ سامحني على قلة الذوق.",
+      "en": "Leon: Are you the Theater Manager that my sister invited to manage the theater? Please forgive my rudeness. I heard that my sister hired a love expert to teach me how to win Princess Odette`s heart, so I was a bit impatient."
+    },
+    "8830004": {
+      "ar": "[الحب في كل مكان...] آسفة، كنت لسه سرحانة في الأوبرا.",
+      "en": "[Love is everywhere, like the sunlight, like the air, mysterious and noble...] Sorry, I was still immersed in the opera. It was rude of me."
+    },
+    "32606": {
+      "ar": "زمان كنت بطل سباق الزلاجات تلات مرات!",
+      "en": "Back in the day, I was the three-time champion of the sled race!"
+    },
+    "32619": {
+      "ar": "زمان كنت بطل سباق الزلاجات تلات مرات!",
+      "en": "Back in the day, I was the three-time champion of the sled race!"
+    },
+    "32608": {
+      "ar": "لالالا... لازم أتمرّن على الغنا كل يوم!",
+      "en": "Lalala... Don`t mind me. It feels uncomfortable if I don`t practice singing for a day!"
+    },
+    "32620": {
+      "ar": "لالالا... لازم أتمرّن على الغنا كل يوم!",
+      "en": "Lalala... Don`t mind me. It feels uncomfortable if I don`t practice singing for a day!"
+    },
+    "32610": {
+      "ar": "الرياضيات صعبة أوي!",
+      "en": "Math is so difficult!"
+    },
+    "32621": {
+      "ar": "الرياضيات صعبة أوي!",
+      "en": "Math is so difficult!"
+    },
+    "32611": {
+      "ar": "بنتي لازم ماتتأخرش... أسجّلها في أنهي كورس المرة دي؟",
+      "en": "My child mustn`t fall behind. What kind of interest class should I sign up my child for this time?"
+    },
+    "32612": {
+      "ar": "ركوب الحصان الكبير ممتع! عايز أبقى أحسن فارس!",
+      "en": "It`s so much fun to ride a big horse! I want to be the best knight on the prairie!"
+    },
+    "32622": {
+      "ar": "ركوب الحصان الكبير ممتع! عايز أبقى أحسن فارس!",
+      "en": "It`s so much fun to ride a big horse! I want to be the best knight on the prairie!"
+    },
+    "32615": {
+      "ar": "أخيرًا هرجع أمثّل على المسرح!",
+      "en": "I can finally continue performing on stage!"
+    },
+    "32623": {
+      "ar": "أخيرًا هرجع أمثّل على المسرح!",
+      "en": "I can finally continue performing on stage!"
+    },
+    "32616": {
+      "ar": "اتولدت بشرف وأموت بمجد!",
+      "en": "Born in honor, die in glory! Rather break than bend."
+    },
+    "32624": {
+      "ar": "اتولدت بشرف وأموت بمجد!",
+      "en": "Born in honor, die in glory! Rather break than bend."
+    },
+    "32617": {
+      "ar": "مياو مياو.",
+      "en": "Meow, meow, meow."
+    },
+    "32625": {
+      "ar": "مياو مياو.",
+      "en": "Meow, meow, meow."
+    }
+  },
+  "exchanges": [
+    {
+      "id": "twinkle_silver",
+      "npc": 8830001,
+      "text_ar": "10 Twinkle ← عملة فضية",
+      "text_en": "10 Wish Twinkle Coins -> Wish Silver Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 10
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3600697,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "twinkle_gold",
+      "npc": 8830001,
+      "text_ar": "100 Twinkle ← عملة دهبية",
+      "text_en": "100 Wish Twinkle Coins -> Wish Gold Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 100
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347476,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "tulip_cert",
+      "npc": 8830002,
+      "text_ar": "شهادة توليب ← 1 Twinkle",
+      "text_en": "1 Tulip Certificate -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 3304137,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "orchid_cert",
+      "npc": 8830002,
+      "text_ar": "3 شهادات أوركيد ← 1 Twinkle",
+      "text_en": "3 Orchid Certificates -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 3304135,
+            "count": 3
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "lily_cert",
+      "npc": 8830002,
+      "text_ar": "3 شهادات ليلي ← 1 Twinkle",
+      "text_en": "3 Lily Certificates -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 3304136,
+            "count": 3
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "peony_cert",
+      "npc": 8830002,
+      "text_ar": "شهادة بيوني ← 2 Twinkle",
+      "text_en": "1 Peony Certificate -> 2 Wish Twinkle Coins",
+      "cost": {
+        "items": [
+          {
+            "id": 3340793,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 2
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "cp_gold",
+      "npc": 8830001,
+      "text_ar": "عملة دهب (99 CP)",
+      "text_en": "Wish Gold Coin (99 CPs)",
+      "cost": {
+        "cps": 99
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347476,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "cp_silver",
+      "npc": 8830001,
+      "text_ar": "عملة فضة (10 CP)",
+      "text_en": "Wish Silver Coin (10 CPs)",
+      "cost": {
+        "cps": 10
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3600697,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "cp_sonata",
+      "npc": 8830001,
+      "text_ar": "Swan Sonata (4999 CP)",
+      "text_en": "Swan Sonata (4999 CPs)",
+      "cost": {
+        "cps": 4999
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347510,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "cp_purity",
+      "npc": 8830001,
+      "text_ar": "Swan Sonata Purity (19999 CP)",
+      "text_en": "Swan Sonata (Purity) (19999 CPs)",
+      "cost": {
+        "cps": 19999
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347511,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "cp_bridal",
+      "npc": 8830001,
+      "text_ar": "Beloved Bridal (26000 CP)",
+      "text_en": "Beloved Bridal (Vow) (26000 CPs)",
+      "cost": {
+        "cps": 26000
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347512,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "cp_elitepack",
+      "npc": 8830001,
+      "text_ar": "Elite Flower Pack (45 CP)",
+      "text_en": "Elite Flower Pack (45 CPs)",
+      "cost": {
+        "cps": 45
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3310215,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "cp_deluxepack",
+      "npc": 8830001,
+      "text_ar": "Deluxe Flower Pack (420 CP)",
+      "text_en": "Deluxe Flower Pack (420 CPs)",
+      "cost": {
+        "cps": 420
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3310216,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "rose_cert",
+      "npc": 8830002,
+      "text_ar": "3 شهادات ورد احمر <- 1 Twinkle",
+      "text_en": "3 Red Rose Certificates -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 3304134,
+            "count": 3
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "p10_anima",
+      "npc": 8830002,
+      "text_ar": "P10 Anima <- 512 عملة فضة",
+      "text_en": "1 P10 Anima -> 512 Wish Silver Coins",
+      "cost": {
+        "items": [
+          {
+            "id": 4200010,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3600697,
+            "count": 512
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "p9_anima",
+      "npc": 8830002,
+      "text_ar": "P9 Anima <- 256 عملة فضة",
+      "text_en": "1 P9 Anima -> 256 Wish Silver Coins",
+      "cost": {
+        "items": [
+          {
+            "id": 4200009,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3600697,
+            "count": 256
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "p8_anima",
+      "npc": 8830002,
+      "text_ar": "P8 Anima <- 128 عملة فضة",
+      "text_en": "1 P8 Anima -> 128 Wish Silver Coins",
+      "cost": {
+        "items": [
+          {
+            "id": 4200008,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3600697,
+            "count": 128
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_jade",
+      "npc": 8830002,
+      "text_ar": "1 Jade <- 1 Twinkle",
+      "text_en": "1 Jade -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 758001,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_tulip",
+      "npc": 8830002,
+      "text_ar": "1 Tulip <- 1 Twinkle",
+      "text_en": "1 Tulip -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 754001,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_beer",
+      "npc": 8830002,
+      "text_ar": "3 Tins of Beer <- 1 Twinkle",
+      "text_en": "3 Tins of Beer -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 757003,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_orchids",
+      "npc": 8830002,
+      "text_ar": "3 Orchids <- 1 Twinkle",
+      "text_en": "3 Orchids -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 753003,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_letters",
+      "npc": 8830002,
+      "text_ar": "3 Love Letters <- 1 Twinkle",
+      "text_en": "3 Love Letters -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 756003,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_lilies",
+      "npc": 8830002,
+      "text_ar": "3 Lilies <- 1 Twinkle",
+      "text_en": "3 Lilies -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 752003,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_kisses",
+      "npc": 8830002,
+      "text_ar": "3 Kisses <- 1 Twinkle",
+      "text_en": "3 Kisses -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 755003,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_roses",
+      "npc": 8830002,
+      "text_ar": "3 Red Roses <- 1 Twinkle",
+      "text_en": "3 Red Roses -> 1 Wish Twinkle Coin",
+      "cost": {
+        "items": [
+          {
+            "id": 751003,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_peony",
+      "npc": 8830002,
+      "text_ar": "1 Peony <- 2 Twinkle",
+      "text_en": "1 Peony -> 2 Wish Twinkle Coins",
+      "cost": {
+        "items": [
+          {
+            "id": 761001,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 2
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "gift_marble",
+      "npc": 8830002,
+      "text_ar": "1 Marble <- 2 Twinkle",
+      "text_en": "1 Marble -> 2 Wish Twinkle Coins",
+      "cost": {
+        "items": [
+          {
+            "id": 759001,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3347478,
+            "count": 2
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    }
+  ],
+  "_fluffy_2026_10_15": "[DreamTheater 2026-10-15] Fluffy [TheaterShop]: CP goods = the official prices of the March 2024 video (spec section 5; the 2024 EmoneySaleShop[32650] rows are gone from this client); Love Velvet 3347321 goods = official costs tWhiteDay2024NPC[3347321] Text114-119 (official: a dialog when the Love Velvet is used; here at Fluffy). The vouchers 3347510-3347515 open from the bag (Base/CastleMystery/CastleStartle.cs). Not here: Elite/Deluxe Flower Pack (contents not in the client), the titles Graceful as Water/Vibrant as Fire (no title item), 'make up with CPs', Chi Points.",
+  "_flori_2026_10_15": "[DreamTheater 2026-10-15 video pass] Flori = official dialog (video UQaPh 8:09-8:17): '*Exchange for Wish Twinkle Coins (Limited)*' flowers/gifts (1 Jade/Tulip 1, 3 Beer/Orchids 1, 3 Love Letters/Lilies 1, 3 Kisses/Red Roses 1, 1 Peony/Marble 2; the official cap of 500 Twinkle a day from gifts is not enforced (OPEN)) and '(Unlimited)' certificates + P10/P9/P8 Anima -> 512/256/128 Wish Silver Coins. Love Velvet goods moved to the Love Velvet item dialog (official tWhiteDay2024NPC[3347321]). Fluffy adds Elite/Deluxe Flower Pack 45/420 CPs (video qiOK 12:12 CP Mall)."
+}

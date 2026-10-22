@@ -1,0 +1,6 @@
+# QahrMobile packet layouts: guild / world auction ("vendue"). No layout lines are needed:
+# 2084 MsgItemVendue <-> mobile 10417 CMsgItemVendue is protobuf on both sides and the server builds it with the
+# mobile's own field numbers (Features\GuildAuction\GuildAuctionProto.cs: CMsgItemVenduePB 1 UnAction, 2 NJoinType,
+# 3 NRet, 4 NMsgOrder, 5 Info = CVendueItemInfoPB 1 N64AutoID .. 9 SzLastName, from libCQ2ClientEn
+# SerializeWithCachedSizes). 10418 CMsgItemVendueList (protobuf) has no PC id and keeps 10418 on the server.
+# The handlers are reached through GuildAuctionModule.TryHandle (hook in Program.Game_Receive).

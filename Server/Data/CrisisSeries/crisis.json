@@ -1,0 +1,15 @@
+{
+  "_note": "[CrisisSeries 2026-10-14] White Day 2025 'Castle Startle' window (Base/CrisisSeries/CrisisSeriesUi.cs). OFFICIAL: castle/stage/boss order (client fgui_25bsqrj_jxmxdata BossId + monster.dat Boss=1 order), minLevel 80 (Questinfo Lv_min), Chicken Bun 3352187 = luauirewardshow 136001000. DERIVED: teleportFromMaps (where a boss challenge may start: cities, never inside a private copy); the board opens at the cell before the stage boss (the 18 event cells before it have no official data).",
+  "festival": "CrisisSeries",
+  "minLevel": 80,
+  "bunShowId": 136001000,
+  "bunItem": 3352187,
+  "teleportFromMaps": [
+    1002,
+    1000,
+    1011,
+    1015,
+    1020,
+    1036
+  ]
+}

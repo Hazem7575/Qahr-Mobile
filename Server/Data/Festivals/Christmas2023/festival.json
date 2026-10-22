@@ -1,0 +1,30 @@
+{
+  "key": "Christmas2023",
+  "name_ar": "الكريسماس العالمي 2023 (استكشاف الزمن)",
+  "name_en": "Global Christmas 2023 (Time Exploration)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Christmas: only the newest official edition (VillageRequests) runs on its yearly dates, like the official server; this older edition runs only with @festival on Christmas2023. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ الكريسماس العالمي! افتح زرار الكريسماس فوق وشوف حجر الزمن (لفل 80+).",
+  "announce_en": "The Global Christmas event has started! Click the Christmas button to visit the Stone of Time (Level 80+).",
+  "end_ar": "انتهى الكريسماس العالمي. نشوفكم المرة الجاية!",
+  "end_en": "The Global Christmas event has ended. See you next time!",
+  "maps": [],
+  "icon_show": "StrToTable|LuaUIMgr_ShowDialog(\"Dlg23ChristmasBtn\")",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"Dlg23ChristmasBtn\")",
+  "icon_click": "10326</S>Christmas2023View_OpenMainView",
+  "_icon": "[Christmas2023 2026-10-14] official lua button Dlg23ChristmasBtn (luaui\\dialog\\dlg23christmas, Dialog_Info 1447-btn, anisection 2023qqsd_btn8, BtnId 1447). The client has no server show call for it, so it is shown with LuaUIMgr_ShowDialog. Click 10326 Christmas2023View_OpenMainView (Dlg23ChristmasBtn_Enter / Dlg23ChristmasBtn_EnterMain) -> Base/Christmas2023/Christmas2023Ui.cs (Dlg23ChristmasMain).",
+  "notes": "2026-10-14 build (batch 3). Official dates Dec. 19, 2023 - Jan. 8, 2024 (luaUiRes_EN[1447].Time, ERP566869). Entry = the official Time Exploration window Dlg23ChristmasMain with real bag counts of Time Hourglass 3600669 / Time Chain 3600670, Time Points 0, Future gate open and Past/Present locked (official start state), plus the Point Reward page (official thresholds 500..88888) and the Ranking Reward Preview. Not on this server (system message, nothing granted): the Time Gate adventures, Time Level, Time Points, boxes, stage rewards, exchange store, ranking, cross-server. Quest 7607 'Repairing Snowman' (Questinfo TypeId 5, prize 20 Magic Snowballs 3600381) needs the Xmas Dungeon whose map is unknown (not in FestivalMaps\\maps.txt): listed only, no quests.json.",
+  "_owner": "Christmas2023",
+  "_quests": [
+    7607
+  ],
+  "_officialMaps": [],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "12-19",
+    "end": "01-08"
+  }
+}

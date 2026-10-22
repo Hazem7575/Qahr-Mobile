@@ -1,0 +1,29 @@
+{
+  "key": "QixiRomance2022",
+  "name_ar": "كيشي 2022 العالمي (Romantic Season)",
+  "name_en": "Global Qixi 2022: Romantic Season",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Qixi: only the newest official edition (SwordSaga) runs on its yearly dates, like the official server; this older edition runs only with @festival on QixiRomance2022. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ موسم الرومانسية (كيشي)! دوس على زرار Romantic Season اللي فوق (لفل 80+).",
+  "announce_en": "The Romantic Season has started! Click the Romantic Season button at the top (Level 80+).",
+  "end_ar": "انتهى موسم الرومانسية. نشوفكم السنة الجاية!",
+  "end_en": "The Romantic Season has ended. See you next year!",
+  "maps": [],
+  "icon_show": "DlgQiXiFestival_OpenEntranceIcon|{0}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgQiXiFestivalBtn\")",
+  "icon_click": "10044</S>Qixi2022Page_MainView",
+  "_icon": "[QixiRomance2022 2026-10-14] official lua button DlgQiXiFestivalBtn (luaui\\dialog\\dlgqixifestival, Dialog_Info '1266-btn', 'Romantic Season'), shown by g_function DlgQiXiFestival_OpenEntranceIcon|{redflag}. Click 10044 (tMsg_Info['QiXiFestival']) Qixi2022Page_MainView -> Base/QixiRomance2022/QixiRomance2022Ui.cs -> DlgQiXiFestivalMain_OpenUI.",
+  "notes": "2026-10-15 COMPLETE phase. Playable: main window (real state), Ethereal Harp repair/maintain/maintain-all (official materials 3600413-16, official reward list 1267-preview-award, Love Points), harp playing (1/3/10 Holy Plectrums, daily free First Love, official pools 1267-award-pool), Love Point rewards (official Text314-321), local ranking (>=5000), memoirs window (real Memory Stone count), NPCs Weaver Girl 8872001 + Orphee 8872002 in Twin City (Orphee: flowers/gifts -> harp materials, official table, 150/day), Silk/Blessing summons and the event boxes (QixiHooks). Derived values in Infinity[DB]\\QixiRomance2022\\qixiromance2022.json. Not on this server: Lyra starfields A-D (cross-server; GameMapEx 11840-11843 have no doc) and the memory instances (11845-11852, no doc), so Star Energy / Star Beasts / Memory Stone use; Animae->Holy Plectrum and Love->flower points exchanges; the 50000-point title; ranking end mails.",
+  "_owner": "QixiRomance2022",
+  "_quests": [],
+  "_officialMaps": {},
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "08-02",
+    "end": "08-22",
+    "_note": "Official: luaUiRes[1266][5] 'Duration: Aug. 2 - Aug. 22' (client luaui dlgqixifestival, 2022-06-28 全球七夕活动). Server local time. Overlaps Qixi2025 / QixiInterplane2024 / QixiQingqiu2023 if those run too (officially different years)."
+  }
+}

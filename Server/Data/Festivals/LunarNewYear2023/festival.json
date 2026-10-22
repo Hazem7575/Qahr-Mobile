@@ -1,0 +1,55 @@
+{
+  "key": "LunarNewYear2023",
+  "name_ar": "مهرجان الربيع 2023 (وداع النمر وربيع الأرانب والتنين)",
+  "name_en": "Spring Festival 2023 (Tiger Farewell, Bunny Spring, Poised Dragon)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] SpringFestival: only the newest official edition (SpringFestival2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on LunarNewYear2023. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ مهرجان الربيع! كلّم GiltSwirl في توين سيتي (387,382) عشان تودّع النمر وتزيّن قرية الأرانب وتساعد التنين الذهبي.",
+  "announce_en": "The Spring Festival has started! Talk to GiltSwirl in Twin City (387,382): bid the Tiger King farewell, decorate Bunny Village and help the Gold Dragon King fly.",
+  "end_ar": "انتهى مهرجان الربيع. نشوفكم السنة الجاية!",
+  "end_en": "The Spring Festival has ended. See you next year!",
+  "maps": [
+    1002,
+    1000,
+    1011,
+    1015,
+    1020,
+    12019,
+    12021,
+    12022,
+    12023,
+    12024
+  ],
+  "notes": "Agent 4 (2026-10-13). Official Questinfo festival quests 5442-5446 (Tiger Farewell), 5447-5449 (Bunny Spring), 5450-5452 (Poised Dragon), official dates 2023-01-17..2023-01-30. Official instances 1002210/1002211/1002212(/1002213) have no client doc; the client GameMap.dat registers the 2023 Spring block 12019 (2023tsf_new), 12021 (woods), 12022 (mfpk), 12023 (warrior_new), 12024 (tiger01) and every official quest point is walkable on exactly those docs -> the festival uses 12021/12022/12023 directly as shared event maps (no instance needed: nobody else uses them). Rewards: Questinfo gives none for these 11 quests, so the festival pays none (only the server's normal per-quest EXP ball under level 130). See README_AR.md.",
+  "_quests": [
+    5442,
+    5443,
+    5444,
+    5445,
+    5446,
+    5447,
+    5448,
+    5449,
+    5450,
+    5451,
+    5452
+  ],
+  "_officialMaps": {
+    "1002210": 12021,
+    "1002211": 12022,
+    "1002212": 12023,
+    "1002213": 12024
+  },
+  "_owner": "agent4",
+  "icon_show": "DlgNewYear_ShowBtn|{Data={Rewardflag=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgNewYearBtn\")",
+  "_icon": "[NewYear2023 2026-10-14] official 2023 Spring Festival button DlgNewYearBtn (Dialog_Info 1329, English 'New Year'); click -> SpringFestival2023 SpringInterface_MainView (server handler pending)",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "01-17",
+    "end": "01-30"
+  }
+}

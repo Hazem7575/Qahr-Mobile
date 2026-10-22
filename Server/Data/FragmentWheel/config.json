@@ -1,0 +1,352 @@
+{
+ "_readme": "FragmentWheel (Daisy 27814 + FragmentWheel 27815, Twin City). Re-read automatically when this file changes. 'official' = from client ini\\Server_Key.lua tRecycleFragmentAndUpLev; 'derived' = not in the client, chosen by us.",
+ "enabled": true,
+ "fragmentItemId": 3327170,
+ "_fragmentItemId": "official: [Souvenir Medal Fragment] = itemtype 3327170 SouvenirMedalFragment",
+ "levels": [
+  {
+   "level": 1,
+   "expToNext": 10,
+   "cost": 40000
+  },
+  {
+   "level": 2,
+   "expToNext": 20,
+   "cost": 50000
+  },
+  {
+   "level": 3,
+   "expToNext": 30,
+   "cost": 60000
+  },
+  {
+   "level": 4,
+   "expToNext": 40,
+   "cost": 70000
+  },
+  {
+   "level": 5,
+   "expToNext": 50,
+   "cost": 80000
+  },
+  {
+   "level": 6,
+   "expToNext": 60,
+   "cost": 90000
+  },
+  {
+   "level": 7,
+   "expToNext": 70,
+   "cost": 100000
+  },
+  {
+   "level": 8,
+   "expToNext": 80,
+   "cost": 120000
+  },
+  {
+   "level": 9,
+   "expToNext": 90,
+   "cost": 140000
+  },
+  {
+   "level": 10,
+   "expToNext": 100,
+   "cost": 160000
+  },
+  {
+   "level": 11,
+   "expToNext": 120,
+   "cost": 180000
+  },
+  {
+   "level": 12,
+   "expToNext": 0,
+   "cost": 200000
+  }
+ ],
+ "_levels": "official: [Wheel Level] [EXP for Upgrade] [Fragment Consumption] table, 1 EXP per spin, first spin of each level free",
+ "expOnlyFromCurrentLevel": true,
+ "_expOnlyFromCurrentLevel": "derived: spinning a lower-level wheel gives a reward but no EXP (else L1 spins would level the wheel at the L1 price)",
+ "minPlayerLevel": 70,
+ "_minPlayerLevel": "derived: anti-alt gate for the free spins",
+ "spinCooldownMs": 1500,
+ "confirmTimeoutSec": 60,
+ "_limits": "derived: rate limit + how long a 'Consume N fragments?' confirmation stays valid",
+ "prizes": {
+  "supergem": {
+   "items": [
+    700003,
+    700013,
+    700023,
+    700033,
+    700043,
+    700053,
+    700063,
+    700073
+   ],
+   "bound": false,
+   "name": "Super Gem",
+   "_note": "official name 'Super Gem'; derived: one random of the 8 classic super gems (Phoenix..Tortoise)"
+  },
+  "dragonball": {
+   "items": [
+    3333531
+   ],
+   "bound": true,
+   "name": "Dragon Ball (B)",
+   "_note": "official name; itemtype 3333531 DragonBall(B)"
+  },
+  "stone4": {
+   "items": [
+    730004
+   ],
+   "bound": true,
+   "name": "+4 Stone (B)",
+   "_note": "official name; itemtype 730004 = +4 Stone, granted bound"
+  }
+ },
+ "_rewards": "derived: one prize per spin, weights + counts per wheel level (the client only names the 3 prizes)",
+ "rewards": [
+  {
+   "level": 1,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 1,
+     "weight": 50
+    },
+    {
+     "prize": "dragonball",
+     "count": 1,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "level": 2,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 1,
+     "weight": 50
+    },
+    {
+     "prize": "dragonball",
+     "count": 1,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "level": 3,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 1,
+     "weight": 50
+    },
+    {
+     "prize": "dragonball",
+     "count": 1,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "level": 4,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 1,
+     "weight": 50
+    },
+    {
+     "prize": "dragonball",
+     "count": 1,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 10
+    }
+   ]
+  },
+  {
+   "level": 5,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 1,
+     "weight": 40
+    },
+    {
+     "prize": "dragonball",
+     "count": 2,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 20
+    }
+   ]
+  },
+  {
+   "level": 6,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 1,
+     "weight": 40
+    },
+    {
+     "prize": "dragonball",
+     "count": 2,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 20
+    }
+   ]
+  },
+  {
+   "level": 7,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 1,
+     "weight": 40
+    },
+    {
+     "prize": "dragonball",
+     "count": 2,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 20
+    }
+   ]
+  },
+  {
+   "level": 8,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 1,
+     "weight": 40
+    },
+    {
+     "prize": "dragonball",
+     "count": 2,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 20
+    }
+   ]
+  },
+  {
+   "level": 9,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 2,
+     "weight": 35
+    },
+    {
+     "prize": "dragonball",
+     "count": 3,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 25
+    }
+   ]
+  },
+  {
+   "level": 10,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 2,
+     "weight": 35
+    },
+    {
+     "prize": "dragonball",
+     "count": 3,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 25
+    }
+   ]
+  },
+  {
+   "level": 11,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 2,
+     "weight": 35
+    },
+    {
+     "prize": "dragonball",
+     "count": 3,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 1,
+     "weight": 25
+    }
+   ]
+  },
+  {
+   "level": 12,
+   "table": [
+    {
+     "prize": "supergem",
+     "count": 2,
+     "weight": 30
+    },
+    {
+     "prize": "dragonball",
+     "count": 4,
+     "weight": 40
+    },
+    {
+     "prize": "stone4",
+     "count": 2,
+     "weight": 30
+    }
+   ]
+  }
+ ]
+}

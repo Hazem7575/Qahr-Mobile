@@ -1,0 +1,28 @@
+{
+  "key": "Christmas2022",
+  "name_ar": "الكريسماس العالمي 2022 (مصنع المعجزات)",
+  "name_en": "Global Christmas 2022 (Xmas Miracle Factory)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Christmas: only the newest official edition (VillageRequests) runs on its yearly dates, like the official server; this older edition runs only with @festival on Christmas2022. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ الكريسماس العالمي! افتح زرار Xmas Miracle فوق وشوف مصنع المعجزات.",
+  "announce_en": "The Global Christmas event has started! Click the Xmas Miracle button to visit the Xmas Miracle Factory.",
+  "end_ar": "انتهى الكريسماس العالمي. نشوفكم المرة الجاية!",
+  "end_en": "The Global Christmas event has ended. See you next time!",
+  "maps": [],
+  "icon_show": "DlgChristmas_OpenMainBtn|{['Code']=200,['Data']={['Rewardflag']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgChristmasBtn\")",
+  "icon_click": "10153</S>ChrismasFactory_OpenMainButton",
+  "_icon": "[Christmas2022 2026-10-14] official lua button DlgChristmasBtn (luaui\\dialog\\dlgchristmas, Dialog_Info 1323-btn, label 'Xmas Miracle'), shown with the client's own DlgChristmas_OpenMainBtn. Click 10153 ChrismasFactory_OpenMainButton -> Base/Christmas2022/Christmas2022Ui.cs (DlgChristmasMain).",
+  "notes": "2026-10-14 build (batch 3, legacy lua). Official dates Dec. 20 - Jan. 4 (luaUiRes_EN['1323'].acttime, 2022 client script). Entry = the official Xmas Miracle Factory window DlgChristmasMain with the real bag count of Xmas Wishing Star 3600441 and the official opening state (3 broken production lines, nothing produced, first production free). Not on this server (system message, nothing granted): line repairs, producing gifts, Bear Wish, Miracle Delivery, ranking, cross-server Snowman Kingdom. No Questinfo quests, no maps. Overlaps every year with Christmas2023 / VillageRequests / TwinklingShard (officially each ran in its own year).",
+  "_owner": "Christmas2022",
+  "_quests": [],
+  "_officialMaps": [],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "12-20",
+    "end": "01-04"
+  }
+}

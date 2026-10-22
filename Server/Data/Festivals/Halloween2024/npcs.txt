@@ -1,0 +1,19 @@
+# Halloween2024 (Macabre Thrills). id,type,mesh,map,x,y. Official ids named by Questinfo 8150/8152/8154/8157/8159 at their Questinfo spots;
+# Witch House (12619, official instance 1003095 = the WitchHouse map; used as the public static map here) NPCs are -1 in Questinfo -> festival ids 8824xxx.
+# meshes = client npc.ini [NpcTypeN] x10 (names match), DERIVED where marked.
+33398,2,30690,12617,63,134  # Wraith summon spot = NpcType3069 SamsaraPond (8150 "Summon [npc Wraith,33398,12617,63,134]")
+33400,2,30930,12617,183,72  # Wraith summon spot = NpcType3093 OblivionRiver (8152)
+33402,2,32910,12617,203,131  # Wraith summon spot = NpcType3291 TormentTerrace (8154)
+33407,2,33460,12617,151,285  # Scene (8157 "Talk at the [npc Scene,33407,12617,151,285]"); mesh NpcType3346 Monument = DERIVED
+33411,2,33520,12617,26,182  # Wraith summon spot = NpcType3352 Hellfire (8159)
+8824001,2,9750,12619,359,337  # Witch (Questinfo -1,1003095,359,337); mesh NpcType975 Witch
+8824002,2,40910,12619,190,280  # FlameStele / QiongqiFlame (Questinfo -1,1003095,190,280); mesh NpcType4091 FlameTempleStele = DERIVED
+8824003,2,2800,12619,316,137  # ExorcisingWater (Questinfo -1,1003095,316,137); mesh NpcType280 ExorcismPillar = DERIVED
+8824010,2,1051680,12617,186,186  # Rose Countess (official 33455, no Questinfo quest -> festival id); mesh NpcX 105168 Countess = DERIVED; spot DERIVED (next to the Silent Hill exit 182,184)
+8824011,2,48220,12617,277,193  # Effigy of Fiend (official 33461) at the minimap "Sacrifice" marker; NpcType4822 EffigyOfFiend
+8824012,2,48250,12617,123,134  # Pandora`s Box / Box Genie (official 33466) at the minimap "Pandora`s Box" marker; NpcType4825 BoxGenie
+8824020,2,48210,12617,206,291  # Demonic Candy 1 (minimap "DemonicCandy" 222,292); NpcType4821 DemonicCandy
+8824021,2,48210,12617,226,296  # Demonic Candy 2 (minimap "DemonicCandy" 222,292); NpcType4821 DemonicCandy
+8824022,2,48210,12617,217,286  # Demonic Candy 3 (minimap "DemonicCandy" 222,292); NpcType4821 DemonicCandy
+8824023,2,48210,12617,229,287  # Demonic Candy 4 (minimap "DemonicCandy" 222,292); NpcType4821 DemonicCandy
+8824024,2,48210,12617,214,297  # Demonic Candy 5 (minimap "DemonicCandy" 222,292); NpcType4821 DemonicCandy

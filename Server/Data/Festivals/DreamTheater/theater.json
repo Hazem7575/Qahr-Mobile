@@ -1,0 +1,102 @@
+{
+  "_note": "Dream Theater management (module Base\\DreamTheater). Not read by the festival loader. Sources: client luaui dlgwhiteday (tAddSy), dlgmidautumninfo MidAutumn_Config[10369] (milestones, wish preview, rank tables), Server_Key tWhiteDay2024NPC / tWhiteDayLua, videos UQaPhJISUQ0 / qiOKUEANFQw / 9ZTyLoh6Pmk / tTO1t9_Tzts (tools\\ProtoStudio\\out\\dreamtheater_video_diff.md). Every value marked DERIVED is not in any official source and can be changed here.",
+  "festival": "DreamTheater",
+  "minLevel": 80,
+  "theaterMap": 12431, "entryX": 139, "entryY": 94,
+  "exitMap": 1002, "exitX": 373, "exitY": 441,
+  "unlockQuest": 5737,
+  "members": [ 5737, 5740, 5745, 5742, 5746, 5749, 5751 ],
+  "cleanQuests": [ 5752, 5796, 5797, 5798, 5799, 5800, 5801 ],
+  "troubleDone": [ 5755, 5756, 5757, 5758, 5759, 5760, 5761 ],
+  "recruitSegments": [
+    { "index": 1, "start": 5735, "end": 5737 },
+    { "index": 2, "start": 5738, "end": 5740 },
+    { "index": 3, "start": 5743, "end": 5745 },
+    { "index": 4, "start": 5741, "end": 5742 },
+    { "index": 5, "start": 5746, "end": 5746 },
+    { "index": 6, "start": 5747, "end": 5749 },
+    { "index": 7, "start": 5750, "end": 5751 }
+  ],
+  "_recruit_note": "Official window: Agnes offers ONE contract a day (luaui dlgwhitedaymain tNpcShowTaskInfo: TaskIndex 1-7 = the 7 recruitments in this order, 8 = cleaning, 9 = troupe troubles). Finishing that contract makes the performance ready (videos qiOKUEANFQw 2:48-3:02 and 9ZTyLoh6Pmk 7:28-7:32: recruitment done -> performance at once).",
+  "dailyAfterRecruit": "alternate",
+  "_daily_note": "DERIVED: after the 7 recruitments the daily contract alternates cleaning (8, even day number) / troupe troubles (9, odd). The official choice rule is not in the client.",
+  "levels": [
+    { "level": 1, "points": 300, "silver": 8,  "upgradeFunds": 100000,  "funds": 100000 },
+    { "level": 2, "points": 350, "silver": 9,  "upgradeFunds": 300000,  "funds": 150000 },
+    { "level": 3, "points": 400, "silver": 10, "upgradeFunds": 600000,  "funds": 200000 },
+    { "level": 4, "points": 450, "silver": 12, "upgradeFunds": 1000000, "funds": 250000 },
+    { "level": 5, "points": 500, "silver": 15, "upgradeFunds": 0,       "funds": 300000 }
+  ],
+  "_levels_note": "points/silver/upgradeFunds = official client tAddSy. funds per performance: Lv1 100000 (video qiOK 3:14), Lv3 200000 (video 9ZTy 7:50 / 8:56); Lv2/4/5 DERIVED (+50000 per level).",
+  "pointsPerMember": 30,
+  "_points_note": "Theater Points = level points + 30 per recruited member: Lv1 1 member 330 (qiOK 3:14), Lv3 4 members 520, Lv3 5 members 550 (9ZTy 7:50 / 8:56). Split 50% / 30% / 20% (Audience / Reputation / Growth, all videos).",
+  "silverPerMember": 1,
+  "_silver_note": "Settlement 2 (DlgWhiteDayActFinishTwo, qiOK 3:54): Income from Number of Performers 1 (Irwin) + Income from Theater Level 8 = 9 Wish Silver Coins.",
+  "silverCoin": 3600697, "goldCoin": 3347476, "twinkleCoin": 3347478, "loveVelvet": 3347321,
+  "wishPoints": 20,
+  "wishPool": [
+    { "id": 3347321, "count": 3, "weight": 2,  "_n": "Love Velvet x3 (highlighted row)" },
+    { "id": 3347321, "count": 1, "weight": 10, "_n": "Love Velvet" },
+    { "id": 3346828, "count": 1, "weight": 10, "_n": "+2 Stone (B) 5-day box" },
+    { "id": 3346831, "count": 1, "weight": 2,  "_n": "+5 Stone (B) 5-day box" },
+    { "id": 3346836, "count": 1, "weight": 10, "_n": "Bright Star Stone 2-day box" },
+    { "id": 3346837, "count": 1, "weight": 4,  "_n": "Radiant Star Stone 2-day box" },
+    { "id": 3321077, "count": 1, "weight": 12, "bound": true, "_n": "LeopardChiLiquor (B)" },
+    { "id": 3314207, "count": 1, "weight": 3,  "bound": true, "_n": "TigerChiLiquor (B)" },
+    { "id": 4060001, "count": 1, "weight": 10, "bound": true, "_n": "UniversalRuneEssence (B)" },
+    { "id": 3336211, "count": 1, "weight": 10, "_n": "Awakening Item Pack" },
+    { "id": 3336212, "count": 1, "weight": 2,  "_n": "Grand Awakening Item Pack" },
+    { "id": 3346822, "count": 1, "weight": 8,  "_n": "3KK Contribution Medal (B) box" },
+    { "id": 3009101, "count": 1, "weight": 12, "_n": "DragonFruit" },
+    { "id": 3009102, "count": 1, "weight": 5,  "_n": "MoonFruit" }
+  ],
+  "_wish_note": "Items = official reward preview MidAutumn_Config[10369].PreviewReward[1] (14 rows; the ',1' highlight = Love Velvet x3); all of them also appear in the videos. Weights DERIVED.",
+  "milestones": [
+    { "points": 1000,   "items": [ { "id": 3347321, "count": 1 },  { "id": 3346830, "count": 1 } ] },
+    { "points": 3000,   "items": [ { "id": 3347321, "count": 1 },  { "id": 3346824, "count": 2 } ] },
+    { "points": 5000,   "items": [ { "id": 3347321, "count": 2 },  { "id": 3346837, "count": 1 } ] },
+    { "points": 10000,  "items": [ { "id": 3347321, "count": 2 },  { "id": 3009103, "count": 1 } ] },
+    { "points": 30000,  "items": [ { "id": 3347516, "count": 1 },  { "id": 3347321, "count": 3 } ] },
+    { "points": 50000,  "items": [ { "id": 3347321, "count": 3 },  { "id": 3337910, "count": 6 } ] },
+    { "points": 80000,  "items": [ { "id": 3347321, "count": 5 },  { "id": 3337910, "count": 10 } ] },
+    { "points": 120000, "items": [ { "id": 3347321, "count": 10 }, { "id": 3337910, "count": 20 } ] }
+  ],
+  "extraEvery": 5000,
+  "extraItems": [ { "id": 3347321, "count": 1 }, { "id": 3009103, "count": 1 } ],
+  "_milestones_note": "Official: client MidAutumn_Config[10369].Rank.Total[1..9] + texts luaUiRes[1273][10369].Total (video qiOK 5:30 / tTO1 3:14).",
+  "rankMinPoints": 30000,
+  "rankSettle": "03-25 08:00",
+  "rankRewards": [
+    { "from": 1, "to": 1,  "box": "Dream Splendid Box", "items": [ { "id": 3347479, "count": 1 } ] },
+    { "from": 2, "to": 3,  "box": "Dream Starry Box",   "items": [ { "id": 3347480, "count": 1 } ] },
+    { "from": 4, "to": 6,  "box": "Dream Glowy Box",    "items": [ { "id": 3347481, "count": 1 } ] },
+    { "from": 7, "to": 10, "box": "Dream Lucky Box",    "items": [ { "id": 3347482, "count": 1 } ] }
+  ],
+  "_rank_note": "Official (tWhiteDayLua Email): the local ranking (>= 30000 Theater Points) settles 8:00 (US) Mar 25 and MAILS 1 Dream Splendid/Starry/Glowy/Lucky Box (sender Agnes, title Dream Ranking, Content[1..10]). The boxes open to their official item texts (DreamTheaterItems).",
+  "boxes": {
+    "3347479": [ { "id": 3347518, "count": 1 }, { "id": 3009103, "count": 5 }, { "id": 3322813, "count": 5, "minutes": 10080 }, { "id": 3328247, "count": 3000 } ],
+    "3347480": [ { "id": 3009103, "count": 3 }, { "id": 3322813, "count": 3, "minutes": 10080 }, { "id": 3328247, "count": 2000 } ],
+    "3347481": [ { "id": 3009103, "count": 2 }, { "id": 3322813, "count": 2, "minutes": 10080 }, { "id": 3328247, "count": 1500 } ],
+    "3347482": [ { "id": 3009103, "count": 1 }, { "id": 3322813, "count": 1, "minutes": 10080 }, { "id": 3328247, "count": 1000 } ]
+  },
+  "_boxes_note": "Official item texts 3347479-3347482 (+ MidAutumn_Config[10369].Rank[1] '3322813 0 n 3 10080' = 7-day medals).",
+  "loveVelvetGoods": [
+    { "group": 1, "item": 3347512, "cost": 160, "_n": "Beloved Bridal (Vow)" },
+    { "group": 1, "item": 3347515, "cost": 135, "_n": "Beloved Bridal (Vow) (B)" },
+    { "group": 2, "item": 3347511, "cost": 100, "_n": "Swan Sonata (Purity)" },
+    { "group": 2, "item": 3347514, "cost": 80,  "_n": "Swan Sonata (Purity) (B)" },
+    { "group": 2, "item": 3347513, "cost": 30,  "_n": "Swan Sonata (B)" },
+    { "group": 3, "item": 3347517, "cost": 60,  "_n": "Graceful as Water/Vibrant as Fire (Sincere Love Title Box)" }
+  ],
+  "_velvet_note": "Official costs tWhiteDay2024NPC[3347321] Text114-119 (the dialog when the Love Velvet is used, video qiOK 13:26).",
+  "velvetMakeUpCps": 163,
+  "velvetChiPoints": 100,
+  "_velvet_derived": "DERIVED: 'make up for short velvets' CPs per velvet (26000 CPs Bridal / 160 velvets) and Chi Points per velvet (the Wish Gold Coin rate). Not in the client.",
+  "coinChiAfterEvent": { "3600697": 10, "3347476": 100, "3347478": 10 },
+  "_coin_note": "Official item texts: after 7:59 (US) Mar 25 each coin becomes 10 / 100 / 10 Chi Points (applied when the coin is used while the event is closed).",
+  "flowerPacks": {
+    "3310215": { "min": 30,  "max": 200 },
+    "3310216": { "min": 300, "max": 2000 }
+  },
+  "_flower_note": "Elite (45 CPs) / Deluxe (420 CPs) Flower Pack at Fluffy (video qiOK 12:12): random Rose/Orchid/Lily/Tulip Certificates (official item text). Amounts DERIVED from the sister packs 3340791/3340792 texts (30-200 / 300-2000)."
+}

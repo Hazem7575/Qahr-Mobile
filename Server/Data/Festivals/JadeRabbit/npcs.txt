@@ -1,0 +1,19 @@
+# JadeRabbit (2026-10-14). Format id,type,mesh,map,x,y  - every NPC of these quests is -1 (instance NPC) in Questinfo -> festival range 8865xxx.
+# Maps = the official ids (Infinity[DB]\FestivalMaps\maps.txt: 1003074 -> doc 12599 ninja02_new, 1003075 -> 12600 gsjx05_new, 1003078 -> 12603 2019midaut01_new).
+#   They are used directly as shared event maps (nothing else stands on them), like LunarNewYear2023.
+# Positions = client Questinfo.ini (official), every cell walkable (r0) on the server DMap, no NPC within 3 cells.
+# Meshes = client npc.ini [NpcTypeN] x10, exact names AND the 2024 event tags:
+#   4882 JadeRabbit [CuteAdventurer] (the 2024 voyage rabbit; 4678 JadeRabbit [Moon~Palace] has the same SimpleObjID 670)
+#   4886 YellowTulip / 4887 RedRose / 4888 Lavender  all tagged [RainbowBay]
+#   4840 DiscardedBottle / 4841 LeftoverNoodle       both tagged [PeakOfEternity]
+# ---- Rainbow Bay 1003074 (quest 8066)
+8865001,2,48820,1003074,89,37  # JadeRabbit
+8865002,2,48860,1003074,91,58  # Tulip (npc.ini 4886 YellowTulip [RainbowBay])
+8865003,2,48870,1003074,111,49  # Rose (npc.ini 4887 RedRose [RainbowBay])
+8865004,2,48880,1003074,132,73  # Lavender (npc.ini 4888 Lavender [RainbowBay])
+# ---- Ring Mountain 1003075 (quest 8067). Official FinishNpc point 361,545 is outside the 112x112 map: the Intention point 43,46 is used.
+8865011,2,48820,1003075,43,46  # JadeRabbit
+# ---- Peak of Eternity 1003078 (quest 8073)
+8865021,2,48820,1003078,149,152  # JadeRabbit
+8865022,2,48400,1003078,127,147  # DiscardedBottle (npc.ini 4840 [PeakOfEternity])
+8865023,2,48410,1003078,135,132  # LeftoverNoodle (npc.ini 4841 [PeakOfEternity])

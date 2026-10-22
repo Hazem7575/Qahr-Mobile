@@ -1,0 +1,10 @@
+{
+  "_note": "No exchanges: the official Wish Conch / Ambergris shop (Whale Wish, transformation) is not on this server and its tables are not in the client. Greetings only (Cassio's text = his official npc.ini Word line).",
+  "npcText": {
+    "30727": { "ar": "شاطئ الصيف هيرجع له السلام قريب!", "en": "Summer Beach will soon have its peace back!" },
+    "30728": { "ar": "لأ! أنا محشور في الرملة!", "en": "No! I`m stuck in the sand!" },
+    "30733": { "ar": "الحيتان الصغيرة لازم تتعلم تعيش في البحر.", "en": "The young whales must learn how to survive in the sea." },
+    "8857001": { "ar": "محار طازة على الشط.", "en": "A fresh Scallop on the beach." }
+  },
+  "exchanges": []
+}

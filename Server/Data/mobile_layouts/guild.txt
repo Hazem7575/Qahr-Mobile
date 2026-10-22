@@ -1,0 +1,31 @@
+# QahrMobile packet layouts: Guilds (syndicates). The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgSyndicateAttributeInfo 10172 (103 bytes): guild id 4, contribution 8, silver fund u64 12, CP fund 20,
+# members 24, my rank 28, leader name 32 (32), recruit level 64 / members 68 / classes 72, recruit type 76,
+# level u8 80, title u16 81, join date 83, badge 87, impeach 91, impeach time u64 95 (CMsgSyndicateAttributeInfo::Process).
+# Server (MsgGuildInformation, 97 bytes): id 4, silver u64 8, CPs 16, members 20, rank 24, leader 28, level u16 60,
+# creation date 63, leader id 67, material u64 71, recruit off u8 79, battle power 80, on u8 84, prestige u64 85.
+[2267 MsgSyndicateAttributeInfo struct 97 103]
+4   4   u32
+8   12  u64
+16  20  u32
+20  24  u32
+24  28  u32
+28  32  str:32
+60  80  u8
+63  83  u32
+
+# CMsgSyndicate 10167 (44 bytes + strings): action u16 4, id 8, id/value 12, args 16 20 24 28, string list 43
+# (CMsgSyndicate::Create*: "Create(action, id)" writes 8, "Create(action, text, id)" writes 12; Process reads 12/16).
+# Server (MsgGuildProces.GuildRequest / GuildRequestCreate, 29 bytes + strings): action u32 4, uid 8, args 12 16 20 24,
+# string list 28 (the same u8 count + u16 length format). The actions are the same numbers (1 accept, 2 invite,
+# 3 quit, 6 name, 7..10 ally / enemy, 11 / 20 donate, 12 show, ...) except create: mobile 68 = server 51, invite 69 = 2, accept 70 = 1 (tester2).
+[2038 MsgSyndicate struct 29 44]
+4   4   u16  map 51=68 2<69 1<70   # in only: invite 69 (CFactionRecruitMgr::InviteJoinSynReq), accept 70 (AcceptJoinFactionReq); out the popup is the old case 2
+8   8   u32
+8   12  u32  out
+12  12  u32  in
+16  16  u32
+20  20  u32
+24  24  u32
+28  43  strings

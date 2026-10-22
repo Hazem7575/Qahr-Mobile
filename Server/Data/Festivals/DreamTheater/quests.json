@@ -1,0 +1,250 @@
+{
+  "_note": "DreamTheater overlay, official rebuild 2026-10-14 (spec: tools\\Festivals\\DreamTheater_OFFICIAL_AR.md). Order/counts/prizes = client Questinfo.ini; every text = the official server script strings of client ini\\Server_Key.lua (tPlotEditorPlotEvent_DelText / tMasterAndTheatre2024). Click mini-games (herbs, horses, cleaning, glasses, Jenkins duel) and the theater management = module Base\\DreamTheater\\DreamTheaterModule.cs (events dtHerb / dtHorse / dtClean / dtGlasses).",
+
+  "npcTeleports": {
+    "8830000": [
+      { "text": "Zhenwu Temple (Irwin)", "map": 11568, "x": 250, "y": 217, "minLevel": 80, "requireQuest": 5735 },
+      { "text": "Wave Chaser coast (Daisy)", "map": 11780, "x": 220, "y": 178, "minLevel": 80, "requireQuest": 5738 },
+      { "text": "Twisted City (Oliver)", "map": 11222, "x": 210, "y": 180, "minLevel": 80, "requireQuest": 5743 },
+      { "text": "Dragon`s Ascension (Mia)", "map": 11912, "x": 388, "y": 417, "minLevel": 80, "requireQuest": 5741 },
+      { "text": "Warlord Shrine (Maryan, Jenkins)", "map": 11041, "x": 113, "y": 70, "minLevel": 80, "requireQuest": 5746 },
+      { "text": "Toad Mountain (Lucky Kitty)", "map": 10764, "x": 215, "y": 127, "minLevel": 80, "requireQuest": 5750 }
+    ],
+    "32606": [ { "text": "Back to Twin City", "map": 1002, "x": 373, "y": 441 } ],
+    "32608": [ { "text": "Back to Twin City", "map": 1002, "x": 373, "y": 441 } ],
+    "32612": [ { "text": "Back to Twin City", "map": 1002, "x": 373, "y": 441 } ],
+    "32610": [ { "text": "Back to Twin City", "map": 1002, "x": 373, "y": 441 } ],
+    "32616": [ { "text": "Back to Twin City", "map": 1002, "x": 373, "y": 441 } ],
+    "32617": [ { "text": "Back to Twin City", "map": 1002, "x": 373, "y": 441 } ],
+    "8830003": [ { "text": "Return to Twin City.", "map": 1002, "x": 373, "y": 441 } ]
+  },
+
+  "instances": {
+    "BlackBearWoods": {
+      "_note": "Questinfo 5803 [mob BlackBear,1002566,409,290]: doc map 1002566 = a private copy of Zhenwu Temple 11568 right next to the logging spot (418,288).",
+      "map": 11568, "x": 412, "y": 291, "minutes": 15,
+      "exit": { "map": 11568, "x": 250, "y": 217 },
+      "monsters": [ { "monster": "BlackBear", "x": 409, "y": 290, "count": 5, "range": 4 } ]
+    },
+    "HorseTrainingField": {
+      "_note": "Questinfo 5744 [npc UntamedHorse,-1,1002565,196,258] (Twisted City map name): a private copy of 11222. Official DynaNpc names: Untamed Horse / Docile Horse.",
+      "map": 11222, "x": 196, "y": 258, "minutes": 15,
+      "exit": { "map": 11222, "x": 210, "y": 180 },
+      "npcs": [
+        { "id": 8830010, "mesh": 102890, "x": 192, "y": 254, "type": 2, "name": "UntamedHorse" },
+        { "id": 8830011, "mesh": 102890, "x": 200, "y": 262, "type": 2, "name": "DocileHorse" }
+      ]
+    },
+    "BirdmanOutskirts": {
+      "_note": "Questinfo 5748 [mob Birdman,1002560,123,117] (Warlord Shrine): a private copy of 11041 with the 20 Birdmen (official type 22395 Lv120 64000 HP).",
+      "map": 11041, "x": 123, "y": 117, "minutes": 20,
+      "exit": { "map": 11041, "x": 113, "y": 70 },
+      "monsters": [
+        { "monster": "GoldArmBirdman", "x": 123, "y": 117, "count": 10, "range": 6 },
+        { "monster": "GoldArmBirdman", "x": 119, "y": 113, "count": 10, "range": 6 }
+      ]
+    }
+  },
+
+  "quests": {
+    "5735": {
+      "_note": "Theater Recruitment 1. Questinfo BeginNpcId=0: Agnes hands the invitation (tMasterAndTheatre2024 [Contracts][1]). Lv 80.",
+      "beginNpc": 8830000,
+      "beginText": "Could you deliver this Interview Invitation to Mr. Irwin for me? Mr. Irwin used to be a skier, but he became interested in opera after retirement. We want to recruit him and inject new vitality into the opera.",
+      "finishText": "Irwin: What? Miss Agnes invited me to play the role of the butler in `Swan Lake Romance`? Oh my god! This is really unexpected! I thought I was not selected! Interview invitation? Sorry, the snow here has blocked the road. I think Agnes` interview invitation must be stuck at the post house! I can ride my sled to go to Pegg City for the interview. But a few days ago, the sled was damaged when I was buying food. This is easy! Just find some pine to replace the broken sled board. Can you help me fell some pine and replace the damaged sled board?",
+      "next": 5736, "autoAccept": true
+    },
+    "5736": {
+      "progressText": "Irwin: I can ride my sled to go to Pegg City for the interview.",
+      "finishText": "Felling pine... Several Black Bears suddenly appeared, seeming to want to take away the pine!",
+      "next": 5803, "autoAccept": true
+    },
+    "5803": {
+      "_note": "Kill 5 Black Bears in the private copy 1002566 (instance BlackBearWoods). onComplete leaves the copy next to Irwin.",
+      "objectives": [ { "type": "kill", "monster": "BlackBear", "count": 5, "slot": 1, "spawnedBy": "instance BlackBearWoods" } ],
+      "onAccept": { "instance": "BlackBearWoods" },
+      "onComplete": { "leaveInstance": true },
+      "progressText": "Irwin: I heard that there are often Black Bears near the pine area. Be careful!",
+      "finishText": "You defeated the Black Bears easily. Now, deliver the pine to Irwin!",
+      "next": 5737, "autoAccept": true
+    },
+    "5737": {
+      "prize": { "items": [ { "id": 3347476, "count": 1 } ] },
+      "finishText": "Irwin: Thank you so much! I`ll fix the sled and go immediately! (Irwin officially becomes a member of DreamTheater. Please go to the Dream Theater to start the performance!)",
+      "_next": "5738 (official: the next recruitment is Agnes` contract of another day, window TaskIndex)"
+    },
+
+    "5738": {
+      "beginNpc": 8830000, "prequest": "5737", "beginText": "Could you invite Daisy to sign a performance contract at the theater?",
+      "_note": "Theater Recruitment 2.",
+      "finishText": "Daisy: I`m really sorry, my voice suddenly went silent a while ago, I couldn`t sing now, so I couldn`t make it in time. Although I can speak, I can`t guarantee a normal performance. A few precious herbs are missing for the prescription. If you can find the herbs for me, maybe my voice can be cured.",
+      "next": 5739, "autoAccept": true
+    },
+    "5739": {
+      "_note": "Questinfo [chk_quest 5739,1,1,3]: 3 herbs (Balloon Flower 32609, Figwort 8830012, Herb 8830013), each clicked once (module, 'Collecting.....').",
+      "objectives": [ { "type": "event", "event": "dtHerb", "count": 3, "slot": 1, "text": "Herbs collected" } ],
+      "progressText": "Find the herbs to cure Daisy: Balloon Flower, Figwort and one more herb grow nearby.",
+      "finishText": "These herbs are enough to cure Daisy`s voice. Please go and give them to Daisy!",
+      "next": 5740, "autoAccept": true
+    },
+    "5740": {
+      "prize": { "items": [ { "id": 3347476, "count": 1 } ] },
+      "finishText": "Daisy: Lalalala! Great! My voice is back! Thank you very much for your help. I will go to Dream Theater to discuss the performance details with Miss Agnes! (Miss Daisy officially becomes a member of Dream Theater.)",
+      "_next": "5743 (official: the next recruitment is Agnes` contract of another day, window TaskIndex)"
+    },
+
+    "5743": {
+      "beginNpc": 8830000, "prequest": "5740", "beginText": "Could you find Oliver, who has run away from home, and bring him back to the theater?",
+      "_note": "Theater Recruitment 3 (official order: 5740 -> 5743).",
+      "finishText": "Oliver: I`m not going back! You adults are all big liars! Father promised to give me a horse for my birthday, but now he`s going back on his word. You want to give me a horse? I`m not taking just any horse. I`ve had my eye on the best-looking and fastest Untamed Horse in the horse training field outside the city! If you can tame it and bring it back, I`ll listen to what you say and go to Dream Theater for the performance.",
+      "next": 5744, "autoAccept": true
+    },
+    "5744": {
+      "_note": "Private copy 1002565 (instance HorseTrainingField). The Untamed Horse kicks you away (1), the Docile Horse is tamed (2); the module finishes the quest at the horse and accepts 5745 (Questinfo FinishNpcId=-1).",
+      "objectives": [ { "type": "event", "event": "dtHorse", "count": 2, "slot": 1, "text": "Tame an Untamed Horse" } ],
+      "onAccept": { "instance": "HorseTrainingField" },
+      "finishNpc": 0,
+      "onFinish": { "leaveInstance": true },
+      "progressText": "The grass here is rich and the horses are strong. Go to find a suitable horse for Oliver!",
+      "finishText": "You have successfully tamed this horse. Now give it to Oliver!",
+      "next": 5745, "autoAccept": true
+    },
+    "5745": {
+      "prize": { "items": [ { "id": 3347476, "count": 1 } ] },
+      "finishText": "Oliver: You did it! I will keep my word. Let me write a letter to my father before following you back to the theater. (Oliver officially becomes a member of Dream Theater.)",
+      "_next": "5741 (official: the next recruitment is Agnes` contract of another day, window TaskIndex)"
+    },
+
+    "5741": {
+      "beginNpc": 8830000, "prequest": "5745", "beginText": "Could you deliver this performance contract to Mia and her guardian for me?",
+      "_note": "Theater Recruitment 4 (official Prequest 5745).",
+      "finishText": "Mia: Agnes chose me to participate in the opera? It`s like a dream! But whether I can participate in the opera still requires my mother`s approval... Actually, I skipped class to participate in the opera audition. After my mother found out, she punished me severely and even grounded me. Can you persuade my mother to let me participate in the opera? I promise I won`t neglect my studies!",
+      "next": 5742, "autoAccept": true
+    },
+    "5742": {
+      "prize": { "items": [ { "id": 3347476, "count": 1 } ] },
+      "finishText": "Mia`s Mother: A performance contract? I didn`t expect this child to really make it! If we had paid more attention to Mia, perhaps we could have accompanied her to the audition. I will sign this performance contract as Mia`s guardian. Great! I will tell Mia`s father this good news immediately. (Mia officially becomes a member of Dream Theater.)",
+      "_next": "5746 (official: the next recruitment is Agnes` contract of another day, window TaskIndex)"
+    },
+
+    "5746": {
+      "beginNpc": 8830000, "prequest": "5742", "beginText": "Could you find out how Maryan is doing, and if she`s willing, invite her to join my troupe?",
+      "_note": "Theater Recruitment 5 (official Prequest 5742).",
+      "prize": { "items": [ { "id": 3347476, "count": 1 } ] },
+      "finishText": "Maryan: I thought that after leaving the stage for so many years, nobody would remember me. Agnes, my dear friend, I knew she wouldn`t forget me. I have made up my mind to return to the opera stage, even if I have to start as a supporting role. Really? That`s wonderful! Please tell Agnes that I will definitely show up at the Dream Theater on time. (Maryan officially becomes a member of Dream Theater.)",
+      "_next": "5747 (official: the next recruitment is Agnes` contract of another day, window TaskIndex)"
+    },
+
+    "5747": {
+      "beginNpc": 8830000, "prequest": "5746", "beginText": "Could you invite Jenkins to participate in my opera?",
+      "_note": "Theater Recruitment 6.",
+      "finishText": "Jenkins: There are Birdmen here. Please leave as soon as possible! Agnes? Performing? My pleasure! But the Birdmen outside the city are becoming more and more rampant. I have been tasked with protecting Pegg City and I really can`t leave. You seem reliable. How about this, if you can help me eliminate 20 Birdmen, I will be able to ask the general for leave to perform in Agnes` opera.",
+      "next": 5748, "autoAccept": true
+    },
+    "5748": {
+      "_note": "Kill 20 Birdmen in the private copy 1002560 (instance BirdmanOutskirts, 2 x 10).",
+      "objectives": [ { "type": "kill", "monster": "GoldArmBirdman", "count": 20, "slot": 1, "spawnedBy": "instance BirdmanOutskirts" } ],
+      "onAccept": { "instance": "BirdmanOutskirts" },
+      "onComplete": { "leaveInstance": true },
+      "progressText": "Jenkins: If you can help me eliminate 20 Birdmen, I will have time to perform in Agnes` opera.",
+      "finishText": "You have defeated the Birdmen outside the city. Go tell Jenkins the good news!",
+      "next": 5749, "autoAccept": true
+    },
+    "5749": {
+      "prize": { "items": [ { "id": 3347476, "count": 1 } ] },
+      "finishText": "Jenkins: You have great skills! I must seek a chance to learn from you! I will definitely fulfill my promise. After handing over my work, I will go to the Dream Theater! (Jenkins officially becomes a member of the Dream Theater.)",
+      "_next": "5750 (official: the next recruitment is Agnes` contract of another day, window TaskIndex)"
+    },
+
+    "5750": {
+      "beginNpc": 8830000, "prequest": "5749", "beginText": "Could you find the lost Lucky Kitty and bring it back to the theater for me?",
+      "_note": "Theater Recruitment 7.",
+      "progressText": "Lucky Kitty has brought a lot of little luck to the Dream Theater, but recently it has been absent frequently, which is really annoying.",
+      "finishText": "Searching... Lucky Kitty seems to have gone to the lakeside...",
+      "next": 5751, "autoAccept": true
+    },
+    "5751": {
+      "prize": { "items": [ { "id": 3347476, "count": 1 } ] },
+      "finishText": "Lucky Kitty: Meow! (Ah! I`ve been discovered!) Meow... Meow... (So many fish here! I`m so hungry.) Feeding... Meow! Meow! (Delicious! So delicious!) After enjoying a satisfying feast, Lucky Kitty returns to the Theater contentedly. Please go to the Dream Theater to start the performance!",
+      "final": true
+    },
+
+    "5752": { "_note": "Daily contract: cleaning (pool DTClean, begins at Agnes once Irwin joined). 3 of the cleaning spots (module 'Cleaning...').",
+      "beginNpc": 8830000, "prequest": "5737", "pool": "DTClean", "repeat": "daily", "finishNpc": 0,
+      "objectives": [ { "type": "event", "event": "dtClean", "count": 3, "slot": 1, "text": "Clean up the theater" } ],
+      "beginText": "Today`s cleaning task is entrusted to you! After each performance, the theater is always in a mess. Take the time to clean it up quickly!",
+      "finishText": "Thanks to you, the Dream Theater has been completely refreshed! The performance can be prepared now!",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5796": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTClean", "repeat": "daily", "finishNpc": 0,
+      "objectives": [ { "type": "event", "event": "dtClean", "count": 3, "slot": 1, "text": "Clean up the theater" } ],
+      "beginText": "Today`s cleaning task is entrusted to you! After each performance, the theater is always in a mess. Take the time to clean it up quickly!",
+      "finishText": "Thanks to you, the Dream Theater has been completely refreshed! The performance can be prepared now!",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5797": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTClean", "repeat": "daily", "finishNpc": 0,
+      "objectives": [ { "type": "event", "event": "dtClean", "count": 3, "slot": 1, "text": "Clean up the theater" } ],
+      "beginText": "Today`s cleaning task is entrusted to you! After each performance, the theater is always in a mess. Take the time to clean it up quickly!",
+      "finishText": "Thanks to you, the Dream Theater has been completely refreshed! The performance can be prepared now!",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5798": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTClean", "repeat": "daily", "finishNpc": 0,
+      "objectives": [ { "type": "event", "event": "dtClean", "count": 3, "slot": 1, "text": "Clean up the theater" } ],
+      "beginText": "Today`s cleaning task is entrusted to you! After each performance, the theater is always in a mess. Take the time to clean it up quickly!",
+      "finishText": "Thanks to you, the Dream Theater has been completely refreshed! The performance can be prepared now!",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5799": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTClean", "repeat": "daily", "finishNpc": 0,
+      "objectives": [ { "type": "event", "event": "dtClean", "count": 3, "slot": 1, "text": "Clean up the theater" } ],
+      "beginText": "Today`s cleaning task is entrusted to you! After each performance, the theater is always in a mess. Take the time to clean it up quickly!",
+      "finishText": "Thanks to you, the Dream Theater has been completely refreshed! The performance can be prepared now!",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5800": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTClean", "repeat": "daily", "finishNpc": 0,
+      "objectives": [ { "type": "event", "event": "dtClean", "count": 3, "slot": 1, "text": "Clean up the theater" } ],
+      "beginText": "Today`s cleaning task is entrusted to you! After each performance, the theater is always in a mess. Take the time to clean it up quickly!",
+      "finishText": "Thanks to you, the Dream Theater has been completely refreshed! The performance can be prepared now!",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5801": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTClean", "repeat": "daily", "finishNpc": 0,
+      "objectives": [ { "type": "event", "event": "dtClean", "count": 3, "slot": 1, "text": "Clean up the theater" } ],
+      "beginText": "Today`s cleaning task is entrusted to you! After each performance, the theater is always in a mess. Take the time to clean it up quickly!",
+      "finishText": "Thanks to you, the Dream Theater has been completely refreshed! The performance can be prepared now!",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+
+    "5753": { "_note": "Daily contract: troupe trouble (pool DTTrouble). Irwin's reading glasses 5753 -> 5754 -> 5755.",
+      "beginNpc": 8830000, "prequest": "5737", "pool": "DTTrouble", "repeat": "daily",
+      "beginText": "Help the troupe members solve their little troubles. It`s an essential task for the theater manager! Mr. Irwin has been distracted during rehearsals in recent days. It seems he has encountered some trouble. Go and talk to him!",
+      "finishText": "Irwin: I`m getting old and useless! Don`t mention it! I seem to have misplaced my reading glasses. Leon had to explain the rehearsal for me these past few days. But it feels bad to always trouble him. Can you find my reading glasses for me? So I can concentrate on the rehearsal.",
+      "next": 5754, "autoAccept": true },
+    "5754": { "prequest": "5753", "repeat": "daily",
+      "objectives": [ { "type": "event", "event": "dtGlasses", "count": 2, "slot": 1, "text": "Search the corners" } ],
+      "progressText": "Irwin: I`m getting old and useless. (The theater is cleaned every day, but no one has ever seen Irwin`s reading glasses. Maybe they are in a Hidden Corner.)",
+      "finishText": "After searching for a while, you found a pair of reading glasses. Quickly hand it over to Irwin!",
+      "next": 5755, "autoAccept": true },
+    "5755": { "prequest": "5754", "repeat": "daily",
+      "finishText": "Irwin: Yes! My reading glasses! Thank you so much! (Thanks to you, Mr. Irwin successfully completed the rehearsal and can now prepare for the performance!)",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5756": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTTrouble", "repeat": "daily",
+      "beginText": "Help the troupe members solve their little troubles. You can always hear Miss Daisy coughing at night. It seems that she is not feeling well. Go and comfort her!",
+      "finishText": "Daisy: Cough cough cough... Continuous performances have taken a toll on my throat. Oh no, how could I forget about that! I`ve been so busy these days, so I almost forgot that I prepared a lot of herbs to cure my throat. Thank you for reminding me. (With your reminder, Miss Daisy`s throat has been cured and she can now prepare for the performance!)",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5757": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTTrouble", "repeat": "daily",
+      "beginText": "Help the troupe members solve their little troubles. Mia seems very down. Go and see what`s wrong with her!",
+      "finishText": "Mia: Math is really difficult to learn. If I fail the exam again, Mom won`t let me join in the performance anymore. Can you help me? (Tutoring...) Time flies, and you have finally taught Mia how to do some mathematics. Wish her good results in the next exam!",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5758": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTTrouble", "repeat": "daily",
+      "beginText": "Help the troupe members solve their little troubles. Oliver has been moody these days. Go and talk to him!",
+      "finishText": "Oliver: Adults are so boring! Mia is busy doing maths. She has no time to play with me! You? Alright then! Let`s compete in puzzle games. (Solving puzzles...) Time flies, and you have finally completed the puzzle, and Oliver has fallen asleep. It seems like he had a lot of fun.",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5759": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTTrouble", "repeat": "daily",
+      "beginText": "Help the troupe members solve their little troubles. Miss Maryan seems to have something urgent to find you. Hurry up and see if she needs help!",
+      "finishText": "Maryan: I have been busy performing lately, and I haven`t seen my husband for a month. Tonight, he has made a reservation at a very classy restaurant. The French dress? How did you know that he booked a French restaurant? Wearing this outfit is a good choice! Thank you for your suggestion. (Thanks to you, Maryan successfully completed the date and can now prepare for the performance!)",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5760": { "_note": "Knight`s Covenant: talking to Jenkins 32624 in the theater starts the duel (module spawns KnightJenkins in the private copy). Questinfo slot 2.",
+      "beginNpc": 8830000, "prequest": "5737", "pool": "DTTrouble", "repeat": "daily",
+      "objectives": [ { "type": "kill", "monster": "KnightJenkins", "count": 1, "slot": 2, "spawnedBy": "DreamTheater module" } ],
+      "beginText": "Help the troupe members solve their little troubles. Mr. Jenkins invited you to a [Knight Challenge]. It`s time to go meet him!",
+      "progressText": "Jenkins: Do you still remember our promise? These days, I have been practicing swordsmanship after rehearsing for the opera. Now I am ready to challenge you!",
+      "finishText": "Jenkins: I acknowledge my inferiority. I respect you from the bottom of my heart! (Jenkins rehearses more diligently. You can now prepare for the performance!)",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } },
+    "5761": { "beginNpc": 8830000, "prequest": "5737", "pool": "DTTrouble", "repeat": "daily",
+      "beginText": "Help the troupe members solve their little troubles. Lucky Kitty looks a little listless today. Let`s go and see what`s wrong.",
+      "finishText": "Lucky Kitty: (Agnes forgot to give me food again!) (Feeding...) You fed Lucky Kitty some fresh fish. It happily gobbles them up and purrs contentedly.",
+      "prize": { "items": [ { "id": 3600697, "count": 1 } ] } }
+  }
+}

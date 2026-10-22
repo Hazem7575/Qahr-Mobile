@@ -1,0 +1,5 @@
+﻿# AprilFools2023 (Tricky Wit, 2026-10-15). id,type,mesh,map,x,y   mesh = client NpcX.ini [N] x10
+# Lyon has no Questinfo entry (no official id / cell): festival range 8892001. Map = Twin City Market 1036 (official text
+#   tHalloweenPage_DelText[105][2] "Please go to the Market in Twin City to try again."). Cell 203,193 DERIVED (walkable r2 on street.dmap,
+#   no NPC within 3 cells). Look = NpcX 105590 "Lyon" (official name).
+8892001,2,1055900,1036,203,193  # Lyon (NpcX 105590) - Challenge Trick Maze / Dungeon Breaker / Tricker Rankings (Base\AprilFools2023)

@@ -1,0 +1,587 @@
+{
+ "_note": "CrisisSeries (White Day 2025 'Castle Startle', Fgui 150249). Overlay while the festival runs. Playable: the 9 stage bosses (3 per castle), started from the castle window (Base/CrisisSeries/CrisisSeriesUi.cs) into a private copy of the official instance map. Questinfo gives NO prize for any of these quests, so none is set. Other quests are engine:false with the reason in _why.",
+ "instances": {
+  "CrisisGreen1": {
+   "_note": "Green Castle stage 1 boss (Green`s Crisis 5), official map 1003997 (maps.txt doc), boss at the Questinfo point",
+   "map": 1003997,
+   "x": 56,
+   "y": 44,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 439,
+    "y": 478
+   },
+   "monsters": [
+    {
+     "monster": "WickedFrieze",
+     "x": 44,
+     "y": 44,
+     "count": 1,
+     "range": 2
+    }
+   ]
+  },
+  "CrisisGreen2": {
+   "_note": "Green Castle stage 2 boss (Green`s Crisis 11), official map 1004003 (maps.txt doc), boss at the Questinfo point",
+   "map": 1004003,
+   "x": 71,
+   "y": 59,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 439,
+    "y": 478
+   },
+   "monsters": [
+    {
+     "monster": "BlazeDemon",
+     "x": 59,
+     "y": 59,
+     "count": 1,
+     "range": 2
+    }
+   ]
+  },
+  "CrisisGreen3": {
+   "_note": "Green Castle stage 3 boss (Green`s Crisis 16), official map 1003992 (maps.txt doc), boss at the Questinfo point",
+   "map": 1003992,
+   "x": 122,
+   "y": 110,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 439,
+    "y": 478
+   },
+   "monsters": [
+    {
+     "monster": "Demonstar",
+     "x": 110,
+     "y": 110,
+     "count": 1,
+     "range": 2
+    }
+   ]
+  },
+  "CrisisSmith1": {
+   "_note": "Smith Castle stage 1 boss (Smith`s Crisis 6), official map 1003992 (maps.txt doc), boss at the Questinfo point",
+   "map": 1003992,
+   "x": 122,
+   "y": 110,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 439,
+    "y": 478
+   },
+   "monsters": [
+    {
+     "monster": "GiantRaven",
+     "x": 110,
+     "y": 110,
+     "count": 1,
+     "range": 2
+    }
+   ]
+  },
+  "CrisisSmith2": {
+   "_note": "Smith Castle stage 2 boss (Smith`s Crisis 11), official map 1003996 (maps.txt doc), boss at the Questinfo point",
+   "map": 1003996,
+   "x": 58,
+   "y": 43,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 439,
+    "y": 478
+   },
+   "monsters": [
+    {
+     "monster": "DarkDeity",
+     "x": 47,
+     "y": 44,
+     "count": 1,
+     "range": 2
+    }
+   ],
+   "npcs": [
+    {
+     "id": 8878001,
+     "mesh": 100590,
+     "x": 46,
+     "y": 43,
+     "type": 2,
+     "name": "DemonHeart"
+    }
+   ]
+  },
+  "CrisisSmith3": {
+   "_note": "Smith Castle stage 3 boss (Smith`s Crisis 16), official map 1003997 (maps.txt doc), boss at the Questinfo point",
+   "map": 1003997,
+   "x": 56,
+   "y": 44,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 439,
+    "y": 478
+   },
+   "monsters": [
+    {
+     "monster": "DemonMatthew",
+     "x": 44,
+     "y": 44,
+     "count": 1,
+     "range": 2
+    }
+   ]
+  },
+  "CrisisMiller1": {
+   "_note": "Miller Castle stage 1 boss (Miller`s Crisis 6), official map 1003992 (maps.txt doc), boss at the Questinfo point",
+   "map": 1003992,
+   "x": 121,
+   "y": 125,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 439,
+    "y": 478
+   },
+   "monsters": [
+    {
+     "monster": "BarbieBunny",
+     "x": 109,
+     "y": 125,
+     "count": 1,
+     "range": 2
+    }
+   ]
+  },
+  "CrisisMiller2": {
+   "_note": "Miller Castle stage 2 boss (Miller`s Crisis 11), official map 1004001 (maps.txt doc), boss at the Questinfo point",
+   "map": 1004001,
+   "x": 77,
+   "y": 66,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 439,
+    "y": 478
+   },
+   "monsters": [
+    {
+     "monster": "DemonCharlie",
+     "x": 65,
+     "y": 66,
+     "count": 1,
+     "range": 2
+    }
+   ]
+  },
+  "CrisisMiller3": {
+   "_note": "Miller Castle stage 3 boss (Miller`s Crisis 16), official map 1004000 (maps.txt doc), boss at the Questinfo point",
+   "map": 1004000,
+   "x": 178,
+   "y": 125,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 439,
+    "y": 478
+   },
+   "monsters": [
+    {
+     "monster": "SkyboneDrake",
+     "x": 166,
+     "y": 125,
+     "count": 1,
+     "range": 2
+    }
+   ]
+  }
+ },
+ "quests": {
+  "8740": {
+   "_name": "Green`s Crisis 5",
+   "_castle": 1,
+   "_stage": 1,
+   "engine": true,
+   "prequest": "",
+   "beginText": "Captain Henry said that if you could defeat Wicked Frieze, the henchman of Dark Overlord, he would agree to cooperate with you.",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "WickedFrieze",
+     "count": 1,
+     "slot": 1,
+     "map": 1003997,
+     "name": "WickedFrieze"
+    }
+   ],
+   "onAccept": {
+    "instance": "CrisisGreen1"
+   }
+  },
+  "8746": {
+   "_name": "Green`s Crisis 11",
+   "_castle": 1,
+   "_stage": 2,
+   "engine": true,
+   "prequest": "8740",
+   "beginText": "Your actions have alerted Young Master William, who has sent out Blaze Demons to attack you!",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "BlazeDemon",
+     "count": 1,
+     "slot": 1,
+     "map": 1004003,
+     "name": "BlazeDemon"
+    }
+   ],
+   "onAccept": {
+    "instance": "CrisisGreen2"
+   }
+  },
+  "8751": {
+   "_name": "Green`s Crisis 16",
+   "_castle": 1,
+   "_stage": 3,
+   "engine": true,
+   "prequest": "8746",
+   "beginText": "Demonstar Sofia provides the Demon Soldiers with a continuous supply of Demonic Energy. You must find a way to eliminate her!",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "Demonstar",
+     "count": 1,
+     "slot": 1,
+     "map": 1003992,
+     "name": "Demonstar"
+    }
+   ],
+   "onAccept": {
+    "instance": "CrisisGreen3"
+   }
+  },
+  "8757": {
+   "_name": "Smith`s Crisis 6",
+   "_castle": 2,
+   "_stage": 1,
+   "engine": true,
+   "prequest": "",
+   "beginText": "After reaching the end of the maze, you saw a sleeping Giant Raven. Find a way to get through quickly!",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "GiantRaven",
+     "count": 1,
+     "slot": 1,
+     "map": 1003992,
+     "name": "GiantRaven"
+    }
+   ],
+   "onAccept": {
+    "instance": "CrisisSmith1"
+   }
+  },
+  "8762": {
+   "_name": "Smith`s Crisis 11",
+   "_castle": 2,
+   "_stage": 2,
+   "engine": true,
+   "prequest": "8757",
+   "beginText": "Dark Deity has awakened. Defeat it quickly and get the Demon Heart!",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "DarkDeity",
+     "count": 1,
+     "slot": 1,
+     "map": 1003996,
+     "name": "DarkDeity"
+    },
+    {
+     "type": "talk",
+     "npc": 8878001,
+     "slot": 2,
+     "after": 1,
+     "name": "DemonHeart"
+    }
+   ],
+   "onAccept": {
+    "instance": "CrisisSmith2"
+   },
+   "_deviation": "Questinfo kill target 'DemonHeart' is the boss Dark Deity (client monster.dat 23026 DarkDeity, Boss=1; the quest text: 'Dark Deity has awakened. Defeat it quickly and get the Demon Heart'); the Demon Heart itself is the NPC (npc.ini NpcType10059)",
+   "finishNpc": 8878001,
+   "finishMap": 1003996,
+   "finishX": 46,
+   "finishY": 43
+  },
+  "8767": {
+   "_name": "Smith`s Crisis 16",
+   "_castle": 2,
+   "_stage": 3,
+   "engine": true,
+   "prequest": "8762",
+   "beginText": "Demon Matthew has always lurked in the dark cave near the Smith family. Only by eliminating it can the Life Bubble Machine completely purify Demonic Energy!",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "DemonMatthew",
+     "count": 1,
+     "slot": 1,
+     "map": 1003997,
+     "name": "DemonMatthew"
+    }
+   ],
+   "onAccept": {
+    "instance": "CrisisSmith3"
+   }
+  },
+  "8773": {
+   "_name": "Miller`s Crisis 6",
+   "_castle": 3,
+   "_stage": 1,
+   "engine": true,
+   "prequest": "",
+   "beginText": "Barbie Bunny was contaminated by Demonic Energy and was about to give in. You must purify the Demonic Energy on it as soon as possible!",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "BarbieBunny",
+     "count": 1,
+     "slot": 1,
+     "map": 1003992,
+     "name": "BarbieBunny"
+    }
+   ],
+   "onAccept": {
+    "instance": "CrisisMiller1"
+   }
+  },
+  "8778": {
+   "_name": "Miller`s Crisis 11",
+   "_castle": 3,
+   "_stage": 2,
+   "engine": true,
+   "prequest": "8773",
+   "beginText": "Dark Overlord raised a demon in an unnamed cave. Defeat it to weaken the overlord`s power!",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "DemonCharlie",
+     "count": 1,
+     "slot": 1,
+     "map": 1004001,
+     "name": "DemonCharlie"
+    }
+   ],
+   "onAccept": {
+    "instance": "CrisisMiller2"
+   }
+  },
+  "8783": {
+   "_name": "Miller`s Crisis 16",
+   "_castle": 3,
+   "_stage": 3,
+   "engine": true,
+   "prequest": "8778",
+   "beginText": "Destroy Skybone Drake to completely defeat the overlord. Give it your all!",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "SkyboneDrake",
+     "count": 1,
+     "slot": 1,
+     "map": 1004000,
+     "name": "SkyboneDrake"
+    }
+   ],
+   "onAccept": {
+    "instance": "CrisisMiller3"
+   }
+  },
+  "8737": {
+   "_name": "Green`s Crisis 2",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Rogue"
+  },
+  "8738": {
+   "_name": "Green`s Crisis 3",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Rogue"
+  },
+  "8739": {
+   "_name": "Green`s Crisis 4",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Watchman"
+  },
+  "8741": {
+   "_name": "Green`s Crisis 6",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Gatekeeper"
+  },
+  "8742": {
+   "_name": "Green`s Crisis 7",
+   "engine": false,
+   "_why": "needs map 10820 (HattoriHanzo, unresolved in maps.txt)"
+  },
+  "8743": {
+   "_name": "Green`s Crisis 8",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: SinisterDealer"
+  },
+  "8744": {
+   "_name": "Green`s Crisis 9",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: DemonSoldier"
+  },
+  "8745": {
+   "_name": "Green`s Crisis 10",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: DemonWarden"
+  },
+  "8747": {
+   "_name": "Green`s Crisis 12",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Thug"
+  },
+  "8748": {
+   "_name": "Green`s Crisis 13",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: FlameSoldier"
+  },
+  "8749": {
+   "_name": "Green`s Crisis 14",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: CaptainSentinel, CastleSentinel"
+  },
+  "8750": {
+   "_name": "Green`s Crisis 15",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Demon`sMinion"
+  },
+  "8753": {
+   "_name": "Smith`s Crisis 2",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: EvilSprite"
+  },
+  "8754": {
+   "_name": "Smith`s Crisis 3",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: MadRobot"
+  },
+  "8755": {
+   "_name": "Smith`s Crisis 4",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: SandMonster"
+  },
+  "8756": {
+   "_name": "Smith`s Crisis 5",
+   "engine": false,
+   "_why": "story step between castle bosses (board event, no begin NPC)"
+  },
+  "8758": {
+   "_name": "Smith`s Crisis 7",
+   "engine": false,
+   "_why": "story step between castle bosses (board event, no begin NPC)"
+  },
+  "8759": {
+   "_name": "Smith`s Crisis 8",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: SeaSerpent"
+  },
+  "8760": {
+   "_name": "Smith`s Crisis 9",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: ShadowWyrm"
+  },
+  "8761": {
+   "_name": "Smith`s Crisis 10",
+   "engine": false,
+   "_why": "needs map 10820 (HattoriHanzo, unresolved in maps.txt)"
+  },
+  "8763": {
+   "_name": "Smith`s Crisis 12",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Kachu"
+  },
+  "8764": {
+   "_name": "Smith`s Crisis 13",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Kachu, MinKachu"
+  },
+  "8765": {
+   "_name": "Smith`s Crisis 14",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: SwampCreeper"
+  },
+  "8766": {
+   "_name": "Smith`s Crisis 15",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: RockBugSwarm"
+  },
+  "8769": {
+   "_name": "Miller`s Crisis 2",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Ruffian"
+  },
+  "8770": {
+   "_name": "Miller`s Crisis 3",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: DemonRyan"
+  },
+  "8771": {
+   "_name": "Miller`s Crisis 4",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: DarkWraith"
+  },
+  "8772": {
+   "_name": "Miller`s Crisis 5",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: PhantomLizard"
+  },
+  "8774": {
+   "_name": "Miller`s Crisis 7",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: Blood-eyedWolf"
+  },
+  "8775": {
+   "_name": "Miller`s Crisis 8",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: CastleWarden"
+  },
+  "8776": {
+   "_name": "Miller`s Crisis 9",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: HemovoreBat"
+  },
+  "8777": {
+   "_name": "Miller`s Crisis 10",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: FleshWraith"
+  },
+  "8779": {
+   "_name": "Miller`s Crisis 12",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: ChaoticCreation"
+  },
+  "8780": {
+   "_name": "Miller`s Crisis 13",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: BoneKnight"
+  },
+  "8781": {
+   "_name": "Miller`s Crisis 14",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: ToxicBird"
+  },
+  "8782": {
+   "_name": "Miller`s Crisis 15",
+   "engine": false,
+   "_why": "monster(s) without an official lookface: EnchantedArt"
+  }
+ }
+}

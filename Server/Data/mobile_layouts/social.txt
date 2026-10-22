@@ -1,0 +1,42 @@
+# QahrMobile packet layouts: Friends and flowers. The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgFriend 10139 (76 bytes): uid 4, action u8 8 (same 10..19 as MsgKnowPersons.Action), online u8 9,
+# peerage (nobility) 12, sex/face 16, level 20, name 40 (32), "return" 72 (CMsgFriend::Create / Process).
+# Server (MsgKnowPersons.KnowPersonsCreate, 124 bytes): uid 4, action 8, online 9, nobility u64 14, face u16 22,
+# level 24, description 28, name 92.
+[2254 MsgFriend struct 124 76]
+4   4   u32
+8   8   u8
+9   9   u8
+14  12  u32
+22  16  u16
+24  20  u32
+92  40  str:32
+
+# CMsgFlower 10294: action u16 4 (2/3 = flower counts by sex), FLOWER_NUM_INFO at 16 = MsgFlower.FlowerCreate
+[2211 MsgFlower same]
+
+# CMsgTrade 10119 (14 bytes): one value at 4 (u32 target uid / item uid / CPs, u64 money), action u16 at 12
+# (CMsgTrade::Create / Process). The mobile keeps the old CO action numbers (CHero::ApplyTrade/AcceptTrade = 1,
+# AgreeTrade 10, RefuseTrade/AutoRefuseTrade 17, QuitTrade 2, AddHeroTradeItem 6, money 7, CPs 13; Process: 1 AddApply,
+# 3 OpenTrade, 4/5 CloseTrade, 8/9 money, 10 partner agreed, 11 AddItemFalse, 12/14 CPs). The server's are
+# MsgTrade.TradeID: out, the mobile number goes in proto field 5 (MsgTrade.CreateTradeInfo -> Mobile\MobileTrade.ToMobile);
+# in, field 1 carries the raw mobile number and MsgTrade.HandlerTrade translates it (MobileTrade.FromMobile/Normalize).
+[2029 MsgTrade 14]
+5   12  u16  out     # mobile action (server -> mobile)
+1   12  u16  in      # raw mobile action (mobile -> server, translated in C#)
+6   4   u32          # UID (Request / AcceptRequest and the server's answers)
+3   4   u32  in      # ItemUID (AddItem)
+4   4   u32          # CPS (SetCPS / ShowCPS)
+2   4   u64          # Money (SetMoney / ShowMoney); the outgoing side writes only the non-zero field
+
+# CMsgEnemyList 10028 (84 bytes): action u8 4 (0 = enemy info), hero uid 8, count 12, one unit at 16:
+# online u8 16, enemy uid 20, peerage 24, sex 28, name 40 (32), "return" 72 (CMsgEnemyList::Process).
+# Server (MsgEnemyList.EnemyListCreate, 140 bytes): hero uid 4, count 8, online 12, enemy uid 16, name 28.
+# The mobile asks with its own uid at 8; the server reads the uid at 4.
+[2295 MsgEnemyList struct 140 84]
+4   8   u32
+8   12  u32  out
+12  16  u8   out
+16  20  u32  out
+28  40  str:32 out

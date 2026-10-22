@@ -1,0 +1,28 @@
+{
+  "key": "WorldCup2026",
+  "name_ar": "مجد الملعب (كأس العالم 2026 - الشوط التاني)",
+  "name_en": "Pitch Glory (Cloudsurge)",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "06-30",
+    "end": "07-20",
+    "_note": "Official: Server_Key header '2026全球世界杯决赛世界杯后半程活动[6.30-7.20]', Cn_Res STR_FUI_ACTTIME_10900 / STR_LUAUI_26FOOT_TIME1 'June 30 - July 20'. Server local time."
+  },
+  "announce_ar": "بدأ مهرجان كأس العالم: مجد الملعب (Cloudsurge)! دوس على الزرار اللي فوق.",
+  "announce_en": "Pitch Glory (Cloudsurge) has started!",
+  "end_ar": "انتهى مهرجان مجد الملعب (Cloudsurge). نشوفكم المرة الجاية!",
+  "end_en": "The Pitch Glory (Cloudsurge) event has ended. We look forward to working with you again next time!",
+  "maps": [
+    12818
+  ],
+  "notes": "WorldCup2026 (2026-10-14, batch 3): official Global World Cup 2026 second half 'Pitch Glory (Cloudsurge)' entry only - top-bar Fgui button 150448 (clickfunc WorldCup2026TaskSecond_OpenMainView), main window Fgui_26Foot_Main with Stage=1 (msg 10900 tMsg_Info['Foot26'], Base/WorldCup2026/WorldCup2026Ui.cs) and Highlight Events page ActInfo[10900]. The first half (button 150444) is the separate festival WorldCup2026Windrise. No Questinfo quests, no maps in maps.txt. Cuju Training/Tournament, Pitch Adventure, Penalty Kick-Off, Lucky Cheer, Vault Palace, Pitch Store and rankings answer with a system message. | COMPLETE 2026-10-15: Vault Palace Visit (button 7) teleports to Vault Palace 12818 at the official Pitch Glory statue spot; every other part answers with its exact reason (Reason() in WorldCup2026Ui.cs). Not possible: the 2026 World Cup items (Field Whistle, Pitch Point Box, Cheer/Casual Coins, prizes 3356639+/3600869) are newer than client_test/server itemtype; the Cuju Tournament pitch 13319 (2026worldcup_new) is in client - orignal GameMap.dat only; Albert's Dream 13310 / OldCujuPitch 13325 (2024thx_new = client_test doc 12633) have no server steps; Lucky Cheer = betting on the real matches.",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150448',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150448',['Show']=false,['Red']=0}}",
+  "icon_click": "10900</S>WorldCup2026TaskSecond_OpenMainView",
+  "highlight_acts": [
+    10900
+  ],
+  "_icon": "[WorldCup2026 2026-10-14] official top-bar Fgui button 150448 (client fguibtnconfig '下半场', img lua_26sjbei_hb15) + Highlight page ActInfo[10900]; clicks: Base/WorldCup2026/WorldCup2026Ui.cs",
+  "_owner": "batch3"
+}

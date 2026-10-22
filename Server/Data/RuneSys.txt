@@ -1,0 +1,2576 @@
+-- 符文背包
+local RuneBag = {
+    row=5,
+    line=5,
+    maxcount=100,
+}
+
+-- 符文装备
+local RuneEquip = {
+    lev=15, -- 等级
+    mete=2,  -- 转世
+}
+
+-- 符文光效
+local RuneEffect = {
+    qianjinding = "fwxtbdmwcfs",    --佛门千斤顶
+    guangquan = "fwhuanr",       --光圈光效
+    huoyan_red = "fwrans_r",      --红色火焰
+    huoyan_blue = "fwrans_b",     --蓝色火焰
+    huoyan_yellow = "fwrans_y",   --黄色火焰
+    lianjie = "fwlianjie",         --连接光效
+    guangtuan = "fwyidong_up",        --光团光效
+    sankai = "fwyidong_down",          --散开光效
+    fensuijianshao = "fuwen2_fensui",   --粉碎伤害减少
+    fantanjiaqiang = "fwzsshftjq",  --反弹伤害加强
+    fashugedang = "fwSpellBlock",  --法伤格挡
+    fensuijiacheng = "fwfsdamage",  --粉碎加成
+    ----
+    wushangjianmian = "fuwen2_fensui",    --物伤减免
+    fashangjianmian = "fwSpellBlock",    --法伤减免
+    ----
+}
+
+local RUNEATTR = {}
+RUNEATTR.SER_ATTRIBUTE_UP_MAX_LIFE	= 1		                -- 提高生命上限
+RUNEATTR.USER_ATTRIBUTE_ADD_PHYSIC_ATTACK = 2	            -- 提高物理攻击力
+RUNEATTR.USER_ATTRIBUTE_ADD_PHYSIC_DEFENCE = 3              -- 提高物理防御力
+RUNEATTR.USER_ATTRIBUTE_ADD_MAGIC_ATTACK = 4	            -- 提高法术攻击力
+RUNEATTR.USER_ATTRIBUTE_ADD_MAGIC_DEFENCE = 5	            -- 提高法术防御力
+RUNEATTR.USER_ATTRIBUTE_ADD_FINAL_PHYSIC_DAMAGE = 6			-- 提高最终物理伤害
+RUNEATTR.USER_ATTRIBUTE_ADD_FINAL_PHYSIC_DAMAGE_REDUCE = 7	-- 最终物伤减免
+RUNEATTR.USER_ATTRIBUTE_ADD_FINAL_MAGIC_DAMAGE = 8			-- 提高最终法术伤害
+RUNEATTR.USER_ATTRIBUTE_ADD_FINAL_MAGIC_DAMAGE_REDUCE = 9	-- 最终法伤减免
+RUNEATTR.USER_ATTRIBUTE_PHYSIC_CRIT_RATE = 10				-- 提高物理暴击，属性万分比
+RUNEATTR.USER_ATTRIBUTE_MAGIC_CRIT_RATE = 11				-- 提高法术暴击，属性万分比
+RUNEATTR.USER_ATTRIBUTE_DEFENSE_CRIT_RATE = 12				-- 提高抵抗暴击，属性万分比
+RUNEATTR.USER_ATTRIBUTE_SMASH_ATTACK_RATE = 13				-- 提高粉碎攻击，属性万分比
+RUNEATTR.USER_ATTRIBUTE_FIRM_DEFENSE_RATE = 14			    -- 提高坚固防御，属性万分比
+RUNEATTR.USER_ATTRIBUTE_TYPE_HEAVY_HIT	= 28	            -- 重击(万分比)
+RUNEATTR.USER_ATTRIBUTE_DEF_HEAVY_HIT_RATE = 29			    -- 抵抗重击，属性万分比
+
+-- 化臻神纹属性
+local RuneHuazhenAttr = {
+    -- 化臻位置
+    [1] = {
+        [RUNEATTR.SER_ATTRIBUTE_UP_MAX_LIFE] = 500,
+    },
+    -- 化臻位置
+    [2] = {
+        [RUNEATTR.USER_ATTRIBUTE_TYPE_HEAVY_HIT] = 100,
+        [RUNEATTR.USER_ATTRIBUTE_DEF_HEAVY_HIT_RATE] = 1,
+    },
+    -- 化臻位置
+    [3] = {
+        [RUNEATTR.USER_ATTRIBUTE_DEF_HEAVY_HIT_RATE] = 1,
+    },
+    -- -- 化臻位置
+    -- [4] = {
+    --     [RUNEATTR.SER_ATTRIBUTE_UP_MAX_LIFE] = 500,
+    -- },
+    -- -- 化臻位置
+    -- [5] = {
+    --     [RUNEATTR.SER_ATTRIBUTE_UP_MAX_LIFE] = 500,
+    -- },
+    -- -- 化臻位置
+    -- [6] = {
+    --     [RUNEATTR.SER_ATTRIBUTE_UP_MAX_LIFE] = 500,
+    -- },
+    -- -- 化臻位置
+    -- [7] = {
+    --     [RUNEATTR.SER_ATTRIBUTE_UP_MAX_LIFE] = 500,
+    -- },
+    -- -- 化臻位置
+    -- [8] = {
+    --     [RUNEATTR.SER_ATTRIBUTE_UP_MAX_LIFE] = 500,
+    -- },
+}
+-- 神纹信息
+local RuneInfo = {
+    -- 化臻基础分数
+	["BaseScore"] = 11000,
+    [1] = {
+        -- 华臻物品数量
+        ["HuaZhenItemNum"] = 3,
+        -- 化臻消耗物品1
+        ["HuaZhenCostItem1"] = 3324226,
+        -- 化臻消耗物品数量1
+        ["HuaZhenCostNum1"] = 3,
+        -- 化臻消耗物品2
+        ["HuaZhenCostItem2"] = 4060001,
+        -- 化臻消耗物品数量2
+        ["HuaZhenCostNum2"] = 900,
+        -- 化臻消耗物品3
+        ["HuaZhenCostItem3"] = 3314254,
+        -- 化臻消耗物品数量3
+        ["HuaZhenCostNum3"] = 6,
+    },
+    [2] = {
+        -- 华臻物品数量
+        ["HuaZhenItemNum"] = 3,
+        -- 化臻消耗物品1
+        ["HuaZhenCostItem1"] = 3324226,
+        -- 化臻消耗物品数量1
+        ["HuaZhenCostNum1"] = 3,
+        -- 化臻消耗物品2
+        ["HuaZhenCostItem2"] = 4040001,
+        -- 化臻消耗物品数量2
+        ["HuaZhenCostNum2"] = 900,
+        -- 化臻消耗物品3
+        ["HuaZhenCostItem3"] = 3314256,
+        -- 化臻消耗物品数量3
+        ["HuaZhenCostNum3"] = 3,
+    },
+    [3] = {
+        -- 华臻物品数量
+        ["HuaZhenItemNum"] = 3,
+        -- 化臻消耗物品1
+        ["HuaZhenCostItem1"] = 3324226,
+        -- 化臻消耗物品数量1
+        ["HuaZhenCostNum1"] = 1,
+        -- 化臻消耗物品2
+        ["HuaZhenCostItem2"] = 4040001,
+        -- 化臻消耗物品数量2
+        ["HuaZhenCostNum2"] = 300,
+        -- 化臻消耗物品3
+        ["HuaZhenCostItem3"] = 3314256,
+        -- 化臻消耗物品数量3
+        ["HuaZhenCostNum3"] = 1,
+    },
+}
+-- 神纹分解相关配置
+local ResolveData = {
+    [401] = {id=4060001, exp=10, percent=80,},    --万能神纹精粹
+    [402] = {id=4040001, exp=10, percent=80,},		--蓝色神纹精粹
+    [403] = {id=4050001, exp=10, percent=80,},		--黄色神纹精粹
+    [407] = {id=4050001, exp=10, percent=80,},		--黄色神纹精粹
+}
+-- 化臻预览
+local RuneHuazhenViewInfo = {
+    -- 配对服务端表，第一个[1]是位置，{从1开始递增配置的神纹}
+    [1] = 4039609,
+    [2] = 4070709,
+    [3] = 4071409,
+    -- [4] = 4030109,
+    -- [5] = 4030209,
+    -- [6] = 4030309,
+    -- [7] = 4030409,
+    -- [8] = 4030509,
+}
+-- 获取化臻预览
+local function GetRuneHuazhenViewInfo(pos) 
+    return RuneHuazhenViewInfo[pos]
+end
+
+local function GetResolveDataExp(key)
+	local value = nil
+	value = ResolveData[key]
+	if (value) then
+	   return value.exp
+	end
+	return nil
+end
+
+local function GetResolveDataPercent(key)
+	local value = nil
+	value = ResolveData[key]
+	if (value) then
+	   return value.percent
+	end
+	return nil
+end
+
+local function GetResolveDataID(key)
+	local value = nil
+	value = ResolveData[key]
+	if (value) then
+	   return value.id
+	end
+	return nil
+end
+
+-- 满血光效偏移
+local LifeReplyFullEffOffset = {
+	LifeReplyFullOffsetX=90,
+	LifeReplyFullOffsetY=130,
+}
+
+local RuneEffInfo = {
+-- 复仇，注意以下是测试资源请替换
+["Revenge"] = {
+    -- 头顶光效位置
+    TopPosX=-20,
+    TopPosY=-15,
+    -- 字体大小
+    NumSize=18,
+    -- 背景样式
+    TopTitle="gsjxfcbg",
+    -- 字体样式
+    NumTitle="gsjxfc_",
+    -- 倒计时位置
+    TimePosX=45,
+    TimePosY=-160,
+},
+-- 符文狂暴
+["RuneWild"] = {
+	-- 头顶光效位置
+	TopPosX=-10,
+	TopPosY=0,
+	-- 字体大小
+	NumSize=18,
+	-- 背景样式
+	TopTitle="fwkbzth",
+	-- 字体样式
+	NumTitle="fwkbzthnum",
+	-- 倒计时位置
+    TimePosX=10,
+    TimePosY=-240,
+},
+-- 杀神模式
+["RuneDeicide"] = {
+    -- 头顶光效位置
+    TopPosX=-10,
+    TopPosY=0,
+    -- 字体大小
+    NumSize=18,
+    -- 背景样式
+    TopTitle="fwssms",
+    -- 字体样式
+    NumTitle="fwssmsnum",
+    -- 倒计时位置
+    TimePosX=10,
+    TimePosY=-305,
+},
+-- 无限火力
+["AirBattery"] = {
+    -- 头顶光效位置
+    TopPosX=-50,
+    TopPosY=0,
+    -- 字体大小
+    NumSize=18,
+    -- 背景样式
+    TopTitle="fwwxhl",
+    -- 字体样式
+    NumTitle="fwwxhlnum",
+    -- 倒计时位置
+    TimePosX=50,
+    TimePosY=10,
+},
+-- 免死潜行
+["RuneStealth"] = {
+    -- 头顶光效位置
+    TopPosX=-70,
+    TopPosY=0,
+    -- 字体大小
+    NumSize=30,
+    -- 背景样式
+    TopTitle="fwmsydmiao",
+    -- 字体样式
+    NumTitle="fwmsydnum",
+    -- 倒计时位置
+    TimePosX=50,
+    TimePosY=-90,
+},
+-- Xp增减
+["XPChange"] = {
+    -- Xp条光效偏移位置
+    OffsetX=0,
+    OffsetY=400,
+    -- Xp满光效偏移位置
+    FullOffsetX=200,
+    FullOffsetY=200,
+},
+-- 野蛮冲撞
+["Barbarous"] = {
+    -- 头顶光效位置
+    TopPosX=-70,
+    TopPosY=-15,
+    -- 字体大小
+    NumSize=18,
+    -- 背景样式
+    TopTitle="ymcgcdBG",
+    -- 字体样式
+    NumTitle="ymcgcd_",
+    -- 倒计时位置
+    TimePosX=85,
+    TimePosY=-160,
+},
+
+ -- 神龙变 目前用的是测试资源野蛮冲撞的
+ ["DragonChange"] = {
+     -- 头顶光效位置
+     TopPosX=-70,
+     TopPosY=-15,
+     -- 字体大小
+     NumSize=18,
+     -- 背景样式
+     TopTitle="lxljx_sl_skill3wz",
+     -- 字体样式
+     NumTitle="ymcgcd_",
+     -- 倒计时位置
+     TimePosX=85,
+     TimePosY=-160,
+ },
+
+    -- 越战越勇
+    ["BecameStronge"] = {
+        -- 头顶光效位置
+        TopPosX=-15,
+        TopPosY=-15,
+        -- 字体大小
+        NumSize=18,
+        -- 背景样式
+        TopTitle="yzyyhong_wz",
+        -- 字体样式
+        NumTitle="yzyyhong_",
+        -- 倒计时位置
+        TimePosX=35,
+        TimePosY=-160,
+    },
+--猿王枪
+	["YWQ_BF"] = {
+	-- 头顶光效位置
+	TopPosX=-20,
+	TopPosY=-15,
+	-- 字体大小
+	NumSize=18,
+	-- 背景样式
+	TopTitle="PirateJX_skill42",
+	-- 字体样式
+	NumTitle="PirateJX_skill42_",
+	-- 倒计时位置
+	TimePosX=45,
+	TimePosY=-160,
+	},
+["PingShaLuoYan"] = {
+    -- 头顶光效位置
+    TopPosX=-70,
+    TopPosY=-15,
+    -- 字体大小
+    NumSize=18,
+    -- 背景样式
+    TopTitle="xiake_psly_pz",
+    -- 字体样式
+    NumTitle="xiake_psly_pz_",
+    -- 倒计时位置
+    TimePosX=85,
+    TimePosY=-160,
+},
+    -- 天外飞仙
+    ["tianwaifeixian"] = {
+    -- 头顶光效位置
+    TopPosX=-65,
+    TopPosY=-15,
+    -- 字体大小
+    NumSize=18,
+    -- 背景样式
+    TopTitle="xiake_twfx_pz",
+    -- 字体样式
+    NumTitle="xiake_twfx_pz_",
+    -- 倒计时位置
+    TimePosX=75,
+    TimePosY=-280,
+  },
+	["Unyielding"] = {
+		-- 头顶光效位置
+		TopPosX=-50,
+		TopPosY=-15,
+		-- 字体大小
+		NumSize=18,
+		-- 背景样式
+		TopTitle="xiake_jx_bq",
+		-- 字体样式
+		NumTitle="xiake_psly_pz_",
+		-- 倒计时位置
+		TimePosX=60,
+		TimePosY=-160,
+	},
+}
+
+-- 符文火道士技能
+local RuneFireTaoistSkill = {
+    FirSpreadOffsetX=100, -- 火焰传染偏移
+    MagicBurnOffsetX=-9,  -- 法术灼烧偏移
+}
+
+--神纹衣柜红色神纹配置
+local RuneRedData = {
+    Num=13,--红色神纹总数
+    Score=500,--红色神纹基础分
+    AddScore=0,--红色神纹加成分
+    [0] = 4010001,-- 融会贯通
+    [1] = 4010101,-- 挫志投掷
+    [2] = 4010201,-- 寒冰箭雨
+    [3] = 4010301,-- 忍法·暗杀
+    [4] = 4010401,-- 不动明王身
+    [5] = 4010501,-- 潮汐奔涌
+    [6] = 4010601,-- 迷踪步
+    [7] = 4010701,-- 逆水寒
+    [8] = 4010801,-- 焚天诀
+    [9] = 4010901,-- 狂风刃
+    [10] = 4011501,-- 风暴战斧
+    [11] = 4011401,-- 斗志昂扬
+    [12] = 4011901,-- 灵犀一指
+}
+
+--神纹衣柜蓝色神纹配置
+local RuneBlueData = {
+    Num=29,--蓝色神纹总数
+    Score=500,--蓝色神纹基础分
+    AddScore=300,--蓝色神纹加成分
+    [0] = 4020101,--血之狂暴(+1)
+    [1] = 4020201,--攻守兼备(+1)
+    [2] = 4020301,--无限火力(+1)
+    [3] = 4020401,--忍法·影遁(+1)
+    [4] = 4020501,--金刚不坏体(+1)
+    [5] = 4020601,--杀神模式(+1)
+    [6] = 4020701,--寸拳反击(+1)
+    [7] = 4020801,--沐雨含光(+1)
+    [8] = 4020901,--星火燎原(+1)
+    [9] = 4021001,--裂苍穹(+1)
+    [10] = 4021101,--如影随行(+1)
+    [11] = 4021201,--阴阳护身球(+1)
+    [12] = 4021301,--范围寸拳(+1)
+    [13] = 4021401,--伤害反弹加强(+1)
+    [14] = 4021501,--真流星闪(+1)
+    [15] = 4021601,--决斗(+1)
+    [16] = 4021701,--月下诅咒(+1)
+    [17] = 4021801,--瞬间传送(+1)
+    [18] = 4021901,--天尊附身(+1)
+    [19] = 4022001,--四大金刚(+1)
+    [20] = 4023001,--蓄血大法(+1)
+    [21] = 4022201,--电盾护甲加强(+1)
+    [22] = 4025001,--生命汲取(+1)
+    [23] = 4027001,--生命链接(+1)
+    [24] = 4028001,--生命链接(+1)
+    [25] = 4028301,--勇者得前(+1)
+    [26] = 4028501,--饱以老拳(+1)
+    [27] = 4028801,--移花接木(+1)
+    [28] = 4028701,--无相劫指(+1)
+}
+--神纹衣柜黄色神纹配置
+local RuneYellowData = {
+    Num=102,--黄色神纹总数
+    Score=500,--黄色神纹基础分
+    AddScore=300,--黄色神纹加成分
+    [0] = 4030101,-- 破玄元(+1)
+    [1] = 4030201,-- 撼星诀(+1)
+    [2] = 4030301,-- 血回元(+1)
+    [3] = 4030401,-- 万物生(+1)
+    [4] = 4030501,-- 无懈可击(+1)
+    [5] = 4030601,-- 狂暴克星(+1)
+    [6] = 4030701,-- 风卷残云(+1)
+    [7] = 4030801,-- 回灵术(+1)
+    [8] = 4030901,-- 杀破狼(+1)
+    [9] = 4031001,-- 追命(+1)
+    [10] = 4031101,-- 奔雷不息(+1)
+    [11] = 4031201,-- 安魂定魄(+1)
+    [12] = 4031301,-- 夺魂(+1) 
+    [13] = 4031401,-- 策马扬鞭(+1)
+    [14] = 4031501,--攻城掠地(+1)
+    [15] = 4031601,-- 粉碎伤害减少(+1)
+    [16] = 4032001,-- 神品精炼的神罗天征强化(+1)
+    [17] = 4032101,-- 神品精炼的爆法之心等级提高(+1)
+    [18] = 4032201,-- 神品精炼的法力贯彻等级提高(+1)
+    [19] = 4032301,-- 武器招架(+1)
+    [20] = 4032401,-- 获得经验减少(+1)
+    [21] = 4032501,-- 长武器专精(+1)
+    [22] = 4032601,-- 复活等待缩减(+1)
+    [23] = 4032701,-- 短武器专精(+1)
+    [24] = 4032801,-- 被锁魂时间减少(+1)
+    [25] = 4033901,--反抗
+    [26] = 4034001,--法术格挡
+    [27] = 4034101,--降低武器被动技能几率
+    [28] = 4033401,--粉碎伤害加成
+    [29] = 4033301,--命中加成
+    [30] = 4033601,--XP抑制
+    [31] = 4033001,--百发百中
+    [32] = 4033101,--XP增强
+    [33] = 4033801,--血球掉落（法术）
+    [34] = 4033701,--血球掉落（物理）
+    [35] = 4032901,--审判
+    [36] = 4035009,--绝命破
+    [37] = 4034201,--乾坤妙法
+    [38] = 4034301,--罡气护体
+    [39] = 4034401,--沧澜破
+    [40] = 4034501,--妙手回春
+    [41] = 4034601,--最终法伤免疫
+    [42] = 4034701,--最终物伤免疫
+    [43] = 4034801,--碎玄元
+    [44] = 4035201,--紫气东来
+    [45] = 4035101,--天行有常
+    [46] = 4035301,--盾牌穿刺
+    [47] = 4035401,--钢筋铜骨
+    [48] = 4035501,--淘汰之刃
+	[49] = 4035601,--反威慑
+	[50] = 4035701,--无视格挡
+	[51] = 4036101,--冲刺抑制
+	[52] = 4035801,--百炼之刃
+	[53] = 4036001,--生生不息
+	[54] = 4036301,--精准打击
+	[55] = 4036501,--坚若磐石
+	[56] = 4036701,--摧锋陷坚
+	[57] = 4036201,--固本培元
+	[58] = 4036401,--遮天蔽月
+	[59] = 4036801,--固若金汤
+	[60] = 4036901,--王者霸气
+	[61] = 4037409,--丢盔弃甲
+	[62] = 4037501,--极限闪避
+	[63] = 4037701,--矢志不移
+	[64] = 4038009,--百炼神兵
+	[65] = 4038301,--铜皮铁骨
+	[66] = 4035901,--无惧战心
+	-- [67] = 4031809,--流光囚影
+	[67] = 4039109,--不灭之躯
+	[68] = 4039801,--鹰击长空
+	[69] = 4039601,--时光倒流
+	[70] = 4070001,--潜龙勿用
+	[71] = 4031809,--流光囚影
+	[72] = 4038501,--洞若观火
+	[73] = 4070501,--飓风狂扫
+	[74] = 4070609,--无坚不摧
+	[75] = 4037909,--至尊宝甲
+	
+    [76] = 4071201,--清心静气
+    [77] = 4070701,--矢志不移
+    [78] = 4038601,--捆仙绳
+    [79] = 4039509,--天乾地坤
+    [80] = 4031709,--亁坤不破
+    [81] = 4071001,--画地为牢
+    [82] = 4071401,--锋芒内敛
+    [83] = 4039009,--夺魄之威
+    [84] = 4070309,--破军玄元
+    -- [77] = 4071309,--明其虚实
+    -- [78] = 4071401,--铸甲销戈
+    -- [79] = 4071501,--迟缓
+    [85] = 4071501,--迟缓
+    [86] = 4072001,--神魂俱灭
+    [87] = 4071101,--众生平等
+    [88] = 4071901,--纤尘不染
+    [89] = 4072609,--杀伐掠阵
+    [90] = 4072809,--绝峰断岳
+    [91] = 4039701,--火眼金睛
+    [92] = 4071701,--灰飞烟灭(+1)
+    [93] = 4071801,--以牙还牙(+1)
+    [94] = 4071601,--道心稳固
+    [95] = 4072901,--伤害穿透
+    [96] = 4073001,--法力侵蚀
+    [97] = 4072109,--诛魂禁域(+9)
+    [98] = 4072709,--绝峰断岳(+9)
+    [99] = 4073309,--破魂一闪(+9)
+    [100] = 4073409,--神罗伐天(+9)
+    [101] = 4073101,--脱胎換骨
+   -- [99] = 4073501,--神罗伐天(+9)
+    -- [100] = 4073601,--神罗伐天(+9)
+}
+--神纹衣柜至臻神纹配置
+local RunePerfectData = {
+	[0] = 4038009,-- 百炼神兵(+9)
+	-- [1] = 4031809,--流光囚影
+	[1] = 4039109,--不灭之躯
+	[2] = 4031809,--流光囚影
+	[3] = 4070609,--无坚不摧
+	[4] = 4037909,--至尊宝甲
+	[5] = 4039509,--天乾地坤
+	[6] = 4031709,--乾坤不破
+	[7] = 4039009,--夺魄之威
+	[8] = 4070309,--破军玄元
+	[9] = 4072609,--杀伐掠阵
+	[10] = 4072809,--百淬锋魂
+	[11] = 4072109,--诛魂禁域(+9)
+	[12] = 4072709,--绝峰断岳(+9)
+    [13] = 4073309,--破魂一闪(+9)
+    [14] = 4073409,--神罗伐天(+9)
+}
+-- 神纹合成数据
+local RunePerfectSyntheticData = {
+	[40380] = {
+		[0] = 40355,
+		[1] = 40359,
+		-- 材料数量1
+		["MaterialCount1"] = 2,
+		-- 材料选择1
+		["MaterialSel1"] = {
+			[0] = {
+			["ItemType"] = 3324226,
+			["Count"] = 1,
+			},
+			[1] = {
+				["ItemType"] = 4050001,
+				["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+			},
+		},
+		-- 材料数量2
+		["MaterialCount2"] = 2,
+		-- 材料选择2
+		["MaterialSel2"] = {
+			[0] = {
+				["ItemType"] = 3324226,
+				["Count"] = 1,
+			},
+			[1] = {
+				["ItemType"] = 4060001,
+				["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+			},
+		},
+		-- 金币消耗1
+		["MoneyCost1"] = 0,
+		-- 金币消耗2
+		["MoneyCost2"] = 0,
+		-- 合成成功率
+		["SuccessRate"] = 3,
+		-- 神纹评分
+		["RuneSocre"] = 3200,
+	},
+    [40391] = {
+        [0] = 40345,
+        [1] = 40354,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+
+	[40318] = {
+        [0] = 40329,
+        [1] = 40385,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+
+	[40706] = {
+        [0] = 40377,
+        [1] = 40383,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+	
+	[40379] = {
+        -- 左边黄色神纹
+        [0] = 40323,
+        -- 右边黄色神纹
+        [1] = 40360,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+	[40395] = {
+        -- 左边黄色神纹
+        [0] = 40327,
+        -- 右边黄色神纹
+        [1] = 40342,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+	[40317] = {
+        -- 左边黄色神纹
+        [0] = 40351,
+        -- 右边黄色神纹
+        [1] = 40347,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+	[40390] = {
+		[0] = 40306,
+		[1] = 40311,
+		-- 材料数量1
+		["MaterialCount1"] = 2,
+		-- 材料选择1
+		["MaterialSel1"] = {
+			[0] = {
+			["ItemType"] = 3324226,
+			["Count"] = 1,
+			},
+			[1] = {
+				["ItemType"] = 4050001,
+				["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+			},
+		},
+		-- 材料数量2
+		["MaterialCount2"] = 2,
+		-- 材料选择2
+		["MaterialSel2"] = {
+			[0] = {
+				["ItemType"] = 3324226,
+				["Count"] = 1,
+			},
+			[1] = {
+				["ItemType"] = 4060001,
+				["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+			},
+		},
+		-- 金币消耗1
+		["MoneyCost1"] = 0,
+		-- 金币消耗2
+		["MoneyCost2"] = 0,
+		-- 合成成功率
+		["SuccessRate"] = 3,
+		-- 神纹评分
+		["RuneSocre"] = 3200,
+	},
+
+    [40703] = {
+		[0] = 40348,
+		[1] = 40301,
+		-- 材料数量1
+		["MaterialCount1"] = 2,
+		-- 材料选择1
+		["MaterialSel1"] = {
+			[0] = {
+			["ItemType"] = 3324226,
+			["Count"] = 1,
+			},
+			[1] = {
+				["ItemType"] = 4050001,
+				["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+			},
+		},
+		-- 材料数量2
+		["MaterialCount2"] = 2,
+		-- 材料选择2
+		["MaterialSel2"] = {
+			[0] = {
+				["ItemType"] = 3324226,
+				["Count"] = 1,
+			},
+			[1] = {
+				["ItemType"] = 4060001,
+				["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+			},
+		},
+		-- 金币消耗1
+		["MoneyCost1"] = 0,
+		-- 金币消耗2
+		["MoneyCost2"] = 0,
+		-- 合成成功率
+		["SuccessRate"] = 3,
+		-- 神纹评分
+		["RuneSocre"] = 3200,
+	},
+    [40726] = {
+        [0] = 40309,
+        [1] = 40315,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+
+    [40728] = {
+        [0] = 40358,
+        [1] = 40357,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+
+    [40721] = {
+        [0] = 40710,
+        [1] = 40711,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+	
+	
+    [40727] = {
+        [0] = 40350,
+        [1] = 40374,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+    [40733] = {
+        [0] = 40715,
+        [1] = 40720,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+    [40734] = {
+        [0] = 40729,
+        [1] = 40320,
+        -- 材料数量1
+        ["MaterialCount1"] = 2,
+        -- 材料选择1
+        ["MaterialSel1"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4050001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 材料数量2
+        ["MaterialCount2"] = 2,
+        -- 材料选择2
+        ["MaterialSel2"] = {
+            [0] = {
+                ["ItemType"] = 3324226,
+                ["Count"] = 1,
+            },
+            [1] = {
+                ["ItemType"] = 4060001,
+                ["Count"] = 900,
+				["Condition"] = "STR_PERFECT_RUNE_CONDITION",
+            },
+        },
+        -- 金币消耗1
+        ["MoneyCost1"] = 0,
+        -- 金币消耗2
+        ["MoneyCost2"] = 0,
+        -- 合成成功率
+        ["SuccessRate"] = 3,
+        -- 神纹评分
+        ["RuneSocre"] = 3200,
+    },
+}
+
+
+local ConnectEffect = {	
+	[0] = "newshenwen_line2",   --红~蓝
+	[1] = "newshenwen_line3",     --蓝~黄1
+	[2] = "newshenwen_line4",     --黄1~黄2
+	[3] = "newshenwen_line5",     --黄2~黄3
+	[4] = "newshenwen_line1",     --黄3~黄4	
+	[5] = "newshenwen_line6",     --黄4~黄5
+	[6] = "newshenwen_line7",     --黄5~黄6
+	[7] = "newshenwen_line8",     --黄6~黄7
+	[8] = "newshenwen_line9",     --黄7~黄8
+	[9] = "newshenwen_line10",     --黄8~黄9
+	[10] = "newshenwen_line11",     --黄9~黄10
+	[11] = "newshenwen_line12",     --黄10~黄11
+	[12] = "newshenwen_line13",     --黄11~黄12
+	[13] = "newshenwen_line14",
+}
+
+local function GetConnectEffectByKey(index)
+    if index == "Num" then
+        return #ConnectEffect + 1
+    end
+	local value1 = nil
+	value1 = ConnectEffect[index]
+	if (value1) then
+	   return value1
+	end
+end
+
+
+--连接光效位置
+local EffectPos = {
+	["/shenwen_gold"] = {x=250, y=300},
+	["/shenwen_blue"] = {x=250, y=300},
+	[0] = {x=242, y=272}, --红~蓝
+	[1] = {x=242, y=272},  --蓝~黄1
+	[2] = {x=242, y=272},  --黄1~黄2
+	[3] = {x=242, y=272},  --黄2~黄3
+	[4] = {x=242, y=272},  --黄3~黄4	
+	[5] = {x=242, y=272},  --黄4~黄5
+	[6] = {x=242, y=272},  --黄5~黄6
+	[7] = {x=242, y=272},  --黄6~黄7
+	[8] = {x=242, y=272},  --黄7~黄8
+	[9] = {x=242, y=272},  --黄8~黄9  
+	[10] = {x=242, y=272},  --黄9~黄10 
+	[11] = {x=242, y=272},  --黄10~黄11
+	[12] = {x=243, y=272},  --黄11~黄12	  
+	[13] = {x=242, y=272},
+}
+
+local function GetEffectPosByKey(index, Axis)
+	local value1 = nil
+	value1 = EffectPos[index][Axis]
+	if (value1) then
+	   return value1
+	end
+end
+
+local function GetFullEffectPos(effect, Axis)
+	return EffectPos[effect][Axis]
+end
+
+--查看他人主符文连接光效位置
+local OtherMainEffectPos = {
+	["/shenwen_gold"] = {x=270, y=290},
+	["/shenwen_blue"] = {x=270, y=290},
+	[0] = {x=260, y=390}, --红~蓝
+	[1] = {x=260, y=390},  --蓝~黄1
+	[2] = {x=260, y=390},  --黄1~黄2
+	[3] = {x=260, y=390},  --黄2~黄3
+	[4] = {x=260, y=390},  --黄3~黄4
+	[5] = {x=260, y=390},  --黄4~黄5
+	[6] = {x=260, y=390},  --黄5~黄6
+	[7] = {x=260, y=390},  --黄6~黄7
+	[8] = {x=260, y=390},  --黄7~黄8
+	[9] = {x=260, y=390},  --黄8~黄9
+	[10] = {x=260, y=390},  --黄8~黄9
+	[11] = {x=260, y=390},  --黄8~黄9	
+	[12] = {x=260, y=390},  --黄8~黄9
+	[13] = {x=260, y=390},
+}
+
+local function GetOtherMainEffectPosByKey(index, Axis)
+	local value1 = nil
+	value1 = OtherMainEffectPos[index][Axis]
+	if (value1) then
+	   return value1
+	end
+end
+
+local function GetOtherMainFullEffectPos(effect, Axis)
+	return OtherMainEffectPos[effect][Axis]
+end
+
+local function GetLifeReplyFullEffOffset(key)
+	local keyValue = nil
+	
+	if (key == "x") then
+		keyValue = LifeReplyFullEffOffset.LifeReplyFullOffsetX
+	end
+
+	if (key == "y") then
+		keyValue = LifeReplyFullEffOffset.LifeReplyFullOffsetY
+	end
+
+	if (keyValue) then
+		return keyValue
+	end
+	
+	return 0
+end
+
+local function GetRuneEffInfo(title, key)
+	local effInfo = RuneEffInfo[title]
+	local keyValue = nil
+	
+	if (effInfo) then
+		keyValue = effInfo[key]
+	end
+
+	if (keyValue) then
+		return keyValue
+	end
+
+	if (key == "TopTitle" or key == "NumTitle") then
+		return ""
+	end
+	
+	return 0
+end
+
+local function GetRuneBagRow()
+    return RuneBag.row
+end
+
+local function GetRuneBagLine()
+    return RuneBag.line
+end
+
+local function GetRuneBagMaxCount()
+    return RuneBag.maxcount
+end
+
+local function GetRuneEquipLev()
+    return RuneEquip.lev
+end
+
+local function GetRuneEquipMete()
+    return RuneEquip.mete
+end
+
+local function GetRuneSysQJDEffect()
+    return RuneEffect.qianjinding
+end 
+
+local function GetRuneSysGQEffect()
+    return RuneEffect.guangquan
+end
+
+local function GetRuneSysRedEffect()
+    return RuneEffect.huoyan_red
+end
+
+local function GetRuneSysBlueEffect()
+    return RuneEffect.huoyan_blue
+end
+
+local function GetRuneSysYellowEffect()
+    return RuneEffect.huoyan_yellow
+end
+
+local function GetRuneSysLJEffect()
+    return RuneEffect.lianjie
+end
+  
+local function GetRuneSysGTEffect()
+    return RuneEffect.guangtuan
+end
+
+local function GetRuneSysSKEffect()
+    return RuneEffect.sankai
+end
+
+local function GetRuneMagicBurnOffset()
+    return RuneFireTaoistSkill.MagicBurnOffsetX
+end
+
+local function GetRuneFirSpreadOffset()
+    return RuneFireTaoistSkill.FirSpreadOffsetX
+end
+
+local function GetRuneSysCrashAttackReduceEffect()
+    return RuneEffect.fensuijianshao
+end
+
+local function GetRuneSysReflectPowerUp()
+    return RuneEffect.fantanjiaqiang
+end
+
+local function GetRuneRedData(i)
+    return RuneRedData[i]
+end
+
+local function GetRuneBlueData(i)
+    return RuneBlueData[i]
+end
+
+local function GetRuneYellowData(i)
+    return RuneYellowData[i]
+end
+
+local function GetRuneNum(RuneType)
+  if (RuneType == 401) then
+        return RuneRedData.Num
+    elseif (RuneType == 402) then
+        return RuneBlueData.Num
+    elseif (RuneType == 403 or RuneType == 407) then
+        return RuneYellowData.Num
+    end
+end
+
+local function GetRuneRedScore()
+    return RuneRedData.Score
+end
+
+local function GetRuneBlueScore()
+    return RuneBlueData.Score
+end
+
+local function GetRuneYellowScore()
+    return RuneYellowData.Score
+end
+
+
+local function Unload()
+    RuneBag = nil
+    RuneEquip = nil
+	LifeReplyFullEff = nil
+	RuneEffInfo = nil
+	RuneFireTaoistSkill = nil
+end
+
+local function GetRuneRedAddScore()
+    return RuneRedData.AddScore
+end
+
+local function GetRuneBlueAddScore()
+    return RuneBlueData.AddScore
+end
+
+local function GetRuneYellowAddScore()
+    return RuneYellowData.AddScore
+end
+
+local function GetRuneSysMagicParryEffect()
+    return RuneEffect.fashugedang
+end
+
+local function GetRuneSysCrashAttackAddEffect()
+    return RuneEffect.fensuijiacheng
+end
+
+local function GetRuneScorePercent()
+    return 0.03
+end
+
+local function GetRuneSysPhyDecEffect()
+    return RuneEffect.wushangjianmian
+end
+
+local function GetRuneSysMagDecEffect()
+    return RuneEffect.fashangjianmian
+end
+
+-- 符文推荐默认配置
+-- 1,  // 勇士
+-- 2,  // 战士
+-- 4,  // 射手
+-- 5,  // 忍者
+-- 6,  // 武僧
+-- 7,  // 海盗
+-- 8,  // 格斗家
+-- 9,  // 雷神
+-- 10, // 道士
+-- 13, // 水道
+-- 14, // 火道
+-- 16, // 铁扇门
+local RuneRecommend = {
+    -- 职业类型
+	--1,  // 勇士
+    [1] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40100,
+            [1] = 40201,
+            [2] = 40351,
+            [3] = 40352,
+            [4] = 40309,
+            [5] = 40327,
+            [6] = 40348,
+            [7] = 40345,
+            [8] = 40333,	
+            [9] = 40304,	
+            [10] = 40323,	
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40100,
+            [1] = 40230,
+            [2] = 40304,
+            [3] = 40348,
+            [4] = 40347,
+            [5] = 40327,
+            [6] = 40345,
+            [7] = 40301,
+            [8] = 40320,
+            [9] = 40333,
+            [10] = 40351,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40100,
+            [1] = 40201,
+            [2] = 40311,
+            [3] = 40337,
+            [4] = 40348,
+            [5] = 40304,
+            [6] = 40350,
+            [7] = 40323,
+            [8] = 40345,
+            [9] = 40352,
+            [10] = 40301,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+	},
+	--2,  // 战士
+    [2] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40101,
+            [1] = 40214,
+            [2] = 40311,
+            [3] = 40304,
+            [4] = 40309,
+            [5] = 40327,
+            [6] = 40323,
+            [7] = 40345,
+            [8] = 40310,
+            [9] = 40301,
+            [10] = 40347,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40101,
+            [1] = 40214,
+            [2] = 40311,
+            [3] = 40326,
+            [4] = 40348,
+            [5] = 40327,
+            [6] = 40323,
+            [7] = 40345,
+            [8] = 40333,
+            [9] = 40304,
+            [10] = 40333,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40101,
+            [1] = 40202,
+            [2] = 40304,
+            [3] = 40343,
+            [4] = 40347,
+            [5] = 40327,
+            [6] = 40345,
+            [7] = 40301,
+            [8] = 40320,
+            [9] = 40348,
+            [10] = 40333,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+	},
+	--4,  // 射手
+    [4] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40102,
+            [1] = 40203,
+            [2] = 40311,
+            [3] = 40304,
+            [4] = 40308,
+            [5] = 40310,
+            [6] = 40309,
+            [7] = 40301,
+            [8] = 40339,
+            [9] = 40306,
+            [10] = 40352,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] =40102,
+            [1] =40203,
+            [2] =40310,
+            [3] =40306,
+            [4] =40338,
+            [5] =40348,
+            [6] =40301,
+            [7] =40352,
+            [8] =40323,
+            [9] =40345,
+            [10] =40311,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40102,
+            [1] = 40203,
+            [2] = 40311,
+            [3] = 40326,
+            [4] = 40348,
+            [5] = 40327,
+            [6] = 40323,
+            [7] = 40345,
+            [8] = 40333,
+            [9] = 40352,
+            [10] = 40310,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+	},
+	--5,  // 忍者
+    [5] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40103,
+            [1] = 40204,
+            [2] = 40311,
+            [3] = 40326,
+            [4] = 40348,
+            [5] = 40327,
+            [6] = 40323,
+            [7] = 40345,
+            [8] = 40333,
+            [9] = 40310,
+            [10] = 40301,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40103,
+            [1] = 40204,
+            [2] = 40347,
+            [3] = 40327,
+            [4] = 40316,
+            [5] = 40345,
+            [6] = 40301,
+            [7] = 40341,
+            [8] = 40310,
+            [9] = 40333,
+            [10] = 40348,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40103,
+            [1] = 40204,
+            [2] = 40311,
+            [3] = 40304,
+            [4] = 40309,
+            [5] = 40327,
+            [6] = 40301,
+            [7] = 40345,
+            [8] = 40310,
+	    [9] = 40333,
+            [10] = 40348,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+	},
+	--6,  // 武僧
+    [6] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40104,
+            [1] = 40205,
+            [2] = 40347,
+            [3] = 40328,
+            [4] = 40352,
+            [5] = 40304,
+            [6] = 40345,
+            [7] = 40339,
+            [8] = 40351,
+            [9] = 40337,
+            [10] = 40348,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40104,
+            [1] = 40205,
+            [2] = 40345,
+            [3] = 40304,
+            [4] = 40351,
+            [5] = 40328,
+            [6] = 40309,
+            [7] = 40348,
+            [8] = 40311,
+            [9] = 40348,
+            [10] = 40347,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40104,
+            [1] = 40205,
+            [2] = 40311,
+            [3] = 40337,
+            [4] = 40348,
+            [5] = 40304,
+            [6] = 40350,
+            [7] = 40323,
+            [8] = 40345,
+            [9] = 40347,
+            [10] = 40352,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+	},
+	--7,  // 海盗
+    [7] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40105,
+            [1] = 40206,
+            [2] = 40327,
+            [3] = 40310,
+            [4] = 40348,
+            [5] = 40309,
+            [6] = 40352,
+            [7] = 40333,
+            [8] = 40323,
+            [9] = 40345,
+            [10] = 40301,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40105,
+            [1] = 40206,
+            [2] = 40311,
+            [3] = 40304,
+            [4] = 40309,
+            [5] = 40327,
+            [6] = 40350,
+            [7] = 40345,
+            [8] = 40310,
+            [9] = 40323,
+            [10] = 40347,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40105,
+            [1] = 40206,
+            [2] = 40311,
+            [3] = 40326,
+            [4] = 40348,
+            [5] = 40327,
+            [6] = 40323,
+            [7] = 40345,
+            [8] = 40333,
+            [9] = 40309,
+            [10] = 40301,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+	},
+	--8,  // 截拳师
+    [8] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40106,
+            [1] = 40207,
+            [2] = 40304,
+            [3] = 40343,
+            [4] = 40347,
+            [5] = 40327,
+            [6] = 40345,
+            [7] = 40301,
+            [8] = 40333,
+            [9] = 40352,
+            [10] = 40348,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40106,
+            [1] = 40207,
+            [2] = 40351,
+            [3] = 40352,
+            [4] = 40309,
+            [5] = 40327,
+            [6] = 40348,
+            [7] = 40345,
+            [8] = 40333,
+            [9] = 40301,
+            [10] = 40347,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40106,
+            [1] = 40207,
+            [2] = 40311,
+            [3] = 40326,
+            [4] = 40348,
+            [5] = 40327,
+            [6] = 40323,
+            [7] = 40345,
+            [8] = 40333,
+	    [9] = 40352,
+	    [10] = 40301,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+	},
+	--9,  // 雷神
+    [9] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40114,
+            [1] = 40222,
+            [2] = 40311,
+            [3] = 40323,
+            [4] = 40309,
+            [5] = 40327,
+            [6] = 40348,
+            [7] = 40345,
+            [8] = 40333,
+            [9] = 40301,
+            [10] = 40304,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40114,
+            [1] = 40222,
+            [2] = 40304,
+            [3] = 40343,
+            [4] = 40347,
+            [5] = 40327,
+            [6] = 40345,
+            [7] = 40301,
+            [8] = 40320,
+            [9] = 40348,
+            [10] = 40333,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40114,
+            [1] = 40222,
+            [2] = 40345,
+            [3] = 40304,
+            [4] = 40351,
+            [5] = 40328,
+            [6] = 40309,
+            [7] = 40348,
+            [8] = 40311,
+            [9] = 40327,
+            [10] = 40347,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+	},
+	--10, // 道士
+    [10] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40108,
+            [1] = 40209,
+            [2] = 40345,
+            [3] = 40309,
+            [4] = 40308,
+            [5] = 40321,
+            [6] = 40326,
+            [7] = 40342,
+            [8] = 40344,
+            [9] = 40301,
+            [10] = 40347,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40108,
+            [1] = 40209,
+            [2] = 40325,
+            [3] = 40348,
+            [4] = 40304,
+            [5] = 40339,
+            [6] = 40326,
+            [7] = 40351,
+            [8] = 40314,
+            [9] = 40344,
+            [10] = 40308,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40108,
+            [1] = 40209,
+            [2] = 40325,
+            [3] = 40348,
+            [4] = 40309,
+            [5] = 40301,
+            [6] = 40323,
+            [7] = 40345,
+            [8] = 40352,
+            [9] = 40326,
+            [10] = 40347,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+	},
+	--13, // 水道
+    [13] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40107,
+            [1] = 40208,
+            [2] = 40304,
+            [3] = 40308,
+            [4] = 40313,
+            [5] = 40309,
+            [6] = 40338,
+            [7] = 40352,
+            [8] = 40339,
+            [9] = 40347,
+            [10] = 40351,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40107,
+            [1] = 40208,
+            [2] = 40325,
+            [3] = 40348,
+            [4] = 40304,
+            [5] = 40339,
+            [6] = 40326,
+            [7] = 40351,
+            [8] = 40314,
+            [9] = 40352,
+            [10] = 40348,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40107,
+            [1] = 40208,
+            [2] = 40325,
+            [3] = 40348,
+            [4] = 40309,
+            [5] = 40301,
+            [6] = 40323,
+            [7] = 40345,
+            [8] = 40352,
+            [9] = 40326,
+            [10] = 40348,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+	},
+	--14, // 火道
+    [14] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40108,
+            [1] = 40209,
+            [2] = 40345,
+            [3] = 40309,
+            [4] = 40308,
+            [5] = 40321,
+            [6] = 40326,
+            [7] = 40342,
+            [8] = 40344,
+            [9] = 40301,
+            [10] = 40347,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40108,
+            [1] = 40209,
+            [2] = 40325,
+            [3] = 40348,
+            [4] = 40304,
+            [5] = 40339,
+            [6] = 40326,
+            [7] = 40351,
+            [8] = 40314,
+            [9] = 40344,
+            [10] = 40308,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40108,
+            [1] = 40209,
+            [2] = 40325,
+            [3] = 40348,
+            [4] = 40309,
+            [5] = 40301,
+            [6] = 40323,
+            [7] = 40345,
+            [8] = 40352,
+            [9] = 40326,
+            [10] = 40347,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+	},
+	-- 16, // 铁扇门
+    [16] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40109,
+            [1] = 40212,
+            [2] = 40327,
+            [3] = 40328,
+            [4] = 40347,
+            [5] = 40348,
+            [6] = 40345,
+            [7] = 40323,
+            [8] = 40333,
+            [9] = 40301,
+            [10] = 40304,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,	
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40109,
+            [1] = 40212,
+            [2] = 40311,
+            [3] = 40301,
+            [4] = 40309,
+            [5] = 40347,
+            [6] = 40310,
+            [7] = 40329,
+            [8] = 40348,
+            [9] = 40345,
+            [10] = 40304,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40109,
+            [1] = 40212,
+            [2] = 40345,
+            [3] = 40304,
+            [4] = 40351,
+            [5] = 40328,
+            [6] = 40309,	
+            [7] = 40348,
+            [8] = 40320,
+            [9] = 40347,
+            [10] = 40301,
+            [11] = 40358,	
+            [12] = 40357,	
+            [13] = 40365,
+			[14] = 40369,
+   	     },
+	},
+	-- 3, // 侠客
+    [3] = {
+        ["Count"] = 3,
+        [0] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40119,
+            [1] = 40288,
+            [2] = 40351,
+            [3] = 40352,
+            [4] = 40309,
+            [5] = 40327,
+            [6] = 40348,
+            [7] = 40345,
+            [8] = 40333,
+            [9] = 40304,
+            [10] = 40323,
+            [11] = 40363,
+            [12] = 40309,
+            [13] = 40365,
+			[14] = 40369,
+        },
+        [1] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40119,
+            [1] = 40288,
+            [2] = 40304,
+            [3] = 40348,
+            [4] = 40347,
+            [5] = 40327,
+            [6] = 40345,
+            [7] = 40301,
+            [8] = 40320,
+            [9] = 40351,
+            [10] = 40367,
+            [11] = 40366,
+            [12] = 40365,
+            [13] = 40369,
+			[14] = 40333,
+        },
+        [2] = {
+            -- 符文Type（红蓝黄黄黄...顺序）
+            [0] = 40119,
+            [1] = 40288,
+            [2] = 40311,
+            [3] = 40337,
+            [4] = 40348,
+            [5] = 40304,
+            [6] = 40350,
+            [7] = 40323,
+            [8] = 40345,
+            [9] = 40352,
+            [10] = 40301,
+            [11] = 40358,
+            [12] = 40357,
+            [13] = 40365,
+			[14] = 40369,
+   	     },
+	},
+}
+
+-- 化臻位置信息
+local RuneHuazhenPosInfo = {
+    -- 位置
+    [1] = {
+        ["HuaZhenSucRate"] = 3,
+    },
+    [2] = {
+        ["HuaZhenSucRate"] = 3,
+    },
+    [3] = {
+        ["HuaZhenSucRate"] = 3,
+    },
+}
+
+-- 破封材料
+local PoFengMeterial = {
+    -- 材料选择1
+    ["MaterialSel1"] = {
+        [1] = {
+            ["ItemType"] = 3324226,
+            ["Count"] = 3,
+        },
+        [2] = {
+            ["ItemType"] = 4050001,
+            ["Count"] = 500,
+        },
+    },
+    -- 材料选择2
+    ["MaterialSel2"] = {
+        [1] = {
+            ["ItemType"] = 3324226,
+            ["Count"] = 2,
+        },
+        [2] = {
+            ["ItemType"] = 4060001,
+            ["Count"] = 700,
+        },
+    },
+}
+-- Pro : 职业
+local function GetRecommendCount(pro)
+    return RuneRecommend[pro]["Count"]
+end
+
+-- Pro : 职业
+local function GetRecommendID(pro, id1, id2)
+    return RuneRecommend[pro][id1][id2]
+end
+local function GetRecommendNumPerPage()
+    return 2
+end
+
+local function GetRunePerfectData(i)
+    return RunePerfectData[i]
+end
+
+-- 获取神纹合成数据
+local function GetRunePerfectSyntheticData(itemtype, key, key1, key2)
+    if key1 ~=nil and key2 ~=nil then
+        return RunePerfectSyntheticData[itemtype][key][key1][key2]
+    end
+    return RunePerfectSyntheticData[itemtype][key]
+end
+
+-- 是否是至臻神纹
+local function IsRunePerfect(itemtype)
+    for _, value in pairs(RunePerfectData) do
+        if value == itemtype then
+           return true
+        end
+    end
+    return false
+end
+
+-- 是否是互斥神纹
+local function IsMutexRune(itemtype1, itemtype2)
+    if RunePerfectSyntheticData[itemtype1] ~= nil then
+       if RunePerfectSyntheticData[itemtype1][0] == itemtype2 then
+            return true
+       elseif RunePerfectSyntheticData[itemtype1][1] == itemtype2 then
+            return true
+       end
+    end
+    if RunePerfectSyntheticData[itemtype2] ~= nil then
+        if RunePerfectSyntheticData[itemtype2][0] == itemtype1 then
+             return true
+        elseif RunePerfectSyntheticData[itemtype2][1] == itemtype1 then
+             return true
+        end
+    end
+
+    return false
+end
+-- 获取神纹信息
+local function GetRuneInfo(index, key)
+    if key == nil then
+        return RuneInfo[index]
+    end
+
+    if RuneInfo[index][key] ~= nil then
+        return RuneInfo[index][key]
+    end
+end
+
+-- 获取化臻神纹属性
+local function GetRuneHuazhenAttr(key, num, attrType)
+	if num == 0 then
+		return 0
+	end
+
+	-- 单条
+	if key == "One" then
+		-- 这里num是具体的化臻位置
+		local attr = RuneHuazhenAttr[num]
+		if attr == nil then
+			return ""
+		end
+
+		local strTemp = ""
+		local strFormat = ""
+		local strText = ""
+		for k, v in pairs(attr) do
+			strTemp = string.format("STR_HUAZHEN_ATTR_NEW_TYPE_%d", k)
+			strTemp = g_objLuaUIMgr:GetCnRes(strTemp)
+			if (k >= RUNEATTR.USER_ATTRIBUTE_PHYSIC_CRIT_RATE and k <= RUNEATTR.USER_ATTRIBUTE_FIRM_DEFENSE_RATE) or k == RUNEATTR.USER_ATTRIBUTE_TYPE_HEAVY_HIT or k == RUNEATTR.USER_ATTRIBUTE_TYPE_DEFENSE_HEAVY_HIT then
+				strFormat = string.format(strTemp, v / 100.0)
+			else
+				strFormat = string.format(strTemp, v)
+			end
+			
+			strText = strText..strFormat
+		end
+
+		if strText ~= "" then
+			strText = g_objLuaUIMgr:GetCnRes("STR_HUAZHEN_GONGMING") ..strText
+			if attrType then
+				strText = strText..g_objLuaUIMgr:GetCnRes("STR_HUAZHEN_GONGMING_UNLOCK")
+			end
+		end
+
+		return LuaUIMgr_StringCodePage(strText)
+	end
+
+	if key == "Life" then
+		local value = 0
+		for i = 1, num, 1 do 
+			if RuneHuazhenAttr[i] == nil then
+				break
+			end
+	
+			local attrValue = RuneHuazhenAttr[i][attrType]
+			if attrValue ~= nil then
+				value = value + attrValue
+			end	
+		end
+		return value
+	end
+
+	-- 多条累加
+	local value = 0
+	for i = 1, num, 1 do 
+		if RuneHuazhenAttr[i] == nil then
+			break
+		end
+
+		local attrValue = RuneHuazhenAttr[i][attrType]
+		if attrValue ~= nil then
+			value = value + attrValue
+		end	
+	end
+
+	if value == 0 then
+		return ""
+	end
+
+	local strText = g_objLuaUIMgr:GetCnRes(string.format("STR_HUAZHEN_ATTR_TYPE_%d", attrType))
+	if attrType >= RUNEATTR.USER_ATTRIBUTE_PHYSIC_CRIT_RATE and attrType <= RUNEATTR.USER_ATTRIBUTE_FIRM_DEFENSE_RATE then
+		strText = string.format(strText, value / 100.0)
+	else
+		strText = string.format(strText, value)
+	end
+
+	return LuaUIMgr_StringCodePage(strText)
+end
+-- 获取化臻神纹不同位置信息
+local function GetRuneHuazhenPosInfo(pos, key)
+    if RuneHuazhenPosInfo[pos] ~= nil and RuneHuazhenPosInfo[pos][key] ~= nil then
+        return RuneHuazhenPosInfo[pos][key]
+    end
+    return 1
+end
+
+
+-- 破封信息
+local function GetPoFengInfo(key) 
+    if key == "PoFengPoint" then -- 达到多少点破封(>=包含关系)
+        return 8400
+    elseif key == "DeducePoint" then -- 每分钟扣多少点
+        return 200
+    end
+end
+
+-- 获取破封材料
+local function GetPoFengMeterial(param1, param2, param3)
+    if param2 == "#" then
+        return #PoFengMeterial[param1]
+    end
+    return PoFengMeterial[param1][param2][param3]
+end
+
+local RuneSys = {
+    GetRecommendNumPerPage = GetRecommendNumPerPage,
+    GetRecommendCount = GetRecommendCount,
+    GetRecommendID = GetRecommendID,
+    GetRuneBagRow = GetRuneBagRow,
+    GetRuneBagLine = GetRuneBagLine,
+    GetRuneBagMaxCount = GetRuneBagMaxCount,
+    GetRuneEquipLev = GetRuneEquipLev,
+    GetRuneEquipMete = GetRuneEquipMete,
+    GetLifeReplyFullEffOffset = GetLifeReplyFullEffOffset,
+    GetRuneEffInfo = GetRuneEffInfo,
+    GetRuneSysQJDEffect = GetRuneSysQJDEffect,
+    GetRuneMagicBurnOffset = GetRuneMagicBurnOffset,
+    GetRuneFirSpreadOffset = GetRuneFirSpreadOffset,
+    GetRuneSysGQEffect = GetRuneSysGQEffect,
+    GetRuneSysRedEffect = GetRuneSysRedEffect,
+    GetRuneSysBlueEffect = GetRuneSysBlueEffect,
+    GetRuneSysYellowEffect = GetRuneSysYellowEffect,
+    GetRuneSysLJEffect = GetRuneSysLJEffect,
+    GetRuneSysGTEffect = GetRuneSysGTEffect,
+    GetRuneSysSKEffect = GetRuneSysSKEffect,
+    GetResolveDataExp = GetResolveDataExp,
+    GetResolveDataPercent = GetResolveDataPercent,
+    GetResolveDataID = GetResolveDataID,
+    GetRuneSysCrashAttackReduceEffect = GetRuneSysCrashAttackReduceEffect,
+    GetRuneRedData = GetRuneRedData,
+    GetRuneBlueData = GetRuneBlueData,
+    GetRuneYellowData = GetRuneYellowData,
+    GetRuneNum = GetRuneNum,
+    GetRuneRedScore = GetRuneRedScore,
+    GetRuneBlueScore = GetRuneBlueScore,
+    GetRuneYellowScore = GetRuneYellowScore,
+    GetRuneRedAddScore = GetRuneRedAddScore,
+    GetRuneBlueAddScore = GetRuneBlueAddScore,
+    GetRuneYellowAddScore = GetRuneYellowAddScore,
+    GetRuneSysReflectPowerUp = GetRuneSysReflectPowerUp,
+    GetRuneSysMagicParryEffect = GetRuneSysMagicParryEffect,
+    GetRuneSysCrashAttackAddEffect = GetRuneSysCrashAttackAddEffect,
+    GetEffectPosByKey = GetEffectPosByKey,
+    GetFullEffectPos = GetFullEffectPos,
+    GetConnectEffectByKey = GetConnectEffectByKey,
+    GetOtherMainEffectPosByKey = GetOtherMainEffectPosByKey,
+    GetOtherMainFullEffectPos = GetOtherMainFullEffectPos,
+    GetRuneScorePercent = GetRuneScorePercent,
+    GetRuneSysMagDecEffect = GetRuneSysMagDecEffect,
+    GetRuneSysPhyDecEffect = GetRuneSysPhyDecEffect,
+	GetRunePerfectData = GetRunePerfectData,
+    GetRunePerfectSyntheticData = GetRunePerfectSyntheticData,
+    IsRunePerfect = IsRunePerfect,
+    IsMutexRune = IsMutexRune,
+    GetRuneHuazhenViewInfo = GetRuneHuazhenViewInfo,
+	GetRuneHuazhenAttr = GetRuneHuazhenAttr,
+
+    Unload = Unload,
+	GetRuneInfo = GetRuneInfo,
+    GetRuneHuazhenPosInfo = GetRuneHuazhenPosInfo,
+    GetPoFengInfo = GetPoFengInfo,
+    GetPoFengMeterial = GetPoFengMeterial,
+}
+
+-- global
+RuneSys_GetRecommendNumPerPage = RuneSys.GetRecommendNumPerPage
+RuneSys_GetRecommendCount = RuneSys.GetRecommendCount
+RuneSys_GetRecommendID = RuneSys.GetRecommendID
+RuneSys_GetRuneBagRow = RuneSys.GetRuneBagRow
+RuneSys_GetRuneBagLine = RuneSys.GetRuneBagLine
+RuneSys_GetRuneBagMaxCount = RuneSys.GetRuneBagMaxCount
+RuneSys_GetRuneEquipLev = RuneSys.GetRuneEquipLev
+RuneSys_GetRuneEquipMete = RuneSys.GetRuneEquipMete
+RuneSys_GetRuneSysQJDEffect = RuneSys.GetRuneSysQJDEffect
+RuneSys_GetRuneLifeReplyFullOffset = RuneSys.GetLifeReplyFullEffOffset
+RuneSys_GetRuneEffInfo = RuneSys.GetRuneEffInfo
+RuneSys_GetRuneMagicBurnOffset = RuneSys.GetRuneMagicBurnOffset
+RuneSys_GetRuneFirSpreadOffset = RuneSys.GetRuneFirSpreadOffset
+RuneSys_GetRuneSysGQEffect = RuneSys.GetRuneSysGQEffect
+RuneSys_GetRuneSysRedEffect = RuneSys.GetRuneSysRedEffect
+RuneSys_GetRuneSysBlueEffect = RuneSys.GetRuneSysBlueEffect
+RuneSys_GetRuneSysYellowEffect = RuneSys.GetRuneSysYellowEffect
+RuneSys_GetRuneSysLJEffect = RuneSys.GetRuneSysLJEffect
+RuneSys_GetRuneSysGTEffect = RuneSys.GetRuneSysGTEffect
+RuneSys_GetRuneSysSKEffect = RuneSys.GetRuneSysSKEffect
+RuneSys_GetResolveDataExp = RuneSys.GetResolveDataExp
+RuneSys_GetResolveDataPercent = RuneSys.GetResolveDataPercent
+RuneSys_GetResolveDataID = RuneSys.GetResolveDataID
+RuneSys_Unload = RuneSys.Unload
+RuneSys_GetRuneSysCrashAttackReduceEffect = RuneSys.GetRuneSysCrashAttackReduceEffect
+RuneSys_GetRuneRedData = RuneSys.GetRuneRedData
+RuneSys_GetRuneBlueData = RuneSys.GetRuneBlueData
+RuneSys_GetRuneYellowData = RuneSys.GetRuneYellowData
+RuneSys_GetRuneNum = RuneSys.GetRuneNum
+RuneSys_GetRuneRedScore = RuneSys.GetRuneRedScore
+RuneSys_GetRuneBlueScore = RuneSys.GetRuneBlueScore
+RuneSys_GetRuneYellowScore = RuneSys.GetRuneYellowScore
+RuneSys_GetRuneRedAddScore = RuneSys.GetRuneRedAddScore
+RuneSys_GetRuneBlueAddScore = RuneSys.GetRuneBlueAddScore
+RuneSys_GetRuneYellowAddScore = RuneSys.GetRuneYellowAddScore
+RuneSys_GetRuneReflectPowerUp = RuneSys.GetRuneSysReflectPowerUp
+RuneSys_GetRuneSysMagicParryEffect = RuneSys.GetRuneSysMagicParryEffect
+RuneSys_GetRuneSysCrashAttackAddEffect = RuneSys.GetRuneSysCrashAttackAddEffect
+RuneSys_GetEffectPosByKey = RuneSys.GetEffectPosByKey
+RuneSys_GetFullEffectPos = RuneSys.GetFullEffectPos
+RuneSys_GetConnectEffectByKey = RuneSys.GetConnectEffectByKey
+RuneSys_GetOtherMainEffectPosByKey = RuneSys.GetOtherMainEffectPosByKey
+RuneSys_GetOtherMainFullEffectPos = RuneSys.GetOtherMainFullEffectPos
+RuneSys_GetRuneScorePercent = RuneSys.GetRuneScorePercent
+RuneSys_GetRuneSysMagDecEffect = RuneSys.GetRuneSysMagDecEffect
+RuneSys_GetRuneSysPhyDecEffect = RuneSys.GetRuneSysPhyDecEffect
+RuneSys_GetRunePerfectData = RuneSys.GetRunePerfectData
+RuneSys_GetRunePerfectSyntheticData = RuneSys.GetRunePerfectSyntheticData
+RuneSys_IsRunePerfect = RuneSys.IsRunePerfect
+RuneSys_IsMutexRune = RuneSys.IsMutexRune
+RuneSys_GetRuneInfo = RuneSys.GetRuneInfo
+RuneSys_GetRuneHuazhenViewInfo = RuneSys.GetRuneHuazhenViewInfo
+RuneSys_GetRuneHuazhenAttr = RuneSys.GetRuneHuazhenAttr
+RuneSys_GetRuneHuazhenPosInfo = RuneSys.GetRuneHuazhenPosInfo
+RuneSys_GetPoFengInfo = RuneSys.GetPoFengInfo
+RuneSys_GetPoFengMeterial = RuneSys.GetPoFengMeterial
+
+return RuneSys

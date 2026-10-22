@@ -1,0 +1,7 @@
+# SummerWhales (2026-10-14). id,type,mesh,map,x,y   mesh = client npc.ini [NpcTypeN] x10
+# Map 11829 SummerBeach (official id, Questinfo) = doc 12116 2014vipholiday (Infinity[DB]\FestivalMaps\maps.txt).
+# Positions = the official Questinfo.ini points, cell walkable on 2014vipholiday.DMap (checked 2026-10-14).
+30727,2,44280,11829,172,149  # Cassio (official id, BeginNpcId/FinishNpcId of 5111-5115). npc.ini 4428 Cassio [CapturedWhaleKing] - exact name. HIGH
+30728,2,44290,11829,100,245  # StrandedWhale (official id, 5114). npc.ini 4429 Cassie [StrandedWhale] (first of the 5 stranded whales 4429-4433). SAME-TAG
+30733,2,44340,11829,220,341  # WhaleTraining (official id, 5115). No client mesh is named WhaleTraining; npc.ini 4434 Russ [OldFisherman] = "the fisherman" of the 5115 text. PROXY
+8857001,2,44350,11829,90,223  # Scallop (5113 [mob Scallop,11829,90,223]): npc.ini 4435 Scallop [WhaleFood] - exact name. Click = 1 Scallop 3336088 (Base\SummerWhales)

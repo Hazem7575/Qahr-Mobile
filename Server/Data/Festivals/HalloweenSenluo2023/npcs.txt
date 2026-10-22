@@ -1,0 +1,2 @@
+# HalloweenSenluo2023 (Macabre Realm). id,type,mesh,map,x,y  - Count Dracula: official id 32116 has no Questinfo quest -> festival id 8823001; look NpcX [110087] CountDracula Note [2023Halloween] (mesh 1100870); position DERIVED (no official spot in the client; walkable 7x7, free of Npcs.txt NPCs). His script (menu) is Base\HalloweenSenluo2023\HsZones.cs; the Macabre Treasury = rewards.json exchanges.
+8823001,2,1100870,1002,400,380  # Count Dracula [2023Halloween]

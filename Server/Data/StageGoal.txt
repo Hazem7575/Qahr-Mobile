@@ -1,0 +1,1808 @@
+[StageGoal]
+// 总阶段数
+StageAmount=12
+NewPrizeAmount=8
+// 目标完成数量@@奖品itemtypeid@@是否赠品(0为非赠，1为赠)(一定要用'@@'隔开)@@物品数量
+NewPrize1=10@@3322762@@1@@2
+NewPrize2=20@@1088001@@1@@150
+NewPrize3=30@@1088000@@1@@2
+NewPrize4=40@@3321046@@1@@1
+NewPrize5=50@@3344299@@0@@1
+NewPrize6=60@@3313960@@0@@1
+NewPrize7=80@@3347625@@0@@1
+NewPrize8=100@@192025@@1@@1
+
+[1]
+// 阶段开启等级，对应数据库cq_process_goal表中的'open_lv'字段
+OpenLev=0001
+// 阶段的按钮图片Title
+StageAni=DaXiaZhuan_Btn3
+// 该阶段的目标任务个数，对应数据库cq_process_goal表中的'task_num'字段
+GoalNum=8
+// 阶段的奖励，对应数据库cq_process_goal表中的奖励数据
+// 规范：物品idType@@物品数量@@是否赠品(0为非赠，1为赠)(一定要用'@@'隔开)
+Prize1=3005107@@1@@1
+
+[1-1]
+Title=STR_INI_STAGEGOAL_TITLE_1_1
+Intro=STR_INI_STAGEGOAL_INTRO_1_1
+Progress=7
+Prize1=3346067@@3@@1
+TaskType=5
+Require=9
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn19
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ6
+TaskName=STAGE_GOAL_TASK_NAME_1_1
+
+[1-2]
+Title=STR_INI_STAGEGOAL_TITLE_1_2
+Intro=STR_INI_STAGEGOAL_INTRO_1_2
+Progress=1
+Prize1=3314206@@3@@1
+TaskType=4
+Require=20
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn29
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_1_2
+
+[1-3]
+Title=STR_INI_STAGEGOAL_TITLE_1_3
+Intro=STR_INI_STAGEGOAL_INTRO_1_3
+Progress=1
+Prize1=3314206@@2@@1
+TaskType=6
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn14
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ1
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+SDType=13
+TaskName=STAGE_GOAL_TASK_NAME_1_3
+
+[1-4]
+Title=STR_INI_STAGEGOAL_TITLE_1_4
+Intro=STR_INI_STAGEGOAL_INTRO_1_4
+Progress=1
+Prize1=3322760@@1@@1
+TaskType=10033
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+//复用我要变强开界面功能
+TaskName=STAGE_GOAL_TASK_NAME_1_4
+
+[1-5]
+Title=STR_INI_STAGEGOAL_TITLE_1_5
+Intro=STR_INI_STAGEGOAL_INTRO_1_5
+Progress=1
+Prize1=1088001@@20@@1
+TaskType=45
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+SDType=0
+TaskName=STAGE_GOAL_TASK_NAME_1_5
+
+[1-6]
+Title=STR_INI_STAGEGOAL_TITLE_1_6
+Intro=STR_INI_STAGEGOAL_INTRO_1_6
+Progress=1
+Prize1=3346067@@1@@1
+TaskType=16
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+SDType=3
+TaskName=STAGE_GOAL_TASK_NAME_1_6
+
+[1-7]
+Title=STR_INI_STAGEGOAL_TITLE_1_7
+Intro=STR_INI_STAGEGOAL_INTRO_1_7
+Progress=1
+Prize1=3322760@@1@@1
+TaskType=10034
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+//复用我要变强开界面功能
+TaskName=STAGE_GOAL_TASK_NAME_1_7
+
+[1-8]
+Title=STR_INI_STAGEGOAL_TITLE_1_8
+Intro=STR_INI_STAGEGOAL_INTRO_1_8
+Progress=1
+Prize1=3314206@@5@@1
+TaskType=2
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn17
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ4
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+Goto=1036,314,247,31924,2
+TaskName=STAGE_GOAL_TASK_NAME_1_8
+
+[2]
+OpenLev=31
+StageAni=DaXiaZhuan_Btn4
+GoalNum=8
+Prize1=3005108@@1@@1
+
+[2-1]
+Title=STR_INI_STAGEGOAL_TITLE_2_1
+Intro=STR_INI_STAGEGOAL_INTRO_2_1
+Progress=1
+Prize1=1088000@@1@@1
+TaskType=10035
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+Goto=10364,307,365,31881,2
+TaskName=STAGE_GOAL_TASK_NAME_2_1
+
+[2-2]
+Title=STR_INI_STAGEGOAL_TITLE_2_2
+Intro=STR_INI_STAGEGOAL_INTRO_2_2
+Progress=1
+Prize1=1200001@@1@@1
+TaskType=10036
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+TaskName=STAGE_GOAL_TASK_NAME_2_2
+
+[2-3]
+Title=STR_INI_STAGEGOAL_TITLE_2_3
+Intro=STR_INI_STAGEGOAL_INTRO_2_3
+Progress=1
+Prize1=3001045@@1@@1
+TaskType=10037
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn29
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+//复用我要变强开界面功能
+Goto=1036,291,226,31880,2
+TaskName=STAGE_GOAL_TASK_NAME_2_3
+
+[2-4]
+Title=STR_INI_STAGEGOAL_TITLE_2_4
+Intro=STR_INI_STAGEGOAL_INTRO_2_4
+Progress=1
+Prize1=1088000@@1@@1
+TaskType=7
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_2_4
+
+[2-5]
+Title=STR_INI_STAGEGOAL_TITLE_2_5
+Intro=STR_INI_STAGEGOAL_INTRO_2_5
+Progress=1
+Prize1=3008221@@1@@0
+TaskType=10038
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_2_5
+
+[2-6]
+Title=STR_INI_STAGEGOAL_TITLE_2_6
+Intro=STR_INI_STAGEGOAL_INTRO_2_6
+Progress=1200
+Prize1=1088001@@50@@1
+TaskType=138
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+TaskName=STAGE_GOAL_TASK_NAME_2_6
+
+[2-7]
+Title=STR_INI_STAGEGOAL_TITLE_2_7
+Intro=STR_INI_STAGEGOAL_INTRO_2_7
+Progress=8
+Prize1=3346067@@5@@1
+TaskType=23
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+SDType=3
+TaskName=STAGE_GOAL_TASK_NAME_2_7
+
+[2-8]
+Title=STR_INI_STAGEGOAL_TITLE_2_8
+Intro=STR_INI_STAGEGOAL_INTRO_2_8
+Progress=2
+Prize1=3314904@@1@@1
+TaskType=2
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn17
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ4
+//复用我要变强开界面功能
+Goto=1036,314,247,31924,2
+TaskName=STAGE_GOAL_TASK_NAME_2_8
+
+[3]
+OpenLev=61
+StageAni=DaXiaZhuan_Btn5
+GoalNum=10
+Prize1=3005109@@1@@1
+
+[3-1]
+Title=STR_INI_STAGEGOAL_TITLE_3_1
+Intro=STR_INI_STAGEGOAL_INTRO_3_1
+Progress=1
+Prize1=3314203@@1@@1
+TaskType=10040
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_3_1
+
+[3-2]
+Title=STR_INI_STAGEGOAL_TITLE_3_2
+Intro=STR_INI_STAGEGOAL_INTRO_3_2
+Progress=10000
+Prize1=3347628@@1@@1
+TaskType=10041
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn29
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10364,307,379,31985,2
+TaskName=STAGE_GOAL_TASK_NAME_3_2
+
+[3-3]
+Title=STR_INI_STAGEGOAL_TITLE_3_3
+Intro=STR_INI_STAGEGOAL_INTRO_3_3
+Progress=1
+Prize1=3321044@@1@@0
+TaskType=10042
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn29
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10364,241,213,31926,2
+TaskName=STAGE_GOAL_TASK_NAME_3_3
+
+[3-4]
+Title=STR_INI_STAGEGOAL_TITLE_3_4
+Intro=STR_INI_STAGEGOAL_INTRO_3_4
+Progress=100
+Prize1=1088001@@100@@1
+TaskType=10043
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn29
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10364,307,379,31985,2
+TaskName=STAGE_GOAL_TASK_NAME_3_4
+
+[3-5]
+Title=STR_INI_STAGEGOAL_TITLE_3_5
+Intro=STR_INI_STAGEGOAL_INTRO_3_5
+Progress=48
+Prize1=3321044@@1@@0
+TaskType=22
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+SDType=3
+TaskName=STAGE_GOAL_TASK_NAME_3_5
+
+[3-6]
+Title=STR_INI_STAGEGOAL_TITLE_3_6
+Intro=STR_INI_STAGEGOAL_INTRO_3_6
+Progress=107
+Prize1=3322761@@1@@1
+TaskType=141
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+TaskName=STAGE_GOAL_TASK_NAME_3_6
+
+[3-7]
+Title=STR_INI_STAGEGOAL_TITLE_3_7
+Intro=STR_INI_STAGEGOAL_INTRO_3_7
+Progress=10
+Prize1=3321044@@1@@0
+TaskType=28
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+SDType=2
+TaskName=STAGE_GOAL_TASK_NAME_3_7
+
+[3-8]
+Title=STR_INI_STAGEGOAL_TITLE_3_8
+Intro=STR_INI_STAGEGOAL_INTRO_3_8
+Progress=1
+Prize1=3314217@@1@@1
+TaskType=15
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn26
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_3_8
+
+[3-9]
+Title=STR_INI_STAGEGOAL_TITLE_3_9
+Intro=STR_INI_STAGEGOAL_INTRO_3_9
+Progress=1
+Prize1=3001045@@1@@1
+TaskType=10045
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_3_9
+
+[3-10]
+Title=STR_INI_STAGEGOAL_TITLE_3_10
+Intro=STR_INI_STAGEGOAL_INTRO_3_10
+Progress=1
+Prize1=3008221@@1@@1
+TaskType=10046
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_3_10
+
+[4]
+OpenLev=91
+StageAni=DaXiaZhuan_Btn6
+GoalNum=10
+Prize1=3005110@@1@@1
+
+[4-1]
+Title=STR_INI_STAGEGOAL_TITLE_4_1
+Intro=STR_INI_STAGEGOAL_INTRO_4_1
+Progress=1
+Prize1=3314909@@1@@1
+TaskType=24
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn14
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ1
+SDType=13
+TaskName=STAGE_GOAL_TASK_NAME_4_1
+
+[4-2]
+Title=STR_INI_STAGEGOAL_TITLE_4_2
+Intro=STR_INI_STAGEGOAL_INTRO_4_2
+Progress=103
+Prize1=3339382@@1@@1
+TaskType=139
+Require=1
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn19
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ6
+TaskName=STAGE_GOAL_TASK_NAME_4_2
+
+[4-3]
+Title=STR_INI_STAGEGOAL_TITLE_4_3
+Intro=STR_INI_STAGEGOAL_INTRO_4_3
+Progress=1400
+Prize1=3008221@@2@@0
+TaskType=138
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_4_3
+
+[4-4]
+Title=STR_INI_STAGEGOAL_TITLE_4_4
+Intro=STR_INI_STAGEGOAL_INTRO_4_4
+Progress=1
+Prize1=3322761@@1@@1
+TaskType=37
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+SDType=11
+TaskName=STAGE_GOAL_TASK_NAME_4_4
+
+[4-5]
+Title=STR_INI_STAGEGOAL_TITLE_4_5
+Intro=STR_INI_STAGEGOAL_INTRO_4_5
+Progress=1
+Prize1=3321045@@1@@0
+TaskType=10049
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn26
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10366,530,481,20823,2
+TaskName=STAGE_GOAL_TASK_NAME_4_5
+
+[4-6]
+Title=STR_INI_STAGEGOAL_TITLE_4_6
+Intro=STR_INI_STAGEGOAL_INTRO_4_6
+Progress=1
+Prize1=1088001@@100@@1
+TaskType=10084
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10364,261,134,1152,2
+TaskName=STAGE_GOAL_TASK_NAME_4_6
+
+[4-7]
+Title=STR_INI_STAGEGOAL_TITLE_4_7
+Intro=STR_INI_STAGEGOAL_INTRO_4_7
+Progress=1
+Prize1=3314909@@1@@1
+TaskType=10050
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn26
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10364,320,279,23058,2
+TaskName=STAGE_GOAL_TASK_NAME_4_7
+
+[4-8]
+Title=STR_INI_STAGEGOAL_TITLE_4_8
+Intro=STR_INI_STAGEGOAL_INTRO_4_8
+Progress=2
+Prize1=3321045@@1@@0
+TaskType=20
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn19
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ6
+TaskName=STAGE_GOAL_TASK_NAME_4_8
+
+[4-9]
+Title=STR_INI_STAGEGOAL_TITLE_4_9
+Intro=STR_INI_STAGEGOAL_INTRO_4_9
+Progress=1
+Prize1=1088000@@1@@1
+TaskType=10085
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10368,465,201,32198,2
+TaskName=STAGE_GOAL_TASK_NAME_4_9
+
+[4-10]
+Title=STR_INI_STAGEGOAL_TITLE_4_10
+Intro=STR_INI_STAGEGOAL_INTRO_4_10
+Progress=10
+Prize1=3008221@@2@@0
+TaskType=7
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_4_10
+
+[5]
+OpenLev=1015
+StageAni=DaXiaZhuan_Btn7
+GoalNum=10
+Prize1=3005111@@1@@1
+
+[5-1]
+Title=STR_INI_STAGEGOAL_TITLE_5_1
+Intro=STR_INI_STAGEGOAL_INTRO_5_1
+Progress=103
+Prize1=3339382@@1@@1
+TaskType=139
+Require=2
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn19
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ6
+TaskName=STAGE_GOAL_TASK_NAME_5_1
+
+[5-2]
+Title=STR_INI_STAGEGOAL_TITLE_5_2
+Intro=STR_INI_STAGEGOAL_INTRO_5_2
+Progress=1600
+Prize1=3321045@@1@@0
+TaskType=138
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_5_2
+
+[5-3]
+Title=STR_INI_STAGEGOAL_TITLE_5_3
+Intro=STR_INI_STAGEGOAL_INTRO_5_3
+Progress=1
+Prize1=720128@@2@@1
+TaskType=10054
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_5_3
+
+[5-4]
+Title=STR_INI_STAGEGOAL_TITLE_4_6
+Intro=STR_INI_STAGEGOAL_INTRO_5_4
+Progress=1
+Prize1=1088001@@300@@1
+TaskType=10086
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10366,261,134,1152,2
+TaskName=STAGE_GOAL_TASK_NAME_5_4
+Goto=10364,261,134,1152,2
+
+[5-5]
+Title=STR_INI_STAGEGOAL_TITLE_5_5
+Intro=STR_INI_STAGEGOAL_INTRO_5_5
+Progress=1
+Prize1=3314909@@2@@1
+TaskType=1056
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn15
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ2
+TaskName=STAGE_GOAL_TASK_NAME_5_5
+
+[5-6]
+Title=STR_INI_STAGEGOAL_TITLE_5_6
+Intro=STR_INI_STAGEGOAL_INTRO_5_6
+Progress=1
+Prize1=3314909@@2@@1
+TaskType=11
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn15
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ2
+TaskName=STAGE_GOAL_TASK_NAME_5_6
+
+[5-7]
+Title=STR_INI_STAGEGOAL_TITLE_5_7
+Intro=STR_INI_STAGEGOAL_INTRO_5_7
+Progress=1
+Prize1=1088000@@1@@1
+TaskType=10056
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+Goto=10364,301,272,31863,2
+TaskName=STAGE_GOAL_TASK_NAME_5_7
+
+[5-8]
+Title=STR_INI_STAGEGOAL_TITLE_5_8
+Intro=STR_INI_STAGEGOAL_INTRO_5_8
+Progress=1
+Prize1=1088000@@1@@1
+TaskType=10057
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+Goto=10364,256,240,31855,2
+TaskName=STAGE_GOAL_TASK_NAME_5_8
+
+[5-9]
+Title=STR_INI_STAGEGOAL_TITLE_5_9
+Intro=STR_INI_STAGEGOAL_INTRO_5_9
+Progress=120
+Prize1=3314904@@1@@1
+TaskType=1
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn17
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ4
+TaskName=STAGE_GOAL_TASK_NAME_5_9
+
+[5-10]
+Title=STR_INI_STAGEGOAL_TITLE_5_10
+Intro=STR_INI_STAGEGOAL_INTRO_5_10
+Progress=1
+Prize1=3008223@@2@@0
+TaskType=36
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_5_10
+
+[6]
+OpenLev=1015
+StageAni=DaXiaZhuan_Btn8
+GoalNum=10
+Prize1=3005112@@1@@1
+
+[6-1]
+Title=STR_INI_STAGEGOAL_TITLE_6_1
+Intro=STR_INI_STAGEGOAL_INTRO_6_1
+Progress=5
+Prize1=3310822@@1@@1
+TaskType=10058
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn29
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_6_1
+
+[6-2]
+Title=STR_INI_STAGEGOAL_TITLE_6_2
+Intro=STR_INI_STAGEGOAL_INTRO_6_2
+Progress=50
+Prize1=3340083@@1@@1
+TaskType=137
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+SDType=16
+TaskName=STAGE_GOAL_TASK_NAME_6_2
+
+[6-3]
+Title=STR_INI_STAGEGOAL_TITLE_6_3
+Intro=STR_INI_STAGEGOAL_INTRO_6_3
+Progress=103
+Prize1=3321045@@1@@0
+TaskType=136
+Require=3
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+// 装备等级-0
+// 品质-1
+// 宝石-2
+// 追加-3
+// 神佑-4
+// 加持-5
+// 神魂-6
+// 淬炼-7
+// 精炼-8
+// 练气-9
+// 自创武功-10
+// 爵位-11
+// 属性点-12
+// Sub-class-13
+// 转世-14
+// 内功-15
+// 龙魂-16
+// 战士战装-17
+// 道士战装-18
+SDType=7
+TaskName=STAGE_GOAL_TASK_NAME_6_3
+
+[6-4]
+Title=STR_INI_STAGEGOAL_TITLE_6_4
+Intro=STR_INI_STAGEGOAL_INTRO_6_4
+Progress=1
+Prize1=3310408@@1@@1
+TaskType=17
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_6_4
+
+[6-5]
+Title=STR_INI_STAGEGOAL_TITLE_6_5
+Intro=STR_INI_STAGEGOAL_INTRO_6_5
+Progress=1
+Prize1=3310411@@1@@1
+TaskType=10059
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_6_5
+
+[6-6]
+Title=STR_INI_STAGEGOAL_TITLE_6_6
+Intro=STR_INI_STAGEGOAL_INTRO_6_6
+Progress=1
+Prize1=3314909@@2@@1
+TaskType=10060
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn26
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_6_6
+
+[6-7]
+Title=STR_INI_STAGEGOAL_TITLE_6_7
+Intro=STR_INI_STAGEGOAL_INTRO_6_7
+Progress=1800
+Prize1=3321045@@1@@0
+TaskType=138
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_6_7
+
+[6-8]
+Title=STR_INI_STAGEGOAL_TITLE_6_8
+Intro=STR_INI_STAGEGOAL_INTRO_6_8
+Progress=100
+Prize1=3314909@@1@@1
+TaskType=10062
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10366,530,481,20823,2
+TaskName=STAGE_GOAL_TASK_NAME_6_8
+
+[6-9]
+Title=STR_INI_STAGEGOAL_TITLE_6_9
+Intro=STR_INI_STAGEGOAL_INTRO_6_9
+Progress=1
+Prize1=720128@@2@@1
+TaskType=10063
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10364,320,279,23058,2
+TaskName=STAGE_GOAL_TASK_NAME_6_9
+
+[6-10]
+Title=STR_INI_STAGEGOAL_TITLE_5_9
+Intro=STR_INI_STAGEGOAL_INTRO_6_10
+Progress=125
+Prize1=3347631@@1@@1
+TaskType=1
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn17
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ4
+TaskName=STAGE_GOAL_TASK_NAME_6_10
+
+[7]
+OpenLev=2015
+StageAni=DaXiaZhuan_Btn9
+//GoalNum=11
+GoalNum=9
+Prize1=3005113@@1@@0
+
+[7-1]
+Title=STR_INI_STAGEGOAL_TITLE_7_1
+Intro=STR_INI_STAGEGOAL_INTRO_7_1
+Progress=1
+Prize1=3322762@@1@@1
+TaskType=32
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_7_1
+
+[7-2]
+Title=STR_INI_STAGEGOAL_TITLE_7_2
+Intro=STR_INI_STAGEGOAL_INTRO_7_2
+Progress=1
+Prize1=3322762@@1@@1
+TaskType=10064
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_7_2
+
+[7-3]
+Title=STR_INI_STAGEGOAL_TITLE_7_3
+Intro=STR_INI_STAGEGOAL_INTRO_7_3
+Progress=1
+Prize1=3005131@@1@@1
+TaskType=35
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn27
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=1036,204,88,30156,2
+TaskName=STAGE_GOAL_TASK_NAME_7_3
+
+[7-4]
+Title=STR_INI_STAGEGOAL_TITLE_7_4
+Intro=STR_INI_STAGEGOAL_INTRO_7_4
+Progress=3
+Prize1=3314909@@3@@1
+TaskType=24
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn14
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ1
+SDType=13
+TaskName=STAGE_GOAL_TASK_NAME_7_4
+
+[7-5]
+Title=STR_INI_STAGEGOAL_TITLE_7_5
+Intro=STR_INI_STAGEGOAL_INTRO_7_5
+Progress=2000
+Prize1=3347626@@1@@1
+TaskType=138
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_7_5
+
+[7-6]
+Title=STR_INI_STAGEGOAL_TITLE_7_6
+Intro=STR_INI_STAGEGOAL_INTRO_7_6
+Progress=1
+Prize1=3310414@@1@@1
+TaskType=10066
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10364,301,272,31863,2
+TaskName=STAGE_GOAL_TASK_NAME_7_6
+
+[7-7]
+Title=STR_INI_STAGEGOAL_TITLE_7_7
+Intro=STR_INI_STAGEGOAL_INTRO_7_7
+Progress=1
+Prize1=1088001@@300@@1
+TaskType=10067
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10364,256,240,31855,2
+TaskName=STAGE_GOAL_TASK_NAME_7_7
+
+[7-8]
+Title=STR_INI_STAGEGOAL_TITLE_7_8
+Intro=STR_INI_STAGEGOAL_INTRO_7_8
+Progress=500
+Prize1=3008221@@3@@0
+TaskType=140
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_7_8
+
+[7-9]
+Title=STR_INI_STAGEGOAL_TITLE_7_9
+Intro=STR_INI_STAGEGOAL_INTRO_7_9
+Progress=130
+Prize1=3347631@@1@@1
+TaskType=1
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn17
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ4
+TaskName=STAGE_GOAL_TASK_NAME_7_9
+
+[8]
+OpenLev=2121
+StageAni=DaXiaZhuan_Btn10
+GoalNum=10
+Prize1=3005114@@1@@0
+
+[8-1]
+Title=STR_INI_STAGEGOAL_TITLE_8_1
+Intro=STR_INI_STAGEGOAL_INTRO_8_1
+Progress=300
+Prize1=3008221@@3@@0
+TaskType=43
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_8_1
+
+[8-2]
+Title=STR_INI_STAGEGOAL_TITLE_8_2
+Intro=STR_INI_STAGEGOAL_INTRO_8_2
+Progress=3
+Prize1=3310408@@1@@1
+TaskType=17
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_8_2
+
+[8-3]
+Title=STR_INI_STAGEGOAL_TITLE_8_3
+Intro=STR_INI_STAGEGOAL_INTRO_8_3
+Progress=1
+Prize1=3310411@@1@@1
+TaskType=10070
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_8_3
+
+[8-4]
+Title=STR_INI_STAGEGOAL_TITLE_7_5
+Intro=STR_INI_STAGEGOAL_INTRO_8_4
+Progress=2200
+Prize1=3347626@@1@@1
+TaskType=138
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_7_5
+
+[8-5]
+Title=STR_INI_STAGEGOAL_TITLE_8_5
+Intro=STR_INI_STAGEGOAL_INTRO_8_5
+Progress=60
+Prize1=3339437@@1@@1
+TaskType=137
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=16
+TaskName=STAGE_GOAL_TASK_NAME_8_5
+
+[8-6]
+Title=STR_INI_STAGEGOAL_TITLE_8_6
+Intro=STR_INI_STAGEGOAL_INTRO_8_6
+Progress=30000000
+Prize1=3347630@@1@@1
+TaskType=37
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+//复用我要变强开界面功能
+SDType=11
+TaskName=STAGE_GOAL_TASK_NAME_8_6
+
+[8-7]
+Title=STR_INI_STAGEGOAL_TITLE_8_7
+Intro=STR_INI_STAGEGOAL_INTRO_8_7
+Progress=107
+Prize1=3321046@@1@@0
+TaskType=136
+Require=3
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=6
+TaskName=STAGE_GOAL_TASK_NAME_8_7
+
+[8-8]
+Title=STR_INI_STAGEGOAL_TITLE_8_8
+Intro=STR_INI_STAGEGOAL_INTRO_8_8
+Progress=3
+Prize1=3321045@@1@@0
+TaskType=46
+Require=3
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=7
+TaskName=STAGE_GOAL_TASK_NAME_8_8
+
+[8-9]
+Title=STR_INI_STAGEGOAL_TITLE_8_9
+Intro=STR_INI_STAGEGOAL_INTRO_8_9
+Progress=1
+Prize1=3005131@@1@@1
+TaskType=10072
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn27
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=1036,204,88,30156,2
+TaskName=STAGE_GOAL_TASK_NAME_8_9
+
+[8-10]
+Title=STR_INI_STAGEGOAL_TITLE_8_10
+Intro=STR_INI_STAGEGOAL_INTRO_8_10
+Progress=133
+Prize1=3347631@@1@@1
+TaskType=1
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn17
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ4
+TaskName=STAGE_GOAL_TASK_NAME_8_10
+
+[9]
+OpenLev=2121
+StageAni=DaXiaZhuan_Btn11
+GoalNum=10
+Prize1=3005115@@1@@0
+
+[9-1]
+Title=STR_INI_STAGEGOAL_TITLE_8_2
+Intro=STR_INI_STAGEGOAL_INTRO_9_1
+Progress=1
+Prize1=3310409@@1@@1
+TaskType=38
+Require=8
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_9_1
+
+[9-2]
+Title=STR_INI_STAGEGOAL_TITLE_9_2
+Intro=STR_INI_STAGEGOAL_INTRO_9_2
+Progress=1
+Prize1=3310412@@1@@1
+TaskType=10073
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_9_2
+
+[9-3]
+Title=STR_INI_STAGEGOAL_TITLE_9_3
+Intro=STR_INI_STAGEGOAL_INTRO_9_3
+Progress=1
+Prize1=3310415@@1@@1
+TaskType=10074
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_9_3
+
+[9-4]
+Title=STR_INI_STAGEGOAL_TITLE_9_4
+Intro=STR_INI_STAGEGOAL_INTRO_9_4
+Progress=2400
+Prize1=3347626@@1@@1
+TaskType=138
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_9_4
+
+[9-5]
+Title=STR_INI_STAGEGOAL_TITLE_9_5
+Intro=STR_INI_STAGEGOAL_INTRO_9_5
+Progress=3000
+Prize1=3321046@@1@@0
+TaskType=140
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn13
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_9_5
+
+[9-6]
+Title=STR_INI_STAGEGOAL_TITLE_9_6
+Intro=STR_INI_STAGEGOAL_INTRO_9_6
+Progress=16
+Prize1=3347629@@1@@1
+TaskType=27
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=2
+TaskName=STAGE_GOAL_TASK_NAME_9_6
+
+[9-7]
+Title=STR_INI_STAGEGOAL_TITLE_8_6
+Intro=STR_INI_STAGEGOAL_INTRO_9_7
+Progress=100000000
+Prize1=3347630@@1@@1
+TaskType=37
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+//复用我要变强开界面功能
+SDType=11
+TaskName=STAGE_GOAL_TASK_NAME_9_7
+
+[9-8]
+Title=STR_INI_STAGEGOAL_TITLE_8_5
+Intro=STR_INI_STAGEGOAL_INTRO_9_8
+Progress=65
+Prize1=3345733@@1@@1
+TaskType=137
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=16
+TaskName=STAGE_GOAL_TASK_NAME_9_8
+
+[9-9]
+Title=STR_INI_STAGEGOAL_TITLE_8_8
+Intro=STR_INI_STAGEGOAL_INTRO_9_9
+Progress=5
+Prize1=3347626@@1@@1
+TaskType=46
+Require=3
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=7
+TaskName=STAGE_GOAL_TASK_NAME_9_9
+
+[9-10]
+Title=STR_INI_STAGEGOAL_TITLE_9_10
+Intro=STR_INI_STAGEGOAL_INTRO_9_10
+Progress=325
+Prize1=3008223@@3@@0
+TaskType=43
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_9_10
+
+[10]
+OpenLev=2121
+StageAni=DaXiaZhuan_Btn12
+GoalNum=10
+Prize1=3005116@@1@@0
+
+[10-1]
+Title=STR_INI_STAGEGOAL_TITLE_10_1
+Intro=STR_INI_STAGEGOAL_INTRO_10_1
+Progress=350
+Prize1=3008221@@5@@0
+TaskType=43
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_10_1
+
+[10-2]
+Title=STR_INI_STAGEGOAL_TITLE_10_2
+Intro=STR_INI_STAGEGOAL_INTRO_10_2
+Progress=1
+Prize1=3310409@@1@@1
+TaskType=38
+Require=3
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_10_2
+
+[10-3]
+Title=STR_INI_STAGEGOAL_TITLE_10_3
+Intro=STR_INI_STAGEGOAL_INTRO_10_3
+Progress=1
+Prize1=3310412@@1@@1
+TaskType=10077
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_10_3
+
+[10-4]
+Title=STR_INI_STAGEGOAL_TITLE_7_5
+Intro=STR_INI_STAGEGOAL_INTRO_10_4
+Progress=2800
+Prize1=3347626@@1@@1
+TaskType=138
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_7_5
+
+[10-5]
+Title=STR_INI_STAGEGOAL_TITLE_10_5
+Intro=STR_INI_STAGEGOAL_INTRO_10_5
+Progress=120
+Prize1=720028@@1@@1
+TaskType=22
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=3
+TaskName=STAGE_GOAL_TASK_NAME_10_5
+
+[10-6]
+Title=STR_INI_STAGEGOAL_TITLE_8_5
+Intro=STR_INI_STAGEGOAL_INTRO_10_6
+Progress=70
+Prize1=3345446@@1@@1
+TaskType=137
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=16
+TaskName=STAGE_GOAL_TASK_NAME_10_6
+
+[10-7]
+Title=STR_INI_STAGEGOAL_TITLE_8_8
+Intro=STR_INI_STAGEGOAL_INTRO_10_7
+Progress=6
+Prize1=3321046@@1@@0
+TaskType=46
+Require=3
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=7
+TaskName=STAGE_GOAL_TASK_NAME_10_7
+
+[10-8]
+Title=STR_INI_STAGEGOAL_TITLE_8_9
+Intro=STR_INI_STAGEGOAL_INTRO_10_8
+Progress=1
+Prize1=3008223@@5@@0
+TaskType=10079
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn27
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=1036,204,88,30156,2
+TaskName=STAGE_GOAL_TASK_NAME_10_8
+
+[10-9]
+Title=STR_INI_STAGEGOAL_TITLE_10_9
+Intro=STR_INI_STAGEGOAL_INTRO_10_9
+Progress=10000
+Prize1=3347632@@1@@1
+TaskType=10080
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn29
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+Goto=10364,363,407,0,2
+TaskName=STAGE_GOAL_TASK_NAME_10_9
+
+[10-10]
+Title=STR_INI_STAGEGOAL_TITLE_8_10
+Intro=STR_INI_STAGEGOAL_INTRO_10_10
+Progress=135
+Prize1=3310819@@1@@1
+TaskType=1
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn17
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ4
+TaskName=STAGE_GOAL_TASK_NAME_10_10
+
+[11]
+OpenLev=2121
+StageAni=DaXiaZhuan_Btn13
+GoalNum=10
+Prize1=3303261@@1@@0
+
+[11-1]
+Title=STR_INI_STAGEGOAL_TITLE_11_1
+Intro=STR_INI_STAGEGOAL_INTRO_11_1
+Progress=375
+Prize1=3008221@@10@@0
+TaskType=43
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn20
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_11_1
+
+[11-2]
+Title=STR_INI_STAGEGOAL_TITLE_3_8
+Intro=STR_INI_STAGEGOAL_INTRO_11_2
+Progress=90
+Prize1=720028@@1@@1
+TaskType=10081
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn26
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_11_2
+
+[11-3]
+Title=STR_INI_STAGEGOAL_TITLE_11_3
+Intro=STR_INI_STAGEGOAL_INTRO_11_3
+Progress=3000
+Prize1=3321046@@1@@0
+TaskType=138
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_11_3
+
+[11-4]
+Title=STR_INI_STAGEGOAL_TITLE_11_4
+Intro=STR_INI_STAGEGOAL_INTRO_11_4
+Progress=5000
+Prize1=3008221@@10@@0
+TaskType=140
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_11_4
+
+[11-5]
+Title=STR_INI_STAGEGOAL_TITLE_11_5
+Intro=STR_INI_STAGEGOAL_INTRO_11_5
+Progress=1
+Prize1=3347633@@1@@1
+TaskType=10083
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn16
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ3
+TaskName=STAGE_GOAL_TASK_NAME_11_5
+
+[11-6]
+Title=STR_INI_STAGEGOAL_TITLE_4_2
+Intro=STR_INI_STAGEGOAL_INTRO_11_6
+Progress=105
+Prize1=3340967@@1@@1
+TaskType=139
+Require=1
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn19
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ6
+TaskName=STAGE_GOAL_TASK_NAME_11_6
+
+[11-7]
+Title=STR_INI_STAGEGOAL_TITLE_5_1
+Intro=STR_INI_STAGEGOAL_INTRO_11_7
+Progress=105
+Prize1=3346591@@1@@1
+TaskType=139
+Require=2
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn19
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ6
+TaskName=STAGE_GOAL_TASK_NAME_11_7
+
+[11-8]
+Title=STR_INI_STAGEGOAL_TITLE_5_9
+Intro=STR_INI_STAGEGOAL_INTRO_11_8
+Progress=140
+Prize1=3310820@@1@@1
+TaskType=1
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn17
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ4
+TaskName=STAGE_GOAL_TASK_NAME_11_8
+
+[11-9]
+Title=STR_INI_STAGEGOAL_TITLE_8_5
+Intro=STR_INI_STAGEGOAL_INTRO_11_9
+Progress=78
+Prize1=3345445@@1@@1
+TaskType=137
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=16
+TaskName=STAGE_GOAL_TASK_NAME_11_9
+
+[11-10]
+Title=STR_INI_STAGEGOAL_TITLE_11_10
+Intro=STR_INI_STAGEGOAL_INTRO_11_10
+Progress=207
+Prize1=3347627@@1@@1
+TaskType=136
+Require=3
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn18
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ5
+//复用我要变强开界面功能
+SDType=7
+TaskName=STAGE_GOAL_TASK_NAME_11_10
+
+[12]
+OpenLev=1
+StageAni=DaXiaZhuan_Btn23
+GoalNum=8
+Prize1=3005108@@1@@1
+
+[12-1]
+Title=STR_INI_STAGEGOAL_TITLE_12_1
+Intro=STR_INI_STAGEGOAL_INTRO_12_1
+Progress=1
+Prize1=3347624@@1@@1
+TaskType=10087
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_12_1
+
+[12-2]
+Title=STR_INI_STAGEGOAL_TITLE_12_2
+Intro=STR_INI_STAGEGOAL_INTRO_12_2
+Progress=1
+Prize1=3347624@@1@@1
+TaskType=10088
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_12_2
+
+[12-3]
+Title=STR_INI_STAGEGOAL_TITLE_12_3
+Intro=STR_INI_STAGEGOAL_INTRO_12_3
+Progress=1
+Prize1=3347624@@1@@1
+TaskType=10089
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_12_3
+
+[12-4]
+Title=STR_INI_STAGEGOAL_TITLE_12_4
+Intro=STR_INI_STAGEGOAL_INTRO_12_4
+Progress=1
+Prize1=3347624@@1@@1
+TaskType=10090
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_12_4
+
+[12-5]
+Title=STR_INI_STAGEGOAL_TITLE_12_5
+Intro=STR_INI_STAGEGOAL_INTRO_12_5
+Progress=1
+Prize1=3347624@@1@@1
+TaskType=10091
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_12_5
+
+[12-6]
+Title=STR_INI_STAGEGOAL_TITLE_12_6
+Intro=STR_INI_STAGEGOAL_INTRO_12_6
+Progress=1
+Prize1=3347624@@1@@1
+TaskType=10092
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_12_6
+
+[12-7]
+Title=STR_INI_STAGEGOAL_TITLE_12_7
+Intro=STR_INI_STAGEGOAL_INTRO_12_7
+Progress=1
+Prize1=3347624@@1@@1
+TaskType=10093
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_12_7
+
+[12-8]
+Title=STR_INI_STAGEGOAL_TITLE_12_8
+Intro=STR_INI_STAGEGOAL_INTRO_12_8
+Progress=1
+Prize1=3347624@@1@@1
+TaskType=10094
+Require=0
+//中间的圆形小图标
+GoalAni=DaXiaZhuan_Btn28
+//已选中目标，其右侧详情里的方形图标
+GoalBigAni=DaXiaZhuan_WZ7
+TaskName=STAGE_GOAL_TASK_NAME_12_8
+

@@ -1,0 +1,111 @@
+{
+  "_readme": "[QixiRomance2022 2026-10-15] Romantic Season (Global Qixi 2022) config, read by Base\\QixiRomance2022\\QixiRomance2022Ui.cs (re-read when the file changes). Item strings use the official client format 'id 0 count monopoly saveMinutes active' (monopoly 3 = bound). OFFICIAL = client data (luagui\\1267.dat, Server_Key tTanabataFestivalNpc / tQixiFestivalCross2022, itemtype). DERIVED = chosen here because the number is server-side only.",
+  "festival": "QixiRomance2022",
+  "minLevel": 80,
+  "_minLevel": "OFFICIAL tQixi2022Page_DelText[105][1]",
+
+  "repairStep": 4,
+  "_repairStep": "DERIVED: % per repair. The client's own default in DlgQiXiFestival_MessageTip is 4 ('tParam[4] or 4') -> 25 repairs per part, 100 materials for the whole harp.",
+  "repairPoints": 100,
+  "maintainPoints": 100,
+  "playPointsPerPlectrum": 100,
+  "_points": "DERIVED Love Points per repair / maintenance / Holy Plectrum played (the free daily song counts as 1 plectrum).",
+  "songCost": [ 1, 3, 10 ],
+  "_songCost": "OFFICIAL DlgQiXiFestivalRepair:SetXiaoHaoCountText (First Love 1, Sunny Day 3, Sweet Hugs 10); the 1st First Love play of the day is free (luaUiRes[1267][13]).",
+  "oneKeyMax": 50,
+  "_oneKeyMax": "DERIVED: most materials one 'Maintain all' click uses (bag space is checked for every reward).",
+
+  "repairPool": [
+    { "item": "3336394 0 1", "weight": 40, "_n": "Weaver Girl`s Silk x1" },
+    { "item": "730001 0 2 3 7200 1", "weight": 14, "_n": "+1 Stone (B) x2, 5 days" },
+    { "item": "3009000 0 2 0 2880 1", "weight": 14, "_n": "Twilight Star Stone x2, 2 days" },
+    { "item": "4060001 0 5 3", "weight": 14, "_n": "Universal Rune Essence (B) x5" },
+    { "item": "3328247 0 10", "weight": 8, "_n": "Awakening Spirit x10" },
+    { "item": "730005 0 1 3 7200 1", "weight": 1, "_n": "+5 Stone (B), 5 days" },
+    { "item": "723694 0 1 3", "weight": 3, "_n": "Permanent Stone (B)" },
+    { "item": "3314215 0 1 3", "weight": 3, "_n": "+2 Steed Pack (B)" },
+    { "item": "3321077 0 1 3", "weight": 3, "_n": "Leopard Chi Liquor (B)" }
+  ],
+  "_repairPool": "ITEMS OFFICIAL Dialog_Info['1267-preview-award'] (repair/maintain reward preview); WEIGHTS DERIVED (Silk is the advertised repair reward, luaUiRes[1268][6] point 5).",
+
+  "songPools": [
+    [
+      { "item": "3336395 0 1", "weight": 40 },
+      { "item": "730003 0 1 3 7200 1", "weight": 10 },
+      { "item": "3009001 0 2 0 2880 1", "weight": 14 },
+      { "item": "4060001 0 30 3", "weight": 14 },
+      { "item": "3314250 0 1 3", "weight": 4 },
+      { "item": "3328247 0 50", "weight": 12 },
+      { "item": "3314553 0 1 3", "weight": 5 },
+      { "item": "3338115 0 1", "weight": 1 }
+    ],
+    [
+      { "item": "3336395 0 1", "weight": 40 },
+      { "item": "730004 0 1 3 7200 1", "weight": 10 },
+      { "item": "3009002 0 1 0 2880 1", "weight": 14 },
+      { "item": "4060001 0 100 3", "weight": 14 },
+      { "item": "3314250 0 1 3", "weight": 6 },
+      { "item": "3328247 0 100", "weight": 10 },
+      { "item": "723694 0 1 3", "weight": 4 },
+      { "item": "3338115 0 1", "weight": 2 }
+    ],
+    [
+      { "item": "3336395 0 2", "weight": 40 },
+      { "item": "730005 0 1 3 7200 1", "weight": 10 },
+      { "item": "3009002 0 2 0 2880 1", "weight": 14 },
+      { "item": "4060001 0 300 3", "weight": 12 },
+      { "item": "3328247 0 500", "weight": 10 },
+      { "item": "3314250 0 1 3", "weight": 6 },
+      { "item": "723695 0 1 3", "weight": 4 },
+      { "item": "3338115 0 1", "weight": 4 }
+    ]
+  ],
+  "_songPools": "ITEMS + AMOUNTS OFFICIAL Dialog_Info['1267-award-pool'] [1] First Love [2] Sunny Day [3] Sweet Hugs (the strings must stay identical: the window highlights the won slot by string equality). WEIGHTS DERIVED.",
+
+  "milestones": [
+    { "points": 3000,  "items": [ "730005 0 1 3", "3336394 0 1" ] },
+    { "points": 5000,  "items": [ "4060001 0 150 3", "3336394 0 2" ] },
+    { "points": 10000, "items": [ "3009002 0 2", "3336394 0 2" ] },
+    { "points": 20000, "items": [ "3009104 0 2", "3336394 0 3" ] },
+    { "points": 30000, "items": [ "723694 0 1 3", "3336395 0 5" ] },
+    { "points": 50000, "items": [ "3336395 0 10" ] }
+  ],
+  "_milestones": "OFFICIAL Server_Key tTanabataFestivalNpc[30788][Text314-319] (Love Point Rewards). NOT GIVEN: the 50000 Qixi Title [The Little Prince/The Rose] (no title id for it in title_type.txt).",
+  "overflowEvery": 1600,
+  "overflowItems": [ "3325756 0 1", "3336395 0 1" ],
+  "_overflow": "OFFICIAL Text321 'after 50000, every 1600 points: 1 L1 Mythsoul and 1 Apollo`s Blessing'. DERIVED item: L1 Mythsoul Pack 3325756 for 'L1 Mythsoul'.",
+
+  "rankMin": 5000,
+  "_rankMin": "OFFICIAL Text428 'Collect at least 5000 Love Points to get ranked on the local rankings.'",
+
+  "flowerDailyLimit": 150,
+  "_flowerDailyLimit": "OFFICIAL tTanabataFestivalNpc[30789][Text233] '(%s/150)' flower/gift items per day.",
+  "flowers": [
+    { "item": 754001, "per": 9, "gives": 1 }, { "item": 758001, "per": 9, "gives": 1 },
+    { "item": 754003, "per": 3, "gives": 1 }, { "item": 758003, "per": 3, "gives": 1 },
+    { "item": 754009, "per": 1, "gives": 1 }, { "item": 758009, "per": 1, "gives": 1 },
+    { "item": 754099, "per": 1, "gives": 11 }, { "item": 758099, "per": 1, "gives": 11 },
+    { "item": 753001, "per": 20, "gives": 1 }, { "item": 757001, "per": 20, "gives": 1 },
+    { "item": 753003, "per": 7, "gives": 1 }, { "item": 757003, "per": 7, "gives": 1 },
+    { "item": 753009, "per": 2, "gives": 1 }, { "item": 757009, "per": 2, "gives": 1 },
+    { "item": 753099, "per": 1, "gives": 5 }, { "item": 757099, "per": 1, "gives": 5 },
+    { "item": 753999, "per": 1, "gives": 50 }, { "item": 757999, "per": 1, "gives": 50 },
+    { "item": 752003, "per": 7, "gives": 1 }, { "item": 756003, "per": 7, "gives": 1 },
+    { "item": 752009, "per": 2, "gives": 1 }, { "item": 756009, "per": 2, "gives": 1 },
+    { "item": 752099, "per": 1, "gives": 5 }, { "item": 756099, "per": 1, "gives": 5 },
+    { "item": 752999, "per": 1, "gives": 50 }, { "item": 756999, "per": 1, "gives": 50 },
+    { "item": 755001, "per": 20, "gives": 1 }, { "item": 751001, "per": 20, "gives": 1 },
+    { "item": 755003, "per": 7, "gives": 1 }, { "item": 751003, "per": 7, "gives": 1 },
+    { "item": 755009, "per": 2, "gives": 1 }, { "item": 751009, "per": 2, "gives": 1 },
+    { "item": 755099, "per": 1, "gives": 5 }, { "item": 751099, "per": 1, "gives": 5 },
+    { "item": 755999, "per": 1, "gives": 50 }, { "item": 751999, "per": 1, "gives": 50 }
+  ],
+  "_flowers": "OFFICIAL Orphee tTanabataFestivalNpc[30789][Text224-227] tips: Tulip/Jade 1x9 3x3 9x1 99x1=11; Orchid/Beer, Lily/Love Letter, Kiss/Red Rose 1x20 3x7 9x2 99x1=5 999x1=50 (no single Lily row). Item ids = itemtype 751xxx-758xxx. DERIVED: the material given is the one of the harp part being repaired (a random one of the 4 once the harp is whole).",
+
+  "repairPackWeights": [ 25, 25, 25, 25 ],
+  "_repairPack": "Ethereal Harp Repair Pack 3336393: OFFICIAL contents (1 Phoenix Wood / Fairy Flower / Whale Baleen / Mermaid Tear), DERIVED equal odds.",
+  "performancePack": [ { "item": "3338068 0 1", "weight": 40 }, { "item": "3338068 0 2", "weight": 30 }, { "item": "3338068 0 3", "weight": 20 }, { "item": "3338068 0 5", "weight": 10 } ],
+  "_performancePack": "Harp Performance Pack 3336415: OFFICIAL 1/2/3/5 Holy Plectrums, DERIVED odds.",
+  "memoryPack": [ { "item": "3338068 0 1", "weight": 30 }, { "item": "3338068 0 2", "weight": 25 }, { "item": "3338068 0 3", "weight": 20 }, { "item": "3338068 0 4", "weight": 15 }, { "item": "3338068 0 5", "weight": 10 } ],
+  "_memoryPack": "Orphee Memory Pack 3336366: OFFICIAL 1-5 Holy Plectrums, DERIVED odds."
+}

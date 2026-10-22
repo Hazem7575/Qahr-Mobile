@@ -1,0 +1,81 @@
+{
+  "_note": "VillageRequests (2026-10-14). Overlay while the festival runs. Official Questinfo 8247-8260 (TypeId 8, Lv 80, BeginNpcId 0, FinishNpcId = the citizen (-1) in Doomwoods 1003831, Prize Wishflake Blessing Pack 3351462). The citizens stand inside the private copy 'Doomwoods' (instance NPCs, festival ids 8858001-8858014 / 8858101-8858109, Questinfo has no official ids: -1). Slots = the official chk_quest slots. Daily: 'Every day, citizens will come here to make wishes' (tChristmas2024Wish[33691][Text1110]).",
+  "instances": {
+    "Doomwoods": {
+      "_note": "Official instance 1003831 Doomwoods (doc 12696 2024xmas_new). Entered through the ChristmasMain Doom Portal (Base/VillageRequests). Arrival = in front of Lillian (official text: 'After passing through the portal, you arrived at Doomwoods. Go ask the person ahead for information.'). minutes = derived. All NPC points = the official Questinfo points (walk-checked on 2024xmas_new.dmap). Meshes = client npc.ini [NpcTypeN] x10, every citizen is tagged [WoodsCitizen].",
+      "map": 1003831, "x": 181, "y": 46, "minutes": 60,
+      "exit": { "map": 1002, "x": 387, "y": 386 },
+      "npcs": [
+        { "id": 8858001, "mesh": 13170, "x": 181, "y": 40, "type": 2, "name": "Lillian" },
+        { "id": 8858002, "mesh": 13190, "x": 158, "y": 51, "type": 2, "name": "Jeana" },
+        { "id": 8858003, "mesh": 13200, "x": 204, "y": 114, "type": 2, "name": "Thompson" },
+        { "id": 8858004, "mesh": 49150, "x": 283, "y": 178, "type": 2, "name": "Leo" },
+        { "id": 8858005, "mesh": 49160, "x": 255, "y": 225, "type": 2, "name": "Kallir" },
+        { "id": 8858006, "mesh": 49170, "x": 131, "y": 143, "type": 2, "name": "Zach" },
+        { "id": 8858007, "mesh": 49180, "x": 91, "y": 143, "type": 2, "name": "Lucy" },
+        { "id": 8858008, "mesh": 46720, "x": 149, "y": 173, "type": 2, "name": "Jean" },
+        { "id": 8858009, "mesh": 18890, "x": 285, "y": 242, "type": 2, "name": "Scott" },
+        { "id": 8858010, "mesh": 42200, "x": 262, "y": 176, "type": 2, "name": "David" },
+        { "id": 8858011, "mesh": 42210, "x": 241, "y": 242, "type": 2, "name": "Kura" },
+        { "id": 8858012, "mesh": 33250, "x": 147, "y": 128, "type": 2, "name": "Mia" },
+        { "id": 8858013, "mesh": 33260, "x": 175, "y": 237, "type": 2, "name": "Seymour" },
+        { "id": 8858014, "mesh": 33270, "x": 217, "y": 154, "type": 2, "name": "Ramon" },
+        { "id": 8858101, "mesh": 13180, "x": 116, "y": 83, "type": 2, "name": "SunflowerCluster" },
+        { "id": 8858108, "mesh": 18880, "x": 96, "y": 131, "type": 2, "name": "TastyFruit" },
+        { "id": 8858109, "mesh": 42190, "x": 329, "y": 199, "type": 2, "name": "FreshVegetable" }
+      ]
+    }
+  },
+  "npcTeleports": {
+    "8858001": [ { "text": "Back to Twin City", "map": 1002, "x": 387, "y": 386 } ]
+  },
+  "quests": {
+    "8247": {
+      "_name": "Missing Necklace",
+      "beginNpc": 8858001, "finishNpc": 8858001, "finishMap": 1003831, "finishX": 181, "finishY": 40,
+      "beginText": "Help Lillian find the missing necklace.",
+      "objectives": [
+        { "type": "talk", "npc": 8858001, "slot": 1, "count": 1, "name": "Lillian" },
+        { "type": "talk", "npc": 8858101, "slot": 3, "count": 3, "name": "SunflowerCluster" },
+        { "type": "talk", "npc": 8858001, "slot": 2, "count": 1, "after": 3, "name": "Lillian" }
+      ],
+      "prize": { "items": [ { "id": 3351462, "count": 1 } ] },
+      "repeat": "daily"
+    },
+    "8254": {
+      "_name": "Tasty Fruit",
+      "beginNpc": 8858008, "finishNpc": 8858008, "finishMap": 1003831, "finishX": 149, "finishY": 173,
+      "beginText": "Pick some tasty fruits for Jean.",
+      "objectives": [
+        { "type": "talk", "npc": 8858008, "slot": 1, "count": 1, "name": "Jean" },
+        { "type": "talk", "npc": 8858108, "slot": 2, "count": 1, "name": "TastyFruit" },
+        { "type": "talk", "npc": 8858008, "slot": 3, "count": 1, "after": 2, "name": "Jean" }
+      ],
+      "prize": { "items": [ { "id": 3351462, "count": 1 } ] },
+      "repeat": "daily"
+    },
+    "8255": {
+      "_name": "Fresh Vegetable",
+      "beginNpc": 8858009, "finishNpc": 8858009, "finishMap": 1003831, "finishX": 285, "finishY": 242,
+      "beginText": "Find some fresh vegetable for Scott.",
+      "objectives": [
+        { "type": "talk", "npc": 8858009, "slot": 1, "count": 1, "name": "Scott" },
+        { "type": "talk", "npc": 8858109, "slot": 2, "count": 1, "name": "FreshVegetable" },
+        { "type": "talk", "npc": 8858009, "slot": 3, "count": 1, "after": 2, "name": "Scott" }
+      ],
+      "prize": { "items": [ { "id": 3351462, "count": 1 } ] },
+      "repeat": "daily"
+    },
+    "8248": { "engine": false, "_note": "Hunt 1 SnowFowl (client monster.dat 22895, Lv120 64000 HP): no lookface/attack anywhere." },
+    "8249": { "engine": false, "_note": "Look for Photo (-1, 252,142): no client mesh named Photo." },
+    "8250": { "engine": false, "_note": "Drive away 5 WickedSpirit (client 22897/22901/22904, Lv120): no lookface/attack anywhere." },
+    "8251": { "engine": false, "_note": "Look for Rebee`sRelic (-1, 190,279): no client mesh." },
+    "8252": { "engine": false, "_note": "Bring peace to Rebee: no row in the client monster.dat (only Rebee`sSpecter 'without look')." },
+    "8253": { "engine": false, "_note": "Search Lost&Found (-1, 62,148): no client mesh." },
+    "8256": { "engine": false, "_note": "Drive away 5 WickedSpirit: no lookface/attack anywhere." },
+    "8257": { "engine": false, "_note": "Catch 1 CooChicken (client 22902 / 24178): no lookface/attack anywhere." },
+    "8258": { "engine": false, "_note": "Calm down FuriousGhost (client 22903): no lookface/attack anywhere." },
+    "8259": { "engine": false, "_note": "Drive away 5 WickedSpirit: no lookface/attack anywhere." },
+    "8260": { "engine": false, "_note": "Pacify FearedGhost: no row in the client monster.dat." }
+  }
+}

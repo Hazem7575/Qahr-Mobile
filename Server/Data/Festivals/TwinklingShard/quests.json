@@ -1,0 +1,169 @@
+{
+  "_note": "TwinklingShard (2026-10-14). Christmas 2025 Twinkling Shard Search: 5 areas x 3 quests (Questinfo 9500-9514, TypeId 8, no Prize, BeginNpcId 0). Official flow: the Twinkling Fest window (msg 10831) sends you to an area and the area's first quest starts; each area once a day (official 'Completed searching %s/5 time(s) today') -> every quest is repeat daily. Window entry + the 5-shard reward: Base\\TwinklingShard\\TwinklingShardUi.cs. Texts = Questinfo IntentionDesp. Areas = the official map ids (maps.txt -> docs 13150-13154), shared maps (not private copies); the monsters spawn per player on accept.",
+  "npcTeleports": {
+    "8862001": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ],
+    "8862006": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ],
+    "8862011": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ],
+    "8862014": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ],
+    "8862021": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ],
+    "8862024": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ],
+    "8862031": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ],
+    "8862033": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ],
+    "8862041": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ],
+    "8862046": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ]
+  },
+  "quests": {
+    "9500": {
+      "_name": "Twinkling Shard (Hope) 1",
+      "beginNpc": 8862001, "finishNpc": 8862001, "finishMap": 1005565, "finishX": 101, "finishY": 121,
+      "beginText": "You arrive at Stellar Spire and find the fires extinguished, darkness everywhere...",
+      "objectives": [ { "type": "talk", "npc": 8862001, "slot": 1, "name": "SpireOverseer" } ],
+      "repeat": "daily", "next": 9501, "autoAccept": true
+    },
+    "9501": {
+      "_name": "Twinkling Shard (Hope) 2",
+      "beginNpc": 8862001, "finishNpc": 8862004, "finishMap": 1005565, "finishX": 105, "finishY": 189,
+      "beginText": "To defeat the Yeti formed from Twinkling Shard, you must gather Hope Tinder.",
+      "objectives": [
+        { "type": "talk", "npc": 8862002, "slot": 1, "name": "Child`sHope" },
+        { "type": "talk", "npc": 8862003, "slot": 2, "name": "Woman`sHope" },
+        { "type": "talk", "npc": 8862004, "slot": 3, "name": "Elder`sHope" }
+      ],
+      "repeat": "daily", "next": 9502, "autoAccept": true
+    },
+    "9502": {
+      "_name": "Twinkling Shard (Hope) 3",
+      "beginNpc": 8862004, "finishNpc": 8862006, "finishMap": 1005565, "finishX": 179, "finishY": 179,
+      "beginText": "You have gathered the Hope Tinder. Go light the Flame of Hope and defeat the Yeti!",
+      "objectives": [
+        { "type": "talk", "npc": 8862005, "slot": 2, "name": "Flame of Hope" },
+        { "type": "kill", "monster": "GiantYeti", "count": 1, "slot": 1, "map": 1005565, "spawnedBy": "quest 9502 onAccept" },
+        { "type": "talk", "npc": 8862006, "slot": 3, "name": "TwinklingShard", "after": 1 }
+      ],
+      "onAccept": { "spawn": { "monster": "GiantYeti", "map": 1005565, "x": 180, "y": 181, "count": 1, "minutes": 30 } },
+      "repeat": "daily"
+    },
+    "9503": {
+      "_name": "Twinkling Shard (Will) 1",
+      "beginNpc": 8862011, "finishNpc": 8862013, "finishMap": 1005566, "finishX": 145, "finishY": 174,
+      "beginText": "You arrive at Stellar Bay and find the waves surging, the embankment collapsed...",
+      "objectives": [
+        { "type": "talk", "npc": 8862011, "slot": 1, "name": "BaySteward" },
+        { "type": "talk", "npc": 8862012, "slot": 2, "name": "Boulder", "after": 1 },
+        { "type": "talk", "npc": 8862013, "slot": 3, "name": "BreachPoint", "after": 2 }
+      ],
+      "repeat": "daily", "next": 9504, "autoAccept": true
+    },
+    "9504": {
+      "_name": "Twinkling Shard (Will) 2",
+      "_deviation": "GiantWave (-1, 145,174) has no entry in any client ini: blocking the 2 giant waves = 2 clicks on the BreachPoint at that same official cell; 'Help BaySteward' (official point 145,174 = the breach) is reported to the BaySteward (113,139).",
+      "beginNpc": 8862013, "finishNpc": 8862011, "finishMap": 1005566, "finishX": 113, "finishY": 139,
+      "beginText": "Just as the embankment is repaired, suddenly fierce winds and giant waves rise from the sea...",
+      "objectives": [
+        { "type": "talk", "npc": 8862013, "slot": 1, "count": 2, "name": "GiantWave" },
+        { "type": "talk", "npc": 8862011, "slot": 2, "name": "BaySteward", "after": 1 }
+      ],
+      "repeat": "daily", "next": 9505, "autoAccept": true
+    },
+    "9505": {
+      "_name": "Twinkling Shard (Will) 3",
+      "_deviation": "Waves (-1, 139,168) has no entry in any client ini: calming the waves = reaching the official point (139,168).",
+      "beginNpc": 8862011, "finishNpc": 8862014, "finishMap": 1005566, "finishX": 140, "finishY": 166,
+      "beginText": "The waves are about to swallow the Stellar Bay, but the more critical the moment, the less you can give up!",
+      "objectives": [
+        { "type": "visit", "map": 1005566, "x": 139, "y": 168, "range": 3, "slot": 1, "name": "Waves" },
+        { "type": "talk", "npc": 8862014, "slot": 2, "name": "TwinklingShard", "after": 1 }
+      ],
+      "repeat": "daily"
+    },
+    "9506": {
+      "_name": "Twinkling Shard (Valor) 1",
+      "beginNpc": 8862021, "finishNpc": 8862022, "finishMap": 1005567, "finishX": 74, "finishY": 127,
+      "beginText": "You arrive at Stellar Tower and find the place destroyed, with showers of fire raining down...",
+      "objectives": [ { "type": "talk", "npc": 8862021, "slot": 1, "name": "TowerWarden" } ],
+      "repeat": "daily", "next": 9507, "autoAccept": true
+    },
+    "9507": {
+      "_name": "Twinkling Shard (Valor) 2",
+      "beginNpc": 8862022, "finishNpc": 8862023, "finishMap": 1005567, "finishX": 54, "finishY": 120,
+      "beginText": "Cross through dangers to help the warden repair the Defense Device.",
+      "objectives": [ { "type": "talk", "npc": 8862023, "slot": 1, "name": "DefenseDevice" } ],
+      "repeat": "daily", "next": 9508, "autoAccept": true
+    },
+    "9508": {
+      "_name": "Twinkling Shard (Valor) 3",
+      "_deviation": "Questinfo writes the 2nd 'Repair DefenseDevice' at 74,127 (the 2nd warden's cell); the device stands at its own official cell 54,120.",
+      "beginNpc": 8862023, "finishNpc": 8862024, "finishMap": 1005567, "finishX": 60, "finishY": 120,
+      "beginText": "You`ve managed to reach the Defense Device, but you alone cannot repair it...",
+      "objectives": [
+        { "type": "kill", "monster": "StellarPhantom", "count": 4, "slot": 1, "map": 1005567, "spawnedBy": "quest 9508 onAccept" },
+        { "type": "talk", "npc": 8862023, "slot": 2, "name": "DefenseDevice", "after": 1 },
+        { "type": "talk", "npc": 8862024, "slot": 3, "name": "TwinklingShard", "after": 2 }
+      ],
+      "onAccept": { "spawn": { "monster": "StellarPhantom", "map": 1005567, "x": 67, "y": 123, "count": 4, "minutes": 30 } },
+      "repeat": "daily"
+    },
+    "9509": {
+      "_name": "Twinkling Shard (Wisdom) 1",
+      "beginNpc": 8862031, "finishNpc": 8862032, "finishMap": 1005568, "finishX": 42, "finishY": 35,
+      "beginText": "You arrive at the Star Nest library and sense the area filled with Twinkling Shard`s energy. It`s nearby...",
+      "objectives": [
+        { "type": "talk", "npc": 8862031, "slot": 1, "name": "StellarScholar" },
+        { "type": "talk", "npc": 8862032, "slot": 2, "name": "AncientTome", "after": 1 }
+      ],
+      "repeat": "daily", "next": 9510, "autoAccept": true
+    },
+    "9510": {
+      "_name": "Twinkling Shard (Wisdom) 2",
+      "_deviation": "Scholar`sTest is a client mini game (not on this server): passing the test = talking to the StellarScholar (official point 57,59).",
+      "beginNpc": 8862032, "finishNpc": 8862031, "finishMap": 1005568, "finishX": 57, "finishY": 59,
+      "beginText": "That troublesome scholar is deliberately testing you, but he clearly underestimates your wisdom.",
+      "objectives": [ { "type": "talk", "npc": 8862031, "slot": 1, "name": "Scholar`sTest" } ],
+      "repeat": "daily", "next": 9511, "autoAccept": true
+    },
+    "9511": {
+      "_name": "Twinkling Shard (Wisdom) 3",
+      "beginNpc": 8862031, "finishNpc": 8862033, "finishMap": 1005568, "finishX": 58, "finishY": 58,
+      "beginText": "Mad Scholar attempts to possess the Twinkling Shard! Defeat him quickly!",
+      "objectives": [
+        { "type": "kill", "monster": "MadScholar", "count": 1, "slot": 1, "map": 1005568, "spawnedBy": "quest 9511 onAccept" },
+        { "type": "talk", "npc": 8862033, "slot": 3, "name": "TwinklingShard", "after": 1 }
+      ],
+      "onAccept": { "spawn": { "monster": "MadScholar", "map": 1005568, "x": 59, "y": 61, "count": 1, "minutes": 30 } },
+      "repeat": "daily"
+    },
+    "9512": {
+      "_name": "Twinkling Shard (Joy) 1",
+      "beginNpc": 8862041, "finishNpc": 8862043, "finishMap": 1005569, "finishX": 69, "finishY": 94,
+      "beginText": "You arrive at Dawn Star. The atmosphere feels strange. Ask someone around...",
+      "objectives": [
+        { "type": "talk", "npc": 8862041, "slot": 1, "name": "TreatGobbler" },
+        { "type": "talk", "npc": 8862042, "slot": 2, "name": "PalateMaster" },
+        { "type": "talk", "npc": 8862043, "slot": 3, "name": "DessertApprentice" }
+      ],
+      "repeat": "daily", "next": 9513, "autoAccept": true
+    },
+    "9513": {
+      "_name": "Twinkling Shard (Joy) 2",
+      "_deviation": "'Freely make a Dessert' is a client mini game (not on this server): making it = using the Dessert station (official point 70,50).",
+      "beginNpc": 8862043, "finishNpc": 8862042, "finishMap": 1005569, "finishX": 70, "finishY": 108,
+      "beginText": "Help Dessert Apprentice create a dessert!",
+      "objectives": [
+        { "type": "talk", "npc": 8862044, "slot": 1, "name": "Dessert" },
+        { "type": "talk", "npc": 8862041, "slot": 2, "name": "TreatGobbler", "after": 1 },
+        { "type": "talk", "npc": 8862042, "slot": 3, "name": "PalateMaster", "after": 1 }
+      ],
+      "repeat": "daily", "next": 9514, "autoAccept": true
+    },
+    "9514": {
+      "_name": "Twinkling Shard (Joy) 3",
+      "beginNpc": 8862042, "finishNpc": 8862046, "finishMap": 1005569, "finishX": 60, "finishY": 74,
+      "beginText": "You created a unique dessert to your heart`s content. Invite everyone to taste it!",
+      "objectives": [
+        { "type": "talk", "npc": 8862045, "slot": 1, "name": "DessertMaster" },
+        { "type": "talk", "npc": 8862046, "slot": 2, "name": "TwinklingShard", "after": 1 }
+      ],
+      "repeat": "daily"
+    }
+  }
+}

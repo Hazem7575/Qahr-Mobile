@@ -1,0 +1,6 @@
+{
+  "_readme": "[Thanksgiving2024] Base/Thanksgiving2024/Thanksgiving2024Ui.cs. minLevel = official 'Requirement: Level 80' (tThanksGivingNpc2024_DelText[33500][Text115]). pointsMax = DERIVED: last cumulative tier (120000) of client pointsrankdata CONST_POINTS_AWARD_DATA[10486]; only sets the points bar length.",
+  "festival": "Thanksgiving2024",
+  "minLevel": 80,
+  "pointsMax": 120000
+}

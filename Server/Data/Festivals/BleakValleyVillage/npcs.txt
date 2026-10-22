@@ -1,0 +1,23 @@
+# BleakValleyVillage - Foison Village in Bleak Valley (map 12100 -> doc 11203 sary02_new, FestivalMaps maps.txt row A).
+# [BleakValleyVillage 2026-10-15] ids + cells = OFFICIAL (client Questinfo.ini quests 7653-7667 [npc Name,id,12100,x,y]); every cell
+# is walkable on sary02_new.DMap (walk.py check). The 2023 village NPC looks are NOT in the client (no npc.ini/NpcX.ini entry for
+# these names), so the meshes are PROXY looks of real client types (mesh = NpcType*10) - review in-game and replace if wrong.
+# The Reputation Officer (minimap 187,222) and the Exit (207,233) are placed and scripted by Base\BleakValleyVillage (8876001/8876002).
+36556,2,11250,12100,181,184  # VillageHead  - npc.ini [NpcType1125] VillageHead (same name)
+36557,2,4800,12100,162,145   # Yana         - PROXY [NpcType480] Villager
+36558,2,6340,12100,158,246   # ButcherLiu   - PROXY [NpcType634] Villager
+36559,2,5620,12100,166,233   # SisterLian   - PROXY [NpcType562] AuntZhang
+36560,2,4360,12100,235,184   # DavidLiu     - PROXY [NpcType436] HunterWong (he is the village hunter)
+36561,2,12130,12100,159,111  # Primula      - PROXY [NpcType1213] Safflower
+36562,2,36070,12100,139,113  # Honeysuckle  - npc.ini [NpcType3607] Honeysuckle (same name)
+36563,2,34760,12100,144,102  # Osmanthus    - npc.ini [NpcType3476] Osmanthus (same name)
+36565,2,29910,12100,140,227  # Sundries     - PROXY [NpcType2991] MaterialPile
+36566,2,3150,12100,159,235   # Dust         - PROXY [NpcType315] Haystack
+36567,2,3150,12100,141,237   # SawDust      - PROXY [NpcType315] Haystack
+36568,2,34800,12100,251,168  # Trap (1st)   - npc.ini [NpcType3480] Trap (same name)
+36571,2,34800,12100,252,157  # Trap (2nd)
+36572,2,34800,12100,265,157  # Trap (3rd)
+36569,2,34800,12100,284,185  # SteelTrap    - PROXY [NpcType3480] Trap
+36570,2,30020,12100,233,231  # WoodArrowHead   - PROXY [NpcType3002] StoneGrinder
+36573,2,30020,12100,234,222  # IronArrowHead   - PROXY [NpcType3002] StoneGrinder
+36574,2,30020,12100,236,215  # CopperArrowHead - PROXY [NpcType3002] StoneGrinder

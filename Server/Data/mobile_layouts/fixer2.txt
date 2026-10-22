@@ -1,0 +1,15 @@
+# QahrMobile packet layouts: play-test fixes (fixer2). The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgAutoGroup 10022 (20 bytes, CMsgAutoGroup::Create writes size 0x14, action u16 4 = 0, auto-group flag u8 8).
+# CMsgAutoGroup::Process: action u16 4: 0 / 2 = auto-group flag u8 8 (CHero::SetGroupAutoGroup + a chat line),
+# 1 = player uid 8, leader uid 12 (CPlayer::SetTeamLeaderID), member count 16 (SetTeamNum), 3 = player uid 8, team id 12.
+# Server: MsgTeamLeadership.TeamLeadershipCreate (MsgAutoGroup 2117): Typ u32 4 (1 Leader, 2 Teammate), UID 8,
+# LeaderUID 12, Count 16. Without it the mobile never learned the leader of its team, and the team panel
+# (CTeam::GetMemberInfoByShowIndex: row 1 = GetMemberInfo(hero leader id)) showed a wrong row for non-leaders.
+# The server's Typ 2 (an empty "teammate" note) would be read as "auto-group off" with a chat line: sent as 9 (ignored).
+[2117 MsgAutoGroup struct 20 20]
+4   4   u16  out  map 2=9
+4   4   u16  in
+8   8   u32
+12  12  u32
+16  16  u32

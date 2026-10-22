@@ -1,0 +1,38 @@
+{
+  "key": "JadeRabbit",
+  "name_ar": "رحلة الأرنب اليشم (منتصف الخريف 2024)",
+  "name_en": "Lunar Voyage of Jade Rabbit",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] MidAutumn: only the newest official edition (DragonSaga) runs on its yearly dates, like the official server; this older edition runs only with @festival on JadeRabbit. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "الأرنب اليشم بدأ رحلته! افتح Lunar Voyage من الشريط اللي فوق وروح Rainbow Bay وRing Mountain وPeak of Eternity.",
+  "announce_en": "Jade Rabbit has set off on its Lunar Voyage! Open Lunar Voyage on the top bar to visit Rainbow Bay, Ring Mountain and Peak of Eternity.",
+  "end_ar": "رحلة الأرنب اليشم خلصت. نشوفكم السنة الجاية!",
+  "end_en": "The Lunar Voyage of Jade Rabbit has ended. See you next year!",
+  "maps": [
+    1002,
+    1003074,
+    1003075,
+    1003078
+  ],
+  "notes": "Rebuilt 2026-10-14 (JadeRabbit agent). Part of the official Mid-Autumn 2024 event ERP592820 (client lua fuizhongqiu2024main*, dates Sept. 10 - Sept. 23 = Cn_Res STR_FUI_ZHONGQIU2024_TIP_TIME). SHARED BUTTON: Fgui 10459 'Lunar Voyage' belongs to MidAutumnVillage; this festival has NO icon_show/icon_hide on purpose (no second icon). Entry = the Lunar Voyage window (Base\\JadeRabbit\\JadeRabbitUi.cs, called from Base\\MidAutumn2024\\LunarVoyage.cs): area 1 Rainbow Bay = 8066 (map 1003074 -> doc 12599), area 2 Ring Mountain = 8067 (1003075 -> 12600), area 6 Peak of Eternity = 8073 (1003078 -> 12603). Evidence: Cn_Res STR_FUI_ZHONGQIU2024_TIP_TITLE_1/2/6, the endings STR_FGUI_150138_1_1 / 2_1 / 6_1 and the Questinfo map names. Areas 3-5 (Stormy Ocean, Summer Lake, Galaxy Palace = Server_Key 8068-8072) have no Questinfo quest, so they answer 'not open'. The window answers only while MidAutumnVillage runs (same official event), so keep both schedules together. The maps need Base\\FestivalMaps (maps.txt) in the running build. Deviation: in 8067, 'Defeat FlameFox' is a visit to the fight spot (59,59). FlameFox has client stats (monster.dat 22790 lv120 120000 HP) but no lookface anywhere. README_AR.md has the details.",
+  "_quests": [
+    8066,
+    8067,
+    8073
+  ],
+  "_officialMaps": [
+    1003074,
+    1003075,
+    1003078
+  ],
+  "_sharedIcon": "Fgui 10459 (owner: MidAutumnVillage)",
+  "_owner": "jaderabbit-agent",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "09-10",
+    "end": "09-23"
+  }
+}

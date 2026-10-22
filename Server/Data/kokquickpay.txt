@@ -1,0 +1,3 @@
+[Vegas]
+server=1
+group=1

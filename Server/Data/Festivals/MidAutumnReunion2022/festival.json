@@ -1,0 +1,31 @@
+{
+  "key": "MidAutumnReunion2022",
+  "name_ar": "منتصف الخريف 2022 العالمي (Reunion Under Moon)",
+  "name_en": "Global Mid-Autumn 2022: Reunion Under Moon",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] MidAutumn: only the newest official edition (DragonSaga) runs on its yearly dates, like the official server; this older edition runs only with @festival on MidAutumnReunion2022. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ منتصف الخريف (Reunion Under Moon)! دوس على الزرار اللي فوق وساعد Hou Yi (لفل 80+).",
+  "announce_en": "Reunion Under Moon has started! Click the Reunion Under Moon button at the top and help Hou Yi (Level 80+).",
+  "end_ar": "انتهى منتصف الخريف. نشوفكم السنة الجاية!",
+  "end_en": "The Mid-Autumn event is over. See you next year!",
+  "maps": [
+    12176
+  ],
+  "icon_show": "DlgMidAutumnUi_OpenMainBtn|{['Code']=200,['Data']={['Rewardflag']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgMidautumnMainBtn\")",
+  "icon_click": "10052</S>MidAutumnArchery2022_OpenMainButton",
+  "_icon": "[MidAutumnReunion2022 2026-10-14] official lua button DlgMidautumnMainBtn (luaui\\dialog\\dlgmidautumnfestival, Dialog_Info '1272-Main', 'Reunion Under Moon'), shown by DlgMidAutumnUi_OpenMainBtn. Click 10052 (tMsg_Info['MidAutumnFestival']) MidAutumnArchery2022_OpenMainButton -> Base/MidAutumnReunion2022/MidAutumnReunion2022Ui.cs -> DlgShootingSunUi_OpenMain. NOTE: AprilFools2026 uses the same icon_click string (2026 reuse); this festival's handler runs first and only while it runs.",
+  "notes": "2026-10-15 PHASE COMPLETE. Official 2022 'Reunion Under Moon' day loop fully playable from the window: 4 beasts a day (private Illusion Realm fight on 12176, festival monsters 996601-996606), shooting the 9 Sun Ravens with Sun-chasing Arrows (official preview rewards + Sun Raven Essences + 100-500 bonus Reunion Points), Illusion Compass (50 Moon Points) -> next day + night materials, Refine Immortality Pill (10049 elixir, official 2/3-material pools), Reunion Point stage rewards (official 8 tiers), local ranking list. Code Base/MidAutumnReunion2022 (MidAutumnReunion2022Ui.cs + HolidayKit.cs). Config (derived values marked) Infinity[DB]/MidAutumnReunion2022/midautumnreunion2022.json; state players.json. Missing: Moon Palace night map / Jade Toad (night window re-used by Valentine in this client), cross-server global ranking + mail rewards, CP purchases.",
+  "_owner": "MidAutumnReunion2022",
+  "_quests": [],
+  "_officialMaps": {},
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "09-06",
+    "end": "09-19",
+    "_note": "Official: luaUiRes[1272].ActTime 'Duration: Sept. 6 - Sept. 19' (client luaui dlgmidautumnfestival, 2022 中秋活动). Server local time. Overlaps MidAutumnVillage (09-09..09-23) and JadeRabbit (09-10..09-23) every year: officially they were different years."
+  }
+}

@@ -1,0 +1,630 @@
+{
+ "_source": "[ChildrensDay2025 2026-10-15] OFFICIAL client tables, copied as-is: luacfg EmoneySaleShop.lua NewExchangeShopInfo[342501] (Dream Store) / [342502] (VIP Dream Store, needs 15000 Dream Points) and EmoneySaleShopInfo[34250] (Prince Puff, CPs). goods = official GoodsId, limit = official 'amount'/'MaxNum' per character per festival run (0 = no limit), bound = official 'monopoly'. costItem 0 = CPs.",
+ "dreamStore": [
+  {
+   "goods": 8378,
+   "item": 3353014,
+   "name": "Small Starwish Box",
+   "bound": false,
+   "limit": 999,
+   "costItem": 4200009,
+   "cost": 1
+  },
+  {
+   "goods": 8379,
+   "item": 3353015,
+   "name": "Medium Starwish Box",
+   "bound": false,
+   "limit": 999,
+   "costItem": 4200010,
+   "cost": 1
+  },
+  {
+   "goods": 8380,
+   "item": 3353016,
+   "name": "Grand Starwish Box",
+   "bound": false,
+   "limit": 999,
+   "costItem": 4200011,
+   "cost": 1
+  },
+  {
+   "goods": 8381,
+   "item": 3353102,
+   "name": "Sweet Tiara Box (T)",
+   "bound": false,
+   "limit": 5,
+   "costItem": 3353010,
+   "cost": 19999
+  },
+  {
+   "goods": 8382,
+   "item": 3353101,
+   "name": "Sweet Dream Box (B)",
+   "bound": false,
+   "limit": 1,
+   "costItem": 3353010,
+   "cost": 5999
+  },
+  {
+   "goods": 8383,
+   "item": 3353012,
+   "name": "Concerto Fragment",
+   "bound": false,
+   "limit": 100,
+   "costItem": 3353010,
+   "cost": 200
+  },
+  {
+   "goods": 8384,
+   "item": 723694,
+   "name": "PermanentStone",
+   "bound": true,
+   "limit": 1,
+   "costItem": 3353010,
+   "cost": 675
+  },
+  {
+   "goods": 8385,
+   "item": 3328247,
+   "name": "Awakening Spirit",
+   "bound": false,
+   "limit": 300,
+   "costItem": 3353010,
+   "cost": 1
+  },
+  {
+   "goods": 8386,
+   "item": 3009103,
+   "name": "SoulFruit",
+   "bound": false,
+   "limit": 1,
+   "costItem": 3353010,
+   "cost": 300
+  },
+  {
+   "goods": 8387,
+   "item": 3009101,
+   "name": "DragonFruit",
+   "bound": false,
+   "limit": 10,
+   "costItem": 3353010,
+   "cost": 30
+  },
+  {
+   "goods": 8388,
+   "item": 3314248,
+   "name": "YellowRunePack",
+   "bound": true,
+   "limit": 1,
+   "costItem": 3353010,
+   "cost": 300
+  },
+  {
+   "goods": 8389,
+   "item": 4060001,
+   "name": "UniversalRuneEssence",
+   "bound": true,
+   "limit": 200,
+   "costItem": 3353010,
+   "cost": 3
+  },
+  {
+   "goods": 8390,
+   "item": 3347158,
+   "name": "Shadow Rune",
+   "bound": false,
+   "limit": 5,
+   "costItem": 3353010,
+   "cost": 14
+  },
+  {
+   "goods": 8391,
+   "item": 3348377,
+   "name": "Oracle Fragment",
+   "bound": false,
+   "limit": 50,
+   "costItem": 3353010,
+   "cost": 1
+  },
+  {
+   "goods": 8392,
+   "item": 3346830,
+   "name": "+4 Stone (B)",
+   "bound": false,
+   "limit": 10,
+   "costItem": 3353010,
+   "cost": 108
+  },
+  {
+   "goods": 8393,
+   "item": 3346829,
+   "name": "+3 Stone (B)",
+   "bound": false,
+   "limit": 50,
+   "costItem": 3353010,
+   "cost": 36
+  },
+  {
+   "goods": 8394,
+   "item": 3346837,
+   "name": "Radiant Star Stone",
+   "bound": false,
+   "limit": 10,
+   "costItem": 3353010,
+   "cost": 200
+  },
+  {
+   "goods": 8395,
+   "item": 3346836,
+   "name": "Bright Star Stone",
+   "bound": false,
+   "limit": 50,
+   "costItem": 3353010,
+   "cost": 20
+  },
+  {
+   "goods": 8396,
+   "item": 3346825,
+   "name": "100KK Contribution Medal (B)",
+   "bound": false,
+   "limit": 10,
+   "costItem": 3353010,
+   "cost": 650
+  },
+  {
+   "goods": 8397,
+   "item": 3346824,
+   "name": "10KK Contribution Medal (B)",
+   "bound": false,
+   "limit": 50,
+   "costItem": 3353010,
+   "cost": 65
+  },
+  {
+   "goods": 8398,
+   "item": 3314207,
+   "name": "TigerChiLiquor",
+   "bound": true,
+   "limit": 10,
+   "costItem": 3353010,
+   "cost": 100
+  },
+  {
+   "goods": 8399,
+   "item": 3321077,
+   "name": "LeopardChiLiquor",
+   "bound": true,
+   "limit": 50,
+   "costItem": 3353010,
+   "cost": 10
+  },
+  {
+   "goods": 8400,
+   "item": 3303373,
+   "name": "KnowledgePill",
+   "bound": false,
+   "limit": 10,
+   "costItem": 3353010,
+   "cost": 90
+  },
+  {
+   "goods": 8401,
+   "item": 3002926,
+   "name": "FreeTrainingPill",
+   "bound": false,
+   "limit": 30,
+   "costItem": 3353010,
+   "cost": 60
+  },
+  {
+   "goods": 8402,
+   "item": 3003126,
+   "name": "SeniorTrainingPill",
+   "bound": true,
+   "limit": 50,
+   "costItem": 3353010,
+   "cost": 10
+  },
+  {
+   "goods": 8438,
+   "item": 3002030,
+   "name": "SuperProtectionPill",
+   "bound": false,
+   "limit": 100,
+   "costItem": 3353010,
+   "cost": 3
+  },
+  {
+   "goods": 8439,
+   "item": 3314213,
+   "name": "LotusEssence",
+   "bound": true,
+   "limit": 10,
+   "costItem": 3353010,
+   "cost": 350
+  },
+  {
+   "goods": 8440,
+   "item": 3314212,
+   "name": "GinsengEssence",
+   "bound": true,
+   "limit": 50,
+   "costItem": 3353010,
+   "cost": 35
+  }
+ ],
+ "vipDreamStore": [
+  {
+   "goods": 8441,
+   "item": 3353014,
+   "name": "Small Starwish Box",
+   "bound": false,
+   "limit": 999,
+   "costItem": 4200009,
+   "cost": 1
+  },
+  {
+   "goods": 8442,
+   "item": 3353015,
+   "name": "Medium Starwish Box",
+   "bound": false,
+   "limit": 999,
+   "costItem": 4200010,
+   "cost": 1
+  },
+  {
+   "goods": 8443,
+   "item": 3353016,
+   "name": "Grand Starwish Box",
+   "bound": false,
+   "limit": 999,
+   "costItem": 4200011,
+   "cost": 1
+  },
+  {
+   "goods": 8403,
+   "item": 3353102,
+   "name": "Sweet Tiara Box (T)",
+   "bound": false,
+   "limit": 5,
+   "costItem": 3353010,
+   "cost": 19999
+  },
+  {
+   "goods": 8404,
+   "item": 3353101,
+   "name": "Sweet Dream Box (B)",
+   "bound": false,
+   "limit": 1,
+   "costItem": 3353010,
+   "cost": 5999
+  },
+  {
+   "goods": 8405,
+   "item": 3353012,
+   "name": "Concerto Fragment",
+   "bound": false,
+   "limit": 100,
+   "costItem": 3353010,
+   "cost": 200
+  },
+  {
+   "goods": 8406,
+   "item": 723695,
+   "name": "BigPermanentStone",
+   "bound": true,
+   "limit": 3,
+   "costItem": 3353010,
+   "cost": 6750
+  },
+  {
+   "goods": 8407,
+   "item": 723694,
+   "name": "PermanentStone",
+   "bound": true,
+   "limit": 10,
+   "costItem": 3353010,
+   "cost": 675
+  },
+  {
+   "goods": 8408,
+   "item": 3328247,
+   "name": "Awakening Spirit",
+   "bound": false,
+   "limit": 10000,
+   "costItem": 3353010,
+   "cost": 1
+  },
+  {
+   "goods": 8409,
+   "item": 3347157,
+   "name": "Light Rune",
+   "bound": false,
+   "limit": 100,
+   "costItem": 3353010,
+   "cost": 270
+  },
+  {
+   "goods": 8410,
+   "item": 3347158,
+   "name": "Shadow Rune",
+   "bound": false,
+   "limit": 1000,
+   "costItem": 3353010,
+   "cost": 27
+  },
+  {
+   "goods": 8411,
+   "item": 3347151,
+   "name": "Night Oracle",
+   "bound": false,
+   "limit": 5000,
+   "costItem": 3353010,
+   "cost": 4
+  },
+  {
+   "goods": 8414,
+   "item": 3314248,
+   "name": "YellowRunePack",
+   "bound": true,
+   "limit": 100,
+   "costItem": 3353010,
+   "cost": 300
+  },
+  {
+   "goods": 8415,
+   "item": 4060001,
+   "name": "UniversalRuneEssence",
+   "bound": true,
+   "limit": 8000,
+   "costItem": 3353010,
+   "cost": 3
+  },
+  {
+   "goods": 8416,
+   "item": 3009104,
+   "name": "RedBodhiBean",
+   "bound": false,
+   "limit": 200,
+   "costItem": 3353010,
+   "cost": 1000
+  },
+  {
+   "goods": 8417,
+   "item": 3009103,
+   "name": "SoulFruit",
+   "bound": false,
+   "limit": 1000,
+   "costItem": 3353010,
+   "cost": 300
+  },
+  {
+   "goods": 8418,
+   "item": 3009102,
+   "name": "MoonFruit",
+   "bound": false,
+   "limit": 3000,
+   "costItem": 3353010,
+   "cost": 100
+  },
+  {
+   "goods": 8419,
+   "item": 3346834,
+   "name": "+8 Stone (B)",
+   "bound": false,
+   "limit": 200,
+   "costItem": 3353010,
+   "cost": 9000
+  },
+  {
+   "goods": 8420,
+   "item": 3346831,
+   "name": "+5 Stone (B)",
+   "bound": false,
+   "limit": 6000,
+   "costItem": 3353010,
+   "cost": 330
+  },
+  {
+   "goods": 8421,
+   "item": 3346829,
+   "name": "+3 Stone (B)",
+   "bound": false,
+   "limit": 2000,
+   "costItem": 3353010,
+   "cost": 36
+  },
+  {
+   "goods": 8422,
+   "item": 3346838,
+   "name": "Splendid Star Stone",
+   "bound": false,
+   "limit": 600,
+   "costItem": 3353010,
+   "cost": 2000
+  },
+  {
+   "goods": 8423,
+   "item": 3346837,
+   "name": "Radiant Star Stone",
+   "bound": false,
+   "limit": 2000,
+   "costItem": 3353010,
+   "cost": 200
+  },
+  {
+   "goods": 8424,
+   "item": 3346836,
+   "name": "Bright Star Stone",
+   "bound": false,
+   "limit": 200,
+   "costItem": 3353010,
+   "cost": 20
+  },
+  {
+   "goods": 8425,
+   "item": 3346844,
+   "name": "+6 Steed Pack (B)",
+   "bound": true,
+   "limit": 30,
+   "costItem": 3353010,
+   "cost": 1320
+  },
+  {
+   "goods": 8426,
+   "item": 3346825,
+   "name": "100KK Contribution Medal (B)",
+   "bound": false,
+   "limit": 200,
+   "costItem": 3353010,
+   "cost": 650
+  },
+  {
+   "goods": 8427,
+   "item": 3346824,
+   "name": "10KK Contribution Medal (B)",
+   "bound": false,
+   "limit": 2000,
+   "costItem": 3353010,
+   "cost": 65
+  },
+  {
+   "goods": 8428,
+   "item": 3314208,
+   "name": "DragonChiLiquor",
+   "bound": true,
+   "limit": 1200,
+   "costItem": 3353010,
+   "cost": 1000
+  },
+  {
+   "goods": 8429,
+   "item": 3314207,
+   "name": "TigerChiLiquor",
+   "bound": true,
+   "limit": 2000,
+   "costItem": 3353010,
+   "cost": 100
+  },
+  {
+   "goods": 8430,
+   "item": 3321077,
+   "name": "LeopardChiLiquor",
+   "bound": true,
+   "limit": 3000,
+   "costItem": 3353010,
+   "cost": 10
+  },
+  {
+   "goods": 8431,
+   "item": 3303373,
+   "name": "KnowledgePill",
+   "bound": false,
+   "limit": 300,
+   "costItem": 3353010,
+   "cost": 90
+  },
+  {
+   "goods": 8432,
+   "item": 3002926,
+   "name": "FreeTrainingPill",
+   "bound": false,
+   "limit": 500,
+   "costItem": 3353010,
+   "cost": 60
+  },
+  {
+   "goods": 8433,
+   "item": 3003126,
+   "name": "SeniorTrainingPill",
+   "bound": true,
+   "limit": 6000,
+   "costItem": 3353010,
+   "cost": 10
+  },
+  {
+   "goods": 8434,
+   "item": 3002030,
+   "name": "SuperProtectionPill",
+   "bound": false,
+   "limit": 8000,
+   "costItem": 3353010,
+   "cost": 3
+  },
+  {
+   "goods": 8435,
+   "item": 3314213,
+   "name": "LotusEssence",
+   "bound": true,
+   "limit": 600,
+   "costItem": 3353010,
+   "cost": 350
+  },
+  {
+   "goods": 8436,
+   "item": 3314212,
+   "name": "GinsengEssence",
+   "bound": true,
+   "limit": 6000,
+   "costItem": 3353010,
+   "cost": 35
+  },
+  {
+   "goods": 8437,
+   "item": 3314211,
+   "name": "FloralEssence",
+   "bound": true,
+   "limit": 600,
+   "costItem": 3353010,
+   "cost": 4
+  }
+ ],
+ "princePuff": [
+  {
+   "goods": 8374,
+   "item": 3353013,
+   "name": "Starwish Pack",
+   "bound": false,
+   "limit": 0,
+   "costItem": 0,
+   "cost": 100
+  },
+  {
+   "goods": 8375,
+   "item": 3353102,
+   "name": "Sweet Tiara Box (T)",
+   "bound": false,
+   "limit": 100,
+   "costItem": 0,
+   "cost": 19999
+  },
+  {
+   "goods": 8376,
+   "item": 3353100,
+   "name": "Sweet Dream Box (T)",
+   "bound": false,
+   "limit": 100,
+   "costItem": 0,
+   "cost": 5999
+  },
+  {
+   "goods": 8377,
+   "item": 3353105,
+   "name": "2H Concerto Box",
+   "bound": false,
+   "limit": 3,
+   "costItem": 0,
+   "cost": 5999
+  },
+  {
+   "goods": 8578,
+   "item": 3353104,
+   "name": "1H Concerto Box",
+   "bound": false,
+   "limit": 3,
+   "costItem": 0,
+   "cost": 8999
+  }
+ ]
+}

@@ -1,0 +1,60 @@
+{
+ "_note": "Halloween2024: quest monsters on Silent Hill 12617 / Witch House 12619 at the Questinfo [mob ...] points.",
+ "spawns": [
+  {
+   "monster": "Ghost",
+   "map": 12617,
+   "x": 54,
+   "y": 152,
+   "w": 9,
+   "h": 9,
+   "count": 6,
+   "respawn": 20,
+   "_note": "8149 'Capture [mob Ghost,12617,58,156]' x5: the server's own Ghost type (official monster.dat 22905 Ghost L120 has no server type with that name)"
+  },
+  {
+   "monster": "FlowerImp",
+   "map": 12617,
+   "x": 160,
+   "y": 26,
+   "w": 9,
+   "h": 9,
+   "count": 6,
+   "respawn": 20,
+   "_note": "8151 'Dispel [mob Devil,12617,164,30]' x5: official 22811 FlowerImp (the imps at the Red Spider Lily) = DERIVED pick for 'Devil'"
+  },
+  {
+   "monster": "Soul-eatingWolf",
+   "map": 12617,
+   "x": 304,
+   "y": 181,
+   "w": 9,
+   "h": 9,
+   "count": 6,
+   "respawn": 20,
+   "_note": "8155 'Expel [mob Soul-eatingWolf,12617,308,185]' x5 (official 22815)"
+  },
+  {
+   "monster": "BoneDragon",
+   "map": 12619,
+   "x": 320,
+   "y": 131,
+   "w": 9,
+   "h": 9,
+   "count": 6,
+   "respawn": 20,
+   "_note": "8165 'Clear up [mob BoneDragon,1003095,324,135]' x5 (official 22821)"
+  },
+  {
+   "monster": "SpiderWraith",
+   "map": 12619,
+   "x": 403,
+   "y": 458,
+   "w": 9,
+   "h": 9,
+   "count": 8,
+   "respawn": 20,
+   "_note": "8168 'Seize [mob SpectrePill,1003095,407,462]' x10: official 22823 SpiderWraith of the Spectre Grave = DERIVED pick"
+  }
+ ]
+}

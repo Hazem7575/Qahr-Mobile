@@ -1,0 +1,399 @@
+# QahrMobile: NPC looks the mobile client draws differently (MobileNpcLooks.cs, reloaded on save).
+#   serverLook  mobileLook  name   (look = Npcs.txt mesh / 10; 1000000+ meshes count as look - 100000)
+# The name is sent with the NPC (CMsgNpcInfoPB SzBuf) because the mobile shows the name of its own body.
+# Made by comobile\tools\npclooks.py from the PC and mobile npc.ini / npcx.ini (rules: see the script).
+3       722    Pharmacist                   # mobile 1894 (model 301) draws no body: Druggist body (NPC audit)
+4       2196   Armorer                      # mobile 1902 (model 301) draws no body: EquipmentMerchant body (NPC audit)
+5       4100   LiTie                        # same model on the mobile (ArchBlacksmith)
+8       1165   Warehouseman                 # same name on the mobile
+11      2196   Armorer                      # mobile 1902 (model 301) draws no body: EquipmentMerchant body (NPC audit)
+13      5417   TaoistStar                   # same name on the mobile
+18      1259   VillageIdiot                 # same model on the mobile (KnightLeon)
+20      1165   Warehouseman                 # same name on the mobile
+21      1165   Warehouseman                 # same name on the mobile
+22      389    Blacksmith                   # same name on the mobile
+23      722    Pharmacist                   # mobile 1894 (model 301) draws no body: Druggist body (NPC audit)
+24      5375   ArtisanWind                  # same name on the mobile
+28      5447   Conductress                  # same name on the mobile
+31      6421   GeneralBravery               # same name on the mobile
+181     6511   WardenZhang                  # same name on the mobile
+217     1181   Arthur                       # same name on the mobile
+218     5149   Bryan                        # same name on the mobile
+219     4527   Angela                       # same name on the mobile
+220     4615   Bruce                        # same name on the mobile
+264     235    Chilly                       # same model on the mobile (Stanley)
+269     5259   OldGeneralYang               # same name on the mobile
+270     293    Pedlar                       # same name on the mobile
+294     1915   YangFan                      # no body on the mobile: townsman
+296     1258   DuanFei                      # same model on the mobile (FarmerHank)
+297     1265   SunDingbei                   # same model on the mobile (SongQing)
+301     5293   OfflineTGAdmin               # same name on the mobile
+323     1915   Shura                        # no body on the mobile: townsman
+384     390    AuntPeach                    # same name on the mobile
+409     5432   Shark                        # same name on the mobile
+421     5509   PoorXiao                     # same name on the mobile
+422     404    DoctorKnowitAll              # same name on the mobile
+424     407    FarmerLynn                   # same name on the mobile
+429     1915   Shopboy                      # same name on the mobile
+435     5448   YuJing                       # same name on the mobile
+436     5378   HunterWong                   # same name on the mobile
+437     5335   NaughtyBoy                   # same name on the mobile
+438     5395   IntelligenceAgent            # same name on the mobile
+439     5260   PhoenixCastellan             # same name on the mobile
+446     5229   MilitiaTiger                 # same name on the mobile
+447     5231   MilitiaDragon                # same name on the mobile
+457     6485   OldBeggar                    # same name on the mobile
+463     1358   CommanderKerry               # like UnnamedSoldier
+475     5513   MasterMoMo                   # same name on the mobile
+501     5261   MagicArtisan                 # same name on the mobile
+505     5433   RecruitMaster                # same name on the mobile
+551     5086   ArtisanLuo                   # same name on the mobile
+564     441    TaoistShine                  # like TaoistPure
+565     5339   MoMo                         # same name on the mobile
+566     5340   SweetyPuddy                  # same name on the mobile
+567     5164   SweetyLily                   # same name on the mobile
+568     5341   SweetyMindy                  # same name on the mobile
+569     5270   SweetyMay                    # same name on the mobile
+570     5342   SweetyCuty                   # same name on the mobile
+571     5339   MoMo                         # same name on the mobile
+572     5340   SweetyPuddy                  # same name on the mobile
+573     5164   SweetyLily                   # same name on the mobile
+574     5341   SweetyMindy                  # same name on the mobile
+575     5270   SweetyMay                    # same name on the mobile
+576     5342   SweetyCuty                   # same name on the mobile
+580     355    IronsmithChou                # same name on the mobile
+597     1915   ThiefChen                    # no body on the mobile: townsman
+603     5357   Matchmaker                   # same name on the mobile
+605     5494   VIPStorekeeper               # same name on the mobile
+642     1511   MasterWang                   # same model on the mobile (Damon`sDad)
+670     5262   GeneralAmber                 # same name on the mobile
+675     5396   Minstrel                     # same name on the mobile
+677     1265   ShenSan                      # same model on the mobile (SongQing)
+687     5295   OfficerBao                   # same name on the mobile
+688     6478   RoyalDoctorLi                # same name on the mobile
+699     406    GeneralJudd                  # same name on the mobile
+709     5991   Daniel                       # same name on the mobile
+710     5324   GodCloud                     # same name on the mobile
+731     1358   GeneralShou                  # same model on the mobile (UnnamedSoldier)
+741     702    2-GreenSnake                 # same model on the mobile (GreenSnake)
+757     5514   ScholarWu                    # same name on the mobile
+758     5358   PharmacistMuMu               # same name on the mobile
+761     5166   EarthMaster                  # same name on the mobile
+768     2843   Exorcist                     # same name on the mobile
+779     1164   HeavenlyMaster               # same name on the mobile
+818     5312   DesertGuardian               # same name on the mobile
+835     4422   Celestine                    # same model on the mobile (TaoisatVernon)
+836     5438   RebirthMaster                # same name on the mobile
+841     2480   Tiger                        # same name on the mobile
+863     1402   RoyalGuardian                # like CityGuard
+873     2263   ChongPak                     # same model on the mobile (CreditBonus)
+920     5404   Alcoholist                   # same name on the mobile
+921     5405   Norbert                      # same name on the mobile
+922     5296   OldQuarrier                  # same name on the mobile
+925     5306   TreasureMaster               # same name on the mobile
+926     441    StarMaster                   # like TaoistPure
+927     4422   HorseMaster                  # same model on the mobile (TaoisatVernon)
+928     3438   LotusFaery                   # same model on the mobile (Leona)
+930     441    ChiImmortal                  # like TaoistPure
+943     465    ArenaManagerWang             # same name on the mobile
+964     5272   RuHua                        # same name on the mobile
+965     5168   MasterHao                    # same name on the mobile
+966     5196   YuLin                        # same name on the mobile
+989     4100   DesertCityBlacksmith         # same model on the mobile (ArchBlacksmith)
+990     1917   DesertCityArmorer            # same model on the mobile (FoodVendor)
+991     1265   DungeonEquipmentDealer       # same model on the mobile (SongQing)
+993     427    DungeonRetailer              # like MerchantClerk
+1047    5145   Xi`er                        # same name on the mobile
+1048    5437   TruthTaoist                  # same name on the mobile
+1049    5300   CookYuan                     # same name on the mobile
+1054    5172   MysteryTaoist                # same name on the mobile
+1060    5314   GeneralArmand                # same name on the mobile
+1080    5385   Quark                        # same name on the mobile
+1095    5361   ArdenteTaoist                # same name on the mobile
+1096    5362   TempestTaoist                # same name on the mobile
+1097    5274   BreezePupil                  # same name on the mobile
+1098    5409   AC-Castellan                 # same name on the mobile
+1108    1069   GuardingStone                # same name on the mobile
+1472    3754   DeadOsgardSoldier            # same model on the mobile (Soldier)
+1597    1139   Mr.Pride                     # same model on the mobile (LieutenantChen)
+1604    441    CrazyTaoist                  # like TaoistPure
+1703    4169   DragonEnvoy                  # same model on the mobile (ChiefPriest)
+1717    722    Pharmacist                   # mobile 1894 (model 301) draws no body: Druggist body (NPC audit)
+1757    4100   BlacksmithLin                # same model on the mobile (ArchBlacksmith)
+1927    441    Swordmaster                  # like TaoistPure
+1930    5416   GoodManLiu                   # same name on the mobile
+1932    5042   MagnoliaEnvoy                # same name on the mobile
+1990    1402   ConstableXing                # like CityGuard
+1993    6319   DailyQuestEnvoy              # same name on the mobile
+1995    295    CaringVillageHead            # like Farmer
+1996    259    AnonymousTaoist              # same model on the mobile (TowerKeeper)
+1997    1139   GeneralYang                  # same model on the mobile (LieutenantChen)
+2034    1265   AgentCloud                   # same model on the mobile (SongQing)
+2052    120    Mechanism                    # same model on the mobile (UnripeRoseOnion)
+2167    1515   Reuven                       # same model on the mobile (UncleLi)
+2190    1358   GeneralBlack                 # same model on the mobile (UnnamedSoldier)
+2193    3597   BulkyStone                   # same name on the mobile
+2227    1915   MoLian                       # no body on the mobile: townsman
+2234    1261   GrandmaDu                    # same model on the mobile (Gwendolyn)
+2239    1402   TwistedCityWatcher           # like CityGuard
+2307    1358   SpringSoldierZhao            # like UnnamedSoldier
+2353    1054   ToadJim                      # like BigToad
+2354    1054   ToadCole                     # like BigToad
+2355    1054   ToadYemon                    # like BigToad
+2356    441    TaekoSensei                  # like TaoistPure
+2357    441    Yiraiya                      # like TaoistPure
+2358    235    BoatmanCheung                # same model on the mobile (Stanley)
+2359    1054   ToadCole                     # like BigToad
+2360    4022   NinjutsuTrace                # same model on the mobile (CelestialOre)
+2361    1054   ToadLulu                     # like BigToad
+2362    295    WoodmanLee                   # like Farmer
+2363    1054   ToadDork                     # like BigToad
+2364    259    Onogi                        # same model on the mobile (TowerKeeper)
+2365    427    PeddlerLau                   # like MerchantClerk
+2366    295    AnonymousVillager            # like Farmer
+2443    120    CrystalLotus                 # same model on the mobile (UnripeRoseOnion)
+2444    120    SpiritMapleLeaf              # same model on the mobile (UnripeRoseOnion)
+2445    120    CenturySoil                  # same model on the mobile (UnripeRoseOnion)
+2446    120    Thunderwood                  # same model on the mobile (UnripeRoseOnion)
+2447    120    ShimmeringAurum              # same model on the mobile (UnripeRoseOnion)
+2450    4436   bigstone                     # same model on the mobile (TheWounded)
+2454    441    Mr.Sage                      # like TaoistPure
+2507    120    LilyPixie                    # same model on the mobile (UnripeRoseOnion)
+2508    120    PeonyPixie                   # same model on the mobile (UnripeRoseOnion)
+2509    120    TulipPixie                   # same model on the mobile (UnripeRoseOnion)
+2618    3590   Chariot1Model-III            # like Chariot
+2619    3590   Chariot2Model-III            # like Chariot
+2620    4164   Chariot3Model-III            # same model on the mobile (QuizManager)
+2623    4106   SilverFruit(10000)           # like SacredFruit
+2624    4106   SilverFruit(100000)          # like SacredFruit
+2625    4106   SilverFruit(1000000)         # like SacredFruit
+2627    4106   CpFruit(1)                   # like SacredFruit
+2629    4106   CpFruit(10)                  # like SacredFruit
+2630    4106   CpFruit(50)                  # like SacredFruit
+2639    427    MartialDealer                # like MerchantClerk
+2640    3265   Chariot4Model-III            # same model on the mobile (artillery)
+2641    3590   Chariot5Model-III            # like Chariot
+2650    800    Mr.Wang                      # same name on the mobile
+2657    5210   FairyCloud                   # same name on the mobile
+2921    1367   GeneralPak                   # same model on the mobile (MillionJohn)
+2922    4169   Mr.Mirror                    # same model on the mobile (ChiefPriest)
+2923    441    MonkMisery                   # like TaoistPure
+2928    1915   DaleLord                     # no body on the mobile: townsman
+2976    2167   Cooer                        # same model on the mobile (Hubery)
+3025    120    InvestigationSpot            # same model on the mobile (UnripeRoseOnion)
+3125    5114   SwapperStarry                # same name on the mobile
+3128    427    PearlStoneCaretaker          # like MerchantClerk
+3172    1915   HuangHao                     # no body on the mobile: townsman
+3231    1402   Scout                        # like CityGuard
+3266    1315   WeiMo                        # same model on the mobile (Guard)
+3271    1915   ChenRui                      # no body on the mobile: townsman
+3284    1915   DirectorWei                  # no body on the mobile: townsman
+3285    2769   WeiDaxiong                   # same name on the mobile
+3286    1915   ZhangJing                    # no body on the mobile: townsman
+3287    6039   Leo                          # same name on the mobile
+3288    2196   ZhouWei                      # same model on the mobile (EquipmentMerchant)
+3324    427    Cross-serverKeeper           # like MerchantClerk
+3408    4104   MasterYiye                   # same model on the mobile (ArchAlchemist)
+3531    1915   Blessmann                    # no body on the mobile: townsman
+3596    5143   PureTaoist                   # same name on the mobile
+3647    5364   Mr.Wonder                    # same name on the mobile
+3684    1915   HanJingzhong                 # no body on the mobile: townsman
+3740    4169   SkillEraserSpecialist        # same model on the mobile (ChiefPriest)
+3822    1915   MoChu                        # no body on the mobile: townsman
+3824    1159   Anti-warStatue               # same model on the mobile (EnigmaStone)
+3825    1159   TalentStatue                 # same model on the mobile (EnigmaStone)
+3826    1159   Anti-fatalismStatue          # same model on the mobile (EnigmaStone)
+3842    5123   FortuneArhat                 # same name on the mobile
+3843    685    AltarCleanser                # like Altar
+3877    461    Felix                        # same name on the mobile
+3904    5070   Waitress                     # same name on the mobile
+4023    5036   PakYan                       # same name on the mobile
+4025    1511   ChongYan                     # same model on the mobile (Damon`sDad)
+4027    1915   ChingYan                     # no body on the mobile: townsman
+4033    1918   Conductor                    # same model on the mobile (HorseTrader)
+4036    5473   TowerGuardian                # same name on the mobile
+4044    1918   WoundedBrightTribesman       # same model on the mobile (HorseTrader)
+4049    346    RippleChest                  # same model on the mobile (StarStoneTreasure)
+4052    441    PhoenixStar                  # like TaoistPure
+4136    441    Miracle`sSpirit              # like TaoistPure
+4145    349    Crosss-serverPoker           # same model on the mobile (Mr.Xu)
+4528    6311   WindwalkerGuard              # same name on the mobile
+4529    5365   ElderPower                   # same name on the mobile
+4530    5278   SisterYung                   # same name on the mobile
+4531    5426   WoundedElderPower            # same name on the mobile
+4595    5023   Corpse                       # same name on the mobile
+4617    1358   LameVeteran                  # like UnnamedSoldier
+4625    1372   SpringMouth                  # same model on the mobile (FuryGem)
+4645    120    PeachVillageEntrance         # same model on the mobile (UnripeRoseOnion)
+4659    238    MysticAltar                  # same model on the mobile (ColoredBead)
+4692    1082   ClassSkillTeleporter         # like Portal
+4749    1367   IronTong                     # same model on the mobile (MillionJohn)
+4750    5305   CobbWind                     # same name on the mobile
+4777    4868   GlowtownPortal               # same model on the mobile (GiantChasmPortal)
+4790    3239   PotionDealer                 # same model on the mobile (Weinger)
+4869    6318   YuKoon                       # same name on the mobile
+4870    1358   HauKan                       # same model on the mobile (UnnamedSoldier)
+4910    5351   Nezha                        # same name on the mobile
+4911    441    SaintTaiyi                   # like TaoistPure
+4929    441    MysterySage                  # like TaoistPure
+4939    6318   YuKoon                       # same name on the mobile
+4981    2263   Jackery                      # same model on the mobile (CreditBonus)
+4982    685    DeityAltar                   # like Altar
+10372   427    LiquorMerchant               # like MerchantClerk
+10401   1915   MoYouchou                    # no body on the mobile: townsman
+105000  441    WarriorMaster                # like TaoistPure
+105005  5321   TaoistMoon                   # same name on the mobile
+105036  1915   FloraMiles                   # no body on the mobile: townsman
+105037  5037   BrookLee                     # mobile body ChiefofBrightTribe, PC name
+105038  1915   Hedda                        # no body on the mobile: townsman
+105039  1915   Tsuki                        # no body on the mobile: townsman
+105040  1915   Ashan                        # no body on the mobile: townsman
+105041  5041   Walkyrie                     # mobile body LeadApothecary, PC name
+105043  6333   Elizabeth                    # same name on the mobile
+105046  1915   Mystra                       # no body on the mobile: townsman
+105047  1082   JobPromoTeleporter           # like Portal
+105118  3598   FluffyCloud                  # same name on the mobile
+105159  5447   Conductress                  # same name on the mobile
+105191  1915   Skya                         # no body on the mobile: townsman
+105325  5325   MythforgingEnvoy             # mobile body Exorcist, PC name
+105348  1915   LadyWind                     # no body on the mobile: townsman
+105383  5383   Saizo                        # mobile body IronsmithLi, PC name
+105384  5384   Maki                         # mobile body XuFan, PC name
+105385  5385   Gara                         # mobile body Quark, PC name
+105386  5386   Raik                         # mobile body Xavier, PC name
+105387  5387   Terumi                       # mobile body Webster, PC name
+105433  563    JerkWang                     # same name on the mobile
+105435  6525   PharmacistDong               # same name on the mobile
+105443  5053   KungfuGirl                   # same name on the mobile
+105444  5051   KungfuBoy                    # same name on the mobile
+105445  6303   TCViceCaptain                # same name on the mobile
+105450  5294   GodlyArtisan                 # same name on the mobile
+105451  5261   MagicArtisan                 # same name on the mobile
+105452  5355   UnknownMan                   # same name on the mobile
+105454  5232   GarmentShopKeeper            # same name on the mobile
+105456  322    CollectorZhao                # same name on the mobile
+105461  1915   CharacterNameEditor          # no body on the mobile: townsman
+105463  441    CelestialSage                # like TaoistPure
+105468  1915   FongTin                      # no body on the mobile: townsman
+105472  2196   Armorer                      # mobile 1902 (model 301) draws no body: EquipmentMerchant body (NPC audit)
+105474  1      Shopkeeper                   # mobile 1890 (model 301) draws no body: Storekeeper body (NPC audit)
+105480  1915   MaChiu                       # no body on the mobile: townsman
+105483  15     GuildDirector                # same name on the mobile
+105485  26     ArenaGuard                   # same name on the mobile
+105486  115    GuildController              # same name on the mobile
+105489  6419   TeamPKManager                # same name on the mobile
+105490  6408   SkillTeamPKManager           # same name on the mobile
+105491  5491   ElitePKManager               # mobile body YeSheng, PC name
+105492  135    ClassPKEnvoy                 # same name on the mobile
+105495  5495   Rold                         # mobile body GameManager, PC name
+105505  419    FrozenGrottoEnvoy            # same name on the mobile
+105508  6486   Simon                        # same name on the mobile
+105511  441    ChiMaster                    # like TaoistPure
+105512  5512   MartialArtist                # mobile body Bass, PC name
+105513  5388   Apothecary                   # same name on the mobile
+105514  5514   Performer                    # mobile body ScholarWu, PC name
+105515  5515   Warlock                      # mobile body Shelby, PC name
+105516  441    Sage                         # like TaoistPure
+105517  5517   LeadWrangler                 # mobile body ScholarDuan, PC name
+105574  1915   LeeJuechen                   # no body on the mobile: townsman
+105674  1358   GeneralXiao                  # like UnnamedSoldier
+105675  5192   DukeMacabre                  # same name on the mobile
+105682  5682   FloraTushan                  # mobile body Mr.Deer, PC name
+105683  357    ApprenticeLuo                # same name on the mobile
+105696  441    AstralMaster(NatureofLife)   # like TaoistPure
+105699  5280   TransgenderDoctor            # same name on the mobile
+105958  1915   HuGang                       # no body on the mobile: townsman
+105970  1915   GearIdentifier               # no body on the mobile: townsman
+105973  1915   ChenYaojin                   # no body on the mobile: townsman
+105993  1915   Gongsun                      # no body on the mobile: townsman
+106108  1915   Woody                        # no body on the mobile: townsman
+106184  1915   NightBat                     # no body on the mobile: townsman
+106230  1915   ElderGuide                   # no body on the mobile: townsman
+106268  1915   DragonMessenger              # no body on the mobile: townsman
+106356  1358   CommanderYee                 # like UnnamedSoldier
+106362  1915   LuBan                        # no body on the mobile: townsman
+106363  441    MasterYan                    # like TaoistPure
+106364  1915   MoDi                         # no body on the mobile: townsman
+106412  6412   Gale                         # mobile body ApprenticeLuo, PC name
+106413  1358   ThunderGeneral               # like UnnamedSoldier
+106441  1915   GiantLoki                    # no body on the mobile: townsman
+106479  6479   LiXiaoyao                    # mobile body TaoistMoon, PC name
+106480  1915   Catan                        # no body on the mobile: townsman
+106485  441    SaintMonkey                  # like TaoistPure
+110093  1915   TraderJia                    # no body on the mobile: townsman
+110176  1915   Hitouban                     # no body on the mobile: townsman
+110218  1915   YeGuzhou                     # no body on the mobile: townsman
+110224  1915   DuRuokang                    # no body on the mobile: townsman
+# NPC audit 2026-10-21 (docs\NPC_AUDIT.md): PC NPCs that the mobile drew as an unrelated mobile NPC, and quest NPCs
+# with no mobile body (looks 99001+ are server-only numbers so each one can carry its own name).
+131     391    SolarSaint                   # mobile 131 is "~" (an effect object); SolarSaint is mobile 391
+1265    1915   CS-CTF-Manager               # mobile 1265 is SongQing (a second SongQing in Twin City)
+3356    441    TaoistZhen                   # mobile 3356 is Anthony <ExoticMerchantman>
+2057    1082   SecretEntrance               # mobile 2057 is Matt <Flash Sale>
+2577    685    WindPlainAltar               # mobile 2577 is FieryLairEntrance <SummerPassionFeast>
+1911    1069   MysteriousCrack              # mobile 1911 is FortunateEgg
+1259    1069   ExplorationSpot              # mobile 1259 is KnightLeon
+1951    1915   Daisy                        # mobile 1951 is Layer1SecretTreasureBox <Nether Treasure>
+1952    1915   FragmentWheel                # mobile 1952 is Layer2SecretTreasureBox <Nether Treasure>
+99001   1915   Chief                        # quest NPC 24091, no mobile body
+99002   1915   Donald                       # quest NPC 26486
+99003   1915   ZealousMan                   # quest NPC 26571
+99004   1915   PoetQin                      # quest NPC 26809
+99005   1915   Opeth                        # quest NPC 36480
+99006   1915   Winter                       # quest NPC 36808
+99007   1915   SeniorMarauder               # quest NPC 36809
+99011   1915   SteedEnvoy                   # quest NPC 6261 (Market)
+99012   1915   BlessedGreatMaster           # quest NPC 35015 (Market)
+99013   1069   BirdIsland                   # quest NPC 24332 (Bird Island), a marker
+99014   2866   AlmightyStatue               # quest NPC 24341 (Desert City), a statue
+# NPC audit 2026-10-21: PC quest/script NPCs whose look number the mobile uses for an unrelated NPC (monster, object, event NPC).
+1034    389    ArmorerYu                # was BonfireRemains <> (uid 8513 map 1015)
+1008    1915   Ke`sFollower             # was Eloise <<WorldPriestess>> (uid 8435 map 1000)
+1011    1358   ViceGeneralDong          # was AssortedBox <> (uid 8439 map 1000)
+1010    389    IronsmithLi              # was BirdIslandGuard <> (uid 8438 map 1000)
+1012    1915   WanYing                  # was SongShiyu <> (uid 8440 map 1000)
+1016    1915   ConvoyViceLeaderLing     # was ~ <> (uid 8444 map 1000)
+1009    1358   GeneralZhuGe             # was Eloise <<WorldPriestess>> (uid 8437 map 1000)
+1088    1915   CaptorCooke              # was Nine-tailedFox <> (uid 8298 map 1020)
+402     410    BlockStone               # was GhoulKong <> (uid 4573 map 1000)
+408     405    Louis                    # was NetPeddler <> (uid 4579 map 1015)
+248     1915   Water                    # was CrystalRiddler <> (uid 3664 map 1011)
+1086    1915   MoonMaiden               # was Dadar <> (uid 8296 map 1020)
+1087    441    HarmonyTaoist            # was StoneColumn <> (uid 8297 map 1020)
+1082    1915   Webster                  # was Portal <> (uid 8303 map 1020)
+1083    441    Apothecary               # was EightGatesAltar <> (uid 8304 map 1020)
+1402    1915   Nezha                    # was CityGuard <> (uid 8394 map 1000)
+1001    1358   DC-ViceGeneral           # was Penny <<BeachTreasureHunt>> (uid 8426 map 1000)
+1002    441    TaoistYu                 # was Shell <<BeachTreasureHunt>> (uid 8427 map 1000)
+1003    1069   Lotus                    # was Cassie <<CrabCatching>> (uid 8428 map 1000)
+1018    1358   SpringViceGeneralOu      # was Haka <<High-levelDemon>> (uid 8446 map 1000)
+1019    1915   SculptorHe               # was EveTrahir <<Saintess>> (uid 8447 map 1000)
+1020    441    TaoistSpring             # was Joselito <> (uid 8448 map 1000)
+1031    1358   BICastellan              # was ~ <> (uid 8510 map 1015)
+1033    1358   BI-ViceCaptain           # was Emily <[Scorer]> (uid 8512 map 1015)
+1035    1915   XimenQing                # was TheLittleMermaid <[CursedStory]> (uid 8514 map 1015)
+1040    441    WindTaoist               # was HugeBox <> (uid 8519 map 1015)
+1044    1915   WealthyWan`sWife         # was LanternI <[MoonPalace]> (uid 8523 map 1015)
+1045    1915   WealthyWan               # was TwinBlade <> (uid 8524 map 1015)
+1057    1358   Soldier`sMother          # was Demon <> (uid 8536 map 1015)
+1058    730    VillageHead              # was Outlaw <> (uid 8537 map 1015)
+1061    1915   OldZhang                 # was FacetAltar <> (uid 8540 map 1015)
+1062    1915   Harriet                  # was ChaosTablet <> (uid 8541 map 1015)
+1063    1358   Mulan                    # was Shadow~Passage <> (uid 8542 map 1015)
+1758    685    DivineFurnace            # was StoneEnvoyJenny <> (uid 24141 map 1020)
+3445    1069   ScoutingSpot             # was FashionDealer <<Guide>> (uid 28525 map 1015)
+3030    1915   Aunt                     # was TailedLeopard <<CoreArray>> (uid 36665 map 1000)
+99016   441    TaoistZin                # was FireSeal (uid 23269 map 1036); 1379 stays FireSeal for quest NPC 32316
+99017   1915   LittleBen                # was LunarHades (uid 8520 map 1015); 1041 stays LunarHades for quest NPC 34227
+99018   441    Scholar                  # was FarmerHank (uid 36671 map 1000); 1258 stays FarmerHank for quest NPC 34608
+# City content 2026-10-21: hourly event NPCs in the Twin City square (Npcs.txt 999990-999995), npcx envoy bodies
+99101   5083   ShadowCastle             # uid 999990 ShadowCastleEvent (npcx 5083 DungeonEnvoy body)
+99102   5441   DarkFlagBase             # uid 999992 DarkFlagBase (npcx 5441 MeteorRainEnvoy body)
+99103   5412   LuckyGoldenBoxes         # uid 999993 LuckyGoldenBoxes (npcx 5412 MammonEnvoy body)
+99104   5458   FlagsWar                 # uid 999994 FlagsWar (npcx 5458 WeekendEventEnvoy body)
+99105   6409   EliteGuildWar            # uid 999995 EliteGuildWar (npcx 6409 ElitePKEnvoy body)
+108     108    -                            # ShopFlag (96 flags in Twin City): no name over them
+110126  0      -                            # Suyi 8893001 (PuppetTheater, Twin City 380,448): no body on the mobile, only a number on the floor
+110127  0      -                            # Elise 8893002 (PuppetTheater, Twin City 366,453): same
+99110   5458   ServicesHall             # uid 9600040 Twin City guide to the services hall (map 11412)
+99111   5458   TwinCityGuide            # uid 9600041 services hall guide back to Twin City

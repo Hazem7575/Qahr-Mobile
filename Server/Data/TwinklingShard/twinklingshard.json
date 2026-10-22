@@ -1,0 +1,9 @@
+{
+  "_note": "[TwinklingShard 2026-10-14] Twinkling Fest window (Base/TwinklingShard/TwinklingShardUi.cs). Re-read on change. Official: rewardItem 3355342 Wuqu Snow Box (client luauirewardshow 341006000, Server_Key tChristmasX2025 Text133), minLevel 80 (Text114), officialEnd Jan. 14 15:59 (EU, Aurora Crystal/Dew item texts). Derived: teleportFromMaps (cities from which the window may send you to an area).",
+  "festival": "TwinklingShard",
+  "minLevel": 80,
+  "rewardItem": 3355342,
+  "rewardSysId": 341006000,
+  "officialEnd": "01-14 15:59",
+  "teleportFromMaps": [ 1002, 1000, 1011, 1015, 1020, 1005565, 1005566, 1005567, 1005568, 1005569 ]
+}

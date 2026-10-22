@@ -1,0 +1,29 @@
+{
+  "key": "Summer2023",
+  "name_ar": "صيف 2023 العالمي (رحلة الأحلام)",
+  "name_en": "Global Summer 2023 (Dream Cruise)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Summer: only the newest official edition (Summer2025) runs on its yearly dates, like the official server; this older edition runs only with @festival on Summer2023. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ صيف 2023! دوس على زرار الصيف اللي فوق وشوف بحر الأحلام (لفل 80+).",
+  "announce_en": "The Global Summer event has started! Click the Summer button to board the Dream Ark (Level 80+).",
+  "end_ar": "انتهى صيف 2023. نشوفكم الصيف الجاي!",
+  "end_en": "The Global Summer event has ended. See you next summer!",
+  "maps": [],
+  "icon_show": "StrToTable|LuaUIMgr_ShowDialog(\"Dlg23SummerBtn\")",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"Dlg23SummerBtn\")",
+  "icon_click": "10250</S>SummerActive2023Page_OpenMainInterface",
+  "_icon": "[Summer2023 2026-10-14] official lua button Dlg23SummerBtn (luaui\\dialog\\dlgsummeractivities\\dlg23summerbtn, Dialog_Info '1386-btn', anisection 2023qqsq_btn7, BtnId 1386). The client's Dlg23SummerBtn_BindData no longer shows it (CN code commented out), so it is shown with LuaUIMgr_ShowDialog. Click Dlg23SummerBtn_Enter -> 10250 (tMsg_Info['Summer23']) SummerActive2023Page_OpenMainInterface -> Base/Summer2023/Summer2023Ui.cs. The client routes Dlg23SummerMain_BindData to the Fgui window 150438 (YangFanYuanHang = Dream Cruise).",
+  "notes": "2026-10-14 build (batch 3). Official Global Summer 2023 'Dream Cruise' (ERP539531, tSummerActive2023Page / tSummerActive2023Npc / tSummer2023Instance). Entry = the official Dream Cruise window (Fgui 150438) with REAL bag counts of Heart of Ocean(B) 3342540 / Dream Conch 3342541 (luagui 1386 accessconfig), Dream Points 0, ark at the Departure Spot, Moon Area open and the other 5 areas fogged (official start state). Islet clicks show the official islet names (Cn_Res STR_FUI_LUA_150438_YANGFAN_NAME_xx) with Cruise disabled. 'How to get' pages = the client's own Dlg23SummerAccess. 2026-10-15 COMPLETE pass (Base/Summer2023/Summer2023Cruise.cs, config Infinity[DB]/Summer2023/summer2023.json): Dream Cruise playable - paid cruise to every islet (1 Heart of Ocean, sail effect, landing reward once per islet, +30 Dream Points official), fog/ark level from cruised areas, daily sign-in (Heart of Ocean), Anniversary Wish draw (official 1220-other wheel, 1/10 Dream Conch, +30 points). Not on this server (system message): islet event instances 2391-2396 (no map), Quick Cruise (Ocean Jade = CP item, no price), Dream Point stage rewards and the Crimson/Gold Coral exchange (no tables in the client), Marine Monarch / cross-server. No Questinfo quests.",
+  "_owner": "Summer2023",
+  "_quests": [],
+  "_officialMaps": {},
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "07-04 01:00",
+    "end": "07-17 08:59",
+    "_note": "Official: client actbtnconfig ActBtnConfig[5] (23全球暑期) ActTime '2023-07-04 01:00 2023-07-17 08:59' (ActTime_2 EU 09:00-16:59), lua header ERP539531 (7.4-7.17). Server local time."
+  }
+}

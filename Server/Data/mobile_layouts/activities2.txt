@@ -1,0 +1,420 @@
+# QahrMobile packet layouts: Activities part 2 (sign-in, benefits, mentor info, slots, roulette, horse race, arena).
+# The format is described in Networking\Mobile\MobileLayouts.Loader.cs. Offsets below include the 4-byte header.
+
+# ---------------------------------------------------------------- daily sign-in / benefits
+
+# CMsgSignIn 10253 (16 bytes). Mobile -> server: action u8 4 (CreateSignMsg 0 = sign today, CreateCumulatePrizeMsg
+# 1 = claim the cumulative prize, index u32 8). Server -> mobile (Process): action 2 only, u32 8 = claimed prizes as a
+# bitmask (bit n-1 = prize n, see CDlgSignIn: 1 << (i-1) & GetHadGetReward), u32 12 = signed days bitmask
+# (COperateActivityData::IsSignInDay: bit d-1).
+# Server (MsgSignIn.MsgSignInCreate): action u8 4 (3 = Show), claimed prize COUNT u8 5, u16 6, days mask u64 8;
+# reader: action u8 4 (0 sign, 3 show), u32 5. The server's Show also hands out the cumulative prizes that are due, so
+# the mobile "claim prize" (1) is sent as Show (3).
+[2141 MsgSignIn struct 16 16]
+4  4  u8  map 3>2 3<1       # action
+5  8  u8  out map 1>1 2>3 3>7 4>15 5>31   # claimed prize count -> bitmask
+5  8  u32 in                # prize index (unused by the server)
+8  12 u32 out               # signed days
+
+# CMsgBenefitsConfig 10131: count u32 4, then ST_BENEFITS_RULE {type, start yyyymmdd, end yyyymmdd} (12 bytes) from 8
+# (CMsgBenefitsConfig::Process -> COperateActivityData::UpdateOperateBenefitsInfo(count, rules)).
+# Server (MsgServerConfig.CreateBenefitsConfig): the same, but it writes count 4 with only 3 rules.
+[2242 MsgBenefitsConfig struct 44 44]
+4  4  u32 out map 4>3      # count
+8  8  str:36 out           # 3 rules
+
+# ---------------------------------------------------------------- mentor / apprentice (TQ calls it "guide")
+
+# CMsgGuideInfo 10200 (mentor / apprentice card). Process: mode u8 4 (1 tutor, 2 student), tutor 8, student 12,
+# look 16, battle offer 20, betray hour 24, follow date 28, level 32, profession 36, pk i16 40, syndicate 44, rank 48,
+# syndicate title u16 52, sex 60, online u8 64, exp offer 72, god bless u16 80, item addition u16 82,
+# CNetStringPacker at 84 (C2: SetBuf(this+0x58)). Request (Create(i,j)): mode u8 4, uid 8, 88 bytes.
+# Server (MsgApprenticeInformation.GetArray): the same up to 59 except online u32 at 60 (where the mobile has sex) and
+# 0 at 64; exp 72, blessing 80, composing 82, string list at 84. Only "online" moves.
+[2001 MsgGuideInfo struct 84 84]
+4  4  str:56               # mode .. pk + zeros (4..59)
+60 64 u32 out              # online
+72 72 str:12               # exp, blessing, composing
+84 84 strings              # names
+
+# ---------------------------------------------------------------- operating activities
+
+# CMsgOperatingAct 10254: type u16 4, count u16 8, ids u32 from 14 (Process type 1 = active ids; 3/4 = the client
+# queries back; CreateAwardMsg type 2 count 1 id 14) = B6OperatingAct (same struct as the PC client).
+[2421 MsgOperatingAct same]
+
+# ---------------------------------------------------------------- slot machine
+
+# CMsgSlotAction 10184 (12 bytes): Create(action u8 4, npc u32 8, bet u8 5); Process action 1 = error box (u8 5)
+# = MsgMachine reader (mode u8 4, bet u8 5, u16, npc 8).
+[2021 MsgSlotAction same]
+
+# CMsgSlotResult 10007: action u8 4 (0 = spin result: wheels u8 5 6 7, npc 16; 1 = stop: u64 8, npc 16)
+# = MsgMachineResponse.MachineResponseCreate (mode 4, wheels 5 6 7, u64 8, npc 16, u32 20).
+[2045 MsgSlotResult same]
+
+# ---------------------------------------------------------------- roulette
+
+# CMsgRouletteTable 10030 (the table window): type u32 4, color u8 8, timer u8 9, count u8 10, players of 41 bytes
+# from 11 (uid, look, color u8, name 32) (CRouletteMgr::EnterTable / AddPlayer) = MsgRouletteOpenGui.
+# The table NPC itself (RouletteTableCreate) goes as MsgRouletteNpcInfo 2221 (see below).
+[2011 MsgRouletteTable same]
+
+# CMsgRouletteNpcInfo 10278 (the table on the map): uid 4, table id 8, unit group 12, x u16 16, y u16 18,
+# look u16 20, players u8 22 = MsgRouletteTable.RouletteTableCreate (sent as 2221, see that file).
+[2221 MsgRouletteNpcInfo same]
+
+# CMsgRoulettePlayer 10019: uid 4, look 8, color u8 12, name 13 = MsgRoulettedAddNewPlayer.
+[2031 MsgRoulettePlayer same]
+
+# CMsgRoulette1ArgAction 10048 (9 bytes): action u8 4, arg u32 5 = MsgRouletteSignUp (both ways).
+[2109 MsgRoulette1ArgAction same]
+
+# CMsgRouletteLatestProfitLossList 10013: winning number u8 4, count u8 5, clear u8 6, entries of 40 from 7
+# (bet u32, win u32, name 32). Server (MsgRouletteRecord): number 4, count 5, entries from 6 (no clear byte).
+# The list is sent whole each round, so "clear" is set.
+[2158 MsgRouletteLatestProfitLossList shift 6 7]
+6 u8 map 0>1
+
+# CMsgRouletteWinningNumber 10330: number u8 4 = MsgRouletteNoWinner.
+[2248 MsgRouletteWinningNumber same]
+
+# CMsgRouletteWatcherList 10112: count u8 4, uids u32 from 5 = MsgRouletteScreen.
+[2276 MsgRouletteWatcherList same]
+
+# CMsgRoulettePlayerBet 10090: Process is empty on the mobile (the bets of others are not shown), the server's
+# MsgRouletteSetBetting (color u8 4, count u8 5, {number u8, price u32}) is harmless.
+# NOTE: the mobile sends its own bets as CMsgRouletteBet 10187 (count u8 4, {number u8 5, price u32 6} x count,
+# length 5+5n) - the same body the server's 2348 handler (MsgRouletteCheck) reads, but 10187 has no server id in
+# mobile_ids.txt, so the bets never arrive.
+[2348 MsgRoulettePlayerBet same]
+
+# CMsgRouletteAction 10102: action u8 4 (Create(i): 5 bytes) = MsgRouletteAction reader.
+[2356 MsgRouletteAction same]
+
+# ---------------------------------------------------------------- horse race
+
+# CMsgRaceTrackProp 10180: amount u16 4, type u16 6, slot u32 8, param u32 12 (Process: UpdateProp / AddProp;
+# Create(j,j): slot 8, param 12) = MsgRacePotion.
+[2174 MsgRaceTrackProp same]
+
+# CMsgRaceTrackStatus 10215: uid 4, count 8, entries of 20 from 12 (status id, u8 flag 16 (0..2), u8 17, u32 20 24 28)
+# (CRacetrackStatusEffecterFactory) = MsgGameUpdate.GameUpdateCreate.
+[2202 MsgRaceTrackStatus same]
+
+# ---------------------------------------------------------------- arena (qualifier)
+
+# CMsgQualifyingFightersList 10097 (the match list): page 4, page bound 8, fighters 12, queue 16, u16 20 = 0,
+# matches 24, matches of 168 bytes from 28 = 2 fighters of 84 (uid 0, 4, look 8, name 12, level 44, class 48, 52, 56,
+# rank u16 60, points 64, win 68, battles 72, honor 76, history honor 80) (Process: stride 0xa8, TFightingPlayerInfo).
+# Server (MsgArenaMatches): the same header and fighter, but each fighter is 88 bytes (a trailing 0) -> stride 176.
+# At most 3 matches per page (the handler's max).
+[2081 MsgQualifyingFightersList struct 556 532]
+4   4   str:24             # header (request: page 4, 8)
+28  28  str:84 out         # match 1 fighter 1
+116 112 str:84 out         # match 1 fighter 2
+204 196 str:84 out         # match 2 fighter 1
+292 280 str:84 out         # match 2 fighter 2
+380 364 str:84 out         # match 3 fighter 1
+468 448 str:84 out         # match 3 fighter 2
+
+# CMsgQualifyingRank 10093 (rank board): type u16 4, page u16 6, total u16 8, count u32 12, entries of 60 from 20
+# (rank u16 0, uid 4, name 8, points 40, class 44, level 48, u8 52, 56) (Process: stride 0x3c,
+# AddQualifyingRankBoardInfo). Server (MsgArenaRanking): the same header, entries of 56 (rank u16 0, name 2, u16 34,
+# points 36, class 40, level 44, unknown2 48, look 52), 10 per page.
+[2171 MsgQualifyingRank struct 580 620]
+4   4   str:16             # header (request: type u16 4, page u16 6)
+20  20  u16 out            # 1 rank
+22  28  str:32 out         # name
+56  60  str:12 out         # points class level
+68  72  u8 out             # unknown2
+72  76  u32 out            # look
+76  80  u16 out            # 2
+78  88  str:32 out
+112 120 str:12 out
+124 132 u8 out
+128 136 u32 out
+132 140 u16 out            # 3
+134 148 str:32 out
+168 180 str:12 out
+180 192 u8 out
+184 196 u32 out
+188 200 u16 out            # 4
+190 208 str:32 out
+224 240 str:12 out
+236 252 u8 out
+240 256 u32 out
+244 260 u16 out            # 5
+246 268 str:32 out
+280 300 str:12 out
+292 312 u8 out
+296 316 u32 out
+300 320 u16 out            # 6
+302 328 str:32 out
+336 360 str:12 out
+348 372 u8 out
+352 376 u32 out
+356 380 u16 out            # 7
+358 388 str:32 out
+392 420 str:12 out
+404 432 u8 out
+408 436 u32 out
+412 440 u16 out            # 8
+414 448 str:32 out
+448 480 str:12 out
+460 492 u8 out
+464 496 u32 out
+468 500 u16 out            # 9
+470 508 str:32 out
+504 540 str:12 out
+516 552 u8 out
+520 556 u32 out
+524 560 u16 out            # 10
+526 568 str:32 out
+560 600 str:12 out
+572 612 u8 out
+576 616 u32 out
+
+# CMsgQualifyingSeasonRankList 10293 (last season top 10): count u32 4, clear u8 8, entries of 68 from 12 (uid 0,
+# name 4, look 36, level 40, class 44, 48, rank u16 52, points 56, win 60, lose 64) (Process: stride 0x44).
+# Server (MsgArenaRank10): the same, entries of 72 (a trailing 0).
+[2188 MsgQualifyingSeasonRankList struct 732 692]
+4   4   str:8              # count, clear
+12  12  str:68 out         # 1
+84  80  str:68 out         # 2
+156 148 str:68 out         # 3
+228 216 str:68 out         # 4
+300 284 str:68 out         # 5
+372 352 str:68 out         # 6
+444 420 str:68 out         # 7
+516 488 str:68 out         # 8
+588 556 str:68 out         # 9
+660 624 str:68 out         # 10
+
+# CMsgQualifyingInteractive 10140 (72 bytes): action u16 4 (0..10), arg u32 8, uid 12, server 16, name 20, 52 56 60 64,
+# 68 (SetQualifyingEmulantInfo); Create(t,j): action 4, arg 8 = MsgArenaSignup (dialog u32 4, option 8, uid 12 ...).
+[2285 MsgQualifyingInteractive same]
+
+# CMsgArenicWitness 10291: mode u16 4, arg 6, uid 10, count 14, cheers 18 22, entries of 68 from 26 (look, name 32 ...)
+# (Process: stride 0x44; Create(t,i,PKc): mode 4, arg 6, name 26) = MsgArenaWatchers / MsgElitePkWatch.
+[2392 MsgArenicWitness same]
+
+# CMsgArenicScore 10059: uid 4, server 8, name 12, damage 44, uid 48, server 52, name 56, damage 88
+# (TQualifyingFightScore) = MsgArenaMatchScore.
+[2210 MsgArenicScore same]
+
+# ---------------------------------------------------------------- Elite PK (event only: verified by inject only)
+
+# CMsgElitePKArenic 10248: state u16 4 (0..5), effect 8, time u16 64 (SetSpecialGameTime) = MsgElitePKMatchUI
+# (state 4, effect 8, opponent 12, name 20, time 64).
+[2149 MsgElitePKArenic same]
+
+# CMsgPKEliteMatchInfo 10226 (brackets): mode u16 4, page 6, 8, count u32 10, group u16 14, gui u16 16, time u16 18,
+# u8 20, total u32 21, matches of 160 from 25 (fighters of 50 at +10) = MsgElitePKBrackets.
+[2150 MsgPKEliteMatchInfo same]
+
+# CMsgElitePKScore 10249: two ELITEPK_SCORE_INFO of 44 at 4 and 48 (uid, name 4, server 36, points 40)
+# = MsgElitePKMatchStats.
+[2201 MsgElitePKScore same]
+
+# CMsgElitePKGameRankInfo 10106 (top 8 / top 3): type u16 4, group 8, count 16, clear u8 20, ELITE_RANK_INFO of 68
+# from 24 (Process stride 0x44): uid 4 (CRankArenaPkItem::SetInfo compares it with the hero), level 8, rank 16,
+# name 20, 52, real uid 56 (GetOrigID), 60 (CRankBaseItem::SetItemData arg), 64. Request Create(i,i): type 4,
+# group 8, 92 bytes. Server (MsgElitePkRanking): rank 4, group 8, state 12, count 16, 1 20, 2 24, uid 28, 0 32 36,
+# entries of 64 from 40 (rank, name 32, look, 0, frame, uid, real uid, claim, 0). Look / frame / claim placement
+# on the mobile is a best guess (60 / 52 / 64).
+[2455 MsgElitePKGameRankInfo struct 552 568]
+4   4   str:20             # header (request: type, group)
+40 40 u32 out        # 1 rank
+44 44 str:32 out     # name
+76 84 u32 out        # look
+84 76 u32 out        # frame
+88 28 u32 out        # uid
+92 80 u32 out        # real uid (GetOrigID)
+96 88 u32 out        # claim
+104 108 u32 out        # 2 rank
+108 112 str:32 out     # name
+140 152 u32 out        # look
+148 144 u32 out        # frame
+152 96 u32 out        # uid
+156 148 u32 out        # real uid (GetOrigID)
+160 156 u32 out        # claim
+168 176 u32 out        # 3 rank
+172 180 str:32 out     # name
+204 220 u32 out        # look
+212 212 u32 out        # frame
+216 164 u32 out        # uid
+220 216 u32 out        # real uid (GetOrigID)
+224 224 u32 out        # claim
+232 244 u32 out        # 4 rank
+236 248 str:32 out     # name
+268 288 u32 out        # look
+276 280 u32 out        # frame
+280 232 u32 out        # uid
+284 284 u32 out        # real uid (GetOrigID)
+288 292 u32 out        # claim
+296 312 u32 out        # 5 rank
+300 316 str:32 out     # name
+332 356 u32 out        # look
+340 348 u32 out        # frame
+344 300 u32 out        # uid
+348 352 u32 out        # real uid (GetOrigID)
+352 360 u32 out        # claim
+360 380 u32 out        # 6 rank
+364 384 str:32 out     # name
+396 424 u32 out        # look
+404 416 u32 out        # frame
+408 368 u32 out        # uid
+412 420 u32 out        # real uid (GetOrigID)
+416 428 u32 out        # claim
+424 448 u32 out        # 7 rank
+428 452 str:32 out     # name
+460 492 u32 out        # look
+468 484 u32 out        # frame
+472 436 u32 out        # uid
+476 488 u32 out        # real uid (GetOrigID)
+480 496 u32 out        # claim
+488 516 u32 out        # 8 rank
+492 520 str:32 out     # name
+524 560 u32 out        # look
+532 552 u32 out        # frame
+536 504 u32 out        # uid
+540 556 u32 out        # real uid (GetOrigID)
+544 564 u32 out        # claim
+
+# ---------------------------------------------------------------- Team PK / Skill Team PK (event only: inject only)
+
+# CMsgTeamPKRankInfo 10095: type u16 4, group 8, count 16, clear u8 20, TEAMPK_RANK_INFO of 92 from 24
+# (uid 4 must be non zero, rank 8, name 12 (64), look 76, frame 80) (Process stride 0x5c). Server
+# (MsgTeamElitePkRanking.AdditemTeamPkRanking): 4 zero bytes before rank 1, then entries of 76 (leader, rank,
+# name 64, look, frame) from 28. (The "rank 3 only" reply has no zero bytes and comes out 4 bytes early.)
+[2148 MsgTeamPKRankInfo struct 636 760]
+4   4   str:20             # header (request: type, group)
+28 28 str:80 out     # 1
+104 120 str:80 out     # 2
+180 212 str:80 out     # 3
+256 304 str:80 out     # 4
+332 396 str:80 out     # 5
+408 488 str:80 out     # 6
+484 580 str:80 out     # 7
+560 672 str:80 out     # 8
+
+# CMsgTeamPopPKRankInfo 10170: the same header, entries of 88 from 24 (uid, rank 4, name 8 (64), 72, 76, 80)
+# (Process stride 0x58). Server (AdditemTeamElitePkRanking): entries of 76 (leader, rank, name 64, look, frame) from 24.
+[2245 MsgTeamPopPKRankInfo struct 632 728]
+4   4   str:20
+24 24 str:76 out     # 1
+100 112 str:76 out     # 2
+176 200 str:76 out     # 3
+252 288 str:76 out     # 4
+328 376 str:76 out     # 5
+404 464 str:76 out     # 6
+480 552 str:76 out     # 7
+556 640 str:76 out     # 8
+
+# CMsgTeamPKMatchInfo 10198: the Elite brackets header (u8 20, total u32 21), matches of 262 from 25 (3 teams of 84)
+# = MsgTeamElitePKBrackets (team PK: a u32 0 before each team).
+[2436 MsgTeamPKMatchInfo same]
+
+# CMsgTeamPopPKMatchInfo 10260: total u32 20, u8 24, matches of 250 from 25 (3 teams of 80) = MsgTeamElitePKBrackets
+# (skill team).
+[2199 MsgTeamPopPKMatchInfo same]
+
+# CMsgTeamPKArenic 10270: state u16 4 (7 = info), opponent uid 16, time u16 64 = MsgTeamElitePKMatchUI (team PK:
+# state, effect, 0, opponent 16, 0, name 24, 8 zero, time 64).
+[2376 MsgTeamPKArenic same]
+
+# CMsgTeamPopPKArenic 10193: state u16 4, opponent uid 12, time u16 60 = MsgTeamElitePKMatchUI (skill team).
+[2434 MsgTeamPopPKArenic same]
+
+# CMsgTeamPKArenicScore 10322: NO header on the mobile, two entries of 112 at 4 and 116 (0, leader, team, leader name
+# 12, team name 44 (64), points 108) (Process: names at 0x30/0xa0, points 0x70/0xe0).
+# Server (MsgTeamElitePKMatchStats, b2Score): action u8 4, mode 5, count u16 6, entries of 116 at 8 and 124.
+[2111 MsgTeamPKArenicScore struct 240 228]
+8   4   str:112 out
+124 116 str:112 out
+
+# CMsgTeamPopPKArenicScore 10223: entries of 108 at 4 and 112 (leader, team, name 8, team name 40 (64), points 104)
+# = MsgTeamElitePKMatchStats (skill team).
+[2238 MsgTeamPopPKArenicScore same]
+
+# ---------------------------------------------------------------- Team arena (team qualifier)
+
+# CMsgTeamArenaRank 10186: page u16 4, total u16 6, count 8, clear u8 12, rows of 0x38 from 16 (rank u16, 4, points 8,
+# class 12, level 16, body u8 20, name 21) = TeamArenaPackets.Rank.
+[2138 MsgTeamArenaRank same]
+
+# CMsgTeamArenaYTop10List 10287: count 4, clear u8 8, rows of 0x3c from 12 (name 32, rank, look, class, level, points,
+# win, lose) = TeamArenaPackets.YTop10.
+[2167 MsgTeamArenaYTop10List same]
+
+# CMsgTeamArenaFightingMemberInfo 10314: type u16 4, leader 8, count 12, clear u8 16, rows of 0x38 from 20 (uid, level,
+# class, body, rank, points, name 32) = TeamArenaPackets.Members.
+[2168 MsgTeamArenaFightingMemberInfo same]
+
+# CMsgTeamArenaInteractive 10060: action u16 4, arg 8, 12 = TeamArenaPackets.Interactive.
+[2218 MsgTeamArenaInteractive same]
+
+# CMsgTeamArenaScore 10190: side A 4 (leader, leader, name 12, damage 44), side B 48 (name 56, damage 88)
+# = TeamArenaPackets.Score.
+[2239 MsgTeamArenaScore same]
+
+# CMsgTeamArenaHeroData 10238: rank 4, status 8, wins / loses / honor / points 12..36 = TeamArenaPackets.HeroData.
+[2296 MsgTeamArenaHeroData same]
+
+# CMsgTeamArenaFightingTeamList 10069: first 4, last 8, matches 12, teams 16, count 20, clear u8 24, rows of 104 from 28
+# (Process: memcpy 0x68): side A leader 0, 4, name 8, members 40, 44, 48; side B leader 52, 56, name 60, members 92,
+# 96, 100. Server (TeamArenaPackets.FightingList): rows of 80 (leader, name 32, members) x2, 6 per page.
+[2460 MsgTeamArenaFightingTeamList struct 508 652]
+4   4   str:24             # header (request: first index 4)
+28 28 u32 out      # 1 leader A
+32 36 str:32 out   # name A
+64 68 u32 out      # members A
+68 80 u32 out      # leader B
+72 88 str:32 out   # name B
+104 120 u32 out      # members B
+108 132 u32 out      # 2 leader A
+112 140 str:32 out   # name A
+144 172 u32 out      # members A
+148 184 u32 out      # leader B
+152 192 str:32 out   # name B
+184 224 u32 out      # members B
+188 236 u32 out      # 3 leader A
+192 244 str:32 out   # name A
+224 276 u32 out      # members A
+228 288 u32 out      # leader B
+232 296 str:32 out   # name B
+264 328 u32 out      # members B
+268 340 u32 out      # 4 leader A
+272 348 str:32 out   # name A
+304 380 u32 out      # members A
+308 392 u32 out      # leader B
+312 400 str:32 out   # name B
+344 432 u32 out      # members B
+348 444 u32 out      # 5 leader A
+352 452 str:32 out   # name A
+384 484 u32 out      # members A
+388 496 u32 out      # leader B
+392 504 str:32 out   # name B
+424 536 u32 out      # members B
+428 548 u32 out      # 6 leader A
+432 556 str:32 out   # name A
+464 588 u32 out      # members A
+468 600 u32 out      # leader B
+472 608 str:32 out   # name B
+504 640 u32 out      # members B
+
+# ---------------------------------------------------------------- detained items, black spot
+
+# CMsgDetainItemInfo 10262: the server's struct up to 44, then suspicious (CItem::SetShadiness) u16 48 and lock
+# (CItem::SetFlag) u16 50, perfection 52 56, owner 60 ..., owner / gainer 160..231, date 232, reward / cost / days
+# 236..247, and a QL item type u32 at 248 (CItem::SetQLItemType) the server does not have (without the padding the
+# mobile reads the "TQServer" seal there). Server (MsgDetainedItem): suspicious u32 44, lock u16 48.
+[2063 MsgDetainItemInfo struct 248 256]
+4   4   str:40 out         # uid .. enchant
+44  48  u16 out            # suspicious
+48  50  u16 out            # lock
+52  52  str:196 out        # perfection .. days left
+
+# CMsgDeadMark 10188: action u16 4 (1 = mark), uid 8 = MsgBlackspot.
+[2457 MsgDeadMark same]

@@ -1,0 +1,757 @@
+{
+ "_note": "PuppetTheater (Halloween 2025 Strings of Terror). Official Questinfo 9186-9201 (TypeId 8, BeginNpc 0, Finish -1 instance NPCs) played in private copies of maps 1004398-1004403 (maps.txt -> doc 12473 2019halloween_new, DERIVED). Story started from the window region / Challenge boss (Base/PuppetTheater, FestivalStory.StoryEntry). Instance NPC ids 8893101-8893153, looks NpcX official names (Papet 110187/110198, Nixie 110188, Tielle 110189, VibrantLion 110190, Mikes 110191, TiellePuppet 110200, FoxMarionette 110206, OldZack 110207, NetherPhoenixMarionette 110208, Archon 110209); objects = npc.ini 10710 Crack (DERIVED).",
+ "instances": {
+  "PT_Garden": {
+   "_note": "Puppet Garden (official 1004398 -> maps.txt doc 12473, DERIVED doc). NPC cells = Questinfo points.",
+   "map": 1004398,
+   "x": 102,
+   "y": 60,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 348,
+    "y": 446
+   },
+   "npcs": [
+    {
+     "id": 8893101,
+     "mesh": 1101980,
+     "x": 102,
+     "y": 56,
+     "type": 2,
+     "name": "Papet"
+    },
+    {
+     "id": 8893102,
+     "mesh": 107100,
+     "x": 113,
+     "y": 104,
+     "type": 2,
+     "name": "Crack"
+    },
+    {
+     "id": 8893103,
+     "mesh": 1101870,
+     "x": 123,
+     "y": 103,
+     "type": 2,
+     "name": "Papet"
+    },
+    {
+     "id": 8893104,
+     "mesh": 1102060,
+     "x": 102,
+     "y": 84,
+     "type": 2,
+     "name": "FoxMarionette"
+    },
+    {
+     "id": 8893105,
+     "mesh": 107100,
+     "x": 108,
+     "y": 73,
+     "type": 2,
+     "name": "Garden"
+    }
+   ]
+  },
+  "PT_Stage": {
+   "_note": "Midnight Stage (official 1004399 -> doc 12473 DERIVED).",
+   "map": 1004399,
+   "x": 128,
+   "y": 113,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 348,
+    "y": 446
+   },
+   "npcs": [
+    {
+     "id": 8893111,
+     "mesh": 107100,
+     "x": 128,
+     "y": 109,
+     "type": 2,
+     "name": "Surroundings"
+    },
+    {
+     "id": 8893112,
+     "mesh": 107100,
+     "x": 135,
+     "y": 154,
+     "type": 2,
+     "name": "StageCenter"
+    },
+    {
+     "id": 8893113,
+     "mesh": 1101870,
+     "x": 125,
+     "y": 127,
+     "type": 2,
+     "name": "Papet"
+    },
+    {
+     "id": 8893114,
+     "mesh": 107100,
+     "x": 107,
+     "y": 93,
+     "type": 2,
+     "name": "Illusion"
+    },
+    {
+     "id": 8893115,
+     "mesh": 1101880,
+     "x": 133,
+     "y": 153,
+     "type": 2,
+     "name": "Nixie"
+    }
+   ]
+  },
+  "PT_Bazaar": {
+   "_note": "Noctis Bazaar (official 1004400 -> doc 12473 DERIVED).",
+   "map": 1004400,
+   "x": 75,
+   "y": 80,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 348,
+    "y": 446
+   },
+   "npcs": [
+    {
+     "id": 8893121,
+     "mesh": 107100,
+     "x": 75,
+     "y": 83,
+     "type": 2,
+     "name": "Clues"
+    },
+    {
+     "id": 8893122,
+     "mesh": 1102000,
+     "x": 69,
+     "y": 69,
+     "type": 2,
+     "name": "Tielle"
+    },
+    {
+     "id": 8893123,
+     "mesh": 1102070,
+     "x": 93,
+     "y": 85,
+     "type": 2,
+     "name": "OldZack"
+    }
+   ]
+  },
+  "PT_GardenDark": {
+   "_note": "Puppet Garden (Dark) (official 1004401 -> doc 12473 DERIVED).",
+   "map": 1004401,
+   "x": 101,
+   "y": 56,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 348,
+    "y": 446
+   },
+   "npcs": [
+    {
+     "id": 8893131,
+     "mesh": 107100,
+     "x": 101,
+     "y": 52,
+     "type": 2,
+     "name": "Garden"
+    },
+    {
+     "id": 8893132,
+     "mesh": 1101980,
+     "x": 96,
+     "y": 75,
+     "type": 2,
+     "name": "Gardener"
+    },
+    {
+     "id": 8893133,
+     "mesh": 1101890,
+     "x": 99,
+     "y": 83,
+     "type": 2,
+     "name": "Tielle"
+    },
+    {
+     "id": 8893134,
+     "mesh": 107100,
+     "x": 70,
+     "y": 113,
+     "type": 2,
+     "name": "Explosive"
+    },
+    {
+     "id": 8893135,
+     "mesh": 107100,
+     "x": 127,
+     "y": 123,
+     "type": 2,
+     "name": "BlastSpot"
+    },
+    {
+     "id": 8893136,
+     "mesh": 1101900,
+     "x": 130,
+     "y": 128,
+     "type": 2,
+     "name": "VibrantLion"
+    }
+   ]
+  },
+  "PT_StageDark": {
+   "_note": "Midnight Stage (Dark) (official 1004402 -> doc 12473 DERIVED).",
+   "map": 1004402,
+   "x": 151,
+   "y": 158,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 348,
+    "y": 446
+   },
+   "npcs": [
+    {
+     "id": 8893141,
+     "mesh": 1101980,
+     "x": 151,
+     "y": 162,
+     "type": 2,
+     "name": "Waiter"
+    },
+    {
+     "id": 8893142,
+     "mesh": 107100,
+     "x": 134,
+     "y": 153,
+     "type": 2,
+     "name": "StageTrap"
+    },
+    {
+     "id": 8893143,
+     "mesh": 1102080,
+     "x": 133,
+     "y": 150,
+     "type": 2,
+     "name": "NetherPhoenixMarionette"
+    }
+   ]
+  },
+  "PT_BazaarDark": {
+   "_note": "Noctis Bazaar (Dark) (official 1004403 -> doc 12473 DERIVED).",
+   "map": 1004403,
+   "x": 104,
+   "y": 76,
+   "minutes": 30,
+   "exit": {
+    "map": 1002,
+    "x": 348,
+    "y": 446
+   },
+   "npcs": [
+    {
+     "id": 8893151,
+     "mesh": 1101910,
+     "x": 108,
+     "y": 71,
+     "type": 2,
+     "name": "Mikes"
+    },
+    {
+     "id": 8893152,
+     "mesh": 107100,
+     "x": 101,
+     "y": 85,
+     "type": 2,
+     "name": "MarionetteFactory"
+    },
+    {
+     "id": 8893153,
+     "mesh": 1102090,
+     "x": 93,
+     "y": 85,
+     "type": 2,
+     "name": "Archon"
+    }
+   ]
+  }
+ },
+ "quests": {
+  "9186": {
+   "_note": "Puppet Garden I. Explore the Garden (108,73); finish -1,1004398,102,56. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893101,
+   "finishNpc": 8893101,
+   "onAccept": {
+    "instance": "PT_Garden"
+   },
+   "objectives": [
+    {
+     "type": "visit",
+     "map": 1004398,
+     "x": 108,
+     "y": 73,
+     "range": 4,
+     "slot": 2,
+     "name": "Garden"
+    }
+   ],
+   "prequest": ""
+  },
+  "9187": {
+   "_note": "Puppet Garden II. Crack 113,104. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893102,
+   "finishNpc": 8893102,
+   "onAccept": {
+    "instance": "PT_Garden"
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893102,
+     "slot": 1,
+     "name": "Truth"
+    }
+   ],
+   "prequest": "9186"
+  },
+  "9188": {
+   "_note": "Puppet Garden III. 'Awaken the Marionette' = defeat the possessed marionette (DERIVED fight) then FoxMarionette. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893103,
+   "finishNpc": 8893104,
+   "onAccept": {
+    "instance": "PT_Garden",
+    "spawn": [
+     {
+      "monster": "PossessedFox",
+      "x": 102,
+      "y": 88,
+      "range": 2,
+      "count": 1,
+      "minutes": 30
+     }
+    ]
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893103,
+     "slot": 1,
+     "name": "Papet"
+    },
+    {
+     "type": "kill",
+     "monster": "PossessedFox",
+     "slot": 2,
+     "count": 1,
+     "name": "PossessedFox",
+     "after": 1
+    }
+   ],
+   "prequest": "9187"
+  },
+  "9189": {
+   "_note": "Midnight Stage I. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893111,
+   "finishNpc": 8893111,
+   "onAccept": {
+    "instance": "PT_Stage"
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893111,
+     "slot": 1,
+     "name": "Surroundings"
+    }
+   ],
+   "prequest": ""
+  },
+  "9190": {
+   "_note": "Midnight Stage II (chk count 3). Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893111,
+   "finishNpc": 8893111,
+   "onAccept": {
+    "instance": "PT_Stage"
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893112,
+     "slot": 1,
+     "name": "StageCenter",
+     "count": 3
+    }
+   ],
+   "prequest": "9189"
+  },
+  "9191": {
+   "_note": "Midnight Stage III. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893113,
+   "finishNpc": 8893115,
+   "onAccept": {
+    "instance": "PT_Stage",
+    "spawn": [
+     {
+      "monster": "StageMarionette",
+      "x": 133,
+      "y": 153,
+      "range": 2,
+      "count": 1,
+      "minutes": 30
+     }
+    ]
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893113,
+     "slot": 1,
+     "name": "Papet"
+    },
+    {
+     "type": "talk",
+     "npc": 8893114,
+     "slot": 2,
+     "name": "Illusion",
+     "after": 1
+    },
+    {
+     "type": "kill",
+     "monster": "StageMarionette",
+     "slot": 3,
+     "count": 1,
+     "name": "StageMarionette",
+     "after": 2
+    }
+   ],
+   "prequest": "9190"
+  },
+  "9192": {
+   "_note": "Noctis Bazaar I. Finish NPC -1,1004399,72,92 is on another map: finished at the Clues spot instead (DERIVED). Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893121,
+   "finishNpc": 8893121,
+   "onAccept": {
+    "instance": "PT_Bazaar",
+    "spawn": [
+     {
+      "monster": "MerchantPuppet",
+      "x": 75,
+      "y": 88,
+      "range": 3,
+      "count": 3,
+      "minutes": 30
+     }
+    ]
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893121,
+     "slot": 1,
+     "name": "Clues",
+     "count": 3
+    },
+    {
+     "type": "kill",
+     "monster": "MerchantPuppet",
+     "slot": 2,
+     "count": 3,
+     "name": "MerchantPuppet"
+    }
+   ],
+   "prequest": ""
+  },
+  "9193": {
+   "_note": "Noctis Bazaar II (GirlPuppet = Tielle 69,69). Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893122,
+   "finishNpc": 8893122,
+   "onAccept": {
+    "instance": "PT_Bazaar"
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893122,
+     "slot": 1,
+     "name": "GirlPuppet"
+    }
+   ],
+   "prequest": "9192"
+  },
+  "9194": {
+   "_note": "Noctis Bazaar III. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893122,
+   "finishNpc": 8893123,
+   "onAccept": {
+    "instance": "PT_Bazaar",
+    "spawn": [
+     {
+      "monster": "BazaarPhantom",
+      "x": 93,
+      "y": 89,
+      "range": 2,
+      "count": 1,
+      "minutes": 30
+     }
+    ]
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893122,
+     "slot": 1,
+     "name": "GirlPuppet"
+    },
+    {
+     "type": "kill",
+     "monster": "BazaarPhantom",
+     "slot": 2,
+     "count": 1,
+     "name": "BazaarPhantom",
+     "after": 1
+    }
+   ],
+   "prequest": "9193"
+  },
+  "9195": {
+   "_note": "Puppet Garden (Dark) I. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893131,
+   "finishNpc": 8893133,
+   "onAccept": {
+    "instance": "PT_GardenDark"
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893131,
+     "slot": 1,
+     "name": "Garden"
+    },
+    {
+     "type": "talk",
+     "npc": 8893132,
+     "slot": 2,
+     "name": "Gardener",
+     "after": 1
+    },
+    {
+     "type": "talk",
+     "npc": 8893133,
+     "slot": 3,
+     "name": "Tielle",
+     "after": 2
+    }
+   ],
+   "prequest": ""
+  },
+  "9196": {
+   "_note": "Puppet Garden (Dark) II. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893133,
+   "finishNpc": 8893135,
+   "onAccept": {
+    "instance": "PT_GardenDark"
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893134,
+     "slot": 1,
+     "name": "Explosive"
+    },
+    {
+     "type": "talk",
+     "npc": 8893135,
+     "slot": 2,
+     "name": "Garden",
+     "after": 1
+    }
+   ],
+   "prequest": "9195"
+  },
+  "9197": {
+   "_note": "Puppet Garden (Dark) III. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893135,
+   "finishNpc": 8893136,
+   "onAccept": {
+    "instance": "PT_GardenDark",
+    "spawn": [
+     {
+      "monster": "WildLion",
+      "x": 130,
+      "y": 132,
+      "range": 2,
+      "count": 1,
+      "minutes": 30
+     }
+    ]
+   },
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "WildLion",
+     "slot": 1,
+     "count": 1,
+     "name": "WildLion"
+    }
+   ],
+   "prequest": "9196"
+  },
+  "9198": {
+   "_note": "Midnight Stage (Dark) I. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893141,
+   "finishNpc": 8893141,
+   "onAccept": {
+    "instance": "PT_StageDark"
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893141,
+     "slot": 1,
+     "name": "DungeonLord`sInformation",
+     "count": 3
+    }
+   ],
+   "prequest": ""
+  },
+  "9199": {
+   "_note": "Midnight Stage (Dark) II. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893142,
+   "finishNpc": 8893143,
+   "onAccept": {
+    "instance": "PT_StageDark",
+    "spawn": [
+     {
+      "monster": "NetherPhoenix",
+      "x": 133,
+      "y": 153,
+      "range": 2,
+      "count": 1,
+      "minutes": 30
+     }
+    ]
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893142,
+     "slot": 1,
+     "name": "StageTrap"
+    },
+    {
+     "type": "kill",
+     "monster": "NetherPhoenix",
+     "slot": 2,
+     "count": 1,
+     "name": "NetherPhoenix",
+     "after": 1
+    }
+   ],
+   "prequest": "9198"
+  },
+  "9200": {
+   "_note": "Noctis Bazaar (Dark) I. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893151,
+   "finishNpc": 8893151,
+   "onAccept": {
+    "instance": "PT_BazaarDark",
+    "spawn": [
+     {
+      "monster": "MikesPuppet",
+      "x": 107,
+      "y": 74,
+      "range": 2,
+      "count": 1,
+      "minutes": 30
+     }
+    ]
+   },
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "MikesPuppet",
+     "slot": 1,
+     "count": 1,
+     "name": "MikesPuppet"
+    },
+    {
+     "type": "talk",
+     "npc": 8893151,
+     "slot": 2,
+     "name": "Mikes",
+     "count": 3,
+     "after": 1
+    },
+    {
+     "type": "talk",
+     "npc": 8893151,
+     "slot": 3,
+     "name": "DungeonLord",
+     "after": 2
+    }
+   ],
+   "prequest": ""
+  },
+  "9201": {
+   "_note": "Noctis Bazaar (Dark) II. Questinfo has no Prize for this quest: none is paid. Begin = the Strings of Terror window (Challenge boss) -> Base/PuppetTheater.",
+   "beginNpc": 8893151,
+   "finishNpc": 8893153,
+   "onAccept": {
+    "instance": "PT_BazaarDark",
+    "spawn": [
+     {
+      "monster": "FactoryKeeper",
+      "x": 106,
+      "y": 86,
+      "range": 5,
+      "count": 16,
+      "minutes": 30
+     },
+     {
+      "monster": "ArchonPuppet",
+      "x": 93,
+      "y": 89,
+      "range": 2,
+      "count": 1,
+      "minutes": 30
+     }
+    ]
+   },
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8893152,
+     "slot": 4,
+     "name": "MarionetteFactory"
+    },
+    {
+     "type": "kill",
+     "monster": "FactoryKeeper",
+     "slot": 5,
+     "count": 16,
+     "name": "FactoryKeeper",
+     "after": 4
+    },
+    {
+     "type": "kill",
+     "monster": "ArchonPuppet",
+     "slot": 6,
+     "count": 1,
+     "name": "ArchonPuppet",
+     "after": 5
+    }
+   ],
+   "prequest": "9200"
+  }
+ }
+}

@@ -1,0 +1,122 @@
+# QahrMobile qunblock: monster types the mobile side/daily quests kill that are not in Data\Monsters (normalized name, quest name, quests)
+beast	beast	20	35116 35122 35126 35130 35134 35138 35142 35146 35150 35154 35158 35162 35166 35170 35174 35184 35188 35192 35196 35200
+enemysoldier	enemysoldier	19	35114 35120 35124 35128 35132 35136 35140 35144 35148 35152 35156 35160 35164 35168 35172 35186 35190 35194 35198
+hawkking	HawkKing	8	5346 5347 5348 5349 8643 8644 8645 8646
+seadragon	Seadragon	3	5258 5259 5260
+abyssspecter	AbyssSpecter	3	7877 7900 13133
+ghostscout	GhostScout	3	8436 8437 8438
+smallbeast	smallbeast	2	4552 4553
+divinekylion	DivineKylion	2	5440 5441
+solarsaint	SolarSaint	2	6472 6473
+evilknight	EvilKnight	2	7878 7902
+gianticeape	GiantIceApe	2	7888 13128
+polarblade	PolarBlade	2	7892 13129
+nethertroll	NetherTroll	2	7896 13130
+gorybattler	GoryBattler	2	7897 13132
+hitouban	Hitouban	2	7905 13134
+mutantorc	MutantOrc	2	7906 13136
+oldwingman	OldWingman	2	7910 13137
+oldknight	OldKnight	2	7914 13139
+sandscorpion	SandScorpion	2	7915 13141
+blondorcish	BlondOrcish	2	7919 13142
+westdrake	WestDrake	2	7923 13144
+sandsage	SandSage	2	7926 13145
+galehowl	Galehowl	2	9094 9934
+evilminion	evilminion	1	3834
+intricatespider	intricatespider	1	4091
+wickedbull	wickedbull	1	4494
+necrodragon	necrodragon	1	4496
+nightenchantress	nightenchantress	1	4497
+goldenhawk	goldenhawk	1	4498
+mediumbeast	mediumbeast	1	4554
+gravelspirit	gravelspirit	1	4577
+goldalicorn	goldalicorn	1	4579
+greedyrat	greedyrat	1	4580
+sneakyrock	sneakyrock	1	4581
+deadwoodbat	deadwoodbat	1	4582
+cynicaleagle	cynicaleagle	1	4585
+razorbat	razorbat	1	4586
+cultivatedspirit	cultivatedspirit	1	4592
+wrathwarlord	wrathwarlord	1	4596
+mutantgoat	mutantgoat	1	4597
+astrospider	astrospider	1	4599
+twistedhierarch	twistedhierarch	1	4601
+erodednightmare	erodednightmare	1	4732
+toxicspider	toxicspider	1	4734
+serpentleader	SerpentLeader	1	4939
+bullleader	BullLeader	1	4940
+batleader	BatLeader	1	4941
+ragingdragon	ragingdragon	1	5019
+aquafiend	AquaFiend	1	5391
+demonizedanimal	DemonizedAnimal	1	5392
+abyssdraco	AbyssDraco	1	5394
+whorf	Whorf	1	5455
+darkrat	darkrat	1	5457
+soulbat	soulbat	1	5464
+enigmadomains	EnigmaDomains	1	5992
+wildwingedsnake	WildWingedSnake	1	7756
+wildbladeghost	WildBladeGhost	1	7759
+greedyserpent	GreedySerpent	1	7760
+frostwolf	FrostWolf	1	7889
+iceserpent	IceSerpent	1	7890
+icesentry	IceSentry	1	7891
+polarsuanni	PolarSuanni	1	7893
+crescentwolf	CrescentWolf	1	7894
+whiteorcish	WhiteOrcish	1	7895
+forestwolf	ForestWolf	1	7898
+wutherdemon	WutherDemon	1	7899
+abyssghost	AbyssGhost	1	7901
+evilexponent	EvilExponent	1	7903
+enchantress	Enchantress	1	7904
+redscorpion	RedScorpion	1	7907
+oldwyvern	OldWyvern	1	7908
+devilman	Devilman	1	7909
+oldunicorn	OldUnicorn	1	7911
+mutantflame	MutantFlame	1	7912
+oldvermin	OldVermin	1	7913
+desertbirdman	DesertBirdman	1	7916
+barrengeneral	BarrenGeneral	1	7917
+sandsentry	SandSentry	1	7918
+sandtroll	SandTroll	1	7920
+sandjudge	SandJudge	1	7921
+sandlord	SandLord	1	7922
+sandwolf	SandWolf	1	7924
+sandsnake	SandSnake	1	7925
+ghostmonster	GhostMonster	1	8313
+ghostpriest	GhostPriest	1	8325
+taintedelf	TaintedElf	1	8439
+evildragon	EvilDragon	1	8441
+ninjamonster	NinjaMonster	1	8712
+kurosawayasha	KurosawaYasha	1	8717
+orochissoul	Orochi`sSoul	1	8720
+werewolf	Werewolf	1	8728
+raiderboss	RaiderBoss	1	9098
+primevalfiend	PrimevalFiend	1	9212
+treasureraider	TreasureRaider	1	9213
+treasurewarden	TreasureWarden	1	9214
+monsterkeeper	MonsterKeeper	1	9215
+dunetraveller	DuneTraveller	1	9523
+wolfraider	WolfRaider	1	9929
+remnantraider	RemnantRaider	1	9930
+dunewolf	DuneWolf	1	9931
+beguiledleader	BeguiledLeader	1	9932
+usunspy	UsunSpy	1	9933
+turtledovephantom	TurtledovePhantom	1	10400
+robinking	RobinKing	1	10425
+apparitionking	ApparitionKing	1	10460
+wildwolf	WildWolf	1	10480
+captainbandit	CaptainBandit	1	10530
+elitethief	EliteThief	1	10595
+ancientape	AncientApe	1	10745
+sandkingaide	SandKingAide	1	10845
+sandking	SandKing	1	10845
+remotekiller	RemoteKiller	1	10930
+birdmanmessenger	BirdmanMessenger	1	10980
+birdqueen	BirdQueen	1	10985
+careerist	Careerist	1	13894
+# monster types that exist but spawn nowhere
+NOSPAWN demon	5	4584 4595 5467 8440 8730
+NOSPAWN castlebandit	2	5399 10510
+NOSPAWN nightmarecaptain	1	3300
+NOSPAWN devil	1	4594
+NOSPAWN ultimatepluto	1	6475

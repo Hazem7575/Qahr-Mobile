@@ -1,0 +1,154 @@
+{
+  "_readme": [
+    "[Festivals] schema v1 (2026-10-13). Owner: GameServer module Base\\Festivals\\ (Agent 1).",
+    "Every festival is ONE folder Infinity[DB]\\Festivals\\<FestivalKey>\\. Folders and files whose name starts with '_' are ignored (this file, _state.json, _drafts...).",
+    "<FestivalKey>: letters, digits, '_' and '-' only, 2-40 chars, must equal festival.json 'key' (case-insensitive).",
+    "Live: the server checks every schedule once a minute. START = NPCs spawned for players in view, monster types registered, spawns placed, quests.json overlay published to the QuestEngine, announcement. END = all of it removed again (NPCs despawned for players in view, festival monsters removed from the maps, overlay removed, announcement).",
+    "Validation: a festival with an error is DISABLED and logged (console + Infinity[DB]\\festivals_log.txt + AdminApi 'festivals' -> errors). It never crashes the server and never blocks the other festivals. Warnings are only reported.",
+    "Commands: owner @festival list | info <key> | on <key> | off <key> | auto <key> | reload ; console 'festival ...' (same words) ; AdminApi ops 'festivals', 'festival' {key, action: on|off|auto}, 'reloadfestivals'.",
+    "All JSON files: UTF-8 (BOM allowed). Unknown keys and keys starting with '_' are ignored, so use '_note' for comments. Numbers may be written as numbers or strings."
+  ],
+
+  "files": {
+
+    "festival.json": {
+      "_required": true,
+      "key":         "string, required. = folder name. Used in commands, logs, _state.json.",
+      "name_ar":     "string, required. Arabic display name (announcements, lists).",
+      "name_en":     "string, required. English display name.",
+      "enabled":     "bool, default true. false = the schedule never starts it automatically; an owner can still force it with '@festival on <key>'.",
+      "schedule": {
+        "type":  "required. 'manual' | 'range' | 'yearly' | 'weekly'. All times are SERVER LOCAL TIME.",
+        "start": "range: 'yyyy-MM-dd' or 'yyyy-MM-dd HH:mm' (inclusive).  yearly: 'MM-dd' or 'MM-dd HH:mm' (inclusive).  weekly/manual: not used.",
+        "end":   "range: 'yyyy-MM-dd' or 'yyyy-MM-dd HH:mm'.  yearly: 'MM-dd' or 'MM-dd HH:mm'. A date WITHOUT a time means the END OF THAT DAY (inclusive day). A yearly range may wrap the new year ('12-20' -> '01-05').",
+        "days":  "weekly: required, list of week days: 'Sun','Mon','Tue','Wed','Thu','Fri','Sat' (or full English names, or numbers 0-6 with 0 = Sunday). Ignored by the other types.",
+        "hours": "optional for range/yearly/weekly: list of daily windows 'HH:mm-HH:mm' (start inclusive, end exclusive). A window may cross midnight ('22:00-02:00' belongs to the day it STARTS on). Missing/empty = the whole day."
+      },
+      "announce_ar": "string, optional. Sent (center + world chat) when it STARTS. Default: 'بدأ مهرجان <name_ar>!'",
+      "announce_en": "string, optional. Default: 'The <name_en> festival has started!'",
+      "end_ar":      "string, optional. Sent when it ENDS. Default: 'انتهى مهرجان <name_ar>.'",
+      "end_en":      "string, optional. Default: 'The <name_en> festival has ended.'",
+      "maps":        "list of map ids the festival uses (informational + validated: every map must exist in GameMap.dat / ResolveBase). NPC and spawn maps are checked on their own anyway.",
+      "notes":       "string, free text for the admins (shown by '@festival info')."
+    },
+
+    "npcs.txt": {
+      "_required": false,
+      "format": "One NPC per line, exactly the Infinity[DB]\\Npcs.txt columns: id,type,mesh,map,x,y[,dynamic]",
+      "id":      "uint, either the festival range 8800000-8899999, OR (2026-10-14, quest tracking) the OFFICIAL id of an NPC that one of this festival's quests names in Questinfo.ini (BeginNpcId / FinishNpcId / [npc Name,id,map,x,y]). Use the official id whenever there is one and put the NPC on its official map/x,y: the client's quest tracker walks to that spot and looks for exactly that id (an 88xxxxx id + npcAliases works on the server but the tracker never finds it). An official id must not be in Npcs.txt / SobNpcs.txt, must not be an NpcID (hand-written script) or a maintenance NPC, and is unique across ALL festivals. NPCs that have no official id (-1 in Questinfo, heralds) keep the festival range.",
+      "type":    "byte NpcType as in Npcs.txt (2 = talker / task NPC is the usual one).",
+      "mesh":    "uint look (same values as Npcs.txt; mesh 42580 is skipped by the parser).",
+      "map":     "map id (must exist).",
+      "x,y":     "cell coordinates (verify walkability on the 3D maps, see the NPC layout notes).",
+      "dynamic": "optional 0/1 like Npcs.txt column 7.",
+      "comments": "Empty lines and lines starting with '#' or '//' are ignored (unlike Npcs.txt, a blank line does NOT stop the file). Text after a '#' at the end of a line is a comment: '8800001,2,11100210,1002,300,280  # Lantern Keeper'.",
+      "dialog": "A festival NPC has no hand-written script. Clicking it shows (1) the QuestEngine dialog for the festival quests whose beginNpc/finishNpc/talk objective is this id, then (2) the rewards.json exchanges of this NPC, then (3) its greeting (rewards.json 'npcText'). Quests from Questinfo.ini that name another NPC id can be pointed at a festival NPC with quests.json 'npcAliases'."
+    },
+
+    "monsters\\*.ini": {
+      "_required": false,
+      "format": "Exactly the Infinity[DB]\\Monsters\\*.ini format: one [cq_monstertype] section per file (id=, name=, type=, lookface=, life=, level=, attack_*=, defence=, ... drop_*=, action=, extra_exp=...). Copy an existing file and change it.",
+      "id":   "uint, REQUIRED RANGE 990000-999999 (festival monster type ids). Unique across all festivals; must not exist in Infinity[DB]\\Monsters\\.",
+      "name": "unique name (no spaces recommended, max 15 chars as the client shows names). Must not equal a normal monster name. Used by spawns.json 'monster' and by quests.json kill objectives.",
+      "lifetime": "The type is registered (Pool.MonsterFamilies) at START and unregistered at END after all its monsters were removed."
+    },
+
+    "spawns.json": {
+      "_required": false,
+      "shape": "{ \"spawns\": [ <spawn>, ... ] }",
+      "spawn": {
+        "monster": "required. name or type id: a festival monster (monsters\\*.ini) or any normal monster type.",
+        "map":     "required. map id (must exist). The map is loaded by the festival if nobody is on it yet.",
+        "x":       "required. left cell of the box (like cq_generator bound_x).",
+        "y":       "required. top cell of the box (bound_y).",
+        "w":       "box width in cells (bound_cx), default 10, 1-300.",
+        "h":       "box height in cells (bound_cy), default 10, 1-300.",
+        "count":   "monsters alive at the same time in this box (maxnpc), default 5, 1-100.",
+        "respawn": "seconds before a killed one comes back (rest_secs), default 30, 5-86400.",
+        "_note":   "free text"
+      },
+      "limits": "At most 500 festival monsters alive per festival (sum of count)."
+    },
+
+    "quests.json": {
+      "_required": false,
+      "format": "Same schema as Infinity[DB]\\QuestEngine\\quests.json (see the header of Base\\QuestEngine\\QuestEngineData.cs). Read keys: 'quests', 'drops', 'npcAliases', 'npcTeleports', 'instances'. 'serverType' is ignored (the main file decides).",
+      "instance npcs": "(2026-10-14) an 'instances' entry may list \"npcs\": [ {\"id\":8850001,\"mesh\":20280,\"x\":91,\"y\":122,\"type\":2,\"name\":\"Villager\"} ]. Every private copy gets its own NPC objects (the copy's DynamicID, only the player inside sees them), removed with the copy. Clicks go to the quest engine (talk / begin / finish / npcTeleports keyed by that id) and then to the festival greeting (rewards.json npcText). Ids: the festival range or an official id named by this festival's quests (same rules as npcs.txt), unique across festivals, not in npcs.txt.",
+      "overlay": "While the festival runs, this file is applied ON TOP of the main quests.json (a festival entry replaces the main entry of the same quest id). At END the overlay is removed and the engine table is rebuilt without it.",
+      "quest ids": "Must exist in Infinity[DB]\\Questinfo.ini (the client shows quests from its own Questinfo.ini; TypeId 8 = Festival). Unknown ids are reported as errors.",
+      "engine": "Festival quests are engine-owned by default (as if 'engine': true). 'engine': false keeps a quest off.",
+      "exclusive": "A quest id may belong to ONE festival only.",
+      "while inactive": "Every quest listed in a festival's quests.json is BLOCKED while that festival is not running: it can't be accepted, its objectives don't count, it can't be finished and pays nothing. A player who accepted it keeps it in the quest log; it continues (with its saved progress) the next time the festival runs. A 'repeat' daily/weekly quest is still reset by the normal daily/weekly reset.",
+      "rewards": "Prizes are paid only through the engine finish (server re-checks every objective, FinishQuest Accepted->Finished happens before the prize = at most once per character) unless 'repeat' is 'daily'/'weekly'. Never put CPs in a prize of a repeat quest without the owner's approval."
+    },
+
+    "rewards.json": {
+      "_required": false,
+      "shape": "{ \"npcText\": { \"<npc id>\": { \"ar\": \"...\", \"en\": \"...\" } }, \"exchanges\": [ <exchange>, ... ] }",
+      "npcText": "greeting shown when a festival NPC has nothing else to show (and above the exchange list).",
+      "exchange": {
+        "id":      "required, unique inside the festival ([A-Za-z0-9_-]). The once-per-character record is '<festivalKey>/<id>'.",
+        "npc":     "required. festival NPC id (from this festival's npcs.txt) that offers it.",
+        "text_ar": "required. dialog option text (Arabic). Keep it short (< 40 chars).",
+        "text_en": "required. dialog option text (English).",
+        "cost":    "{ \"items\": [ {\"id\": 711236, \"count\": 10} ], \"silver\": 0, \"cps\": 0 } - taken first; at least one cost OR repeat=false is required (never free AND repeatable). CPs cost only from the normal CP balance.",
+        "give":    "{ \"items\": [ {\"id\": 1088000, \"count\": 1, \"bound\": true} ], \"exp\": 0, \"silver\": 0, \"cps\": 0 } - item ids must exist in itemtype.txt. Bag space is checked BEFORE the cost is taken.",
+        "repeat":  "false (default) = once per character for ever | 'daily' = once per character per day | 'festival' = once per character per festival run | true = unlimited (needs a cost).",
+        "minLevel": "optional, default 1.",
+        "_note":   "free text"
+      },
+      "safety": "Exchanges work only while the festival runs and only when the player stands next to the NPC (NPC in view, same map, <= 18 cells). Every exchange and festival quest finish is logged to Infinity[DB]\\festivals_log.txt."
+    },
+
+    "README_AR.md": {
+      "_required": false,
+      "content": "Egyptian Arabic: what the festival is, how to play it, what is still missing (not read by the server)."
+    }
+  },
+
+  "_state.json (written by the server, do not edit while it runs)": {
+    "overrides": "{ \"<key>\": \"on\" | \"off\" } - set by @festival on/off, cleared by @festival auto. 'on' keeps it running whatever the schedule says, 'off' keeps it stopped.",
+    "active": "list of keys that were running when the file was written (on server start they are started again if still due/forced).",
+    "runs":   "{ \"<key>\": { \"started\": \"yyyy-MM-dd HH:mm\", \"run\": <run number> } }"
+  },
+
+  "example": {
+    "_folder": "Infinity[DB]\\Festivals\\SampleLantern\\",
+    "festival.json": {
+      "key": "SampleLantern",
+      "name_ar": "مهرجان الفوانيس",
+      "name_en": "Lantern Festival",
+      "enabled": true,
+      "schedule": { "type": "yearly", "start": "09-15", "end": "09-30", "hours": [ "18:00-23:59" ] },
+      "announce_ar": "بدأ مهرجان الفوانيس! كلّم حارس الفوانيس في توين سيتي.",
+      "announce_en": "The Lantern Festival has started! Talk to the Lantern Keeper in Twin City.",
+      "end_ar": "انتهى مهرجان الفوانيس. نشوفكم السنة الجاية!",
+      "end_en": "The Lantern Festival has ended. See you next year!",
+      "maps": [ 1002 ],
+      "notes": "sample only"
+    },
+    "npcs.txt": "8800001,2,11100210,1002,300,280  # Lantern Keeper",
+    "monsters\\LanternThief.ini": "[cq_monstertype]\\nid=990001\\nname=LanternThief\\ntype=0001\\nlookface=0915\\nlife=3000\\n... (all the usual keys)",
+    "spawns.json": { "spawns": [ { "monster": "LanternThief", "map": 1002, "x": 280, "y": 260, "w": 40, "h": 40, "count": 8, "respawn": 30 } ] },
+    "quests.json": {
+      "npcAliases": { "24309": 8800001 },
+      "quests": {
+        "5735": {
+          "beginNpc": 8800001, "finishNpc": 8800001,
+          "objectives": [ { "type": "kill", "monster": "LanternThief", "count": 20, "slot": 1 } ],
+          "prize": { "exp": 0, "expBalls": 1, "items": [ { "id": 711236, "count": 1, "bound": true } ] },
+          "repeat": "daily"
+        }
+      }
+    },
+    "rewards.json": {
+      "npcText": { "8800001": { "ar": "أهلاً بيك في مهرجان الفوانيس!", "en": "Welcome to the Lantern Festival!" } },
+      "exchanges": [
+        { "id": "lantern_box", "npc": 8800001, "text_ar": "بدّل 10 ريش بصندوق", "text_en": "10 plumes -> Lantern Box",
+          "cost": { "items": [ { "id": 711236, "count": 10 } ] },
+          "give": { "items": [ { "id": 1088000, "count": 1, "bound": true } ] },
+          "repeat": "daily" }
+      ]
+    }
+  }
+}

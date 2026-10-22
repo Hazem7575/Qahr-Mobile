@@ -1,0 +1,38 @@
+{
+  "key": "SummerWhales",
+  "name_ar": "مغامرة الصيف (شاطئ الحيتان)",
+  "name_en": "Summer Adventure (Summer Beach)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Summer: only the newest official edition (Summer2025) runs on its yearly dates, like the official server; this older edition runs only with @festival on SummerWhales. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأت مغامرة الصيف! دوس على زرار Summer Adventure فوق وادخل Summer Beach (لفل 80+) وساعد ملك الحيتان Cassio.",
+  "announce_en": "The Summer Adventure has started! Click Summer Adventure at the top and enter Summer Beach (Level 80+) to help Whale King Cassio.",
+  "end_ar": "انتهت مغامرة الصيف. شاطئ الحيتان رجع هادي، نشوفكم الصيف الجاي!",
+  "end_en": "Summer Beach has finally got its peace back. See you next summer!",
+  "maps": [
+    1002,
+    11829
+  ],
+  "icon_show": "Dlg_OpenUI|{['Code']=200,['View']='DlgSummerBtn',['Data']={['Func']='SummerActivePage_MainView',['Red']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgSummerBtn\")",
+  "_icon": "[SummerWhales 2026-10-14] official 2022 lua button DlgSummerBtn (Dialog_Info 1255-btn, EN 'Summer Adventure'). The button sends Data.Func raw ('</F>'..Func, no msgId); the official Func name is not in the client, we use 'SummerActivePage_MainView' (same family as the window's SummerActivePage_RankView / _SynthesisView). Clicks: Base/SummerWhales/SummerWhalesUi.cs",
+  "notes": "Rebuilt 2026-10-14 (SummerWhales agent). Official Summer 2022 'Summer Beach Adventure' (tSummerActive2022 / SummerNPC2022 / SummerActivePage). Official dates 01:00 July 5 - 23:59 July 18 (Elsa text tSummerActive2022Cross[30737][Text219]). Map 11829 SummerBeach -> doc 12116 (FestivalMaps maps.txt). Entry = the official window button 'Summer Beach' (SummerNPC2022_EnterMap, from Twin City or Summer Beach, Lv 80). Playable: 5113 Scallop Beach (Scallop NPC gives the official Scallop 3336088, module Base/SummerWhales), 5114 Stranded Whales, 5115 Whale Training = the 3 requests that unlock Cool Waterfall / Whale Vortex in the window (those two are not on this server). 2026-10-15: 5111 Whalers` Gear / 5112 Whale Hunter ON with festival monsters Whaler 20122 / WhaleHunter 20123 (official Lv/HP from monster.dat 20122/20123, DERIVED look) at the official spot 148,29 (spawns.json). Prize = the official Wish Conch 3600409 x1 per quest (Questinfo). See README_AR.md.",
+  "_owner": "SummerWhales agent (2026-10-14), was agent4",
+  "_quests": [
+    5111,
+    5112,
+    5113,
+    5114,
+    5115
+  ],
+  "_officialMaps": {
+    "11829": 12116
+  },
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "07-05",
+    "end": "07-18"
+  }
+}

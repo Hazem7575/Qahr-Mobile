@@ -1,0 +1,13 @@
+# ChildrensDay2025 (Dream Park) NPCs, 2026-10-15. Format id,type,mesh,map,x,y. Id block 8866000-8866099 (reserved for ChildrensDay2025).
+# Looks = OFFICIAL 7961 types now in client_test: NpcX 110102 Suyi / 110103 Flora / 110104 PrincePuff (the consecutive Dream Park set,
+#   Server_Key tChildren2025Npc[34299] Suyi, [34300] Flora, tChildrenDay2025Part5[34250] Prince Puff), npc.ini 10181 SalutingGun /
+#   10182 Firework / 10183 Balloon (the 3 Starlight Blessings of tChildren2025Npc[34300]). mesh = type*10.
+# Spots are DERIVED (the client has no coordinates for them); every cell is walkable on the server DMap
+#   (Twin City newplain_new: next to the other event NPCs, away from the booth flags; Vault Palace 12818 -> doc 12019 2023tsf_new).
+# Clicks: Base\ChildrensDay2025\DreamParkNpcs.cs (hook in Procesor.cs before the festival engine).
+8866001,2,1101020,1002,375,441  # Suyi: guide, Open Dream Park, Dream Store, VIP Dream Store, points & ranking
+8866002,2,1101040,1002,378,446  # Prince Puff: park merchandise (CPs)
+8866003,2,1101030,12818,224,230  # Flora: Starlight Blessing progress, return to Twin City
+8866011,2,101810,12818,212,224  # Saluting Gun (Starlight Blessing 1)
+8866012,2,101820,12818,227,220  # Firework (Starlight Blessing 2)
+8866013,2,101830,12818,238,224  # Balloon (Starlight Blessing 3)

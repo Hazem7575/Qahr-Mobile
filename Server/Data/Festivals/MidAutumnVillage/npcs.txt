@@ -1,0 +1,43 @@
+# MidAutumnVillage - festival NPCs (Agent 3, 2026-10-13). Format id,type,mesh,map,x,y  (official Questinfo NPC id when the quests name one - the client quest tracker needs it; else the festival range 8830000-8839999)
+# Map 12597 = Moon Palace (2024tsf_new.dmap, in the server GameMap.dat; no portal leads there -> the herald teleports).
+# Positions = client ini\Questinfo.ini (official), walk-checked on the server DMap (cell itself walkable, no NPC within 3 cells).
+# Confidence: HIGH = exact unique client name; SAME-MODEL = several client entries that share one SimpleObjID (identical look);
+#             PROXY = a real client type of the same kind (name differs) - review in-game (MapStudio preview) and replace if wrong.
+#
+# Herald in Twin City (no official TC NPC for this festival). mesh 20730 = npc.ini [NpcType2073] Chang`E (design choice, real Mid-Autumn NPC look).
+8830100,2,20730,1002,364,437  # MoonPalaceHerald / Chang'E (teleport to Moon Palace + Heart Grass exchange)
+# Magpie 33273 (268,268). mesh 44510 = npc.ini [NpcType4451] MagpieFairy (quest text says "Fairy Magpie"). SAME-MODEL: [NpcType4204] MagpieSpirit has the same SimpleObjID 883.
+33273,2,44510,12597,268,268  # Magpie (official id, client tracker)
+# AleGranny 33275 (281,234). mesh 35570 = npc.ini [NpcType3557] DrinkPeddler (ft name "drink-selling granny"; ft quest name "ale granny").
+#   PROXY/SAME-MODEL: every granny type (Granny 3134, GrannyFairy 4622, TeaGranny 10474, DrinkPeddler 3557) uses SimpleObjID 102.
+33275,2,35570,12597,281,234  # AleGranny (official id, client tracker)
+# Bell 33276 (131,210). mesh 1059180 = NpcX.ini [105918] Bell (unique; ft name = ft quest name). HIGH.
+33276,2,1059180,12597,131,210  # Bell (official id, client tracker)
+# Chang'e 33278 (233,233). mesh 1060280 = NpcX.ini [106028] Chang`e (exact; ft name = ft quest name). HIGH.
+33278,2,1060280,12597,233,233  # Chang'e (official id, client tracker)
+# ImmortalZhang 33279 (415,320). mesh 33890 = npc.ini [NpcType3389] ImmortalZhang (unique; ft name = ft quest name). HIGH.
+33279,2,33890,12597,415,320  # ImmortalZhang (official id, client tracker)
+# LanternRiddle 33280/33281/33282. mesh 20740 = npc.ini [NpcType2074] Mid-AutumnLantern. PROXY/SAME-MODEL: every lantern type uses SimpleObjID 30021.
+33280,2,20740,12597,123,223  # LanternRiddle 1 (official id, client tracker)
+33281,2,20740,12597,142,202  # LanternRiddle 2 (official id, client tracker)
+33282,2,20740,12597,157,202  # LanternRiddle 3 (official id, client tracker)
+# Flower / Fruit 33284 (196,270). mesh 36340 = npc.ini [NpcType3634] Flower (exact English intention name, unique). HIGH.
+33284,2,36340,12597,196,270  # Flower / Fruit (official id, client tracker)
+# WorshipMoon 33286 - official (281,234) is the SAME cell as AleGranny -> moved 3 cells to (284,235) (walkable).
+#   mesh 34490 = npc.ini [NpcType3449] MoonWorshipSite (ft "moon worship place"). PROXY (the quest token is untranslated "WorshipMoon").
+33286,2,34490,12597,284,235  # WorshipMoon (official id, client tracker)
+# Bamboo 36981 (148,161) (ft "bamboo spirit"). mesh 22400 = npc.ini [NpcType2240] BambooSprite (ft "bamboo spirit"). PROXY.
+36981,2,22400,12597,148,161  # Bamboo (official id, client tracker)
+#
+# NOT placed - no mesh in any client source:
+#   33274 WuKang (240,304)  (ft NpcX 105160 has the Chinese WuKang name but the English NpcX 105160 is "ChunMak")
+#   33277 MoonPool (192,300) | 33283 Riverside (357,215) | 36978 Ham (127,203)
+#
+# [MidAutumnVillage 2026-10-15 PHASE COMPLETE] the 4 quest NPCs that had no mesh, at their OFFICIAL Questinfo ids and cells
+# (walkable on 2024tsf_new). Looks: Riverside = npc.ini [NpcType3421] Riverbank tagged [MoonPalace] (official Mid-Autumn type);
+# DERIVED (no type of that name in any client): WuKang = NpcX [105390] WoodcutterWoo (Wu Kang is the moon's woodcutter),
+# MoonPool = npc.ini [NpcType2419] JadePool, Ham = npc.ini [NpcType4520] Stove (the quest roasts the ham on a stove).
+33274,2,1053900,12597,240,304  # WuKang (DERIVED look WoodcutterWoo)
+33277,2,24190,12597,192,300  # MoonPool (DERIVED look JadePool)
+36978,2,45200,12597,127,203  # Ham (DERIVED look Stove)
+33283,2,34210,12597,357,215  # Riverside (Riverbank [MoonPalace])

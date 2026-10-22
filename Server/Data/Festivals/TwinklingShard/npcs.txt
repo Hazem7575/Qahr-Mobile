@@ -1,0 +1,37 @@
+# TwinklingShard (Christmas 2025 "Twinkling Fest" - Twinkling Shard Search). id,type,mesh,map,x,y   (2026-10-14)
+# Every NPC is -1 in Questinfo (instance NPC) -> festival range 8862001-8862099.
+# Maps = the official instance ids of Questinfo; Infinity[DB]\FestivalMaps\maps.txt sends docs 13150-13154 (A: GameMapEx names).
+# Positions = the official Questinfo points, all walkable (r0) on the server DMaps.
+# mesh = client npc.ini [NpcTypeN] x10 / NpcX.ini [N] x10. The client has an exact entry for every NPC of this event
+#   (npc.ini block 10419-10442, EN names match Questinfo) except the three noted below.
+#
+# ---- Hope: Stellar Spire 1005565 (doc 13150 gsjx01_new)
+8862001,2,104190,1005565,101,121  # SpireOverseer (npc.ini 10419)
+8862002,2,104200,1005565,117,172  # Child`sHope = npc.ini 10420 JoyfulChild (the child that gives the Hope Tinder)
+8862003,2,104210,1005565,125,150  # Woman`sHope = npc.ini 10421 PrayingWoman
+8862004,2,104220,1005565,105,189  # KindlyElder / Elder`sHope (npc.ini 10422, same cell in Questinfo)
+8862005,2,104240,1005565,177,179  # Flame of Hope = npc.ini 10424 KindleFlame
+8862006,2,104250,1005565,179,179  # TwinklingShard(Hope) (npc.ini 10425)
+# ---- Will: Stellar Bay 1005566 (doc 13151 beach)
+8862011,2,104260,1005566,113,139  # BaySteward (npc.ini 10426)
+8862012,2,104270,1005566,97,145   # Boulder (npc.ini 10427)
+8862013,2,104280,1005566,145,174  # BreachPoint (npc.ini 10428) - also the GiantWave point of 9504 (no own entry)
+8862014,2,104290,1005566,140,166  # TwinklingShard(Will) (npc.ini 10429)
+# ---- Valor: Stellar Tower 1005567 (doc 13152 spirit02_new)
+8862021,2,104300,1005567,199,139  # TowerWarden (npc.ini 10430) - 9506 begin
+8862022,2,104310,1005567,74,127   # TowerWarden (npc.ini 10431, the 2nd warden) - 9506 finish
+8862023,2,104320,1005567,54,120   # DefenseDevice (npc.ini 10432)
+8862024,2,104330,1005567,60,120   # TwinklingShard(Valor) (npc.ini 10433)
+# ---- Wisdom: Star Nest / Wisdom Archive 1005568 (doc 13153 forum01_new)
+8862031,2,104340,1005568,57,59    # StellarScholar (npc.ini 10434) - also Scholar`sTest
+8862032,2,104350,1005568,42,35    # AncientTome (npc.ini 10435)
+8862033,2,104360,1005568,58,58    # TwinklingShard(Wisdom) (npc.ini 10436)
+# ---- Joy: Dawn Star / Sweet Craft 1005569 (doc 13154 chival02_new)
+8862041,2,104370,1005569,88,86    # TreatGobbler (npc.ini 10437)
+8862042,2,104380,1005569,70,108   # PalateMaster (npc.ini 10438)
+8862043,2,1102340,1005569,69,94   # DessertApprentice (NpcX 110234)
+8862044,2,104400,1005569,70,50    # Dessert = npc.ini 10440 DessertStation
+8862045,2,104410,1005569,56,74    # DessertMaster (npc.ini 10441)
+8862046,2,104420,1005569,60,74    # TwinklingShard(Joy) (npc.ini 10442; Questinfo finish point 60,74, collect point 57,73)
+#
+# NOT placed (no entry in any client ini): GiantWave (9504) and Waves (9505) - see quests.json _deviation.

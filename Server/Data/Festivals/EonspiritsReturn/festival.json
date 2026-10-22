@@ -1,0 +1,22 @@
+{
+  "key": "EonspiritsReturn",
+  "name_ar": "عودة أرواح الأزل (Eonspirit Advent)",
+  "name_en": "Return of Eonspirits",
+  "enabled": false,
+  "schedule": {
+    "type": "manual"
+  },
+  "announce_ar": "بدأ حدث عودة أرواح الأزل!",
+  "announce_en": "The Return of Eonspirits event has started!",
+  "maps": [],
+  "notes": "DISABLED (Agent 4, 2026-10-13): story run from the client's 'Eonspirit Advent' interface. Quests 5825/7884/7885/7886 have no begin/finish NPC and no map/NPC/monster token at all; the steps (visit Conqueror Xiang Yu, break the Deity Chain with an axe, go to Eonspirit Palace, Soul Assimilation) are scripted by that interface. The server has the Eonspirit item system (GameClient.EonspiritSystem, Yuanshen) but not the Advent story/interface. README_AR.md lists what is missing.",
+  "_quests": [
+    5825,
+    7884,
+    7885,
+    7886
+  ],
+  "_officialMaps": [],
+  "_owner": "agent4",
+  "_batch3": "[batch3 2026-10-14] Still disabled. Official entry = Fgui window FguiYuanshenTask (msg 10386, YuanshenTaskMainUi_OpenViewData {Status 1..6, EventHappen}) opened ONLY by the server (the client has no button for it, only a test hook). Its callbacks PrimordialSpirit2_GetTask / GetReward / RewardView, PrimordialSpiritMain_Plot need the whole Eonspirit Advent story system: story nodes, the Old Battlefield instance 1002575 (quest 5822), Conqueror Xiang Yu, the Deity Chain, Eonspirit Palace, Soul Assimilation and the per-node rewards (server-side only, not in the client). Nothing to wire without inventing it."
+}

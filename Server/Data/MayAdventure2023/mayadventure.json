@@ -1,0 +1,30 @@
+{
+  "_note": "[MayAdventure2023 2026-10-15] Anniversary Adventure rules (Base/MayAdventure2023/MayAdventureCore.cs). OFFICIAL (client): 4 boards x 20 cells and the cell kinds (luagui 1380 MapData), 1/5 Courage Tokens per move, 30 Courage Points per adventure, 2nd rebirth, Twin City only, item ids. Every pool weight/count, dailyMoves, pointsPerDraw, signInTokens/ap100Tokens/ap200Tokens, shop prices and limits are DERIVED (the official server tables are not in the client). Items in the pools are only items the official window, reward preview (1380-2-other), item texts or the shop lua show. Item string = 'id 0 count monopoly' (3 = bound).",
+  "festival": "MayAdventure2023",
+  "minReborn": 2,
+  "dailyMoves": 60,
+  "pointsPerDraw": 10,
+  "signInTokens": 2,
+  "ap100Tokens": 3,
+  "ap200Tokens": 5,
+  "cellPools": {
+    "_note": "1 = plain cell, 2 = tall marker cell, 3 = treasure cell (official kinds). Items from the official reward preview 1380-2-other (+4 Stone(B), PermanentStone(B), HolyWhale(Wave)(B), Courage Pearl(B), Courage Medal(B), Awakening Spirit(B)) + Courage Pack. The two CPs coupons of the preview are for the 2023 May Sale (does not exist here) and are left out.",
+    "1": [ { "item": "3341960 0 1 3", "weight": 50 }, { "item": "3328247 0 3 3", "weight": 30 }, { "item": "3341903 0 1 3", "weight": 20 } ],
+    "2": [ { "item": "3341960 0 3 3", "weight": 40 }, { "item": "3341903 0 3 3", "weight": 30 }, { "item": "3328247 0 3 3", "weight": 15 }, { "item": "723694 0 1 3", "weight": 15 } ],
+    "3": [ { "item": "3341960 0 3 3", "weight": 30 }, { "item": "723694 0 1 3", "weight": 25 }, { "item": "3341903 0 3 3", "weight": 20 }, { "item": "730004 0 1 3", "weight": 10 }, { "item": "3341965 0 1 3", "weight": 10 }, { "item": "200677 0 1 3", "weight": 5 } ]
+  },
+  "drawPool": [
+    { "item": "3341903 0 1 3", "weight": 45 }, { "item": "3341903 0 2 3", "weight": 25 }, { "item": "3341903 0 3 3", "weight": 10 },
+    { "item": "3341965 0 1 3", "weight": 15 }, { "item": "3328247 0 5 3", "weight": 5 }
+  ],
+  "shop": [
+    { "item": "730003 0 1 3", "cost": 30, "limit": 10, "_note": "+3 Stone (B): the shop lua names 730003/730005/730007/730008 and always shows them with the bound mark (B)" },
+    { "item": "730005 0 1 3", "cost": 150, "limit": 5 },
+    { "item": "730007 0 1 3", "cost": 600, "limit": 2 },
+    { "item": "730008 0 1 3", "cost": 1200, "limit": 1 },
+    { "item": "723694 0 1 3", "cost": 50, "limit": 5 },
+    { "item": "3341965 0 1 3", "cost": 20, "limit": 20 },
+    { "item": "3328247 0 10 3", "cost": 5, "limit": 0 },
+    { "item": "200677 0 1 3", "cost": 400, "limit": 1 }
+  ]
+}

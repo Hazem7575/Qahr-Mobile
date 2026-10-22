@@ -1,0 +1,12 @@
+# [CombatAudit2 2026-10-14] PvP normal-attack hit rate (Calculate.Base.Dodged player vs player).
+# All values are DERIVED (official server constants are not in the client). Re-read within 5 s of a change.
+#   hit% = clamp(base_hit + accuracy_weight * Accuracy(attacker) - dodge_weight * Dodge(target), min_hit, max_hit)
+#   Accuracy = weapon +N accuracy (0..~46 for two +12 weapons) + Deadly Sight rune (50..200)
+#   Dodge    = boots dodge (0..~40) + boots +N dodge (0..20)
+# Examples with the defaults: acc 0 / dodge 0 = 95% hit; acc 0 / dodge 60 = 65%; acc 46 / dodge 0 = 100%; acc 46 / dodge 60 = 88%.
+enabled=1
+base_hit=95
+accuracy_weight=0.5
+dodge_weight=0.5
+min_hit=50
+max_hit=100

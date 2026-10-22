@@ -1,0 +1,8 @@
+{
+  "_note": "[WenwenDetective 2026-10-15] Monsters of the chain (festival monsters in monsters/*.ini, DERIVED looks/stats). Spots = client Questinfo.ini [mob ...] points (official).",
+  "spawns": [
+    { "monster": "MysteriousFigure", "map": 1002618, "x": 170, "y": 288, "w": 5, "h": 5, "count": 1, "respawn": 20, "_note": "5851 [mob MysteriousFigure,1002618,172,290]" },
+    { "monster": "Eagle", "map": 1002628, "x": 30, "y": 35, "w": 5, "h": 5, "count": 1, "respawn": 20, "_note": "5861 [mob Eagle,1002628,32,37]" },
+    { "monster": "Snake", "map": 1002629, "x": 20, "y": 30, "w": 12, "h": 9, "count": 4, "respawn": 30, "_note": "5862 MsgBox6: the snakes that turned into fake chests (ambient, not counted)" }
+  ]
+}

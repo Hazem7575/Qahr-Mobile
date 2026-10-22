@@ -1,0 +1,179 @@
+# QahrMobile packet layouts: basic gameplay (ground items, warehouse, team, shops, time/weather).
+# The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgMapItem 10164 (178 bytes, CMsgMapItem::Create writes size 0xb2): ground items, traps and map effects.
+# CMsgMapItem::Process: uid 4, type 8, x 12, y 14, look/color u16 16, action u8 18 (switch 1..16 = MsgDropID),
+# data u32 19 (CPlayer::SetData / item amount), plus or effect kind u8 23, owner 24 (SetOwnerID), syndicate 28,
+# friendly u8 32, league 33, server 37, end time u64 41 (SetEndTime), 49/53 (IsEnemyAtk / AddMapItem),
+# owner x/y u16 57/59 (S3Get3DDir), status dwords 61 (DwordToBitSet x14), name 117 (SetName), fall flag 169,
+# fall start x/y 170/172, time 174. = the 6609 MsgMapItem struct without its leading timer, apart from the tail.
+# Server builder: MsgBuilder.ItemPacketCreate (MsgItemPacketProto). Handler reads only the uid (field 1).
+[2440 MsgMapItem 178]
+1   4    u32         # m_UID
+2   8    u32 out     # m_ID (item type); the client puts an anti-cheat hash here when it sends
+4   12   u16         # m_X
+5   14   u16         # m_Y
+14  16   u16 out     # m_Color (6609: written here when MaxLife is 0)
+11  16   u16 out     # MaxLife (wins over the color when set)
+8   18   u8          # DropType (1 visible, 2 remove, 3 pickup, 10 effect, 12 remove effect ...)
+7   19   u32 out     # Life (data)
+12  23   u8 out      # Plus (for effects the builder sends the effect kind here, see ItemPacketCreate)
+15  24   u32 out     # ItemOwnerUID
+16  28   u32 out     # GuildID (SetSyndicateID)
+20  41   u64 out     # Timer (SetEndTime)
+23  57   u16 out     # OwnerX
+24  59   u16 out     # OwnerY
+26  117  str:16 out  # Name (SetName on trap players)
+
+# CMsgItemStatus 10134 (refinery / purification / stabilization of items): CMsgItemStatus::Process reads the
+# count u32 at 4, then 32-byte entries from 8: item uid +0, type u8 +4 (2..4 quench/solidify = refinery,
+# 5..7 god equip = purification, 8..9 stabilization, the server's MsgItemExtra.Typing values), value +8, level +12,
+# power +16, append power +20, seconds left +24. = MsgItemExtra.CreateArray (refinery entries padded to 32 bytes
+# there for the mobile).
+[2157 MsgItemStatus same]
+
+# CMsgPackage 10080 (warehouse / sash / inventory sash): CMsgPackage::Create(action, type, npc, item, u16) writes
+# size 0xf0 = a 24-byte header + room for one 216-byte item: npc/owner id 4, action u8 12, package type u8 13
+# (the server's DepositActionID u16 = type << 8 | action), u16 14, max size u16 16 (CPackage::SetMaxSize), item uid 18,
+# item count u16 22, items from 24. CMsgPackage::Process item (offsets for the first item): uid 24, type 28, u8 32,
+# gems 33/34, magic1 u32 36, magic2 u8 40, plus 41, bless 42, bound 43 (SetMonopolyPre), enchant u16 44, green u16 46,
+# suspicious u16 48 (SetShadiness), locked u8 50 (SetFlag), socket progress 52 (SetData), plus progress 56 (SetLevExp),
+# del time 60/64 (SetDelTime), stack u16 68 (SetOverlay), durability u16 70 (SetAmount), perfection level 76,
+# perfection progress 80 (SetRefineExp), owner 84 (SetRefineOwner), owner name 88 (32), signature 120 (64),
+# extra data 184.., QL type 204, sub position 208, soul stone 212...
+# Server: MsgBuilder.WarehouseCreate + AddItemWarehouse (24-byte header, 236-byte items); the server's warehouse
+# sends one item per packet (Warehouse.Show); a sash list with several items only shows the first one on the mobile.
+# Back to the server the header is the same (GetWarehouse reads npc 4, action u16 12, item uid 18).
+[2116 MsgPackage struct 260 240]
+4    4    u32        # NpcID (or the sash / player uid)
+8    8    u32        # 0
+12   12   u32        # action u8 + type u8 (DepositActionID) + u16
+16   16   u16 out    # File_Size (package max size)
+18   18   u32        # ItemUID
+22   22   u16 out    # count
+24   24   u32 out    # item UID
+28   28   u32 out    # ITEM_ID
+33   33   u8  out    # SocketOne
+34   34   u8  out    # SocketTwo
+35   36   u32 out    # SpellID (magic 1)
+39   40   u8  out    # Effect (magic 2)
+41   41   u8  out    # Plus
+42   42   u8  out    # Bless
+43   43   u8  out    # Bound
+44   44   u8  out    # Enchant
+45   46   u8  out    # ProgresGreen
+50   50   u8  out    # Locked
+52   52   u32 out    # SocketProgress
+56   56   u32 out    # PlusProgress
+64   60   u32 out    # RemainingTime (SetDelTime first argument, as CMsgItemInfo)
+60   64   u32 out    # TimeLeftInMinutes
+68   68   u16 out    # StackSize
+76   76   u32 out    # PerfectionLevel
+80   80   u32 out    # PerfectionProgress
+84   84   u32 out    # OwnerUID
+88   88   str:32 out # OwnerName
+120  120  str:60 out # Signature
+
+# CMsgItemInfoEx 10275 (another player's equipment, booth/shop item view): CMsgItemInfoEx::Process (+ CItem setters):
+# uid 4, owner 8, cost u64 12, type 20 (CItem::Create), durability u16 24, max durability u16 26, action u8 28
+# (switch 1..11 = MsgItemView.ActionMode), ident u8 29, position u8 30, socket progress 31, gems 35/36, magic1 u32 37,
+# magic2 u8 41, plus 42, bless 43, bound 44, enchant 45, green u32 46, suspicious u16 50, locked u16 52,
+# plus progress 54 (SetLevExp), del time 58/62 (SetDelTime), stack u16 66, purification 68/72 (Set(Temp)GodEquipTypeID),
+# perfection level 76, progress 80, owner 84, owner name 88 (32), signature 120 (64), rune exp 184, soul stone 212...
+# = the 6609 MsgItemView struct. Server: MsgBuilder.ItemViewCreate (MsgItemProto: action 1, one ItemInfo in field 2).
+# "units" needs a count offset: 236 is past the last field the client reads (soul stone cut area 229).
+[2062 MsgItemInfoEx 240]
+1   28   u8          # Action (ActionMode)
+2   0    units 240 236
+> 1   4    u32       # UID
+> 2   8    u32       # PlayerUID
+> 3   12   u64       # Cost
+> 4   20   u32       # ITEM_ID
+> 5   24   u16       # Durability
+> 6   26   u16       # MaximDurability
+> 7   29   u8        # Unknown7 (ident)
+> 8   30   u8        # Position
+> 9   31   u32       # SocketProgress
+> 10  35   u8        # SocketOne
+> 11  36   u8        # SocketTwo
+> 12  37   u32       # SpellID
+> 13  41   u8        # Effect
+> 14  42   u8        # Plus
+> 15  43   u8        # Bless
+> 16  44   u8        # Bound
+> 17  45   u8        # Enchant
+> 18  46   u32       # ProgresGreen
+> 19  50   u16       # Suspicious
+> 20  52   u16       # Locked
+> 21  54   u32       # PlusProgress
+> 22  58   u32       # Activate (SetDelTime first argument)
+> 23  62   u32       # RemainingTime
+> 24  66   u16       # StackSize
+> 25  68   u32       # PurificationItemID1 (SetTempGodEquipTypeID)
+> 26  72   u32       # PurificationItemID2 (SetGodEquipTypeID)
+> 27  76   u32       # PerfectionLevel
+> 28  80   u32       # PerfectionProgress
+> 29  84   u32       # OwnerUID
+> 30  88   str:32    # OwnerName
+> 31  120  str:64    # Signature
+> 32  184  u32       # RuneProgress
+
+# CMsgTeam 10243 (88 bytes, CMsgTeam::Create(uid, action) writes size 0x58): action u16 4 (switch 0..29, the
+# server's MsgTeam.TeamTypes values: 10/11 SetForbidMoney, 12/13 items ...), uid 8, names at 12/44 and more
+# fields up to 84 for the newer team modes (not sent by this server). Server: MsgTeam.TeamCreate (Typ u32 4, UID 8);
+# MsgTeam.Process reads the same two fields.
+[2094 MsgTeam struct 12 88]
+4   4   u16     # Typ (TeamTypes)
+8   8   u32     # UID
+
+# CMsgTeamMember 10074: CMsgTeamMember::Process: action u8 4 (0 add, 1 clear and add, 2), count u8 5,
+# team type u32 12 (CTeam::SetTeamType), activity id 16, members from 20, 52 bytes each: name 32 (+0),
+# uid +32, mesh +36, max hp +40, hp +44, +48 (TeamMemberInfo+0x2c). Server: MsgTeamMemberInfo.TeamMemberInfoCreate
+# (action 4, count 5, members from 8, 64 bytes each: name 32, uid +32, mesh +36, max hp +40, hp +44, frame +48),
+# always 5 member slots.
+[2229 MsgTeamMember struct 328 280]
+4   4   u8 out      # action
+5   5   u8 out      # count
+8 20 str:32 out   # member 0 name
+40 52 u32 out      # member 0 uid
+44 56 u32 out      # member 0 mesh
+48 60 u32 out      # member 0 max hp
+52 64 u32 out      # member 0 hp
+56 68 u32 out      # member 0 frame
+72 72 str:32 out   # member 1 name
+104 104 u32 out      # member 1 uid
+108 108 u32 out      # member 1 mesh
+112 112 u32 out      # member 1 max hp
+116 116 u32 out      # member 1 hp
+120 120 u32 out      # member 1 frame
+136 124 str:32 out   # member 2 name
+168 156 u32 out      # member 2 uid
+172 160 u32 out      # member 2 mesh
+176 164 u32 out      # member 2 max hp
+180 168 u32 out      # member 2 hp
+184 172 u32 out      # member 2 frame
+200 176 str:32 out   # member 3 name
+232 208 u32 out      # member 3 uid
+236 212 u32 out      # member 3 mesh
+240 216 u32 out      # member 3 max hp
+244 220 u32 out      # member 3 hp
+248 224 u32 out      # member 3 frame
+264 228 str:32 out   # member 4 name
+296 260 u32 out      # member 4 uid
+300 264 u32 out      # member 4 mesh
+304 268 u32 out      # member 4 max hp
+308 272 u32 out      # member 4 hp
+312 276 u32 out      # member 4 frame
+
+# CMsgFlushExp 10199 (weapon skill / magic exp update): CMsgFlushExp::Process: exp u32 4 (CWeaponSkill+0xc,
+# CMagic::SetExp), required exp u32 8 (CWeaponSkill::SetReqExp), skill id u16 12, type u8 14 (0 weapon skill,
+# 1 magic, 2 xp skill). Server: MsgBuilder.UpdateProfExperienceCreate (MsgFlushExpProto 1..4, type 0).
+[2274 MsgFlushExp 16]
+1   4    u32 out    # Experience
+2   8    u32 out    # NeededExperience
+3   12   u16 out    # ID (weapon skill type)
+4   14   u8  out    # Type
+
+# CMsgWeather 10306: CMsgWeather::Process -> CWeather::CreateEnv(type 4, intensity 8, dir 12, color 16)
+# = MsgWeather.WeatherCreate (type, intensity, dir, color, speed u32 each from 4).
+[2318 MsgWeather same]

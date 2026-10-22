@@ -1,0 +1,19 @@
+{
+  "_readme": [
+    "[MidAutumn2024 2026-10-14] Lunar Voyage = the official 2024 Global Mid-Autumn entry (client msg 10459 FuiZhongqiu2024).",
+    "Top bar: Fgui button 10459 (client fguibtnconfig, img lua_2024qqzqj_btn32, label 'Lunar Voyage') while the festival below runs.",
+    "Click -> MainNpc2024_Interface -> window FuiZhongQiu2024Main (6 voyage areas, Moon Discovery, Bounty Park, Treasure Attic).",
+    "Official (client): the ids, texts, rules, area count (6), endings per area (1,1,1,2,2,2), the 3 currency items.",
+    "Derived (edit here): festival, minLevel, Moon Discovery destination (= the Chang'E herald teleport of MidAutumnVillage),",
+    "  the maps the window may teleport from, and the ending reward items (the server data is not in the client: empty = no icon)."
+  ],
+  "festival": "MidAutumnVillage",
+  "minLevel": 80,
+  "currency": [ 3600735, 3349919, 3349920 ],
+  "_currency": "Heart Grass, Crescent Gem, Plenilune Gem (luaUiRes 10459 Rule 1 order)",
+  "moonDiscovery": { "map": 12597, "x": 264, "y": 266 },
+  "teleportFromMaps": [ 1002, 1000, 1011, 1015, 1020, 12597 ],
+  "_teleportFromMaps": "Moon Discovery teleports only from these maps (cities + the Moon Palace itself), never from instances/arenas/jail.",
+  "endingRewards": [ [ "" ], [ "" ], [ "" ], [ "", "" ], [ "", "" ], [ "", "" ] ],
+  "_endingRewards": "Per area, per ending: client item string 'itemtype 0 count' shown under 'Ending Reward Preview'. Unknown -> empty."
+}

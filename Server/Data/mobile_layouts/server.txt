@@ -1,0 +1,14 @@
+# QahrMobile packet layouts: Server settings sent at login. The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgServerInfo 10161: flags u32 4 (bit 0 classic, bit 1 = flag), training vitality 8 = MsgServerTimer.ServerVerCreate
+[2387 MsgServerInfo same]
+
+# CMsgPCServerConfig 10047: u32 4, server type 8, iron fan range 12, ... world level 26 / 30 (reads up to 34);
+# the server's MsgServerConfig.ServerConfig is 25 bytes, so it is copied into a zero-filled 40-byte struct.
+[2386 MsgPCServerConfig struct 25 40]
+4   4   u32
+8   8   u32
+12  12  u32
+16  16  u32
+20  20  u32
+24  24  u8

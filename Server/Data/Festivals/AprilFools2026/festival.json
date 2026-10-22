@@ -1,0 +1,25 @@
+{
+  "key": "AprilFools2026",
+  "name_ar": "كدبة أبريل 2026: Astral Dream",
+  "name_en": "Global April Fools: Astral Dream",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "03-31",
+    "end": "04-13",
+    "_note": "Official: Cn_Res STR_LUAUI_26QQYRJ_HDSJ 'Duration: Mar. 31 - 07:59 (US)/15:59 (EU), Apr. 13, 2026.' (client header ERP660707 2026全球愚人节活动 3.31-4.13). Server local time. Overlaps AprilFools2025 (04-01..04-14) and AliceRescue if those are enabled too."
+  },
+  "announce_ar": "بدأ حدث كدبة أبريل (Astral Dream)! دوس على زرار Astral Dream اللي فوق.",
+  "announce_en": "Astral Dream is open! Click the Astral Dream button at the top.",
+  "end_ar": "انتهى حدث Astral Dream. نشوفكم السنة الجاية!",
+  "end_en": "Astral Dream has ended. See you next year!",
+  "maps": [],
+  "notes": "AprilFools2026 (2026-10-14): official 2026 Global April Fools 'Astral Dream' (Dream Town / Jack) entry only - top-bar Fgui button 150415 (clientfunc -> msg 10052 tMsg_Info['MidAutumnFestival'] MidAutumnArchery2022_OpenMainButton), night window Fgui_26QqYrj_Hysr (InfiniteReceiverData InterfaceID 1005298), Refine Dream Essences window Foolsday26Blast. Real data: Serene Star 3336643 / Memory Essence 3336640 / Dream Crystal 3336641 / Hope Bouquet 3336642 counts from the bag. Astral Points 0, event points 0, haze 0/10, no nightmare beasts (their state is server-side). Dispel Haze, beasts, Astral Wheel (day view Foolsday26Day), crafting, ranking and Astral Store answer with a system message; nothing is granted. Code: Base/AprilFools2026/AprilFools2026Ui.cs. No Questinfo quests.",
+  "_quests": [],
+  "_officialMaps": [],
+  "_owner": "AprilFools2026",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150415',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150415',['Show']=false,['Red']=0}}",
+  "icon_click": "10052</S>MidAutumnArchery2022_OpenMainButton",
+  "_icon": "[AprilFools2026 2026-10-14] official top-bar Fgui button 150415 'Astral Dream' (fguibtnconfig clientfunc, img lua_2026qqyrj_1); click msg 10052 -> Base/AprilFools2026/AprilFools2026Ui.cs."
+}

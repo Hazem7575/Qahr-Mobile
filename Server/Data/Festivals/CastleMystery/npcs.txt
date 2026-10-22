@@ -1,0 +1,8 @@
+# CastleMystery (Valentine 2025 "Castle Startle") - Twin City NPCs, 2026-10-15. Format id,type,mesh,map,x,y
+# Looks = OFFICIAL client types: NpcX 110010 Suyi [CastleStartle], NpcX 110011 Jet [CastleStore], npc.ini 10029 LordAnthony [OwnerOfAuterCastle].
+# Spots = DERIVED (the official Twin City cells of 33978 / 33979 / 34030 are not in the client): next to the castle exit (368,441),
+#   walk-checked on the official DMap (newplain_new), no other NPC on the cell. The castle NPCs live in quests.json (instance).
+# Logic: Suyi + Lord Anthony = Base\CastleMystery\CastleStartle.cs (Procesor hook), Jet = rewards.json exchanges.
+8871011,2,1100100,1002,362,440  # Suyi [CastleStartle] (official 33978): story, Head to Auter Castle, castle treasures (Castle Keys), Castle Key CP shop
+8871012,2,1100110,1002,373,434  # Jet [CastleStore] (official 33979): Chocolate Candy store (EmoneySaleShop[33979])
+8871013,2,100290,1002,365,445  # Lord Anthony (official 34030): the stories + a Castle Key once a day

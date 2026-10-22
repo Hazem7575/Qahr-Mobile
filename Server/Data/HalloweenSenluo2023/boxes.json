@@ -1,0 +1,982 @@
+{
+ "_readme": "[HalloweenSenluo2023 2026-10-15] open handlers (Base\\HalloweenSenluo2023\\HsBoxes.cs). Contents = the official item texts (itemtype.txt) / Server_Key lists; 'w' weights and left-out items are DERIVED (see _src). coins = Macabre Coins (+ the same Macabre Points), points = Macabre Points. minutes = item lifetime (5-day 7200, 2-day 2880, 7-day 10080). Usable only while the festival runs.",
+ "boxes": [
+  {
+   "id": 3345690,
+   "name": "Secret Macabre Bag",
+   "coins": 10,
+   "_src": "official item text: Open to get 10 Macabre Coins",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345691,
+   "name": "Supply Pack",
+   "coins": 10,
+   "_src": "official item text: Open to get 10 Macabre Coins",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3600646,
+   "name": "Vault Visit Pack",
+   "coins": [
+    30,
+    100
+   ],
+   "_src": "official item text: randomly 30-100 Macabre Coins and as many Macabre Points",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345615,
+   "name": "Macabre Iron Box",
+   "coins": 320,
+   "_src": "official item text: 320 Macabre Points and 320 Macabre Coins",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345616,
+   "name": "Macabre Silver Box",
+   "coins": 1280,
+   "_src": "official item text: 1280 Macabre Points and 1280 Macabre Coins",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345617,
+   "name": "Macabre Gold Box",
+   "coins": 5120,
+   "_src": "official item text: 5120 Macabre Points and 5120 Macabre Coins",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345609,
+   "name": "Macabre Coin Pack",
+   "picks": 1,
+   "pool": [
+    {
+     "id": 3345605,
+     "count": 1,
+     "bound": true,
+     "w": 20
+    },
+    {
+     "id": 3345604,
+     "count": 1,
+     "bound": true,
+     "w": 30
+    },
+    {
+     "coins": [
+      10,
+      50
+     ],
+     "w": 50
+    }
+   ],
+   "_src": "official item text: random 1 Destiny Card / 1 Macabre Flame / 10-50 Macabre Coins; weights derived",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345606,
+   "name": "Macabre Wedding Box",
+   "points": 99,
+   "give": [
+    {
+     "id": 3345612,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: 99 Macabre Points and 1 Macabre Wedding Pack",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345607,
+   "name": "Macabre Rose Box",
+   "points": 99,
+   "give": [
+    {
+     "id": 3345613,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: 99 Macabre Points and 1 Macabre Rose Pack",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345608,
+   "name": "Macabre Wings Box",
+   "points": 99,
+   "give": [
+    {
+     "id": 3345614,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: 99 Macabre Points and 1 Macabre Wings Pack",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345612,
+   "name": "Macabre Wedding Pack",
+   "picks": 1,
+   "pool": [
+    {
+     "id": 3345620,
+     "count": 1,
+     "bound": true,
+     "w": 10
+    },
+    {
+     "id": 3345672,
+     "count": 1,
+     "bound": false,
+     "w": 3
+    },
+    {
+     "id": 3345672,
+     "count": 1,
+     "bound": true,
+     "w": 3
+    },
+    {
+     "id": 3009103,
+     "count": 1,
+     "bound": true,
+     "w": 10
+    },
+    {
+     "id": 3009104,
+     "count": 1,
+     "bound": true,
+     "w": 6
+    },
+    {
+     "id": 4060001,
+     "count": 25,
+     "bound": true,
+     "w": 20
+    },
+    {
+     "id": 4060001,
+     "count": 100,
+     "bound": true,
+     "w": 8
+    },
+    {
+     "id": 3340961,
+     "count": 1,
+     "bound": true,
+     "w": 6
+    },
+    {
+     "id": 3340960,
+     "count": 1,
+     "bound": true,
+     "w": 12
+    },
+    {
+     "id": 3341260,
+     "count": 3,
+     "bound": true,
+     "minutes": 10080,
+     "w": 6
+    },
+    {
+     "id": 3341260,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080,
+     "w": 14
+    }
+   ],
+   "_src": "official list: Server_Key tHalloweenNpc2023[3345612] Text113-1113 (Soul Fruit, Red Bodhi Bean, Night Legend Fragment, Mount Encore Box, Mount Encore Box (B), 25/100 Universal Rune Essence (B), Large/Medium Awakening Bag, 3/1 7-day 10KK Contribution Medal (B)); weights derived",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345613,
+   "name": "Macabre Rose Pack",
+   "picks": 1,
+   "pool": [
+    {
+     "id": 3345619,
+     "count": 1,
+     "bound": true,
+     "w": 10
+    },
+    {
+     "id": 3345673,
+     "count": 1,
+     "bound": false,
+     "w": 3
+    },
+    {
+     "id": 3345673,
+     "count": 1,
+     "bound": true,
+     "w": 3
+    },
+    {
+     "id": 3009103,
+     "count": 1,
+     "bound": true,
+     "w": 10
+    },
+    {
+     "id": 3009104,
+     "count": 1,
+     "bound": true,
+     "w": 6
+    },
+    {
+     "id": 4060001,
+     "count": 25,
+     "bound": true,
+     "w": 20
+    },
+    {
+     "id": 4060001,
+     "count": 100,
+     "bound": true,
+     "w": 8
+    },
+    {
+     "id": 3340961,
+     "count": 1,
+     "bound": true,
+     "w": 6
+    },
+    {
+     "id": 3340960,
+     "count": 1,
+     "bound": true,
+     "w": 12
+    },
+    {
+     "id": 3341260,
+     "count": 3,
+     "bound": true,
+     "minutes": 10080,
+     "w": 6
+    },
+    {
+     "id": 3341260,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080,
+     "w": 14
+    }
+   ],
+   "_src": "official list: Server_Key tHalloweenNpc2023[3345613] (Gory Count Fragment, Garment Encore Box (B)...); weights derived",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345614,
+   "name": "Macabre Wings Pack",
+   "picks": 1,
+   "pool": [
+    {
+     "id": 3345621,
+     "count": 1,
+     "bound": true,
+     "w": 10
+    },
+    {
+     "id": 3345674,
+     "count": 1,
+     "bound": true,
+     "w": 3
+    },
+    {
+     "id": 3009103,
+     "count": 1,
+     "bound": true,
+     "w": 10
+    },
+    {
+     "id": 3009104,
+     "count": 1,
+     "bound": true,
+     "w": 6
+    },
+    {
+     "id": 4060001,
+     "count": 25,
+     "bound": true,
+     "w": 20
+    },
+    {
+     "id": 4060001,
+     "count": 100,
+     "bound": true,
+     "w": 8
+    },
+    {
+     "id": 3340961,
+     "count": 1,
+     "bound": true,
+     "w": 6
+    },
+    {
+     "id": 3340960,
+     "count": 1,
+     "bound": true,
+     "w": 12
+    },
+    {
+     "id": 3341260,
+     "count": 3,
+     "bound": true,
+     "minutes": 10080,
+     "w": 6
+    },
+    {
+     "id": 3341260,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080,
+     "w": 14
+    }
+   ],
+   "_src": "official list: Server_Key tHalloweenNpc2023[3345614] (Gory Rose, Wings Encore Box...); weights derived",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345658,
+   "name": "Xuanyuan Box",
+   "give": [
+    {
+     "id": 730003,
+     "count": 2,
+     "bound": true,
+     "minutes": 7200
+    },
+    {
+     "id": 3009100,
+     "count": 20,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: 2 5-day +3 Stones (B) and 20 Ginseng Fruits",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345659,
+   "name": "Pangu Box",
+   "give": [
+    {
+     "id": 3009001,
+     "count": 2,
+     "bound": true,
+     "minutes": 2880
+    },
+    {
+     "id": 3328247,
+     "count": 50,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: 2 2-day Bright Star Stones and 50 Awakening Spirits",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345660,
+   "name": "Shennong Box",
+   "give": [
+    {
+     "id": 4060001,
+     "count": 20,
+     "bound": true
+    },
+    {
+     "id": 3346823,
+     "count": 1,
+     "bound": true,
+     "minutes": 7200
+    }
+   ],
+   "_src": "official item text: 20 Universal Rune Essences (B) and 1 5-day 6KK Contribution Medal (B)",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345711,
+   "name": "Elite Macabre Box",
+   "coins": 100,
+   "picks": 3,
+   "pool": [
+    {
+     "id": 3341258,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080,
+     "w": 10
+    },
+    {
+     "id": 730001,
+     "count": 1,
+     "bound": true,
+     "minutes": 7200,
+     "w": 10
+    },
+    {
+     "id": 730002,
+     "count": 1,
+     "bound": true,
+     "minutes": 7200,
+     "w": 10
+    },
+    {
+     "id": 3009000,
+     "count": 1,
+     "bound": true,
+     "minutes": 2880,
+     "w": 10
+    },
+    {
+     "id": 3009001,
+     "count": 1,
+     "bound": true,
+     "minutes": 2880,
+     "w": 8
+    },
+    {
+     "id": 3333529,
+     "count": 1,
+     "bound": true,
+     "w": 10
+    }
+   ],
+   "_src": "official item text: 100 Macabre Coins and 3 random from 7-day 1KK Contribution Medal (B) / 5-day +1 Stone (B) / 5-day +2 Stone (B) / 2-day Twilight Star Stone / 2-day Bright Star Stone / Leopard Chi Liquor (B); weights derived",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345712,
+   "name": "Nicolas` Box",
+   "give": [
+    {
+     "id": 3345605,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "coins": [
+    100,
+    500
+   ],
+   "picks": 5,
+   "pool": [
+    {
+     "id": 4060001,
+     "count": 2,
+     "bound": true,
+     "w": 40
+    },
+    {
+     "id": 4060001,
+     "count": 10,
+     "bound": true,
+     "w": 25
+    },
+    {
+     "id": 4060001,
+     "count": 40,
+     "bound": true,
+     "w": 8
+    },
+    {
+     "id": 3333997,
+     "count": 1,
+     "bound": true,
+     "w": 4
+    }
+   ],
+   "_src": "official item text: 1 Destiny Card, 100-500 Macabre Coins, 5 random from 2/10/40 Universal Rune Essences (B) / Rare Yellow Rune Pack (B) / Rare Yellow Rune Box (B) (no 2023-era id on this server: left out); weights derived; the seal chance is rolled when the Count dies",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345713,
+   "name": "Friss` Box",
+   "give": [
+    {
+     "id": 3345605,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "coins": [
+    100,
+    500
+   ],
+   "picks": 5,
+   "pool": [
+    {
+     "id": 730001,
+     "count": 3,
+     "bound": true,
+     "minutes": 7200,
+     "w": 30
+    },
+    {
+     "id": 730003,
+     "count": 1,
+     "bound": true,
+     "minutes": 7200,
+     "w": 10
+    },
+    {
+     "id": 730005,
+     "count": 1,
+     "bound": true,
+     "minutes": 7200,
+     "w": 3
+    },
+    {
+     "id": 3009000,
+     "count": 3,
+     "bound": true,
+     "minutes": 2880,
+     "w": 30
+    },
+    {
+     "id": 3009001,
+     "count": 1,
+     "bound": true,
+     "minutes": 2880,
+     "w": 15
+    },
+    {
+     "id": 3009003,
+     "count": 1,
+     "bound": true,
+     "minutes": 2880,
+     "w": 5
+    }
+   ],
+   "_src": "official item text: 1 Destiny Card, 100-500 Macabre Coins, 5 random from 3 5-day +1 Stones (B) / 5-day +3 / 5-day +5 Stone (B) / 3 2-day Twilight / 2-day Bright / 2-day Splendid Star Stone; weights derived",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345714,
+   "name": "Apada`s Box",
+   "give": [
+    {
+     "id": 3345605,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "coins": [
+    100,
+    500
+   ],
+   "picks": 5,
+   "pool": [
+    {
+     "id": 3009100,
+     "count": 3,
+     "bound": true,
+     "w": 35
+    },
+    {
+     "id": 3009101,
+     "count": 2,
+     "bound": true,
+     "w": 25
+    },
+    {
+     "id": 3009102,
+     "count": 1,
+     "bound": true,
+     "w": 20
+    },
+    {
+     "id": 3009103,
+     "count": 1,
+     "bound": true,
+     "w": 12
+    },
+    {
+     "id": 3009104,
+     "count": 1,
+     "bound": true,
+     "w": 8
+    }
+   ],
+   "_src": "official item text: 1 Destiny Card, 100-500 Macabre Coins, 5 random from 3 Ginseng Fruits / 2 Dragon Fruits / Moon Fruit / Soul Fruit / Red Bodhi Bean; weights derived",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345715,
+   "name": "Jupp`s Box",
+   "give": [
+    {
+     "id": 3345605,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "coins": [
+    100,
+    500
+   ],
+   "picks": 5,
+   "pool": [
+    {
+     "id": 3341258,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080,
+     "w": 35
+    },
+    {
+     "id": 3341259,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080,
+     "w": 25
+    },
+    {
+     "id": 3346823,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080,
+     "w": 20
+    },
+    {
+     "id": 3341260,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080,
+     "w": 15
+    },
+    {
+     "id": 3341261,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080,
+     "w": 5
+    }
+   ],
+   "_src": "official item text: 1 Destiny Card, 100-500 Macabre Coins, 5 random from 7-day 1KK/3KK/6KK/10KK/100KK Contribution Medal (B); weights derived",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345623,
+   "name": "Local No.1 Macabre Box",
+   "give": [
+    {
+     "id": 3341261,
+     "count": 5,
+     "bound": true,
+     "minutes": 10080
+    },
+    {
+     "id": 4060001,
+     "count": 3000,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: 5 7-day 100KK Contribution Medals (B) and 3000 Universal Rune Essences (B)",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345624,
+   "name": "Local No.2-3 Macabre Box",
+   "give": [
+    {
+     "id": 3341261,
+     "count": 3,
+     "bound": true,
+     "minutes": 10080
+    },
+    {
+     "id": 4060001,
+     "count": 2000,
+     "bound": true
+    }
+   ],
+   "_src": "official item text",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345625,
+   "name": "Local No.4-6 Macabre Box",
+   "give": [
+    {
+     "id": 3341261,
+     "count": 2,
+     "bound": true,
+     "minutes": 10080
+    },
+    {
+     "id": 4060001,
+     "count": 1000,
+     "bound": true
+    }
+   ],
+   "_src": "official item text",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345626,
+   "name": "Local No.7-10 Macabre Box",
+   "give": [
+    {
+     "id": 3341261,
+     "count": 1,
+     "bound": true,
+     "minutes": 10080
+    },
+    {
+     "id": 4060001,
+     "count": 500,
+     "bound": true
+    }
+   ],
+   "_src": "official item text",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345706,
+   "name": "+3 Stone (B)",
+   "give": [
+    {
+     "id": 730003,
+     "count": 1,
+     "bound": true,
+     "minutes": 7200
+    }
+   ],
+   "_src": "official item text: 1 5-day +3 Stone (B)",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345705,
+   "name": "+1 Stone (B)",
+   "give": [
+    {
+     "id": 730001,
+     "count": 1,
+     "bound": true,
+     "minutes": 7200
+    }
+   ],
+   "_src": "official item text",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345707,
+   "name": "+5 Stone (B)",
+   "give": [
+    {
+     "id": 730005,
+     "count": 1,
+     "bound": true,
+     "minutes": 7200
+    }
+   ],
+   "_src": "official item text",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345708,
+   "name": "Twilight Star Stone",
+   "give": [
+    {
+     "id": 3009000,
+     "count": 1,
+     "bound": true,
+     "minutes": 2880
+    }
+   ],
+   "_src": "official item text: 1 2-day Twilight Star Stone",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345709,
+   "name": "Bright Star Stone",
+   "give": [
+    {
+     "id": 3009001,
+     "count": 1,
+     "bound": true,
+     "minutes": 2880
+    }
+   ],
+   "_src": "official item text",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345710,
+   "name": "Splendid Star Stone",
+   "give": [
+    {
+     "id": 3009003,
+     "count": 1,
+     "bound": true,
+     "minutes": 2880
+    }
+   ],
+   "_src": "official item text",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345672,
+   "name": "Mount Encore Box",
+   "picks": 1,
+   "pool": [
+    {
+     "id": 200807,
+     "count": 1,
+     "bound": false,
+     "w": 10
+    },
+    {
+     "id": 200734,
+     "count": 1,
+     "bound": false,
+     "w": 10
+    }
+   ],
+   "_src": "official item text: random permanent mount armor Utter Ordeal (Void) 200807 / Pumpkin Broom (Wings) 200734 / Midnight Ordeal [Death] (no base item id on this server: left out); bound-box -> bound not tracked",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345673,
+   "name": "Garment Encore Box",
+   "picks": 1,
+   "pool": [
+    {
+     "id": 199585,
+     "count": 1,
+     "bound": false,
+     "w": 10
+    },
+    {
+     "id": 198105,
+     "count": 1,
+     "bound": false,
+     "w": 10
+    },
+    {
+     "id": 196345,
+     "count": 1,
+     "bound": false,
+     "w": 10
+    },
+    {
+     "id": 191095,
+     "count": 1,
+     "bound": false,
+     "w": 10
+    }
+   ],
+   "_src": "official item text: random permanent garment Dream Fright (Void) 199585 / Tempting Wraith (Feast) 198105 / Devil Michael Myers 196345 / Madnight of Fear 191095 (hairstyles: no id, left out)",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345603,
+   "name": "Gory Count",
+   "give": [
+    {
+     "id": 191855,
+     "count": 1,
+     "bound": false
+    }
+   ],
+   "_src": "official item text: 1 permanent 3-star garment Gory Count",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345602,
+   "name": "Gory Count (Rose)",
+   "give": [
+    {
+     "id": 191865,
+     "count": 1,
+     "bound": false
+    }
+   ],
+   "_src": "official item text: 5-star garment Gory Count (Rose) (hairstyle: no id, left out)",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345671,
+   "name": "Gory Count",
+   "give": [
+    {
+     "id": 191855,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: (B)",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345611,
+   "name": "Gory Count (Rose)",
+   "give": [
+    {
+     "id": 191865,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: (B)",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345601,
+   "name": "Night Legend",
+   "give": [
+    {
+     "id": 200858,
+     "count": 1,
+     "bound": false
+    }
+   ],
+   "_src": "official item text: permanent 3-star mount armor Night Legend",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345600,
+   "name": "Night Legend (Wedding)",
+   "give": [
+    {
+     "id": 200859,
+     "count": 1,
+     "bound": false
+    }
+   ],
+   "_src": "official item text",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345670,
+   "name": "Night Legend",
+   "give": [
+    {
+     "id": 200858,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: (B)",
+   "festival": "HalloweenSenluo2023"
+  },
+  {
+   "id": 3345610,
+   "name": "Night Legend (Wedding)",
+   "give": [
+    {
+     "id": 200859,
+     "count": 1,
+     "bound": true
+    }
+   ],
+   "_src": "official item text: (B)",
+   "festival": "HalloweenSenluo2023"
+  }
+ ]
+}

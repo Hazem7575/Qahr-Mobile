@@ -1,0 +1,65 @@
+# VIP window of the mobile client (Networking\Mobile\MobileVipUi.cs, docs\VIP_UI.md).
+# Re-read when saved (no restart). One line = one row of the window (max 11 rows per section, about 70 characters each).
+# [level N] = the privileges shown on the "VIP N" tab (levels 1..6). [how] = the "Get VIP" tab.
+# <color=0xffRRGGBB>text</color> colors a part of a line. Do not use the character | in a line.
+
+[how]
+VIP gives you the city teleport, team teleport, repair all
+and the remote warehouse anywhere, from VIP 2 and up.
+<color=0xfffced9c>How to get VIP:</color>
+- Use a VIP Token or a VIP Box item (VIP 4 / VIP 6, from the
+  shop and from events). Each one adds time to your VIP.
+- Vote for the server: every vote gives VIP 4 for 2 hours.
+When the time ends your VIP goes back to the free level 1.
+
+[level 1]
+Free level for every player.
+More friends: up to 55 friends.
+Offline Training up to 16 hours.
+Paid services (teleport, repair, warehouse) need VIP 2.
+
+[level 2]
+<color=0xff02f402>City Teleport</color> to the 5 main cities.
+<color=0xff02f402>Repair All</color> your equipment from anywhere.
+<color=0xff02f402>Remote Warehouse</color>: open any city warehouse.
+<color=0xff02f402>Team Teleport</color>: take your team with you.
+Send 2 free flowers a day.
+More friends: up to 60 friends.
+Offline Training up to 17 hours.
++10% Blessing time when a Praying Stone is used.
+
+[level 3]
+All the VIP 2 services.
+Send 3 free flowers a day.
+More friends: up to 70 friends.
+Offline Training up to 18 hours.
++15% Blessing time when a Praying Stone is used.
+Free Labyrinth next floor every 5 days.
+
+[level 4]
+All the VIP 3 services.
+VIP hairstyles at the Barber and VIP avatars.
+Send 5 free flowers a day.
+More friends: up to 80 friends.
+Offline Training up to 19 hours.
++20% Blessing time when a Praying Stone is used.
+1 free entry to Frozen Grotto 5th floor a day.
+Extra daily quests for Study Points.
+
+[level 5]
+All the VIP 4 services.
+Send 10 free flowers a day.
+More friends: up to 90 friends.
+Offline Training up to 21 hours.
++30% Blessing time when a Praying Stone is used.
+3 free entries to Frozen Grotto 5th floor a day.
+Free Labyrinth next floor every 3 days.
+
+[level 6]
+All the VIP 5 services, the highest VIP level.
+Send 30 free flowers a day.
+More friends: up to 100 friends.
+Offline Training up to 24 hours.
++30% Blessing time when a Praying Stone is used.
+5 free entries to Frozen Grotto 5th floor a day.
+Free Labyrinth next floor every 2 days.

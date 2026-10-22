@@ -1,0 +1,70 @@
+{
+  "key": "DreamTheater",
+  "name_ar": "مسرح الأحلام",
+  "name_en": "Dream Theater",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] WhiteDay: only the newest official edition (JellyfishSkyCity) runs on its yearly dates, like the official server; this older edition runs only with @festival on DreamTheater. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ مهرجان مسرح الأحلام! كلّم Agnes في توين سيتي (370,437) وساعدها تجمع الممثلين وتعرض \"قصة بحيرة البجع\".",
+  "announce_en": "The Dream Theater event has started! Talk to Agnes in Twin City (370,437): recruit the cast and bring `Swan Lake Romance` to the stage.",
+  "end_ar": "انتهى مهرجان مسرح الأحلام. نشوفكم السنة الجاية!",
+  "end_en": "`Swan Lake Romance` has ended perfectly and Dream Theater has become famous. See you next time!",
+  "icon_click": "10369</S>WhiteDayLua_OpenMain",
+  "maps": [
+    1002,
+    11568,
+    11780,
+    11222,
+    11912,
+    11041,
+    10764,
+    12431
+  ],
+  "notes": "Official rebuild 2026-10-14 + video pass 2026-10-15 (tools\\ProtoStudio\\out\\dreamtheater_video_diff.md). Official duration Mar 5 - Mar 25. The official Dream Theater window (luaui dlgwhiteday, msg 10369): Agnes gives ONE contract a day (TaskIndex 1-7 = the 7 recruitments 5735-5751 + 5803, 8 = cleaning, 9 = troupe troubles); the contract done -> Enter Theater = Settlement (points = level + 30 per member, funds per level, silver = level + 1 per member); Wish Fountain (official preview items, 'You received' popup); Theater Points rewards (official MidAutumn_Config[10369] rows); local ranking mailed at the settle time (Dream boxes). Items: Wish coins (MsgBox -> fountain; Chi after the event), Love Velvet dialog (garments / mount armors / title box / CP make-up / Chi), Dream boxes, Love title boxes, Flower Packs (module Base\\DreamTheater\\DreamTheaterItems.cs). Private copies for the Black Bears / horse field / Birdmen (maps.txt 1002566 / 1002565 / 1002560).",
+  "_owner": "agent3",
+  "_quests": [
+    5735,
+    5736,
+    5803,
+    5737,
+    5738,
+    5739,
+    5740,
+    5743,
+    5744,
+    5745,
+    5741,
+    5742,
+    5746,
+    5747,
+    5748,
+    5749,
+    5750,
+    5751
+  ],
+  "_dailies": [
+    5752,
+    5796,
+    5797,
+    5798,
+    5799,
+    5800,
+    5801,
+    5753,
+    5754,
+    5755,
+    5756,
+    5757,
+    5758,
+    5759,
+    5760,
+    5761
+  ],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "03-05",
+    "end": "03-25"
+  }
+}

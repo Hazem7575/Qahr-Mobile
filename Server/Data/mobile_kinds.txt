@@ -1,0 +1,380 @@
+# QahrMobile: mobile message kinds (tools\classify.py): mobileId class pb|struct [PBClass]
+10005 CMsg2ndPsw struct 
+1637 CMsgAccountConnectEx struct 
+20003 CMsgAccountInfo struct 
+20004 CMsgAccountServerList struct 
+1102 CMsgAccountSoftKb struct 
+10307 CMsgAchievement struct 
+2099 CMsgAction pb CMsgActionPB
+10316 CMsgActivityTask struct 
+10105 CMsgActivityTaskReward struct 
+10425 CMsgActivityTimeCheck pb CMsgActivityTimeCheckPB
+10203 CMsgAllot struct 
+10059 CMsgArenicScore struct 
+10291 CMsgArenicWitness struct 
+10016 CMsgAthleteShop pb CMsgAthleteShopPB
+10296 CMsgAuction struct 
+10145 CMsgAuctionItem struct 
+10079 CMsgAuctionQuery struct 
+10175 CMsgAura pb CMsgAuraPB
+10437 CMsgAwardBit pb CMsgAwardBitPB
+10423 CMsgBatchEquip pb CMsgBatchEquipPB
+10225 CMsgBattleEffectiveness pb CMsgBattleEffectPB
+10347 CMsgBattlePass pb CMsgBattlePassPB
+10349 CMsgBattlePassTask pb CMsgBattlePassTaskPB
+10350 CMsgBattlePassTaskList pb CMsgBattlePassTaskListPB
+10348 CMsgBattlePassUser pb CMsgBattlePassUserInfoPB
+10131 CMsgBenefitsConfig struct 
+10398 CMsgBlackList pb CMsgQueryBlackListPB
+10001 CMsgBossHarmRanking pb CMsgBossDmgPB
+10229 CMsgCardsLotteryRankList pb CMsgCardsLotteryRankListPB
+10173 CMsgChangeName struct 
+10250 CMsgCheatingProgram struct 
+10118 CMsgChipsExpression pb CMsgChipsExpressionPB
+10220 CMsgCoatStorage pb CMsgCoatStoragePB
+10107 CMsgCompeteRank struct 
+1084 CMsgConfirmKeyLogin struct 
+1098 CMsgConfirmKeyLoginMobile struct 
+10124 CMsgConnect struct 
+1055 CMsgConnectEx struct 
+1203 CMsgConnectFaceBook struct 
+1518 CMsgConnectLegalitySpec struct 
+1356 CMsgConnectWithSDK struct 
+10143 CMsgContribute struct 
+10094 CMsgCrossFlagWar struct 
+10104 CMsgCrossFlagWarAltar struct 
+10129 CMsgCrossFlagWarFlag struct 
+10169 CMsgCrossFlagWarMerit struct 
+10042 CMsgCrossFlagWarRank struct 
+10427 CMsgCrossRankGame pb CMsgTeamPkPB
+10428 CMsgCrossRankUserData pb CMsgTeamPkUserDataPB
+2136 CMsgCrossSwitch struct 
+10435 CMsgCrossTaskRank pb CMsgCrossTaskRankPB
+10224 CMsgData pb CMsgDataPB
+10292 CMsgDataArray struct 
+20002 CMsgDataArrayC struct 
+10188 CMsgDeadMark struct 
+10262 CMsgDetainItemInfo struct 
+10295 CMsgDetainItemUpdate struct 
+10076 CMsgDisconnect struct 
+10288 CMsgDominateTeamPopPkName struct 
+10324 CMsgDutyMinContri struct 
+10248 CMsgElitePKArenic struct 
+10106 CMsgElitePKGameRankInfo struct 
+10249 CMsgElitePKScore struct 
+10263 CMsgEmoticons pb CMsgEmoticonsPB
+1059 CMsgEncryptCode struct 
+10028 CMsgEnemyList struct 
+10323 CMsgEquipLock struct 
+10406 CMsgEquipOnKey pb CMsgEquipOneKeyPB
+10242 CMsgEquipRefineRank pb CMsgEquipScoreRankPB
+10214 CMsgExchangeInnerStrength pb CMsgExchangeInnerStrengthPB
+10212 CMsgExchangeShop pb CMsgExchangeShopPB
+10109 CMsgExchangeShopBuy pb CMsgExchangeShopBuyPB
+10317 CMsgExchangeShopGoods pb CMsgExchangeShopGoodsPB
+10206 CMsgFMMatch struct 
+10315 CMsgFMRoundRobin struct 
+1121 CMsgFacebookAccount struct 
+10422 CMsgFactionIncident pb CMsgSynEventListPB
+10332 CMsgFactionMatch struct 
+10244 CMsgFactionMatchWitness struct 
+10142 CMsgFactionRankInfo struct 
+10049 CMsgFamily struct 
+10096 CMsgFamilyOccupy struct 
+10294 CMsgFlower struct 
+10199 CMsgFlushExp struct 
+10139 CMsgFriend struct 
+10434 CMsgFriendAcceptList pb CMsgFriendAcceptListPB
+10185 CMsgFriendInfo struct 
+10408 CMsgFriendOnlineList pb CMsgFriendOnlineListPB
+10433 CMsgFriendSearch pb CMsgFriendSearchPB
+10304 CMsgFuse struct 
+10274 CMsgGamblingNpc pb CMsgGamblingNpcPB
+10337 CMsgGamblingResult pb CMsgGamblingResultPB
+10283 CMsgGamblingTableInfo pb CMsgTableInfoPB
+10194 CMsgGamblingTableOpt pb CMsgGamblingOptPB
+10099 CMsgGamblingTablePlayerList pb CMsgPlayerListPB
+1350 CMsgGameServerShutDown struct 
+10318 CMsgGameTrend pb CMsgGameTrendPB
+10087 CMsgGemEmbed struct 
+10258 CMsgGodExp struct 
+10256 CMsgGoldLeaguePoint pb CMsgGoldLeaguePointPB
+10431 CMsgGouYuAptitude pb CMsgGouYuAptitudePB
+10429 CMsgGouYuInfo pb CMsgGouYuInfoPB
+10430 CMsgGouYuOpt pb CMsgGouYuOptPB
+10051 CMsgGuide struct 
+10200 CMsgGuideInfo struct 
+10354 CMsgHWCompose pb CMsgHWComposePB
+10282 CMsgHairFaceStorage pb CMsgHairFaceStoragePB
+10333 CMsgHandBrickInfo struct 
+10155 CMsgHangUp struct 
+10352 CMsgHundredWeaponsInfo pb CMsgHundredWeaponInfoPB
+10353 CMsgHundredWeaponsOpt pb CMsgHundredWeaponOptPB
+10149 CMsgIPad struct 
+10147 CMsgInnerStrengthInfo struct 
+10115 CMsgInnerStrengthOpt struct 
+10113 CMsgInnerStrengthTotalInfo struct 
+10412 CMsgInnerWebPage pb CMsgInlinePagePB
+10299 CMsgInstance pb CMsgInstancePB
+10382 CMsgInstanceInfo pb CMsgInstanceInfoPB
+10135 CMsgInteract pb CMsgInteractPB
+10312 CMsgInvadeWarning struct 
+10320 CMsgInviteTrans struct 
+10201 CMsgIpadInfo struct 
+10137 CMsgItem struct 
+10233 CMsgItemDialog pb CMsgItemDialogPB
+10116 CMsgItemInfo struct 
+10275 CMsgItemInfoEx struct 
+2614 CMsgItemPing struct 
+10218 CMsgItemRefine pb CMsgItemRefinePB
+10067 CMsgItemRefineOpt pb CMsgItemRefineOptPB
+10266 CMsgItemRefineRecord pb CMsgItemRefineRecordPB
+10134 CMsgItemStatus struct 
+10417 CMsgItemVendue pb CMsgItemVenduePB
+10418 CMsgItemVendueList pb CMsgVendueItemListPB
+10436 CMsgJingPo pb CMsgJingPoPB
+10064 CMsgKickOut struct 
+10032 CMsgLeagueAllegianceList struct 
+10078 CMsgLeagueBeRob pb CMsgLeagueBeRobPB
+10303 CMsgLeagueConcubines pb CMsgLeagueConcubinesPB
+10267 CMsgLeagueImperialCourtList struct 
+10009 CMsgLeagueInfo struct 
+10297 CMsgLeagueMemList struct 
+10157 CMsgLeagueOpt struct 
+10089 CMsgLeagueOrderStatus pb CMsgLeagueOrderStatusPB
+10335 CMsgLeaguePalaceGuardsList struct 
+10144 CMsgLeagueRank struct 
+10178 CMsgLeagueRobList pb CMsgLeagueRobListPB
+10338 CMsgLeagueRobOpt pb CMsgLeagueRobOptPB
+10216 CMsgLeagueSynList struct 
+10021 CMsgLeagueToken pb CMsgLeagueTokenPB
+10088 CMsgLeaveWord struct 
+1044 CMsgLoadMap struct 
+10241 CMsgLogin struct 
+1213 CMsgLoginChallengeS struct 
+10311 CMsgLoginNotice struct 
+10228 CMsgLottery struct 
+10404 CMsgLuckyWheel pb CMsgLuckyWheelPB
+10046 CMsgMBAction pb CMsgActionPB
+10202 CMsgMBCrossSwitch struct 
+10036 CMsgMBName struct 
+10179 CMsgMBTalk pb CMsgMBTalkPB
+10122 CMsgMBTick struct 
+10309 CMsgMagicCoat struct 
+10083 CMsgMagicColdTime pb CMsgMagicColdTimePB
+10239 CMsgMagicEffect pb CMsgMagicEffectPB
+10098 CMsgMagicEffectTime pb CMsgMagicEffectTimePB
+10101 CMsgMagicInfo struct 
+10213 CMsgMapInfo pb CMsgMapInfoPB
+10164 CMsgMapItem struct 
+10023 CMsgMentorPlayer struct 
+10438 CMsgMeridians pb CMsgMeridiansPB
+1111 CMsgMessageBoard struct 
+10057 CMsgMeteSpecial struct 
+10018 CMsgMobileRecharge struct 
+10061 CMsgMonsterTransform pb CMsgMonsterTransformPB
+2272 CMsgName pb CMsgNamePB
+10171 CMsgNationality struct 
+10405 CMsgNewShopGoods pb CMsgNewShopGoodsPB
+10359 CMsgNewSlotOpt pb CMsgNewSlotOptPB
+10361 CMsgNewSlotRecord pb CMsgNewSlotRecordPB
+10360 CMsgNewSlotResult pb CMsgNewSlotResultPB
+10426 CMsgNoneMoneyBuy pb CMsgNoneMoneyBuyPB
+10357 CMsgNosuch pb CMsgNosuchPB
+10364 CMsgNosuchAutoHisList pb CMsgNosuchAutoHisListPB
+10363 CMsgNosuchAutoList pb CMsgNosuchAutoListPB
+10358 CMsgNosuchQuery pb CMsgNosuchQueryPB
+10084 CMsgNpc pb CMsgNpcPB
+10210 CMsgNpcInfo pb CMsgNpcInfoPB
+10166 CMsgNpcInfoEX pb CMsgNpcInfoExPB
+10148 CMsgOSAction struct 
+10269 CMsgOSConnectInfo struct 
+10127 CMsgOSEnter struct 
+10254 CMsgOperatingAct struct 
+10037 CMsgOperatingActInfo struct 
+10027 CMsgOsShop pb CMsgOsShopPB
+10197 CMsgOverheadLeagueInfo pb CMsgOverheadLeagueInfoPB
+10073 CMsgOwnKongRank struct 
+10082 CMsgOwnKongfuBase struct 
+10070 CMsgOwnKongfuImproveFeedback struct 
+10085 CMsgOwnKongfuImproveSummaryInfo struct 
+10047 CMsgPCServerConfig struct 
+10133 CMsgPKEliteAction struct 
+10226 CMsgPKEliteMatchInfo struct 
+10231 CMsgPKEnable struct 
+10080 CMsgPackage struct 
+10072 CMsgPaint struct 
+10091 CMsgPeerage struct 
+10192 CMsgPetInfo struct 
+10410 CMsgPhaseItem pb CMsgPhaseItemPB
+10400 CMsgPhaseOpt pb CMsgPhaseOptPB
+1075 CMsgPicKey struct 
+1074 CMsgPickeyError struct 
+10052 CMsgPigeon struct 
+10277 CMsgPigeonQuery struct 
+10163 CMsgPing struct 
+10325 CMsgPkStatistic struct 
+10227 CMsgPlayer pb CMsgPlayerPB
+10301 CMsgPlayerAttriInfo struct 
+10327 CMsgPlayerResult pb CMsgPlayerResultPB
+10321 CMsgPotHistory pb CMsgJackpotPB
+10407 CMsgPrivateMonsterDrop pb 
+10044 CMsgProcessGoalInfo struct 
+10063 CMsgProcessGoalTask struct 
+10077 CMsgProcessGoalTaskOpt struct 
+10177 CMsgPromotionAct struct 
+10108 CMsgPromotionInfo struct 
+10191 CMsgQualifyingDetailInfo struct 
+10097 CMsgQualifyingFightersList struct 
+10140 CMsgQualifyingInteractive struct 
+10093 CMsgQualifyingRank struct 
+10293 CMsgQualifyingSeasonRankList struct 
+10035 CMsgQueryIPADPayInfoClient struct 
+10402 CMsgQuerySyndicate pb CMsgQuerySyndicatePB
+10040 CMsgQuiz pb CMsgCompetionPB
+10008 CMsgQuizSponsor struct 
+10180 CMsgRaceTrackProp struct 
+10219 CMsgRaceTrackPropEffect struct 
+10215 CMsgRaceTrackStatus struct 
+10165 CMsgRank struct 
+10054 CMsgRankMemberShow pb CMsgRankMemberShowPB
+10319 CMsgRefineEffect pb CMsgRefineEffectPB
+10150 CMsgRegister struct 
+10160 CMsgRelation struct 
+1083 CMsgRequestKeyLogin struct 
+10397 CMsgReturnPrice pb CMsgReturnPrizePB
+10048 CMsgRoulette1ArgAction struct 
+10102 CMsgRouletteAction struct 
+10045 CMsgRouletteInvite struct 
+10013 CMsgRouletteLatestProfitLossList struct 
+10278 CMsgRouletteNpcInfo struct 
+10019 CMsgRoulettePlayer struct 
+10090 CMsgRoulettePlayerBet struct 
+10030 CMsgRouletteTable struct 
+10112 CMsgRouletteWatcherList struct 
+10330 CMsgRouletteWinningNumber struct 
+10286 CMsgRuneStorage pb CMsgRuneStorageOptPB
+1798 CMsgSDKLoginChallenge struct 
+1797 CMsgSDKLoginEx struct 
+1799 CMsgSDKLoginProof struct 
+10181 CMsgSelfSynMemAwardRank struct 
+1050 CMsgServerConfig struct 
+10161 CMsgServerInfo struct 
+10162 CMsgServerList pb CMsgServerListPB
+10020 CMsgShowHandActivePlayer struct 
+10114 CMsgShowHandCallAction struct 
+10252 CMsgShowHandDealtCard pb CMsgShowHandDealtCardPB
+10195 CMsgShowHandEnter struct 
+10151 CMsgShowHandExit struct 
+10329 CMsgShowHandGameResult struct 
+10246 CMsgShowHandKick struct 
+10050 CMsgShowHandLayCard pb CMsgShowHandLayCardPB
+10340 CMsgShowHandLostInfo pb CMsgShowHandLostInfoPB
+10153 CMsgShowHandOnlineStatus struct 
+10328 CMsgShowHandRaceInteractive struct 
+10121 CMsgShowHandTrusteeship struct 
+10253 CMsgSignIn struct 
+10184 CMsgSlotAction struct 
+10007 CMsgSlotResult struct 
+10290 CMsgSolidify struct 
+10409 CMsgSoulStone pb CMsgSoulStonePB
+10345 CMsgSpiritInteractive pb CMsgSpiritInteractivePB
+10008 CMsgSponsor struct 
+10026 CMsgSponsorInfo struct 
+10383 CMsgStatisticActive pb CMsgStatisticActivePB
+10174 CMsgStatisticDaily struct 
+20001 CMsgStringC struct 
+10033 CMsgSubPro struct 
+10336 CMsgSuitStatus struct 
+10092 CMsgSuperFlag struct 
+10415 CMsgSyForm pb CMsgSynFormPB
+10416 CMsgSyFormInfo pb CMsgSynFormInfoPB
+10413 CMsgSynAllyApplyList pb CMsgSynAllyApplyListSyncPB
+10420 CMsgSynBossInvadeInfo pb CMsgSynBossInvadeInfoPB
+10419 CMsgSynBossInvadeOpt pb CMsgSynBossInvadeOptPB
+10424 CMsgSynBossRank pb CMsgSynBossRankPB
+10272 CMsgSynCompete struct 
+10421 CMsgSynDividens pb CMsgSynDividensPB
+10300 CMsgSynMemberInfo struct 
+10259 CMsgSynMemberList struct 
+10141 CMsgSyncAction pb CMsgSyncActionPB
+10167 CMsgSyndicate struct 
+10403 CMsgSyndicateApplyList pb CMsgSyndicateApplyListSyncPB
+10172 CMsgSyndicateAttributeInfo struct 
+10146 CMsgSynpOffer struct 
+2361 CMsgTalk pb CMsgTalkPB
+10136 CMsgTaskDetailInfo struct 
+10255 CMsgTaskDialog struct 
+10038 CMsgTaskReward struct 
+10120 CMsgTaskStatus struct 
+10243 CMsgTeam struct 
+10314 CMsgTeamArenaFightingMemberInfo struct 
+10069 CMsgTeamArenaFightingTeamList struct 
+10238 CMsgTeamArenaHeroData struct 
+10060 CMsgTeamArenaInteractive struct 
+10186 CMsgTeamArenaRank struct 
+10190 CMsgTeamArenaScore struct 
+10287 CMsgTeamArenaYTop10List struct 
+10240 CMsgTeamAward struct 
+10432 CMsgTeamInvite pb CMsgTeamInvitePB
+10074 CMsgTeamMember struct 
+10270 CMsgTeamPKArenic struct 
+10322 CMsgTeamPKArenicScore struct 
+10198 CMsgTeamPKMatchInfo struct 
+10095 CMsgTeamPKRankInfo struct 
+10193 CMsgTeamPopPKArenic struct 
+10223 CMsgTeamPopPKArenicScore struct 
+10260 CMsgTeamPopPKMatchInfo struct 
+10170 CMsgTeamPopPKRankInfo struct 
+10285 CMsgTeamRoll struct 
+10281 CMsgTenTimesLotteryReward pb CMsgTenTimesLotteryRewardPB
+10236 CMsgTexasChampionshipTableChip pb CMsgTexasChampionshipTableChipPB
+10103 CMsgTexasExChampionshipList pb CMsgTexasExChampionshipListPB
+10003 CMsgTexasExChampionshipRank pb CMsgTexasExChampionshipRankPB
+10196 CMsgTexasExInteractive pb CMsgTexasExInteractivePB
+10331 CMsgTexasExMyChampionshipRank pb CMsgTexasExMyChampionshipRankPB
+10237 CMsgTexasInteractive struct 
+10015 CMsgTexasNpcInfo struct 
+10132 CMsgTexasPersonalInfo pb CMsgTexasPersonalInfoPB
+10367 CMsgTexasSelectFieldList pb CMsgTexasSelectFieldListPB
+10368 CMsgTexasSelectInteract pb CMsgTexasSelectInteractPB
+10366 CMsgTexasSelectTable pb CMsgTexasSelectTablePB
+2020 CMsgTick struct 
+10279 CMsgTime struct 
+10152 CMsgTitle struct 
+10313 CMsgTitleStorage pb CMsgTitleStoragePB
+10119 CMsgTrade struct 
+10004 CMsgTradeBuddy struct 
+10123 CMsgTradeBuddyInfo struct 
+10159 CMsgTraining struct 
+10117 CMsgTrainingInfo struct 
+10075 CMsgTrainingVitality struct 
+10268 CMsgTrainingVitalityExpiryNotify struct 
+10204 CMsgTrainingVitalityInfo struct 
+10302 CMsgTrainingVitalityProtect struct 
+10235 CMsgTrainingVitalityProtectInfo struct 
+10276 CMsgTrainingVitalityScore struct 
+10053 CMsgTransportor struct 
+10011 CMsgTurnoverLottery pb CMsgCardsLotteryOptPB
+10154 CMsgUserAbilityScore pb CMsgUserAbilityScorePB
+10176 CMsgUserAttrib pb CMsgUserAttribPB
+10168 CMsgUserCityInfo struct 
+10399 CMsgUserFreeze pb CMsgUserFreezePB
+10209 CMsgUserIPInfo struct 
+10221 CMsgUserInfo struct 
+10393 CMsgUserMonthCardAction pb CMsgUserMonthCardActionPB
+10394 CMsgUserMonthCardInfo pb CMsgUserMonthCardInfoPB
+10414 CMsgUserSearch pb CMsgUserSearchPB
+10128 CMsgUserTotalRefineLev pb CMsgUserTotalRefineLevPB
+10024 CMsgVerifyCheck struct 
+10284 CMsgVipFunctionValidNotify struct 
+10126 CMsgVipUserHandle struct 
+10205 CMsgWalk pb CMsgWalkPB
+10062 CMsgWarFlag struct 
+10392 CMsgWarJudgeScoreInfo pb CMsgWarJudgeScoreInfoPB
+10041 CMsgWeaponSkill struct 
+10306 CMsgWeather struct 
+10395 CMsgWenZhang pb CMsgWenZhangPB
+10396 CMsgWenZhangLottery pb 
+10401 CMsgXueMai pb CMsgXueMaiPB
+10411 CMsgYingLing pb CMsgYingLingPB

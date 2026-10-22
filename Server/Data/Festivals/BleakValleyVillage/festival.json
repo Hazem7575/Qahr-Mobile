@@ -1,0 +1,49 @@
+{
+  "key": "BleakValleyVillage",
+  "name_ar": "عالم الاحتفال (الذكرى السنوية 2023)",
+  "name_en": "Celebration Realm",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Anniversary: only the newest official edition (Anniversary2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on BleakValleyVillage. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ مهرجان الذكرى السنوية: عالم الاحتفال (Celebration Realm)! دوس على الزرار اللي فوق.",
+  "announce_en": "Celebration Realm has started!",
+  "maps": [
+    12100
+  ],
+  "notes": "2026-10-15 COMPLETE: Celebration Realm (Anniversary 2023) is playable (Base/BleakValleyVillage). Bonfire: 45 Spark Logs -> 30 Anniversary Points, levels 1-5 at the official 30/210/960/2040/3540, zones unlock by level; Celebration Monument = the official cumulative rewards (DlgMidAutumnRank 10218); Grit Points (+1/30 min, +200 daily); Dragon Remains = Dragonette expedition (Frog UI); Bleak Valley (map 12100 -> doc 11203) with Foison Village: villagers/objects at their official cells (npcs.txt, official ids, PROXY meshes), quests 7653-7667 ON (one per villager per day, accepted at the Reputation Officer for 100 Grit), Blackcock/Weasel/WildMonkey festival monsters 997101-997103 (derived looks/stats), official reputation rewards, Log Sale Packs; Grit packs, breads and event boxes open. Other zones (Forest, Viper Swamp, Fiery Desert, Collapsed Debris, Timeless Shrine, Dimensional Portal, Annihilation Vortex, Ascension Trail) have no map in the client: polite message. Derived values: Infinity[DB]/BleakValleyVillage/bleakvalley.json.",
+  "_quests": [
+    7653,
+    7654,
+    7655,
+    7656,
+    7657,
+    7658,
+    7659,
+    7660,
+    7661,
+    7662,
+    7663,
+    7664,
+    7665,
+    7666,
+    7667
+  ],
+  "_officialMaps": [
+    12100
+  ],
+  "_owner": "BleakValleyVillage",
+  "end_ar": "انتهى عالم الاحتفال. نشوفكم السنة الجاية!",
+  "end_en": "Anniversary Revelry is over. Thanks for your participation! See you next year!",
+  "icon_show": "Dlg23Anniversary_ShowBtn|{['Code']=200,['Data']={['Rewardflag']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"Dlg23AnniversaryBtn\")",
+  "icon_click": "10217</S>AnniversaryInterface_MainView",
+  "_icon": "[BleakValleyVillage 2026-10-14] official lua button Dlg23AnniversaryBtn (layout 1359-btn, 'Celebration Realm'); clicks: Base/BleakValleyVillage/BleakValleyVillageUi.cs",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "04-25",
+    "end": "05-15",
+    "_note": "Official: luaUiRes_EN[1259].main.ActTime 'Duration: Apr. 25 - May 15' (Anniversary 2023). Server local time. NOTE: overlaps Anniversary2026 (04-21..05-11); official runs one anniversary per year, so keep only one of them yearly."
+  }
+}

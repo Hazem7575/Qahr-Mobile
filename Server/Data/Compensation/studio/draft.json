@@ -1,0 +1,29 @@
+﻿{
+  "Reason": "maint",
+  "Id": "test_mohamed2_01",
+  "Title": "Maintenance compensation",
+  "Body": "Test: thank you for your patience during the server maintenance. Please accept this small gift as our compensation. See you in game!",
+  "ExpiresDays": 3,
+  "Scope": "list",
+  "ListText": "mohamed2",
+  "MinLevel": 0,
+  "MaxLevel": 0,
+  "MinReborn": 0,
+  "MinVip": 0,
+  "Since": "",
+  "Items": [
+    {
+      "Id": 1088001,
+      "Name": "Meteor",
+      "Count": 2,
+      "Bound": true
+    }
+  ],
+  "Silver": 10000,
+  "Cps": 10,
+  "BoundCps": 50,
+  "ExpPercent": 0,
+  "Levels": 0,
+  "Note": "prepared test campaign (only mohamed2) - not sent",
+  "RewardEmpty": false
+}

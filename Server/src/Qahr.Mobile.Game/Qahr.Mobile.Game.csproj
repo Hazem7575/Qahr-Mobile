@@ -1,0 +1,124 @@
+<Project>
+  <!--
+    [net10] .NET 10 x64 build of the SAME sources as GameServer.csproj (the .NET Framework 4.8 x86 build).
+    GameServer.csproj stays untouched and keeps building to bin\Debug; this project builds to bin\ and
+    keeps its intermediates in obj\ so the two never share files.
+    Sources: globbed (**\*.cs). GameServer.csproj lists every .cs explicitly - a new file added only on disk
+    is compiled here but not there, so add it to GameServer.csproj too (or <Compile Remove> it below).
+    Files under Net10\ are compiled ONLY by this project (not listed in GameServer.csproj).
+    Build: dotnet build "GameServer.Net10.csproj" -c Debug -v minimal -nologo
+  -->
+
+  <!-- Must be set BEFORE Sdk.props is imported (restore/project.assets.json go here, not into obj\). -->
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <BaseOutputPath>bin\</BaseOutputPath>
+  </PropertyGroup>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+
+    <Platforms>x64</Platforms>
+    <Platform>x64</Platform>
+    <PlatformTarget>x64</PlatformTarget>
+
+    <RootNamespace>Qahr.Mobile</RootNamespace>
+    <AssemblyName>Qahr.Mobile.Game</AssemblyName>
+    <StartupObject>Qahr.Mobile.Program</StartupObject>
+    <NoWin32Manifest>true</NoWin32Manifest>
+
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
+    <!-- [Perf 2026-10-16] Server GC: a heap + GC thread per core, far better throughput and fewer GC pauses
+         under many concurrent connections than the default Workstation GC. Concurrent background GC keeps
+         collections off the game thread. Uses a bit more RAM (one heap per core) - worth it for a server. -->
+    <ServerGarbageCollection>true</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+
+    <!-- Same symbols as GameServer.csproj (Debug|x86: "TRACE;DEBUG;Jiang, PROTECTION_SPEEDHACK, Poker").
+         The old Release configs also define DEBUG, so it is defined for both configurations here too. -->
+    <DefineConstants>TRACE;DEBUG;Jiang;PROTECTION_SPEEDHACK;Poker</DefineConstants>
+
+    <OutputPath>bin\</OutputPath>
+    <OutDir>bin\</OutDir>
+
+    <!-- [DevHotReload 2026-10-16] `dotnet run` (dev / Hot Reload) otherwise starts the app with the
+         PROJECT folder as its working directory, while the production exe runs with bin-net10 as its
+         working directory. Some code reads RELATIVE paths (e.g. TQProtect reads TQLoader\Files\... ;
+         a wrong cwd makes it see the client's files as "changed" and kicks the player with
+         ChangeFiles). Pinning the run working directory to the output folder makes dev match
+         production exactly. This property only affects `dotnet run`; launching the exe directly
+         (production) ignores it. -->
+    <RunWorkingDirectory>$(OutputPath)</RunWorkingDirectory>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+
+    <!-- Only the 'en' satellite (Chat.en.resx); don't copy the MySqlConnector/protobuf localized folders. -->
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+
+    <!-- Keep the old project's folders out of the glob. -->
+    <DefaultItemExcludes>$(DefaultItemExcludes);bin\**;obj\**;bin\**;obj\**;TestResults\**</DefaultItemExcludes>
+
+    <!-- Old source compiled by the 4.8 project with warnings only; keep the new build's noise down to
+         things that matter. SYSLIB0xxx = obsolete crypto/Thread.Abort APIs (still work, reported separately),
+         CA1416 = Windows-only API (this is a Windows-only build anyway), MSB3277/NU1702 = .NET Framework DLLs. -->
+    <NoWarn>$(NoWarn);CS0162;CS0168;CS0169;CS0219;CS0414;CS0649;CS0612;CS0618;CA1416;SYSLIB0006;SYSLIB0014;SYSLIB0021;SYSLIB0022;SYSLIB0023;SYSLIB0041;SYSLIB0060;MSB3277;NU1702;WFAC010;WFO1000;PBN0009;PBN0015;CS8981;CS0675;PBN0020;WFDEV004</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <!-- The live server runs this Debug build. Optimize=false turned the JIT optimizer off (measured 2.5-4x slower on
+         packet crypto / distance math). No code depends on it: there is no #if DEBUG and DefineConstants is the same.
+         [DevHotReload 2026-10-16] EXCEPTION: the dev launcher (tools\ServerCtl\dev_hotreload.bat) sets the environment
+         variable HotReloadDev=true; only then is Optimize turned off, because .NET Hot Reload cannot patch an optimized
+         build (it can only restart it). Production builds never set that env var, so they stay Optimize=true (fast). -->
+    <Optimize Condition="'$(HotReloadDev)' == 'true'">false</Optimize>
+    <Optimize Condition="'$(HotReloadDev)' != 'true'">true</Optimize>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <!-- Nothing from the old project's None items needs to be in the output. -->
+  <ItemGroup>
+    <None Remove="**\*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- replaces MySql.Data 6.7.4 (.NET Framework only) -->
+    <PackageReference Include="MySqlConnector" Version="2.6.2" />
+    <!-- replaces protobuf-net 2.0.0.668 (bin\Debug\protobuf-net.dll, still used by GameServer.csproj) -->
+    <PackageReference Include="protobuf-net" Version="3.4.30" />
+  </ItemGroup>
+
+  <!-- .NET Framework 4.x libraries, referenced from the old output folder (read only, never written). -->
+  <ItemGroup>
+    <Reference Include="Extensions">
+      <HintPath>lib\Extensions.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="SystemExtensions">
+      <HintPath>lib\SystemExtensions.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- [Shared 2026-10-16] single-source files shared with AccServer (written once in ..\Shared, no duplication). -->
+  <ItemGroup>
+    <Compile Include="..\Qahr.Mobile.Shared\**\*.cs" Link="Shared\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

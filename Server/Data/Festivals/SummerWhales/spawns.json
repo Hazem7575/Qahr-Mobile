@@ -1,0 +1,7 @@
+{
+  "_note": "[SummerWhales 2026-10-15] Official spot of both quests = Questinfo [mob Whaler,11829,148,29] / [mob WhaleHunter,11829,148,29]. Box 140..158 x 22..36 on 2014vipholiday.DMap (doc 12116), walkability checked. Counts/respawn = derived.",
+  "spawns": [
+    { "monster": "Whaler", "map": 11829, "x": 140, "y": 22, "w": 18, "h": 14, "count": 6, "respawn": 30, "_note": "5111 Whalers` Gear" },
+    { "monster": "WhaleHunter", "map": 11829, "x": 140, "y": 22, "w": 18, "h": 14, "count": 10, "respawn": 30, "_note": "5112 Whale Hunter" }
+  ]
+}

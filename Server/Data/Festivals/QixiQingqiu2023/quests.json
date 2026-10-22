@@ -1,0 +1,40 @@
+{
+  "_note": "[QixiQingqiu2023 2026-10-15] Jade Hill Memories = Questinfo.ini MissionId 5561-5567 (Server_Key tQingQiuMainNpc[Msg][Story][1..7]). A memory is unlocked with Clue Bells in the Jade Hill window (Base\\QixiQingqiu2023\\QixiQingqiu2023Ui.cs), which accepts the quest through the hidden begin NPC 8872019 (no NPC object: the engine never offers it at Dale Lord by itself). Prizes = Questinfo (Charm Core Shard 3380014, Marital Fruit 3600624, Marital Stick 3344212). 5561 + 5562 are playable on Jade Hill (12184). 5563-5567 stay OFF: their fights are in the instance maps 1002403-1002406 / the Kylin Cave, which have no doc in the client (not in FestivalMaps maps.txt); they are listed so their official NPC ids are named.",
+  "quests": {
+    "5561": {
+      "engine": true,
+      "beginNpc": 8872019,
+      "finishNpc": 31813,
+      "beginText": "Help Vulpes resolve the problem.",
+      "objectives": [
+        { "type": "talk", "npc": 31816, "slot": 2, "name": "GriffinTrace1" },
+        { "type": "talk", "npc": 8872011, "slot": 3, "name": "GriffinTrace2" },
+        { "type": "talk", "npc": 8872012, "slot": 4, "name": "GriffinTrace3" },
+        { "type": "kill", "monster": "WildfGriffin", "count": 1, "slot": 1, "map": 12184 },
+        { "type": "talk", "npc": 31831, "slot": 5, "after": 1, "name": "PollutedShard" },
+        { "type": "talk", "npc": 31813, "slot": 6, "after": 5, "name": "Vulpes" }
+      ],
+      "onAccept": { "spawn": { "monster": "WildfGriffin", "map": 12184, "x": 95, "y": 93, "count": 1, "minutes": 30 } },
+      "_derived": "slot 1/5: Questinfo puts the griffin at 12184 (36,24) and the shard on map 0 (38,26) - both outside the walkable part of Jade Hill (qingqiu_new DMap); used the nearest open ground (95,93)/(97,95). Traces 2 and 3 share the official id 31816, so they stand in as 8872011/8872012."
+    },
+    "5562": {
+      "engine": true,
+      "beginNpc": 8872019,
+      "finishNpc": 31815,
+      "beginText": "Help Cooer find escaped Lily.",
+      "objectives": [
+        { "type": "talk", "npc": 31820, "slot": 1, "name": "RosePixie" },
+        { "type": "talk", "npc": 31822, "slot": 2, "name": "PeonyPixie" },
+        { "type": "talk", "npc": 31821, "slot": 3, "name": "LilyPixie" },
+        { "type": "talk", "npc": 31823, "slot": 4, "name": "TulipPixie" },
+        { "type": "talk", "npc": 31832, "slot": 5, "name": "Lily" },
+        { "type": "talk", "npc": 31815, "slot": 6, "after": 5, "name": "Cooer" }
+      ]
+    },
+    "5563": { "engine": false, "_why": "Fiery Flora: WickedFlora / WeakFlora are in instance 1002403 (no doc in the client)." },
+    "5564": { "engine": false, "_why": "Strange Willie: FakeBelle / CharmCoreShard are in instance 1002404 (no doc)." },
+    "5565": { "engine": false, "_why": "Ambitious Cooer: DoveUnderling / DoveGeneral / SuperCooer are in instance 1002405 (no doc)." },
+    "5566": { "engine": false, "_why": "Fickle Vulpes: CharmCoreShard is in instance 1002406 (no doc)." },
+    "5567": { "engine": false, "_why": "Revived Belle: Kylin Blood comes from the Kylin Cave instance (Server_Key tQixiFestivalMain2023 Tip[1]) and the Phoenix Quill from map 11977 scripts; the Wind Plain altar NPC Belle 31838 has no script." }
+  }
+}

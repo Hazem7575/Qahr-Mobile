@@ -1,0 +1,143 @@
+# QahrMobile packet layouts: Character development (sub-classes, titles, Kong Fu, Chi retreat, inner power, offline
+# training, ...). The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgSubPro 10033 (sub-class): action u16 4, type u8 6, level/phase u8 7, study points u64 6, study received u64 14,
+# count u32 22, units of 3 bytes (type, phase, level) at 26 (CMsgSubPro::Process). Request = Create(action, type):
+# 29 bytes, action 4 / type 6. Server MsgSubClass.SubClassCreate writes the same offsets (u16 + zero fill) and the
+# mobile actions are the server's: 1 activate, 3 level up, 4 learn, 5 promoted, 7 list, 8 study points.
+[2153 MsgSubPro same]
+
+# CMsgTitle 10152: uid 4, title u8 8, action u8 9 (1 add, 2 remove, 3 select, 4 list: count u8 10, titles from 11)
+# (CMsgTitle::Create(action, title, uid) / Process) = MsgTitle.TitleCreate / GetTitle
+[2290 MsgTitle same]
+
+# CMsgGemEmbed 10087 (client -> server only, Process is empty): 20 bytes, uid 4, item 8, gem 12, slot u16 16,
+# action u16 18 (CMsgGemEmbed::Create) = MsgEmbedSocket.GetEmbedSocket
+[2293 MsgGemEmbed same]
+
+# CMsgEquipLock 10323: item uid 4, action u8 8 (0 lock, 1 unlock, 2 unlock date), date u32 12 (Create / Process)
+# = MsgItemLock.ItemLockCreate (uid 4, type 8, mode 9, param 12)
+[2306 MsgEquipLock same]
+
+# CMsgSolidify 10290 (client -> server only): mode u16 4, item 8, count 12, then count u32 values from 16
+# (CMsgSolidify::Create(item, map, mode) writes each map pair as two values) = MsgItemExtra.Stabilization
+[2417 MsgSolidify same]
+
+# CMsgSuitStatus 10336 (fairy transform): action u16 4 (1 on, 2 off), 8, fairy type 12, uid 16
+# (CMsgSuitStatus::Create / Process) = MsgTransformFairy.TransformFairyCreate (action u32 4, 0, fairy 12, uid 16)
+[2438 MsgSuitStatus same]
+
+# CMsgMagicCoat 10309: CMsgMagicCoat::Process is empty on the mobile, passed as it is
+[2420 MsgMagicCoat same]
+
+# CMsgPetInfo 10192: uid 4, monster type 8, pet type 12, look u16 16, 20, range u16 24, x u16 26, y u16 28
+# (CMsgPetInfo::Process) = MsgPetInfo.CreatePetInfo (mesh u64 at 16)
+[2119 MsgPetInfo same]
+
+# CMsgAllot 10203 (attribute points): 0 4, strength 8, agility 12, vitality 16, spirit 20 (CHero::AllotPoint ->
+# CMsgAllot::Create; the CHero fields are the ones CMsgUserInfo fills from 58/60/62/64) = MsgAtributeSet
+[2277 MsgAllot same]
+
+# CMsgNationality 10171: uid 4, country u16 8 (the mobile request leaves the uid 0) = MsgCountryFlag
+[2288 MsgNationality same]
+
+# CMsgInnerStrengthInfo 10147: score 8, 12, action u16 16, count u16 18, attribute count u16 20, units of 5 bytes
+# (id u16, level, score, done) at 22, then attributes of 7 bytes (id u16, type, value u32)
+# (CNeiGongMgr::UpdateNeiGongInfo) = InnerPowerStage.InnerPowerStageInfo
+[2093 MsgInnerStrengthInfo same]
+
+# CMsgInnerStrengthTotalInfo 10113: count u16 4, units of 5 bytes (id u8, score u32) at 6
+# (CNeiGongMgr::UpdateNeiGongTotalInfo) = MsgInnerPowerGui.InnerPowerGui
+[2363 MsgInnerStrengthTotalInfo same]
+
+# CMsgInnerStrengthOpt 10115: action u8 4, u32 5, u32 9 (CMsgInnerStrengthOpt::Create; Process: 7 = life bonus at 5)
+# = MsgInnerPower.GetInnerPower
+[2022 MsgInnerStrengthOpt same]
+
+# CMsgOwnKongfuBase 10082 (Kong Fu): mode u8 4, CNetStringPacker at 5 (constructor SetBuf this+9).
+# Requests (COwnKongfuMgr::Submit*): 1 create (name), 9 view (uid), 10 keep star, 11 replace star, 13 sync time,
+# 16 keep star with a pill, 17 gather, 18 rename = the server's JiangMode numbers. Answers the mobile handles:
+# 6/7/14 (uid, mode 1/2), 8 / 17 / 19 messages, 12, 13 (free course, time), 15, 18 (name). The server's 7
+# (InfoStauts) and 14 (SetName) carried 3 strings; JiangHu.SendInfo now drops the talent for them (QahrMobile).
+[2159 MsgOwnKongfuBase same]
+
+# CMsgOwnKongfuImproveFeedback 10070: free course u32 4, high 8, action 9, star 10, stage 11, pill 12,
+# attribute u16 13 (type < 16, quality < 7), times today (used u8 15, bought u32 16) (Create(IMPROVE_SETTING_MSG) /
+# Process) = MsgJiangHuUpdates.JiangHuUpdatesCreate / GetJiangHuUpdates
+[2183 MsgOwnKongfuImproveFeedback same]
+
+# CMsgOwnKongfuImproveSummaryInfo 10085: name 4 (32), stage count u8 36, 0 own / 1 other u8 37, free course u32 38,
+# study points u64 42, limits (u32 50, u32 54), times today (u8 58, u32 59), stages of 9 stars u16 (18 bytes) at 63
+# (CMsgOwnKongfuImproveSummaryInfo::Process). Server MsgJiangHuStatus.JiangHuStatusCreate has one more zero byte at
+# 42, so everything from 43 moves to 42. Byte 37 is written 0/1 by JiangHu.SendStatus (QahrMobile).
+[2428 MsgOwnKongfuImproveSummaryInfo shift 43 42]
+
+# CMsgOwnKongRank 10073: mode u8 4 (0 list, 2 my place), page 5, my place 6, count 7, total 8, units of 81 bytes at 9:
+# rank u8, inner strength u32, level u32, name 32, Kong Fu name 32, look u32 73, uid u32 77 (CRankJiangHuItem::SetInfo).
+# Request: Create(mode, page) = mode 4, page 5. MsgJiangHuRank (page u16 4 = mode 0 + page) now adds the look and uid.
+[2039 MsgOwnKongRank same]
+
+# CMsgTrainingVitalityScore 10276 (Chi roll message): type u8 4, value u32 5, name 9 = MsgChiInfo.ChiMessageCreate
+[2103 MsgTrainingVitalityScore same]
+
+# CMsgTrainingVitalityProtectInfo 10235 (Chi retreat list): count u32 4, units of 21 bytes at 8 (slot u8, date u32,
+# 4 values u32) (AddTrainingVitalityBackUpInfo) = MsgTrainingVitalityProtectInfo.AddRetreatedChiItem
+[2196 MsgTrainingVitalityProtectInfo same]
+
+# CMsgTrainingVitalityProtect 10302 (Chi retreat): action u16 4, slot u8 6, u32 7 (request: Create(action, slot,
+# item)); answers 1 retreated, 3 saved, 5 restored, 7 extended, 8 deleted (CMsgTrainingVitalityProtect::Process) =
+# RetreatType Retreating / Seal2 / Restore2 / Extend2 / CancelRetreat. CreateRetreatedChiPacket now adds the u32 at 7.
+[2268 MsgTrainingVitalityProtect same]
+
+# CMsgTrainingVitalityExpiryNotify 10268: count u32 4, units of 2 bytes (slot, state) at 8
+# = MsgTrainingVitalityProtect.CreateExpireNotify (now 2 bytes per unit, QahrMobile)
+[2280 MsgTrainingVitalityExpiryNotify same]
+
+# CMsgTrainingVitality 10075 (Chi request): uid 4, action u16 8, power u8 10, locks u8 11
+# (CreateQueryMsg / CreateOperMsg / CreateQueryTaskMsg) = MsgChiInfo.GetChiHandler
+[2377 MsgTrainingVitality same]
+
+# CMsgTraining 10159 (offline training): action u16 4, u32 8 (Create(action) / Process: 0 time, 1 leave, 2 ...)
+# = MsgOfflineTG (mode u32 4, 0 at 8)
+[2131 MsgTraining same]
+
+# CMsgTrainingInfo 10117: trained minutes u16 4, minutes left u16 6, level u16 8, exp u32 12
+# (CMsgTrainingInfo::Process) = MsgOfflineTGStats.OfflineTGStatsCreate
+[2143 MsgTrainingInfo same]
+
+# CMsgGodExp 10258 (heaven blessing training points): action u8 4 (0 = show), online training 8, hunt blessing 12
+# (CMsgGodExp::Process; the request Create(action) is 16 bytes with the action at 4).
+# Server: MsgClaim.BlessingInfoCreate = mode u32 4, online 8, hunt 12; GetBlessingInfo reads a stamp at 4 and the
+# mode at 8 (20 bytes), so the mobile action goes to 8.
+[2322 MsgGodExp struct 20 16]
+4   4   u8   out
+8   8   u32  out
+12  12  u32  out
+8   4   u8   in
+
+# CMsgMeteSpecial 10057 (reincarnation): class 4, body 8 (Create(class, body)); answers 1..6 = messages
+# = MsgReincarnation (ToClass 4, ToBody 8)
+[2346 MsgMeteSpecial same]
+
+# CMsgSuperFlag 10092 (memory agate): action u32 4, item uid 8, index 12, 16, reset/durability 24, count 28,
+# records of 80 bytes at 32: index, map, x, y, description 64 (CMsgSuperFlag::Process / CreateOperatorMsg 112 bytes)
+# = MsgGameItem.SendAgate (records now 80 bytes, QahrMobile) / AgateEx.GetAgate
+[2112 MsgSuperFlag same]
+
+# CMsgHandBrickInfo 10333 (union gold bricks): type u16 4, u32 6, u32 10, CNetStringPacker at 14 (constructor
+# SetBuf this+0x12); the mobile shows messages (0 / 1 / 2 with 1 / 2 strings). The server's
+# HandBrickInfoCreate puts a u16 at 14 instead of strings: sent with an empty string list.
+[2006 MsgHandBrickInfo struct 16 15]
+4   4   u16  out
+6   6   u32  out
+10  10  u32  out
+
+# CMsgTitleStoragePB 10313 (title wardrobe): 1 UnAction, 2 UnLife, 3 Undata1, 4 Undata2, 5 Info (repeated
+# CMsgTitleInfoPB: 1 UnType, 2 UnTitle, 3 NStatus, 4 DwDelTime = the server's Title ID, SubId, dwparam1,
+# TotalSeconds). Server TitleStorage: 1..4 the same, 5 dwparam4 (no mobile field), 6 Titles -> Info.
+[2456 MsgTitleStorage proto]
+1 1
+2 2
+3 3
+4 4
+6 5

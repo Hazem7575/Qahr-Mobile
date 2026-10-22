@@ -1,0 +1,149 @@
+{
+  "_note": "SummerWhales (2026-10-14). Overlay while the festival runs. Official Questinfo 5111-5115 (TypeId 8, Lv 80, Begin/Finish Cassio 30727 @11829 172,149, Prize Wish Conch 3600409). Objectives follow the official chk_quest / chk_item slots. Once per character (Questinfo gives no daily flag). 2026-10-15: 5111/5112 on (festival monsters Whaler/WhaleHunter, spawns.json).",
+  "npcTeleports": {
+    "30727": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 387,
+        "y": 386
+      }
+    ]
+  },
+  "quests": {
+    "5111": {
+      "_name": "Whalers` Gear",
+      "_note": "Official 'Defeat [mob Whaler,11829,148,29] and destroy 5 Harpoons[chk_quest 5111,1,1,5]'. One counter (slot 1, 5): no Harpoon object exists in the client, so each Whaler defeated = one Harpoon destroyed (DERIVED reading of the single 5-counter). Whaler = festival type 20122 (monsters/Whaler.ini, official Lv/HP, derived look).",
+      "beginText": "Whalers are using Harpoons to kill whales. Whale King Cassio hopes you can defeat the Whalers (148,29) and destroy their Harpoons.",
+      "objectives": [
+        {
+          "type": "kill",
+          "monster": "Whaler",
+          "count": 5,
+          "slot": 1,
+          "name": "Whaler"
+        }
+      ],
+      "beginNpc": 30727,
+      "finishNpc": 30727,
+      "finishMap": 11829,
+      "finishX": 172,
+      "finishY": 149,
+      "prize": {
+        "items": [
+          {
+            "id": 3600409,
+            "count": 1
+          }
+        ]
+      }
+    },
+    "5112": {
+      "_name": "Whale Hunter",
+      "_note": "Official 'Expel 15 [mob WhaleHunter,11829,148,29][chk_quest 5112,1,1,15]'. WhaleHunter = festival type 20123 (official Lv/HP, derived look).",
+      "beginText": "Whale King Cassio hopes you can help him expel those Whale Hunters (148,29).",
+      "objectives": [
+        {
+          "type": "kill",
+          "monster": "WhaleHunter",
+          "count": 15,
+          "slot": 1,
+          "name": "WhaleHunter"
+        }
+      ],
+      "beginNpc": 30727,
+      "finishNpc": 30727,
+      "finishMap": 11829,
+      "finishX": 172,
+      "finishY": 149,
+      "prize": {
+        "items": [
+          {
+            "id": 3600409,
+            "count": 1
+          }
+        ]
+      }
+    },
+    "5113": {
+      "_name": "Scallop Beach",
+      "_note": "Official 'Feed 5 [mob Scallop,11829,90,223][chk_item 3336088,5]': clicking the Scallop NPC (8857001, npc.ini [WhaleFood]) gives 1 Scallop 3336088 while this quest is active (max 5 in the bag, Base/SummerWhales); finishing at Cassio takes the 5 Scallops.",
+      "beginNpc": 30727,
+      "finishNpc": 30727,
+      "finishMap": 11829,
+      "finishX": 172,
+      "finishY": 149,
+      "beginText": "Whale King Cassio has not eaten anything for a long time. Could you go find some Scallops on Scallop Beach (90,223) and feed him?",
+      "objectives": [
+        {
+          "type": "collect",
+          "item": 3336088,
+          "count": 5,
+          "take": true,
+          "source": "external",
+          "name": "Scallop"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3600409,
+            "count": 1
+          }
+        ]
+      }
+    },
+    "5114": {
+      "_name": "Stranded Whales",
+      "beginNpc": 30727,
+      "finishNpc": 30727,
+      "finishMap": 11829,
+      "finishX": 172,
+      "finishY": 149,
+      "beginText": "Whale King Cassio hopes you can send those Stranded Whales (100,245) back to the sea.",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 30728,
+          "slot": 1,
+          "count": 3,
+          "name": "StrandedWhale"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3600409,
+            "count": 1
+          }
+        ]
+      }
+    },
+    "5115": {
+      "_name": "Whale Training",
+      "beginNpc": 30727,
+      "finishNpc": 30727,
+      "finishMap": 11829,
+      "finishX": 172,
+      "finishY": 149,
+      "beginText": "Whale King Cassio hopes you can train the young whales together with the fisherman on Summer Beach (220,341), so they can learn how to survive.",
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 30733,
+          "slot": 1,
+          "count": 1,
+          "name": "WhaleTraining"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3600409,
+            "count": 1
+          }
+        ]
+      }
+    }
+  }
+}

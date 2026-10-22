@@ -1,0 +1,29 @@
+{
+  "key": "AnniversaryOtherworld2024",
+  "name_ar": "عيد ميلاد كونكر 2024 (حفلة الكيك - مغامرة العالم التاني)",
+  "name_en": "CO Anniversary 2024 (Anniversary Cake Gala)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Anniversary: only the newest official edition (Anniversary2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on AnniversaryOtherworld2024. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأت حفلة كيك عيد ميلاد كونكر! دوس على زرار العيد اللي فوق (لفل 80+).",
+  "announce_en": "The Anniversary Cake Gala has started! Click the Anniversary button to join (Level 80+).",
+  "end_ar": "انتهت حفلة كيك عيد الميلاد. نشوفكم المرة الجاية!",
+  "end_en": "The Anniversary Cake Gala has successfully concluded! See you next time!",
+  "maps": [],
+  "icon_show": "Dlg24Anniversary_ShowBtn|{['Code']=200,['Data']={['Rewardflag']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"Dlg24AnniversaryBtn\")",
+  "icon_click": "10389</S>Interface2024_OpenMain",
+  "_icon": "[AnniversaryOtherworld2024 2026-10-14] official lua button Dlg24AnniversaryBtn (luaui/dialog/dlganniversary,Dialog_Info 1482-btn). Server show call Dlg24Anniversary_ShowBtn (dlg24anniversaryfunc); hidden with LuaUIMgr_HideDialog. Click 10389 Interface2024_OpenMain -> Base/AnniversaryOtherworld2024/AnniversaryOtherworld2024Ui.cs (Dlg24AnniversaryMainUi).",
+  "notes": "2026-10-14 build (batch 3). Official Anniversary 2024 'Anniversary Cake Gala' (tAnniversary2024Npc, NPCs Maisie 36841 / Baking Master 36842 / Theodore 36846). Entry = official main window Dlg24AnniversaryMainUi with the real Super Gourd (3600703) bag count and Gala Points 0. Not on this server (system message, nothing granted): beast capture/feeding/camp (tCultivateMonsterCamp), Bakery cakes, Lounge, Candy Valley (CS), Verdant Forest/Coastal Area/Sea Ruins maps, Gala Gourmet exchange, Anniversary Store, ranking, Vault Palace. No Questinfo quests, no maps.txt rows.",
+  "_owner": "AnniversaryOtherworld2024",
+  "_quests": [],
+  "_officialMaps": [],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "04-23",
+    "end": "05-13",
+    "_note": "Official duration: luaUiRes_EN[1482].main.ActTime 'Apr. 23 - May 13'; event items expire May 13, 2024 (itemtype 3600703/3348129). Server local time."
+  }
+}

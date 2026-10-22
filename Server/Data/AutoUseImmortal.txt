@@ -1,0 +1,46 @@
+[AutoLife]
+ReqLev=3
+amount=14
+CD=120
+Percent=99
+Item1=1000040
+Item2=1000030
+Item3=1000020
+Item4=1000010
+Item5=1000000
+Item6=1002000
+Item7=1002010
+Item8=1002020
+Item9=1002050
+Item10=1003000
+Item11=1003010
+Item12=1003020
+Item13=1003030
+Item14=723726
+
+[DaoistAutoLife]
+LevAmount=20
+lev0  = 50
+lev1  = 52
+lev2  = 54
+lev3  = 56
+lev4  = 58
+lev5  = 60
+lev6  = 62
+lev7  = 64
+lev8  = 66
+lev9  = 68
+lev10 = 70
+lev11 = 72
+lev12 = 74
+lev13 = 77
+lev14 = 80
+lev15 = 83
+lev16 = 86
+lev17 = 90
+lev18 = 95
+lev19 = 99
+
+[PirateAutoLife]
+Percent=99
+ReqLev=3

@@ -1,0 +1,28 @@
+# PuppetTheater (Strings of Terror, Halloween 2025). id,type,mesh,map,x,y   mesh = client NpcX.ini [N] x10 / npc.ini [NpcTypeN] x10
+# Official NPC ids (Server_Key tHalloween2025Npc 34646 Suyi / 34647 Elise, tHalloween2025Kua 34651 Broken Puppet, tHalloween2025Lottery 34655
+# Strange Spectator) have no cell in any client file -> festival ids 8893001-8893004, cells DERIVED (walkable r2 on the DMap,
+# Twin City newplain27_new next to the other event NPCs; Vault Palace 12818 -> doc 12019 2023tsf_new = official "Vault Palace Visit").
+# [2026-10-15] spots OFFICIAL (co.99 news 2025-10-22): Suyi TC 380,448 / Market 256,264; Elise TC 366,453 / Market 262,272; Orion Vault Palace 218,222.
+# Looks: NpcX 110165 Suyi, 110127 Elise, 110201 BrokenPuppet (official names); npc.ini 10334 Spectator (closest name, DERIVED).
+8893001,2,1101260,1002,380,448  # Suyi (official 34646, NpcX 110126 [StringsOfTerror]): story, Participate / Puppet Finale / points & rankings / Convert SP / Vault Palace Visit
+8893002,2,1101270,1002,366,453  # Elise (official 34647): Puppet Store (official CP prices, luauirewardshow 302001xxx)
+8893003,2,103340,1002,345,449  # Strange Spectator (official 34655, tHalloween2025Lottery text)
+8893004,2,1102010,12818,221,225  # Broken Puppet (official 34651): Puppet Adventure (fragments from the Vault Palace spirits)
+8893005,2,1101550,12818,218,222  # Orion [PuppetTroupe] (video 03:51): View statues 1/day + Puppet Adventure. Look NpcX 110155 (young man) DERIVED, cell DERIVED
+8893007,2,1101260,1036,256,264  # Suyi Market copy (official co.99 news: Market 256,264)
+8893008,2,1101270,1036,262,272  # Elise Market copy (official co.99 news: Market 262,272)
+8893009,2,16690,1002,365,441  # VaultPortal [VaultPalace] (npc.ini 1669, official: next to the TC stairs, owner video shot) -> Vault Palace 12818. Cell DERIVED from the video frame
+# [2026-10-15 Vault Palace pass] hero statues: spots = luacfg minimap.lua doc 12019 markers 1-12 (OFFICIAL), look = npc.ini VaultPalace type of the theme (OFFICIAL), ranking = Server_Key tGloablEventsTemple[MoneyRank] (Base/PuppetTheater/PuppetVault.cs)
+8893040,2,47180,12818,164,164  # hero statue [GlobalSpringFestival] (npc.ini 4718 VaultPalace)
+8893041,2,48780,12818,190,122  # hero statue [GlobalValentine] (npc.ini 4878 VaultPalace)
+8893042,2,48790,12818,240,112  # hero statue [GlobalWhiteValentine] (npc.ini 4879 VaultPalace)
+8893043,2,48010,12818,268,164  # hero statue [GlobalPrankDay] (npc.ini 4801 VaultPalace)
+8893044,2,48710,12818,316,188  # hero statue [GlobalAnniversary] (npc.ini 4871 VaultPalace)
+8893045,2,49190,12818,310,242  # hero statue [GlobalChildren`sDay] (npc.ini 4919 VaultPalace)
+8893046,2,49260,12818,268,268  # hero statue [GlobalSummerVacation] (npc.ini 4926 VaultPalace)
+8893047,2,49300,12818,242,310  # hero statue [GlobalQixi] (npc.ini 4930 VaultPalace)
+8893048,2,49800,12818,190,314  # hero statue [GlobalMid-Autumn] (npc.ini 4980 VaultPalace)
+8893049,2,49990,12818,164,268  # hero statue [GlobalHalloween] (npc.ini 4999 VaultPalace)
+8893050,2,38800,12818,114,238  # hero statue [GlobalThanksgiving] (npc.ini 3880 VaultPalace)
+8893051,2,38810,12818,122,190  # hero statue [GlobalChristmas] (npc.ini 3881 VaultPalace)
+8893052,2,1100740,12818,210,216  # Seer [VaultPalace] (NpcX 110074, official news image: next to Orion; cell DERIVED): 2025 Halloween Crystal panel (Base/PuppetTheater PuppetSeer) - handler pending restart

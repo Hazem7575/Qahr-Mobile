@@ -1,0 +1,94 @@
+{
+  "_note": "No exchanges: the official prize is the quest prize (Questinfo 4060001 + 3600709), paid by the quest engine. Greetings = official Server_Key lines where there is one. [2026-10-15] Journey of Wonder greetings = official tPlotEditorPlotEvent_DelText[5861]/[5862] lines.",
+  "npcText": {
+    "8853001": {
+      "en": "Actually, I don`t want to be called Wenwen at all. I should be called Wuwu!",
+      "ar": "بصراحة أنا مش عايز اسمي يبقى Wenwen خالص. المفروض أتسمى Wuwu!"
+    },
+    "8853011": {
+      "en": "Actually, I don`t want to be called Wenwen at all. I should be called Wuwu!",
+      "ar": "بصراحة أنا مش عايز اسمي يبقى Wenwen خالص. المفروض أتسمى Wuwu!"
+    },
+    "8853021": {
+      "en": "Actually, I don`t want to be called Wenwen at all. I should be called Wuwu!",
+      "ar": "بصراحة أنا مش عايز اسمي يبقى Wenwen خالص. المفروض أتسمى Wuwu!"
+    },
+    "8853031": {
+      "en": "Actually, I don`t want to be called Wenwen at all. I should be called Wuwu!",
+      "ar": "بصراحة أنا مش عايز اسمي يبقى Wenwen خالص. المفروض أتسمى Wuwu!"
+    },
+    "8853002": {
+      "en": "The shapes of the footprints on the left and right are completely different, it`s really strange!",
+      "ar": "شكل الأثر الشمال غير اليمين خالص، غريبة أوي!"
+    },
+    "8853012": {
+      "en": "Invincible Magnifying Glass, Versatile Measuring Device, Detective Handbook.",
+      "ar": "عدسة مكبّرة، وأداة قياس، وكتيّب المحقق."
+    },
+    "8853022": {
+      "en": "These feathers look somewhat familiar.",
+      "ar": "الريش ده شكله مألوف."
+    },
+    "8853032": {
+      "en": "Tasty Grass",
+      "ar": "حشيش لذيذ."
+    },
+    "8853033": {
+      "en": "Yummy Berry",
+      "ar": "توت لذيذ."
+    },
+    "8853041": {
+      "en": "Could you... could you take me home?",
+      "ar": "ممكن... ممكن توصّلني البيت؟"
+    },
+    "8853051": {
+      "en": "Great, thank you! I can finally go home now!",
+      "ar": "شكراً! أخيراً هعرف أروّح!"
+    },
+    "8853052": {
+      "en": "Let`s place a red flower here!",
+      "ar": "يلا نحط وردة حمرا هنا!"
+    },
+    "8853101": {
+      "en": "This goosie actually fell into such a cave. Let me tell you, this cave hides treasures!",
+      "ar": "الوزّة دي وقعت في الكهف ده! الكهف فيه كنوز."
+    },
+    "8853102": {
+      "en": "The key to the chest is hidden on the eagle. Go defeat this ferocious fellow!",
+      "ar": "مفتاح الصندوق مع النسر. اهزمه الأول!"
+    },
+    "8853111": {
+      "en": "With so many chests, which ones are real? Open one and see what you find!",
+      "ar": "صناديق كتير... أنهي فيهم الحقيقي؟ افتح وشوف!"
+    },
+    "8853112": {
+      "en": "Wow, there are so many treasures in the real chest! Hurry up and find other real chests!",
+      "ar": "الصندوق الحقيقي مليان كنوز! دوّر على الباقي!"
+    },
+    "8853113": {
+      "en": "Uh-oh, you better go find the real chests! So this chest was transformed by little monsters! Eliminate these troublemaking snakes!",
+      "ar": "ده صندوق مزيّف من الوحوش الصغيرة! دوّر على الصناديق الحقيقية."
+    },
+    "8853114": {
+      "en": "Uh-oh, you better go find the real chests! So this chest was transformed by little monsters! Eliminate these troublemaking snakes!",
+      "ar": "ده صندوق مزيّف من الوحوش الصغيرة! دوّر على الصناديق الحقيقية."
+    },
+    "8853115": {
+      "en": "Uh-oh, you better go find the real chests! So this chest was transformed by little monsters! Eliminate these troublemaking snakes!",
+      "ar": "ده صندوق مزيّف من الوحوش الصغيرة! دوّر على الصناديق الحقيقية."
+    },
+    "8853116": {
+      "en": "Uh-oh, you better go find the real chests! So this chest was transformed by little monsters! Eliminate these troublemaking snakes!",
+      "ar": "ده صندوق مزيّف من الوحوش الصغيرة! دوّر على الصناديق الحقيقية."
+    },
+    "8853117": {
+      "en": "Uh-oh, you better go find the real chests! So this chest was transformed by little monsters! Eliminate these troublemaking snakes!",
+      "ar": "ده صندوق مزيّف من الوحوش الصغيرة! دوّر على الصناديق الحقيقية."
+    },
+    "8853118": {
+      "en": "Uh-oh, you better go find the real chests! So this chest was transformed by little monsters! Eliminate these troublemaking snakes!",
+      "ar": "ده صندوق مزيّف من الوحوش الصغيرة! دوّر على الصناديق الحقيقية."
+    }
+  },
+  "exchanges": []
+}

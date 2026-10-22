@@ -1,0 +1,28 @@
+{
+  "key": "ThanksgivingTribe2023",
+  "name_ar": "عيد الشكر 2023 (Tribe Fight)",
+  "name_en": "Global Thanksgiving 2023 (Tribe Fight)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Thanksgiving: only the newest official edition (ThanksgivingFashion2025) runs on its yearly dates, like the official server; this older edition runs only with @festival on ThanksgivingTribe2023. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ Tribe Fight بتاع عيد الشكر! افتح زرار Thanksgiving فوق (لفل 80+).",
+  "announce_en": "The Thanksgiving Tribe Fight has started! Click the Thanksgiving button at the top (Level 80+).",
+  "end_ar": "انتهى Tribe Fight بتاع عيد الشكر. نشوفكم السنة الجاية!",
+  "end_en": "The Thanksgiving Tribe Fight has ended. See you next Thanksgiving!",
+  "maps": [],
+  "icon_show": "DlgThanksgivingTribeMainBtn_OpenMainBtn|",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgThanksgivingTribeMainBtn\")",
+  "icon_click": "10319</S>Thanksgiving2023Richman_OpenView",
+  "_icon": "[ThanksgivingTribe2023 2026-10-14] official lua button DlgThanksgivingTribeMainBtn (luaui\\dialog\\thanksgiving23, Dialog_Info 1445-1, ActBtnConfig[14] BtnId 1445, anisection 2023qqge_btn12, NeedLevel 80), shown with the client's own DlgThanksgivingTribeMainBtn_OpenMainBtn. Click 10319 Thanksgiving2023Richman_OpenView -> Base/ThanksgivingTribe2023/ThanksgivingTribe2023Ui.cs (DlgThanksgivingTribeMainUi).",
+  "notes": "2026-10-14 build (batch 3). Official dates 11.21-12.04 (luaUiRes_EN[1445].txt_time2 'Nov. 21 - Dec. 4', ActBtnConfig[14] 2023-11-21..2023-12-04, ERP561753). Entry = the official Tribe Fight window DlgThanksgivingTribeMainUi with real bag counts of Hunting Crystal 3346119, Tribe Gold Coin 3346120, Tribe Silver Coin 3346121, Treasure Compass 3346122, Stellar Runestone 3600664, Lunar Runestone 3346118; Hunting Points 0, both tribes 0, countdown to the yearly end. Not on this server (system message, nothing granted): throwing runestones, submitting crystals, Tribe Treasure Hunt, Exchange Store (Timo), Point Reward, Rankings, Arena (CS). No Questinfo quests; maps unknown (not in FestivalMaps\\maps.txt). The button sits at the same top-bar spot as other Thanksgiving buttons (Thanksgiving2024 uses Fgui 10486, a different button).",
+  "_owner": "ThanksgivingTribe2023",
+  "_quests": [],
+  "_officialMaps": [],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "11-21",
+    "end": "12-04"
+  }
+}

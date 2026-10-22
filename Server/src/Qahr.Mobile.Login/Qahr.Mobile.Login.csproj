@@ -1,0 +1,82 @@
+<Project>
+  <!--
+    [net10] .NET 10 x64 build of the SAME source files as AccServer.csproj (.NET Framework 4.8).
+    AccServer.csproj stays untouched and keeps building to bin\Debug\ (the live server).
+    This project outputs to bin\ and uses obj\, so the two never share files.
+    The intermediate paths must be set BEFORE Sdk.props is imported, hence the explicit imports.
+    Build:  dotnet build "AccServer.Net10.csproj" -c Debug -v minimal -nologo
+  -->
+  <PropertyGroup>
+    <BaseIntermediateOutputPath>obj\</BaseIntermediateOutputPath>
+    <MSBuildProjectExtensionsPath>obj\</MSBuildProjectExtensionsPath>
+  </PropertyGroup>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <!-- -windows + WinForms: Program.cs uses System.Windows.Forms.Application.Restart() (@restart). -->
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <Platforms>x64</Platforms>
+    <Platform>x64</Platform>
+    <PlatformTarget>x64</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <RootNamespace>Qahr.Mobile.Login</RootNamespace>
+    <AssemblyName>Qahr.Mobile.Login</AssemblyName>
+    <StartupObject>Qahr.Mobile.Login.Program</StartupObject>
+    <ApplicationIcon>System\Conquer.ico</ApplicationIcon>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+    <LangVersion>latest</LangVersion>
+    <!-- Same symbols as the old Debug config (TRACE;DEBUG;UNSAFE). The SDK adds NET, NET10_0, WINDOWS... -->
+    <DefineConstants>$(DefineConstants);TRACE;UNSAFE</DefineConstants>
+    <WarningLevel>2</WarningLevel>
+    <!-- CA1416: GenerateAssemblyInfo=false also drops [SupportedOSPlatform("windows")]; the app is Windows-only anyway. -->
+    <NoWarn>$(NoWarn);CA1416;CS0162;CS0168;CS0169;CS0219;CS0414;CS0649;CS0612;CS0618;CS8981;CS0675;CS0108;SYSLIB0006;SYSLIB0014;SYSLIB0021;SYSLIB0022;SYSLIB0023;SYSLIB0041;SYSLIB0060;MSB3277;NU1702;WFAC010;WFO1000;WFDEV004;PBN0009;PBN0015;PBN0020</NoWarn>
+    <OutputPath>bin\$(Configuration)\</OutputPath>
+    <IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+    <!-- Same GC flavour as the 4.8 build (workstation, concurrent). -->
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>portable</DebugType>
+    <!-- The live server runs this Debug build: keep the JIT optimizer on (no #if DEBUG code anywhere). -->
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Old build outputs / other tooling folders (obj\ holds generated .cs files of the 4.8 build). -->
+    <Compile Remove="bin\**;obj\**;.vs\**" />
+    <None Remove="bin\**;obj\**;.vs\**" />
+    <EmbeddedResource Remove="bin\**;obj\**;.vs\**" />
+    <!-- app.config is .NET Framework-only (SubSonic section, bindingRedirects, legacyUnhandledExceptionPolicy):
+         nothing reads it (no ConfigurationManager) and .NET 10 ignores <runtime>, so don't ship it as AccServer.dll.config. -->
+    <None Remove="app.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Replaces ..\libs\MySql.Data.dll (6.7.4, .NET Framework only). See Net10Compat.cs. -->
+    <PackageReference Include="MySqlConnector" Version="2.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- QahrMobile: art of the in-game recharge page (MobileShopPage.cs, GET /qahr/shopart/<file>), cut from the phone's Mall. -->
+    <None Update="web\**" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+
+  <!-- [Shared 2026-10-16] single-source files shared with GameServer (written once in ..\Shared, no duplication). -->
+  <ItemGroup>
+    <Compile Include="..\Qahr.Mobile.Shared\**\*.cs" Link="Shared\%(RecursiveDir)%(Filename)%(Extension)" />
+  </ItemGroup>
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+</Project>

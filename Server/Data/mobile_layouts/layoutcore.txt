@@ -1,0 +1,88 @@
+# QahrMobile packet layouts (owner: layoutcore). Format: Networking\Mobile\MobileLayouts.Loader.cs.
+# Uses the nested renumbering ("2.3 1" in a proto layout) and the structpb kind (server C struct <-> mobile protobuf).
+
+# ---------------------------------------------------------------- nested renumbering (proto on both sides)
+
+# CMsgRankMemberShowPB 10054: 1 UnAction, 2 repeated CMemberShowInfoPB (1 IdUser 2 SzUserName 3 SzSyndicateName
+# 4 NLookface 5 NHair 6 NHelmet 7 NArmor 8 NWeaponL 9 NWeaponDecoratorL 10 NWeaponR 11 NWeaponDecoratorR 12 NMount
+# 13 NMountColor 14 NWing 15 NWingAdditionLev 16 NTitle 17 NStatus 18 DwProfession 19 DwCoatShowOver ...) (pbfields).
+# Server: MsgBestOfTheWorld.MsgRankMemberShowProto / Entry (docs\audit\protobuf_review.md).
+[2098 MsgRankMemberShow proto]
+1 1
+2 2
+2.3 1       # UID -> IdUser
+2.4 2       # Name -> SzUserName
+2.5 3       # Guild -> SzSyndicateName
+2.6 4       # Mesh -> NLookface
+2.7 5       # Hair -> NHair
+2.8 6       # Head -> NHelmet
+2.15 7      # Armor -> NArmor
+2.10 8      # weapons -> NWeaponL, NWeaponDecoratorL, NWeaponR, NWeaponDecoratorR
+2.11 9
+2.12 10
+2.13 11
+2.14 12     # MountArmor -> NMount
+2.16 14     # Wing -> NWing
+2.17 15     # WingPlus -> NWingAdditionLev
+2.18 16     # Title -> NTitle
+2.19 17     # Flag -> NStatus
+2.20 18     # Profession -> DwProfession
+2.9 19      # Garment -> DwCoatShowOver
+
+# CMsgBossDmgPB 10001: 1 UnAction, 2 IdMonster, 3 repeated CDmgInfoPB (1 UnRank 2 UnDmg 3 NRecordType 4 IdGroup
+# 5 SzGroupName). Server: MsgBossHarmRanking / MsgBossHarmRankingEntry (server 2 ServerID has no mobile field).
+[2331 MsgBossHarmRanking proto]
+1 1
+2 2
+3 3
+3.1 1       # Rank -> UnRank
+3.5 2       # HunterScore -> UnDmg
+3.3 4       # HunterUID -> IdGroup
+3.4 5       # HunterName -> SzGroupName
+
+# ---------------------------------------------------------------- structpb (server C struct <-> mobile protobuf)
+
+# CMsgSyncActionPB 10141: 1 UcAction 2 UcDir 3 UcMode 4 UsTargetPosX 5 UsTargetPosY 6 repeated IdUser 7 BMountCharge.
+# CMsgSyncAction::Process switches on UcAction: ProcessWalk (1) reads UcDir, UcMode (9/10 = run kinds) and the ids,
+# ProcessJump (2) reads X, Y, BMountCharge and the ids (pb offsets 0x18..0x38).
+# Server: MsgInterAction.InterActionWalk (24 bytes): Mode u16 4, DirectionOne u8 6 (walk), DirectionTwo u8 7,
+# X u16 6 (jump, overlaps the direction), Y u16 8, u16 10, Count u32 12 (always 2), UID u32 16, OponentUID u32 20.
+[2261 MsgSyncAction structpb 24]
+1 4 u16 out
+2 6 u8 out
+3 7 u8 out
+4 6 u16 out
+5 8 u16 out
+6 16 list32 12 out
+
+# CMsgItemDialogPB 10233: 1 NIdx 2 NIdxFail 3 IdItem 4 SzText. Process needs NIdxFail and SzText present (has-bits
+# 0xa), then shows the box only when IdItem is an item in the bag (CHero::GetItem); the answer is Create(int) = NIdx.
+# Server: MsgBuilder.CreateDialogItem: u32 4, dwParam1 u16 8, dwParam2 u16 10, dwParam3 u16 12, dwParam4 u32 14,
+# text 58 bytes at 18 (76 bytes). Its only caller (EpicTrojan) passes no item uid, so the mobile shows nothing until
+# dwParam4 carries the bag item's uid. No server handler for the answer (NIdx -> u16 8).
+[2181 MsgItemDialog structpb 76]
+1 8 u16
+2 10 u16 out
+3 14 u32 out
+4 18 str:58 out
+
+# CMsgOsShopPB 10027: 1 UnAction 2 NItemType 3 NNum 4 NEmoneyType. Mobile Create(action, type, num, emoney) sends all
+# four; Process: action 1 = "bought NNum*5 x NItemType" system message.
+# Server MsgOsShop (14 bytes): type u8 4, DwParam1 u16 5, DwParam2 u16 7 (item key 40066/41962), DwParam3 u16 9,
+# Count u8 11, DwParam4 u16 12. Handler: type 8 and Count != 0 = buy. The server never sends it.
+[2383 MsgOsShop structpb 14]
+1 4 u8
+2 7 u16
+3 11 u8
+4 12 u16
+
+# CMsgCompetionPB 10040 (CMsgQuiz): 1 UnAction 2 UnIndex 3 IdQuize 4 UnResult 5 SzContent 6 N64NextTime 7 UnUserIdx
+# 8 IdQuizePre 9 UnResultPre 10 NTotalTrueNum 11 repeated CMsgQuizPlayerPB. On the mobile this is the guild quiz
+# (CFactionAnswerMgr), not the PC quiz show: only the obvious numbers are mapped.
+# Server MsgQuizShow: out type u16 4, question number u16 6, level u16 8, u8 10, u8 11, u16 12, my points u16 14,
+# u16 16 (the QuizShowCreate builders have no callers); in: type u16 4, answer u8 8.
+[2173 MsgQuiz structpb 24]
+1 4 u16
+2 6 u16 out
+10 14 u16 out
+4 8 u8 in

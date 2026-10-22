@@ -1,0 +1,117 @@
+{
+  "_note": "WhiteSnakeLegend (2026-10-14). Spring Festival 2025 'White Snake Mark' story = Bless All entry 1 (Questinfo 8350-8358, TypeId 8, BeginNpcId 0, Prequest chain, once per character). Official flow: the Bless All window (msg 10527, CJMainTask2024_ButtonClick 1) starts 8350 and sends you to the White Snake; every next quest follows on its own (next + autoAccept). Prize = the Questinfo Prize (Fortune Knack 3351698 x1) on the 7 quests that have one. Texts = Questinfo IntentionDesp. Map = the official id 1003905 (maps.txt -> doc 12734), shared (not a private copy); the monsters spawn per player on accept.",
+  "npcTeleports": {
+    "8863001": [ { "text": "Back to Twin City", "map": 1002, "x": 368, "y": 441 } ]
+  },
+  "quests": {
+    "8350": {
+      "_name": "Birth of White Snake",
+      "beginNpc": 8863001, "finishNpc": 8863001, "finishMap": 1003905, "finishX": 539, "finishY": 398,
+      "beginText": "Learn about the whereabouts of mark fragments and help the White Snake regain its power.",
+      "objectives": [
+        { "type": "talk", "npc": 8863001, "slot": 2, "name": "WhiteSnake" },
+        { "type": "talk", "npc": 8863002, "slot": 3, "count": 3, "name": "WonderLingzhi" },
+        { "type": "talk", "npc": 8863001, "slot": 4, "name": "WhiteSnake", "after": 3 }
+      ],
+      "prize": { "items": [ { "id": 3351698, "count": 1 } ] },
+      "next": 8351, "autoAccept": true
+    },
+    "8351": {
+      "_name": "Tale of West Lake",
+      "beginNpc": 8863001, "finishNpc": 8863001, "finishMap": 1003905, "finishX": 539, "finishY": 398,
+      "beginText": "Learn about the whereabouts of mark fragments and help the White Snake regain its power.",
+      "objectives": [
+        { "type": "talk", "npc": 8863001, "slot": 1, "name": "WhiteSnake" },
+        { "type": "talk", "npc": 8863003, "slot": 2, "count": 3, "name": "TraceOfMark" },
+        { "type": "talk", "npc": 8863001, "slot": 3, "name": "WhiteSnake", "after": 2 }
+      ],
+      "prize": { "items": [ { "id": 3351698, "count": 1 } ] },
+      "next": 8352, "autoAccept": true
+    },
+    "8352": {
+      "_name": "Mystery Under Tower",
+      "beginNpc": 8863001, "finishNpc": 8863001, "finishMap": 1003905, "finishX": 539, "finishY": 398,
+      "beginText": "Search for the mark fragments in the ruins of Leifeng Pagoda.",
+      "objectives": [
+        { "type": "talk", "npc": 8863001, "slot": 2, "name": "WhiteSnake" },
+        { "type": "talk", "npc": 8863004, "slot": 3, "name": "BottomOfLeifengTower" },
+        { "type": "talk", "npc": 8863001, "slot": 4, "name": "WhiteSnake", "after": 3 }
+      ],
+      "prize": { "items": [ { "id": 3351698, "count": 1 } ] },
+      "next": 8353, "autoAccept": true
+    },
+    "8353": {
+      "_name": "Formidable Monster",
+      "_deviation": "FormidableEmergence (241,279) has no row in the client monster.dat (a scripted event): preventing it = reaching that official point after the Nightfiend falls.",
+      "beginNpc": 8863001, "finishNpc": 8863001, "finishMap": 1003905, "finishX": 539, "finishY": 398,
+      "beginText": "Retrieve mark fragments from Nightfiend to prevent the formidable monster from coming out.",
+      "objectives": [
+        { "type": "talk", "npc": 8863001, "slot": 3, "name": "WhiteSnake" },
+        { "type": "kill", "monster": "Nightfiend", "count": 1, "slot": 2, "map": 1003905, "spawnedBy": "quest 8353 onAccept" },
+        { "type": "visit", "map": 1003905, "x": 241, "y": 279, "range": 4, "slot": 1, "name": "FormidableEmergence" },
+        { "type": "talk", "npc": 8863001, "slot": 4, "name": "WhiteSnake", "after": 2 }
+      ],
+      "onAccept": { "spawn": { "monster": "Nightfiend", "map": 1003905, "x": 241, "y": 279, "count": 1, "minutes": 30 } },
+      "prize": { "items": [ { "id": 3351698, "count": 1 } ] },
+      "next": 8354, "autoAccept": true
+    },
+    "8354": {
+      "_name": "Earth Deity`s Challenge (1)",
+      "beginNpc": 8863001, "finishNpc": 8863005, "finishMap": 1003905, "finishX": 475, "finishY": 490,
+      "beginText": "Ask Earth Deity for mark fragments.",
+      "objectives": [
+        { "type": "talk", "npc": 8863001, "slot": 1, "name": "WhiteSnake" },
+        { "type": "talk", "npc": 8863005, "slot": 2, "name": "EarthDeity" }
+      ],
+      "next": 8355, "autoAccept": true
+    },
+    "8355": {
+      "_name": "Earth Deity`s Challenge (2)",
+      "_deviation": "FragmentEvil (484,492, x3) has no row in the client monster.dat (a scripted event): purifying it = reaching that official point.",
+      "beginNpc": 8863005, "finishNpc": 8863001, "finishMap": 1003905, "finishX": 539, "finishY": 398,
+      "beginText": "Ask Earth Deity for mark fragments.",
+      "objectives": [
+        { "type": "visit", "map": 1003905, "x": 484, "y": 492, "range": 3, "slot": 1, "count": 3, "name": "FragmentEvil" },
+        { "type": "talk", "npc": 8863005, "slot": 4, "name": "EarthDeity", "after": 1 },
+        { "type": "talk", "npc": 8863001, "slot": 2, "name": "WhiteSnake", "after": 4 }
+      ],
+      "prize": { "items": [ { "id": 3351698, "count": 1 } ] },
+      "next": 8356, "autoAccept": true
+    },
+    "8356": {
+      "_name": "Deep Affection (1)",
+      "beginNpc": 8863001, "finishNpc": 8863006, "finishMap": 1003905, "finishX": 472, "finishY": 691,
+      "beginText": "Investigate the truth behind Xu Xian`s resurrection.",
+      "objectives": [
+        { "type": "talk", "npc": 8863001, "slot": 1, "name": "WhiteSnake" },
+        { "type": "talk", "npc": 8863006, "slot": 2, "name": "XuXian" }
+      ],
+      "next": 8357, "autoAccept": true
+    },
+    "8357": {
+      "_name": "Deep Affection (2)",
+      "_deviation": "MarkIllusion (472,691) has no row in the client monster.dat (a scripted event): shattering it = reaching that official point.",
+      "beginNpc": 8863006, "finishNpc": 8863001, "finishMap": 1003905, "finishX": 539, "finishY": 398,
+      "beginText": "Investigate the truth behind Xu Xian`s resurrection.",
+      "objectives": [
+        { "type": "visit", "map": 1003905, "x": 472, "y": 691, "range": 4, "slot": 1, "name": "MarkIllusion" },
+        { "type": "talk", "npc": 8863006, "slot": 4, "name": "XuXian", "after": 1 },
+        { "type": "talk", "npc": 8863001, "slot": 2, "name": "WhiteSnake", "after": 4 }
+      ],
+      "prize": { "items": [ { "id": 3351698, "count": 1 } ] },
+      "next": 8358, "autoAccept": true
+    },
+    "8358": {
+      "_name": "Demonic Illusion",
+      "beginNpc": 8863001, "finishNpc": 8863001, "finishMap": 1003905, "finishX": 539, "finishY": 398,
+      "beginText": "Defeat White Snake`s demon illusion to aid the awakening of her power.",
+      "objectives": [
+        { "type": "talk", "npc": 8863001, "slot": 2, "name": "WhiteSnake" },
+        { "type": "kill", "monster": "SnakeIllusion", "count": 1, "slot": 1, "map": 1003905, "spawnedBy": "quest 8358 onAccept" },
+        { "type": "talk", "npc": 8863001, "slot": 4, "name": "WhiteSnake", "after": 1 }
+      ],
+      "onAccept": { "spawn": { "monster": "SnakeIllusion", "map": 1003905, "x": 543, "y": 386, "count": 1, "minutes": 30 } },
+      "prize": { "items": [ { "id": 3351698, "count": 1 } ] }
+    }
+  }
+}

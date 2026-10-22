@@ -1,0 +1,13 @@
+# ============================================================
+#  AdminApi (PlayerStudio) - local player-administration endpoint
+#  It is OFF until you copy this file as  adminapi.txt  (same folder) and restart GameServer.
+#  - Listens on 127.0.0.1 only (this PC). Nobody on the network/Internet can reach it.
+#  - Every request must carry the secret below. Put the SAME port + secret in PlayerStudio
+#    (it reads this folder's adminapi.txt automatically).
+#  - Every action is written to adminapi_log.txt in this folder.
+#  To turn it off: delete adminapi.txt and restart GameServer.
+# ============================================================
+port=5899
+# secret: at least 16 random characters (letters/digits). CHANGE IT - the server refuses CHANGE_ME.
+# PlayerStudio has a "Generate" button that creates adminapi.txt with a random secret for you.
+secret=CHANGE_ME_to_a_long_random_secret

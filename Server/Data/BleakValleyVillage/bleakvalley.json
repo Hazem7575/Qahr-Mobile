@@ -1,0 +1,16 @@
+{
+  "_note": "[BleakValleyVillage 2026-10-15] Celebration Realm rules (Base/BleakValleyVillage/BleakValleyCore.cs). OFFICIAL and fixed in code: 45 Spark Logs -> 30 Anniversary Points per bonfire enhance, bonfire levels at 30/210/960/2040/3540, zone unlocks, Grit Points +1 / 30 min and +200 at 0:00, 100 Grit per reputation quest, 1 Grit per challenge claim, cumulative rewards and thresholds, reputation levels and rewards, pack Grit costs. Every value below is DERIVED (not in the client).",
+  "festival": "BleakValleyVillage",
+  "minLevel": 80,
+  "startGrit": 200,
+  "faithPerMille": 50,
+  "reputationPerQuest": 10,
+  "logSaleCps": 99,
+  "logSaleDiscountPctPerLevel": 5,
+  "logSaleDaily": 10,
+  "dragonMinutes": 120,
+  "dragonLogsMin": 30,
+  "dragonLogsMax": 60,
+  "dragonFaithPct": 20,
+  "silverKeyPct": 30
+}

@@ -1,0 +1,35 @@
+# LunarNewYear2023 (Agent 4). id,type,mesh,map,x,y[,dynamic]  (GiltSwirl keeps its official id 31153 for the client quest tracker; the event-map NPCs are -1 in Questinfo -> festival ids)   mesh = client npc.ini [NpcTypeN] x10
+# Positions = official Questinfo points (BeginNpcId / [npc ...] tokens), walkable (r0) on the server DMaps.
+# Twin City hub: official 2023 begin NPC 31153 GiltSwirl [DragonRealm] (npc.ini NpcType4005), Questinfo 5450 BeginNpcId 1002,387,382
+31153,2,40050,1002,387,382  # GiltSwirl (official id 31153, client tracker)
+# Tiger Farewell, map 12021 (woods doc = official instance 1002210, Maple Forest)
+8840002,2,40170,12021,300,232  # Tiger King: npc.ini NpcType4017 TigerCub [TigerFarewell] = the only NPC of that event in the client
+# Bunny Spring, map 12022 (mfpk doc = official instance 1002211)
+8840003,2,45830,12022,71,72  # Bunny Village Head: npc.ini NpcType4583 BunnyVillager [BunnySpring] = the only villager of that event
+8840004,2,40040,12022,130,94  # EastOfBunnyVillage (NpcType4004 [Decorated])
+8840005,2,40090,12022,103,109  # WestOfBunnyVillage (NpcType4009 [Decorated])
+8840006,2,40100,12022,111,77  # NorthOfBunnyVillage (NpcType4010 [Decorated])
+8840007,2,40110,12022,127,130  # SouthOfBunnyVillage (NpcType4011 [Decorated])
+8840008,2,45880,12022,124,108  # CenterOfBunnyVillage (NpcType4588 [Undecorated])
+# Poised Dragon, map 12023 (warrior_new doc = official instance 1002212)
+8840009,2,45890,12023,65,58  # GoldDragonKing (NpcType4589 [TestForDragon])
+8840010,2,45900,12023,65,82  # BoltEye (NpcType4590 [TestForDragon])
+8840011,2,40950,12023,82,64  # BlizzardEye (NpcType4095 [TestForDragon])
+8840012,2,40960,12023,62,45  # BlazeEye (NpcType4096 [TestForDragon])
+# [2026-10-15 COMPLETE] daily quests of the 2023 window (official tSpringFestivalDaily2023 DyNpc names; the client has no
+# position or look for them -> DERIVED spots (walkable r2 on the server DMaps) and looks, clicks answered by
+# Base\NewYear2023\SpringFestival2023.cs OnNpc). New Year Prayer on the 2023 event map 12019 (2023tsf_new):
+8840013,2,48260,12019,204,224  # Nuwa (DERIVED look npc.ini NpcType4826 PrayerTree)
+8840014,2,48270,12019,236,224  # Emperor Huang (DERIVED look NpcType4827 PrayerTree)
+8840015,2,48280,12019,220,200  # Emperor Yan (DERIVED look NpcType4828 PrayerTree)
+# Bustling New Year: Firework Tubes (official DyNpc 'Firework Tube 1..30', look npc.ini NpcType3639 FireworkTube), 2 per official map
+8840016,2,36390,1002,396,392  # Firework Tube (Wind Plain)
+8840017,2,36390,1002,400,388  # Firework Tube (Wind Plain)
+8840018,2,36390,1000,488,352  # Firework Tube (Desert City)
+8840019,2,36390,1000,495,340  # Firework Tube (Desert City)
+8840020,2,36390,1011,215,205  # Firework Tube (Maple Forest)
+8840021,2,36390,1011,218,210  # Firework Tube (Maple Forest)
+8840022,2,36390,1015,725,568  # Firework Tube (Bird Island)
+8840023,2,36390,1015,740,575  # Firework Tube (Bird Island)
+8840024,2,36390,1020,560,580  # Firework Tube (Love Canyon)
+8840025,2,36390,1020,565,575  # Firework Tube (Love Canyon)

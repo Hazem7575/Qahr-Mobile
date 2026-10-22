@@ -1,0 +1,89 @@
+1 13507 T1 lv 1 - 200 | World of Conquer | 32321 Eloise -> 32321 Eloise 1002 441 379 | lua:Eloise,</F>ClientTaskTemplate_QuestinfoFunc</N>13507 | chk_quest:13507,1,1,1 | prize  
+2 13508 T1 lv 1 - 200 | Twin City | 32321 Eloise -> 32411 Eloise 1002 428 253 | lua:Eloise,</F>ClientTaskTemplate_QuestinfoFunc</N>13508 | chk_quest:13508,1,1,1 | prize  
+3 13509 T1 lv 1 - 200 | Operational Details | 32411 Eloise -> 32283 SongQing 1002 425 333 | lua:SongQing,</F>ClientTaskTemplate_QuestinfoFunc</N>13509 | chk_quest:13509,1,1,1 | prize  
+4 13510 T1 lv 1 - 200 | Operational Details | 32283 SongQing -> 32284 Shovel 1002 409 319 | lua:Shovel,</F>ClientTaskTemplate_QuestinfoFunc</N>13510 | chk_quest:13510,1,1,1 | prize  
+5 13511 T1 lv 1 - 200 | Operational Details | 32284 Shovel -> 32283 SongQing 1002 425 333 | lua:SongQing,</F>ClientTaskTemplate_QuestinfoFunc</N>13511 | chk_quest:13511,1,1,1 | prize  
+6 13512 T1 lv 1 - 200 | Pheasant | 32283 SongQing -> 32285 SongShiyu 1002 504 389 | lua:SongShiyu,</F>ClientTaskTemplate_QuestinfoFunc</N>13512 | chk_quest:13512,1,1,1 | prize  
+7 13513 T1 lv 1 - 200 | Pheasant | 32285 SongShiyu -> 32285 SongShiyu 1002 504 389 | lua:Pheasant,</F>ClientTaskTemplate_QuestinfoFunc</N>13513 | chk_quest:13513,1,1,3 | prize  
+8 13514 T1 lv 1 - 200 | Clothes Make Men | 32285 SongShiyu -> 32283 SongQing 1002 425 333 | lua:SongQing,</F>ClientTaskTemplate_QuestinfoFunc</N>13514 | chk_quest:13514,1,1,1 | prize  
+9 13515 T1 lv 1 - 200 | Learn to Equip | 32283 SongQing -> 32283 SongQing 1002 425 333 | lua:WearEquipment,</F>ClientTaskTemplate_QuestinfoFunc</N>13515 | chk_quest:13515,1,1,1 | prize  
+10 13516 T1 lv 1 - 200 | Class Skill | 32283 SongQing -> 32321 Eloise 1002 441 379 | lua:Eloise,</F>ClientTaskTemplate_QuestinfoFunc</N>13516 | chk_quest:13516,1,1,1 | prize  
+11 13517 T1 lv 1 - 200 | Class Skill | 32321 Eloise -> 32321 Eloise 1002 441 379 | lua:Pheasant,</F>ClientTaskTemplate_QuestinfoFunc</N>13517 | chk_quest:13517,1,1,5 | prize  
+12 13518 T1 lv 1 - 200 | Class Skill | 32321 Eloise -> 33079 Eloise 1002 512 343 | lua:Eloise,</F>ClientTaskTemplate_QuestinfoFunc</N>13518 | chk_quest:13518,1,1,1 | prize  
+13 13519 T1 lv 1 - 200 | Learn to Activate Skills | 33079 Eloise -> 33079 Eloise 1002 512 343 | lua:ActivateSkill,</F>ClientTaskTemplate_QuestinfoFunc</N>13519 | chk_quest:13519,1,1,1 | prize  
+14 13520 T1 lv 1 - 200 | First Try | 33079 Eloise -> 32285 SongShiyu 1002 504 389 | lua:SongShiyu,</F>ClientTaskTemplate_QuestinfoFunc</N>13520 | chk_quest:13520,1,1,1 | prize  
+15 13910 T1 lv 1 - 200 | First Try | 32285 SongShiyu -> 32285 SongShiyu 1002 504 389 | lua:MutantPheasant,</F>ClientTaskTemplate_QuestinfoFunc</N>13910 | chk_quest:13910,1,1,1 | prize  
+16 13522 T1 lv 1 - 200 | First Try | 32285 SongShiyu -> 32285 SongShiyu 1002 504 389 | lua:SongShiyu,</F>ClientTaskTemplate_QuestinfoFunc</N>13522 | chk_quest:13522,1,1,1 | prize  
+17 13523 T1 lv 1 - 200 | Territorial Dispute | 32285 SongShiyu -> 32286 InjuredPheasant 1002 553 378 | lua:InjuredPheasant,</F>ClientTaskTemplate_QuestinfoFunc</N>13523 | chk_quest:13523,1,1,1 | prize  
+18 13890 T1 lv 1 - 200 | Pheasant`s Request | 32286 InjuredPheasant -> 32286 InjuredPheasant 1002 553 378 | lua:Turtledove,</F>ClientTaskTemplate_QuestinfoFunc</N>13890 | chk_quest:13890,1,1,3 | prize  
+19 13525 T1 lv 1 - 200 | Interesting News | 32286 InjuredPheasant -> 32321 Eloise 1002 441 379 | lua:Eloise,</F>ClientTaskTemplate_QuestinfoFunc</N>13525 | chk_quest:13525,1,1,1 | prize  
+20 14081 T1 lv 1 - 200 | Learn about Twilight Towers | 32321 Eloise -> 32321 Eloise 1002 441 379 | lua:Twilight Towers,</F>ClientTaskTemplate_QuestinfoFunc</N>14081 | chk_quest:14081,1,1,1 | prize  
+21 14082 T1 lv 1 - 200 | Twilight Towers | 32321 Eloise -> 32321 Eloise 1002 441 379 | lua:DawnTower,</F>ClientTaskTemplate_QuestinfoFunc</N>14082</N>2420</N>8 | chk_quest:14082,1,1,3 | prize  
+22 14077 T1 lv 1 - 200 | About Equipment | 32321 Eloise -> 32321 Eloise 1002 441 379 | lua:Eloise,</F>ClientTaskTemplate_QuestinfoFunc</N>14077 | chk_quest:14077,1,1,1 | prize  
+23 13526 T1 lv 1 - 200 | Meteor | 32321 Eloise -> 32287 LieutenantChen 1002 452 451 | lua:LieutenantChen,</F>ClientTaskTemplate_QuestinfoFunc</N>13526 | chk_quest:13526,1,1,1 | prize  
+24 13527 T1 lv 1 - 200 | Learn to Upgrade Equipment | 32287 LieutenantChen -> 32287 LieutenantChen 1002 452 451 | lua:UpgradeEquipment,</F>ClientTaskTemplate_QuestinfoFunc</N>13527 | chk_quest:13527,1,1,1 | prize  
+25 13528 T1 lv 1 - 200 | Master Equipment Upgrade | 32287 LieutenantChen -> 32287 LieutenantChen 1002 452 451 | lua:UpgradeEquipment,</F>ClientTaskTemplate_QuestinfoFunc</N>13528</N>634 | chk_quest:13528,1,1,5 | prize  
+26 14091 T1 lv 1 - 200 | Battle Goal | 32287 LieutenantChen -> 32287 LieutenantChen 1002 452 451 | lua:7DGoalReward,</F>SevenDayTarget_Main | chk_quest:14091,1,1,1 | prize  
+27 13529 T1 lv 1 - 200 | Blacksmith Li Kui | 32287 LieutenantChen -> 32288 LiKui 1002 604 670 | lua:LiKui,</F>ClientTaskTemplate_QuestinfoFunc</N>13529 | chk_quest:13529,1,1,1 | prize  
+28 13530 T1 lv 1 - 200 | Robin | 32288 LiKui -> 32288 LiKui 1002 604 670 | lua:Robin,</F>ClientTaskTemplate_QuestinfoFunc</N>13530 | chk_quest:13530,1,1,5 | prize  
+29 13531 T1 lv 1 - 200 | Dragon Ball | 32288 LiKui -> 32288 LiKui 1002 604 670 | lua:LiKui,</F>ClientTaskTemplate_QuestinfoFunc</N>13531 | chk_quest:13531,1,1,1 | prize  
+30 13532 T1 lv 1 - 200 | Learn to Improve Quality | 32288 LiKui -> 32288 LiKui 1002 604 670 | lua:QualityImprovement,</F>ClientTaskTemplate_QuestinfoFunc</N>13532 | chk_quest:13532,1,1,1 | prize  
+31 13533 T1 lv 1 - 200 | Blacksmith Li Gui | 32288 LiKui -> 32289 LiGui 1002 565 632 | lua:LiGui,</F>ClientTaskTemplate_QuestinfoFunc</N>13533 | chk_quest:13533,1,1,1 | prize  
+32 13534 T1 lv 1 - 200 | Robin King | 32289 LiGui -> 32289 LiGui 1002 565 632 | lua:RobinKing,</F>ClientTaskTemplate_QuestinfoFunc</N>13534 | chk_quest:13534,1,1,1 | prize  
+33 13535 T1 lv 1 - 200 | Secret of +Stone | 32289 LiGui -> 32289 LiGui 1002 565 632 | lua:LiGui,</F>ClientTaskTemplate_QuestinfoFunc</N>13535 | chk_quest:13535,1,1,1 | prize  
+34 13536 T1 lv 1 - 200 | Learn to Compose Equipment | 32289 LiGui -> 32289 LiGui 1002 565 632 | lua:EquipmentComposing,</F>ClientTaskTemplate_QuestinfoFunc</N>13536 | chk_quest:13536,1,1,1 | prize  
+35 13537 T1 lv 1 - 200 | Master Equipment Composing | 32289 LiGui -> 32289 LiGui 1002 565 632 | lua:EquipmentComposing,</F>ClientTaskTemplate_QuestinfoFunc</N>13537</N>634</N>3 | chk_quest:13537,1,1,5 | prize  
+36 14078 T1 lv 1 - 200 | Twilight Towers | 32289 LiGui -> 32289 LiGui 1002 565 632 | lua:DawnTower,</F>ClientTaskTemplate_QuestinfoFunc</N>14078</N>2420</N>8 | chk_quest:14078,1,1,6 | prize  
+37 14083 T1 lv 1 - 200 | Battle Preparation | 32289 LiGui -> 32289 LiGui 1002 565 632 | lua:QualityImprovement,</F>ClientTaskTemplate_QuestinfoFunc</N>14083</N>634</N>2 | chk_quest:14083,1,1,2 | prize  
+38 13538 T1 lv 1 - 200 | Past Events | 32289 LiGui -> 32477 LuFu 1002 529 619 | lua:LuFu,</F>ClientTaskTemplate_QuestinfoFunc</N>13538 | chk_quest:13538,1,1,1 | prize  
+39 13539 T1 lv 1 - 200 | Investigate | 32477 LuFu -> 32290 ScorchedEarth 1002 225 590 | lua:ScorchedEarth,</F>ClientTaskTemplate_QuestinfoFunc</N>13539 | chk_quest:13539,1,1,1 | prize  
+40 13540 T1 lv 1 - 200 | Investigate | 32290 ScorchedEarth -> 32291 ScorchedEarth 1002 221 564 | lua:ScorchedEarth,</F>ClientTaskTemplate_QuestinfoFunc</N>13540 | chk_quest:13540,1,1,1 | prize  
+41 13541 T1 lv 1 - 200 | Investigate | 32291 ScorchedEarth -> 32292 ScorchedEarth 1002 202 569 | lua:ScorchedEarth,</F>ClientTaskTemplate_QuestinfoFunc</N>13541 | chk_quest:13541,1,1,1 | prize  
+42 13542 T1 lv 1 - 200 | Veteran | 32292 ScorchedEarth -> 32293 UnnamedSoldier 1002 139 546 | lua:UnnamedSoldier,</F>ClientTaskTemplate_QuestinfoFunc</N>13542 | chk_quest:13542,1,1,1 | prize  
+43 13940 T1 lv 1 - 200 | Be Prepared | 32293 UnnamedSoldier -> 32289 LiGui 1002 565 632 | lua:EquipmentComposing,</F>ClientTaskTemplate_QuestinfoFunc</N>13940</N>634</N>3 | chk_quest:13940,1,1,10 | prize  
+44 13543 T1 lv 1 - 200 | `Hypocritical` Monk | 32289 LiGui -> 32294 HuiJing 1002 41 413 | lua:HuiJing,</F>ClientTaskTemplate_QuestinfoFunc</N>13543 | chk_quest:13543,1,1,1 | prize  
+45 13911 T1 lv 1 - 200 | `Hypocritical` Monk | 32294 HuiJing -> 32294 HuiJing 1002 41 413 | lua:PhantomKing,</F>ClientTaskTemplate_QuestinfoFunc</N>13911 | chk_quest:13911,1,1,1 | prize  
+46 13545 T1 lv 1 - 200 | `Hypocritical` Monk | 32294 HuiJing -> 32294 HuiJing 1002 41 413 | lua:HuiJing,</F>ClientTaskTemplate_QuestinfoFunc</N>13545 | chk_quest:13545,1,1,1 | prize  
+47 13546 T1 lv 1 - 200 | Veteran`s Will | 32294 HuiJing -> 32293 UnnamedSoldier 1002 139 546 | lua:UnnamedSoldier,</F>ClientTaskTemplate_QuestinfoFunc</N>13546 | chk_quest:13546,1,1,1 | prize  
+48 13547 T1 lv 1 - 200 | Kill Monsters | 32293 UnnamedSoldier -> 32293 UnnamedSoldier 1002 139 546 | lua:Apparition,</F>ClientTaskTemplate_QuestinfoFunc</N>13547 | chk_quest:13547,1,1,5 | prize  
+49 13919 T1 lv 1 - 200 | Bounty Hall | 32293 UnnamedSoldier -> 32293 UnnamedSoldier 1002 139 546 | lua:BountyHall,</F>ClientTaskTemplate_QuestinfoFunc</N>13919 | chk_quest:13919,1,1,1 | prize  
+50 13920 T1 lv 1 - 200 | Bounty Hall | 32293 UnnamedSoldier -> 32293 UnnamedSoldier 1002 139 546 | lua:BountyHallQuest,</F>TaskAssemblyGfit_OpenDialogMain | chk_quest:13920,1,1,3 | prize  
+51 13548 T1 lv 1 - 200 | Tell the Truth | 32293 UnnamedSoldier -> 32365 LuFu 1002 485 318 | lua:LuFu,</F>ClientTaskTemplate_QuestinfoFunc</N>13548 | chk_quest:13548,1,1,1 | prize  
+52 13549 T1 lv 1 - 200 | Drunken Horse Merchant | 32365 LuFu -> 32295 Drunkard 1002 499 311 | lua:Drunkard,</F>ClientTaskTemplate_QuestinfoFunc</N>13549 | chk_quest:13549,1,1,1 | prize  
+53 13550 T1 lv 1 - 200 | Buy Wine | 32295 Drunkard -> 33080 ~ 1002 498 319 | lua:LuFu,</F>ClientTaskTemplate_QuestinfoFunc</N>13550 | chk_quest:13550,1,1,1 | prize  
+54 13941 T1 lv 1 - 200 | Self-improvement | 33080 ~ -> 32289 LiGui 1002 565 632 | lua:UpgradeEquipment,</F>ClientTaskTemplate_QuestinfoFunc</N>13941</N>634 | chk_quest:13941,1,1,20 | prize  
+55 13551 T1 lv 1 - 200 | Food for Horse | 32289 LiGui -> 32299 Carrot 1002 595 398 | lua:Carrot,</F>ClientTaskTemplate_QuestinfoFunc</N>13551 | chk_quest:13551,1,1,1 | lua:Carrot,</F>ClientTaskTe | prize  
+56 13892 T1 lv 1 - 200 | Suppress Bandits | 32299 Carrot -> 32475 ~ 1002 620 389 | lua:Mary,</F>ClientTaskTemplate_QuestinfoFunc</N>13892 | chk_quest:13892,1,1,1 | prize  
+57 13552 T1 lv 1 - 200 | Suppress Bandits | 32475 ~ -> 32475 ~ 1002 620 389 | lua:Marauder,</F>ClientTaskTemplate_QuestinfoFunc</N>13552 | chk_quest:13552,1,1,5 | prize  
+58 13553 T1 lv 1 - 200 | Suppress Bandits | 32475 ~ -> 32300 Mary 1002 650 391 | lua:Mary,</F>ClientTaskTemplate_QuestinfoFunc</N>13553 | chk_quest:13553,1,1,1 | prize  
+59 13921 T1 lv 1 - 200 | Check Letter | 32300 Mary -> 32300 Mary 1002 650 391 | lua:Letter,</F>ClientTaskTemplate_QuestinfoFunc</N>13921 | chk_quest:13921,1,1,1 | prize  
+60 13554 T1 lv 1 - 200 | Obtain a Horse | 32300 Mary -> 32295 Drunkard 1002 499 311 | lua:Drunkard,</F>ClientTaskTemplate_QuestinfoFunc</N>13554 | chk_quest:13554,1,1,1 | prize  
+   branches: ['13875', '13915']
+61 13875 T1 lv 1 - 200 | Master Equipment Upgrade | 32295 Drunkard -> 32295 Drunkard 1002 499 311 | lua:EquipmentUpgrade,</F>ClientTaskTemplate_QuestinfoFunc</N>13875</N>634 | chk_quest:13875,1,1,30 | prize  
+62 13555 T1 lv 1 - 200 | Strength Certification | 32295 Drunkard -> 32287 LieutenantChen 1002 452 451 | lua:LieutenantChen,</F>ClientTaskTemplate_QuestinfoFunc</N>13555 | chk_quest:13555,1,1,1 | prize  
+63 13912 T1 lv 1 - 200 | Strength Certification | 32287 LieutenantChen -> 32287 LieutenantChen 1002 452 451 | lua:LieutenantChen,</F>ClientTaskTemplate_QuestinfoFunc</N>13912 | chk_quest:13912,1,1,1 | prize  
+64 13913 T1 lv 1 - 200 | Strength Certification | 32287 LieutenantChen -> 32287 LieutenantChen 1002 452 451 | lua:Nightmare,</F>ClientTaskTemplate_QuestinfoFunc</N>13913 | chk_quest:13913,1,1,1 | prize  
+65 13883 T1 lv 1 - 200 | Strength Certification | 32287 LieutenantChen -> 32287 LieutenantChen 1002 452 451 | lua:LieutenantChen,</F>ClientTaskTemplate_QuestinfoFunc</N>13883 | chk_quest:13883,1,1,1 | prize  
+66 13922 T1 lv 1 - 200 | Song Shiyu`s Request | 32287 LieutenantChen -> 32481 SongShiyu 1002 557 491 | lua:SongShiyu,</F>ClientTaskTemplate_QuestinfoFunc</N>13922 | chk_quest:13922,1,1,1 | prize  
+67 13893 T1 lv 1 - 200 | New Journey | 32481 SongShiyu -> 32476 MapleForestPortal 1002 961 557 | lua:MapleForest,</F>ClientTaskTemplate_QuestinfoFunc</N>13893 | chk_quest:13893,1,1,1 | prize  
+68 13557 T1 lv 1 - 200 | Mary`s Identity | 32476 MapleForestPortal -> 32301 Mary 1011 156 238 | lua:Mary,</F>ClientTaskTemplate_QuestinfoFunc</N>13557 | chk_quest:13557,1,1,1 | prize  
+69 13558 T1 lv 1 - 200 | Gift | 32301 Mary -> 32302 MillionJohn 1011 155 241 | lua:MillionJohn,</F>ClientTaskTemplate_QuestinfoFunc</N>13558 | chk_quest:13558,1,1,1 | prize  
+70 14040 T1 lv 1 - 200 | Check Letter | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:Letter,</F>ClientTaskTemplate_QuestinfoFunc</N>14040 | chk_quest:14040,1,1,1 | prize  
+71 14041 T1 lv 1 - 200 | Gift | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:MillionJohn,</F>ClientTaskTemplate_QuestinfoFunc</N>14041 | chk_quest:14041,1,1,1 | prize  
+72 13559 T1 lv 1 - 200 | Learn to Make Socket | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:MakingSocket,</F>ClientTaskTemplate_QuestinfoFunc</N>13559 | chk_quest:13559,1,1,1 | prize  
+73 13560 T1 lv 1 - 200 | Master Making Socket | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:MakingSocket,</F>ClientTaskTemplate_QuestinfoFunc</N>13560</N>634</N>100 | chk_quest:13560,1,1,2 | prize  
+74 14080 T1 lv 1 - 200 | Twilight Towers | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:DawnTower,</F>ClientTaskTemplate_QuestinfoFunc</N>14080</N>2420</N>8 | chk_quest:14080,1,1,10 | prize  
+75 14084 T1 lv 1 - 200 | Battle Preparation | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:EquipmentComposing,</F>ClientTaskTemplate_QuestinfoFunc</N>14084</N>634</N>3 | chk_quest:14084,1,1,40 | prize  
+76 13561 T1 lv 1 - 200 | Deal | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:MillionJohn,</F>ClientTaskTemplate_QuestinfoFunc</N>13561 | chk_quest:13561,1,1,1 | prize  
+77 13562 T1 lv 1 - 200 | Suppress Bandits | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:Bandit,</F>ClientTaskTemplate_QuestinfoFunc</N>13562 | chk_quest:13562,1,1,2 | prize  
+78 13563 T1 lv 1 - 200 | Careerist List | 32302 MillionJohn -> 33081 MillionJohn 1011 216 312 | lua:MillionJohn,</F>ClientTaskTemplate_QuestinfoFunc</N>13563 | chk_quest:13563,1,1,1 | prize  
+79 13564 T1 lv 1 - 200 | Dance Enthusiast | 33081 MillionJohn -> 32303 Lisa 1011 189 270 | lua:Lisa,</F>ClientTaskTemplate_QuestinfoFunc</N>13564 | chk_quest:13564,1,1,1 | prize  
+80 13565 T1 lv 1 - 200 | Learn about Sub-class | 32303 Lisa -> 32303 Lisa 1011 189 270 | lua:JoiningSub-class,</F>ClientTaskTemplate_QuestinfoFunc</N>13565 | chk_quest:13565,1,1,1 | prize  
+81 13566 T1 lv 1 - 200 | Elimination Plan | 32303 Lisa -> 32302 MillionJohn 1011 155 241 | lua:MillionJohn,</F>ClientTaskTemplate_QuestinfoFunc</N>13566 | chk_quest:13566,1,1,1 | prize  
+82 13942 T1 lv 1 - 200 | Battle Preparation | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:MillionJohn,</F>ClientTaskTemplate_QuestinfoFunc</N>13942 | chk_quest:13942,1,1,1 | prize  
+83 13943 T1 lv 1 - 200 | Battle Preparation | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:EquipmentUpgrade,</F>ClientTaskTemplate_QuestinfoFunc</N>13943</N>634 | chk_quest:13943,1,1,40 | prize  
+84 13917 T1 lv 1 - 200 | Deathtrap | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:DeathtrapGuide,</F>ClientTaskTemplate_QuestinfoFunc</N>13917 | chk_quest:13917,1,1,1 | prize  
+85 13918 T1 lv 1 - 200 | Deathtrap | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:Deathtrap,</F>ClientTaskTemplate_QuestinfoFunc</N>13918</N>2407</N>1 | chk_quest:13918,1,1,1 | prize  
+86 13567 T1 lv 1 - 200 | Eliminate Careerist | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:Careerist,</F>ClientTaskTemplate_QuestinfoFunc</N>13567 | chk_quest:13567,1,1,2 | prize  
+   branches: ['13894', '13895']
+87 13894 T5 lv 1 - 200 | Eliminate Careerist | 32302 MillionJohn -> 32302 MillionJohn 1011 155 241 | lua:Careerist,</F>ClientTaskTemplate_QuestinfoFunc</N>13894 | chk_quest:13894,1,1,3 | prize  

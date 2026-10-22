@@ -1,0 +1,2 @@
+# QahrMobile packet layouts: two-player tests (tester2). The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+# (the MsgPlayer 2292 SzBuf fix is in character.txt, the MsgTrade 2029 action mapping in social.txt)

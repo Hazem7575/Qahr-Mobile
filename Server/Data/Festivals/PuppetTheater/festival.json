@@ -1,0 +1,41 @@
+{
+  "key": "PuppetTheater",
+  "name_ar": "خيوط الرعب (هالوين 2025)",
+  "name_en": "Strings of Terror",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "10-28",
+    "end": "11-17",
+    "_note": "Official: Cn_Res STR_LUAUI_25HALLOWEENMAIN_TIME 'Oct. 28 - 08:59 (US)/16:59 (EU), Nov. 17' (CN lua header 10.28-11.17). Server local time. NOTE: overlaps Halloween2024 / HalloweenSenluo2023 if those are yearly too."
+  },
+  "announce_ar": "بدأ الهالوين: خيوط الرعب (Strings of Terror)! دوس على الزرار اللي فوق.",
+  "announce_en": "Strings of Terror has started!",
+  "maps": [
+    1002,
+    12818,
+    1004398,
+    1004399,
+    1004400,
+    1004401,
+    1004402,
+    1004403
+  ],
+  "notes": "2026-10-15 COMPLETE: Strings of Terror is playable (Base/PuppetTheater: PuppetTheaterUi.cs, PuppetTheaterGame.cs, PuppetNpcs.cs). Main window with real data; the 10 exploration boards (official board window 10771003, official event names/texts, DERIVED layouts + SP cost); Challenge boss = official story quests 9186-9201 (quests.json, private copies of 1004398-1004403 -> maps.txt doc 12473 2019halloween_new DERIVED) then private boss fights with S/A/B rating; Puppet Home training (official reward lists 301001-301003); Terror Points milestones + local ranking (StageSybTemplate 10768001/002); Puppet Finale (Evil Marionette, daily, local); Suyi / Elise Puppet Store (official CP prices) / Strange Spectator in Twin City, Broken Puppet Puppet Adventure in Vault Palace 12818; event boxes open (official contents). DERIVED numbers: Infinity[DB]/PuppetTheater/config.json. Not here: cross-server Finale/rankings, ranking mail rewards, String of Fate halo, Mirage hairstyle.",
+  "_quests": [],
+  "_officialMaps": [
+    1004398,
+    1004399,
+    1004400,
+    1004401,
+    1004402,
+    1004403
+  ],
+  "_owner": "batch3",
+  "end_ar": "انتهى الهالوين (خيوط الرعب). نشوفكم السنة الجاية!",
+  "end_en": "The Halloween event has concluded. Looking forward to our next collaboration!",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150348',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150348',['Show']=false,['Red']=0}}",
+  "icon_click": "10768</S>Halloween2025Kua_OpenMain",
+  "_icon": "[PuppetTheater 2026-10-14] official top-bar Fgui button 150348 (client fguibtnconfig, label 'Strings of Terror'); clicks: Base/PuppetTheater/PuppetTheaterUi.cs"
+}

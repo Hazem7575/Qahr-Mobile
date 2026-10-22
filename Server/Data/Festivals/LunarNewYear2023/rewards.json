@@ -1,0 +1,173 @@
+{
+  "_note": "[2026-10-15 COMPLETE] Ingot Store = GiltSwirl's exchanges: Spring Ingots 3340356 (2 per wish, official DrawInfo) for the boxes the official wish wheel / stage rewards show. Prices DERIVED (the official store table is server-side).",
+  "npcText": {
+    "31153": {
+      "ar": "عام جديد سعيد! افتح زرار New Year فوق: الحكايات الثلاثة، المهام اليومية، كروت الكلاسات، والأمنيات. وعندي Ingot Store كمان.",
+      "en": "Happy New Year! Open the New Year button: the 3 spring stories, the daily quests, the Class Cards and Miss Bunny's wishes. I also keep the Ingot Store."
+    },
+    "8840002": {
+      "en": "Maple Forest is quiet again... almost.",
+      "ar": "غابة القيقب هادية تاني... تقريبًا."
+    },
+    "8840003": {
+      "en": "Welcome to Bunny Village!",
+      "ar": "أهلاً بيك في قرية الأرانب!"
+    },
+    "8840009": {
+      "en": "One day I will fly again.",
+      "ar": "يوم من الأيام هطير تاني."
+    }
+  },
+  "exchanges": [
+    {
+      "id": "ingot_3340357",
+      "npc": 31153,
+      "text_ar": "20 سبرنج إنجوت ← كيس نمو (S)",
+      "text_en": "20 Spring Ingots -> Spring Growth Bag (S)",
+      "cost": {
+        "items": [
+          {
+            "id": 3340356,
+            "count": 20
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3340357,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80,
+      "_note": "DERIVED price"
+    },
+    {
+      "id": "ingot_3340358",
+      "npc": 31153,
+      "text_ar": "100 سبرنج إنجوت ← كيس نمو (L)",
+      "text_en": "100 Spring Ingots -> Spring Growth Bag (L)",
+      "cost": {
+        "items": [
+          {
+            "id": 3340356,
+            "count": 100
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3340358,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80,
+      "_note": "DERIVED price"
+    },
+    {
+      "id": "ingot_3340359",
+      "npc": 31153,
+      "text_ar": "300 سبرنج إنجوت ← باك الربيع الكلاسيكي",
+      "text_en": "300 Spring Ingots -> Classic Spring Pack",
+      "cost": {
+        "items": [
+          {
+            "id": 3340356,
+            "count": 300
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3340359,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80,
+      "_note": "DERIVED price"
+    },
+    {
+      "id": "ingot_3340360",
+      "npc": 31153,
+      "text_ar": "800 سبرنج إنجوت ← صندوق اختيار الربيع",
+      "text_en": "800 Spring Ingots -> Spring Selection Box",
+      "cost": {
+        "items": [
+          {
+            "id": 3340356,
+            "count": 800
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3340360,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80,
+      "_note": "DERIVED price"
+    },
+    {
+      "id": "ingot_3340386",
+      "npc": 31153,
+      "text_ar": "800 سبرنج إنجوت ← صندوق كوليكشن الربيع",
+      "text_en": "800 Spring Ingots -> Spring Collection Box",
+      "cost": {
+        "items": [
+          {
+            "id": 3340356,
+            "count": 800
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3340386,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80,
+      "_note": "DERIVED price"
+    },
+    {
+      "id": "ingot_3340362",
+      "npc": 31153,
+      "text_ar": "1500 سبرنج إنجوت ← صندوق جارمنت الربيع",
+      "text_en": "1500 Spring Ingots -> Spring Garment Box",
+      "cost": {
+        "items": [
+          {
+            "id": 3340356,
+            "count": 1500
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3340362,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80,
+      "_note": "DERIVED price"
+    }
+  ]
+}

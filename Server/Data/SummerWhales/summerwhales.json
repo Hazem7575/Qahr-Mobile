@@ -1,0 +1,29 @@
+{
+  "_note": "[SummerWhales 2026-10-14/15] Base/SummerWhales/SummerWhalesUi.cs + SummerWhalesWish.cs (re-read when the file changes). Official: minLevel 80 (tSummerActivePage_DelText[105][1]), enterFromMaps Twin City + Summer Beach ([105][16]), Whale Wish cost 49/490 Wish Conch + 1 Ambergris + 49 Favor per pray, the 20 wheel items and 8 stage packs (client valentinesdayinfo 1255-Darw), transformation costs 15/10 Ambergris and +0.5% per 10 failures, Chi 500 per Ambergris / 1000 per Whale Spirit. DERIVED (marked here): the arrival cell, Scallop cooldown, favorMax, wheel weights, stage thresholds, garment base rate, spirits needed for Whale King (Holy), CP prices (0 = not sold).",
+  "festival": "SummerWhales",
+  "minLevel": 80,
+  "enter": { "map": 11829, "x": 172, "y": 153 },
+  "enterFromMaps": [ 1002, 11829 ],
+  "scallopNpcs": [ 8857001 ],
+  "scallopCooldownMs": 1500,
+  "favorMax": 9800,
+  "_favorMax": "derived: 200 prays x 49 Favor (the bar of DlgSummerMain; the official max is not in the client)",
+  "wish": {
+    "_weights": "derived, one per wheel slot 1..20 (client DlgDrawItemList 1255-Darw order). By the slot colour of DlgDrawItemBg: yellow (garments, mount armor, Whale Spirits) 5, red 25, white 50. Slot 14 (194825) does not exist in this server's itemtype and never wins.",
+    "weights": [ 5, 25, 50, 5, 25, 50, 25, 25, 25, 50, 5, 25, 50, 5, 25, 25, 5, 25, 25, 50 ],
+    "_stageAt": "derived: total prays needed for the 8 official stage packs (DlgRewardItemlist 1255-Darw)",
+    "stageAt": [ 10, 20, 30, 50, 80, 120, 160, 200 ],
+    "cooldownMs": 1500
+  },
+  "transform": {
+    "_garmentBasePermille": "derived: base success rate of the Garment page in 1/1000 (50 = 5.0%). Official: +0.5% per 10 failures, reset after a success.",
+    "garmentBasePermille": 50
+  },
+  "items": {
+    "_spiritsForHoly": "derived: Whale Spirits needed to summon Whale King (Holy) 200774 (the official number is not in the client)",
+    "spiritsForHoly": 30,
+    "_prices": "official CP prices are not in the client: 0 = not sold",
+    "ambergrisCpPrice": 0,
+    "spiritCpPrice": 0
+  }
+}

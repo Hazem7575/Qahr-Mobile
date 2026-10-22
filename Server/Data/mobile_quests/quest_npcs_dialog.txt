@@ -1,0 +1,574 @@
+# QahrMobile: fallback dialog of the mobile quest NPCs (NpcHandler.MobileQuests.cs). npcId<TAB>name<TAB>text
+16196	TaoistWind	Learn about the Taoist Promotion from Taoist Wind.
+18944	TaoistMoon	Sun King, the Great Master of Taoism, finally acquired the essence of Taoism and obtained a Divine Panacea from the three pure ovens. It`s said heroes who are able to make a Divine Panacea and integrate their weapons with the spirit of Divine Panacea will achieve endless power. However, it`s not that easy. You`ll need guidance from Sun King, profound understanding on art of Taoism, as well as luck.
+18945	TaskmasterChang	Talk to Mr. Wonder (PhoenixCastle 212,196) to learn about the Tempest Wings. Defeat Heaven Roc in the Rainbow Sky to collect Roc`s Feather, and give it to Mr. Wonder to make the mythical Tempest Wings.
+20031	ElderPower	The Elder Power died after teaching you how to switch the combat style. You must keep your promise to the Elder Power that you will defeat the Duke of Hell and protect the Imperial Mausoleum.
+20032	DukeofHell	The fierce fights between you and the Duke of Hell have accidently triggered the emergency switch and the imperial mausoleum began to collapse. Fortunately, you escaped before the tunnels were fully filled with sand. Hurry and report back to the Windwalker Lord.
+20536	HeavenlyMaster	Many of the most ferocious devils are sealed in the Tower of Mystery. Defeat them, and you can collect their spirits to energize the Mystery Pearl on top of the tower. Once activated with enough spirits, the Mystery Pearl will suppress the Fiery Dragon Volcano, giving the Bright Tribe offspring an opportunity to return home. Maybe, you`re the chosen one to change their destiny.
+24091	Chief	Go to CentralPlain (330,598) and kill Apparition.
+24095	BrightRock	Go to Canyon (434,243) and kill GiantApeL53.
+24332	BirdIsland	Enter the inner city battlefield and kill Evil Minions aound Gate Demolisher. Then break the Gate by Gate Demolisher and enter the inner city.
+24333	GateDemolisher	Greetings, traveler.
+24340	DC-ViceCaptain	The long-buried treasure in Desert shows up. DC-Vice Captain invites heroes to hunt the treasure. Don`t miss this. Go!
+24341	AlmightyStatue	You get the Almighty Treasure Map. Go to hunt treasures under the guide of the map.
+24342	PaintingDealer	You pay respects to the Almighty Statue and find a strange pattern on it. Find Painting Dealer to buy Blank Paper and Ink and make a rubbing.
+24363	ArrestCommander	Arrest Commander hopes that you can find and help those missing soldiers.
+24364	BattlefieldDoctor	Soldiers sent to kill the bandits were ambushed and suffered great losses. Please help treat survivors.
+24365	ForestGovernorWong	You found the missing soldiers. Report their situation to Forest Governor Wong.
+24366	WineVendorHo	Enter the Den of Bandits and destroy the secret devices.
+24392	HeraldCheng	Find HeraldCheng and talk to
+24393	ViceCaptainDuan	Go back to Vice Captain Duan.
+24394	PeachTree	Greetings, traveler.
+24465	BanditSentry	Greetings, traveler.
+25057	Mrs.Wu	Mrs.Wu suggests you to learn jumping techniques, so you can get a bigger chance of dodging monster attacks.
+25058	BlacksmithLi	Buy some potions from Pharmacist Wang.
+25059	WangDongliang	Kill some manic Pheasants and help the hero get out of trouble in Wind Plain.
+25060	SongQing	"Taping the screen" is the key to jump high. Song Qing asked you to take the Arrow on the roof for him.
+25062	QingShiyue	Turtledoves are getting manic. Go collect some Turtledove feather.
+25063	Trap	Greetings, traveler.
+25064	Trap	Greetings, traveler.
+25065	Trap	Greetings, traveler.
+25066	FarmerBai	The farmer needs Turtledove feathers to trap Turtledoves. Give him a hand.
+25067	LanXuexin	The farmer`s wife is a demon. In return for your help, she sent you to the Demonfield to improve your strength.
+25068	FishermanXue	The farmer surrounded by Robins is asking you for help.
+25069	Cutie	Zhou Shiqiu went manic suddenly. Go collect Robin Liver to treat him.
+25070	ZhouShiqiu	Collect some tree pollen which may be the cause the monster rampage in Wind Plain.
+25074	WeiShifeng	Kill the Robin King to make collecting Robin Livers easier.
+25075	ZhaoShihai	Talk to Zhao Shihai again for more information.
+25076	ZhangDaqian	Where the demons pass through, the soil become sallow and infertile. Collect some soil for research.
+25080	UnknownSoldier	Unknown soldiers were killed by demons across the river. Avenge their death upon monster.
+25081	HuiKong	Talk to monk Hui Kong and learn how to appease the dead
+25082	HuiJing	Apparitions are clones of the original Apparition. If you can kill the original one, other Apparitions will be severely weakened for years.
+25083	GuShifang	Report back to the castellan about your investigation on monster rampage.
+25084	Drunkard	The drunkard wandering around may be attacked by Wild Wolves. Go help him.
+25085	PastureGrass	Greetings, traveler.
+25086	PharmacistWang	Go to the east gate of Twin City and see what you can do for the guards.
+25087	Dr.Tea	Ask Blacksmith Li to forge a weapon for you.
+25088	WoundedPheasant	The man in black must be involved in the monster rampage. Go clear the demonic Pheasants first.
+25089	Horse	Tell Drunkard that his horses have been fed.
+25090	Lieut.Chen	Heroes are required to register with Lieutenant Chen before entering Twin City at the first time.
+25091	PeiMoli	The hero was stuck here. Go and check.
+25092	SongShiyu	Show the Pheasant Blood to the guards nearby.
+25093	HanShitian	Further investigation on the monster rampage is needed.
+25094	TanShiyun	You scared away Tan Shiyun`s Turtledove and he didn`t want to talk to you any more. Go ask others about the Turtledoves.
+25095	ZhangYouwei	Zhang Youwei was looted by bandits on the way home. His mother is ill. Give him a hand.
+25096	LiuYuyan	Give Liu Yuyan a Robber Blade for self-protection and bring her news to her housemaid.
+25097	HousemaidLiu	Kill bandits in Maple Forest and make sure the two girls can return home safely.
+25098	Mr.Liu	Besides Miss Liu, other grils from rich families were kidnapped by the bandits. Kill some bandits to get more clues.
+25101	MissChen	There are four girls kidnapped, including Miss Chen. Go find them.
+25102	MissWang	Greetings, traveler.
+25103	MissLi	Greetings, traveler.
+25104	MissSun	Greetings, traveler.
+25106	ZhangQuanzhi	The scout squad may need your help.
+25107	WoundedMessenger	The Wounded Messenger told you Phoenix Castle is in danger and asked you to kill the bandits nearby first.
+25108	ZhaoFengling	The undercover agent told you a secret tunnel connecting to the gate of Phoenix Castle. Go and check.
+25109	FallenHelmet	The helmet belongs to the scout squad. Keep searching.
+25110	Bloodstain	Follow the bloodstains on the ground.
+25111	Bloodstain	You found more bloodstains. Keep moving forward.
+25112	FightingTrace	There are weapon scraps on the ground. You`re very close to them now.
+25113	QinFeng	The scouts are all here but severely wounded. Grab some Medicinal Herbs from the bandits.
+25114	HanLang	Greetings, traveler.
+25115	ZhangYu	Greetings, traveler.
+25116	HuangZheng	Greetings, traveler.
+25117	ZhangChengde	Winged Snakes are under the command of the bandit leader. Go kill some Winged Snakes first.
+25118	SunBuzhou	Kill the Winged Snake Chief to frighten the other Winged Snakes.
+25119	WeiWuji	The gatekeeper is also an undercover agent. Go sweep off the Bandit Lair.
+25120	SongQinghong	Demons have infiltrated into the management team of Phoenix Castle. Talk to the Elder.
+25121	LeiWanjun	The village head asks you to capture the fruit thief.
+25122	LeiXiaoguang	To thank you for retrieving the stolen fruits, the village head`s son wants to give you a piece of cloth which is near the river.
+25126	BaiTao	The cloth belonged to the castellan. Explain to the undercover agent that you`re not a thief.
+25127	WangLaoqi	Talk to the woodman about the hat.
+25128	ZhangLaosi	Ask the soldier whether it is the castellan`s hat.
+25129	ZhengHong	The soldier asked you to kill some bandits.
+25130	WeiDaxiong	Seize a bandit and ask him to send you to the entrance of the secret tunnel.
+25135	ZhanHongfei	Ape City may face a doom. Talk to the AC castellan, Zhan Hongfei.
+25136	ZhouYixian	Zhou Yixian found that the demonic animals were fed with Demon Pills. Since all the Macaques have become demonic, you need to kill them all.
+25137	YunJiang	Yun Jiang was digging Spirit Roots to make anti-demonism pills, but she was stuck by furious apes. Go help her.
+25141	XueQingyi	Xue Qingyi asked you to find Xu Daoling with the materials for making pills.
+25142	XuDaoling	Xu Daoling has made a Pill of Truth and he asked you to test the pill on Zhang Zifan.
+25143	ZhangZifan	You`ve cured Zhang Zifan. Go clear Giant Apes and Giant Apes L53 in his way home.
+25144	Mrs.Gongsun	Retrieve Mrs. Gongsun`s Book of Sword Dance from Giant Apes L53.
+25145	LanYouluo	Lan Youluo was injured and asked you to teach Tang Ruoxi the Book of Sword Dance.
+25146	TangRuoxi	Greetings, traveler.
+25147	WangChuyi	The Array of Justice was deployed by Wang Chuyi against the demonic beasts, but three of the array eyes were damaged. Please help Wang Chuyi fix them.
+25148	StarEye	Greetings, traveler.
+25149	SolarEye	Greetings, traveler.
+25150	AuroEye	Greetings, traveler.
+25151	LiGuanghan	Li Guanghan asked you to eliminate the Thunder Apes attacking Ape City.
+25152	GuoFenxian	Thunder Apes are gathering around Ape City. Kill the Thunder Ape King and receive the Thunder Bead to frighten the apes away.
+25153	YangXiaotian	Defeat the Ancient Ape in the Cloud Cave to receive Heaven Fan.
+25154	YueShan	Honoring the ancestors can bring us blessings.
+25155	LiangXiao	Liang Xiao asked you to collect 3 Snake Herbs nearby.
+25245	ZhuShun	Talk to Zhu Shun for information.
+25246	MurongQiu	Murong Qiu has approved Li Guoding`s request to battle. Meanwhile, the master of Abyss Palace - Remote Killer - was turned out to be the man behind the desert riot. A fierce battle is on the verge of breaking out.
+25247	ZhaoGongming	A grand feast has been prepared for your triumphant return. Tang Jingtian also has a great reward for you.
+25248	BirdmanFlock	Greetings, traveler.
+25249	BirdmanFlock	Greetings, traveler.
+25250	BirdmanFlock	Greetings, traveler.
+25251	LuYouming	Greetings, traveler.
+25254	SunSimiao	You were attacked by snakes while talking with Sun Simiao about medicinal materials.
+25255	ZhangZhongjin	Zhang Zhongjin told you Snake Gall is the key to treat snakebites. Go kill Snakemen and collect 10 Snake Galls.
+25256	ShiZhen	Shi Zhen asked you test the new medicine on three of his patients.
+25257	DuFan	Greetings, traveler.
+25258	HongChang	Greetings, traveler.
+25259	ChenXiong	Greetings, traveler.
+25260	GugeZheng	The Snake Master is assembling an army to attack Ape City by storm. Talk to Guge Zheng and kill the Snake Master.
+25261	MoBuwen	The Night King may wake up in the Dark Dungeon soon. Mo Buwen is recruiting heroes to prepare for fierce battles.
+25262	ShomoKe	Help the general Shomo Ke kill 15 Sand Monsters.
+25263	MaShiyuan	Ma Shiyuan asked you to collect Black Metal from Sand Monsters.
+25264	OuyangZi	Ouyang Zi has melted the Black Metal into your weapon. Go test your new weapon with the Sand King.
+25265	WeiWuji	Desert City fortification has been enhanced. Wei Wuji asked you to check it again.
+25266	Fortification	Greetings, traveler.
+25267	Fortification	Greetings, traveler.
+25268	Fortification	Greetings, traveler.
+25269	Fortification	Greetings, traveler.
+25270	ZhouQingshu	Zhou Qingshu found the trace of Hill Monsters. He wants to use Tempest Wings to attract brilliant heroes to assist him.
+25271	ZhouQingyun	Zhou Qingyun asked you to eliminate the Hill Monsters who was under control of demons.
+25272	TangXiaoqian	Tang Xiaoqian was attacked by demons on the way to send water to her husband, Ning Que. The water was spilled and she was wounded. Go collect some water from the Irrigation Well for her.
+25273	IrrigationWell	Greetings, traveler.
+25274	NingQue	Greetings, traveler.
+25275	Yifan	Greetings, traveler.
+25276	CaiKun	Greetings, traveler.
+25277	WangXuance	Wang Xuance gave you a gem and asked you to defeat the Rock Monsters in front.
+25278	GaoXianzhi	Gao Xianzhi asked you to kill Rock Monsters and snatch their rocks.
+25279	GanJiang	Gan Jiang hurted his arm in work. He asked you to turn on the Forging Workbench by yourself.
+25280	ForgingWorkbench	Greetings, traveler.
+25281	LonelySwordsman	The assault of Blade Ghosts caused heavy casualties. Lonely Swordsman needs your assistance.
+25282	LiGuoding	Li Guoding survived the assault of Blade Ghosts. He asked you to collect weapons from Blade Ghosts, so he can reassemble an army.
+25283	TangJingtian	Tang Jingtian got a lot of information while travelling around to do business. He`d like to reward you with an important news about Bird Island.
+25284	HuangpuGe	The road to Bird Island is filled with dangers. Upgrade your character level to 95 before hitting the road.
+25285	XiaoZhengnan	According to Xiao Zhengnan, monsters and human beings live in harmony on Bird Island. He asked you to bring him a bottle of water in exchange for the stories of Bird Island.
+25286	Pond	Greetings, traveler.
+25287	BICaptain	The BI Captain asked you to talk to Zhan Yun at the outpost.
+25288	ZhanYun	Days before, the leader of the investigation team saw several abnormal Birdman Messengers. He might have some clues.
+25289	ZhangYong	Besides the little devils, the Bird Queen has also become manic.
+25317	ChuShihan	Go out of the gate and walk in southeast direction to reach Maple Forest. Phoenix Castle is located in the forest.
+25319	QiuRufeng	Qiu Rufeng needs your help.
+26486	Donald	Join in Fun Capsule.
+26571	ZealousMan	Join in Summer Passion Feast.
+26809	PoetQin	Build Magpie Bridge.
+27788	Mr.White	It`s said that there was some power flowing around four places in Desert City. It may be the power of the Divine Beast Cores. Use the Eight-Trigram Plate and help Mr.White collect 4 Divine Beast Cores.
+30887	Flett	Greetings, traveler.
+30893	Chinju	Monsters are wandering outside these days. Please tell people to stay alert.
+30916	Armorer	A client desperately needs 3 Herbs to save someone`s life.
+30917	ElderDisciple	Greetings, traveler.
+30918	Shopkeeper	Greetings, traveler.
+30919	ChuShihan	Greetings, traveler.
+30920	Herb	Greetings, traveler.
+30921	IronOre	Greetings, traveler.
+30922	Branch	Greetings, traveler.
+30923	DemonicSpot	Greetings, traveler.
+31038	Aeneas	Trojans came to the city with an ancient secret and the sparkle of hope will spread far and wide.
+32283	SongQing	Enthusiastic Eloise will guide you through the beginner phase. Have fun!
+32284	Shovel	Enthusiastic Eloise will guide you through the beginner phase. Have fun!
+32285	SongShiyu	Although Song Shiyu is a Twin City Guard, he used to be a hunter and is skilled in hunting pheasants.
+32286	InjuredPheasant	There are many interesting things in Wind Plain. Share them to Eloise.
+32287	LieutenantChen	Eloise needs to go to Ape City to investigate the anomaly, but before she leaves, she introduces a reliable soldier to you.
+32288	LiKui	Blacksmith Li Kui is willing to help you, but only if you obtain the materials he wants.
+32289	LiGui	Blacksmith Li Gui wants to defeat his own brother to prove himself, and he requests your help.
+32290	ScorchedEarth	Twin Chief Guard has requested you to investigate the western part of Wind Plain.
+32291	ScorchedEarth	Twin Chief Guard has requested you to investigate the western part of Wind Plain.
+32292	ScorchedEarth	After some investigation, a clue leads to the northwest of Wind Plain.
+32293	UnnamedSoldier	Both the soldier and the monk want these wandering ghosts to be dealt with. Perhaps you can help.
+32294	HuiJing	An Unnamed Soldier firmly believes that the monk in the northwest of Wind Plain is related to the deaths of the City Guards, and you need to go and verify it.
+32295	Drunkard	You need to fulfill the three conditions of Drunkard in order to get a high-quality mount.
+32299	Carrot	You need to fulfill the three conditions of Drunkard in order to get a high-quality mount.
+32300	Mary	You have fulfilled the three conditions. Now it`s time for the merchant to fulfill his promise.
+32301	Mary	Mary`s father, Million John, is interested in you because you rescued Mary. You might as well meet him.
+32302	MillionJohn	Mary`s father, Million John, is interested in you because you rescued Mary. You might as well meet him.
+32303	Lisa	Million John introduces you to one of his friends.
+32304	SongQinghong	Song Qinghong hopes that you can help them overcome their financial difficulties.
+32305	Stranger	The bandits had such a large hideout! This time we have to eliminate them all in one fell swoop.
+32306	BanditSpy	The latest operation to suppress bandits is over. It`s time to report back to John in Phoenix Castle.
+32307	RebirthMaster	Seven scattered gems contain a trace of the Universe Core`s power, and resonating with them is a necessary condition for the first rebirth.
+32308	DragonGem	Seven scattered gems contain a trace of the Universe Core`s power, and resonating with them is a necessary condition for the first rebirth.
+32309	FuryGem	Seven scattered gems contain a trace of the Universe Core`s power, and resonating with them is a necessary condition for the first rebirth.
+32310	MoonGem	Seven scattered gems contain a trace of the Universe Core`s power, and resonating with them is a necessary condition for the first rebirth.
+32311	PhoenixGem	Seven scattered gems contain a trace of the Universe Core`s power, and resonating with them is a necessary condition for the first rebirth.
+32312	VioletGem	Seven scattered gems contain a trace of the Universe Core`s power, and resonating with them is a necessary condition for the first rebirth.
+32313	KylinGem	Seven scattered gems contain a trace of the Universe Core`s power, and resonating with them is a necessary condition for the first rebirth.
+32314	RainbowGem	A mysterious person named Rebirth Master has arrived in Twin City, and it seems like he has come for you.
+32315	Arthur	You`re about to challenge Blood Demon. Talk to Arthur first.
+32316	FireSeal	The sub-demon monsters have been cleared. Inform Arthur of this news to proceed to the next step - unsealing.
+32317	EarthSeal	Ask Arthur about the clue of the Wind Seal.
+32318	WindSeal	Ask Arthur about the clue of the Wind Seal.
+32319	ThunderSeal	You`re about to challenge Blood Demon. Talk to Arthur first.
+32320	SealCrystal	You`re about to challenge Blood Demon. Talk to Arthur first.
+32321	Eloise	Maybe you`ve been to this continent before, or maybe this is your first visit. Either way, meet Eloise to get to know the land first!
+32322	CityGuard	A historian recognized by the World Priestess is undoubtedly a mysterious figure. Twin City seems to be anything but calm because of this mysterious person.
+32323	Aeneas	Twin City seems to be no longer calm because of a mysterious historian.
+32325	Stranger	The creation of Spheres has given many heroes hope for improvement, but this system seems to have caused quite a bit of turmoil for Dunn.
+32326	DunnBurg	The creation of Spheres has given many heroes hope for improvement, but this system seems to have caused quite a bit of turmoil for Dunn.
+32328	Canary	As agreed, after completing the request, you need to find Dunn to understand the true meaning behind Eloise`s words.
+32329	DunnBurg	As agreed, after completing the request, you need to find Dunn to understand the true meaning behind Eloise`s words.
+32330	NoticeBoard	Dunn, who is passionate about collecting historical objects, is anxious because he has lost an important item.
+32331	CovenantAltar	Why did Dunn, who received good news, become even heavier? This may be related to you.
+32333	LostWeapon	After learning that Dunn has lost the Covenant, you decide to start your investigation with the City Guard.
+32334	Bonfire	After learning that Dunn has lost the Covenant, you decide to start your investigation with the City Guard.
+32335	Carpet	After learning that Dunn has lost the Covenant, you decide to start your investigation with the City Guard.
+32336	Stranger	After learning that Dunn has lost the Covenant, you decide to start your investigation with the City Guard.
+32337	Davis	After learning that Dunn has lost the Covenant, you decide to start your investigation with the City Guard.
+32338	DunnBurg	The thief turns out to be a City Guard Officer in Twin City. All of this began from the different interpretations of `protection` by different people.
+32340	Stranger	The debate between Dunn and Davis never reaches a conclusion. If there is anyone in this world who can be a fair judge, it must be Eloise.
+32341	Eloise	The debate between Dunn and Davis never reaches a conclusion. If there is anyone in this world who can be a fair judge, it must be Eloise.
+32342	Dryad	Maple Forest belongs to elves. While the elves and humans are considered allies, there are still many humans who have been punished by the elves for poaching and illegal logging.
+32343	Altar	Maple Forest belongs to elves. While the elves and humans are considered allies, there are still many humans who have been punished by the elves for poaching and illegal logging.
+32344	Ore	Maple Forest belongs to elves. While the elves and humans are considered allies, there are still many humans who have been punished by the elves for poaching and illegal logging.
+32345	ElfGirl	The trip to Maple Forest did not go as smoothly as expected, but it seems that Dunn had anticipated this.
+32346	Stranger	The trip to Maple Forest did not go as smoothly as expected, but it seems that Dunn had anticipated this.
+32347	DunnBurg	Differences in factions, races, and positions can lead to different understandings of justice.
+32348	CloakHerb	Dunn, who believes in repaying kindness, does not want to see his former friend die before his eyes. He requests you to collect herbs for treatment.
+32349	Agrimony	Dunn, who believes in repaying kindness, does not want to see his former friend die before his eyes. He requests you to collect herbs for treatment.
+32350	Waterhead	Dunn, who believes in repaying kindness, does not want to see his former friend die before his eyes. He requests you to collect herbs for treatment.
+32352	Stranger	Eve Trahir, an elf that Dunn admires and envies, not because of her long lifespan, but because of her close friendship with Eloise.
+32354	ElfGirl	Eloise, who is currently in Half Facet, is difficult to find. It`s time to ask her about some historical secrets!
+32356	Stranger	Just as you were talking to Dunn, a disturbance occurred in the Maple Forest Elf territory!
+32357	Eloise	Before you reveal the secrets of the Forbidden Book, you will be the friend Dunn most wants to make.
+32358	Eloise	Eloise, now extremely serious due to Eve`s injury, will entrust you with a task.
+32360	Eloise	To prevent Eve from being targeted by Negative Facet again, Eloise decided to transfer her to the relatively safe Twin City.
+32361	EveTrahir	To prevent Eve from being targeted by Negative Facet again, Eloise decided to transfer her to the relatively safe Twin City.
+32362	Stranger	To prevent Eve from being targeted by Negative Facet again, Eloise decided to transfer her to the relatively safe Twin City.
+32364	EveTrahir	Going through many twists and turns in the process of searching for Eve made Dunn anxious.
+32365	LuFu	LuFu suggests that you buy a horse for transportation. It`s a good suggestion.
+32366	Eloise	The plan to catch turtles in a jar has been discussed, and now, all that remains is to follow Dunn`s steps, but will things go smoothly as planned?
+32367	Celina	No one could have imagined that Dunn would also face the happy dilemma.
+32368	Dailey	In comparison to his own happiness, Dunn seems more willing to focus his energy on significant matters in the Positive Facet.
+32369	Carl	Destroy Magic Crystal to slow down the progress of demons occupying Love Canyon.
+32370	MagicCrystal	Destroy Magic Crystal to slow down the progress of demons occupying Love Canyon.
+32371	MagicCrystal	Destroy Magic Crystal to slow down the progress of demons occupying Love Canyon.
+32372	MagicCrystal	Destroy Magic Crystal to slow down the progress of demons occupying Love Canyon.
+32373	MagicCrystal	Greetings, traveler.
+32374	Eloise	The appearance of 4 gateways has made Lands of Apex and Abyss vulnerable. Go close the one in Wind Plain!
+32375	FacetGateway	The unstable factors affecting your closure of the Facet Gateway have been removed, and it`s time to do the right thing.
+32376	DunnBurg	Upon learning that Eloise is about to return, Dunn pulls you to the entrance of Twin City to prepare for her arrival.
+32377	Portal	After completing the cleanup task of the Facet Gateway incident, you can inquire Eloise about her secrets.
+32378	Stranger	Upon learning that Eloise is about to return, Dunn pulls you to the entrance of Twin City to prepare for her arrival.
+32379	Halma	The plan to catch turtles in a jar has been discussed, and now, all that remains is to follow Dunn`s steps, but will things go smoothly as planned?
+32383	IllusoryHerb	The plan to catch turtles in a jar has been discussed, and now, all that remains is to follow Dunn`s steps, but will things go smoothly as planned?
+32385	Halma	Haka`s series of abnormal behaviors make you suspect deception. After persuading Halma to return to the city, you need to explain to everyone.
+32386	Portal	The plan to catch turtles in a jar has been discussed, and now, all that remains is to follow Dunn`s steps, but will things go smoothly as planned?
+32387	Eloise	After learning the true history from Eloise, it`s time to deliver a heavy blow to Halma!
+32388	RitualMaterial	Why did Halma suddenly leave Lands of Apex and Abyss? A piece of frontline information from Facet Battlefield disrupted the plans you had arranged.
+32389	Eloise	Haka`s plot may involve the ancient Old Days, and you need to inform Eloise of Dunn`s speculation as soon as possible.
+32390	WoodenStake	Haka`s plot may involve the ancient Old Days, and you need to inform Eloise of Dunn`s speculation as soon as possible.
+32391	Carpet	Facing the cunning and powerful Haka, will you, isolated and without support, shoulder this heavy responsibility?
+32392	Stranger	Facing the cunning and powerful Haka, will you, isolated and without support, shoulder this heavy responsibility?
+32393	Portal	Facing the cunning and powerful Haka, will you, isolated and without support, shoulder this heavy responsibility?
+32394	Stranger	Facing the cunning and powerful Haka, will you, isolated and without support, shoulder this heavy responsibility?
+32395	Portal	Facing the cunning and powerful Haka, will you, isolated and without support, shoulder this heavy responsibility?
+32396	Stranger	Facing the cunning and powerful Haka, will you, isolated and without support, shoulder this heavy responsibility?
+32397	GatewayOfPast	With everything settled, it`s time to dispel Dunn`s fears!
+32398	Eloise	The ancient demon is now sealed in the rift. Do you have the courage to unveil its full picture?
+32399	StrangeCoordinate	Another Eloise asked you to investigate three strange coordinates, among which there may be places where facets meet.
+32400	StrangeCoordinate	Another Eloise asked you to investigate three strange coordinates, among which there may be places where facets meet.
+32401	StrangeCoordinate	Eloise seems to have made a new discovery and is about to assign you a challenging task.
+32402	Stranger	Collect the monster materials Eloise wants from Dreadful Iceland.
+32403	EnigmaPortal	After obtaining the monster materials, quickly hand them over to Eloise!
+32405	Bell	Eloise wants you to hand over the strange Slate Fragments to Bell. He might be interested in them.
+32406	EnigmaStone	You obtained two strange materials in Enigma Mine, which might be useful to Bell.
+32407	Slate	Ultimate Purgatory corresponds to the Sphere of Kings in Enigma Domains. The monsters here are very powerful. Once you find the tablet, leave immediately.
+32408	EnigmaPortal	The process of obtaining the Slate was thrilling. It`s time to deliver it to Bell.
+32409	Stranger	Bell is being attacked by monsters from Enigma Domains. You need to go and rescue him.
+32411	Eloise	Enthusiastic Eloise will guide you through the beginner phase. Have fun!
+32416	Bell	You have learned the method to complete the Slate. Quickly tell Bell!
+32420	Arthur	Each elemental seal in Evil Abyss contains a trace of the Universe Core power. Resonate with them and unseal them.
+32421	Arthur	Arthur informed that there are three mounds that might be the location of the seal. Go and dig.
+32424	Mound	Each elemental seal in Evil Abyss contains a trace of the Universe Core power. Resonate with them and unseal them.
+32425	Arthur	Follow the wind and find tornadoes nearby.
+32426	Tornado	Follow the wind and find tornadoes nearby.
+32427	Tornado	Follow the wind and find tornadoes nearby.
+32428	Tornado	Each elemental seal in Evil Abyss contains a trace of the Universe Core power. Resonate with them and unseal them.
+32429	Arthur	Place Thunder Blossom in an area rich in thunder elements, and it can attract the Thunder Seal.
+32430	Clearing	Each elemental seal in Evil Abyss contains a trace of the Universe Core power. Resonate with them and unseal them.
+32474	Stranger	Greetings, traveler.
+32475	Stranger	You need to fulfill the three conditions of Drunkard in order to get a high-quality mount.
+32476	MapleForestPortal	You feel unfamiliar with Maple Forest, but fortunately, Mary is one of the few acquaintances you have.
+32477	LuFu	Twin Chief Guard has requested you to investigate the western part of Wind Plain.
+32478	Eloise	Eloise has entrusted you with a letter. Go find Lisa now.
+32480	EveTrahir	The eagerly waiting Dunn has finally seen your return to the city. Go show off your knowledge!
+32481	SongShiyu	You need to fulfill the three conditions of Drunkard in order to get a high-quality mount.
+32482	Stranger	Kill monsters in Underwater Zone.
+32483	Eloise	Leona claims that the monsters in Enigma Domains will threaten Twin City. She hopes that Chosen Ones can eliminate as many monsters as possible!
+32816	Eloise(???)	The gateway to the Spheres has already opened. Inform Dunn and Eloise of this news!
+32817	Eloise(???)	A mysterious person named Rebirth Master has arrived in Twin City, and it seems like he has come for you.
+32818	Eloise(???)	As a Historian, Dunn is always drawn to any historical secrets. A mysterious Mural depicting unknown history has greatly intrigued him.
+32873	Eloise(???)	The incident of the stolen book has come to an end, but the debate between Dunn and Davis continues.
+33079	Eloise	Display your new skill.
+33080	Stranger	You need to fulfill the three conditions of the Drunken Horse Merchant to obtain a fine steed.
+33081	MillionJohn	Million John introduces you to one of his friends.
+33100	GaWain	Eliminate the pests plaguing the Guild Camp!
+33101	Margaret	Theodore Rick, the merchant-born member in charge of external affairs at the Guild Camp, wants to speak with you.
+33102	TheodoreRick	Cassandra is waiting for you at the camp entrance and seems to have some tasks for you as well.
+33103	Cassandra	Ga Wain, responsible for guarding the camp, is a reliable member of the exploration team. Now he wants to entrust you with a task.
+33821	Eloise	Eloise returns from Facet Battlefield and can lead you into Tomb Facet.
+33822	DunnBurg	Go to Twin City to find historian Dunn and learn about the commission he couldn`t resolve.
+33823	SongQing	Go to Twin City to find Song Qing to learn about the location of the tomb in Half Facet.
+33826	LuFu	Find Song Shiyu in Wind Plain and inquire about Lu Fu`s whereabouts. Then locate Lu Fu and get the slate.
+33827	Drunkard	Seek out the Drunken Horse Merchant in Wind Plain to demand the last slate.
+33829	Dadar	The last slate was sold by the Drunken Horse Merchant to Dadar. Go to Ape City to retrieve the slate.
+33837	HeavenlyMaster	Eloise seems to have some cooperation with Heavenly Master, the Watcher of the Tower of Mystery. She commissions you to deliver a letter.
+33844	KurouMochizuki	Kurou Mochizuki wishes to entrust you with a task. Listen to his request.
+33961	SongQing	Greetings, traveler.
+33963	SarutobiSasuke	Greetings, traveler.
+33964	Eloise	Greetings, traveler.
+33972	SarutobiSasuke	Greetings, traveler.
+33973	KurouMochizuki	Greetings, traveler.
+33974	Eloise	Greetings, traveler.
+33975	HeavenlyMaster	Greetings, traveler.
+33976	Bell	Greetings, traveler.
+34163	SarutobiSasuke	You have completed Ninja Awakening. Go to meet Sarutobi Sasuke to learn about more trials.
+34227	LunarHades	Greetings, traveler.
+34493	Eloise	Dark magic potions have appeared in Twin City, causing riots. Eloise wants the Chosen One to investigate this secretly.
+34496	Mavien	Dark magic potions have appeared in Twin City, causing riots. Eloise wants the Chosen One to investigate this secretly.
+34497	Irandir	Dark magic potions have appeared in Twin City, causing riots. Eloise wants the Chosen One to investigate this secretly.
+34601	Liora	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34602	AzureAster	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34603	Canary	Assist the flower merchant Canary with her task.
+34604	GardenerCarl	Assist the flower merchant Canary with her task.
+34605	Liora	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34606	FlameFlower	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34607	Canary	Assist the flower merchant Canary with her task.
+34608	FarmerHank	Assist the flower merchant Canary with her task.
+34609	Liora	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34610	MoonlitGrass	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34611	Canary	Assist the flower merchant Canary with her task.
+34612	KnightLeon	Assist the flower merchant Canary with her task.
+34613	Liora	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34614	SandLotus	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34615	Canary	Assist the flower merchant Canary with her task.
+34616	HunterBarton	Assist the flower merchant Canary with her task.
+34617	Liora	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34618	MoonlitWaterlily	The florist Liora is very knowledgeable about plants, but she seems to be facing a bit of trouble lately.
+34619	Canary	Assist the flower merchant Canary with her task.
+34620	Gwendolyn	Assist the flower merchant Canary with her task.
+34621	WateringSpot	Regularly tending the garden helps the flowers grow better.
+34622	FertilizingSpot	Regularly tending the garden helps the flowers grow better.
+34623	FertilizingSpot	Regularly tending the garden helps the flowers grow better.
+34919	SnakemanPrimalEidolon	Dark magic potions have appeared in Twin City, causing riots. Eloise wants the Chosen One to investigate this secretly.
+34929	Bell	Dark magic potions have appeared in Twin City, causing riots. Eloise wants the Chosen One to investigate this secretly.
+35015	BlessedGreatMaster	You can add bonus to your equipment and weapon by composing. Speak with BlessedGreatMaster in the market for details.
+35488	Eloise	The halls of Valhalla have been restless lately. Perhaps Eloise knows something.
+35489	SongQing	Song Qing carries a Star Lantern that can reflect the soul`s homeland. Perhaps he can take you to the martyr spirits` origin.
+36383	CSQuestEnvoy	Please go to the Realm to kill enemy soldiers and destroy the crystal.
+36480	Opeth	Greetings, traveler.
+36546	Dain	The return of Dain and the departure of Rebirth Master have opened a new chapter for the city.
+36547	RebirthMaster	Dain knows a lot about Lineage, but little about battling. However, he knows lots of strong heroes.
+36548	Leona	Dain knows a lot about Lineage, but little about battling. However, he knows lots of strong heroes.
+36600	HappyCloud	Fuzhu used to show up in Critter Woods. Follow its trail to investigate the anomalies in the woods.
+36601	AngryCloud	Find boulders to assist villagers in rebuilding the Campsite.
+36603	FootprintSpot	Fuzhu used to show up in Critter Woods. Follow its trail to investigate the anomalies in the woods.
+36606	QuarryArea	Find boulders to assist villagers in rebuilding the Campsite.
+36608	Remnants	Collect remnants to unveil the Critter Parade.
+36752	HolyfireEnvoy	Collect branches of the Soultree near Twin City.
+36753	SoultreeBranch	Collect branches of the Soultree near Twin City.
+36754	SoultreeBranch	Collect branches of the Soultree near Twin City.
+36755	SoultreeBranch	Collect branches of the Soultree near Twin City.
+36756	Woodcutter	Help the Woodcutter cut wood.
+36757	Tree	Help the Woodcutter cut wood.
+36758	GarbageDump	Search for scrap in the Garbage Dump in Twin City.
+36759	GarbageDump	Search for scrap in the Garbage Dump in Twin City.
+36772	Davis	You received a letter from Guard Officer Davis mentioning a mysterious realm abundant with Enigma Stones. Visit him for more details.
+36773	Walter	Enigma Mine is home to numerous monsters from the Half Facet, known as Enigma Domains. Twin City guards are overwhelmed, prompting them to seek external assistance.
+36803	Eloise	The changes that Eloise mentioned may be related to the new expansion.
+36804	Dadar	You learned from Dadar that the stone comes from a secret realm.
+36805	City Guard	A City Guard need your help about a missing person notice in Twin City.
+36806	Portal	You learned from Dadar that the stone comes from a secret realm.
+36807	SecretRealm	Greetings, traveler.
+36808	Winter	Winter is indeed related to the deaths of practitioners; report it to Eloise.
+36809	SeniorMarauder	You learned from the Senior Marauder that Winter might be in the northern Wind Plain.
+36810	Celina	Winter mentioned the Spheres system; he might know about Den Berg.
+36811	Dailey	After learning from Dailey, consult Celina for more information.
+36812	Notice Board	After checking the Notice Board, talk to Dailey to learn more.
+36814	Eloise	Eloise and Dadar arrived in Ape City, but things seem to take a pessimistic turn.
+36908	Bonnie	After the Forbidden Book incident, Dunn became disinterested in promoting the Spheres. As if only uncovering the secrets of the Forbidden Book could restore his vitality.
+36909	MechanismStone	Bonnie has informed you of the entrance to the Rune Facet. Go and unlock the mechanisms.
+36910	MechanismStone	Bonnie has informed you of the entrance to the Rune Facet. Go and unlock the mechanisms.
+36911	MechanismStone	All mechanisms unlocked. Defeat the sentry to prove your strength!
+36912	Portal	Test passed. Prepare to enter the Rune Facet!
+300500	Eternity	Defeat Fury Satan.
+31657	Chest	An old chest is buried here. It is sealed tight.
+34729	chest	An old chest is buried here. It is sealed tight.
+34730	chest	An old chest is buried here. It is sealed tight.
+34731	chest	An old chest is buried here. It is sealed tight.
+34732	chest	An old chest is buried here. It is sealed tight.
+34733	chest	An old chest is buried here. It is sealed tight.
+34734	chest	An old chest is buried here. It is sealed tight.
+34735	chest	An old chest is buried here. It is sealed tight.
+34736	chest	An old chest is buried here. It is sealed tight.
+34737	chest	An old chest is buried here. It is sealed tight.
+34738	chest	An old chest is buried here. It is sealed tight.
+34739	chest	An old chest is buried here. It is sealed tight.
+34740	chest	An old chest is buried here. It is sealed tight.
+34741	chest	An old chest is buried here. It is sealed tight.
+34742	chest	An old chest is buried here. It is sealed tight.
+34743	chest	An old chest is buried here. It is sealed tight.
+34744	chest	An old chest is buried here. It is sealed tight.
+34745	chest	An old chest is buried here. It is sealed tight.
+34746	chest	An old chest is buried here. It is sealed tight.
+34747	chest	An old chest is buried here. It is sealed tight.
+34748	chest	An old chest is buried here. It is sealed tight.
+34749	chest	An old chest is buried here. It is sealed tight.
+34750	chest	An old chest is buried here. It is sealed tight.
+34751	chest	An old chest is buried here. It is sealed tight.
+34752	chest	An old chest is buried here. It is sealed tight.
+34753	chest	An old chest is buried here. It is sealed tight.
+34754	chest	An old chest is buried here. It is sealed tight.
+34755	chest	An old chest is buried here. It is sealed tight.
+34756	chest	An old chest is buried here. It is sealed tight.
+34757	chest	An old chest is buried here. It is sealed tight.
+34758	chest	An old chest is buried here. It is sealed tight.
+34759	chest	An old chest is buried here. It is sealed tight.
+34760	chest	An old chest is buried here. It is sealed tight.
+34761	chest	An old chest is buried here. It is sealed tight.
+34762	chest	An old chest is buried here. It is sealed tight.
+34763	chest	An old chest is buried here. It is sealed tight.
+34764	chest	An old chest is buried here. It is sealed tight.
+34765	chest	An old chest is buried here. It is sealed tight.
+34766	chest	An old chest is buried here. It is sealed tight.
+34767	chest	An old chest is buried here. It is sealed tight.
+34768	chest	An old chest is buried here. It is sealed tight.
+34769	chest	An old chest is buried here. It is sealed tight.
+34770	chest	An old chest is buried here. It is sealed tight.
+34771	chest	An old chest is buried here. It is sealed tight.
+34772	chest	An old chest is buried here. It is sealed tight.
+34773	chest	An old chest is buried here. It is sealed tight.
+34774	chest	An old chest is buried here. It is sealed tight.
+34775	chest	An old chest is buried here. It is sealed tight.
+34776	chest	An old chest is buried here. It is sealed tight.
+34777	chest	An old chest is buried here. It is sealed tight.
+34778	chest	An old chest is buried here. It is sealed tight.
+34779	chest	An old chest is buried here. It is sealed tight.
+34780	chest	An old chest is buried here. It is sealed tight.
+34781	chest	An old chest is buried here. It is sealed tight.
+34782	chest	An old chest is buried here. It is sealed tight.
+34783	chest	An old chest is buried here. It is sealed tight.
+34784	chest	An old chest is buried here. It is sealed tight.
+34785	chest	An old chest is buried here. It is sealed tight.
+34786	chest	An old chest is buried here. It is sealed tight.
+34787	chest	An old chest is buried here. It is sealed tight.
+34788	chest	An old chest is buried here. It is sealed tight.
+34789	chest	An old chest is buried here. It is sealed tight.
+34790	chest	An old chest is buried here. It is sealed tight.
+34791	chest	An old chest is buried here. It is sealed tight.
+34792	chest	An old chest is buried here. It is sealed tight.
+34793	chest	An old chest is buried here. It is sealed tight.
+34794	chest	An old chest is buried here. It is sealed tight.
+34795	chest	An old chest is buried here. It is sealed tight.
+34796	chest	An old chest is buried here. It is sealed tight.
+34797	chest	An old chest is buried here. It is sealed tight.
+34798	chest	An old chest is buried here. It is sealed tight.
+34799	chest	An old chest is buried here. It is sealed tight.
+34800	chest	An old chest is buried here. It is sealed tight.
+34801	chest	An old chest is buried here. It is sealed tight.
+34802	chest	An old chest is buried here. It is sealed tight.
+34803	chest	An old chest is buried here. It is sealed tight.
+34804	chest	An old chest is buried here. It is sealed tight.
+34805	chest	An old chest is buried here. It is sealed tight.
+34806	chest	An old chest is buried here. It is sealed tight.
+34807	chest	An old chest is buried here. It is sealed tight.
+34808	chest	An old chest is buried here. It is sealed tight.
+34809	chest	An old chest is buried here. It is sealed tight.
+34810	chest	An old chest is buried here. It is sealed tight.
+34811	chest	An old chest is buried here. It is sealed tight.
+34812	chest	An old chest is buried here. It is sealed tight.
+34813	chest	An old chest is buried here. It is sealed tight.
+34814	chest	An old chest is buried here. It is sealed tight.
+34815	chest	An old chest is buried here. It is sealed tight.
+34816	chest	An old chest is buried here. It is sealed tight.
+34817	chest	An old chest is buried here. It is sealed tight.
+34818	chest	An old chest is buried here. It is sealed tight.
+34819	chest	An old chest is buried here. It is sealed tight.
+34820	chest	An old chest is buried here. It is sealed tight.
+34821	chest	An old chest is buried here. It is sealed tight.
+34822	chest	An old chest is buried here. It is sealed tight.
+34823	chest	An old chest is buried here. It is sealed tight.
+34824	chest	An old chest is buried here. It is sealed tight.
+34825	chest	An old chest is buried here. It is sealed tight.
+34826	chest	An old chest is buried here. It is sealed tight.
+34827	chest	An old chest is buried here. It is sealed tight.
+34828	chest	An old chest is buried here. It is sealed tight.
+34829	chest	An old chest is buried here. It is sealed tight.
+34830	chest	An old chest is buried here. It is sealed tight.
+34831	chest	An old chest is buried here. It is sealed tight.
+34832	chest	An old chest is buried here. It is sealed tight.
+34833	chest	An old chest is buried here. It is sealed tight.
+34834	chest	An old chest is buried here. It is sealed tight.
+34835	chest	An old chest is buried here. It is sealed tight.
+34836	chest	An old chest is buried here. It is sealed tight.
+34837	chest	An old chest is buried here. It is sealed tight.
+34838	chest	An old chest is buried here. It is sealed tight.
+34839	chest	An old chest is buried here. It is sealed tight.
+34840	chest	An old chest is buried here. It is sealed tight.
+34841	chest	An old chest is buried here. It is sealed tight.
+34842	chest	An old chest is buried here. It is sealed tight.
+34843	chest	An old chest is buried here. It is sealed tight.
+34844	chest	An old chest is buried here. It is sealed tight.
+34845	chest	An old chest is buried here. It is sealed tight.
+34846	chest	An old chest is buried here. It is sealed tight.
+34847	chest	An old chest is buried here. It is sealed tight.
+34848	chest	An old chest is buried here. It is sealed tight.
+34849	chest	An old chest is buried here. It is sealed tight.
+34850	chest	An old chest is buried here. It is sealed tight.
+34851	chest	An old chest is buried here. It is sealed tight.
+34852	chest	An old chest is buried here. It is sealed tight.
+34853	chest	An old chest is buried here. It is sealed tight.
+34854	chest	An old chest is buried here. It is sealed tight.
+34855	chest	An old chest is buried here. It is sealed tight.
+34856	chest	An old chest is buried here. It is sealed tight.
+34857	chest	An old chest is buried here. It is sealed tight.
+34858	chest	An old chest is buried here. It is sealed tight.
+34859	chest	An old chest is buried here. It is sealed tight.
+34860	chest	An old chest is buried here. It is sealed tight.
+34861	chest	An old chest is buried here. It is sealed tight.
+34862	chest	An old chest is buried here. It is sealed tight.
+34863	chest	An old chest is buried here. It is sealed tight.
+34864	chest	An old chest is buried here. It is sealed tight.
+34865	chest	An old chest is buried here. It is sealed tight.
+34866	chest	An old chest is buried here. It is sealed tight.
+34867	chest	An old chest is buried here. It is sealed tight.
+34868	chest	An old chest is buried here. It is sealed tight.
+34869	chest	An old chest is buried here. It is sealed tight.
+34870	chest	An old chest is buried here. It is sealed tight.
+34871	chest	An old chest is buried here. It is sealed tight.
+34872	chest	An old chest is buried here. It is sealed tight.
+34873	chest	An old chest is buried here. It is sealed tight.
+34874	chest	An old chest is buried here. It is sealed tight.
+34875	chest	An old chest is buried here. It is sealed tight.
+34876	chest	An old chest is buried here. It is sealed tight.
+34877	chest	An old chest is buried here. It is sealed tight.
+34878	chest	An old chest is buried here. It is sealed tight.
+34879	chest	An old chest is buried here. It is sealed tight.
+34880	chest	An old chest is buried here. It is sealed tight.
+34881	chest	An old chest is buried here. It is sealed tight.
+34882	chest	An old chest is buried here. It is sealed tight.
+34883	chest	An old chest is buried here. It is sealed tight.
+34884	chest	An old chest is buried here. It is sealed tight.
+34885	chest	An old chest is buried here. It is sealed tight.
+34886	chest	An old chest is buried here. It is sealed tight.
+34887	chest	An old chest is buried here. It is sealed tight.
+34888	chest	An old chest is buried here. It is sealed tight.
+34889	chest	An old chest is buried here. It is sealed tight.
+34890	chest	An old chest is buried here. It is sealed tight.
+34891	chest	An old chest is buried here. It is sealed tight.
+34892	chest	An old chest is buried here. It is sealed tight.
+34893	chest	An old chest is buried here. It is sealed tight.
+5682	Couples PK Guide	Couples can sign up for the Couples PK Tournament at Couples PK Guide every Friday.
+6261	SteedEnvoy	As long as you have a steed and you have learned the mount skills, you can sign up for the horse racing at 15:00 everyday. Compete in the race and win points to exchange for refinery packs and the envy of your peers!
+9439	AuctionManager	Deliver a massage to Auction Manager for Foxie.
+15389	OfficialLong	Official Long is stopping by Twin City (436,390) from Jan. 10th-19th, in order to search for the New Dragon Balls! If you have reached Level 80, go give him a hand!
+18965	GeneralofEndlessTower	In the Endless Tower, there are the world`s most notorious monsters and devils. The heroes who are able to defeat them will earn fabulous treasures. If you`re interested, please pay a visit the General of Endless Tower.
+21351	ZhengWuchang	Nether Prison was formerly used to house the most violent offenders. However, the death-row prisoners turned to the Devil side, and now starts a riot. Come and stop the death-row prisoners from escaping and breaking the world above! Your help will be nicely rewarded!
+28187	Foxie	Kill 100 monsters.
+28329	Cupid	Days are getting shorter and nights are getting longer! Nightmare envelops Cupid! Please collect magical sceptres and bring light back to the world!
+28948	Mendes	Hatred spreads between Osgard and Netherworld! Osgard needs to train more Thunderstrikers to fight against Netherworld. Mendes has prepared a trial ground for you!
+29235	JiaKun	Go to the Flame Dungeon and defeat the Raging Dragon.
+30750	Bonnie	If you want to break through the bottleneck and obtain the stronger power, please go to the Rune Peak and use Resonance Stones to get the power of Runes.
+30760	SuspiciousEntrance1	If you want to break through the bottleneck and obtain the stronger power, please go to the Rune Peak and use Resonance Stones to get the power of Runes.
+30761	SuspiciousEntrance2	If you want to break through the bottleneck and obtain the stronger power, please go to the Rune Peak and use Resonance Stones to get the power of Runes.
+31861	Furnace	A strange furnace has appeared in Twin City, emanating remarkably strong life characteristics.
+31940	InnerPowerAssistant	Strike down 3 Trick Poles under the guidance of Inner Power Assistant.
+31975	InnerPowerAssistant	Use the purification array to purify 9 Devil Wolves.
+32124	Eloise	Eloise felt excited to find a new Half Facet! Let she tell you more about it!
+33285	Fruits	Chang`e is preparing for the ritual of moon worship. Go to help Fairy Bell with preparation.
+33371	Chang`e	Jade Rabbit wants to draw. Please go to the Flower Garden to collect colorful flowers and use them to make painting pigments!
+34113	NozomiMochizuki	Nozomi Mochizuki wants to see you.

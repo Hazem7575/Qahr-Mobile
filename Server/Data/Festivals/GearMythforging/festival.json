@@ -1,0 +1,21 @@
+{
+  "key": "GearMythforging",
+  "name_ar": "تجربة صقل الأسطورة (Mythforging)",
+  "name_en": "Gear Mythforging",
+  "enabled": false,
+  "schedule": {
+    "type": "manual"
+  },
+  "announce_ar": "بدأ حدث تجربة صقل الأسطورة!",
+  "announce_en": "The Gear Mythforging event has started!",
+  "maps": [],
+  "notes": "DISABLED (Agent 4, 2026-10-13): not playable. Quest 4943 needs one 'Gear Mythforging' operation: the server has no Mythforge system (no code, no packet handler, no QuestEngine event). Giving its prize (40703081 L1 Ethereal [Armor], a Mythforge material) without the system would be a useless free item. README_AR.md lists what is missing.",
+  "_quests": [
+    4943
+  ],
+  "_officialMaps": [
+    1002
+  ],
+  "_owner": "agent4",
+  "_batch3": "[batch3 2026-10-14] Still disabled. NPC-only tutorial (no lua/Fgui button). Quest 4943 needs one Gear Mythforging operation and the server has no Mythforge system (no packet handler, no QuestEngine event). Needs the Mythforge system first; then Richy (1002 351,473) + quests.json with event 'mythforge'."
+}

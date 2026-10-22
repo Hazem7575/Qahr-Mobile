@@ -1,0 +1,34 @@
+{
+  "key": "AliceRescue",
+  "name_ar": "إنقاذ أصحاب أليس (عالم المراية)",
+  "name_en": "Wonderland (Alice / Mirror World)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] AprilFools: only the newest official edition (AprilFools2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on AliceRescue. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ حدث Wonderland (أليس وعالم المراية)! دوس على زرار Wonderland اللي فوق.",
+  "announce_en": "The Wonderland event has started! Click Wonderland on the top bar.",
+  "maps": [],
+  "notes": "ENTRY ONLY (AliceRescue agent, 2026-10-14). Official April Fools 2024 'Wonderland' button + main window DlgAliceFoolsDayMainUi with REAL bag counts of Dreamy Star 3347775 / Dream Pearl 3600702 / Treasure Ticket 3347776; Points 0, dragon entry locked. Quests 5837-5841 (rescue the bond partners, prize 3347777 Lovely Fragment) stay unplayable: they are steps of the Mirror World exploration (tCastleBeat2023 floors, fettered partners, Mirror Chests) which this server does not have. Mirror World, dragon slaying, Treasure Ticket shop, points rewards, rankings, Memory Garden (CS) and Vault Palace answer with a polite system message; nothing is consumed or granted. README_AR.md lists what is missing.",
+  "_quests": [
+    5837,
+    5838,
+    5839,
+    5840,
+    5841
+  ],
+  "_officialMaps": [],
+  "_owner": "AliceRescue",
+  "end_en": "Evil Jabba has been defeated, and the wonderland is gradually returning to peace. It`s time to say goodbye to this fantastic and exciting adventure! Looking forward to the next wonderful journey with you!",
+  "end_ar": "Wonderland خلص. نشوفكم السنة الجاية!",
+  "icon_show": "DlgAliceFoolsDayMainBtn_OpenMainBtn|{['Code']=200,['Data']={}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgAliceFoolsDayMainBtn\")",
+  "_icon": "[AliceRescue 2026-10-14] official April Fools 2024 button DlgAliceFoolsDayMainBtn (Dialog_Info 1475-btn, EN 'Wonderland'); click msg 10376 AprilFoolsDayPage2024_OpenMainPage -> Base\\AliceRescue\\AliceRescueUi.cs",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "04-02",
+    "end": "04-15",
+    "_note": "Official: luaUiRes['1475-3'].txt_time 'Duration: Apr. 2 - Apr. 15' (April Fools 2024 Wonderland). Server local time."
+  }
+}

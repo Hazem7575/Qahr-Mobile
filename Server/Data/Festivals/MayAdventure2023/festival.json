@@ -1,0 +1,28 @@
+{
+  "key": "MayAdventure2023",
+  "name_ar": "مغامرة الذكرى السنوية 2023 (Anniversary Adventure)",
+  "name_en": "Anniversary Adventure 2023",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Anniversary: only the newest official edition (Anniversary2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on MayAdventure2023. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأت مغامرة الذكرى السنوية! افتح زرار Adventure فوق (بعد الريبورن التاني).",
+  "announce_en": "The Anniversary Adventure has started! Click the Adventure button at the top (2nd Rebirth).",
+  "end_ar": "انتهت مغامرة الذكرى السنوية. نشوفكم السنة الجاية!",
+  "end_en": "How time flies! The Anniversary Adventure has come to an end.",
+  "maps": [],
+  "icon_show": "OpenDlgMayAdventureMainBtn|{['Code']=200,['Data']={['Red']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgMayAdventureMainBtn\")",
+  "icon_click": "10236</S>AnniversaryAdventure_Open",
+  "_icon": "[MayAdventure2023 2026-10-14] official lua button DlgMayAdventureMainBtn (luaui\\dialog\\dlgmayadventure, Dialog_Info 1380-1, ActBtnConfig[1] BtnId 1380, NeedMetempsychosis 2), shown with the client's own server call OpenDlgMayAdventureMainBtn. Click 10236 AnniversaryAdventure_Open -> Base/MayAdventure2023/MayAdventure2023Ui.cs (DlgMayAdventureMainUi).",
+  "notes": "2026-10-15 COMPLETE: the official Anniversary Adventure window is fully playable (Base/MayAdventure2023). Board: 4 maps x 20 official cells, Move 1/5 costs 1/5 Courage Tokens (Twin City only, no team/booth/blue name, 2nd rebirth), every adventure = 30 Courage Points + a prize from the official reward preview; Treasure Hunt = 1 Courage Pearl -> supplies (Courage Medals / Courage Pack); Exchange Store = Courage Medals -> +3/+5/+7/+8 Stones (B) etc.; Courage Rankings live + official rank rewards (No.1 / 2-3 / 4-6 / 7-10) paid once after the run; tokens from the window's Daily Sign-in Pack and 100/200 Active Points Packs; Courage boxes 3342012-3342017 and Courage Pack 3341965 open (Infinity[DB]/MayAdventure2023/boxes.json). Derived numbers: Infinity[DB]/MayAdventure2023/mayadventure.json. Not possible: the adventure scenes (quests 5924-5933 have no map in the client), Ahriman Battle / Lava Land (maps not in FestivalMaps, Lava Land is cross-server), NPCs Ortner 31610 / Jessica 31611 (official cells unknown).",
+  "_owner": "MayAdventure2023",
+  "_quests": [],
+  "_officialMaps": [],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "05-16",
+    "end": "05-29"
+  }
+}

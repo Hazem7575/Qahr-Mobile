@@ -1,0 +1,24 @@
+# QahrMobile packet layouts: VIP. The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+# (VIP level and reborn count need no layout here: MsgUserInfo 0x6f / 0x5c and MsgPlayer NVipLevel / UcMetempsychosis
+# are in character.txt, MsgUserAttrib types 39 (VIP) and 22 (reborn) are the same numbers on both sides.)
+
+# CMsgVipFunctionValidNotify 10284 (8 bytes): u32 at 4 = the VIP function bitset, Process passes it to
+# CHeroConfigMgr::SetVipAuthority (std::bitset<32>) and posts cmd 0x4db (CDlgVip refresh; IsFucBtnOpen tests it).
+# Server: MsgVipStatus.VipStatusCreate (Player.UpdateVip), u32 VipFlags at 4. Same bits as the PC client.
+[2203 MsgVip struct 8 8]
+4   4   u32     out
+
+# CMsgVipUserHandle 10126 (48 bytes): type u8 4 (0 self teleport, 1 team teleport, 2 teammate confirmation,
+# 3 teammate accepts), transport id 8 (viptrans.ini), countdown 12, leader name char[32] 16
+# (CMsgVipUserHandle::Create(type, id) writes 4 and 8; Process reads 4 == 2, 8, 12 (PostCmd 0xeb9), 16 (MsgBox)).
+# CDlgVipTransport::OnButtonClicked sends type 0, or type 1 when in a team.
+# Server: MsgVipHandler (GetVipHandler / VipHandlerCreate): type u32 4, location u32 8, countdown u32 12,
+# name u16 length 16 + chars 18. The mobile viptrans.ini (34 points) is numbered differently from the server
+# enum VIPTeleportLocations (31 points of the PC VipTrans.ini): server=mobile pairs below; the 3 mobile-only points
+# (7 WindPlain-Farm, 8 WindPlain-Bridge, 32 Desert-Village) go to the server as 32/33/34, which
+# MobileVip.UnknownTeleport answers with a message.
+[2204 MsgVipHandler struct 20 48]
+4   4   u8
+8   8   u32     map 1=1 2=2 3=3 4=4 5=5 6=6 7=9 8=10 9=11 10=12 11=13 12=14 13=15 14=16 15=17 16=18 17=19 18=20 19=21 20=22 21=23 22=24 23=25 24=28 25=27 26=29 27=26 28=30 29=31 30=33 31=34 32=7 33=8 34=32
+12  12  u32
+18  16  str:32  out

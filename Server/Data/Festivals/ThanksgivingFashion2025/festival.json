@@ -1,0 +1,25 @@
+{
+  "key": "ThanksgivingFashion2025",
+  "name_ar": "عيد الشكر 2025: Top Master Campaign",
+  "name_en": "Global Thanksgiving: Top Master Campaign",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "11-25",
+    "end": "12-15",
+    "_note": "Official: Cn_Res STR_LUAUI_DARENXIU_TIME_TXT 'Duration: Nov. 25 - 07:59 (US)/15:59 (EU), Dec. 15, 2025' (client header ERP635973 全球时尚达人活动 11.25-12.15). Sub-events Nov. 25 - Dec. 8 (STR_LUAUI_25QQDRX_ZRKJM_TIME_*). Server local time. Overlaps Thanksgiving2024 (11-19..12-02) if both are enabled."
+  },
+  "announce_ar": "بدأ حدث Top Master Campaign! دوس على زرار Top Master اللي فوق.",
+  "announce_en": "The Top Master Campaign has begun! Click the Top Master button at the top.",
+  "end_ar": "انتهى حدث Top Master Campaign. نشوفكم السنة الجاية!",
+  "end_en": "The Top Master Campaign has ended. See you next year!",
+  "maps": [],
+  "notes": "ThanksgivingFashion2025 (2026-10-14): official 2025 Global Thanksgiving 'Fashion Star' / Top Master Campaign (Skyreach) entry only - top-bar Fgui button 150361 'Top Master', window TalentShow (Fui_TalentShow_Open, msg 10789 tMsg_Info['DaRenXiu']), Main Hall page com_rk (Fgui_25Drx_Rk). Real data: Skyreach Stone 3600820 count from the bag; Skyreach Points 0; all 6 entries show the official open time. Splendor Pavilion, Pinnacle Tower, Land of Fortune, Skyreach Hunt, rankings, Arena/voting and Skyreach Vault answer with a system message; nothing is granted. Code: Base/ThanksgivingFashion2025/ThanksgivingFashion2025Ui.cs. No Questinfo quests.",
+  "_quests": [],
+  "_officialMaps": [],
+  "_owner": "ThanksgivingFashion2025",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150361',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150361',['Show']=false,['Red']=0}}",
+  "icon_click": "10789</S>ThanksgivingNpc2025_MainView",
+  "_icon": "[ThanksgivingFashion2025 2026-10-14] official top-bar Fgui button 150361 'Top Master' (fguibtnconfig, img lua_2025qqssdr_btn9, fguiname TalentShow); click msg 10789 ThanksgivingNpc2025_MainView</N>0 -> Base/ThanksgivingFashion2025/ThanksgivingFashion2025Ui.cs."
+}

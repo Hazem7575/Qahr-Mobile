@@ -1,0 +1,37 @@
+{
+  "packages": [
+    {
+      "name": "Starter Pack",
+      "description": "New player help: 5 Meteors, 1 DragonBall, 10 ExpBalls, 1,000,000 money",
+      "money": 1000000,
+      "cps": 0,
+      "boundCps": 0,
+      "items": [
+        { "id": 1088001, "amount": 5, "bound": false },
+        { "id": 1088000, "amount": 1, "bound": false },
+        { "id": 723700,  "amount": 10, "bound": true }
+      ]
+    },
+    {
+      "name": "Event Reward",
+      "description": "DragonBall(B) + Bound Meteor Pack + 1000 bound CPs",
+      "money": 0,
+      "cps": 0,
+      "boundCps": 1000,
+      "items": [
+        { "id": 3333531, "amount": 1, "bound": true },
+        { "id": 3320717, "amount": 1, "bound": true }
+      ]
+    },
+    {
+      "name": "Donation 1000 CPs",
+      "description": "1000 CPs + +3 Stone Pack",
+      "money": 0,
+      "cps": 1000,
+      "boundCps": 0,
+      "items": [
+        { "id": 720576, "amount": 1, "bound": false }
+      ]
+    }
+  ]
+}

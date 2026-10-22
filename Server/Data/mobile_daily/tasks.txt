@@ -1,0 +1,35 @@
+# QahrMobile: daily activity tasks shown to mobile clients (Daily / activity screen, CMsgActivityTask 2250).
+# Re-read when saved. Docs: D:\conquer\conquer-mobile\docs\DAILY_TASKS.md
+#
+# id        mobile task id (activitytask.ini id / activity_task_type.dat col 1; only ids in the client's
+#           activitytask.ini are displayed, the client skips the rest)
+# progress  times needed (= client Progress / max_num)
+# points    activity points given when complete (= client ActiveValue; the client shows its own value)
+# minlevel  server level needed (0 = any) ; minreborn = server reborn count needed
+# event     what counts one step on the server:
+#             lottery      a Lottery (Lady Luck) draw            (Activeness server task 4)
+#             arena        an arena (qualifier) match won or lost (server task 7 for the winner + MsgArena loser)
+#             teamarena    a team qualifier match fought          (TeamArenaCore.ApplyResult)
+#             chi          a Chi study                            (server task 37)
+#             jianghu      a JiangHu study                        (server task 38)
+#             innerpower   an Inner Power (NeiGong) level trained (MsgInnerPower UpdateGong)
+#             bounty       a Chinju Bounty Hall quest claimed     (MobileQuestBounty.Complete)
+#             quest:N      quest N finished (QuestGUI.FinishQuest)
+#             worldboss    a boss (MonsterRole Boss = 1) killed while the player is on its damage list
+#             kill:M,M..   a monster killed on one of the maps M
+#             login vip online flowers enlight   (server tasks 1 2 3 6 11; no mobile task uses them yet)
+#
+# "client" line: every task id the client can display (its activitytask.ini). Ids there that are not served below
+# (or not open for the player) are removed from the client list with 2250 mode 1 (Del).
+client 170 177 179 180 192 200 201 202 105 106 104 109 103 110 111 112 108 113 107 121
+#
+# id   progress points minlevel minreborn event          # mobile title (open_lev in the client data)
+170    1        30     30       0         lottery        # Bright Fortune (1180)
+177    1        30     70       0         kill:1351,1352,1353,1354  # Labyrinth (1250)
+179    5        10     40       0         arena          # Qualifier (129)
+180    1        10     40       0         teamarena      # Team Qualifier (129)
+201    2        15     110      0         chi            # Chi Canyon (1210)
+106    6        5      37       0         bounty         # Quests of Bounty Hall (37)
+111    1        10     70       0         quest:35249    # Mine Defense (1145)
+110    2        10     55       0         worldboss      # World Boss (55)
+107    10       2      110      0         innerpower     # InPower Schoolwork (2290)

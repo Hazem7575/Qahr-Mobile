@@ -1,0 +1,19 @@
+# Live packet stream for PacketStudio (PacketLogger.cs -> PacketStream)
+# To turn it ON: copy this file as  packetstream.txt  in the same folder (Infinity[DB]) and set a secret.
+# To turn it OFF: delete packetstream.txt. Takes effect within 3 seconds (after the server was built
+# with this feature and restarted once).
+#
+# The server listens on 127.0.0.1 ONLY (never reachable from outside). PacketStudio connects with
+# the same port + secret. Plaintext packets of BOTH directions are pushed (full packet incl. header,
+# without the 8-byte TQ seal). When no tool is connected, the cost is ~zero. A slow tool never
+# blocks the game: old frames are dropped (counted) when its queue is full.
+#
+port=17957
+secret=change-me-please
+#
+# Optional server-side filters (remove the # to use one):
+# player=StarlitVoyage     only this player
+# ids=2226,2015            only these packet ids
+# skip=2036,2020           never these ids (default: nothing skipped)
+# dir=both                 both / in (game->server only) / out (server->game only)
+# queue=50000              frames buffered per tool before dropping the oldest (1000..1000000)

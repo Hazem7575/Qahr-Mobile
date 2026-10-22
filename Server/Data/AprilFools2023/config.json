@@ -1,0 +1,27 @@
+﻿{
+  "_note": "[AprilFools2023 2026-10-15] DERIVED values of the Tricky Wit Trick Maze (Base\\AprilFools2023). Official numbers (room rewards, Clown Box 5-50, mask gifts, stage rewards 500..77777, Mad Clown 50/10/6) are in the code from the client texts and are NOT here.",
+  "minLevel": 80,
+  "mazeMap": 11414,
+  "_mazeMap": "DERIVED: NightmareMaze (GameMap.dat 11414, 2021qixi_new). The official Ordeal Maze floors 11944-11952 are in GameMapEx only, no GameMap.dat doc.",
+  "exit": [1036, 203, 196],
+  "copyMinutes": 60,
+  "pointsPerAmulet": 10,
+  "_pointsPerAmulet": "DERIVED: Trick Points per Trick Amulet used in Dungeon Breaker (official: 'Use Trick Amulets ... earn points'; the stage table goes to 77777).",
+  "chessLength": 20,
+  "gunJump": 3,
+  "chessSoldiers": 3,
+  "roomMinions": 6,
+  "corridorMinions": 4,
+  "masters": 3,
+  "dungeonBreaker": [
+    { "item": 3341223, "count": 1, "weight": 20, "_name": "Maze Key (official item text: Get it from Dungeon Breaker)" },
+    { "item": 3341225, "count": 2, "weight": 30, "_name": "Trick Amulet Fragment" },
+    { "item": 3600461, "count": 1, "weight": 15, "_name": "Maze Pearl" },
+    { "item": 3341270, "count": 1, "weight": 10, "_name": "Perfect Dice" },
+    { "item": 3341304, "count": 1, "weight": 15, "_name": "Joker Knight Fragment" },
+    { "item": 3341305, "count": 1, "weight": 10, "_name": "Playful Player Fragment" }
+  ],
+  "_dungeonBreaker": "DERIVED odds. Only items of the Trick Maze item set (itemtype category 'Trick Maze').",
+  "spots": [[172,76],[212,78],[240,98],[188,106],[218,124],[252,130],[182,140],[90,156],[220,158],[122,168],[86,190],[148,192],[230,202],[168,224],[130,230],[274,232],[222,236],[248,260],[360,262],[282,266],[214,316],[256,320]],
+  "_spots": "DERIVED: open areas (radius 7 walkable) of 2021qixi_new.dmap: [0] gate, [1..19] rooms, [20] Mystery Room, [21] Mad Clown."
+}

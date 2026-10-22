@@ -1,0 +1,27 @@
+{
+  "key": "Qixi2025",
+  "name_ar": "دورات الحب (عيد تشيشي 2025)",
+  "name_en": "Love Cycles",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Qixi: only the newest official edition (SwordSaga) runs on its yearly dates, like the official server; this older edition runs only with @festival on Qixi2025. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ عيد تشيشي: دورات الحب (Love Cycles)! دوس على الزرار اللي فوق.",
+  "announce_en": "Love Cycles has started!",
+  "end_ar": "انتهى عيد تشيشي (دورات الحب). نشوفكم السنة الجاية!",
+  "end_en": "As stars complete their turn, Qixi festivities conclude. Thank you for joining us! May happiness follow you.",
+  "maps": [],
+  "notes": "Qixi2025 (2026-10-14, batch 3): official Global Qixi 2025 'Love Cycles' entry only - top-bar Fgui button 150313 (img 'Love Cycles'), main window Fgui_25Qixi_Xjyy (msg 10726 tMsg_Info['Qixi25'], Base/Qixi2025/Qixi2025Ui.cs). No Questinfo quests, no maps in maps.txt, no ActInfo page. Worldly Test (Worldly Dream instances), Rebuild Bridge (draw), Fate Beast (beast nurturing/reincarnation), stage rewards, ranking and Worldly Store answer with a system message.",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150313',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150313',['Show']=false,['Red']=0}}",
+  "icon_click": "10726</S>QixiMainNpc2025_OpenView",
+  "_icon": "[Qixi2025 2026-10-14] official top-bar Fgui button 150313 (client fguibtnconfig, clickfunc QixiMainNpc2025_OpenView); clicks: Base/Qixi2025/Qixi2025Ui.cs",
+  "_owner": "batch3",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "08-26",
+    "end": "09-15",
+    "_note": "Official duration (client Cn_Res STR_FGUI_25QIXI_SSYC_TIME): Aug. 26 - 08:59 (US)/16:59 (EU), Sept. 15 (2025). CN file header: 全球七夕活动（8.26-9.15）. Items Starmarrow 3600798 / Starway Sand 3353900 expire 08:59 (US), Sept. 15, 2025. Server local time; the US/EU hour offset is ignored. NOTE: overlaps SwordSaga (Qixi 2026, 08-11..08-31) on 08-26..08-31."
+  }
+}

@@ -1,0 +1,9 @@
+# QixiQingqiu2023 (Global Qixi 2023, Jade Hill) festival NPCs - [QixiQingqiu2023 2026-10-15]. Format id,type,mesh,map,x,y
+# Jade Hill = map 12184 (Questinfo; GameMapEx 12247/12248 JadeHill -> doc 12184 qingqiu_new). Spots = Questinfo.ini BeginNpcId/FinishNpcId/[npc ...] of
+# quests 5561/5562, all walkable on the qingqiu_new DMap. Looks = the client's own [JadeHillMemory]/[PeachlandLife] npc types.
+# Dale Lord 31811, Vulpes 31813, Flora 31812, Cooer 31815 and the 4 pixies 31820-31823 already stand on Jade Hill in Infinity[DB]/Npcs.txt (same official spots/looks), so they are not repeated here.
+31816,2,35900,12184,149,109  # GriffinTrace1 (npc.ini 3590 GriffinTrace) - 5561 slot 2
+8872011,2,35900,12184,150,118  # GriffinTrace2 (official id is 31816 too) - 5561 slot 3
+8872012,2,35900,12184,135,103  # GriffinTrace3 (official id is 31816 too) - 5561 slot 4
+31831,2,34030,12184,97,95  # PollutedShard (DERIVED spot: Questinfo map 0 (38,26) is off the walkable ground; DERIVED look npc.ini 3403 PollutedShard) - 5561 slot 5
+31832,2,10360,12184,126,179  # Lily (plant spot of 5562; DERIVED look npc.ini 1036 Lily)

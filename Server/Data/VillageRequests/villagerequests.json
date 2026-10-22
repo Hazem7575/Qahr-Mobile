@@ -1,0 +1,8 @@
+{
+  "_note": "[VillageRequests 2026-10-14] Base/VillageRequests/VillageRequestsUi.cs (re-read when the file changes). Official: minLevel 80 ('Requirement: Level 80'), enter only from Twin City (Market) (tChristmasDraw2024_DelText[SnowMan][MapChk]). Derived: 1036 Market counted as Twin City (Market) too, portalSeconds (the client confirms ~3 s after the portal effect). The Doomwoods copy itself (arrival cell, 60 minutes, exit) is in Festivals/VillageRequests/quests.json 'instances'.",
+  "festival": "VillageRequests",
+  "minLevel": 80,
+  "instance": "Doomwoods",
+  "enterFromMaps": [ 1002, 1036 ],
+  "portalSeconds": 30
+}

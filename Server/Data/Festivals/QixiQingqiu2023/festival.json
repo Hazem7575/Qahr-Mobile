@@ -1,0 +1,29 @@
+{
+  "key": "QixiQingqiu2023",
+  "name_ar": "عيد تشيشي 2023 (تل اليشم)",
+  "name_en": "Global Qixi 2023 (Jade Hill)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Qixi: only the newest official edition (SwordSaga) runs on its yearly dates, like the official server; this older edition runs only with @festival on QixiQingqiu2023. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ عيد تشيشي! دوس على زرار تشيشي اللي فوق وقابل Belle في تل اليشم (لفل 80+).",
+  "announce_en": "The Global Qixi event has started! Click the Qixi button to help Belle restore her power (Level 80+).",
+  "end_ar": "انتهى عيد تشيشي. نشوفكم السنة الجاية!",
+  "end_en": "The Global Qixi event has ended. See you next year!",
+  "maps": [],
+  "icon_show": "Dlg_OpenUI|{['Code']=200,['View']='DlgChineseSaintValentinesDayBtn',['Data']={['Head']={['Func']={'QingQiuMainNpc_OpenMain'}},['Data']={['RedPoint']=0}}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgChineseSaintValentinesDayBtn\")",
+  "icon_click": "10272</S>QingQiuMainNpc_OpenMain",
+  "_icon": "[QixiQingqiu2023 2026-10-14] official lua button DlgChineseSaintValentinesDayBtn (luaui\\dialog\\dlgchinesesaintvalentinesday, Dialog_Info '1399_EnterBTN', anisection 2023qqqx_btn4, BtnId 1399). The button reads g_player_info['DlgChineseSaintValentinesDayBtn'].Head.Func[1], so it is shown with Dlg_OpenUI carrying that table. Func 'QingQiuMainNpc_OpenMain' = the official name (g_function.dat commented CallBackMainFunc). Click -> 10272 (tMsg_Info['DlgChineseSaintValentinesDay']) -> Base/QixiQingqiu2023/QixiQingqiu2023Ui.cs (DlgChineseSaintValentinesDayMain).",
+  "notes": "2026-10-14 build (batch 3). Official Global Qixi 2023 'Jade Hill' (tQingQiuMainNpc / tQixiFestivalMain2023 / tQiXiPart2 / tQiXiPlay5 / tMassifDraw). Entry = the official main window DlgChineseSaintValentinesDayMain: duration Aug. 22 - Sept. 4, the 3 pages (Peachland Life, Fox Tie, Fox Practice) and the 7 Jade Hill Memories (Server_Key Story 1-7 names) all locked = official start state. Real data: bag counts of Clue Bell 3380015 / Marital Stick 3344212 / Marital Fruit 3600624 are shown in the system messages. Not on this server (system message, nothing granted): Jade Hill map (not in FestivalMaps maps.txt; qingqiu_new doc exists only for CrisisSeries), Peachland Life errands (tQiXiPart2 NPC 31811), the 7 Memory plots (PlotEditor 5561-5567, not in Questinfo), Fox Tie matching (QiXiPlay5), Fox Practice draw (MassifDraw), Jade Hill Points, rankings. DERIVED: the unlock cost shown under each locked memory (1 Clue Bell) - the official count is server-side only. No Questinfo quests.",
+  "_owner": "QixiQingqiu2023",
+  "_quests": [],
+  "_officialMaps": {},
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "08-22",
+    "end": "09-04",
+    "_note": "Official: client actbtnconfig ActBtnConfig[9] (23七夕) ActTime '2023-08-22 00:00 2023-09-04 23:59' (same for EU); Server_Key Clue Bell tip 'Spet. 4'. CN lua header says 8.15-8.28 (CN dates). Server local time."
+  }
+}

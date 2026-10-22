@@ -1,0 +1,33 @@
+# Skill ids the mobile client knows under another id (read by Networking\Mobile\MobileMagic.cs, reloads when saved).
+# Format: serverSkill mobileSkill mobileMaxLevel name
+#   serverSkill    = MagicType.txt type the server keeps using (damage, rules, cooldowns)
+#   mobileSkill    = magictype type of the mobile client (icon, name, animation, how the client casts it)
+#   mobileMaxLevel = highest level the mobile magictype has for that skill; a higher server level is shown as this
+#                    level (the mobile has no row for it). The server keeps the real level.
+# Server -> mobile in MsgMagicInfo 2057, MsgInteract 2104 (magic), MsgMagicEffect 2422, MsgMagicColdTime 2369 and
+# MsgAction RemoveSpell 109; mobile -> server in MsgInteract 2104 (field 19 UsData0 = the magic type).
+#
+# Wanderer (class 3000-3005): the mobile 1.1.2.3 has an older Wanderer (26210-26440) than the server (25610-25910).
+# Chosen by magic sort (how the client casts it) and the data columns (range, distance, stamina, effect ids):
+#   CliffCrusher/SwordBurst: same sort 90, range 3, distance 12, power 30300, effect 5151, cold time 5000 (identical).
+#   FinalStand/SwordDash: range 5, distance 20, stamina 15, effect 5200, 10 levels (server sort 21, mobile sort 5).
+#   SwallowDive (69)/SwallowDive-MainLineage (69); the server's status part (sort 6) -> the MinorLineage icon.
+#   MoonwardLeap/SwiftAsWind: both sort 6 self status with 10 levels and the same exp table.
+#   FleetingShadow/Windlike: both sort 6 self status, 1 level, effect 5119.
+#   LonelyBattle/LiuheFormation: both sort 21 (lay trap); the mobile has only level 0.
+#   SkyStep/MightyBlaze: both sort 5 (bomb), distance 14; the mobile has only level 0.
+#   SheathParry/SheathParry: same name (server passive sort 0, mobile sort 60).
+#   WandererNormalATK (87, auto skill on normal attacks)/Repel (sort 1, the mobile's 27-level basic skill).
+#   TempestStrike (127 passive)/LethalCurse (109 passive); TideReversal (reborn)/Tenacity (both sort 6).
+25670 26240 9  CliffCrusher->SwordBurst
+25690 26210 9  FinalStand->SwordDash
+25650 26290 9  SwallowDive->SwallowDive-MainLineage
+25640 26400 9  SwallowDive(status)->SwallowDive-MinorLineage
+25610 26220 9  MoonwardLeap->SwiftAsWind
+25720 26230 0  FleetingShadow->Windlike
+25700 26430 0  LonelyBattle->LiuheFormation
+25780 26410 0  SkyStep->MightyBlaze
+25710 26440 9  SheathParry->SheathParry
+25680 26300 26 WandererNormalATK->Repel
+25620 26250 0  TempestStrike->LethalCurse
+25910 26420 0  TideReversal->Tenacity

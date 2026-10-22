@@ -1,0 +1,29 @@
+{
+  "key": "SportsMeet2024",
+  "name_ar": "دورة ألعاب كونكر الرياضية 2024",
+  "name_en": "CO Sports Games 2024",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] SportsMeet: only the newest official edition (ArenaSports) runs on its yearly dates, like the official server; this older edition runs only with @festival on SportsMeet2024. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأت دورة ألعاب كونكر الرياضية! دوس على زرار CO Sports اللي فوق (لفل 80+).",
+  "announce_en": "The CO Sports Games are about to kick off. Come to experience the charm of competitive sports together!",
+  "end_ar": "انتهت الدورة الرياضية. نشوفكم المرة الجاية!",
+  "end_en": "The sports games have come to an end. Looking forward to our next gathering!",
+  "maps": [],
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150124',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150124',['Show']=false,['Red']=0}}",
+  "icon_click": "10453</S>AugustSportRank_OpenMainDiolog",
+  "_icon": "[SportsMeet2024 2026-10-14] official top-bar Fgui button 150124 (fguibtnconfig FGUI_ActivityMenu['150124'], img luahdshouna_btn5); click msg 10453 AugustSportRank_OpenMainDiolog -> Base/SportsMeet2024/SportsMeet2024Ui.cs (FuiSportsMain 'CO Sports').",
+  "notes": "2026-10-14 build (batch 3). A real seasonal festival, not a permanent activity: ERP593055 'August theme event - CO Sports Games (8.06-8.19)', items expire Aug. 19/22, 2024. Entry = official FuiSportsMain window with real bag counts of Entry Ticket 3349636 / Medal of Honor 3349640 and the 4 Athletics buffs 3349676-3349679, Sports Points 0 (next stage 500), plus the official stage-reward page (PointsRank 10453, 13 stages from the client). Not on this server (system message, nothing granted): the 4 competitions (Horse Racing, Precision Shooting, Synchronized Swimming, Sky Climbing), Individual Ranking / Clan War, cross-server Sports Park, battle pass, Exchange Store, Honor Lottery, rankings. No Questinfo quests, no maps.txt rows.",
+  "_owner": "SportsMeet2024",
+  "_quests": [],
+  "_officialMaps": [],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "08-06",
+    "end": "08-19",
+    "_note": "Official duration: Cn_Res STR_FUI_SPORTS_TIME 'Aug. 6 - Aug. 19', tCoSportNpc2024[33251][Text114] 'Aug. 6, 2024 - Aug. 19, 2024' (ERP593055). Server local time."
+  }
+}

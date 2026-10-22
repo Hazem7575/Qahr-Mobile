@@ -1,0 +1,35 @@
+{
+  "key": "DemonInvasionMadPet",
+  "name_ar": "قطع شجرة الغار + فقاعات الكوابيس (منتصف الخريف 2023)",
+  "name_en": "Hewing Laurel (Nightmare Bubbles)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] MidAutumn: only the newest official edition (DragonSaga) runs on its yearly dates, like the official server; this older edition runs only with @festival on DemonInvasionMadPet. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ حدث Hewing Laurel (قطع شجرة الغار)! دوس على زرار Hewing Laurel اللي فوق.",
+  "announce_en": "Hewing Laurel has started! Click Hewing Laurel on the top bar.",
+  "maps": [],
+  "notes": "2026-10-15 PHASE COMPLETE. Official Mid-Autumn 2023 Hewing Laurel playable from the window: daily Sign-in Pack pills, hewing x1/x10 with the official Normal / Divine Axe pools (15/45 Cultivation), Giant Pill Divine Axe attempts, 44 Cultivation phases (tForce) with phase rewards, Cultivation stage rewards (ActivityId 10295, official items/thresholds), Mystic Travel (strength, Mooncakes, official travel rewards), local Cultivation ranking, open handlers for the reward boxes. Code Base/DemonInvasionMadPet (DemonInvasionMadPetUi.cs, MidAutumnBoxes.cs); config Infinity[DB]/DemonInvasionMadPet/config.json (derived values marked). Missing: dream bubbles / quests 5580-5581 (instances 1002422/24/25 unresolved), Moon Devourer CS, Vault Palace, Moon exchange shop / CP Mall (no item tables in the client), travel encounter events.",
+  "_quests": [
+    5580,
+    5581
+  ],
+  "_officialMaps": [
+    1002422,
+    1002424,
+    1002425
+  ],
+  "_owner": "DemonInvasionMadPet",
+  "end_en": "Hewing Laurel has ended. See you next Mid-Autumn!",
+  "end_ar": "Hewing Laurel خلص. نشوفكم في منتصف الخريف الجاي!",
+  "icon_show": "DlgFellLaurelBtn_OpenMainBtn|{['Code']=200,['Data']={['Rewardflag']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgFellLaurelBtn\")",
+  "_icon": "[DemonInvasionMadPet 2026-10-14] official Mid-Autumn 2023 button DlgFellLaurelBtn (Dialog_Info 1425-btn, EN 'Hewing Laurel'); click msg 10052 MidTree2023_OpenCutTree -> Base\\DemonInvasionMadPet\\DemonInvasionMadPetUi.cs (10052 is shared with AprilFools2026; this handler claims only MidTree2023_* / MidAutumnDreamlandAct_Enter, and the MidAutumnKua_* / ZQExplorePage calls only while running).",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "09-26",
+    "end": "10-09",
+    "_note": "Official: luaUiRes[1425].time 'Duration: September 26 to October 9' (Mid-Autumn 2023 Hewing Laurel). Server local time."
+  }
+}

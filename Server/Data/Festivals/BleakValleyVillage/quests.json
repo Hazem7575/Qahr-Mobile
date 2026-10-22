@@ -1,0 +1,217 @@
+{
+  "_note": "[BleakValleyVillage 2026-10-15] Foison Village reputation quests 7653-7667 (official Questinfo text, NPC ids, cells, objectives). OFFICIAL: the Reputation Officer gives the quests (Server_Key tAniversaryNpc_DelText[36555]: 'Accepting 1 reputation quest will cost 100 Grit Points') -> beginNpc 36555 is a VIRTUAL begin id: the officer script (Base/BleakValleyVillage, NPC 8876001) takes 100 Grit and accepts through QuestEngineCore.AcceptAtNpc(36555). One quest per villager per day = 'pool' per villager (official 'Current Reputation Quest' per villager). Prize: Questinfo shows Spark Logs (3600479); the count 40 is DERIVED. Reputation points per quest are paid by the officer module (bleakvalley.json reputationPerQuest, DERIVED).",
+  "quests": {
+    "7653": {
+      "beginNpc": 36555,
+      "pool": "BV_VillageHead",
+      "repeat": "daily",
+      "beginText": "Help Village Head send some cloth to Yana and pass on some words.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7654": {
+      "beginNpc": 36555,
+      "pool": "BV_VillageHead",
+      "repeat": "daily",
+      "beginText": "Pass on some words to David Liu for Village Head.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      },
+      "finishNpc": 36560,
+      "_note": "Questinfo FinishNpcId says 235,157 (not walkable); David Liu stands at his official [npc] cell 235,184."
+    },
+    "7655": {
+      "beginNpc": 36555,
+      "pool": "BV_VillageHead",
+      "repeat": "daily",
+      "beginText": "Pass on some words to Butcher Liu for Village Head.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7656": {
+      "beginNpc": 36555,
+      "pool": "BV_Yana",
+      "repeat": "daily",
+      "beginText": "Help Yana pick some Primulas.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7657": {
+      "beginNpc": 36555,
+      "pool": "BV_Yana",
+      "repeat": "daily",
+      "beginText": "Help Yana pick some Honeysuckles.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7658": {
+      "beginNpc": 36555,
+      "pool": "BV_Yana",
+      "repeat": "daily",
+      "beginText": "Help Yana pick some Osmanthus.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7659": {
+      "beginNpc": 36555,
+      "pool": "BV_ButcherLiu",
+      "repeat": "daily",
+      "beginText": "Help Butcher Liu drive away Blackcocks.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7660": {
+      "beginNpc": 36555,
+      "pool": "BV_ButcherLiu",
+      "repeat": "daily",
+      "beginText": "Help Butcher Liu drive away Weasels.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7661": {
+      "beginNpc": 36555,
+      "pool": "BV_ButcherLiu",
+      "repeat": "daily",
+      "beginText": "Help Butcher Liu drive away Wild Monkeys.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7662": {
+      "beginNpc": 36555,
+      "pool": "BV_SisterLian",
+      "repeat": "daily",
+      "beginText": "Help Sister Lian clean courtyard.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7663": {
+      "beginNpc": 36555,
+      "pool": "BV_SisterLian",
+      "repeat": "daily",
+      "beginText": "Help Sister Lian clean Sundries.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7664": {
+      "beginNpc": 36555,
+      "pool": "BV_SisterLian",
+      "repeat": "daily",
+      "beginText": "Help Sister Lian clean Sundries.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7665": {
+      "beginNpc": 36555,
+      "pool": "BV_DavidLiu",
+      "repeat": "daily",
+      "beginText": "Help David Liu set Traps to catch hares.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7666": {
+      "beginNpc": 36555,
+      "pool": "BV_DavidLiu",
+      "repeat": "daily",
+      "beginText": "Help David Liu set Steel Traps.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    },
+    "7667": {
+      "beginNpc": 36555,
+      "pool": "BV_DavidLiu",
+      "repeat": "daily",
+      "beginText": "Help David Liu sharpen arrow heads.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600479,
+            "count": 40
+          }
+        ]
+      }
+    }
+  }
+}

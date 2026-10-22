@@ -1,0 +1,27 @@
+{
+  "key": "AprilFools2025",
+  "name_ar": "كدبة أبريل 2025: Fool's Paradise",
+  "name_en": "Global April Fools: Fool's Paradise",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] AprilFools: only the newest official edition (AprilFools2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on AprilFools2025. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ حدث كدبة أبريل (Fool's Paradise)! دوس على زرار Merry Fool Detective اللي فوق.",
+  "announce_en": "Fool's Paradise is open! Click Merry Fool Detective at the top.",
+  "end_ar": "انتهى حدث Fool's Paradise. نشوفكم السنة الجاية!",
+  "end_en": "All members of the Grinning Group have been apprehended, and this farce is finally over. I look forward to our next collaboration!",
+  "maps": [],
+  "notes": "AprilFools2025 (2026-10-14): official 2025 Global April Fools 'Fool's Paradise' entry only - top-bar Fgui button 150260, main window FoolsDayMain (Fui_FoolsDayMain_OpenData, msg 10568, Base/AprilFools2025/AprilFools2025Ui.cs; opens in Twin City/Market only, official [Sys][NoCity]). Real data: Fate Coin 3600774 count from the bag; Detective Points 0. Story (tPlotEditor), Pleasure Vault (CS), Wonder Box wishes (DrawClient_*</N>10568 on 10510), ranking and Joyful Gift Shop answer with a system message. 'Quest (0/8)' progress is derived. Separate from AliceRescue (April Fools 2024).",
+  "_owner": "AprilFools2025",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150260',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150260',['Show']=false,['Red']=0}}",
+  "icon_click": "10568</S>AprilFools2025MainPage_OpenView",
+  "_icon": "[AprilFools2025 2026-10-14] official top-bar Fgui button 150260 (fguibtnconfig, img lua_2025qqyrj_btnrukou); clicks msg 10568 -> Base/AprilFools2025/AprilFools2025Ui.cs.",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "04-01",
+    "end": "04-14",
+    "_note": "Official: Cn_Res STR_FUI_25FOOLSDAY_TIME 'Duration: Apr. 1 - Apr. 14' (client header 【英文征服】全球愚人节活动 4.1-4.14, 2025). Server local time. Overlaps AliceRescue (April Fools 2024) if both are enabled."
+  }
+}

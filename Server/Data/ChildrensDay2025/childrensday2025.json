@@ -1,0 +1,17 @@
+{
+  "_note": "[ChildrensDay2025 2026-10-15] Dream Park numbers that are NOT in the client (DERIVED, edit freely; re-read on change). Official values are fixed in Base/ChildrensDay2025/DreamParkConfig.cs: 50 points per Starwish Stone, VIP store 15000, ranking 20000, max structure 1050 pts, renovation reward = pack + 20 Moonglass, stage thresholds 1000(x999)/5000/10000/20000/40000/60000/80000/120000.",
+  "festival": "ChildrensDay2025",
+  "minLevel": 80,
+  "_qualityPts": "structure Dream Pts for quality 1..7 (Rundown..Legendary); first must be 0, last = the official 1050",
+  "qualityPts": [0, 50, 150, 300, 500, 750, 1050],
+  "_revenueByQuality": "Moonglass per structure per daily park operation, by quality 1..7 (official preview tiers are 25/50/75/100)",
+  "revenueByQuality": [25, 25, 50, 50, 75, 75, 100],
+  "operationStarwish": 1,
+  "eventChancePct": 15,
+  "eventMinMoonglass": 10,
+  "eventMaxMoonglass": 60,
+  "eventSafeMoonglass": 5,
+  "fragmentsPerBox": 30,
+  "_starwishPackWeights": "Starwish Pack (official 3-100 stones): weights of 3-10 / 11-30 / 31-60 / 61-100",
+  "starwishPackWeights": [70, 20, 8, 2]
+}

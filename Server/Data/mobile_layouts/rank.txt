@@ -1,0 +1,24 @@
+# QahrMobile packet layouts: Rankings. The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgRank 10165 (packed struct): action u8 4 (same numbers as MsgGenericRanking.Action), rank type u32 5,
+# total u16 9, page u8 11, u8 12, count u32 13, uid u32 17, then <count> SORT_INFO units of 105 bytes from 21
+# (CMsgRank::Create / Process, CHero::AddGifSortRank). Server: MsgRankProto (+ MsgRankListPlayers per player).
+[2335 MsgRank 21]
+1   4   u8
+2   5   u32
+3   9   u16
+4   11  u8
+5   12  u8
+6   13  u32
+7   17  u32
+8   21  units 105 13
+>   1   0   u8          # Rank
+>   2   1   u64         # Amount
+>   3   9   u32         # UID1
+>   5   17  str:32      # name (CMsgRank shows the name from +17)
+>   6   49  str:32      # name2 (guild / spouse) - offset not checked yet
+>   4   77  u32         # UID2
+>   7   81  u32         # Level (ability score rank: +0x51)
+>   8   89  u32         # Class (ability score rank: +0x59)
+>   9   93  u32         # Mesh
+>   12  97  u32         # AvatarFrame

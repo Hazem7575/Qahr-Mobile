@@ -1,0 +1,8 @@
+{
+  "_note": "[BleakValleyVillage 2026-10-15] Quest monsters of Foison Village (Questinfo 7659 'Drive away [mob Blackcock,12100,180,254]' x10, 7660 '[mob Weasel,12100,64,166]' x1, 7661 '[mob WildMonkey,12100,183,45]' x5). The three names have NO row in the client monster.dat and no look anywhere in the client: festival types 997101-997103 (monsters/*.ini) with DERIVED looks (Blackcock = FlyingRooster look 304, Weasel = FireRat look 202, WildMonkey = EvilMonkey look 156) and DERIVED level-80 stats (BladeGhost L82 template; event requirement Level 80). Boxes centred on the official points.",
+  "spawns": [
+    { "monster": "Blackcock", "map": 12100, "x": 172, "y": 246, "w": 16, "h": 16, "count": 10, "respawn": 20 },
+    { "monster": "Weasel", "map": 12100, "x": 58, "y": 160, "w": 12, "h": 12, "count": 3, "respawn": 20 },
+    { "monster": "WildMonkey", "map": 12100, "x": 175, "y": 37, "w": 16, "h": 16, "count": 8, "respawn": 20 }
+  ]
+}

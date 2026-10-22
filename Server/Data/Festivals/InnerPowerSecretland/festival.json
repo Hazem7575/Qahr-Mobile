@@ -1,0 +1,24 @@
+{
+  "key": "InnerPowerSecretland",
+  "name_ar": "الأرض السرية للقوة الداخلية",
+  "name_en": "Inner Power: Mountain Secretland",
+  "enabled": false,
+  "schedule": {
+    "type": "weekly",
+    "days": [
+      "Sat",
+      "Sun"
+    ]
+  },
+  "announce_ar": "بدأ حدث الأرض السرية للقوة الداخلية! كلّم الحكيم الغامض في توين سيتي (378,383).",
+  "announce_en": "Inner Power: Mountain Secretland has started! Talk to the Mystery Sage in Twin City (378,383).",
+  "maps": [
+    1002
+  ],
+  "notes": "Agent 3 (2026-10-13). One Questinfo TypeId 8 quest: 7108 '[Inner Power] Mountain Secretland' (begin + finish MysterySage 23021, already in Npcs.txt at 1002 378,383 mesh 49290 = npc.ini NpcType4929 MysterySage). DISABLED: its only step 'Pass the inner power quest once' needs a server signal 'innerpower.secretland' raised by the Inner Power dungeon code; the engine knows only 'bountyDone' today, so the quest would never complete. Weekly Sat/Sun is a placeholder schedule (Questinfo ActivityBeginTime=0). Enable after the hook exists.",
+  "_owner": "agent3",
+  "_quests": [
+    7108
+  ],
+  "_batch3": "[batch3 2026-10-14] Still disabled. No festival button (entry = the C++ Inner Power window CDlgNeiGong 673 / Benefit Interface). The server has Inner Power stages (Role\\Instance\\InnerPower.cs) but no Inner Power quest dungeon (Mountain Secretland), so nothing raises QuestEngine event 'innerpower.secretland'. Needs that dungeon; MysterySage 23021 + quests.json are ready."
+}

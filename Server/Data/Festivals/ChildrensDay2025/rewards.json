@@ -1,0 +1,9 @@
+{
+  "_note": "[ChildrensDay2025 2026-10-15] No festival-engine exchanges: Suyi / Prince Puff / Flora / the blessings are scripted in Base/ChildrensDay2025/DreamParkNpcs.cs (official store tables in Infinity[DB]/ChildrensDay2025/stores.json). Greetings below are only a fallback.",
+  "npcText": {
+    "8866001": { "en": "Suyi:\nColorful lights twinkle as the carousel spins, childhood dreams drift with the wind.", "ar": "Suyi: أهلاً بيك في Dream Park!" },
+    "8866002": { "en": "Prince Puff:\nDream Park is opening! Full of childhood wonder and fantasy!", "ar": "Prince Puff: Dream Park فتحت!" },
+    "8866003": { "en": "Flora:\nHow lively Dream Park in Twin City is!", "ar": "Flora: Dream Park في توين سيتي حلوة أوي!" }
+  },
+  "exchanges": []
+}

@@ -1,0 +1,29 @@
+{
+  "key": "Halloween2024",
+  "name_ar": "هالوين 2024 (معبد هاديس)",
+  "name_en": "Macabre Realm",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Halloween: only the newest official edition (PuppetTheater) runs on its yearly dates, like the official server; this older edition runs only with @festival on Halloween2024. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ مهرجان الهالوين (معبد هاديس)! دوس على زرار الهالوين اللي فوق.",
+  "announce_en": "The crimson moon has arrived, and the Temple of Hades is open!",
+  "end_ar": "انتهى مهرجان الهالوين. نشوفكم السنة الجاية!",
+  "end_en": "The Temple of Hades has returned to peace, thanks to your efforts. We shall meet again!",
+  "maps": [],
+  "notes": "Halloween2024 (2026-10-14): official 2024 Global Halloween (Temple of Hades / Duke Macabre) entry only - top-bar Fgui button 150175, main window HalloweenMain (msg 10482 tMsg_Info['Fui24Halloween'], Base/Halloween2024/Halloween2024Ui.cs), official rule page RuleText['10482_1']. Thrill Points are 0 (nothing awards them). Witch House, Grimloft, Silent Hill, Midnight Duel, Devil Valley (CS) and the Thrills Ranking are official server scripts we do not have -> polite system message. Quests 5924-5933 (TypeId 5, tHalloweenNightmare: Jack O`Lanterns / Occult Realm) are NOT included: no evidence links them to the 2024 event (the 2024 window and Server_Key tHalloweenNpc2024 never reference them; they sit in the old low Questinfo sections [1438]+).",
+  "_quests": [],
+  "_officialMaps": [],
+  "_owner": "Halloween2024-agent",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150175',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150175',['Show']=false,['Red']=0}}",
+  "icon_click": "10482</S>HalloweenNpc2024_OpenMain",
+  "_icon": "[Halloween2024 2026-10-14] official top-bar Fgui button 150175 (client fguibtnconfig, img lua_2024qqws_btn1Normal); clicks: Base/Halloween2024/Halloween2024Ui.cs",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "10-22",
+    "end": "11-04",
+    "_note": "Official 10.22-11.4 (client fguibtnconfig / halloweenmain comment 'ERP597236 全球万圣活动（10.22-11.4）'). NOTE: the English window text Cn_Res STR_LUAUI_HALLOWEEN24_TIME says 'Oct. 22 - Nov. 11' - change end to 11-11 if you prefer the EN text. Server local time."
+  }
+}

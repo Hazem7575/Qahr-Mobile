@@ -1,0 +1,23 @@
+{
+  "key": "BruceLeePreheat",
+  "name_ar": "تمهيد صحوة محاربي التنين (Beast Scroll)",
+  "name_en": "Dragon Warriors Awakening Preheat: Beast Scroll",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "No official start/end date in the client: only 'Peach Village will be accessible at 8:00 of Feb. 14.' (luaUiRes[1300].notopentyc), a 7-Day Gift and 'Unlock a Beast Trial every day' (3 beasts). Probably the 7 days before Feb. 14 (2023), NOT confirmed, so it is manual: '@festival on BruceLeePreheat'."
+  },
+  "announce_ar": "التنين النايم قرب يصحى! افتح زرار Beast Scroll اللي فوق (لفل 80+).",
+  "announce_en": "The sleeping dragon is about to wake up! The version of Inspired Dragon Warriors is coming!",
+  "end_ar": "انتهى تمهيد صحوة محاربي التنين.",
+  "end_en": "Sorry, the event is over.",
+  "maps": [],
+  "icon_show": "DlgAwakenBruceLee_OpenMainBtn|{['Code']=200,['Data']={}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgAwakenBruceLeeBtn\")",
+  "icon_click": "10127</S>XiaoLongPreheat_MainView",
+  "_icon": "[BruceLeePreheat 2026-10-14] official lua button DlgAwakenBruceLeeBtn (luaui\\dialog\\dlgawakenbrucelee, Dialog_Info '1300-btn'), shown by DlgAwakenBruceLee_OpenMainBtn (no nTime = no countdown). Click 10127 (tMsg_Info['AwakenBruceLee']) XiaoLongPreheat_MainView -> Base/BruceLeePreheat/BruceLeePreheatUi.cs -> DlgAwakenBruceLee_OpenEntranceView (Beast Scroll).",
+  "notes": "2026-10-14 build (batch 3, legacy lua). Official Dragon Warrior (Bruce Lee class) awakening preheat 'Beast Scroll' (script 2022-10-08; Server_Key tXiaoLongPreheat / tLongPreheating). Entry = the official Beast Scroll window: beast i (Dragon, Kunpeng, Suanni) is open from event day i (derived from the official 'unlocked tomorrow / the day after tomorrow' texts; day 1 = the day this festival started on the server), 7-Day Gift row untouched (nothing claimable), no Peach Village countdown. Not on this server (system message, nothing granted or taken): Beast Trials (Wind Plain / Sea of Sinking Ship / Zhenwu Temple), 7-Day Gift claims (rewards are listed in the client: tDlgAwakenBruceLeeInfo.EntranceItemInfo, but bound/timed items + sign-in rules are server-side), Celestial Pool wishes (Dragon Scales), Peach Village. No Questinfo quests, no official map in FestivalMaps maps.txt.",
+  "_owner": "BruceLeePreheat",
+  "_quests": [],
+  "_officialMaps": {}
+}

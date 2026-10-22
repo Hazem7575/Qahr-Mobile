@@ -1,0 +1,39 @@
+{
+  "_readme": "[CastleMystery 2026-10-15] Castle Startle numbers (Base/CastleMystery/CastleStartle.cs re-reads this file on change). OFFICIAL = client data, DERIVED = not in the client, balanced, change freely.",
+  "keyCps": 20,
+  "fineBoxCps": 199,
+  "fineBoxMax": 20,
+  "grandBoxCps": 999,
+  "grandBoxMax": 5,
+  "_shop": "OFFICIAL: luacfg EmoneySaleShop[33978] (Suyi): Castle Key 20 CPs, Fine Castle Key Box 199 CPs max 20, Grand Castle Key Box 999 CPs max 5 (per character per event year).",
+  "fineBoxKeys": 11,
+  "grandBoxKeys": 55,
+  "_boxes": "OFFICIAL item texts: Fine = 10 + 1 additional Castle Keys, Grand = 50 + 5 additional.",
+  "castlePointsPerKey": 10,
+  "_castlePoints": "DERIVED: Castle Points per used key (official text: keys 'accumulate Castle Points for rankings'; the ranking is cross-server, so the points are only shown).",
+  "anthonyDailyKeys": 1,
+  "_anthony": "OFFICIAL: Lord Anthony gives 'a key' after a chat ([Sys][ADNTip]); once a day is DERIVED.",
+  "keyTreasure": [
+    {
+      "candy": 20,
+      "weight": 600
+    },
+    {
+      "candy": 50,
+      "weight": 250
+    },
+    {
+      "candy": 100,
+      "weight": 100
+    },
+    {
+      "candy": 300,
+      "weight": 40
+    },
+    {
+      "candy": 1000,
+      "weight": 10
+    }
+  ],
+  "_keyTreasure": "DERIVED: what 1 Castle Key gives in the treasure chamber = Chocolate Candy 3352015 (the currency of the official Castle Store). Average ~57 Candy per key, so a 3600-Candy Romantic box needs about 63 keys (~1260 CPs at the official 20 CPs a key)."
+}

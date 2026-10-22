@@ -1,0 +1,37 @@
+{
+  "key": "HalloweenSenluo2023",
+  "name_ar": "هالوين 2023 (الأرض المحرّمة - Macabre Realm)",
+  "name_en": "Global Halloween 2023 (Macabre Realm)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Halloween: only the newest official edition (PuppetTheater) runs on its yearly dates, like the official server; this older edition runs only with @festival on HalloweenSenluo2023. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ هالوين Macabre Realm! افتح زرار الهالوين فوق (لفل 80+).",
+  "announce_en": "The Macabre Realm Halloween event has started! Click the Halloween button at the top (Level 80+).",
+  "end_ar": "انتهى هالوين Macabre Realm. نشوفكم الهالوين الجاي!",
+  "end_en": "The Macabre Realm event has ended. See you next Halloween!",
+  "maps": [
+    1002,
+    12270,
+    12273,
+    12290,
+    12286,
+    12285,
+    12292,
+    12283
+  ],
+  "icon_show": "StrToTable|LuaUIMgr_ShowDialog(\"DlgSenluoHalloweenMainBtn\")",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgSenluoHalloweenMainBtn\")",
+  "icon_click": "10311</S>HallowMonster2023_OpenMain",
+  "_icon": "[HalloweenSenluo2023 2026-10-14] official lua button DlgSenluoHalloweenMainBtn (luaui\\dialog\\dlghalloween23, Dialog_Info 1435-btn, anisection 2023qqws_btn25, BtnId 1435). The client's own show call DlgSenluoHalloweenMainBtn_OpenMainBtn is commented out, so it is shown with LuaUIMgr_ShowDialog. Click 10311 HallowMonster2023_OpenMain -> Base/HalloweenSenluo2023/HalloweenSenluo2023Ui.cs (DlgSenluoHalloweenMainUi).",
+  "notes": "2026-10-15 COMPLETE build. Official dates 10.24-11.06 (luaUiRes_EN[1435].time; actbtnconfig #13, ERP559756). Playable: button + window DlgSenluoHalloweenMainUi (real Macabre Flame/Coin/Points/danger/zone), Death Sideroad (private copy of 12270 = maze file 2021qixi_new, DERIVED), Blood Altar (private copy of 12273 PeripheralZone, official), Macabre Realm window DlgSenluoHalloweenGameUi (4 halls West/North/South/East with Counts Nicolas/Friss/Apada/Jupp: challenge, mop-up, seals, server-wide progress + reward, Mighty Lord with 4 seals + Destiny Card, danger level), Count Dracula 8823001 in Twin City (Macabre Treasury = rewards.json, ranking + ranking boxes), box open handlers (Infinity[DB]\\HalloweenSenluo2023\boxes.json). Derived numbers: Infinity[DB]\\HalloweenSenluo2023\\config.json. Code: Base\\HalloweenSenluo2023\\ (HsKit, HsData, HsZones, HsBoxes, HalloweenSenluo2023Ui). See README_AR.md.",
+  "_owner": "HalloweenSenluo2023",
+  "_quests": [],
+  "_officialMaps": [],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "10-24",
+    "end": "11-06"
+  }
+}

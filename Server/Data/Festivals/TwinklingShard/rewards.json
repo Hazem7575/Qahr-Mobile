@@ -1,0 +1,16 @@
+{
+  "_note": "No exchanges: the 15 quests have no Questinfo Prize. The only official reward of the Shard Search (Wuqu Snow Box for all 5 shards) is claimed in the Twinkling Fest window (Base\\TwinklingShard\\TwinklingShardUi.cs, config Infinity[DB]\\TwinklingShard\\twinklingshard.json). Greetings only.",
+  "npcText": {
+    "8862001": { "en": "The fires of Stellar Spire are out... we need hope.", "ar": "نار برج النجوم انطفت... محتاجين أمل." },
+    "8862006": { "en": "The Twinkling Shard (Hope) glows softly.", "ar": "شظية التلألؤ (الأمل) بتنوّر بهدوء." },
+    "8862011": { "en": "The embankment of Stellar Bay is collapsing!", "ar": "سد خليج النجوم بيقع!" },
+    "8862014": { "en": "The Twinkling Shard (Will) glows softly.", "ar": "شظية التلألؤ (الإرادة) بتنوّر بهدوء." },
+    "8862021": { "en": "Fire rains down on Stellar Tower!", "ar": "النار نازلة على برج النجوم!" },
+    "8862024": { "en": "The Twinkling Shard (Valor) glows softly.", "ar": "شظية التلألؤ (الشجاعة) بتنوّر بهدوء." },
+    "8862031": { "en": "Wisdom is earned, not given.", "ar": "الحكمة بتتكسب، مش بتتدّي." },
+    "8862033": { "en": "The Twinkling Shard (Wisdom) glows softly.", "ar": "شظية التلألؤ (الحكمة) بتنوّر بهدوء." },
+    "8862041": { "en": "Something smells strange in Dawn Star...", "ar": "فيه ريحة غريبة في نجمة الفجر..." },
+    "8862046": { "en": "The Twinkling Shard (Joy) glows softly.", "ar": "شظية التلألؤ (الفرح) بتنوّر بهدوء." }
+  },
+  "exchanges": []
+}

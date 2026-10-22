@@ -1,0 +1,26 @@
+{
+  "key": "Anniversary2026",
+  "name_ar": "إبحار الذكرى السنوية (الذكرى السنوية 2026)",
+  "name_en": "Anniversary Sail",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "04-21",
+    "end": "05-11",
+    "_note": "Official: Server_Key header '2026全球周年庆活动[4.21-5.11]' (ERP660950), Cn_Res STR_FUI_ACTTIME_10883 '4.21-5.11' and STR_FUI_26ZNQCENTER_TIME 'Apr. 21 - May 11'. Server local time."
+  },
+  "announce_ar": "بدأ مهرجان الذكرى السنوية: Anniversary Sail! دوس على الزرار اللي فوق.",
+  "announce_en": "Anniversary Sail has started!",
+  "end_ar": "انتهى مهرجان الذكرى السنوية (Anniversary Sail). نشوفكم السنة الجاية!",
+  "end_en": "The CO: Anniversary Sail event has concluded. Look forward to our next collaboration!",
+  "maps": [],
+  "notes": "Anniversary2026 (2026-10-14, batch 3): official Global Anniversary 2026 'Anniversary Sail' entry only - top-bar Fgui button 150428 (clickfunc AnswerQuestion_OpenMain), main window Fui26ZnqCenter (7 ports, msg 10883 tMsg_Info['ChouJiang26ZNQ'], Base/Anniversary2026/Anniversary2026Ui.cs) and Highlight Events page ActInfo[10883]. No Questinfo quests, the Anniversary Sail map is not in maps.txt. The quiz has no question bank in the client (server data), so the Revival Academy, Naval Drill, Residential Area, Luoxing Pagoda Stargazing, route expansion and rankings answer with a system message.",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150428',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150428',['Show']=false,['Red']=0}}",
+  "icon_click": "10883</S>AnswerQuestion_OpenMain",
+  "highlight_acts": [
+    10883
+  ],
+  "_icon": "[Anniversary2026 2026-10-14] official top-bar Fgui button 150428 (client fguibtnconfig, img lua_2026qqznq_34) + Highlight page ActInfo[10883]; clicks: Base/Anniversary2026/Anniversary2026Ui.cs",
+  "_owner": "batch3"
+}

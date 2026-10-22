@@ -1,0 +1,106 @@
+# [FestivalMaps 2026-10-14] official festival map ids -> doc. Read by Base\FestivalMaps\FestivalMapTable.cs (re-read on change).
+# Columns (TAB): id  wireDoc  officialDoc  file  confidence  evidence
+#   wireDoc = doc the server sends to the client (official doc, or a client_test GameMap.dat id with the SAME file when client_test lacks the official doc id)
+#   confidence A = Questinfo map name / contiguous id block matches the official GameMapEx/GameMap.dat; B = only non-generic doc where every Questinfo point is walkable
+# Evidence tooling: scratchpad fm_qi.py / fm_rank2.py / fm_offset.py (walkability of every Questinfo point on the official DMap).
+# UNRESOLVED (no row on purpose): 13060 MainArena, 11441/11442/11443 Lilac/Beryl/Ginger, 10820 TwinCity(HattoriHanzo), 1001852-1001854 (FairyStories),
+#   1002422/1002424/1002425 (DemonInvasion), 
+#   JellyfishSkyCity 1005623/24/26/27/28/30/32/33/34/35/37 (block docs 13218.. not in any GameMap.dat)
+# [FestivalMaps round 2, 2026-10-15] new rows below: luacfg minimap.lua NPC markers/comments, instance id->doc block, GameMapEx name equality.
+11829	12116	12116	map/map/2014vipholiday.7z	B	[SummerWhales] only non-generic doc where all 6 SummerBeach pts are walkable (2014vipholiday)
+12431	12430	12430	map/map/2024love01_new.7z	A	[TheaterAftermath] GameMapEx [12431]=Theater = [12430]=Theater (2024love01_new); Questinfo DreamTheater 8/8 pts walkable
+1002561	12430	12430	map/map/2024love01_new.7z	A	[TheaterAftermath] Questinfo DreamTheater -> GameMapEx 12430 Theater (2024love01_new); 9/9 pts
+1002614	12519	12519	map/map/2024tsf_new.7z	A	[WenwenDetective] Questinfo TitanRealm -> GameMapEx 12519 TitanRealm(CS) (2024tsf_new); all pts fit
+1002615	12519	12519	map/map/2024tsf_new.7z	A	[WenwenDetective] Questinfo TitanRealm -> GameMapEx 12519 TitanRealm(CS) (2024tsf_new); all pts fit
+1002616	12519	12519	map/map/2024tsf_new.7z	A	[WenwenDetective] Questinfo TitanRealm -> GameMapEx 12519 TitanRealm(CS) (2024tsf_new); all pts fit
+1002617	12519	12519	map/map/2024tsf_new.7z	A	[WenwenDetective] Questinfo TitanRealm -> GameMapEx 12519 TitanRealm(CS) (2024tsf_new); all pts fit
+1002618	12519	12519	map/map/2024tsf_new.7z	A	[WenwenDetective] Questinfo TitanRealm -> GameMapEx 12519 TitanRealm(CS) (2024tsf_new); all pts fit
+1002619	12519	12519	map/map/2024tsf_new.7z	A	[WenwenDetective] Questinfo TitanRealm -> GameMapEx 12519 TitanRealm(CS) (2024tsf_new); all pts fit
+1003040	12544	12544	map/map/house03.7z	A	[BandsTrouble] contiguous block 12544..12549: 4/4 maps fit; 1003042 IceboundFrontier=2019xmas_new, 1003045 Stage=2024stage_new
+1003041	12545	12545	map/map/ninja02_new.7z	A	[BandsTrouble] contiguous block 12544..12549: 4/4 maps fit; 1003042 IceboundFrontier=2019xmas_new, 1003045 Stage=2024stage_new
+1003042	12546	12546	map/map/2019xmas_new.7z	A	[BandsTrouble] contiguous block 12544..12549: 4/4 maps fit; 1003042 IceboundFrontier=2019xmas_new, 1003045 Stage=2024stage_new
+1003045	12549	12549	map/map/2024stage_new.7z	A	[BandsTrouble] contiguous block 12544..12549: 4/4 maps fit; 1003042 IceboundFrontier=2019xmas_new, 1003045 Stage=2024stage_new
+1003074	12599	12599	map/map/ninja02_new.7z	A	[JadeRabbit] Questinfo names RainbowBay/RingMountain/PeakOfEternity = GameMapEx 12599/12600/12603 (same offset)
+1003075	12600	12600	map/map/gsjx05_new.7z	A	[JadeRabbit] Questinfo names RainbowBay/RingMountain/PeakOfEternity = GameMapEx 12599/12600/12603 (same offset)
+1003078	12603	12603	map/map/2019midaut01_new.7z	A	[JadeRabbit] Questinfo names RainbowBay/RingMountain/PeakOfEternity = GameMapEx 12599/12600/12603 (same offset)
+1003099	12814	12814	map/map/2025love01_new.7z	B	[CastleMystery] SecretCastleChamber -> GameMapEx 12814 WilliamCastle (2025love01_new): 19/19 pts
+1003831	12696	12696	map/map/2024xmas_new.7z	B	[VillageRequests] only non-generic doc where 28/28 Doomwoods pts fit (2024xmas_new)
+1003905	12734	12734	map/map/2025tsf_new.7z	B	[WhiteSnakeLegend] 13/13 pts on 2025tsf_new (Snake year); also fit newwoods/kassapa_new/150newmaze_new
+1003981	12780	12780	map/map/fairylandPK-06.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003982	12781	12781	map/map/tiger.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003983	12782	12782	map/map/Nhouse04.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003984	12783	12783	map/map/Nhouse04.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003985	12784	12784	map/map/Nhouse04.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003986	12785	12785	map/map/newcopy04_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003987	12786	12786	map/map/Nhouse03.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003988	12787	12787	map/map/pk.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003990	12789	12789	map/map/fairylandPK-04.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003991	12790	12790	map/map/spirit02_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003992	12791	12791	map/map/ninja02_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003993	12792	12792	map/map/qingqiu_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003994	12793	12793	map/map/newcopy02_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003995	12794	12794	map/map/newcopy03_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003996	12795	12795	map/map/newcopy03_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003997	12796	12796	map/map/stairs01_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003998	12797	12797	map/map/fairylandPK-05.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1003999	12798	12798	map/map/house03.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1004000	12799	12799	map/map/zsjx01_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1004001	12800	12800	map/map/magictower01_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1004002	12801	12801	map/map/lineup-pass.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1004003	12802	12802	map/map/gsjx05_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1004004	12803	12803	map/map/ninja03_new.7z	A	[CrisisSeries] contiguous block 12780..12803: 22/23 maps fit all quest pts
+1005565	13150	13150	map/map/gsjx01_new.7z	A	[TwinklingShard] Questinfo names = GameMapEx 13150..13154 StellarSpire/StellarBay/StellarTower/WisdomArchive/SweetCraft
+1005566	13151	13151	map/map/beach.7z	A	[TwinklingShard] Questinfo names = GameMapEx 13150..13154 StellarSpire/StellarBay/StellarTower/WisdomArchive/SweetCraft
+1005567	13152	13152	map/map/spirit02_new.7z	A	[TwinklingShard] Questinfo names = GameMapEx 13150..13154 StellarSpire/StellarBay/StellarTower/WisdomArchive/SweetCraft
+1005568	13153	13153	map/map/forum01_new.7z	A	[TwinklingShard] Questinfo names = GameMapEx 13150..13154 StellarSpire/StellarBay/StellarTower/WisdomArchive/SweetCraft
+1005569	13154	13154	map/map/chival02_new.7z	A	[TwinklingShard] Questinfo names = GameMapEx 13150..13154 StellarSpire/StellarBay/StellarTower/WisdomArchive/SweetCraft
+1005869	12435	13366	map/map/2024love02_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13366 -> sends 12435 (same file)
+1005870	12479	13367	map/map/clanwar_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13367 -> sends 12479 (same file)
+1005871	12723	13368	map/map/monk02_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13368 -> sends 12723 (same file)
+1005872	10759	13369	map/map/newcopy01_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13369 -> sends 10759 (same file)
+1005873	12444	13370	map/map/spirit02_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13370 -> sends 12444 (same file)
+1005874	12444	13371	map/map/spirit02_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13371 -> sends 12444 (same file)
+1005875	12444	13372	map/map/spirit02_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13372 -> sends 12444 (same file)
+1005877	12325	13374	map/map/campfief_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13374 -> sends 12325 (same file)
+1005878	12325	13375	map/map/campfief_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13375 -> sends 12325 (same file)
+1005879	12325	13376	map/map/campfief_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13376 -> sends 12325 (same file)
+1005880	12885	13377	map/map/2025summer_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13377 -> sends 12885 (same file)
+1005881	13183	13378	map/map/2026tsf_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13378 -> sends 13183 (same file)
+1005882	12430	13379	map/map/2024love01_new.7z	A	[SwordSaga] GameMapEx 13366..13379 Sword* realms in order; 13/13 fit; client_test lacks doc 13379 -> sends 12430 (same file)
+1006058	11040	13393	map/map/zsjx03_new.7z	A	[DragonSaga] Questinfo names = GameMapEx 13393..13400 (LightSanctum..PrimalRift) in the same order; 8/8 fit; client_test lacks doc 13393 -> sends 11040 (same file)
+1006059	10770	13394	map/map/ninja03_new.7z	A	[DragonSaga] Questinfo names = GameMapEx 13393..13400 (LightSanctum..PrimalRift) in the same order; 8/8 fit; client_test lacks doc 13394 -> sends 10770 (same file)
+1006060	12435	13395	map/map/2024love02_new.7z	A	[DragonSaga] Questinfo names = GameMapEx 13393..13400 (LightSanctum..PrimalRift) in the same order; 8/8 fit; client_test lacks doc 13395 -> sends 12435 (same file)
+1006061	3825	13396	map/map/epicmission.7z	A	[DragonSaga] Questinfo names = GameMapEx 13393..13400 (LightSanctum..PrimalRift) in the same order; 8/8 fit; client_test lacks doc 13396 -> sends 3825 (same file)
+1006062	11331	13397	map/map/gsjx05_new.7z	A	[DragonSaga] Questinfo names = GameMapEx 13393..13400 (LightSanctum..PrimalRift) in the same order; 8/8 fit; client_test lacks doc 13397 -> sends 11331 (same file)
+1006063	10760	13398	map/map/newcopy02_new.7z	A	[DragonSaga] Questinfo names = GameMapEx 13393..13400 (LightSanctum..PrimalRift) in the same order; 8/8 fit; client_test lacks doc 13398 -> sends 10760 (same file)
+1006064	10622	13399	map/map/stairs01_new.7z	A	[DragonSaga] Questinfo names = GameMapEx 13393..13400 (LightSanctum..PrimalRift) in the same order; 8/8 fit; client_test lacks doc 13399 -> sends 10622 (same file)
+1006065	12444	13400	map/map/spirit02_new.7z	A	[DragonSaga] Questinfo names = GameMapEx 13393..13400 (LightSanctum..PrimalRift) in the same order; 8/8 fit; client_test lacks doc 13400 -> sends 12444 (same file)
+12100	11203	11203	map/map/sary02_new.7z	A	[BleakValleyVillage] client luacfg minimap.lua block '--BleakValley' = doc 11203; its 6 NPC markers (VillageHead 181,184 / Yana 162,145 / ButcherLiu 158,246 / SisterLian 166,233 / DavidLiu 235,184) = the Questinfo NPCs at the same cells; 21/22 pts walkable
+1005622	13217	13217	map/map/beach.7z	A	[JellyfishSkyCity] instance block doc = id-992405 (13217..13232): all 5 docs that exist in GameMap.dat fit every Questinfo pt (20/20); MistIsle 2/2
+1005625	13220	13220	map/map/pirate_new.7z	A	[JellyfishSkyCity] instance block doc = id-992405: SpiritArk 3/3 pts (pirate_new walk 5%)
+1005629	13224	13224	map/map/lastcamp_new.7z	A	[JellyfishSkyCity] instance block doc = id-992405: ShellfolkRealm 7/7 pts up to (522,617) (lastcamp_new walk 8%)
+1005631	13226	13226	map/map/2024love02_new.7z	A	[JellyfishSkyCity] instance block doc = id-992405: EternalSlumber 4/4 pts
+1005636	13231	13231	map/map/monk01_new.7z	A	[JellyfishSkyCity] instance block doc = id-992405: StarGate 4/4 pts
+1002628	12511	12511	map/map/epicmission-nrz02.7z	B	[JourneyOfWonder] luacfg minimap names docs 12511/12512 '狂狼岛神秘洞穴' (Dinowolf Isle secret cave), quest text 'goosie fell into a strange cave'; 3/3 pts; order 12511<12512
+1002629	12512	12512	map/map/epicmission-nrz03.7z	B	[JourneyOfWonder] luacfg minimap Dinowolf Isle secret cave (2nd) = doc 12512; 2/2 pts
+12441	12019	12019	map/map/2023tsf_new.7z	A	[QixiInterplane2024] GameMapEx [12441]=VaultPalace = [12019]=VaultPalace (2023tsf_new)
+12818	12019	12019	map/map/2023tsf_new.7z	A	[VaultPalace] GameMapEx [12818]=VaultPalace = [12019]=VaultPalace (2023tsf_new)
+13270	12019	12019	map/map/2023tsf_new.7z	A	[VaultPalace] GameMapEx [13270]=VaultPalace = [12019]=VaultPalace (2023tsf_new)
+12247	12184	12184	map/map/qingqiu_new.7z	B	[QixiQingqiu2023] GameMapEx [12247]=JadeHill; Jade Hill = QingQiu (luaui QingQiuMainNpc); luacfg minimap doc 12184 '青丘地图' (QingQiu map) = qingqiu_new
+12248	12184	12184	map/map/qingqiu_new.7z	B	[QixiQingqiu2023] GameMapEx [12248]=JadeHill; same as 12247 -> doc 12184 qingqiu_new
+11886	11414	11414	map/map/2021qixi_new.7z	A	[Halloween] GameMapEx [11886]=NightmareMaze = [11414]=NightmareMaze (2021qixi_new)
+11973	11585	11585	map/map/2021tsf_new.7z	A	[Christmas] GameMapEx [11973]=SnowmanLand = [11585]=SnowmanLand (2021tsf_new)
+12209	1100	1100	map/map/star10.7z	A	[MidAutumn] GameMapEx [12209]=MoonPlatform = [1100]=MoonPlatform (star10)
+12606	12605	12605	map/map/2024love02_new.7z	A	[Summer] GameMapEx [12606]=SummerLake = [12605]=SummerLake (2024love02_new)
+12607	12602	12602	map/map/2024love01_new.7z	A	[Qixi] GameMapEx [12607]=GalaxyPalace = [12602]=GalaxyPalace (2024love01_new)
+1003043	12547	12547	map/map/family.7z	B	[BandsTrouble 2026-10-15] Antonio`s home: the BandsTrouble instance block 1003040..1003045 = docs 12544..12549 (4 Questinfo maps fit); 1003043 = doc 12547 family (a family house; Antonio`s stories 7978/7979 happen in his father`s house). Antonio`s chapters are not in Questinfo, so no Questinfo point to check.
+# [PuppetTheater 2026-10-15] derived rows (confidence D): no official doc exists in either client.
+1004398	12473	12473	map/map/2019halloween_new.7z	D	[PuppetTheater] DERIVED: official template 13074..13079 is in no GameMap.dat; PuppetGarden -> 2019halloween_new = the only Halloween-themed doc where every Questinfo point of all 6 maps is walkable (r2, 7/7 pts)
+1004399	12473	12473	map/map/2019halloween_new.7z	D	[PuppetTheater] DERIVED: official template 13074..13079 is in no GameMap.dat; MidnightStage -> 2019halloween_new = the only Halloween-themed doc where every Questinfo point of all 6 maps is walkable (r2, 8/8 pts)
+1004400	12473	12473	map/map/2019halloween_new.7z	D	[PuppetTheater] DERIVED: official template 13074..13079 is in no GameMap.dat; NoctisBazaar -> 2019halloween_new = the only Halloween-themed doc where every Questinfo point of all 6 maps is walkable (r2, 6/6 pts)
+1004401	12473	12473	map/map/2019halloween_new.7z	D	[PuppetTheater] DERIVED: official template 13074..13079 is in no GameMap.dat; PuppetGarden(Dark) -> 2019halloween_new = the only Halloween-themed doc where every Questinfo point of all 6 maps is walkable (r2, 8/8 pts)
+1004402	12473	12473	map/map/2019halloween_new.7z	D	[PuppetTheater] DERIVED: official template 13074..13079 is in no GameMap.dat; MidnightStage(Dark) -> 2019halloween_new = the only Halloween-themed doc where every Questinfo point of all 6 maps is walkable (r2, 5/5 pts)
+1004403	12473	12473	map/map/2019halloween_new.7z	D	[PuppetTheater] DERIVED: official template 13074..13079 is in no GameMap.dat; NoctisBazaar(Dark) -> 2019halloween_new = the only Halloween-themed doc where every Questinfo point of all 6 maps is walkable (r2, 8/8 pts)
+1002560	11041	11041	map/map/zsjx02_new.7z	B	[DreamTheater] instance of quest 5748 [mob Birdman,1002560,123,117]: Questinfo map name WarlordShrine (Jenkins 32616 @11041); (123,117) walkable on 11041
+1002565	11222	11222	map/map/gsjx01_new.7z	B	[DreamTheater] instance of quest 5744 [npc UntamedHorse,-1,1002565,196,258]: Questinfo map name TwistedCity; video 9ZTyLoh6Pmk 5:30 minimap TwistedCity; (196,258) walkable on 11222
+1002566	11568	11568	map/map/taoist_new.7z	B	[DreamTheater] instance of quest 5803 [mob BlackBear,1002566,409,290]: next to the Pine spot 11568 (418,288); video qiOKUEANFQw 2:40 bears in snowy Zhenwu Temple (minimap ZhenwuTemple)

@@ -1,0 +1,45 @@
+{
+  "key": "MidAutumnVillage",
+  "name_ar": "قرية منتصف الخريف (قصر القمر)",
+  "name_en": "Mid-Autumn Moon Palace",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] MidAutumn: only the newest official edition (DragonSaga) runs on its yearly dates, like the official server; this older edition runs only with @festival on MidAutumnVillage. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ مهرجان منتصف الخريف! كلّم تشانغ إي في توين سيتي (364,437) عشان تروح قصر القمر وتساعد الجنية العقعق والجنية بيل كل يوم.",
+  "announce_en": "The Mid-Autumn festival has started! Talk to Chang'E in Twin City (364,437) to visit the Moon Palace and help Fairy Magpie and Fairy Bell every day.",
+  "end_ar": "انتهى مهرجان منتصف الخريف. كل سنة وانتم طيبين!",
+  "end_en": "The Mid-Autumn festival has ended. See you next year!",
+  "maps": [
+    1002,
+    12597
+  ],
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='10459',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='10459',['Show']=false,['Red']=0}}",
+  "_icon": "[MidAutumn2024 2026-10-14] official top-bar Fgui button 10459 Lunar Voyage (client fguibtnconfig); clicks: Base/MidAutumn2024/LunarVoyage.cs",
+  "notes": "Agent 3 (2026-10-13). Questinfo TypeId 8 Moon Palace dailies 8051-8064 on map 12597. Questinfo ActivityBeginTime=0, so the yearly window comes from the official reward item 3600735 Heart Grass ('Expires ... Sept. 23, 2024'): 2 weeks before Sept 23 (Mid-Autumn day moves with the lunar calendar - adjust the dates per year if you like). Playable daily quests: 8054, 8058 (WuKang step dropped), 8059, 8061, 8063, 8064. Off (engine:false): 8051, 8052, 8053, 8057, 8060 (FlowerBug/Treant/DrunkGorilla/CakeLovers/Moonfish have client stats but no lookface anywhere), 8056 (Ham, no mesh), 8062 (Riverside, no mesh).",
+  "_owner": "agent3",
+  "_quests": [
+    8054,
+    8058,
+    8059,
+    8061,
+    8063,
+    8064
+  ],
+  "_questsOff": [
+    8051,
+    8052,
+    8053,
+    8056,
+    8057,
+    8060,
+    8062
+  ],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "09-09",
+    "end": "09-23"
+  }
+}

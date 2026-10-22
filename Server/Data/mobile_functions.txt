@@ -1,0 +1,60 @@
+# Mobile main screen: when each function (icon) opens for a player. Read again when this file is saved (no restart).
+# The server sends the bits of the opened functions in MsgAction 471 at login / map change, and again by itself within
+# 2 seconds when a player's mask changes (level up, reborn, VIP, quest), so the icon appears with the client's own
+# "new function" animation.
+#
+# Line:  <id> <server_func> <name> <conditions...>          (all conditions must pass)
+#   id           function id of the client's ini\luacfg\newfuncopen.dat (the BindFuncID of the buttons)
+#   server_func  the client's number for the bit (bit = server_func - 1). Do not change it: it is fixed in the client.
+#   conditions   level=N        player level N or more (any higher reborn also passes)
+#                reborn=R       R reborns or more; with level=: (reborn, level) >= (R, N), e.g. "reborn=1 level=80"
+#                vip=N          VIP level N or more
+#                quest=ID[,ID]  server quests finished (ids of Data\Questinfo.ini)
+#                always         open for everybody          never   never opened by the server
+#   No condition at all = open for everybody.
+#
+# IMPORTANT (client side): a function whose official quest is 0 ("client: lev X") is ALSO opened by the client itself
+# when the player reaches that level, even if the server bit is off. The server can open it earlier, not later.
+# Functions with an official quest are opened only by this file (the client does not know our quests).
+# The client also checks the class itself (Awake: Trojans 12, Ninjas 32, Xiake 35, other classes 33).
+#
+# Settings:
+#   staff_all_open = 1   GM/staff accounts get every function (for testing). 0 = staff follow the rules too.
+#   log = 1              print "[Mobile] functions <name>: +Forge -Arena" in the server console when a mask changes.
+staff_all_open = 0
+log = 1
+
+# id sf  name            conditions                 # official client values (newfuncopen.dat): level / reborn / quest / class
+1   7   InPower          reborn=2 level=30          # lev 290 mete 2, quest 0   (290 = 2*130+30)
+2   4   Chi              reborn=1 level=80          # lev 210 mete 1, quest 0   (210 = 130+80)  [131-4027]
+3   2   JiangHu          reborn=2 level=10          # lev 270 mete 2, quest 0   (270 = 2*130+10)
+4   5   Runes            level=40                   # lev 1, quest 5109 (Runes quest)
+5   3   Guild            level=80                   # client: lev 80
+6   6   Forge            level=25                   # client: lev 25
+7   1   SubClass         level=55                   # client: lev 55            [131-3009]
+9   9   Lineage          level=130                  # lev 130, quest 7669
+10  10  Spheres          level=100                  # lev 1, quest 13588
+11  11  Trials           level=23                   # client: lev 23            [1812-6163] challenge button
+12  12  AwakeTrojan      level=70                   # lev 1, quest 5395, class 1 (Trojan)
+13  13  Ethersuit        level=110                  # lev 1, quest 13766
+14  14  Ethercore        level=110                  # lev 1, quest 13783
+15  15  EtherSpirit      level=110                  # lev 1, quest 13765
+16  16  Arena            level=129                  # client: lev 129
+17  17  WebHub           level=90                   # client: lev 90 (no popup)
+19  19  RuneUpgrade      level=40                   # lev 1, quest 14037
+20  20  RuneFusion       reborn=1 level=80          # lev 80 mete 1, quest 5898
+21  21  ForgeLevel       level=25                   # client: lev 25
+22  22  ForgeQuality     level=30                   # client: lev 30
+23  23  ForgeCompose     level=35                   # client: lev 35
+24  24  ForgeSteed       level=40                   # client: lev 40
+25  25  ForgeGem         level=50                   # client: lev 50
+26  26  ForgeEnchant     level=95                   # client: lev 95 (no popup)
+27  27  ForgeRefinery    level=130                  # client: lev 130 (no popup)
+28  28  ForgeSoul        reborn=1 level=120         # lev 250 mete 1 (no popup)
+29  29  ForgePerfection  reborn=1 level=50          # lev 180 mete 1 (no popup)
+30  30  PhaseBattle      level=100                  # lev 1, quest 13975 + Sphere 1-1 (no popup)
+31  31  Tower            level=23                   # client: lev 23 (no popup)
+32  32  AwakeNinja       level=60                   # lev 60, quest 8721, class 5 (Ninja)
+33  33  AwakeOther       level=70                   # lev 999 (server only), quest 8873, other classes
+34  34  Eidolon          reborn=1 level=90          # lev 220, quest 9019   (220 = 130+90)
+35  35  AwakeXiake       level=70                   # lev 1, quest 9099, class 3

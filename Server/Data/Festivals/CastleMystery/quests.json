@@ -1,0 +1,406 @@
+{
+  "_note": "CastleMystery overlay (2026-10-14). Valentine 2025 'Castle Startle': Questinfo 8422-8429 (slots, counts, prizes, NPC cells = official client Questinfo.ini). The whole chain runs in ONE private copy of the official instance 1003099 SecretCastleChamber (maps.txt -> doc 12814 2025love01_new); next+autoAccept keeps the copy from quest to quest. Texts = the official Questinfo IntentionDesp / Intention lines (the 2025 dialog strings are not in this client). Entry = the Castle Startle button (Base\\CastleMystery\\CastleMysteryUi.cs). Deviations are marked _deviation.",
+  "_deviation_all": "ChamberCrisis (5 rooms) and First are scripted room events, not monsters (no monster.dat row): 'Handle ChamberCrisis' = reach that official room point. PhantomMaid / PhantomLord (2026-10-15): official name/level/life from monster.dat 22966/22967 (Lv135, 690000 / 999999 HP, Boss=1); look and attack/defence DERIVED (monsters\\PhantomMaid.ini / PhantomLord.ini, festival types 22966/22967). They are spawned in the player's private copy at the Questinfo mob points (215,130) / (132,105) when 8428 / 8429 is accepted (if one dies elsewhere or leaves, the begin NPC offers 'Progress' to call it out again). 'Avoid the freeze trap' has no counter in Questinfo (no slot) and is not judged.",
+  "npcTeleports": {
+    "8871001": [
+      {
+        "text": "Leave Auter Castle",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ],
+    "8871009": [
+      {
+        "text": "Leave Auter Castle",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ]
+  },
+  "instances": {
+    "SecretCastle": {
+      "_note": "Questinfo 1003099 SecretCastleChamber. NPC cells = Questinfo points (80,204 is in a wall cell on the DMap: the NPC stands there like the official one, the player talks from next to it).",
+      "map": 1003099,
+      "x": 71,
+      "y": 145,
+      "minutes": 60,
+      "exit": {
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      },
+      "npcs": [
+        {
+          "id": 8871001,
+          "mesh": 25450,
+          "x": 71,
+          "y": 141,
+          "type": 2,
+          "name": "SecretCastleChamber"
+        },
+        {
+          "id": 8871002,
+          "mesh": 100240,
+          "x": 80,
+          "y": 174,
+          "type": 2,
+          "name": "FearfulWoman"
+        },
+        {
+          "id": 8871003,
+          "mesh": 100250,
+          "x": 80,
+          "y": 204,
+          "type": 2,
+          "name": "PanickedMan"
+        },
+        {
+          "id": 8871004,
+          "mesh": 100260,
+          "x": 111,
+          "y": 198,
+          "type": 2,
+          "name": "FuriousWoman"
+        },
+        {
+          "id": 8871005,
+          "mesh": 25450,
+          "x": 141,
+          "y": 201,
+          "type": 2,
+          "name": "SecretCastleChamber"
+        },
+        {
+          "id": 8871006,
+          "mesh": 100270,
+          "x": 178,
+          "y": 202,
+          "type": 2,
+          "name": "PhantomButler"
+        },
+        {
+          "id": 8871007,
+          "mesh": 100270,
+          "x": 232,
+          "y": 204,
+          "type": 2,
+          "name": "PhantomButler"
+        },
+        {
+          "id": 8871008,
+          "mesh": 100280,
+          "x": 219,
+          "y": 128,
+          "type": 2,
+          "name": "PhantomMaid"
+        },
+        {
+          "id": 8871009,
+          "mesh": 100290,
+          "x": 108,
+          "y": 101,
+          "type": 2,
+          "name": "LordAnthony"
+        }
+      ]
+    }
+  },
+  "quests": {
+    "8422": {
+      "_note": "Castle Mystery I. Lv 80. Questinfo FinishNpcId -1,1003099,71,141 SecretCastleChamber. 'Explore [mob First] Secret Castle Chamber' = the chamber at that cell.",
+      "beginNpc": 8871001,
+      "finishNpc": 8871001,
+      "onAccept": {
+        "instance": "SecretCastle"
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8871001,
+          "slot": 2,
+          "name": "the Secret Castle Chamber"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3351993,
+            "count": 1
+          }
+        ]
+      },
+      "beginText": "You arrive at the mysterious Auter Castle to search for missing couples. Here, you will encounter strange and peculiar people, perilous traps, and uncover secrets of Auter Castle.",
+      "next": 8423,
+      "autoAccept": true
+    },
+    "8423": {
+      "beginNpc": 8871001,
+      "finishNpc": 8871002,
+      "onAccept": {
+        "instance": "SecretCastle"
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8871002,
+          "slot": 2,
+          "name": "FearfulWoman"
+        },
+        {
+          "type": "visit",
+          "map": 1003099,
+          "x": 82,
+          "y": 179,
+          "range": 3,
+          "slot": 1,
+          "name": "Handle the Chamber Crisis"
+        }
+      ],
+      "progressText": "Talk to FearfulWoman. Handle the Chamber Crisis.",
+      "next": 8424,
+      "autoAccept": true
+    },
+    "8424": {
+      "beginNpc": 8871002,
+      "finishNpc": 8871003,
+      "onAccept": {
+        "instance": "SecretCastle"
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8871003,
+          "slot": 2,
+          "name": "PanickedMan"
+        },
+        {
+          "type": "visit",
+          "map": 1003099,
+          "x": 87,
+          "y": 201,
+          "range": 3,
+          "slot": 1,
+          "name": "Handle the Chamber Crisis"
+        }
+      ],
+      "progressText": "Talk to PanickedMan. Handle the Chamber Crisis.",
+      "next": 8425,
+      "autoAccept": true
+    },
+    "8425": {
+      "beginNpc": 8871003,
+      "finishNpc": 8871004,
+      "onAccept": {
+        "instance": "SecretCastle"
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8871004,
+          "slot": 2,
+          "name": "FuriousWoman"
+        },
+        {
+          "type": "visit",
+          "map": 1003099,
+          "x": 118,
+          "y": 202,
+          "range": 3,
+          "slot": 1,
+          "name": "Handle the Chamber Crisis"
+        },
+        {
+          "type": "talk",
+          "npc": 8871004,
+          "slot": 3,
+          "after": 1,
+          "name": "the condition of FuriousWoman"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3351993,
+            "count": 1
+          }
+        ]
+      },
+      "progressText": "Talk to FuriousWoman. Handle the Chamber Crisis. Check the condition of FuriousWoman.",
+      "next": 8426,
+      "autoAccept": true
+    },
+    "8426": {
+      "_note": "'Explore [npc Third,-1,1003099,141,201] Secret Castle Chamber' -> the third chamber NPC. Finish PhantomButler 178,202.",
+      "beginNpc": 8871004,
+      "finishNpc": 8871006,
+      "onAccept": {
+        "instance": "SecretCastle"
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8871005,
+          "slot": 1,
+          "name": "the third Secret Castle Chamber"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3351993,
+            "count": 1
+          }
+        ]
+      },
+      "progressText": "Explore the Secret Castle Chamber. (Avoid the freeze trap to find the exit.)",
+      "next": 8427,
+      "autoAccept": true
+    },
+    "8427": {
+      "beginNpc": 8871006,
+      "finishNpc": 8871007,
+      "onAccept": {
+        "instance": "SecretCastle"
+      },
+      "objectives": [
+        {
+          "type": "visit",
+          "map": 1003099,
+          "x": 232,
+          "y": 205,
+          "range": 3,
+          "slot": 1,
+          "name": "Handle the Chamber Crisis"
+        },
+        {
+          "type": "talk",
+          "npc": 8871007,
+          "slot": 2,
+          "after": 1,
+          "name": "PhantomButler"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3351993,
+            "count": 1
+          }
+        ]
+      },
+      "progressText": "Handle the Chamber Crisis. Talk to PhantomButler.",
+      "next": 8428,
+      "autoAccept": true
+    },
+    "8428": {
+      "beginNpc": 8871007,
+      "finishNpc": 8871008,
+      "onAccept": {
+        "instance": "SecretCastle",
+        "spawn": {
+          "monster": "PhantomMaid",
+          "map": 1003099,
+          "x": 215,
+          "y": 130,
+          "count": 1,
+          "range": 2,
+          "minutes": 30
+        }
+      },
+      "objectives": [
+        {
+          "type": "visit",
+          "map": 1003099,
+          "x": 210,
+          "y": 143,
+          "range": 4,
+          "slot": 2,
+          "count": 5,
+          "name": "Handle the Chamber Crisis"
+        },
+        {
+          "type": "kill",
+          "monster": "PhantomMaid",
+          "count": 1,
+          "slot": 1,
+          "map": 1003099,
+          "name": "the rampaging PhantomMaid"
+        },
+        {
+          "type": "talk",
+          "npc": 8871008,
+          "slot": 3,
+          "after": 1,
+          "name": "PhantomMaid"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3351993,
+            "count": 1
+          }
+        ]
+      },
+      "progressText": "Handle the Chamber Crisis. Rampaging PhantomMaid. Check PhantomMaid.",
+      "next": 8429,
+      "autoAccept": true,
+      "_note": "Questinfo Intention2 'Rampaging [mob PhantomMaid,1003099,215,130]' = kill slot 1 (spawned on accept in the private copy); Intention3 'Check [npc PhantomMaid,-1,1003099,219,128]' = talk slot 3."
+    },
+    "8429": {
+      "_note": "Questinfo FinishNpcId -1,1003099,108,101 Anthony = LordAnthony / RealAnthony at the same cell. Intention2 'Rampaging [mob PhantomLord,1003099,132,105]' = kill slot 1 (spawned on accept). Prize Castle Key + Butler`s Token.",
+      "beginNpc": 8871008,
+      "finishNpc": 8871009,
+      "onAccept": {
+        "instance": "SecretCastle",
+        "spawn": {
+          "monster": "PhantomLord",
+          "map": 1003099,
+          "x": 132,
+          "y": 105,
+          "count": 1,
+          "range": 2,
+          "minutes": 30
+        }
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8871009,
+          "slot": 2,
+          "name": "LordAnthony"
+        },
+        {
+          "type": "kill",
+          "monster": "PhantomLord",
+          "count": 1,
+          "slot": 1,
+          "map": 1003099,
+          "name": "the rampaging PhantomLord"
+        },
+        {
+          "type": "talk",
+          "npc": 8871009,
+          "slot": 3,
+          "after": 1,
+          "name": "the real Anthony"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3351993,
+            "count": 1
+          },
+          {
+            "id": 2170325,
+            "count": 1
+          }
+        ]
+      },
+      "progressText": "Talk to LordAnthony. Rampaging PhantomLord. Talk to the real Anthony."
+    }
+  }
+}

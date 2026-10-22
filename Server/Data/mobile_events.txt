@@ -1,0 +1,21 @@
+# QahrMobile: event invitations ("<Event> Just Started ...", "<Boss> Has Now Appeared ...") for mobile players.
+# Read by Networking\Mobile\MobileEvents.cs, re-read when this file changes. PC clients always get the dialog.
+#   mode            chat    = never a dialog: a system chat line "... Type @join to go."
+#                   limited = at most one dialog every dialog_interval seconds, the others as chat lines
+#                   dialog  = the dialog every time (old behaviour)
+#   dialog_interval seconds between two event dialogs for one player (limited mode)
+#   join_window     seconds @join stays valid after the invitation (0 = the dialog's own time, 60 s)
+#   chat_color      color of the chat line (MsgColor name: yellow, red, white, ...)
+# Players can choose for themselves with "@events chat" / "@events limited" / "@events dialog" (until logout).
+mode = limited
+dialog_interval = 1800
+join_window = 300
+chat_color = yellow
+
+# Activity-button bar of the mobile (Networking\Mobile\MobileEventsMenu.cs). Extra button ids, comma separated:
+#   daily_buttons   mobile actmenuconfig BtnIds shown in the "Daily" group (1362), e.g. 1240 Bounty, 1331 Fog Mystery
+#   limited_buttons mobile acttimemenuconfig BtnIds shown in the "Limited" group (1525); running festivals whose
+#                   PC Fgui id is a mobile button (10459, 150124, 150361) are added by themselves
+# A group with no buttons is hidden. Only list buttons whose window the server answers.
+daily_buttons =
+limited_buttons =

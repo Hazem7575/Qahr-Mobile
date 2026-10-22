@@ -1,0 +1,63 @@
+﻿{
+  "NextId": 31,
+  "Lots": [],
+  "Pending": [
+    {
+      "Id": 15,
+      "Uid": 1001016,
+      "Kind": "item",
+      "Value": 0,
+      "ItemType": 3355114,
+      "Amount": 1,
+      "Bound": false,
+      "Text": "You won item 3355114 in the Guild Auction for 60 CPs."
+    }
+  ],
+  "Records": [
+    {
+      "Unix": 1792563728,
+      "Time": 1021092208,
+      "JoinType": 1,
+      "GuildId": 1001,
+      "IdVendue": 70,
+      "Uid": 1001016,
+      "Name": "TrojanQ1",
+      "MoneyType": 1,
+      "Money": 1500
+    },
+    {
+      "Unix": 1792563986,
+      "Time": 1021092626,
+      "JoinType": 1,
+      "GuildId": 1001,
+      "IdVendue": 71,
+      "Uid": 1001016,
+      "Name": "TrojanQ1",
+      "MoneyType": 1,
+      "Money": 60
+    },
+    {
+      "Unix": 1792564245,
+      "Time": 1021093045,
+      "JoinType": 1,
+      "GuildId": 1001,
+      "IdVendue": 57,
+      "Uid": 1001016,
+      "Name": "TrojanQ1",
+      "MoneyType": 1,
+      "Money": 1500
+    },
+    {
+      "Unix": 1792564766,
+      "Time": 1021093926,
+      "JoinType": 1,
+      "GuildId": 1001,
+      "IdVendue": 54,
+      "Uid": 1001016,
+      "Name": "TrojanQ1",
+      "MoneyType": 1,
+      "Money": 378
+    }
+  ],
+  "ScheduleDone": []
+}

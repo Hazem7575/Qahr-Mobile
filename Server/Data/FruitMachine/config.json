@@ -1,0 +1,51 @@
+{
+  "_readme": [
+    "Fruit Machine (Twin City NPCs 26694-26701). Re-read automatically when this file changes (no restart).",
+    "machines / ring / payouts / luck counts are copied 1:1 from the client: ini\\FruitMachine.lua (IconData: Type, Rate, MaxBet, Icon ring) and ini\\FruitHelp.lua (X3/X5/X10/X15/X20/X25/X30/X35/X50/X100).",
+    "ODDS ARE DERIVED, NOT OFFICIAL: TQ keeps the win odds on its server. Stop weights are computed so every bet button returns exactly 'rtp' (Luck game included).",
+    "fruit = bet button: 0 Apple, 1 Lemon, 2 Watermelon, 3 Orange, 4 Bell, 5 77, 6 Star, 7 BAR (client Btn order).",
+    "luck: chance = probability the ring stops on a LUCK lamp; then N extra lamps (counts 3/5/7/22 = the client's LuckGameData; 22 = 'train', every lamp).",
+    "weightsOverride: optional 24 numbers (one per ring stop) to set the odds by hand instead of the rtp derivation.",
+    "protocol.*: wire details that are still being confirmed live; leave as is unless told otherwise."
+  ],
+  "enabled": true,
+  "rtp": 0.95,
+  "luck": { "chance": 0.01, "counts": [3, 5, 7, 22], "weights": [0.60, 0.28, 0.10, 0.02] },
+  "compare": { "winChance": 0.475, "numberMin": 1, "numberMax": 14, "bigChoiceValue": 1, "maxRounds": 10, "maxStake": 9999900000000 },
+  "limits": { "spinCooldownMs": 1000, "compareCooldownMs": 600 },
+  "protocol": { "joinField4": "balance", "lossSendsZeroBalance": false, "resultField4": false },
+  "machines": [
+    { "npc": 26694, "name": "SilverFruit(10000)",   "type": 1, "rate": 10000,   "maxBet": 20000000000 },
+    { "npc": 26695, "name": "SilverFruit(100000)",  "type": 1, "rate": 100000,  "maxBet": 20000000000 },
+    { "npc": 26696, "name": "SilverFruit(1000000)", "type": 1, "rate": 1000000, "maxBet": 20000000000 },
+    { "npc": 26698, "name": "CpFruit(1)",  "type": 2, "rate": 1,  "maxBet": 200000 },
+    { "npc": 26700, "name": "CpFruit(10)", "type": 2, "rate": 10, "maxBet": 200000 },
+    { "npc": 26701, "name": "CpFruit(50)", "type": 2, "rate": 50, "maxBet": 200000 }
+  ],
+  "ring": [
+    { "icon": "Fruits_TBLD3",    "fruit": 4, "mult": 3 },
+    { "icon": "Fruits_TBJZ",     "fruit": 3, "mult": 10 },
+    { "icon": "Fruits_TBLD",     "fruit": 4, "mult": 20 },
+    { "icon": "Fruits_TBbar100", "fruit": 7, "mult": 100 },
+    { "icon": "Fruits_TBbar50",  "fruit": 7, "mult": 50 },
+    { "icon": "Fruits_TBPG",     "fruit": 0, "mult": 5 },
+    { "icon": "Fruits_TBPG3",    "fruit": 0, "mult": 3 },
+    { "icon": "Fruits_TBNM",     "fruit": 1, "mult": 15 },
+    { "icon": "Fruits_TBXG",     "fruit": 2, "mult": 25 },
+    { "icon": "Fruits_TBXG3",    "fruit": 2, "mult": 3 },
+    { "icon": "Fruits_TBluck",   "luck": true },
+    { "icon": "Fruits_TBPG",     "fruit": 0, "mult": 5 },
+    { "icon": "Fruits_TBJZ3",    "fruit": 3, "mult": 3 },
+    { "icon": "Fruits_TBJZ",     "fruit": 3, "mult": 10 },
+    { "icon": "Fruits_TBLD",     "fruit": 4, "mult": 20 },
+    { "icon": "Fruits_TB773",    "fruit": 5, "mult": 3 },
+    { "icon": "Fruits_TB77",     "fruit": 5, "mult": 35 },
+    { "icon": "Fruits_TBPG",     "fruit": 0, "mult": 5 },
+    { "icon": "Fruits_TBNM3",    "fruit": 1, "mult": 3 },
+    { "icon": "Fruits_TBNM",     "fruit": 1, "mult": 15 },
+    { "icon": "Fruits_TBXX",     "fruit": 6, "mult": 30 },
+    { "icon": "Fruits_TBXX3",    "fruit": 6, "mult": 3 },
+    { "icon": "Fruits_TBluck2",  "luck": true },
+    { "icon": "Fruits_TBPG",     "fruit": 0, "mult": 5 }
+  ]
+}

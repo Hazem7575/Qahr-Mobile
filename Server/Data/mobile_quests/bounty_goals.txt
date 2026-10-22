@@ -1,0 +1,54 @@
+# QahrMobile: Chinju bounty goals the quest engine cannot judge (MobileBountyGoals.cs, re-read when saved).
+# The quest's own Intention lines decide what is needed:
+#   View/Find/Check/Visit [lua X,</F>TaskAssemblyGfit_Find][chk_quest id,1,slot,1]  -> talk to X (slot counter)
+#   Rescue[lua X,</F>TaskAssemblyGfit_Find][chk_quest id,1,slot,N]                   -> click N different X objects
+#   Pick [lua X,</F>TaskAssemblyGfit_Find][chk_item item,N]                          -> click X objects, 1 item each
+# A quest is offered only when every one of its X has a "target" line below.
+#
+# target <LuaName> npc <uid>             an NPC that is already placed (Npcs.txt), or one of the "npc" lines
+# target <LuaName> object <ObjectName>   one of the "object" groups
+# npc    <uid> <mesh> <map> <x> <y> <name>                    talk NPC placed by MobileBountyGoals (also in bounty_npcs.txt)
+# object <ObjectName> <look> <map> <x> <y> <radius> <count> <firstUid> [item]
+#        <count> objects on walkable cells within <radius> of (x,y), uids firstUid.. ; look = the mobile npc.ini
+#        NpcType (mesh = look*10). Clicking one gives 1 [item] (pick) or counts 1 rescue.
+#        No object is put within 5 cells of another NPC: the mobile sends the click to that NPC instead.
+
+# ---- message delivery (existing NPCs; uid = the mobile's STR_NPC_ID_<uid> name)
+target JerkWang        npc 4504
+target OfficerBao      npc 4485
+target LittleBen       npc 8520
+target WineKiddo       npc 4596
+target CaptainChang    npc 24340
+target SongQing        npc 25060
+target SarutobiSasuke  npc 33963
+# ---- talk NPCs the server did not have (the mobile has them only in its Duststorm Town / Valhalla stories)
+target Boudica         npc 9720901
+target LiuYi           npc 9720902
+target YanWushuang     npc 9720903
+npc 9720901 14260   1002 452 305 Boudica
+npc 9720902 17970   1002 395 285 LiuYi
+npc 9720903 1054660 1002 515 292 YanWushuang
+
+# ---- rescue (mobile NpcType 4436-4438)
+target TheWounded      object TheWounded
+target Hostage         object Hostage
+target DesertRefugee   object DesertRefugee
+object TheWounded    4436 1002 531 330 14 6 9720001
+object Hostage       4437 1002 361 350 14 6 9720011
+object DesertRefugee 4438 1002 471 235 14 6 9720021
+
+# ---- picking / gathering (mobile NpcType 4439-4446)
+target Flower          object Flower
+target Herb            object Herb
+target ABucketofWater  object WaterSpot
+target ColorfulGem     object DiggingSpot
+target ReliefSupply    object SupplySpot
+target AFish           object FishingSpot
+target FearlessSpirit  object FearlessSpirit
+object Flower         4439 1002 391 325 14 8 9720101 3338729
+object Herb           4440 1002 506 325 14 8 9720111 3338730
+object WaterSpot      4442 1002 481 360 14 8 9720121 3338731
+object DiggingSpot    4443 1002 531 260 14 8 9720131 3338732
+object SupplySpot     4444 1002 421 240 14 8 9720141 3338733
+object FishingSpot    4445 1002 406 365 14 8 9720151 3338734
+object FearlessSpirit 4446 1002 561 290 14 8 9720161 3338736

@@ -1,0 +1,5 @@
+# QahrMobile: server packet ids never sent to the mobile client (MobileProtocol.IsBlocked); reloaded on save.
+2435   # MsgAchievement: CMsgAchievement::Process is empty in the mobile client (nothing to show)
+2028   # MsgAuction        \  the mobile client has no player Auction House screen
+2399   # MsgAuctionItem     > (see Data\mobile_layouts\auction.txt); the server sends these at login for the PC
+2441   # MsgAuctionQuery   /

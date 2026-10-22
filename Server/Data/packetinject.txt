@@ -1,0 +1,4 @@
+# dev injector
+secret=a4f8d6585fcbedd5854dfc9a
+port=17968
+allow=mohamed2,TrojanQ1,NinjaQ1

@@ -1,0 +1,147 @@
+# QahrMobile packet layouts: The character: login info, creation, players on screen, attributes. The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgUserInfo 10221 (hero info): the 6609 HeroInfo order without its timer; offsets from CMsgUserInfo::Process
+# (money 0x12 -> CRole::SetMoney, emoney 0x1a, exp 0x1e, mana 0x48, level 0x4c (u32), class 0x50, reborn 0x5c,
+# bound CPs 0x75, look face frame 0x9c); strings (CNetStringPacker) at 0xa8: name, "", spouse
+[2008 MsgUserInfo 168]
+1   4    u32     # UID
+2   8    u16     # AparenceType
+3   10   u32     # Mesh (look)
+4   14   u32     # Hair
+5   18   u64     # Money
+6   26   u32     # ConquerPoints
+7   30   u64     # Experience
+9   38   u32     # SetLocationType
+10  42   u32     # SpecialTitleID
+11  50   u32     # VirtutePoints
+12  54   u32     # HeavenBlessing
+13  58   u16     # Strength
+14  60   u16     # Agility
+15  62   u16     # Vitality
+16  64   u16     # Spirit
+17  66   u16     # Atributes
+18  68   u32     # HitPoints
+19  72   u16     # Mana
+20  74   u16     # PKPoints
+21  76   u32     # Level
+22  80   u32     # Class
+23  84   u32     # FirstClass
+24  88   u32     # SecoundeClass
+26  92   u8      # Reborn
+25  93   u8      # NobilityRank
+28  95   u32     # QuizPoints
+29  99   u32     # MainFlag
+30  103  u16     # Enilghten
+31  105  u16     # EnlightenReceive
+34  111  u32     # VipLevel
+35  115  u16     # MyTitle
+36  117  u32     # BoundConquerPoints
+37  121  u8      # ActiveSublass
+38  122  u32     # SubClass
+39  130  u32     # RacePoints
+40  134  u16     # CountryID
+45  156  u32     # FaceFrame
+0   168  strpack:46,0,47   # name, "", spouse
+
+# Struct on both sides with the same layout: only renumbered
+[2205 MsgRegister same]      # CMsgRegister 10150: name 0x28, body 0x88, class 0x8a (= MsgNewRole.GetNewRoleInfo)
+
+# CMsgPlayer 10227 (CMsgPlayerPB): spawn of players / monsters / pets. TQ reshuffled the field numbers between the
+# PC 7957 build (the server's SpawnPacketProto) and the mobile build; matched by meaning (tools\pbcompare.py).
+[2292 MsgPlayer proto]
+1 2          # UID -> Id
+2 1          # Mesh -> DwLookFace
+3 27         # X -> UsPosX
+4 28         # Y -> UsPosY
+5 30         # Facing -> UcDir
+7 31         # Action -> NPose
+8 32         # UsSubPositione -> UsSubPose
+9 29         # HairStyle -> UsHair
+10 92        # StatusFlags -> UnFlag
+11 3         # GuildID -> IdSyn
+12 4         # GuildRank -> DwRank
+13 5         # UsMemberTitle
+14 26 35     # Level -> UsLevel + UsPlayerLevel
+15 37        # Away -> UcIsTempLeave
+16 7         # AppearanceType -> UsShowType
+17 8         # Head -> DwHelmetType
+18 9         # Garment -> DwOvercoat
+19 10        # Armor -> DwArmorType
+20 11        # LeftWeapon -> DwWeaponLType
+21 12        # RightWeapon -> DwWeaponRType
+22 13        # LeftWeaponAccessory -> DwDecoratorLType
+23 14        # RightWeaponAccessory -> DwDecoratorRType
+24 15        # Steed -> DwMountType
+25 16        # MountArmor -> DwDecoratorMountType
+26 17        # Wing -> IdWingType
+27 18        # WingPlus -> UcWingAddLev
+28 19        # WingProgress -> UnWingAddExp
+29 20        # Bottle -> IdTalismanType
+30 23        # Hitpoints -> DwLife
+31 22        # SSpeedPercent
+33 24        # DwMedalSelect
+34 25        # UsNoUsed
+35 26        # MonsterLevel -> UsLevel
+36 33        # UcRev
+37 34        # Reborn -> UcMetempsychosis
+38 38        # ExtraBattlePower -> DwGuideBattleEffect
+39 39        # DwFateBattleEffect
+40 40        # DwMemNumber -> DwMemNum
+41 41        # DwLeaderID
+# 42         # FlowerIcon: the server's FairyForm (-1 = none), no mobile field
+112 42       # FlowerRank -> DwFlower (dynarank.ini flower charm code, e.g. 30010002; 0 = none)
+43 43        # NobilityRank -> DwPeerage
+44 44        # QuizPoints -> UnQuizPoint
+45 45        # SteedPlus -> UsMountAddLev
+46 46        # SteedExp -> NMountAddExp
+47 47        # SteedColor -> NMountColorData
+48 52        # NVipLevel
+49 53        # ClanUID -> IdFamily
+50 54        # ClanRank -> DwFamilyRank
+51 55        # DwFamilyShareBattleEffect
+52 56        # Title -> UsTitleSelect
+53 58        # PokerSeat -> UcSeat
+54 57        # PokerTableID -> IdTexasNpc
+56 60        # InvisibleArena -> BWitness
+58 62        # BExploring
+59 63        # Boss -> BExtendBoss
+60 64        # HeadSoul -> DwGodSoulHelmetType
+61 65        # ArmorSoul -> DwGodSoulArmorType
+62 66        # LeftWeaponSoul -> DwGodSoulWeaponLType
+63 67        # RightWeaponSoul -> DwGodSoulWeaponRType
+64 68        # SubClass -> UcCurrentAstProf
+65 69        # ActiveSubClasses -> I64AllAstProf
+66 70        # FirstRebornClass -> UsFirstProf
+67 71        # SecondRebornClass -> UsOldProf
+68 72        # Class -> UsProfession
+69 73        # CountryCode -> UsNationality
+70 74        # Team -> IdTeam
+71 75        # BattlePower -> NTotalBattleEffect
+73 77        # JiangHuActive -> UcEnterJiangHuFlag
+75 79        # ServerID -> UsOrigServerID
+76 80        # RealUID -> IdOrigID
+79 83        # OwnerUID -> IdCallPetOwner
+80 84        # UnionID -> IdLeague
+81 85        # UnionExploits -> UnLeagueContributionLev
+82 86        # Official_Harem_Guards -> UnAllOfficial
+85 89        # MyTitle -> UnTitle
+86 90        # MyTitleScore -> UnTitleScore
+87 91        # MyWing -> UnWingTitle
+97 111       # MonstersID -> IdMonsterType (the monster.dat entry: name, model, HP bar)
+109 112      # FrameID -> UnFaceFrame
+# SzBuf as CMsgPlayer::Process reads it (msg+0x1a8, count +0x1ac): [0] name (CRole::SetName), [1] unused,
+# [2] family name (CFamilyMgr::SetOtherFamilyName), [3] owner name (CPlayer::SetOwnerName, pets), [4] tutor/family
+# share name (SetFamilyBattleEffect), [5] guild name (SetSyndicateName/SetOSSyndicateName), [6] league name
+# (SetHeadLeagueName). A field listed twice is emitted twice (ProtoRenumber), which pads the list to that order;
+# with one entry each the guild name landed in [4] and other players showed "<Guild Leader" with no guild name.
+131 107      # Name -> SzBuf[0]
+132 107 107  # FamilyName -> SzBuf[1] (unused) + SzBuf[2] family name
+133 107      # OwnerPetName -> SzBuf[3] owner name
+134 107      # Name134 ("") -> SzBuf[4]
+135 107      # SyndicateName -> SzBuf[5] guild name
+136 107      # LeagueName -> SzBuf[6] league name
+# 137         # MateName: no slot in the mobile SzBuf
+
+# CMsgPlayerAttriInfo 10301 (180 bytes): uid 4, max life 8, mana 12 ... rune score 140 = MsgStatus.StatusCreate;
+# the request (CMsgPlayerAttriInfo::Create) is the uid at 4.
+[2270 MsgPlayerAttriInfo same]

@@ -1,0 +1,27 @@
+{
+  "key": "SpringFestival2024",
+  "name_ar": "مهرجان الربيع 2024 (سنة التنين)",
+  "name_en": "Spring Festival 2024 (Year of the Dragon)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] SpringFestival: only the newest official edition (SpringFestival2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on SpringFestival2024. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ مهرجان الربيع (سنة التنين)! دوس على زرار المهرجان اللي فوق.",
+  "announce_en": "The Spring Festival has started!",
+  "end_ar": "انتهى مهرجان الربيع. كل سنة وانتو طيبين!",
+  "end_en": "The celebration has come to an end. Wishing all heroes a healthy and prosperous New Year!",
+  "maps": [],
+  "notes": "SpringFestival2024 (2026-10-14): official 2024 Global Spring Festival entry only - lua button DlgFestival2024BTN (luagui 1462, BtnId 1462), main window DlgFestivalMain2024Task (msg 10358 LuckyPool2024_OpenLuckView, Base/SpringFestival2024/SpringFestival2024Ui.cs). No Questinfo quests, no maps.txt rows. Dragon Blessing Painting, Dragon Awakening/Wishes, the Nine Sons Dragon Trial (Dlg24SpringChallenge), Exorcism, Year Beast, Fortune Pool and ranking are official server scripts (tSpringFestival2024Main/tLuckyPool2024/tSpingYuan2023/tNianBeast2024) whose reward tables are not in the client -> all 4 tasks Locked, points 0, polite system messages; nothing invented.",
+  "_owner": "SpringFestival2024",
+  "icon_show": "Dlg_OpenUI|{['Code']=200,['View']='DlgFestival2024BTN',['Data']={['RedPoint']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgFestival2024BTN\")",
+  "icon_click": "10358</S>LuckyPool2024_OpenLuckView",
+  "_icon": "[SpringFestival2024 2026-10-14] official lua button DlgFestival2024BTN (Dialog_Info['1462-1'], anisection 2024qqcj_btn11); click (DlgFestival2024BTN_OpenUI / DlgFestival2024BTN_NewOpenUI) -> 10358 LuckyPool2024_OpenLuckView -> Base/SpringFestival2024/SpringFestival2024Ui.cs",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "02-01",
+    "end": "02-21",
+    "_note": "Official dates: client actbtnconfig ActBtnConfig[18] ActTime '2024-02-01 00:00 2024-02-21 07:59' (US) / ActTime_2 '... 2024-02-21 15:59' (EU); luaUiRes[1459].Time 'Feb. 1 - Feb. 21'. Server local time; the US/EU hour offset is ignored."
+  }
+}

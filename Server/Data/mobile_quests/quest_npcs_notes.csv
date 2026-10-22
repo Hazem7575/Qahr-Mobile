@@ -1,0 +1,577 @@
+line,name,file,quests_begin,quests_finish,quests_talk,types,sample_quests,note
+"5682,2,64100,1002,434,246",Couples PK Guide,quest_npcs_festival.txt,0,0,1,t5:1,6001,mesh from mobile npcx.ini 6410
+"6261,2,19150,1036,279,249",SteedEnvoy,quest_npcs_festival.txt,1,1,1,t5:1,6020,no mobile body with this name: townsman look 1915 (DERIVED)
+"9439,2,16500,1002,457,347",AuctionManager,quest_npcs_festival.txt,0,0,1,t3:1,4727,mesh from mobile npc.ini 1650
+"15389,2,19150,1002,436,390",OfficialLong,quest_npcs_festival.txt,1,1,0,t5:1,2406,no mobile body with this name: townsman look 1915 (DERIVED)
+"16196,2,64150,1002,381,323",TaoistWind,quest_npcs.txt,1,1,1,t2:1,2677,mesh from mobile npcx.ini 6415
+"18944,2,64790,1002,381,318",TaoistMoon,quest_npcs.txt,1,1,0,t6:1,3418,mesh from mobile npcx.ini 6479
+"18945,2,64770,1002,385,392",TaskmasterChang,quest_npcs.txt,1,0,0,t2:1,200,mesh from mobile npcx.ini 6477
+"18965,2,39080,1002,450,390",GeneralofEndlessTower,quest_npcs_festival.txt,1,1,1,t3:1,6491,mesh from mobile npc.ini 3908
+"19160,2,40237,10118,32,32",PakYan,quest_npcs_festival.txt,1,1,0,t3:1,3667,"mesh from server; id exists on another map: 19160,2,40237,3998,85,356 (extra copy, same id on another map is allowed)"
+"19634,2,1051587,1002,394,315",WindwalkerLord,quest_npcs.txt,1,3,3,t5:1 t6:2,3795 3796 3802,"mesh from server; id exists on another map: 19634,2,1051587,10454,63,66 (extra copy, same id on another map is allowed)"
+"20030,2,45302,10088,155,138",SisterYung,quest_npcs.txt,2,2,0,t6:3,3798 3799 3800,"mesh from server; id exists on another map: 20030,2,45302,44455,155,138,1 (extra copy, same id on another map is allowed)"
+"20031,2,53650,10090,155,138",ElderPower,quest_npcs.txt,1,1,1,t6:2,3800 3801,mesh from mobile npcx.ini 5365; quest spot blocked on the server DMap (kept)
+"20032,2,51700,10090,126,116",DukeofHell,quest_npcs.txt,1,1,0,t6:2,3801 3802,mesh from mobile npcx.ini 5170; quest spot blocked on the server DMap (kept)
+"20536,2,11640,1002,428,405",HeavenlyMaster,quest_npcs.txt,2,2,1,t2:1 t3:1,6126 8230,mesh from mobile npc.ini 1164
+"21351,2,19150,1002,435,368",ZhengWuchang,quest_npcs_festival.txt,1,1,0,t5:1,3938,no mobile body with this name: townsman look 1915 (DERIVED)
+"24091,2,19150,1002,393,292",Chief,quest_npcs.txt,18,18,0,t3:18,7011 7012 7014 7015 7016 7017 7018 7019 7020 7021 7022 7023,no mobile body with this name: townsman look 1915 (DERIVED)
+"24095,2,1029280,1002,424,288",BrightRock,quest_npcs.txt,1,1,0,t3:1,7013,mesh from mobile npc.ini 2928
+"24332,2,19150,1015,717,579",BirdIsland,quest_npcs.txt,2,3,1,t5:3,3833 3834 3835,no mobile body with this name: townsman look 1915 (DERIVED)
+"24333,2,50540,1015,707,578",GateDemolisher,quest_npcs.txt,0,0,1,t5:1,3834,mesh from mobile npcx.ini 5054
+"24340,2,10000,1000,467,636",DC-ViceCaptain,quest_npcs.txt,2,1,1,t5:2,10300 10301,mesh from mobile npc.ini 1000
+"24341,2,19150,1000,495,644",AlmightyStatue,quest_npcs.txt,1,3,2,t5:3,10301 10302 10303,no mobile body with this name: townsman look 1915 (DERIVED)
+"24342,2,55220,1000,486,618",PaintingDealer,quest_npcs.txt,1,0,1,t5:1,10302,mesh from mobile npcx.ini 5522
+"24363,2,54680,1011,212,255",ArrestCommander,quest_npcs.txt,1,2,1,t2:3,4186 4187 4192,mesh from mobile npcx.ini 5468
+"24364,2,19290,1011,318,298",BattlefieldDoctor,quest_npcs.txt,1,1,2,t2:2,4187 4188,mesh from mobile npc.ini 1929
+"24365,2,20250,1011,229,250",ForestGovernorWong,quest_npcs.txt,2,3,2,t2:4,4188 4189 4190 4193,mesh from mobile npc.ini 2025
+"24366,2,50840,1011,178,275",WineVendorHo,quest_npcs.txt,1,1,1,t2:2,4190 4191,mesh from mobile npcx.ini 5084
+"24392,2,54530,1002,562,791",HeraldCheng,quest_npcs.txt,3,1,2,t5:3,10306 10307 10310,mesh from mobile npcx.ini 5453
+"24393,2,63040,1002,447,440",ViceCaptainDuan,quest_npcs.txt,1,1,2,t5:2,10307 10308,mesh from mobile npcx.ini 6304
+"24394,2,36450,1002,506,643",PeachTree,quest_npcs.txt,0,1,0,t5:1,10310,mesh from mobile npc.ini 3645
+"24465,2,20440,1011,292,567",BanditSentry,quest_npcs.txt,0,1,1,t2:1,4191,mesh from mobile npc.ini 2044
+"25057,2,65400,1002,440,387",Mrs.Wu,quest_npcs.txt,1,1,1,t5:2,10317 10320,mesh from mobile npcx.ini 6540
+"25058,2,26980,1002,460,332",BlacksmithLi,quest_npcs.txt,1,1,1,t5:2,10335 10340,mesh from mobile npc.ini 2698
+"25059,2,26990,1002,478,360",WangDongliang,quest_npcs.txt,1,1,1,t5:2,10345 10350,mesh from mobile npc.ini 2699
+"25060,2,27000,1002,426,336",SongQing,quest_npcs.txt,2,2,1,t5:3,10320 10325 10330,mesh from mobile npc.ini 2700
+"25062,2,27020,1002,443,531",QingShiyue,quest_npcs.txt,1,1,1,t5:2,10385 10390,mesh from mobile npc.ini 2702
+"25063,2,27030,1002,545,578",Trap,quest_npcs.txt,0,0,1,t5:1,10395,mesh from mobile npc.ini 2703
+"25064,2,27030,1002,563,581",Trap,quest_npcs.txt,0,0,1,t5:1,10395,mesh from mobile npc.ini 2703
+"25065,2,27030,1002,571,596",Trap,quest_npcs.txt,0,0,1,t5:1,10395,mesh from mobile npc.ini 2703
+"25066,2,27040,1002,512,571",FarmerBai,quest_npcs.txt,1,1,0,t5:2,10390 10395,mesh from mobile npc.ini 2704
+"25067,2,27050,1002,620,591",LanXuexin,quest_npcs.txt,1,1,0,t5:2,10395 10400,mesh from mobile npc.ini 2705
+"25068,2,27060,1002,496,726",FishermanXue,quest_npcs.txt,1,1,0,t5:2,10400 10405,mesh from mobile npc.ini 2706
+"25069,2,27070,1002,556,748",Cutie,quest_npcs.txt,1,1,0,t5:2,10405 10415,mesh from mobile npc.ini 2707
+"25070,2,27080,1002,572,790",ZhouShiqiu,quest_npcs.txt,1,1,0,t5:2,10415 10420,mesh from mobile npc.ini 2708
+"25074,2,27100,1002,491,809",WeiShifeng,quest_npcs.txt,1,1,0,t5:2,10420 10425,mesh from mobile npc.ini 2710
+"25075,2,27110,1002,444,713",ZhaoShihai,quest_npcs.txt,2,2,1,t5:3,10425 10430 10435,"mesh from mobile npc.ini 2711; quest spot 449,718 blocked on the server DMap, nudged"
+"25076,2,27120,1002,216,559",ZhangDaqian,quest_npcs.txt,1,1,1,t5:2,10435 10440,mesh from mobile npc.ini 2712
+"25080,2,27140,1002,137,545",UnknownSoldier,quest_npcs.txt,1,1,0,t5:2,10440 10445,mesh from mobile npc.ini 2714
+"25081,2,27150,1002,51,416",HuiKong,quest_npcs.txt,2,2,1,t5:3,10445 10450 10455,mesh from mobile npc.ini 2715
+"25082,2,27160,1002,41,421",HuiJing,quest_npcs.txt,1,1,0,t5:2,10455 10460,mesh from mobile npc.ini 2716
+"25083,2,27170,1002,439,250",GuShifang,quest_npcs.txt,2,2,1,t5:3,10460 10470 10471,mesh from mobile npc.ini 2717
+"25084,2,27180,1002,636,414",Drunkard,quest_npcs.txt,3,3,2,t5:5,10475 10480 10485 10490 10495,mesh from mobile npc.ini 2718
+"25085,2,27190,1002,636,380",PastureGrass,quest_npcs.txt,0,0,1,t5:1,10485,mesh from mobile npc.ini 2719
+"25086,2,27200,1002,466,332",PharmacistWang,quest_npcs.txt,1,1,1,t5:2,10340 10345,mesh from mobile npc.ini 2720
+"25087,2,27210,1002,422,353",Dr.Tea,quest_npcs.txt,1,1,1,t5:2,10330 10335,mesh from mobile npc.ini 2721
+"25088,2,27220,1002,554,376",WoundedPheasant,quest_npcs.txt,1,1,0,t5:2,10360 10365,mesh from mobile npc.ini 2722
+"25089,2,27230,1002,636,418",Horse,quest_npcs.txt,1,1,0,t5:2,10485 10490,mesh from mobile npc.ini 2723
+"25090,2,27240,1002,448,449",Lieut.Chen,quest_npcs.txt,3,2,1,t5:3,10315 10316 10317,mesh from mobile npc.ini 2724
+"25091,2,27250,1002,555,339",PeiMoli,quest_npcs.txt,2,2,1,t5:3,10350 10355 10360,mesh from mobile npc.ini 2725
+"25092,2,27260,1002,573,426",SongShiyu,quest_npcs.txt,2,2,1,t5:3,10365 10370 10375,mesh from mobile npc.ini 2726
+"25093,2,27270,1002,543,433",HanShitian,quest_npcs.txt,1,1,1,t5:2,10375 10380,mesh from mobile npc.ini 2727
+"25094,2,27280,1002,440,507",TanShiyun,quest_npcs.txt,1,1,1,t5:2,10380 10385,mesh from mobile npc.ini 2728
+"25095,2,27290,1002,674,379",ZhangYouwei,quest_npcs.txt,1,1,1,t5:2,10495 10500,mesh from mobile npc.ini 2729
+"25096,2,27300,1002,722,412",LiuYuyan,quest_npcs.txt,1,1,0,t5:2,10500 10505,mesh from mobile npc.ini 2730
+"25097,2,27330,1011,18,373",HousemaidLiu,quest_npcs.txt,1,1,1,t5:2,10505 10510,mesh from mobile npc.ini 2733
+"25098,2,27340,1011,141,428",Mr.Liu,quest_npcs.txt,1,1,0,t5:2,10510 10515,mesh from mobile npc.ini 2734
+"25101,2,27350,1011,180,525",MissChen,quest_npcs.txt,2,2,0,t5:3,10515 10520 10525,mesh from mobile npc.ini 2735
+"25102,2,27360,1011,172,535",MissWang,quest_npcs.txt,0,0,1,t5:1,10520,mesh from mobile npc.ini 2736
+"25103,2,27370,1011,176,529",MissLi,quest_npcs.txt,0,0,1,t5:1,10520,mesh from mobile npc.ini 2737
+"25104,2,27380,1011,176,535",MissSun,quest_npcs.txt,0,0,1,t5:1,10520,mesh from mobile npc.ini 2738
+"25106,2,27400,1011,218,312",ZhangQuanzhi,quest_npcs.txt,1,1,0,t5:2,10535 10540,mesh from mobile npc.ini 2740
+"25107,2,27410,1011,255,575",WoundedMessenger,quest_npcs.txt,1,1,0,t5:2,10525 10530,mesh from mobile npc.ini 2741
+"25108,2,27420,1011,299,539",ZhaoFengling,quest_npcs.txt,1,1,0,t5:2,10530 10535,mesh from mobile npc.ini 2742
+"25109,2,27470,1011,291,337",FallenHelmet,quest_npcs.txt,1,1,1,t5:2,10545 10550,mesh from mobile npc.ini 2747
+"25110,2,28840,1011,318,326",Bloodstain,quest_npcs.txt,1,1,1,t5:2,10550 10555,mesh from mobile npc.ini 2884
+"25111,2,28840,1011,318,288",Bloodstain,quest_npcs.txt,1,1,1,t5:2,10555 10560,mesh from mobile npc.ini 2884
+"25112,2,27490,1011,304,251",FightingTrace,quest_npcs.txt,1,1,1,t5:2,10560 10565,mesh from mobile npc.ini 2749
+"25113,2,27520,1011,304,210",QinFeng,quest_npcs.txt,3,3,1,t5:4,10565 10570 10575 10580,mesh from mobile npc.ini 2752
+"25114,2,27530,1011,310,212",HanLang,quest_npcs.txt,0,0,1,t5:1,10575,mesh from mobile npc.ini 2753
+"25115,2,27540,1011,308,214",ZhangYu,quest_npcs.txt,0,0,1,t5:1,10575,mesh from mobile npc.ini 2754
+"25116,2,27550,1011,306,216",HuangZheng,quest_npcs.txt,0,0,1,t5:1,10575,mesh from mobile npc.ini 2755
+"25117,2,27560,1011,324,154",ZhangChengde,quest_npcs.txt,1,1,1,t5:2,10580 10585,mesh from mobile npc.ini 2756
+"25118,2,27570,1011,361,108",SunBuzhou,quest_npcs.txt,1,1,0,t5:2,10585 10590,mesh from mobile npc.ini 2757
+"25119,2,28040,1011,379,28",WeiWuji,quest_npcs.txt,2,2,0,t5:3,10590 10595 10600,mesh from mobile npc.ini 2804
+"25120,2,27590,1011,191,260",SongQinghong,quest_npcs.txt,3,3,3,t5:4,10655 10660 10665 10670,mesh from mobile npc.ini 2759
+"25121,2,27600,1011,787,463",LeiWanjun,quest_npcs.txt,1,1,1,t5:2,10615 10620,mesh from mobile npc.ini 2760
+"25122,2,27610,1011,676,402",LeiXiaoguang,quest_npcs.txt,1,1,0,t5:2,10620 10625,mesh from mobile npc.ini 2761
+"25126,2,27650,1011,655,570",BaiTao,quest_npcs.txt,2,2,1,t5:3,10625 10630 10635,mesh from mobile npc.ini 2765
+"25127,2,27660,1011,627,808",WangLaoqi,quest_npcs.txt,1,1,0,t5:2,10635 10640,mesh from mobile npc.ini 2766
+"25128,2,27670,1011,741,752",ZhangLaosi,quest_npcs.txt,1,1,1,t5:2,10640 10645,mesh from mobile npc.ini 2767
+"25129,2,27680,1011,729,700",ZhengHong,quest_npcs.txt,1,1,1,t5:2,10645 10650,mesh from mobile npc.ini 2768
+"25130,2,28930,1011,746,556",WeiDaxiong,quest_npcs.txt,1,1,0,t5:2,10650 10655,mesh from mobile npc.ini 2893
+"25135,2,27730,1020,556,582",ZhanHongfei,quest_npcs.txt,2,2,2,t5:3,10670 10674 10675,mesh from mobile npc.ini 2773
+"25136,2,27740,1020,636,717",ZhouYixian,quest_npcs.txt,1,1,0,t5:2,10675 10680,mesh from mobile npc.ini 2774
+"25137,2,27750,1020,691,740",YunJiang,quest_npcs.txt,2,2,0,t5:3,10680 10685 10690,mesh from mobile npc.ini 2775
+"25141,2,27770,1020,790,684",XueQingyi,quest_npcs.txt,1,1,0,t5:2,10690 10695,mesh from mobile npc.ini 2777
+"25142,2,27780,1020,827,631",XuDaoling,quest_npcs.txt,1,1,1,t5:2,10695 10700,mesh from mobile npc.ini 2778
+"25143,2,27790,1020,827,540",ZhangZifan,quest_npcs.txt,1,1,1,t5:2,10700 10705,mesh from mobile npc.ini 2779
+"25144,2,27800,1020,566,289",Mrs.Gongsun,quest_npcs.txt,1,1,0,t5:2,10705 10710,mesh from mobile npc.ini 2780
+"25145,2,27810,1020,468,192",LanYouluo,quest_npcs.txt,2,2,0,t5:3,10710 10715 10720,mesh from mobile npc.ini 2781
+"25146,2,27820,1020,464,185",TangRuoxi,quest_npcs.txt,0,0,1,t5:1,10715,mesh from mobile npc.ini 2782
+"25147,2,27830,1020,439,309",WangChuyi,quest_npcs.txt,1,1,1,t5:2,10720 10725,mesh from mobile npc.ini 2783
+"25148,2,27840,1020,324,286",StarEye,quest_npcs.txt,0,0,1,t5:1,10725,mesh from mobile npc.ini 2784
+"25149,2,27850,1020,279,283",SolarEye,quest_npcs.txt,0,0,1,t5:1,10725,mesh from mobile npc.ini 2785
+"25150,2,27860,1020,267,303",AuroEye,quest_npcs.txt,0,0,1,t5:1,10725,mesh from mobile npc.ini 2786
+"25151,2,27870,1020,194,314",LiGuanghan,quest_npcs.txt,1,1,0,t5:2,10725 10730,mesh from mobile npc.ini 2787
+"25152,2,27880,1020,228,253",GuoFenxian,quest_npcs.txt,2,2,0,t5:3,10730 10735 10740,mesh from mobile npc.ini 2788
+"25153,2,27890,1020,574,581",YangXiaotian,quest_npcs.txt,4,4,4,t5:6,10740 10745 10790 10800 10805 10810,mesh from mobile npc.ini 2789
+"25154,2,27900,1020,574,621",YueShan,quest_npcs.txt,3,3,2,t5:4,10745 10750 10755 10760,mesh from mobile npc.ini 2790
+"25155,2,27910,1020,529,822",LiangXiao,quest_npcs.txt,1,1,1,t5:2,10760 10765,mesh from mobile npc.ini 2791
+"25245,2,27710,1011,781,469",ZhuShun,quest_npcs.txt,3,3,3,t5:4,10600 10605 10610 10615,mesh from mobile npc.ini 2771
+"25246,2,28270,1000,267,436",MurongQiu,quest_npcs.txt,1,1,1,t5:2,10926 10930,mesh from mobile npc.ini 2827
+"25247,2,28280,1000,293,460",ZhaoGongming,quest_npcs.txt,1,1,0,t5:2,10930 10935,mesh from mobile npc.ini 2828
+"25248,2,28540,1015,918,740",BirdmanFlock,quest_npcs.txt,0,0,1,t5:1,10990,mesh from mobile npc.ini 2854
+"25249,2,28540,1015,936,745",BirdmanFlock,quest_npcs.txt,0,0,1,t5:1,10990,mesh from mobile npc.ini 2854
+"25250,2,28540,1015,936,735",BirdmanFlock,quest_npcs.txt,0,0,1,t5:1,10990,mesh from mobile npc.ini 2854
+"25251,2,28550,1015,894,708",LuYouming,quest_npcs.txt,0,1,0,t5:1,10990,mesh from mobile npc.ini 2855
+"25254,2,27930,1020,476,594",SunSimiao,quest_npcs.txt,1,1,0,t5:2,10765 10770,mesh from mobile npc.ini 2793
+"25255,2,27940,1020,388,573",ZhangZhongjin,quest_npcs.txt,1,1,0,t5:2,10770 10775,mesh from mobile npc.ini 2794
+"25256,2,27950,1020,331,576",ShiZhen,quest_npcs.txt,1,1,0,t5:2,10775 10780,mesh from mobile npc.ini 2795
+"25257,2,27960,1020,326,564",DuFan,quest_npcs.txt,0,0,1,t5:1,10780,mesh from mobile npc.ini 2796
+"25258,2,27970,1020,277,549",HongChang,quest_npcs.txt,0,0,1,t5:1,10780,mesh from mobile npc.ini 2797
+"25259,2,27980,1020,348,518",ChenXiong,quest_npcs.txt,0,0,1,t5:1,10780,mesh from mobile npc.ini 2798
+"25260,2,27990,1020,280,483",GugeZheng,quest_npcs.txt,2,2,0,t5:3,10780 10785 10790,mesh from mobile npc.ini 2799
+"25261,2,28000,1020,577,557",MoBuwen,quest_npcs.txt,4,4,3,t5:5,10810 10815 10825 10826 10830,mesh from mobile npc.ini 2800
+"25262,2,28010,1000,944,648",ShomoKe,quest_npcs.txt,1,1,1,t5:2,10830 10835,mesh from mobile npc.ini 2801
+"25263,2,28020,1000,855,631",MaShiyuan,quest_npcs.txt,1,1,0,t5:2,10835 10840,mesh from mobile npc.ini 2802
+"25264,2,28030,1000,759,679",OuyangZi,quest_npcs.txt,1,1,0,t5:2,10840 10845,mesh from mobile npc.ini 2803
+"25265,2,28040,1000,519,636",WeiWuji,quest_npcs.txt,2,2,0,t5:3,10845 10850 10855,mesh from mobile npc.ini 2804
+"25266,2,28050,1000,533,684",Fortification,quest_npcs.txt,0,0,1,t5:1,10850,mesh from mobile npc.ini 2805
+"25267,2,28050,1000,465,676",Fortification,quest_npcs.txt,0,0,1,t5:1,10850,mesh from mobile npc.ini 2805
+"25268,2,28050,1000,456,593",Fortification,quest_npcs.txt,0,0,1,t5:1,10850,mesh from mobile npc.ini 2805
+"25269,2,28050,1000,533,603",Fortification,quest_npcs.txt,0,0,1,t5:1,10850,mesh from mobile npc.ini 2805
+"25270,2,28060,1000,513,590",ZhouQingshu,quest_npcs.txt,2,2,2,t5:3,10855 10860 10865,mesh from mobile npc.ini 2806
+"25271,2,28070,1000,558,456",ZhouQingyun,quest_npcs.txt,1,1,0,t5:2,10865 10870,mesh from mobile npc.ini 2807
+"25272,2,28080,1000,589,317",TangXiaoqian,quest_npcs.txt,2,2,0,t5:3,10870 10875 10880,mesh from mobile npc.ini 2808
+"25273,2,28090,1000,593,315",IrrigationWell,quest_npcs.txt,0,0,1,t5:1,10875,mesh from mobile npc.ini 2809
+"25274,2,28100,1000,563,273",NingQue,quest_npcs.txt,0,0,1,t5:1,10880,mesh from mobile npc.ini 2810
+"25275,2,28110,1000,519,229",Yifan,quest_npcs.txt,0,0,1,t5:1,10880,mesh from mobile npc.ini 2811
+"25276,2,28120,1000,423,209",CaiKun,quest_npcs.txt,0,0,1,t5:1,10880,mesh from mobile npc.ini 2812
+"25277,2,28130,1000,421,261",WangXuance,quest_npcs.txt,2,2,1,t5:3,10880 10885 10890,mesh from mobile npc.ini 2813
+"25278,2,28140,1000,426,251",GaoXianzhi,quest_npcs.txt,4,4,3,t5:6,10890 10895 10900 10906 10910 10915,mesh from mobile npc.ini 2814
+"25279,2,28150,1000,524,620",GanJiang,quest_npcs.txt,2,2,1,t5:3,10900 10905 10906,mesh from mobile npc.ini 2815
+"25280,2,28230,1000,521,615",ForgingWorkbench,quest_npcs.txt,0,0,1,t5:1,10905,mesh from mobile npc.ini 2823
+"25281,2,28240,1000,351,309",LonelySwordsman,quest_npcs.txt,1,1,0,t5:2,10915 10920,mesh from mobile npc.ini 2824
+"25282,2,28250,1000,324,460",LiGuoding,quest_npcs.txt,2,2,0,t5:3,10920 10925 10926,mesh from mobile npc.ini 2825
+"25283,2,32230,1000,505,655",TangJingtian,quest_npcs.txt,2,2,2,t5:3,10935 10940 10945,mesh from mobile npc.ini 3223
+"25284,2,28290,1015,732,583",HuangpuGe,quest_npcs.txt,3,3,2,t5:4,10945 10946 10955 10960,mesh from mobile npc.ini 2829
+"25285,2,28300,1015,708,595",XiaoZhengnan,quest_npcs.txt,2,2,1,t5:3,10960 10965 10970,mesh from mobile npc.ini 2830
+"25286,2,28380,1015,684,563",Pond,quest_npcs.txt,0,0,1,t5:1,10965,mesh from mobile npc.ini 2838
+"25287,2,28390,1015,790,576",BICaptain,quest_npcs.txt,1,1,1,t5:2,10970 10975,mesh from mobile npc.ini 2839
+"25288,2,28400,1015,850,721",ZhanYun,quest_npcs.txt,1,1,0,t5:2,10975 10980,mesh from mobile npc.ini 2840
+"25289,2,28410,1015,923,731",ZhangYong,quest_npcs.txt,2,2,0,t5:3,10980 10985 10990,mesh from mobile npc.ini 2841
+"25317,2,42260,1002,425,270",ChuShihan,quest_npcs.txt,1,1,1,t5:2,10471 10475,mesh from mobile npc.ini 4226
+"25319,2,27700,1011,236,282",QiuRufeng,quest_npcs.txt,2,2,2,t5:3,10540 10541 10545,mesh from mobile npc.ini 2770
+"26486,2,19150,1002,450,387",Donald,quest_npcs.txt,1,1,1,t5:1,4491,no mobile body with this name: townsman look 1915 (DERIVED)
+"26571,2,19150,1002,386,330",ZealousMan,quest_npcs.txt,1,1,1,t5:1,7199,no mobile body with this name: townsman look 1915 (DERIVED)
+"26809,2,19150,1002,449,372",PoetQin,quest_npcs.txt,1,1,1,t5:1,4501,no mobile body with this name: townsman look 1915 (DERIVED)
+"27788,2,20450,1002,464,387",Mr.White,quest_npcs.txt,7,7,0,t5:7,4697 4698 4699 4700 4701 4702 4703,mesh from mobile npc.ini 2045
+"28187,2,38590,1002,464,387",Foxie,quest_npcs_festival.txt,5,5,0,t3:5,4724 4725 4726 4727 4728,mesh from mobile npc.ini 3859
+"28329,2,45990,1002,461,387",Cupid,quest_npcs_festival.txt,1,1,0,t5:1,4730,mesh from mobile npc.ini 4599
+"28948,2,54930,1002,385,332",Mendes,quest_npcs_festival.txt,25,25,25,t5:25,4973 4974 4975 4976 4977 4978 4979 4980 4981 4982 4983 4984,mesh from mobile npcx.ini 5493
+"29235,2,55320,1002,421,289",JiaKun,quest_npcs_festival.txt,3,3,0,t5:3,5019 5020 5021,mesh from mobile npcx.ini 5532
+"30750,2,60970,1002,359,345",Bonnie,quest_npcs_festival.txt,2,2,2,t2:2,5116 5898,mesh from mobile npcx.ini 6097
+"30760,2,19150,1002,731,327",SuspiciousEntrance1,quest_npcs_festival.txt,1,1,1,t2:1,5117,no mobile body with this name: townsman look 1915 (DERIVED)
+"30761,2,19150,1000,860,763",SuspiciousEntrance2,quest_npcs_festival.txt,1,1,1,t2:1,5118,no mobile body with this name: townsman look 1915 (DERIVED)
+"30887,2,44410,1002,546,296",Flett,quest_npcs.txt,0,21,0,t3:21,5243 5244 5245 5246 5247 5248 5249 5250 5251 5252 5253 5254,mesh from mobile npc.ini 4441
+"30893,2,44470,1002,441,290",Chinju,quest_npcs.txt,621,601,1,t1:5 t2:11 t3:606,5133 5134 5135 5136 5137 5138 5139 5140 5141 5142 5143 5144,mesh from mobile npc.ini 4447
+"30916,2,19050,1002,373,347",Armorer,quest_npcs.txt,13,10,0,t5:13,5382 5383 5384 5385 5386 5387 5388 5389 5390 5391 5392 5393,mesh from mobile npc.ini 1905
+"30917,2,64290,1002,437,296",ElderDisciple,quest_npcs.txt,0,1,1,t5:1,5385,mesh from mobile npcx.ini 6429
+"30918,2,18930,1002,424,325",Shopkeeper,quest_npcs.txt,0,1,1,t5:1,5386,mesh from mobile npc.ini 1893
+"30919,2,42260,1002,409,392",ChuShihan,quest_npcs.txt,0,1,1,t5:1,5387,mesh from mobile npc.ini 4226
+"30920,2,48010,1015,950,724",Herb,quest_npcs.txt,0,0,1,t5:1,5382,mesh from mobile npc.ini 4801
+"30921,2,42280,1020,843,605",IronOre,quest_npcs.txt,0,0,1,t5:1,5383,mesh from mobile npc.ini 4228
+"30922,2,42290,1011,59,386",Branch,quest_npcs.txt,0,0,1,t5:1,5384,mesh from mobile npc.ini 4229
+"30923,2,42300,1000,902,623",DemonicSpot,quest_npcs.txt,0,0,1,t5:1,5393,mesh from mobile npc.ini 4230
+"31038,2,56350,1002,455,392",Aeneas,quest_npcs.txt,5,4,3,t1:3 t2:2,5395 5397 5424 5425 5426,mesh from mobile npcx.ini 5635
+"31657,2,41310,12144,219,105",Chest,quest_npcs_chests.txt,0,0,1,t5:1,5516,mesh from mobile npc.ini 4131; quest spot blocked on the server DMap (kept)
+"31861,2,18850,1002,434,404",Furnace,quest_npcs_festival.txt,3,3,2,t2:2 t5:1,5574 5579 5601,mesh from mobile npc.ini 1885
+"31940,2,60190,1002,434,404",InnerPowerAssistant,quest_npcs_festival.txt,1,1,0,t5:1,5583,mesh from mobile npcx.ini 6019
+"31975,2,60190,1002,434,404",InnerPowerAssistant,quest_npcs_festival.txt,1,1,0,t5:1,5600,mesh from mobile npcx.ini 6019
+"32124,2,49480,1002,368,440",Eloise,quest_npcs_festival.txt,1,1,1,t2:1,5607,mesh from mobile npc.ini 4948
+"32283,2,27000,1002,425,333",SongQing,quest_npcs.txt,4,4,0,t1:7,13509 13510 13511 13512 13514 13515 13516,mesh from mobile npc.ini 2700
+"32284,2,13490,1002,409,319",Shovel,quest_npcs.txt,1,1,0,t1:2,13510 13511,mesh from mobile npc.ini 1349
+"32285,2,27260,1002,504,389",SongShiyu,quest_npcs.txt,5,5,0,t1:7,13512 13513 13514 13520 13522 13523 13910,mesh from mobile npc.ini 2726
+"32286,2,13510,1002,553,378",InjuredPheasant,quest_npcs.txt,2,2,0,t1:3,13523 13525 13890,mesh from mobile npc.ini 1351
+"32287,2,13520,1002,452,451",LieutenantChen,quest_npcs.txt,8,8,0,t1:10,13526 13527 13528 13529 13555 13883 13912 13913 13922 14091,mesh from mobile npc.ini 1352
+"32288,2,13530,1002,604,670",LiKui,quest_npcs.txt,4,4,0,t1:5,13529 13530 13531 13532 13533,mesh from mobile npc.ini 1353
+"32289,2,13540,1002,565,632",LiGui,quest_npcs.txt,17,17,0,t1:25,13533 13534 13535 13536 13537 13538 13543 13551 13572 13573 13576 13583,mesh from mobile npc.ini 1354
+"32290,2,13570,1002,225,590",ScorchedEarth,quest_npcs.txt,1,1,0,t1:2,13539 13540,mesh from mobile npc.ini 1357
+"32291,2,13570,1002,221,564",ScorchedEarth,quest_npcs.txt,1,1,0,t1:2,13540 13541,mesh from mobile npc.ini 1357
+"32292,2,13570,1002,202,569",ScorchedEarth,quest_npcs.txt,1,1,0,t1:2,13541 13542,mesh from mobile npc.ini 1357
+"32293,2,13580,1002,139,546",UnnamedSoldier,quest_npcs.txt,5,5,0,t1:7,13542 13546 13547 13548 13919 13920 13940,mesh from mobile npc.ini 1358
+"32294,2,27160,1002,41,413",HuiJing,quest_npcs.txt,3,3,0,t1:4,13543 13545 13546 13911,mesh from mobile npc.ini 2716
+"32295,2,27180,1002,499,311",Drunkard,quest_npcs.txt,4,4,0,t1:6,13549 13550 13554 13555 13875 13915,mesh from mobile npc.ini 2718
+"32299,2,13640,1002,595,398",Carrot,quest_npcs.txt,1,1,0,t1:2,13551 13892,mesh from mobile npc.ini 1364
+"32300,2,13660,1002,650,391",Mary,quest_npcs.txt,2,2,0,t1:3,13553 13554 13921,mesh from mobile npc.ini 1366
+"32301,2,13660,1011,156,238",Mary,quest_npcs.txt,1,1,0,t1:2,13557 13558,mesh from mobile npc.ini 1366
+"32302,2,13670,1011,155,241",MillionJohn,quest_npcs.txt,21,21,0,t1:24 t5:1,13558 13559 13560 13561 13562 13563 13566 13567 13568 13573 13574 13575,mesh from mobile npc.ini 1367
+"32303,2,64360,1011,189,270",Lisa,quest_npcs.txt,4,4,0,t1:6,13564 13565 13566 13859 13916 13946,mesh from mobile npcx.ini 6436
+"32304,2,27590,1011,357,207",SongQinghong,quest_npcs.txt,7,7,0,t1:7 t5:1,13568 13569 13570 13571 13876 13944 13945 14086,mesh from mobile npc.ini 2759
+"32305,2,49130,1011,308,429",~,quest_npcs.txt,2,2,0,t1:3,13576 13577 13578,mesh from mobile npc.ini 4913
+"32306,2,17750,1011,312,435",BanditSpy,quest_npcs.txt,1,1,0,t1:2,13578 13579,mesh from mobile npc.ini 1775
+"32307,2,56340,1002,370,322",RebirthMaster,quest_npcs.txt,8,8,0,t1:15,13598 13599 13606 13607 13609 13610 13611 13649 13650 13658 13659 13931,mesh from mobile npcx.ini 5634
+"32308,2,13710,1002,694,474",DragonGem,quest_npcs.txt,1,1,0,t1:2,13599 13600,mesh from mobile npc.ini 1371
+"32309,2,13720,1002,332,697",FuryGem,quest_npcs.txt,1,1,0,t1:2,13600 13601,mesh from mobile npc.ini 1372
+"32310,2,13730,1002,188,453",MoonGem,quest_npcs.txt,1,1,0,t1:2,13601 13602,mesh from mobile npc.ini 1373
+"32311,2,13740,1011,675,566",PhoenixGem,quest_npcs.txt,1,1,0,t1:2,13602 13603,mesh from mobile npc.ini 1374
+"32312,2,13750,1020,529,486",VioletGem,quest_npcs.txt,1,1,0,t1:2,13603 13604,mesh from mobile npc.ini 1375
+"32313,2,13760,1000,291,450",KylinGem,quest_npcs.txt,1,1,0,t1:2,13604 13605,mesh from mobile npc.ini 1376
+"32314,2,13770,1015,168,191",RainbowGem,quest_npcs.txt,1,1,0,t1:2,13605 13606,mesh from mobile npc.ini 1377
+"32315,2,44120,12331,607,650",Arthur,quest_npcs.txt,2,2,0,t1:4,13650 13655 13656 13860,mesh from mobile npc.ini 4412
+"32316,2,13790,12331,596,618",FireSeal,quest_npcs.txt,2,2,0,t1:4,13651 13860 13861 13862,mesh from mobile npc.ini 1379
+"32317,2,13800,12331,675,1006",EarthSeal,quest_npcs.txt,1,1,0,t1:2,13652 13864,mesh from mobile npc.ini 1380
+"32318,2,13810,12331,883,894",WindSeal,quest_npcs.txt,1,1,0,t1:2,13653 13868,mesh from mobile npc.ini 1381
+"32319,2,13820,12331,998,675",ThunderSeal,quest_npcs.txt,1,1,0,t1:2,13654 13655,mesh from mobile npc.ini 1382
+"32320,2,13830,12331,715,744",SealCrystal,quest_npcs.txt,2,2,0,t1:3,13656 13657 13658,mesh from mobile npc.ini 1383
+"32321,2,49480,1002,441,379",Eloise,quest_npcs.txt,42,41,0,t1:61,13507 13508 13516 13517 13518 13525 13526 13580 13581 13590 13594 13595,mesh from mobile npc.ini 4948
+"32322,2,20070,1002,439,427",CityGuard,quest_npcs.txt,2,2,0,t1:4,13581 13582 13613 13614,mesh from mobile npc.ini 2007
+"32323,2,56350,1002,477,344",Aeneas,quest_npcs.txt,1,1,0,t1:2,13582 13950,mesh from mobile npcx.ini 5635
+"32325,2,49130,1002,528,461",~,quest_npcs.txt,1,1,0,t1:2,13583 13584,mesh from mobile npc.ini 4913
+"32326,2,14430,1002,538,476",DunnBurg,quest_npcs.txt,2,2,0,t1:3,13584 13585 13586,mesh from mobile npc.ini 1443
+"32328,2,13890,1002,426,286",Canary,quest_npcs.txt,1,1,0,t1:2,13586 13587,mesh from mobile npc.ini 1389
+"32329,2,14430,1002,383,346",DunnBurg,quest_npcs.txt,65,66,0,t1:101,13587 13588 13589 13590 13591 13592 13593 13595 13596 13597 13612 13613,mesh from mobile npc.ini 1443
+"32330,2,13910,1002,424,341",NoticeBoard,quest_npcs.txt,2,2,0,t1:4,13612 13674 13675 13870,mesh from mobile npc.ini 1391
+"32331,2,13920,12332,51,51",CovenantAltar,quest_npcs.txt,14,14,0,t1:24,13588 13610 13622 13643 13659 13673 13689 13719 13745 13746 13781 13782,mesh from mobile npc.ini 1392
+"32333,2,13940,1002,361,713",LostWeapon,quest_npcs.txt,1,1,0,t1:2,13614 13615,mesh from mobile npc.ini 1394
+"32334,2,35800,1002,339,696",Bonfire,quest_npcs.txt,1,1,0,t1:2,13615 13616,mesh from mobile npc.ini 3580
+"32335,2,14580,1002,329,697",Carpet,quest_npcs.txt,1,1,0,t1:2,13616 13617,mesh from mobile npc.ini 1458
+"32336,2,49130,1002,313,697",~,quest_npcs.txt,2,2,0,t1:3,13617 13618 13619,mesh from mobile npc.ini 4913
+"32337,2,14060,1002,294,680",Davis,quest_npcs.txt,1,1,0,t1:2,13619 13620,mesh from mobile npc.ini 1406
+"32338,2,14430,1002,299,675",DunnBurg,quest_npcs.txt,1,1,0,t1:2,13620 13621,mesh from mobile npc.ini 1443
+"32340,2,49130,1002,540,144",~,quest_npcs.txt,1,1,0,t1:2,13624 13625,mesh from mobile npc.ini 4913
+"32341,2,49480,12333,221,204",Eloise,quest_npcs.txt,2,2,0,t1:3,13625 13626 13627,mesh from mobile npc.ini 4948
+"32342,2,14200,1011,133,378",Dryad,quest_npcs.txt,1,1,0,t1:2,13629 13630,mesh from mobile npc.ini 1420
+"32343,2,41010,1011,270,422",Altar,quest_npcs.txt,1,1,0,t1:2,13630 13631,mesh from mobile npc.ini 4101
+"32344,2,14110,1011,385,549",Ore,quest_npcs.txt,2,2,0,t1:3,13631 13632 13633,mesh from mobile npc.ini 1411
+"32345,2,14210,1011,388,555",ElfGirl,quest_npcs.txt,1,1,0,t1:2,13633 13634,mesh from mobile npc.ini 1421
+"32346,2,49130,1015,866,607",~,quest_npcs.txt,2,2,0,t1:3,13635 13636 13637,mesh from mobile npc.ini 4913
+"32347,2,14430,1015,861,614",DunnBurg,quest_npcs.txt,2,2,0,t1:3,13640 13641 13642,mesh from mobile npc.ini 1443
+"32348,2,14150,1015,902,680",CloakHerb,quest_npcs.txt,1,1,0,t1:2,13637 13638,mesh from mobile npc.ini 1415
+"32349,2,14160,1015,791,697",Agrimony,quest_npcs.txt,1,1,0,t1:2,13638 13639,mesh from mobile npc.ini 1416
+"32350,2,14170,1015,698,621",Waterhead,quest_npcs.txt,1,1,0,t1:2,13639 13640,mesh from mobile npc.ini 1417
+"32352,2,49130,1011,385,69",~,quest_npcs.txt,1,1,0,t1:2,13645 13646,mesh from mobile npc.ini 4913
+"32354,2,14210,1011,434,77",ElfGirl,quest_npcs.txt,1,1,0,t1:2,13646 13647,mesh from mobile npc.ini 1421
+"32356,2,49130,1011,415,125",~,quest_npcs.txt,2,2,0,t1:3,13661 13662 13663,mesh from mobile npc.ini 4913
+"32357,2,49480,12334,97,78",Eloise,quest_npcs.txt,1,1,0,t1:2,13647 13648,mesh from mobile npc.ini 4948
+"32358,2,49480,1000,490,647",Eloise,quest_npcs.txt,1,1,0,t1:2,13663 13664,mesh from mobile npc.ini 4948
+"32360,2,49480,1000,551,616",Eloise,quest_npcs.txt,1,1,0,t1:2,13664 13665,mesh from mobile npc.ini 4948
+"32361,2,41680,1000,555,619",EveTrahir,quest_npcs.txt,1,1,0,t1:2,13665 13666,mesh from mobile npc.ini 4168
+"32362,2,49130,1002,190,543",~,quest_npcs.txt,2,2,0,t1:3,13666 13667 13668,mesh from mobile npc.ini 4913
+"32364,2,41680,1002,455,374",EveTrahir,quest_npcs.txt,8,7,0,t1:14,13668 13669 13670 13671 13676 13677 13678 13704 13705 13714 13715 13729,mesh from mobile npc.ini 4168
+"32365,2,14320,1002,485,318",LuFu,quest_npcs.txt,1,1,0,t1:2,13548 13549,mesh from mobile npc.ini 1432
+"32366,2,49480,1002,592,272",Eloise,quest_npcs.txt,3,3,0,t1:5,13712 13713 13714 13715 13716,mesh from mobile npc.ini 4948
+"32367,2,14340,1002,467,284",Celina,quest_npcs.txt,1,1,0,t1:2,13681 13682,mesh from mobile npc.ini 1434
+"32368,2,14350,1002,353,350",Dailey,quest_npcs.txt,1,1,0,t1:2,13682 13683,mesh from mobile npc.ini 1435
+"32369,2,34010,1020,563,584",Carl,quest_npcs.txt,2,2,0,t1:4,13684 13685 13687 13688,mesh from mobile npc.ini 3401
+"32370,2,14400,1020,682,599",MagicCrystal,quest_npcs.txt,3,2,0,t1:4,13685 13686 13687 13896,mesh from mobile npc.ini 1440
+"32371,2,14400,1020,727,591",MagicCrystal,quest_npcs.txt,1,1,0,t1:2,13896 13897,mesh from mobile npc.ini 1440
+"32372,2,14400,1020,815,554",MagicCrystal,quest_npcs.txt,1,1,0,t1:2,13897 13898,mesh from mobile npc.ini 1440
+"32373,2,14400,1020,782,436",MagicCrystal,quest_npcs.txt,0,1,0,t1:1,13898,mesh from mobile npc.ini 1440
+"32374,2,49480,1020,564,589",Eloise,quest_npcs.txt,5,5,0,t1:6,13691 13692 13693 13694 13695 13696,mesh from mobile npc.ini 4948
+"32375,2,14420,12335,207,129",FacetGateway,quest_npcs.txt,3,3,0,t1:4,13696 13697 13698 13699,mesh from mobile npc.ini 1442
+"32376,2,14430,1015,723,583",DunnBurg,quest_npcs.txt,1,1,0,t1:2,13705 13706,mesh from mobile npc.ini 1443
+"32377,2,31910,1002,382,439",Portal,quest_npcs.txt,2,2,0,t1:3,13700 13701 13702,mesh from mobile npc.ini 3191
+"32378,2,49130,1002,444,437",~,quest_npcs.txt,1,1,0,t1:2,13706 13707,mesh from mobile npc.ini 4913
+"32379,2,14520,1002,442,442",Halma,quest_npcs.txt,1,1,0,t1:2,13707 13708,mesh from mobile npc.ini 1452
+"32383,2,14500,1002,574,475",IllusoryHerb,quest_npcs.txt,1,1,0,t1:2,13710 13711,mesh from mobile npc.ini 1450
+"32385,2,14520,1002,467,101",Halma,quest_npcs.txt,1,1,0,t1:2,13716 13717,mesh from mobile npc.ini 1452
+"32386,2,31910,1002,471,101",Portal,quest_npcs.txt,2,2,0,t1:3,13725 13726 13727,mesh from mobile npc.ini 3191
+"32387,2,49480,1015,724,563",Eloise,quest_npcs.txt,1,1,0,t1:2,13721 13722,mesh from mobile npc.ini 4948
+"32388,2,14550,12335,209,227",RitualMaterial,quest_npcs.txt,1,1,0,t1:2,13727 13728,mesh from mobile npc.ini 1455
+"32389,2,49480,12335,216,132",Eloise,quest_npcs.txt,4,4,0,t1:6,13730 13731 13733 13734 14508 14509,mesh from mobile npc.ini 4948
+"32390,2,14570,12335,157,186",WoodenStake,quest_npcs.txt,1,1,0,t1:2,13731 13732,mesh from mobile npc.ini 1457
+"32391,2,14580,12335,59,165",Carpet,quest_npcs.txt,1,1,0,t1:2,13732 13733,mesh from mobile npc.ini 1458
+"32392,2,49130,12336,168,176",~,quest_npcs.txt,1,1,0,t1:2,13734 13735,mesh from mobile npc.ini 4913
+"32393,2,31910,12336,41,39",Portal,quest_npcs.txt,1,1,0,t1:2,13735 13736,mesh from mobile npc.ini 3191
+"32394,2,49130,12337,377,410",~,quest_npcs.txt,2,2,0,t1:3,13736 13737 13738,mesh from mobile npc.ini 4913
+"32395,2,31910,12337,376,391",Portal,quest_npcs.txt,1,1,0,t1:2,13738 13739,mesh from mobile npc.ini 3191
+"32396,2,49130,12338,99,77",~,quest_npcs.txt,3,3,0,t1:4,13739 13740 13741 13742,mesh from mobile npc.ini 4913
+"32397,2,14640,12338,89,42",GatewayOfPast,quest_npcs.txt,1,1,0,t1:2,13743 13744,mesh from mobile npc.ini 1464
+"32398,2,49480,12338,95,47",Eloise,quest_npcs.txt,1,1,0,t1:2,13742 13743,mesh from mobile npc.ini 4948
+"32399,2,11540,1002,574,339",StrangeCoordinate,quest_npcs.txt,1,1,0,t1:2,13755 13756,mesh from mobile npc.ini 1154
+"32400,2,11540,1002,790,501",StrangeCoordinate,quest_npcs.txt,1,1,0,t1:2,13756 13757,mesh from mobile npc.ini 1154
+"32401,2,11540,1002,636,606",StrangeCoordinate,quest_npcs.txt,1,1,0,t1:2,13757 13758,mesh from mobile npc.ini 1154
+"32402,2,49130,12339,232,229",~,quest_npcs.txt,2,2,0,t1:3,13760 13761 13762,mesh from mobile npc.ini 4913
+"32403,2,11610,12339,283,280",EnigmaPortal,quest_npcs.txt,1,1,0,t1:2,13762 13763,mesh from mobile npc.ini 1161
+"32405,2,12740,1020,579,557",Bell,quest_npcs.txt,6,6,0,t1:10,13768 13769 13772 13773 13776 13777 13782 13783 13903 13971,mesh from mobile npc.ini 1274
+"32406,2,11590,12340,394,404",EnigmaStone,quest_npcs.txt,1,1,0,t1:2,13771 13772,mesh from mobile npc.ini 1159
+"32407,2,11600,12341,276,267",Slate,quest_npcs.txt,1,1,0,t1:2,13774 13775,mesh from mobile npc.ini 1160
+"32408,2,11610,12341,248,271",EnigmaPortal,quest_npcs.txt,1,1,0,t1:2,13775 13776,mesh from mobile npc.ini 1161
+"32409,2,49130,1020,782,436",~,quest_npcs.txt,2,2,0,t1:3,13778 13779 13780,mesh from mobile npc.ini 4913
+"32411,2,49480,1002,428,253",Eloise,quest_npcs.txt,1,1,0,t1:2,13508 13509,mesh from mobile npc.ini 4948
+"32416,2,12740,1020,816,476",Bell,quest_npcs.txt,1,1,0,t1:2,13780 13781,mesh from mobile npc.ini 1274
+"32420,2,44120,12331,607,637",Arthur,quest_npcs.txt,1,1,0,t1:2,13651 13861,mesh from mobile npc.ini 4412
+"32421,2,44120,12331,664,858",Arthur,quest_npcs.txt,1,1,0,t1:2,13862 13863,mesh from mobile npc.ini 4412
+"32424,2,11850,12331,675,1005",Mound,quest_npcs.txt,1,1,0,t1:2,13652 13863,mesh from mobile npc.ini 1185
+"32425,2,44120,12331,680,1009",Arthur,quest_npcs.txt,1,1,0,t1:2,13864 13865,mesh from mobile npc.ini 4412
+"32426,2,11890,12331,714,1014",Tornado,quest_npcs.txt,1,1,0,t1:2,13865 13866,mesh from mobile npc.ini 1189
+"32427,2,11890,12331,789,966",Tornado,quest_npcs.txt,1,1,0,t1:2,13866 13867,mesh from mobile npc.ini 1189
+"32428,2,11890,12331,852,918",Tornado,quest_npcs.txt,1,1,0,t1:2,13653 13867,mesh from mobile npc.ini 1189
+"32429,2,44120,12331,892,903",Arthur,quest_npcs.txt,1,1,0,t1:2,13868 13869,mesh from mobile npc.ini 4412
+"32430,2,11910,12331,998,670",Clearing,quest_npcs.txt,1,1,0,t1:2,13654 13869,mesh from mobile npc.ini 1191
+"32474,2,49130,1002,593,300",~,quest_npcs.txt,0,1,0,t1:1,13891,mesh from mobile npc.ini 4913
+"32475,2,49130,1002,620,389",~,quest_npcs.txt,2,2,0,t1:3,13552 13553 13892,mesh from mobile npc.ini 4913
+"32476,2,11450,1002,961,557",MapleForestPortal,quest_npcs.txt,1,1,0,t1:2,13557 13893,mesh from mobile npc.ini 1145
+"32477,2,14320,1002,529,619",LuFu,quest_npcs.txt,1,1,0,t1:2,13538 13539,mesh from mobile npc.ini 1432
+"32478,2,49480,1011,211,261",Eloise,quest_npcs.txt,2,2,0,t1:2 t5:1,13572 13859 13877,mesh from mobile npc.ini 4948
+"32480,2,41680,1002,500,394",EveTrahir,quest_npcs.txt,1,1,0,t1:2,13678 13679,mesh from mobile npc.ini 4168
+"32481,2,27260,1002,557,491",SongShiyu,quest_npcs.txt,1,1,0,t1:2,13893 13922,mesh from mobile npc.ini 2726
+"32482,2,49130,12330,51,59",~,quest_npcs.txt,2,2,0,t1:3,13608 13609 13935,mesh from mobile npc.ini 4913
+"32483,2,49480,1002,441,379",Eloise,quest_npcs.txt,21,21,0,t2:21,13128 13129 13130 13131 13132 13133 13134 13135 13136 13137 13138 13139,mesh from mobile npc.ini 4948
+"32816,2,49480,12332,41,38",Eloise(???),quest_npcs.txt,1,1,0,t1:2,13589 13955,mesh from mobile npc.ini 4948
+"32817,2,49480,1002,480,344",Eloise(???),quest_npcs.txt,7,7,0,t1:8,13598 13801 13850 13956 13969 13970 14090 14093,mesh from mobile npc.ini 4948
+"32818,2,49480,1002,441,379",Eloise(???),quest_npcs.txt,5,5,0,t1:6,13591 13800 13957 13968 14089 14092,mesh from mobile npc.ini 4948
+"32873,2,49480,1020,567,575",Eloise(???),quest_npcs.txt,3,3,0,t1:4,13623 13803 13804 13971,mesh from mobile npc.ini 4948
+"33079,2,49480,1002,512,343",Eloise,quest_npcs.txt,2,2,0,t1:3,13518 13519 13520,mesh from mobile npc.ini 4948
+"33080,2,49130,1002,498,319",~,quest_npcs.txt,1,1,0,t1:2,13550 13941,mesh from mobile npc.ini 4913
+"33081,2,13670,1011,216,312",MillionJohn,quest_npcs.txt,1,1,0,t1:2,13563 13564,mesh from mobile npc.ini 1367
+"33100,2,43740,12541,124,146",GaWain,quest_npcs.txt,5,5,0,t5:6,5899 5900 5981 5982 5985 5986,mesh from mobile npc.ini 4374
+"33101,2,43750,12541,90,109",Margaret,quest_npcs.txt,20,20,0,t5:21,5982 5983 5987 5988 5989 5990 7952 7953 7954 7955 7956 7957,mesh from mobile npc.ini 4375
+"33102,2,43760,12541,99,69",TheodoreRick,quest_npcs.txt,3,3,0,t5:4,5983 5984 5991 5992,mesh from mobile npc.ini 4376
+"33103,2,21270,12541,162,115",Cassandra,quest_npcs.txt,2,3,0,t5:4,5980 5981 5984 7967,mesh from mobile npc.ini 2127
+"33285,2,19150,12597,362,223",Fruits,quest_npcs_festival.txt,0,0,1,t9:1,8140,no mobile body with this name: townsman look 1915 (DERIVED)
+"33371,2,60320,1002,455,366",Chang`e,quest_npcs_festival.txt,0,36,1,t9:36,7399 7751 7752 7753 8066 8067 8068 8069 8070 8071 8072 8073,mesh from mobile npcx.ini 6032
+"33821,2,49480,1002,438,439",Eloise,quest_npcs.txt,0,4,3,t5:4,8310 8320 8322 8324,mesh from mobile npc.ini 4948
+"33822,2,14430,1002,456,334",DunnBurg,quest_npcs.txt,0,2,2,t5:2,8311 8319,mesh from mobile npc.ini 1443
+"33823,2,27000,1002,509,374",SongQing,quest_npcs.txt,0,3,3,t5:3,8312 8316 8323,mesh from mobile npc.ini 2700
+"33826,2,14320,1002,808,502",LuFu,quest_npcs.txt,0,2,1,t5:2,8314 8335,mesh from mobile npc.ini 1432
+"33827,2,27180,1002,481,435",Drunkard,quest_npcs.txt,0,3,3,t5:3,8315 8317 8336,mesh from mobile npc.ini 2718
+"33829,2,14000,1020,580,565",Dadar,quest_npcs.txt,0,1,0,t5:1,8318,mesh from mobile npc.ini 1400
+"33837,2,11640,1002,570,798",HeavenlyMaster,quest_npcs.txt,0,2,1,t5:2,8329 8337,mesh from mobile npc.ini 1164
+"33844,2,50770,1002,416,362",KurouMochizuki,quest_npcs.txt,0,3,3,t5:3,8328 8330 8331,mesh from mobile npcx.ini 5077
+"33961,2,27000,1002,509,374",SongQing,quest_npcs.txt,0,2,2,t1:2,8703 8714,mesh from mobile npc.ini 2700
+"33963,2,50680,1002,460,334",SarutobiSasuke,quest_npcs.txt,0,8,7,t1:8,8704 8713 8716 8718 8721 8861 8868 8873,mesh from mobile npcx.ini 5068
+"33964,2,49480,1002,438,439",Eloise,quest_npcs.txt,0,1,1,t1:1,8705,mesh from mobile npc.ini 4948
+"33972,2,50680,1002,486,349",SarutobiSasuke,quest_npcs.txt,0,1,1,t1:1,8719,mesh from mobile npcx.ini 5068
+"33973,2,50770,1002,416,362",KurouMochizuki,quest_npcs.txt,0,3,3,t1:3,8722 8724 8732,mesh from mobile npcx.ini 5077
+"33974,2,49480,1002,364,467",Eloise,quest_npcs.txt,0,1,1,t1:1,8723,mesh from mobile npc.ini 4948
+"33975,2,11640,1002,365,440",HeavenlyMaster,quest_npcs.txt,0,4,1,t1:4,8725 8728 8729 8730,mesh from mobile npc.ini 1164
+"33976,2,12740,1020,568,584",Bell,quest_npcs.txt,0,1,1,t1:1,8731,mesh from mobile npc.ini 1274
+"34113,2,50940,1002,454,379",NozomiMochizuki,quest_npcs_festival.txt,1,1,1,t9:1,8831,mesh from mobile npcx.ini 5094
+"34163,2,50680,1002,461,398",SarutobiSasuke,quest_npcs.txt,1,1,1,t2:1,8832,mesh from mobile npcx.ini 5068
+"34227,2,10410,1002,440,261",LunarHades,quest_npcs.txt,0,2,2,t1:2,8862 8870,"mesh from mobile npc.ini 1041; quest spot 443,264 blocked on the server DMap, nudged"
+"34493,2,49480,1002,461,438",Eloise,quest_npcs.txt,0,2,1,t1:2,9008 9019,mesh from mobile npc.ini 4948
+"34496,2,53530,1020,584,256",Mavien,quest_npcs.txt,0,3,1,t1:3,9010 9011 9018,mesh from mobile npcx.ini 5353
+"34497,2,53540,1020,593,522",Irandir,quest_npcs.txt,0,5,1,t1:5,9012 9013 9015 9016 9204,mesh from mobile npcx.ini 5354
+"34601,2,11200,1002,353,349",Liora,quest_npcs.txt,0,2,2,t3:2,9120 9122,mesh from mobile npc.ini 1120
+"34602,2,11220,1002,365,439",AzureAster,quest_npcs.txt,0,1,1,t3:1,9121,mesh from mobile npc.ini 1122
+"34603,2,13890,1002,424,325",Canary,quest_npcs.txt,0,2,2,t3:2,9123 9125,mesh from mobile npc.ini 1389
+"34604,2,12570,1002,466,295",GardenerCarl,quest_npcs.txt,0,1,1,t3:1,9124,mesh from mobile npc.ini 1257
+"34605,2,11200,1011,219,230",Liora,quest_npcs.txt,0,2,2,t3:2,9126 9128,mesh from mobile npc.ini 1120
+"34606,2,11370,1011,302,231",FlameFlower,quest_npcs.txt,0,1,1,t3:1,9127,mesh from mobile npc.ini 1137
+"34607,2,13890,1011,161,260",Canary,quest_npcs.txt,0,2,2,t3:2,9129 9131,mesh from mobile npc.ini 1389
+"34608,2,12580,1011,180,313",FarmerHank,quest_npcs.txt,0,1,1,t3:1,9130,mesh from mobile npc.ini 1258
+"34609,2,11200,1020,578,594",Liora,quest_npcs.txt,0,2,2,t3:2,9132 9134,mesh from mobile npc.ini 1120
+"34610,2,11720,1020,593,518",MoonlitGrass,quest_npcs.txt,0,1,1,t3:1,9133,mesh from mobile npc.ini 1172
+"34611,2,13890,1020,537,533",Canary,quest_npcs.txt,0,2,2,t3:2,9135 9137,mesh from mobile npc.ini 1389
+"34612,2,12590,1020,546,621",KnightLeon,quest_npcs.txt,0,1,1,t3:1,9136,mesh from mobile npc.ini 1259
+"34613,2,11200,1000,505,666",Liora,quest_npcs.txt,0,2,2,t3:2,9138 9140,mesh from mobile npc.ini 1120
+"34614,2,11790,1000,525,734",SandLotus,quest_npcs.txt,0,1,1,t3:1,9139,mesh from mobile npc.ini 1179
+"34615,2,13890,1000,511,618",Canary,quest_npcs.txt,0,2,2,t3:2,9141 9143,mesh from mobile npc.ini 1389
+"34616,2,12600,1000,584,669",HunterBarton,quest_npcs.txt,0,1,1,t3:1,9142,mesh from mobile npc.ini 1260
+"34617,2,11200,1015,725,532",Liora,quest_npcs.txt,0,2,2,t3:2,9144 9146,mesh from mobile npc.ini 1120
+"34618,2,11950,1015,788,525",MoonlitWaterlily,quest_npcs.txt,0,1,1,t3:1,9145,mesh from mobile npc.ini 1195
+"34619,2,13890,1015,693,519",Canary,quest_npcs.txt,0,2,2,t3:2,9147 9149,mesh from mobile npc.ini 1389
+"34620,2,12610,1015,706,633",Gwendolyn,quest_npcs.txt,0,1,1,t3:1,9148,mesh from mobile npc.ini 1261
+"34621,2,12620,13073,98,77",WateringSpot,quest_npcs.txt,0,1,0,t3:1,35318,mesh from mobile npc.ini 1262
+"34622,2,12630,13073,188,86",FertilizingSpot,quest_npcs.txt,0,1,0,t3:1,35319,mesh from mobile npc.ini 1263
+"34623,2,12630,13073,108,230",FertilizingSpot,quest_npcs.txt,0,1,0,t3:1,35320,mesh from mobile npc.ini 1263
+"34729,2,41310,1002,662,492",chest,quest_npcs_chests.txt,0,0,1,t3:1,9236,mesh from mobile npc.ini 4131
+"34730,2,41310,1002,828,604",chest,quest_npcs_chests.txt,0,0,1,t3:1,9237,mesh from mobile npc.ini 4131
+"34731,2,41310,1002,751,704",chest,quest_npcs_chests.txt,0,0,1,t3:1,9238,"mesh from mobile npc.ini 4131; quest spot 748,707 blocked on the server DMap, nudged"
+"34732,2,41310,1002,516,535",chest,quest_npcs_chests.txt,0,0,1,t3:1,9239,mesh from mobile npc.ini 4131
+"34733,2,41310,1002,665,356",chest,quest_npcs_chests.txt,0,0,1,t3:1,9240,mesh from mobile npc.ini 4131
+"34734,2,41310,1002,374,120",chest,quest_npcs_chests.txt,0,0,1,t3:1,9241,mesh from mobile npc.ini 4131
+"34735,2,41310,1002,489,150",chest,quest_npcs_chests.txt,0,0,1,t3:1,9242,mesh from mobile npc.ini 4131
+"34736,2,41310,1002,522,873",chest,quest_npcs_chests.txt,0,0,1,t3:1,9243,mesh from mobile npc.ini 4131
+"34737,2,41310,1002,357,645",chest,quest_npcs_chests.txt,0,0,1,t3:1,9244,mesh from mobile npc.ini 4131
+"34738,2,41310,1002,135,505",chest,quest_npcs_chests.txt,0,0,1,t3:1,9245,"mesh from mobile npc.ini 4131; quest spot 135,502 blocked on the server DMap, nudged"
+"34739,2,41310,1002,169,367",chest,quest_npcs_chests.txt,0,0,1,t3:1,9246,mesh from mobile npc.ini 4131
+"34740,2,41310,1011,97,388",chest,quest_npcs_chests.txt,0,0,1,t3:1,9247,mesh from mobile npc.ini 4131
+"34741,2,41310,1011,338,508",chest,quest_npcs_chests.txt,0,0,1,t3:1,9248,mesh from mobile npc.ini 4131
+"34742,2,41310,1011,476,671",chest,quest_npcs_chests.txt,0,0,1,t3:1,9249,mesh from mobile npc.ini 4131
+"34743,2,41310,1011,156,291",chest,quest_npcs_chests.txt,0,0,1,t3:1,9250,mesh from mobile npc.ini 4131
+"34744,2,41310,1011,772,624",chest,quest_npcs_chests.txt,0,0,1,t3:1,9251,mesh from mobile npc.ini 4131
+"34745,2,41310,1011,462,353",chest,quest_npcs_chests.txt,0,0,1,t3:1,9252,mesh from mobile npc.ini 4131
+"34746,2,41310,1011,795,474",chest,quest_npcs_chests.txt,0,0,1,t3:1,9253,mesh from mobile npc.ini 4131
+"34747,2,41310,1011,597,698",chest,quest_npcs_chests.txt,0,0,1,t3:1,9254,mesh from mobile npc.ini 4131
+"34748,2,41310,1011,588,832",chest,quest_npcs_chests.txt,0,0,1,t3:1,9255,mesh from mobile npc.ini 4131
+"34749,2,41310,1011,347,137",chest,quest_npcs_chests.txt,0,0,1,t3:1,9256,mesh from mobile npc.ini 4131
+"34750,2,41310,1011,400,73",chest,quest_npcs_chests.txt,0,0,1,t3:1,9257,mesh from mobile npc.ini 4131
+"34751,2,41310,1000,518,494",chest,quest_npcs_chests.txt,0,0,1,t3:1,9258,mesh from mobile npc.ini 4131
+"34752,2,41310,1000,720,787",chest,quest_npcs_chests.txt,0,0,1,t3:1,9259,mesh from mobile npc.ini 4131
+"34753,2,41310,1000,698,588",chest,quest_npcs_chests.txt,0,0,1,t3:1,9260,mesh from mobile npc.ini 4131
+"34754,2,41310,1000,700,503",chest,quest_npcs_chests.txt,0,0,1,t3:1,9261,mesh from mobile npc.ini 4131
+"34755,2,41310,1000,869,676",chest,quest_npcs_chests.txt,0,0,1,t3:1,9262,mesh from mobile npc.ini 4131
+"34756,2,41310,1000,418,206",chest,quest_npcs_chests.txt,0,0,1,t3:1,9263,mesh from mobile npc.ini 4131
+"34757,2,41310,1000,353,96",chest,quest_npcs_chests.txt,0,0,1,t3:1,9264,mesh from mobile npc.ini 4131
+"34758,2,41310,1000,295,426",chest,quest_npcs_chests.txt,0,0,1,t3:1,9265,mesh from mobile npc.ini 4131
+"34759,2,41310,1000,324,329",chest,quest_npcs_chests.txt,0,0,1,t3:1,9266,mesh from mobile npc.ini 4131
+"34760,2,41310,1000,419,257",chest,quest_npcs_chests.txt,0,0,1,t3:1,9267,mesh from mobile npc.ini 4131
+"34761,2,41310,1000,91,293",chest,quest_npcs_chests.txt,0,0,1,t3:1,9268,mesh from mobile npc.ini 4131
+"34762,2,41310,1015,873,758",chest,quest_npcs_chests.txt,0,0,1,t3:1,9269,mesh from mobile npc.ini 4131
+"34763,2,41310,1015,905,646",chest,quest_npcs_chests.txt,0,0,1,t3:1,9270,mesh from mobile npc.ini 4131
+"34764,2,41310,1015,331,115",chest,quest_npcs_chests.txt,0,0,1,t3:1,9271,mesh from mobile npc.ini 4131
+"34765,2,41310,1015,691,943",chest,quest_npcs_chests.txt,0,0,1,t3:1,9272,mesh from mobile npc.ini 4131
+"34766,2,41310,1015,488,760",chest,quest_npcs_chests.txt,0,0,1,t3:1,9273,mesh from mobile npc.ini 4131
+"34767,2,41310,1015,525,690",chest,quest_npcs_chests.txt,0,0,1,t3:1,9274,mesh from mobile npc.ini 4131
+"34768,2,41310,1015,487,524",chest,quest_npcs_chests.txt,0,0,1,t3:1,9275,mesh from mobile npc.ini 4131
+"34769,2,41310,1015,316,552",chest,quest_npcs_chests.txt,0,0,1,t3:1,9276,mesh from mobile npc.ini 4131
+"34770,2,41310,1015,176,196",chest,quest_npcs_chests.txt,0,0,1,t3:1,9277,mesh from mobile npc.ini 4131
+"34771,2,41310,1015,435,368",chest,quest_npcs_chests.txt,0,0,1,t3:1,9278,mesh from mobile npc.ini 4131
+"34772,2,41310,1015,285,358",chest,quest_npcs_chests.txt,0,0,1,t3:1,9279,mesh from mobile npc.ini 4131
+"34773,2,41310,1020,688,425",chest,quest_npcs_chests.txt,0,0,1,t3:1,9280,mesh from mobile npc.ini 4131
+"34774,2,41310,1020,621,717",chest,quest_npcs_chests.txt,0,0,1,t3:1,9281,mesh from mobile npc.ini 4131
+"34775,2,41310,1020,715,553",chest,quest_npcs_chests.txt,0,0,1,t3:1,9282,mesh from mobile npc.ini 4131
+"34776,2,41310,1020,513,256",chest,quest_npcs_chests.txt,0,0,1,t3:1,9283,mesh from mobile npc.ini 4131
+"34777,2,41310,1020,419,104",chest,quest_npcs_chests.txt,0,0,1,t3:1,9284,mesh from mobile npc.ini 4131
+"34778,2,41310,1020,143,283",chest,quest_npcs_chests.txt,0,0,1,t3:1,9285,mesh from mobile npc.ini 4131
+"34779,2,41310,1020,279,245",chest,quest_npcs_chests.txt,0,0,1,t3:1,9286,mesh from mobile npc.ini 4131
+"34780,2,41310,1020,149,486",chest,quest_npcs_chests.txt,0,0,1,t3:1,9287,mesh from mobile npc.ini 4131
+"34781,2,41310,1020,438,681",chest,quest_npcs_chests.txt,0,0,1,t3:1,9288,mesh from mobile npc.ini 4131
+"34782,2,41310,1020,430,479",chest,quest_npcs_chests.txt,0,0,1,t3:1,9289,mesh from mobile npc.ini 4131
+"34783,2,41310,1020,483,376",chest,quest_npcs_chests.txt,0,0,1,t3:1,9290,mesh from mobile npc.ini 4131
+"34784,2,41310,1002,662,492",chest,quest_npcs_chests.txt,0,0,1,t3:1,9291,mesh from mobile npc.ini 4131
+"34785,2,41310,1002,828,604",chest,quest_npcs_chests.txt,0,0,1,t3:1,9292,mesh from mobile npc.ini 4131
+"34786,2,41310,1002,751,705",chest,quest_npcs_chests.txt,0,0,1,t3:1,9293,"mesh from mobile npc.ini 4131; quest spot 748,707 blocked on the server DMap, nudged"
+"34787,2,41310,1002,516,535",chest,quest_npcs_chests.txt,0,0,1,t3:1,9294,mesh from mobile npc.ini 4131
+"34788,2,41310,1002,665,356",chest,quest_npcs_chests.txt,0,0,1,t3:1,9295,mesh from mobile npc.ini 4131
+"34789,2,41310,1002,374,120",chest,quest_npcs_chests.txt,0,0,1,t3:1,9296,mesh from mobile npc.ini 4131
+"34790,2,41310,1002,489,150",chest,quest_npcs_chests.txt,0,0,1,t3:1,9297,mesh from mobile npc.ini 4131
+"34791,2,41310,1002,522,873",chest,quest_npcs_chests.txt,0,0,1,t3:1,9298,mesh from mobile npc.ini 4131
+"34792,2,41310,1002,357,645",chest,quest_npcs_chests.txt,0,0,1,t3:1,9299,mesh from mobile npc.ini 4131
+"34793,2,41310,1002,135,506",chest,quest_npcs_chests.txt,0,0,1,t3:1,9300,"mesh from mobile npc.ini 4131; quest spot 135,502 blocked on the server DMap, nudged"
+"34794,2,41310,1002,169,367",chest,quest_npcs_chests.txt,0,0,1,t3:1,9301,mesh from mobile npc.ini 4131
+"34795,2,41310,1011,97,388",chest,quest_npcs_chests.txt,0,0,1,t3:1,9302,mesh from mobile npc.ini 4131
+"34796,2,41310,1011,338,508",chest,quest_npcs_chests.txt,0,0,1,t3:1,9303,mesh from mobile npc.ini 4131
+"34797,2,41310,1011,476,671",chest,quest_npcs_chests.txt,0,0,1,t3:1,9304,mesh from mobile npc.ini 4131
+"34798,2,41310,1011,156,291",chest,quest_npcs_chests.txt,0,0,1,t3:1,9305,mesh from mobile npc.ini 4131
+"34799,2,41310,1011,772,624",chest,quest_npcs_chests.txt,0,0,1,t3:1,9306,mesh from mobile npc.ini 4131
+"34800,2,41310,1011,462,353",chest,quest_npcs_chests.txt,0,0,1,t3:1,9307,mesh from mobile npc.ini 4131
+"34801,2,41310,1011,795,474",chest,quest_npcs_chests.txt,0,0,1,t3:1,9308,mesh from mobile npc.ini 4131
+"34802,2,41310,1011,597,698",chest,quest_npcs_chests.txt,0,0,1,t3:1,9309,mesh from mobile npc.ini 4131
+"34803,2,41310,1011,588,832",chest,quest_npcs_chests.txt,0,0,1,t3:1,9310,mesh from mobile npc.ini 4131
+"34804,2,41310,1011,347,137",chest,quest_npcs_chests.txt,0,0,1,t3:1,9311,mesh from mobile npc.ini 4131
+"34805,2,41310,1011,400,73",chest,quest_npcs_chests.txt,0,0,1,t3:1,9312,mesh from mobile npc.ini 4131
+"34806,2,41310,1000,518,494",chest,quest_npcs_chests.txt,0,0,1,t3:1,9313,mesh from mobile npc.ini 4131
+"34807,2,41310,1000,720,787",chest,quest_npcs_chests.txt,0,0,1,t3:1,9314,mesh from mobile npc.ini 4131
+"34808,2,41310,1000,698,588",chest,quest_npcs_chests.txt,0,0,1,t3:1,9315,mesh from mobile npc.ini 4131
+"34809,2,41310,1000,700,503",chest,quest_npcs_chests.txt,0,0,1,t3:1,9316,mesh from mobile npc.ini 4131
+"34810,2,41310,1000,869,676",chest,quest_npcs_chests.txt,0,0,1,t3:1,9317,mesh from mobile npc.ini 4131
+"34811,2,41310,1000,418,206",chest,quest_npcs_chests.txt,0,0,1,t3:1,9318,mesh from mobile npc.ini 4131
+"34812,2,41310,1000,353,96",chest,quest_npcs_chests.txt,0,0,1,t3:1,9319,mesh from mobile npc.ini 4131
+"34813,2,41310,1000,295,426",chest,quest_npcs_chests.txt,0,0,1,t3:1,9320,mesh from mobile npc.ini 4131
+"34814,2,41310,1000,324,329",chest,quest_npcs_chests.txt,0,0,1,t3:1,9321,mesh from mobile npc.ini 4131
+"34815,2,41310,1000,419,257",chest,quest_npcs_chests.txt,0,0,1,t3:1,9322,mesh from mobile npc.ini 4131
+"34816,2,41310,1000,91,293",chest,quest_npcs_chests.txt,0,0,1,t3:1,9323,mesh from mobile npc.ini 4131
+"34817,2,41310,1015,873,758",chest,quest_npcs_chests.txt,0,0,1,t3:1,9324,mesh from mobile npc.ini 4131
+"34818,2,41310,1015,905,646",chest,quest_npcs_chests.txt,0,0,1,t3:1,9325,mesh from mobile npc.ini 4131
+"34819,2,41310,1015,331,115",chest,quest_npcs_chests.txt,0,0,1,t3:1,9326,mesh from mobile npc.ini 4131
+"34820,2,41310,1015,691,943",chest,quest_npcs_chests.txt,0,0,1,t3:1,9327,mesh from mobile npc.ini 4131
+"34821,2,41310,1015,488,760",chest,quest_npcs_chests.txt,0,0,1,t3:1,9328,mesh from mobile npc.ini 4131
+"34822,2,41310,1015,525,690",chest,quest_npcs_chests.txt,0,0,1,t3:1,9329,mesh from mobile npc.ini 4131
+"34823,2,41310,1015,487,524",chest,quest_npcs_chests.txt,0,0,1,t3:1,9330,mesh from mobile npc.ini 4131
+"34824,2,41310,1015,316,552",chest,quest_npcs_chests.txt,0,0,1,t3:1,9331,mesh from mobile npc.ini 4131
+"34825,2,41310,1015,176,196",chest,quest_npcs_chests.txt,0,0,1,t3:1,9332,mesh from mobile npc.ini 4131
+"34826,2,41310,1015,435,368",chest,quest_npcs_chests.txt,0,0,1,t3:1,9333,mesh from mobile npc.ini 4131
+"34827,2,41310,1015,285,358",chest,quest_npcs_chests.txt,0,0,1,t3:1,9334,mesh from mobile npc.ini 4131
+"34828,2,41310,1020,688,425",chest,quest_npcs_chests.txt,0,0,1,t3:1,9335,mesh from mobile npc.ini 4131
+"34829,2,41310,1020,621,717",chest,quest_npcs_chests.txt,0,0,1,t3:1,9336,mesh from mobile npc.ini 4131
+"34830,2,41310,1020,715,553",chest,quest_npcs_chests.txt,0,0,1,t3:1,9337,mesh from mobile npc.ini 4131
+"34831,2,41310,1020,513,256",chest,quest_npcs_chests.txt,0,0,1,t3:1,9338,mesh from mobile npc.ini 4131
+"34832,2,41310,1020,419,104",chest,quest_npcs_chests.txt,0,0,1,t3:1,9339,mesh from mobile npc.ini 4131
+"34833,2,41310,1020,143,283",chest,quest_npcs_chests.txt,0,0,1,t3:1,9340,mesh from mobile npc.ini 4131
+"34834,2,41310,1020,279,245",chest,quest_npcs_chests.txt,0,0,1,t3:1,9341,mesh from mobile npc.ini 4131
+"34835,2,41310,1020,149,486",chest,quest_npcs_chests.txt,0,0,1,t3:1,9342,mesh from mobile npc.ini 4131
+"34836,2,41310,1020,438,681",chest,quest_npcs_chests.txt,0,0,1,t3:1,9343,mesh from mobile npc.ini 4131
+"34837,2,41310,1020,430,479",chest,quest_npcs_chests.txt,0,0,1,t3:1,9344,mesh from mobile npc.ini 4131
+"34838,2,41310,1020,483,376",chest,quest_npcs_chests.txt,0,0,1,t3:1,9345,mesh from mobile npc.ini 4131
+"34839,2,41310,1002,662,492",chest,quest_npcs_chests.txt,0,0,1,t3:1,9346,mesh from mobile npc.ini 4131
+"34840,2,41310,1002,828,604",chest,quest_npcs_chests.txt,0,0,1,t3:1,9347,mesh from mobile npc.ini 4131
+"34841,2,41310,1002,751,706",chest,quest_npcs_chests.txt,0,0,1,t3:1,9348,"mesh from mobile npc.ini 4131; quest spot 748,707 blocked on the server DMap, nudged"
+"34842,2,41310,1002,516,535",chest,quest_npcs_chests.txt,0,0,1,t3:1,9349,mesh from mobile npc.ini 4131
+"34843,2,41310,1002,665,356",chest,quest_npcs_chests.txt,0,0,1,t3:1,9350,mesh from mobile npc.ini 4131
+"34844,2,41310,1002,374,120",chest,quest_npcs_chests.txt,0,0,1,t3:1,9351,mesh from mobile npc.ini 4131
+"34845,2,41310,1002,489,150",chest,quest_npcs_chests.txt,0,0,1,t3:1,9352,mesh from mobile npc.ini 4131
+"34846,2,41310,1002,522,873",chest,quest_npcs_chests.txt,0,0,1,t3:1,9353,mesh from mobile npc.ini 4131
+"34847,2,41310,1002,357,645",chest,quest_npcs_chests.txt,0,0,1,t3:1,9354,mesh from mobile npc.ini 4131
+"34848,2,41310,1002,136,506",chest,quest_npcs_chests.txt,0,0,1,t3:1,9355,"mesh from mobile npc.ini 4131; quest spot 135,502 blocked on the server DMap, nudged"
+"34849,2,41310,1002,169,367",chest,quest_npcs_chests.txt,0,0,1,t3:1,9356,mesh from mobile npc.ini 4131
+"34850,2,41310,1011,97,388",chest,quest_npcs_chests.txt,0,0,1,t3:1,9357,mesh from mobile npc.ini 4131
+"34851,2,41310,1011,338,508",chest,quest_npcs_chests.txt,0,0,1,t3:1,9358,mesh from mobile npc.ini 4131
+"34852,2,41310,1011,476,671",chest,quest_npcs_chests.txt,0,0,1,t3:1,9359,mesh from mobile npc.ini 4131
+"34853,2,41310,1011,156,291",chest,quest_npcs_chests.txt,0,0,1,t3:1,9360,mesh from mobile npc.ini 4131
+"34854,2,41310,1011,772,624",chest,quest_npcs_chests.txt,0,0,1,t3:1,9361,mesh from mobile npc.ini 4131
+"34855,2,41310,1011,462,353",chest,quest_npcs_chests.txt,0,0,1,t3:1,9362,mesh from mobile npc.ini 4131
+"34856,2,41310,1011,795,474",chest,quest_npcs_chests.txt,0,0,1,t3:1,9363,mesh from mobile npc.ini 4131
+"34857,2,41310,1011,597,698",chest,quest_npcs_chests.txt,0,0,1,t3:1,9364,mesh from mobile npc.ini 4131
+"34858,2,41310,1011,588,832",chest,quest_npcs_chests.txt,0,0,1,t3:1,9365,mesh from mobile npc.ini 4131
+"34859,2,41310,1011,347,137",chest,quest_npcs_chests.txt,0,0,1,t3:1,9366,mesh from mobile npc.ini 4131
+"34860,2,41310,1011,400,73",chest,quest_npcs_chests.txt,0,0,1,t3:1,9367,mesh from mobile npc.ini 4131
+"34861,2,41310,1000,518,494",chest,quest_npcs_chests.txt,0,0,1,t3:1,9368,mesh from mobile npc.ini 4131
+"34862,2,41310,1000,720,787",chest,quest_npcs_chests.txt,0,0,1,t3:1,9369,mesh from mobile npc.ini 4131
+"34863,2,41310,1000,698,588",chest,quest_npcs_chests.txt,0,0,1,t3:1,9370,mesh from mobile npc.ini 4131
+"34864,2,41310,1000,700,503",chest,quest_npcs_chests.txt,0,0,1,t3:1,9371,mesh from mobile npc.ini 4131
+"34865,2,41310,1000,869,676",chest,quest_npcs_chests.txt,0,0,1,t3:1,9372,mesh from mobile npc.ini 4131
+"34866,2,41310,1000,418,206",chest,quest_npcs_chests.txt,0,0,1,t3:1,9373,mesh from mobile npc.ini 4131
+"34867,2,41310,1000,353,96",chest,quest_npcs_chests.txt,0,0,1,t3:1,9374,mesh from mobile npc.ini 4131
+"34868,2,41310,1000,295,426",chest,quest_npcs_chests.txt,0,0,1,t3:1,9375,mesh from mobile npc.ini 4131
+"34869,2,41310,1000,324,329",chest,quest_npcs_chests.txt,0,0,1,t3:1,9376,mesh from mobile npc.ini 4131
+"34870,2,41310,1000,419,257",chest,quest_npcs_chests.txt,0,0,1,t3:1,9377,mesh from mobile npc.ini 4131
+"34871,2,41310,1000,91,293",chest,quest_npcs_chests.txt,0,0,1,t3:1,9378,mesh from mobile npc.ini 4131
+"34872,2,41310,1015,873,758",chest,quest_npcs_chests.txt,0,0,1,t3:1,9379,mesh from mobile npc.ini 4131
+"34873,2,41310,1015,905,646",chest,quest_npcs_chests.txt,0,0,1,t3:1,9380,mesh from mobile npc.ini 4131
+"34874,2,41310,1015,331,115",chest,quest_npcs_chests.txt,0,0,1,t3:1,9381,mesh from mobile npc.ini 4131
+"34875,2,41310,1015,691,943",chest,quest_npcs_chests.txt,0,0,1,t3:1,9382,mesh from mobile npc.ini 4131
+"34876,2,41310,1015,488,760",chest,quest_npcs_chests.txt,0,0,1,t3:1,9383,mesh from mobile npc.ini 4131
+"34877,2,41310,1015,525,690",chest,quest_npcs_chests.txt,0,0,1,t3:1,9384,mesh from mobile npc.ini 4131
+"34878,2,41310,1015,487,524",chest,quest_npcs_chests.txt,0,0,1,t3:1,9385,mesh from mobile npc.ini 4131
+"34879,2,41310,1015,316,552",chest,quest_npcs_chests.txt,0,0,1,t3:1,9386,mesh from mobile npc.ini 4131
+"34880,2,41310,1015,176,196",chest,quest_npcs_chests.txt,0,0,1,t3:1,9387,mesh from mobile npc.ini 4131
+"34881,2,41310,1015,435,368",chest,quest_npcs_chests.txt,0,0,1,t3:1,9388,mesh from mobile npc.ini 4131
+"34882,2,41310,1015,285,358",chest,quest_npcs_chests.txt,0,0,1,t3:1,9389,mesh from mobile npc.ini 4131
+"34883,2,41310,1020,688,425",chest,quest_npcs_chests.txt,0,0,1,t3:1,9390,mesh from mobile npc.ini 4131
+"34884,2,41310,1020,621,717",chest,quest_npcs_chests.txt,0,0,1,t3:1,9391,mesh from mobile npc.ini 4131
+"34885,2,41310,1020,715,553",chest,quest_npcs_chests.txt,0,0,1,t3:1,9392,mesh from mobile npc.ini 4131
+"34886,2,41310,1020,513,256",chest,quest_npcs_chests.txt,0,0,1,t3:1,9393,mesh from mobile npc.ini 4131
+"34887,2,41310,1020,419,104",chest,quest_npcs_chests.txt,0,0,1,t3:1,9394,mesh from mobile npc.ini 4131
+"34888,2,41310,1020,143,283",chest,quest_npcs_chests.txt,0,0,1,t3:1,9395,mesh from mobile npc.ini 4131
+"34889,2,41310,1020,279,245",chest,quest_npcs_chests.txt,0,0,1,t3:1,9396,mesh from mobile npc.ini 4131
+"34890,2,41310,1020,149,486",chest,quest_npcs_chests.txt,0,0,1,t3:1,9397,mesh from mobile npc.ini 4131
+"34891,2,41310,1020,438,681",chest,quest_npcs_chests.txt,0,0,1,t3:1,9398,mesh from mobile npc.ini 4131
+"34892,2,41310,1020,430,479",chest,quest_npcs_chests.txt,0,0,1,t3:1,9399,mesh from mobile npc.ini 4131
+"34893,2,41310,1020,483,376",chest,quest_npcs_chests.txt,0,0,1,t3:1,9400,mesh from mobile npc.ini 4131
+"34919,2,12680,1020,255,500",SnakemanPrimalEidolon,quest_npcs.txt,0,1,1,t1:1,9418,mesh from mobile npc.ini 1268
+"34929,2,12740,1020,568,593",Bell,quest_npcs.txt,0,1,1,t1:1,9009,mesh from mobile npc.ini 1274
+"35015,2,19150,1036,178,208",BlessedGreatMaster,quest_npcs.txt,0,1,1,t5:1,612,no mobile body with this name: townsman look 1915 (DERIVED)
+"35488,2,49480,1002,400,423",Eloise,quest_npcs.txt,0,2,2,t1:2,9079 9802,mesh from mobile npc.ini 4948
+"35489,2,27000,1002,457,441",SongQing,quest_npcs.txt,0,1,1,t1:1,9801,mesh from mobile npc.ini 2700
+"36383,2,63500,1002,433,344",CSQuestEnvoy,quest_npcs.txt,79,79,0,t5:79,35114 35115 35116 35117 35120 35121 35122 35123 35124 35125 35126 35127,mesh from mobile npcx.ini 6350
+"36480,2,19150,1002,385,318",Opeth,quest_npcs.txt,0,0,1,t5:1,7625,no mobile body with this name: townsman look 1915 (DERIVED)
+"36546,2,34480,1036,210,212",Dain,quest_npcs.txt,8,8,7,t1:10,7641 7642 7643 7646 7647 7648 7650 7651 7652 7669,mesh from mobile npc.ini 3448
+"36547,2,56340,1002,641,557",RebirthMaster,quest_npcs.txt,3,3,1,t1:4,7643 7644 7645 7646,mesh from mobile npcx.ini 5634
+"36548,2,34380,1002,498,307",Leona,quest_npcs.txt,2,2,1,t1:3,7648 7649 7650,mesh from mobile npc.ini 3438
+"36600,2,35990,12144,108,176",HappyCloud,quest_npcs.txt,0,2,2,t5:2,7755 7756,mesh from mobile npc.ini 3599; quest spot blocked on the server DMap (kept)
+"36601,2,36060,12145,310,305",AngryCloud,quest_npcs.txt,0,2,3,t5:3,7757 7758 7759,mesh from mobile npc.ini 3606
+"36603,2,36000,12144,122,182",FootprintSpot,quest_npcs.txt,0,0,1,t5:1,7755,mesh from mobile npc.ini 3600; quest spot blocked on the server DMap (kept)
+"36606,2,19150,12145,315,255",QuarryArea,quest_npcs.txt,0,0,1,t5:1,7757,no mobile body with this name: townsman look 1915 (DERIVED)
+"36608,2,19150,12146,80,182",Remnants,quest_npcs.txt,0,0,1,t5:1,7761,no mobile body with this name: townsman look 1915 (DERIVED)
+"36752,2,59950,1002,447,379",HolyfireEnvoy,quest_npcs.txt,0,0,6,t5:6,7848 7849 7850 7852 7853 7854,mesh from mobile npcx.ini 5995
+"36753,2,36010,1002,434,453",SoultreeBranch,quest_npcs.txt,0,1,1,t5:1,7848,mesh from mobile npc.ini 3601
+"36754,2,36010,1002,517,428",SoultreeBranch,quest_npcs.txt,0,1,1,t5:1,7852,mesh from mobile npc.ini 3601
+"36755,2,36010,1002,525,336",SoultreeBranch,quest_npcs.txt,0,1,1,t5:1,7853,mesh from mobile npc.ini 3601
+"36756,2,36020,1002,370,457",Woodcutter,quest_npcs.txt,0,1,1,t5:1,7849,mesh from mobile npc.ini 3602
+"36757,2,36030,1002,375,451",Tree,quest_npcs.txt,0,0,1,t5:1,7849,mesh from mobile npc.ini 3603
+"36758,2,36040,1002,386,376",GarbageDump,quest_npcs.txt,0,1,1,t5:1,7850,mesh from mobile npc.ini 3604
+"36759,2,36040,1002,464,293",GarbageDump,quest_npcs.txt,0,1,1,t5:1,7854,mesh from mobile npc.ini 3604
+"36772,2,14060,1002,372,345",Davis,quest_npcs.txt,1,1,1,t2:1,7855,mesh from mobile npc.ini 1406
+"36773,2,20270,1002,373,340",Walter,quest_npcs.txt,3,3,1,t2:1 t3:2,35249 35261 7883,mesh from mobile npc.ini 2027
+"36803,2,49480,1002,441,379",Eloise,quest_npcs.txt,4,5,5,t5:7,7857 7858 7862 7868 7869 7870 7873,mesh from mobile npc.ini 4948
+"36804,2,14000,1020,556,542",Dadar,quest_npcs.txt,1,1,1,t5:2,7875 7876,mesh from mobile npc.ini 1400
+"36805,2,20070,1002,439,427",City Guard,quest_npcs.txt,4,3,3,t5:6,7863 7864 7870 7871 7872 7873,mesh from mobile npc.ini 2007
+"36806,2,31910,1020,545,620",Portal,quest_npcs.txt,3,3,3,t5:4,7876 7877 7878 7879,mesh from mobile npc.ini 3191
+"36807,2,19150,12408,234,257",SecretRealm,quest_npcs.txt,0,0,1,t5:1,7878,no mobile body with this name: townsman look 1915 (DERIVED)
+"36808,2,19150,1002,528,269",Winter,quest_npcs.txt,2,2,2,t5:4,7861 7862 7867 7868,no mobile body with this name: townsman look 1915 (DERIVED)
+"36809,2,19150,1002,560,422",SeniorMarauder,quest_npcs.txt,1,1,1,t5:2,7860 7861,no mobile body with this name: townsman look 1915 (DERIVED)
+"36810,2,14340,1002,467,284",Celina,quest_npcs.txt,1,1,1,t5:2,7866 7867,mesh from mobile npc.ini 1434
+"36811,2,14350,1002,353,350",Dailey,quest_npcs.txt,1,1,1,t5:2,7865 7866,mesh from mobile npc.ini 1435
+"36812,2,13910,1002,424,341",Notice Board,quest_npcs.txt,1,1,1,t5:2,7864 7865,mesh from mobile npc.ini 1391
+"36814,2,49480,1020,564,589",Eloise,quest_npcs.txt,2,2,2,t5:3,7874 7875 7879,mesh from mobile npc.ini 4948
+"36908,2,60970,1002,397,391",Bonnie,quest_npcs.txt,11,11,0,t1:13,13644 13807 13808 14026 14027 14033 14034 14035 14036 14037 14038 14039,mesh from mobile npcx.ini 6097
+"36909,2,10810,1020,612,498",MechanismStone,quest_npcs.txt,1,1,0,t1:2,14027 14028,mesh from mobile npc.ini 1081
+"36910,2,10810,1020,617,510",MechanismStone,quest_npcs.txt,1,1,0,t1:2,14028 14029,mesh from mobile npc.ini 1081
+"36911,2,10810,1020,612,498",MechanismStone,quest_npcs.txt,2,2,0,t1:3,14029 14030 14031,mesh from mobile npc.ini 1081
+"36912,2,31910,1020,619,503",Portal,quest_npcs.txt,2,2,0,t1:3,14031 14032 14033,mesh from mobile npc.ini 3191
+"300500,2,53260,1002,177,90",Eternity,quest_npcs.txt,0,0,2,t5:1 t6:1,3610 3662,mesh from mobile npcx.ini 5326; quest spot blocked on the server DMap (kept)

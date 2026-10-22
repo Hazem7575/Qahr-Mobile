@@ -1,0 +1,15 @@
+# QahrMobile packet layouts: mobile-only messages that match a server packet (see docs\MOBILE_ONLY.md).
+# The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgChangeName 10173 (42 bytes): action u16 4, cur change count u16 6, left changes u16 8, name 10 (32)
+# (CMsgChangeName::Create(t, PKc) / Process: 1 = success -> CRole::SetName, 2 = error box, 3 = counts).
+# Server MsgNameChange 2178 (NameChangeCreate / GetNameChange): the same struct and action numbers.
+[2178 NameChange same]
+
+# CMsgPeerage 10091 (nobility): action u16 4 (1 donate, 2 rank list, 3 icon, 4 rank thresholds), data u64 8,
+# money type u16 104 (Create(t,x)); strings (CNetStringPacker) at 120 (CMsgPeerage ctor SetBuf +0x7c - 4);
+# rank list: page u16 8, pages u16 10, count u32 12, 72-byte PEERAGE_SORT_INFO entries at 120
+# (CPlayer::AddContributeRankInfo); thresholds: 6 x {u64 8, u32 16, u32 20} (AddPredictPeerageInfoEx).
+# Server NewMsgNobility 2257 (MsgNobility.cs): u32 action 4 (the mobile reads its low half), the same offsets;
+# the rank list entries were changed to the mobile's 72 bytes in MsgNobility.cs.
+[2257 NewMsgNobility same]

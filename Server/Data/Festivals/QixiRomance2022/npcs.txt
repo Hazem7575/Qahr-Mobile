@@ -1,0 +1,5 @@
+# QixiRomance2022 (Romantic Season, Global Qixi 2022) festival NPCs - [QixiRomance2022 2026-10-15]. Format id,type,mesh,map,x,y
+# Ids: Qixi group block 8872000-8872199 (2022 = 8872001-8872009). The official ids 30788/30789 are named by no Questinfo quest, so the festival range is used.
+# Positions DERIVED: the client has no spot for these NPCs (only Server_Key 'go to Twin City'); free walkable cells next to the TC festival heralds (370-387,437-452), DMap newplain_new checked.
+8872001,2,1100810,1002,374,440  # Weaver Girl (official NPC 30788; official look NpcX 110081 WeaverGirl)
+8872002,2,103240,1002,377,447  # Orphee (official NPC 30789; DERIVED look npc.ini 10324 Musician - the client has no Orphee look)

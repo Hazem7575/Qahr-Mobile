@@ -1,0 +1,28 @@
+{
+  "key": "Thanksgiving2022",
+  "name_ar": "عيد الشكر العالمي 2022 (Battlefront of Subjugation)",
+  "name_en": "Global Thanksgiving 2022 (Battlefront of Subjugation)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Thanksgiving: only the newest official edition (ThanksgivingFashion2025) runs on its yearly dates, like the official server; this older edition runs only with @festival on Thanksgiving2022. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ عيد الشكر! افتح زرار Turkey Subjugation فوق وشوف قلاع الديوك الرومي.",
+  "announce_en": "The Global Thanksgiving event has started! Click the Turkey Subjugation button to see the turkey forts.",
+  "end_ar": "انتهى عيد الشكر. نشوفكم السنة الجاية!",
+  "end_en": "The Global Thanksgiving event has ended. See you next time!",
+  "maps": [],
+  "icon_show": "DlgGlobalThanksgivingBtn_BindData|{['Code']=200,['Data']={['Red']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgGlobalThanksgivingBtn\")",
+  "icon_click": "10133</S>ThanksGivingPage2022_OpenPage",
+  "_icon": "[Thanksgiving2022 2026-10-14] official lua button DlgGlobalThanksgivingBtn (luaui\\dialog\\dlgglobalthanksgiving, Dialog_Info 1303, label 'Turkey Subjugation'), shown with the client's own DlgGlobalThanksgivingBtn_BindData. Click 10133 ThanksGivingPage2022_OpenPage -> Base/Thanksgiving2022/Thanksgiving2022Ui.cs (DlgGlobalThanksgivingMain).",
+  "notes": "2026-10-15 COMPLETE: the official Battlefront of Subjugation is playable. 23 forts = private battles (waves of the 21 festival monsters in monsters\\, official texts / rewards / warrants / CP prices / unlock dates), mop-up (single + all, 8% off), first conquest boxes, 4 random forts (boxes), Hunter Supply Store (Turkey Feathers), Military Depot draws (Thanksgiving Coins, Hunter Puzzles at 10/30/50/80/120 draws), Thanksgiving Points stage rewards, 2 Silver Warrants a day, Hunter Puzzle -> Turkey Hunter garments, box open handlers. DERIVED (Infinity[DB]\\Thanksgiving2022\thanksgiving2022.json): battle map 12660 TurkeyRefuge, wave sizes, cooldown, odds, limits, box contents, monster looks/stats. Not here: cross-server parts (Sharpen Weapon, Turkey Counsellor) and the ranking pages. Code: Base\\Thanksgiving2022\\ (Thanksgiving2022Ui.cs + HolidayKit/HolidayBattles/HolidayBoxes).",
+  "_owner": "Thanksgiving2022",
+  "_quests": [],
+  "_officialMaps": [],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "11-22",
+    "end": "12-05"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "key": "Valentine2023",
+  "name_ar": "عيد الحب 2023 (Starlight Recital)",
+  "name_en": "Valentine 2023 (Starlight Recital)",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "02-14",
+    "end": "02-27"
+  },
+  "announce_ar": "بدأ عيد الحب! افتح الزرار فوق وشوف Starlight Recital (لفل 80+).",
+  "announce_en": "The Valentine event has started! Click the Valentine button to join the Starlight Recital (Level 80+).",
+  "end_ar": "انتهى عيد الحب. نشوفكم السنة الجاية!",
+  "end_en": "The Valentine event is over.",
+  "maps": [],
+  "icon_show": "DlgValentinesDay_OpenMainBtn|{['Code']=200,['Data']={['Rewardflag']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgLoverDayBtn\")",
+  "icon_click": "10139</S>ValentinesDayConcert_OpenMainButton",
+  "_icon": "[Valentine2023 2026-10-14] official lua button DlgLoverDayBtn (luaui\\dialog\\dlgvalentinesday, Dialog_Info 1334-Main), shown with the client's own DlgValentinesDay_OpenMainBtn. Click 10139 ValentinesDayConcert_OpenMainButton -> Base/Valentine2023/Valentine2023Ui.cs (DlgLoverDayMain). msgId 10139 is shared with CastleMystery (Lover2025Kua_* calls, Fgui button 10139); this festival uses a different button and different calls.",
+  "notes": "2026-10-15 COMPLETE phase. Official dates Feb. 14 - Feb. 27 (luaUiRes_EN[1334].ActTime). The official Starlight Recital window DlgLoverDayMain is fully playable (Base/Valentine2023/Valentine2023Ui.cs, numbers in Infinity[DB]/Valentine2023/recital.json): 4 of the 6 instrument spirits per Recital day are summoned next to the player in Twin City and fought (monster types 996301-996306, DERIVED looks/stats); their Performance Inspiration lights the 10 notes (official per-note preview items + Dream Notes); Time Power (official max 100 / cost 50, derived regen) + Time Berries; Time Shift starts a new Recital day. Not on this server: Golden Masquerade (Modern Plaza map unresolved), Ardor Points reward table and rankings (not in the client). Dream Notes turn into Twinkle Waltz garments from the bag (Base/CastleMystery/CastleStartle.cs item hook).",
+  "_owner": "Valentine2023",
+  "_quests": [],
+  "_officialMaps": []
+}

@@ -1,0 +1,13 @@
+{
+  "key": "TheaterAftermath",
+  "name_ar": "مسرح الأحلام: عقود المسرح اليومية (جزء من DreamTheater)",
+  "name_en": "Dream Theater: daily contracts (part of DreamTheater)",
+  "enabled": false,
+  "schedule": { "type": "manual" },
+  "maps": [],
+  "notes": "MERGED into DreamTheater (TheaterAftermath 2026-10-14). Official: one event (White Day 2024, server scripts MasterAndTheatre2024 / tWhiteDay2024NPC), one button DlgWhiteDayBtn and one window DlgWhiteDayMain; quests 5752+5796-5801 (cleaning, window TaskIndex 8 = luaUiRes[1466].main.TaskCenter[13]) and 5753-5761 (troupe troubles, TaskIndex 9 = TaskCenter[14]) are Agnes' daily contracts in that window. They live in Festivals\\DreamTheater (quests.json pools DTClean / DTTrouble, npcs.txt theater map 12430 -> official 12431 after the FestivalMaps deploy (Backups_Systems/20261014_205740_TheaterAftermath/apply_12431_after_deploy.py), module Base\\DreamTheater). This folder has no content and NO icon on purpose: never enable it (a second show/hide of DlgWhiteDayBtn would fight DreamTheater).",
+  "_quests": [ 5752, 5796, 5797, 5798, 5799, 5800, 5801, 5753, 5754, 5755, 5756, 5757, 5758, 5759, 5760, 5761 ],
+  "_officialMaps": [ 1002561, 12431 ],
+  "_mergedInto": "DreamTheater",
+  "_owner": "agent4"
+}

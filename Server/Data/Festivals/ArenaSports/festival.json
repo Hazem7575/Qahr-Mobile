@@ -1,0 +1,41 @@
+{
+  "key": "ArenaSports",
+  "name_ar": "بطولة الرياضيين (مهرجان منتصف الخريف 2025)",
+  "name_en": "Athlete Showdown",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "09-29",
+    "end": "10-13",
+    "_note": "Official: Cn_Res STR_FUI_LUA_SPORTMEET_ACTTIME '29 Sept. 2025 - 13 Oct. 2025' (CN lua header 9.30-10.13). Server local time."
+  },
+  "announce_ar": "بدأ مهرجان منتصف الخريف: بطولة الرياضيين (Athlete Showdown)! دوس على الزرار اللي فوق.",
+  "announce_en": "The Athlete Showdown has started!",
+  "maps": [],
+  "notes": "ArenaSports (2026-10-14, batch 3 re-check): official Global Mid-Autumn 2025 'Golden Autumn Sports Meet' entry - top-bar Fgui button 150337 ('Global Workout'), main window SportMeet (InterfaceID 10753001, msg 10753 tMsg_Info['SportMeet'], Base/ArenaSports/ArenaSportsUi.cs). Quests 9068-9110 stay OFF: map 13060 MainArena is still unresolved (no GameMap.dat doc in any client, no GameMapEx name, no unreferenced DMap fits; see README_AR.md). Dice-board events, Legend Arenas, Egg Smash and rankings answer with a system message.",
+  "_quests": [
+    9068,
+    9069,
+    9070,
+    9071,
+    9072,
+    9073,
+    9074,
+    9105,
+    9106,
+    9107,
+    9108,
+    9109,
+    9110
+  ],
+  "_officialMaps": [
+    13060
+  ],
+  "_owner": "batch3",
+  "end_ar": "انتهت بطولة الرياضيين. نشوفكم السنة الجاية!",
+  "end_en": "The Athlete Showdown has concluded successfully. I believe your heroic and graceful presence on the field must have left an unforgettable impression on countless people!",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150337',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150337',['Show']=false,['Red']=0}}",
+  "icon_click": "10753</S>AutumnView2025_OpenMainView",
+  "_icon": "[ArenaSports 2026-10-14] official top-bar Fgui button 150337 (client fguibtnconfig, label 'Global Workout'); clicks: Base/ArenaSports/ArenaSportsUi.cs"
+}

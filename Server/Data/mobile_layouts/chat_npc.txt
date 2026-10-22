@@ -1,0 +1,36 @@
+# QahrMobile packet layouts: Chat and NPC dialogs. The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgMBTalk 10179 (CMsgMBTalkPB): the server's MsgTalk numbering is CMsgTalkPB's; 1-12 are the same
+[2361 MsgTalk proto]
+1 1
+2 2
+3 3
+4 4
+5 5
+6 6
+7 7
+8 8
+9 9
+10 10
+11 11
+12 12
+13 15      # IdGSUser
+14 13      # SzBuf: the strings (sender, receiver, ..., words)
+17 14      # UnFaceFrame
+23 18      # UnReturnLevel
+
+[2015 MsgTaskDialog same]   # CMsgTaskDialog 10255: id 4, option 10, type 11, CNetStringPacker at 12 (= NpcReply.NpcReplyCreate)
+
+# CMsgLoginNotice 10311: the login announcement, same struct both ways (answered by Networking\Unanswered\B5\B5SystemAcks.cs; title/text: ServerConfig.ini [LoginNotice])
+[2294 MsgLoginNotice same]
+
+# CMsgMBName 10036 (the mobile's CMsgName): data u32 4 (or x u16 4 + y u16 6), type u8 8 (the same name types as
+# MsgStringPacket.StringID: 3 = guild name, ...), string list from 9 (CMsgMBName::Create / Process). Server: MsgStringProto
+# (2 UID, 3 X, 4 Y, 5 type, 6 the strings, repeated). The PC client's id 2272 is CMsgName on the mobile too, but that
+# one only handles type 61 (server id), so the server's names go to CMsgMBName.
+[2272 MsgName 10]
+2   4   u32
+3   4   u16  out
+4   6   u16  out
+5   8   u8
+6   9   strlist

@@ -1,0 +1,18 @@
+# QahrMobile packet layouts: Auction House. The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+#
+# The mobile client 1.1.2.3 has no player Auction House screen: its CDlgAuction* dialogs are never opened (no caller
+# in libCQ2ClientEn.so), there is no auction FairyGUI package or Lua dialog, and CMsgMBAction has no BrowseAuction
+# (572). Only the guild auction (ui_bangpaijingpai) exists. The server sends 2028 / 2399 / 2441 at login for the PC
+# client; for the mobile they are blocked in Data\mobile_block.txt. These layouts stay for reference.
+
+# CMsgAuction 10296 (20 bytes): action u16 4 (0 sell, 1 cancel, 2 buy, 3 price), id 8, value 12, result u8 16
+# (CMsgAuction::Create*Msg / Process). Server (AuctionModule.BuildAuction / OnAuction, 24 bytes): the same offsets
+# plus u32 20.
+[2028 MsgAuction struct 24 20]
+4   4   u16
+8   8   u32
+12  12  u32
+16  16  u8
+
+# CMsgAuctionQuery 10079 (my listings): u16 count 6, AUCTION_ITEM_INFO (24 bytes) units from 8 = AuctionModule.OnAuctionQuery
+[2441 MsgAuctionQuery same]

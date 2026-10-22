@@ -1,0 +1,12 @@
+{
+  "_note": "No exchanges: the only official rewards are the Questinfo Prizes (Fortune Knack per quest, paid by the engine). Greetings only.",
+  "npcText": {
+    "8863001": { "en": "The mark fragments are scattered... help me regain my power.", "ar": "شظايا العلامة متفرّقة... ساعدني أرجّع قوتي." },
+    "8863002": { "en": "A wonder lingzhi glows among the grass.", "ar": "عشبة لينغجي عجيبة بتنوّر وسط الزرع." },
+    "8863003": { "en": "Traces of the mark linger here.", "ar": "فيه آثار للعلامة هنا." },
+    "8863004": { "en": "The ruins of Leifeng Pagoda.", "ar": "أطلال معبد ليفنغ." },
+    "8863005": { "en": "I am the Earth Deity of this land.", "ar": "أنا إله الأرض هنا." },
+    "8863006": { "en": "Where am I...?", "ar": "أنا فين...؟" }
+  },
+  "exchanges": []
+}

@@ -1,0 +1,26 @@
+{
+  "key": "Summer2025",
+  "name_ar": "صيف 2025: همس الغابة (Volley Garden)",
+  "name_en": "Global Summer 2025: Sylvan Whisper",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "07-28",
+    "end": "08-10",
+    "_note": "Official English CO: Cn_Res STR_LUAUI_SUMMERVACATION_TIME 'July 28 - Aug. 10' / STR_FUI_ACTTIME_10707 (CN client header 2025全球暑期活动 7.8-7.21). Server local time."
+  },
+  "announce_ar": "بدأ مهرجان الصيف (Sylvan Whisper)! دوس على الزرار اللي فوق.",
+  "announce_en": "The Sylvan Whisper summer festival is open! Click the summer button at the top.",
+  "end_ar": "انتهى مهرجان Sylvan Whisper. نشوفكم السنة الجاية!",
+  "end_en": "The Sylvan Whisper event has concluded perfectly. Looking forward to our next collaboration!",
+  "maps": [],
+  "notes": "Summer2025 (2026-10-14, batch 3): official 2025 Global Summer 'Sylvan Whisper' entry only - top-bar Fgui button 150306 (SummerDraw2025_OpenMainView, msg 10707 Summer25), main window SummerVacation (SummerVacation25_OpenData) + official reward preview (Fui_Summer25Rward_Open), Highlight page 10707 'Volley Garden'. Code: Base/Summer2025/Summer2025Ui.cs. Real data: Midsummer Seed 3354231 bag count (the seed items are not in this client's itemtype, so planting can't be played: polite message, nothing granted). Fgui 150437 is NOT this event (it opens Summer2023's Dream Cruise window).",
+  "_owner": "Summer2025",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150306',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150306',['Show']=false,['Red']=0}}",
+  "icon_click": "10707</S>SummerDraw2025_OpenMainView",
+  "highlight_acts": [
+    10707
+  ],
+  "_icon": "[Summer2025 2026-10-14] official top-bar Fgui button 150306 (fguibtnconfig, img lua_2025qqsq_btn2); clicks msg 10707 -> Base/Summer2025/Summer2025Ui.cs."
+}

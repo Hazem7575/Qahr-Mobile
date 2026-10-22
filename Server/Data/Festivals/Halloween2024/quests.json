@@ -1,0 +1,734 @@
+{
+ "_note": "Halloween2024 (Macabre Thrills, ShowBeginTime 20241022). Silent Hill story 8207->8148->...->8159 (Duke Macabre 33480 + the official Silent Hill NPCs of Npcs.txt) and the Witch House chains 8161-8163 / 8164-8166 / 8167-8169. Official: every objective/NPC/spot = Questinfo; prizes = Questinfo (Spectre Pill 3600753 for 8150-8159). DERIVED: the instance maps 1003094 (Silent Hill copy) / 1003095 (Witch House) are played on the static maps 12617 / 12619 (the summoned wraiths / bosses are personal quest spawns, credited only to their owner); 'Devil' = FlowerImp, 'SpectrePill' = SpiderWraith; begin NPCs (Questinfo BeginNpcId=0): Duke Macabre for 8207, the Witch for 8161/8164/8167, the rest auto-accept in chain.",
+ "npcTeleports": {
+  "33480": [
+   {
+    "text": "Go to the Witch House.",
+    "map": 12619,
+    "x": 367,
+    "y": 342,
+    "minLevel": 80
+   },
+   {
+    "text": "Return to Twin City.",
+    "map": 1002,
+    "x": 400,
+    "y": 384
+   }
+  ],
+  "8824001": [
+   {
+    "text": "Return to Silent Hill.",
+    "map": 12617,
+    "x": 182,
+    "y": 184
+   }
+  ]
+ },
+ "quests": {
+  "8207": {
+   "beginNpc": 33480,
+   "finishNpc": 33480,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33480,
+     "slot": 1,
+     "count": 1,
+     "name": "DukeMacabre"
+    }
+   ],
+   "beginText": "The crimson moon rises, and the Temple of Hades opens. Learn the whereabouts of Nether Duke`s wraith from Duke Macabre.",
+   "next": 8148,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8148": {
+   "finishNpc": 33395,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33395,
+     "slot": 1,
+     "count": 1,
+     "name": "Styx Matron"
+    },
+    {
+     "type": "talk",
+     "npc": 33396,
+     "slot": 2,
+     "count": 1,
+     "name": "SamsaraMirror",
+     "after": 1
+    },
+    {
+     "type": "talk",
+     "npc": 33395,
+     "slot": 3,
+     "count": 1,
+     "name": "Wraith",
+     "after": 2
+    }
+   ],
+   "next": 8149,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8149": {
+   "finishNpc": 33397,
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "Ghost",
+     "count": 5,
+     "slot": 1,
+     "map": 12617,
+     "name": "Ghost"
+    },
+    {
+     "type": "talk",
+     "npc": 33397,
+     "slot": 2,
+     "count": 1,
+     "name": "GhostScout",
+     "after": 1
+    }
+   ],
+   "next": 8150,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8150": {
+   "finishNpc": 33397,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33398,
+     "slot": 2,
+     "count": 1,
+     "name": "Wraith"
+    },
+    {
+     "type": "kill",
+     "monster": "NetherWraith",
+     "count": 1,
+     "slot": 1,
+     "map": 12617,
+     "name": "Wraith"
+    },
+    {
+     "type": "talk",
+     "npc": 33397,
+     "slot": 4,
+     "count": 1,
+     "name": "GhostScout",
+     "after": 1
+    }
+   ],
+   "onAccept": {
+    "spawn": {
+     "monster": "NetherWraith",
+     "map": 12617,
+     "x": 62,
+     "y": 138,
+     "count": 1,
+     "minutes": 10
+    }
+   },
+   "next": 8208,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8208": {
+   "finishNpc": 33480,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33480,
+     "slot": 1,
+     "count": 1,
+     "name": "DukeMacabre"
+    }
+   ],
+   "next": 8151,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8151": {
+   "finishNpc": 33399,
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "FlowerImp",
+     "count": 5,
+     "slot": 1,
+     "map": 12617,
+     "name": "Devil"
+    },
+    {
+     "type": "talk",
+     "npc": 33399,
+     "slot": 2,
+     "count": 1,
+     "name": "Petals",
+     "after": 1
+    }
+   ],
+   "next": 8152,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8152": {
+   "finishNpc": 33395,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33400,
+     "slot": 2,
+     "count": 1,
+     "name": "Wraith"
+    },
+    {
+     "type": "kill",
+     "monster": "NetherWraith",
+     "count": 1,
+     "slot": 1,
+     "map": 12617,
+     "name": "Wraith"
+    },
+    {
+     "type": "talk",
+     "npc": 33395,
+     "slot": 3,
+     "count": 1,
+     "name": "Styx Matron",
+     "after": 1
+    }
+   ],
+   "onAccept": {
+    "spawn": {
+     "monster": "NetherWraith",
+     "map": 12617,
+     "x": 184,
+     "y": 64,
+     "count": 1,
+     "minutes": 10
+    }
+   },
+   "next": 8209,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8209": {
+   "finishNpc": 33480,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33480,
+     "slot": 1,
+     "count": 1,
+     "name": "DukeMacabre"
+    }
+   ],
+   "next": 8153,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8153": {
+   "finishNpc": 33401,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33401,
+     "slot": 2,
+     "count": 1,
+     "name": "Hades"
+    },
+    {
+     "type": "kill",
+     "monster": "Hades",
+     "count": 1,
+     "slot": 1,
+     "map": 12617,
+     "name": "Hades"
+    },
+    {
+     "type": "talk",
+     "npc": 33401,
+     "slot": 4,
+     "count": 1,
+     "name": "WraithPiece",
+     "after": 1
+    }
+   ],
+   "onAccept": {
+    "spawn": {
+     "monster": "Hades",
+     "map": 12617,
+     "x": 150,
+     "y": 114,
+     "count": 1,
+     "minutes": 10
+    }
+   },
+   "next": 8154,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8154": {
+   "finishNpc": 33401,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33402,
+     "slot": 2,
+     "count": 1,
+     "name": "Wraith"
+    },
+    {
+     "type": "kill",
+     "monster": "NetherWraith",
+     "count": 1,
+     "slot": 1,
+     "map": 12617,
+     "name": "Wraith"
+    },
+    {
+     "type": "talk",
+     "npc": 33401,
+     "slot": 3,
+     "count": 1,
+     "name": "Hades",
+     "after": 1
+    }
+   ],
+   "onAccept": {
+    "spawn": {
+     "monster": "NetherWraith",
+     "map": 12617,
+     "x": 207,
+     "y": 129,
+     "count": 1,
+     "minutes": 10
+    }
+   },
+   "next": 8210,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8210": {
+   "finishNpc": 33480,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33480,
+     "slot": 1,
+     "count": 1,
+     "name": "DukeMacabre"
+    }
+   ],
+   "next": 8155,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8155": {
+   "finishNpc": 33403,
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "Soul-eatingWolf",
+     "count": 5,
+     "slot": 1,
+     "map": 12617,
+     "name": "Soul-eatingWolf"
+    },
+    {
+     "type": "talk",
+     "npc": 33403,
+     "slot": 2,
+     "count": 1,
+     "name": "Ghost",
+     "after": 1
+    }
+   ],
+   "next": 8156,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8156": {
+   "finishNpc": 33403,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33404,
+     "slot": 2,
+     "count": 1,
+     "name": "SpectreCandle"
+    },
+    {
+     "type": "kill",
+     "monster": "NetherWraith",
+     "count": 1,
+     "slot": 1,
+     "map": 12617,
+     "name": "WraithAppearance"
+    },
+    {
+     "type": "talk",
+     "npc": 33403,
+     "slot": 4,
+     "count": 1,
+     "name": "PumpkinSpectre",
+     "after": 1
+    }
+   ],
+   "onAccept": {
+    "spawn": {
+     "monster": "NetherWraith",
+     "map": 12617,
+     "x": 308,
+     "y": 155,
+     "count": 1,
+     "minutes": 10
+    }
+   },
+   "next": 8211,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8211": {
+   "finishNpc": 33480,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33480,
+     "slot": 1,
+     "count": 1,
+     "name": "DukeMacabre"
+    }
+   ],
+   "next": 8157,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8157": {
+   "finishNpc": 33406,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33406,
+     "slot": 1,
+     "count": 1,
+     "name": "ShadowKnight"
+    },
+    {
+     "type": "talk",
+     "npc": 33407,
+     "slot": 2,
+     "count": 2,
+     "name": "Scene",
+     "after": 1
+    },
+    {
+     "type": "talk",
+     "npc": 33406,
+     "slot": 3,
+     "count": 1,
+     "name": "SpectralFlame",
+     "after": 2
+    }
+   ],
+   "next": 8158,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8158": {
+   "finishNpc": 33410,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33409,
+     "slot": 1,
+     "count": 1,
+     "name": "SpectralFlame"
+    },
+    {
+     "type": "talk",
+     "npc": 33410,
+     "slot": 2,
+     "count": 5,
+     "name": "KnightGroup",
+     "after": 1
+    },
+    {
+     "type": "talk",
+     "npc": 33410,
+     "slot": 3,
+     "count": 1,
+     "name": "WraithPiece",
+     "after": 2
+    }
+   ],
+   "next": 8159,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8159": {
+   "finishNpc": 33410,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 33411,
+     "slot": 2,
+     "count": 1,
+     "name": "Wraith"
+    },
+    {
+     "type": "kill",
+     "monster": "NetherWraith",
+     "count": 1,
+     "slot": 1,
+     "map": 12617,
+     "name": "Wraith"
+    },
+    {
+     "type": "talk",
+     "npc": 33410,
+     "slot": 3,
+     "count": 1,
+     "name": "KnightCommander",
+     "after": 1
+    }
+   ],
+   "onAccept": {
+    "spawn": {
+     "monster": "NetherWraith",
+     "map": 12617,
+     "x": 31,
+     "y": 182,
+     "count": 1,
+     "minutes": 10
+    }
+   },
+   "engine": true
+  },
+  "8161": {
+   "beginNpc": 8824001,
+   "finishNpc": 8824001,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8824001,
+     "slot": 1,
+     "count": 1,
+     "name": "Witch"
+    }
+   ],
+   "next": 8162,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8162": {
+   "finishNpc": 8824002,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8824001,
+     "slot": 1,
+     "count": 1,
+     "name": "Witch"
+    },
+    {
+     "type": "talk",
+     "npc": 8824002,
+     "slot": 2,
+     "count": 1,
+     "name": "QiongqiFlame",
+     "after": 1
+    }
+   ],
+   "next": 8163,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8163": {
+   "finishNpc": 8824001,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8824001,
+     "slot": 2,
+     "count": 1,
+     "name": "Witch"
+    },
+    {
+     "type": "kill",
+     "monster": "QiongqiWraith",
+     "count": 1,
+     "slot": 1,
+     "map": 12619,
+     "name": "QiongqiWraith"
+    }
+   ],
+   "onAccept": {
+    "spawn": {
+     "monster": "QiongqiWraith",
+     "map": 12619,
+     "x": 188,
+     "y": 267,
+     "count": 1,
+     "minutes": 10
+    }
+   },
+   "engine": true
+  },
+  "8164": {
+   "beginNpc": 8824001,
+   "finishNpc": 8824001,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8824001,
+     "slot": 1,
+     "count": 1,
+     "name": "Witch"
+    }
+   ],
+   "next": 8165,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8165": {
+   "finishNpc": 8824001,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8824001,
+     "slot": 2,
+     "count": 1,
+     "name": "Witch"
+    },
+    {
+     "type": "kill",
+     "monster": "BoneDragon",
+     "count": 5,
+     "slot": 1,
+     "map": 12619,
+     "name": "BoneDragon"
+    },
+    {
+     "type": "talk",
+     "npc": 8824003,
+     "slot": 3,
+     "count": 1,
+     "name": "ExorcisingWater",
+     "after": 1
+    }
+   ],
+   "next": 8166,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8166": {
+   "finishNpc": 8824001,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8824001,
+     "slot": 2,
+     "count": 1,
+     "name": "Witch"
+    },
+    {
+     "type": "kill",
+     "monster": "HydraWraith",
+     "count": 1,
+     "slot": 1,
+     "map": 12619,
+     "name": "HydraWraith"
+    }
+   ],
+   "onAccept": {
+    "spawn": {
+     "monster": "HydraWraith",
+     "map": 12619,
+     "x": 301,
+     "y": 137,
+     "count": 1,
+     "minutes": 10
+    }
+   },
+   "engine": true
+  },
+  "8167": {
+   "beginNpc": 8824001,
+   "finishNpc": 8824001,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8824001,
+     "slot": 1,
+     "count": 1,
+     "name": "Witch"
+    }
+   ],
+   "next": 8168,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8168": {
+   "finishNpc": 8824001,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8824001,
+     "slot": 2,
+     "count": 1,
+     "name": "Witch"
+    },
+    {
+     "type": "kill",
+     "monster": "SpiderWraith",
+     "count": 10,
+     "slot": 1,
+     "map": 12619,
+     "name": "SpectrePill"
+    }
+   ],
+   "next": 8169,
+   "autoAccept": true,
+   "engine": true
+  },
+  "8169": {
+   "finishNpc": 8824001,
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8824001,
+     "slot": 2,
+     "count": 1,
+     "name": "Witch"
+    },
+    {
+     "type": "kill",
+     "monster": "AttercopWraith",
+     "count": 1,
+     "slot": 1,
+     "map": 12619,
+     "name": "AttercopWraith"
+    }
+   ],
+   "onAccept": {
+    "spawn": {
+     "monster": "AttercopWraith",
+     "map": 12619,
+     "x": 394,
+     "y": 497,
+     "count": 1,
+     "minutes": 10
+    }
+   },
+   "engine": true
+  }
+ }
+}

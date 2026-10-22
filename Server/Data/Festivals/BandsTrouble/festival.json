@@ -1,0 +1,46 @@
+{
+  "key": "BandsTrouble",
+  "name_ar": "مهرجان الموسيقى الساخن (مشكلة الفرقة)",
+  "name_en": "Hot Music Festival",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Summer: only the newest official edition (Summer2025) runs on its yearly dates, like the official server; this older edition runs only with @festival on BandsTrouble. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ مهرجان الموسيقى الساخن! افتح زرار Hot Music Festival فوق وساعد أعضاء فرقة Hot Summer (لفل 80+).",
+  "announce_en": "The Hot Music Festival has started! Open the Hot Music Festival button and help the bandsmen of the Hot Summer Band (Level 80+).",
+  "end_ar": "انتهى مهرجان الموسيقى الساخن. نشوفكم المرة الجاية!",
+  "end_en": "The splendid Hot Music Festival has come to an end. Thank you all for your enthusiastic participation. See you next time!",
+  "maps": [
+    1003040,
+    1003041,
+    1003042,
+    1003045
+  ],
+  "icon_show": "Fgiu_MusicFestival_ShowBtn|{['Code']=200,['Data']={['Rewardflag']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgMusicFestivalBtn\")",
+  "icon_click": "10426</S>MusicBox_OpenMain",
+  "_icon": "[BandsTrouble 2026-10-14] official lua top button DlgMusicFestivalBtn (layout 150089_btn, 'Hot Music Festival'); click 10426 MusicBox_OpenMain -> Base/BandsTrouble/BandsTroubleUi.cs (FGUI MusicFestivalMain).",
+  "notes": "2026-10-14 build. Official dates July 9 - July 22 (Server_Key tSummerNpc2024[33132] Text114, Cn_Res STR_FGUI_150089_20). Questinfo TypeId 8 stories 7972-7977 + 7985 (7978-7984 are not in this client's Questinfo). Each story runs in a private copy of its official instance (maps.txt 1003040/41/42/45 -> docs 12544/45/46/49): quests.json 'instances'. Entry only through the festival window (bandsman '?' -> MusicBox_ClickWenHao). Prize = official Music Coin 3600726 (7973/7975/7977/7985). Not on this server (system message): Musical Note Chest, legendary instruments, bandsman upgrades, Auditorium, ranking, exchange shop, cross-server party. Needs the server build with Base\\FestivalMaps (maps.txt): before that the 7-digit maps don't exist and the festival is INVALID.",
+  "_owner": "festbc",
+  "_quests": [
+    7972,
+    7973,
+    7974,
+    7975,
+    7976,
+    7977,
+    7985
+  ],
+  "_officialMaps": [
+    1003040,
+    1003041,
+    1003042,
+    1003045
+  ],
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "07-09",
+    "end": "07-22"
+  }
+}

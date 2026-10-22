@@ -1,0 +1,23 @@
+{
+  "key": "WorldCup2026Windrise",
+  "name_ar": "مجد الملعب (كأس العالم 2026 - الشوط الأول)",
+  "name_en": "Pitch Glory (Windrise)",
+  "enabled": false,
+  "schedule": {
+    "type": "manual",
+    "_note": "The client has no exact dates for the first half ('2026全球世界杯开幕前半程'). Its Lucky Cheer Round of 32 runs Jun. 9 - Jun. 28 and the second half starts Jun. 30, so the owner can use 06-09..06-29 (derived). Manual until confirmed."
+  },
+  "announce_ar": "بدأ مهرجان كأس العالم: مجد الملعب (Windrise)! دوس على الزرار اللي فوق.",
+  "announce_en": "Pitch Glory (Windrise) has started!",
+  "end_ar": "انتهى مهرجان مجد الملعب (Windrise).",
+  "end_en": "The Pitch Glory (Windrise) event has ended. We look forward to working with you again next time!",
+  "maps": [
+    12818
+  ],
+  "notes": "WorldCup2026Windrise (2026-10-14, batch 3): official Global World Cup 2026 first half 'Pitch Glory (Windrise)' entry only - top-bar Fgui button 150444 (clickfunc WorldCupMainPage_OpenMain), main window Fgui_26Foot_Main with Stage=0 (msg 10900, Base/WorldCup2026/WorldCup2026Ui.cs). Same window code as WorldCup2026 (second half). Lucky Cheer, Golden Boot, Pitch Flag Capture, Cuju Dream, Vault Palace and Pitch Store answer with a system message. | COMPLETE 2026-10-15: Vault Palace Visit (WorldCupMainPage_Go 2) teleports to Vault Palace 12818 next to the official '[GlobalPitchGlory(Windrise)]' statue (minimap doc 12019 (310,242)); every other part answers with its exact reason. Not possible: the 2026 World Cup items (Field Whistle, Pitch Point Box, Cheer/Casual Coins, prizes 3356639+/3600869) are newer than client_test/server itemtype; the Cuju Tournament pitch 13319 (2026worldcup_new) is in client - orignal GameMap.dat only; Albert's Dream 13310 / OldCujuPitch 13325 (2024thx_new = client_test doc 12633) have no server steps; Lucky Cheer = betting on the real matches.",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150444',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150444',['Show']=false,['Red']=0}}",
+  "icon_click": "10900</S>WorldCupMainPage_OpenMain",
+  "_icon": "[WorldCup2026 2026-10-14] official top-bar Fgui button 150444 (client fguibtnconfig '上半场', img lua_26sjbei_rukou); clicks: Base/WorldCup2026/WorldCup2026Ui.cs",
+  "_owner": "batch3"
+}

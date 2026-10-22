@@ -1,0 +1,290 @@
+{
+  "_note": "MidAutumnVillage overlay (Agent 3, 2026-10-13). Daily quests (repeat daily) begin at the quest's own FinishNpc (Questinfo BeginNpcId=0). Prize = the official Heart Grass 3600735 x1 per quest. [2026-10-15] all 13 Moon Palace dailies on (8051/8052/8053/8057/8060 with derived-look festival monsters spawned on accept; 8056/8062 with the placed NPCs). Heart Grass feeds the Jade Rabbit exploration (Lunar Voyage).",
+  "npcTeleports": {
+    "8830100": [
+      {
+        "text": "Moon Palace",
+        "map": 12597,
+        "x": 264,
+        "y": 266,
+        "minLevel": 80
+      }
+    ],
+    "33273": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ],
+    "33276": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ]
+  },
+  "quests": {
+    "8054": {
+      "beginNpc": 33273,
+      "beginText": "Fairy Magpie invites you to taste the Osmanthus Wine. Don't forget to bring Ale Granny a bottle!",
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8058": {
+      "_note": "Official step 'Deliver mooncakes to WuKang 33274' dropped: WuKang has no mesh. Slots 2 and 3 are the official chk_quest slots.",
+      "beginNpc": 33273,
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 33275,
+          "slot": 2,
+          "name": "AleGranny"
+        },
+        {
+          "type": "talk",
+          "npc": 33278,
+          "slot": 3,
+          "name": "Chang'e"
+        }
+      ],
+      "beginText": "All the mooncakes are ready! Deliver them to Ale Granny and Chang'e, then come back to me.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8059": {
+      "beginNpc": 33273,
+      "beginText": "We need bamboo to make lanterns. Ask Immortal Zhang for some, then plant the Bamboo.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8061": {
+      "beginNpc": 33276,
+      "beginText": "Fairy Bell invites you to guess the three lantern riddles.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8063": {
+      "beginNpc": 33276,
+      "beginText": "Collect flowers and fruit for the lantern festival.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8064": {
+      "beginNpc": 33276,
+      "beginText": "The Moon Worship is held today. Worship the moon sincerely, then report back to me.",
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8051": {
+      "_note": "[2026-10-15] official Questinfo steps; FlowerBug = festival monster 24187 (DERIVED look), spawned for the player at the osmanthus tree when the quest is taken.",
+      "beginNpc": 33273,
+      "beginText": "We are planning to brew osmanthus wine, which requires Osmanthus and distiller`s yeast. Please help us gather them! You can ask Wu Kang for some Osmanthus, and Ale Granny for distiller`s yeast.",
+      "finishText": "All set! Thank you so much today. We can start brewing the wine now! Come back tomorrow! Here is a reward from Chang`e. Take it!",
+      "onAccept": {
+        "spawn": {
+          "monster": "FlowerBug",
+          "map": 12597,
+          "x": 243,
+          "y": 307,
+          "count": 1,
+          "minutes": 15
+        }
+      },
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8052": {
+      "_note": "[2026-10-15] official steps; Treant x3 = festival monster 24188 (DERIVED look).",
+      "beginNpc": 33273,
+      "beginText": "Brewing osmanthus wine requires glutinous rice, osmanthus, and distiller`s yeast. Please go to Moon Pool and wash rice, then ask Wu Kang for some firewood!",
+      "finishText": "With firewood, I can start steaming the rice! You`ve worked hard today, so leave the rest to me. Just wait to taste the wine!",
+      "onAccept": {
+        "spawn": {
+          "monster": "Treant",
+          "map": 12597,
+          "x": 243,
+          "y": 307,
+          "count": 3,
+          "minutes": 15
+        }
+      },
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8053": {
+      "_note": "[2026-10-15] official steps; DrunkGorilla = festival monster 24174 (DERIVED look, official boss 120000 HP).",
+      "beginNpc": 33273,
+      "beginText": "You`re just in time! Today I went to check the osmanthus wine and found out it was stolen! Follow the spilled wine on the ground, and you should be able to find the thief!",
+      "finishText": "It`s a well-known glutton in Moon Palace. Since you taught it a lesson today, it should behave for a while. By the way, the osmanthus wine will be ready tomorrow. Remember to come and taste it!",
+      "onAccept": {
+        "spawn": {
+          "monster": "DrunkGorilla",
+          "map": 12597,
+          "x": 272,
+          "y": 272,
+          "count": 1,
+          "minutes": 15
+        }
+      },
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8056": {
+      "_note": "[2026-10-15] official steps; Ham 36978 placed with a DERIVED look (Stove).",
+      "beginNpc": 33273,
+      "beginText": "Today we`re making Ham Mooncakes, so we have both sweet and salty flavors! Bell is best at making ham. Please help me ask her for some cured ham!",
+      "finishText": "Bell is so generous. This ham is top-quality. I`m sure I can make delicious Ham Mooncakes with it! Thank you today. Go get some rest and come back tomorrow to taste the mooncakes!",
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8057": {
+      "_note": "[2026-10-15] official steps; SweetCakeLover / SaltyCakeLover x2 = festival monsters 24175/24176 (DERIVED looks).",
+      "beginNpc": 33273,
+      "beginText": "Some of them love sweet mooncakes, and some love salty ones. They`re arguing and even fighting over it! My place is also a mess because of them!",
+      "finishText": "You did the right thing! These people don`t follow the rules. Thanks to you today, otherwise my mooncakes would have been ruined! Take a rest and come back to help me tomorrow!",
+      "onAccept": {
+        "spawn": [
+          {
+            "monster": "SweetCakeLover",
+            "map": 12597,
+            "x": 239,
+            "y": 275,
+            "count": 2,
+            "minutes": 15
+          },
+          {
+            "monster": "SaltyCakeLover",
+            "map": 12597,
+            "x": 241,
+            "y": 277,
+            "count": 2,
+            "minutes": 15
+          }
+        ]
+      },
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8060": {
+      "_note": "[2026-10-15] official steps; Moonfish = festival monster 24177 (DERIVED look).",
+      "beginNpc": 33273,
+      "beginText": "The frame is done. Next, we need candles. Please go get some Moonfish oil. Moonfish are very rare, so you can only knock them out. Be gentle!",
+      "finishText": "Great, all the materials for making the lantern are ready. Tomorrow you`ll have your own lantern! Come back tomorrow to get your lantern!",
+      "onAccept": {
+        "spawn": {
+          "monster": "Moonfish",
+          "map": 12597,
+          "x": 264,
+          "y": 272,
+          "count": 1,
+          "minutes": 15
+        }
+      },
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    },
+    "8062": {
+      "_note": "[2026-10-15] official steps; Riverside 33283 = npc.ini Riverbank [MoonPalace].",
+      "beginNpc": 33276,
+      "beginText": "Look how beautiful the Milky Way is! Lights flicker, stars twinkle! Go float a lantern, and then make a wish. You`ll surely be safe and smooth in the future!",
+      "finishText": "Drank osmanthus wine, ate mooncakes, and floated lanterns. This Mid-Autumn Festival is truly complete. Now there`s just one last event left. You`ll find out tomorrow!",
+      "prize": {
+        "items": [
+          {
+            "id": 3600735,
+            "count": 1
+          }
+        ]
+      },
+      "repeat": "daily"
+    }
+  }
+}

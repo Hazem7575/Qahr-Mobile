@@ -1,0 +1,441 @@
+{
+  "_note": "BandsTrouble overlay (2026-10-14). Summer 2024 'Hot Music Festival' bandsmen stories. Quest ids / slots / counts / prizes / NPC cells = client Questinfo.ini 7972-7977 + 7985 (official). Texts = official client strings: Cn_Res STR_FGUI_150093_1_* (the bandsman's request in the festival window) and Server_Key tPlotEditorPlotEvent_DelText[79xx] (the in-story dialogs). Every story runs in a PRIVATE copy of its official instance map (maps.txt: 1003040 BalladVillage=12544, 1003041 MelodyMirage=12545, 1003042 IceboundFrontier=12546, 1003045 Stage=12549). Entry = the festival window (Base\\BandsTrouble\\BandsTroubleUi.cs, MusicBox_ClickWenHao), which accepts the first quest at its begin NPC -> onAccept enters the copy; next+autoAccept keeps the chapter in the same copy. 2026-10-15: the Discord Group fights are real (monsters\\*.ini, festival ids 22772-22754, DERIVED looks); 7977 keeps its _deviation.",
+  "npcTeleports": {
+    "8851002": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ],
+    "8851005": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ],
+    "8851008": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ],
+    "8851010": [
+      {
+        "text": "Back to Twin City",
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      }
+    ]
+  },
+  "instances": {
+    "BalladVillage": {
+      "_note": "Miko`s inner world (Questinfo 1003040 BalladVillage, doc 12544 house03). NPC cells = Questinfo points.",
+      "map": 1003040,
+      "x": 28,
+      "y": 45,
+      "minutes": 30,
+      "exit": {
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      },
+      "npcs": [
+        {
+          "id": 8851001,
+          "mesh": 1061460,
+          "x": 26,
+          "y": 47,
+          "type": 2,
+          "name": "Miko"
+        },
+        {
+          "id": 8851002,
+          "mesh": 24490,
+          "x": 44,
+          "y": 31,
+          "type": 2,
+          "name": "Irving"
+        },
+        {
+          "id": 8851003,
+          "mesh": 19730,
+          "x": 35,
+          "y": 36,
+          "type": 2,
+          "name": "Record"
+        },
+        {
+          "id": 8851004,
+          "mesh": 19730,
+          "x": 35,
+          "y": 26,
+          "type": 2,
+          "name": "Record"
+        }
+      ]
+    },
+    "MelodyMirage": {
+      "_note": "Maria`s inner world (Questinfo 1003041 MelodyMirage, doc 12545 ninja02_new).",
+      "map": 1003041,
+      "x": 100,
+      "y": 82,
+      "minutes": 30,
+      "exit": {
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      },
+      "npcs": [
+        {
+          "id": 8851005,
+          "mesh": 20610,
+          "x": 99,
+          "y": 86,
+          "type": 2,
+          "name": "John"
+        },
+        {
+          "id": 8851006,
+          "mesh": 1061470,
+          "x": 102,
+          "y": 77,
+          "type": 2,
+          "name": "Maria"
+        }
+      ]
+    },
+    "IceboundFrontier": {
+      "_note": "Conner`s home (Questinfo 1003042 IceboundFrontier, doc 12546 2019xmas_new).",
+      "map": 1003042,
+      "x": 98,
+      "y": 100,
+      "minutes": 30,
+      "exit": {
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      },
+      "npcs": [
+        {
+          "id": 8851007,
+          "mesh": 38100,
+          "x": 100,
+          "y": 107,
+          "type": 2,
+          "name": "Conner`sMother"
+        },
+        {
+          "id": 8851008,
+          "mesh": 12220,
+          "x": 95,
+          "y": 93,
+          "type": 2,
+          "name": "Foxie"
+        },
+        {
+          "id": 8851009,
+          "mesh": 101510,
+          "x": 119,
+          "y": 79,
+          "type": 2,
+          "name": "MusicScore"
+        }
+      ]
+    },
+    "Stage": {
+      "_note": "The festival stage (Questinfo 1003045 Stage, doc 12549 2024stage_new). Tony = official FinishNpc cell; the other two suspects (Server_Key [7985] DynaNpcName1/2) have no official cell: placed next to Tony (derived, walkable).",
+      "map": 1003045,
+      "x": 57,
+      "y": 52,
+      "minutes": 30,
+      "exit": {
+        "map": 1002,
+        "x": 368,
+        "y": 441
+      },
+      "npcs": [
+        {
+          "id": 8851010,
+          "mesh": 12020,
+          "x": 57,
+          "y": 48,
+          "type": 2,
+          "name": "Tony"
+        },
+        {
+          "id": 8851011,
+          "mesh": 39450,
+          "x": 54,
+          "y": 45,
+          "type": 2,
+          "name": "Armin"
+        },
+        {
+          "id": 8851012,
+          "mesh": 39460,
+          "x": 60,
+          "y": 45,
+          "type": 2,
+          "name": "Barley"
+        }
+      ]
+    }
+  },
+  "quests": {
+    "7972": {
+      "_note": "Band`s Trouble 1 (Miko). Lv 80. Questinfo FinishNpcId -1,1003040,44,31 Irving.",
+      "beginNpc": 8851001,
+      "finishNpc": 8851002,
+      "onAccept": {
+        "instance": "BalladVillage"
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8851001,
+          "slot": 1,
+          "name": "Miko"
+        },
+        {
+          "type": "talk",
+          "npc": 8851002,
+          "slot": 2,
+          "after": 1,
+          "name": "Irving"
+        }
+      ],
+      "beginText": "What a wonderful performance! Oh! I haven`t formally introduced myself yet. I am Miko, the lead singer of the band. You might not know that I was once a folk singer. It was Mr. Raphael who invited me to the band. Could you help me solve the doubts in my heart? If I can`t firm up my beliefs, I will lose the meaning of standing on the stage!",
+      "progressText": "Mr. Irving has many good records and videotapes. Would you like to go with me? I want to listen to some rock music.",
+      "finishText": "Irving: Lucky you! I`ve just collected a lot of precious records, including jazz, classical, and rock, everything you can think of! The records are placed in the store. You can enjoy them as much as you want, as long as you don`t disturb my afternoon tea.",
+      "next": 7973,
+      "autoAccept": true
+    },
+    "7973": {
+      "_note": "Band`s Trouble 1, part 2. Prize = Questinfo [item 3600726] Music Coin. 2026-10-15: the official 'Drive away [mob DisruptiveDiscordGremlin,1003040,36,30] x3' is a real fight: 3 DiscordGremlin (festival type 22772 = monster.dat 22772 Lv140 30000 HP, DERIVED look) appear in the private copy at the official cell when the quest starts.",
+      "beginNpc": 8851002,
+      "finishNpc": 8851001,
+      "onAccept": {
+        "instance": "BalladVillage",
+        "spawn": [
+          {
+            "monster": "DiscordGremlin",
+            "x": 36,
+            "y": 30,
+            "range": 4,
+            "count": 3,
+            "minutes": 30
+          }
+        ]
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8851003,
+          "slot": 3,
+          "name": "the Retro Record"
+        },
+        {
+          "type": "kill",
+          "monster": "DiscordGremlin",
+          "slot": 1,
+          "count": 3,
+          "name": "DisruptiveDiscordGremlin"
+        },
+        {
+          "type": "talk",
+          "npc": 8851004,
+          "slot": 4,
+          "after": 1,
+          "name": "the Rock Record"
+        },
+        {
+          "type": "talk",
+          "npc": 8851001,
+          "slot": 2,
+          "after": 4,
+          "name": "Music Belief"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3600726,
+            "count": 1
+          }
+        ]
+      },
+      "progressText": "The music has attracted the annoying Discord Gremlins. Drive them away and then listen to the music quietly!",
+      "finishText": "Miko: This is rock music! I love it!!! I decided to go to Mr. Raphael`s selection tonight!"
+    },
+    "7974": {
+      "_note": "Band`s Trouble 2 (Maria). Questinfo FinishNpcId -1,1003041,99,86 John.",
+      "beginNpc": 8851006,
+      "finishNpc": 8851005,
+      "onAccept": {
+        "instance": "MelodyMirage"
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8851005,
+          "slot": 1,
+          "name": "Maria`s Past"
+        }
+      ],
+      "beginText": "Thank goodness! You`re finally here! I am Maria, the guitarist of the band, and I really need your help right now! I was chosen by Mr. Raphael to be a member of the band entirely because of this unparalleled lucky guitar! However, this guitar was damaged by the Discord Group just now! At every rehearsal I can feel the strength gap among band members, which is a huge pressure for me.",
+      "finishText": "John: It seems you have also found it. Maria`s guitar skills are superb, but she is still not confident in herself. In order to dispel her inferiority, I told her a white lie. The so-called lucky guitar is just an ordinary guitar. What Maria needs to overcome is her inner inferiority. Break the guitar she depends on and defeat the fear in her heart!",
+      "next": 7975,
+      "autoAccept": true
+    },
+    "7975": {
+      "beginNpc": 8851005,
+      "finishNpc": 8851006,
+      "onAccept": {
+        "instance": "MelodyMirage",
+        "spawn": [
+          {
+            "monster": "InsecureMaria",
+            "x": 100,
+            "y": 75,
+            "range": 3,
+            "count": 1,
+            "minutes": 30
+          }
+        ]
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8851006,
+          "slot": 2,
+          "name": "Maria"
+        },
+        {
+          "type": "kill",
+          "monster": "InsecureMaria",
+          "slot": 3,
+          "count": 1,
+          "name": "the insecure Maria"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3600726,
+            "count": 1
+          }
+        ]
+      },
+      "progressText": "The Discord Devil hidden in Maria`s heart absorbed her anger and rushed out of the body to attack you!",
+      "finishText": "Maria: My God! It turns out that everything was caused by my inferiority complex. Inferiority has wrapped me up thickly. Thank you for letting me regain my confidence! I am now full of passion and can`t wait to show my skills now!",
+      "_note": "Band`s Trouble 2, part 2. 2026-10-15: 'Overcome the insecure Maria' = defeat InsecureMaria (festival type 22752 = monster.dat 22752 Lv140 100000 HP boss, DERIVED look), who appears next to Maria in the private copy when the quest starts (official MsgBox1: the Discord Devil hidden in Maria`s heart rushes out)."
+    },
+    "7976": {
+      "_note": "Band`s Trouble 3 (Conner). Questinfo FinishNpcId -1,1003042,95,93 Foxie.",
+      "beginNpc": 8851007,
+      "finishNpc": 8851008,
+      "onAccept": {
+        "instance": "IceboundFrontier"
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8851007,
+          "slot": 1,
+          "name": "Conner`s Mother"
+        },
+        {
+          "type": "talk",
+          "npc": 8851008,
+          "slot": 2,
+          "after": 1,
+          "name": "Foxie"
+        }
+      ],
+      "beginText": "Finally met you! I am Conner, the keyboardist of the band. I come from the distant Icebound Frontier, and my mother has promised to come to watch my performance. But I haven`t heard of her for several days, so I`m a bit worried. Could you please go to Icebound Frontier to see why my mother did not come to the performance? And remind her of bringing the music scores I wrote.",
+      "progressText": "Conner`s Mother: It`s all my fault. I had promised to watch Conner`s performance, but I accidentally lost his music score some time ago. I suspect it was stolen by Foxie.",
+      "finishText": "Foxie: Humph! Yes! I secretly hid the music score! Conner clearly promised to play a new song for me on my birthday, but he left quietly. Liar! I will hide all his music scores! Humph! Go find it yourself!",
+      "next": 7977,
+      "autoAccept": true
+    },
+    "7977": {
+      "_deviation": "Officially a Discord Gremlin (no look) may take one score piece away (MsgBox4/5); here the two pieces are both found at the official MusicScore spot (each search counts one, Questinfo count 2).",
+      "beginNpc": 8851008,
+      "finishNpc": 8851008,
+      "onAccept": {
+        "instance": "IceboundFrontier"
+      },
+      "objectives": [
+        {
+          "type": "talk",
+          "npc": 8851009,
+          "slot": 3,
+          "count": 2,
+          "name": "Conner`s Music Score"
+        },
+        {
+          "type": "talk",
+          "npc": 8851008,
+          "slot": 2,
+          "after": 3,
+          "name": "Foxie"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3600726,
+            "count": 1
+          }
+        ]
+      },
+      "progressText": "You have found a piece of music score. Keep searching and you may be able to piece together the complete music score!",
+      "finishText": "Foxie: I swear... I just wanted to see what song Conner wrote for me. I didn`t expect to break it... My birthday song!!! So Conner has always remembered our agreement. I misunderstood him! Can I go to his performance?"
+    },
+    "7985": {
+      "_note": "Disappeared Stereos. Questinfo FinishNpcId -1,1003045,57,48 Tony. 2026-10-15: 'Uncover [mob DiscordGroup`sMole,1003045,59,50]' = defeat the DiscordDevil (festival type 22755 = monster.dat 22755 Lv140 30000 HP, DERIVED look) at the official cell 59,50; Armin / Barley / Tony keep their official alibi lines (Server_Key [7985]). DERIVED: the devil is there from the start of the story (the client has no step data for the questioning).",
+      "beginNpc": 8851010,
+      "finishNpc": 8851010,
+      "onAccept": {
+        "instance": "Stage",
+        "spawn": [
+          {
+            "monster": "DiscordDevil",
+            "x": 59,
+            "y": 50,
+            "range": 2,
+            "count": 1,
+            "minutes": 30
+          }
+        ]
+      },
+      "objectives": [
+        {
+          "type": "kill",
+          "monster": "DiscordDevil",
+          "slot": 1,
+          "count": 1,
+          "name": "DiscordGroup`sMole"
+        }
+      ],
+      "prize": {
+        "items": [
+          {
+            "id": 3600726,
+            "count": 1
+          }
+        ]
+      },
+      "beginText": "Have you heard? The rehearsal has been put off again. All the stereos have disappeared! Although Mr. Raphael caught three suspects, they all have alibis. If we can`t find the stereos, today`s performance will have to be canceled. Could you assist us in catching the thief and finding the missing stereos?",
+      "progressText": "You have found the Discord Devil disguised as a makeup artist. Defeat it to get back the missing stereos!",
+      "finishText": "Tony: Damn it! You`ve seen through me! I will be back sooner or later!"
+    }
+  }
+}

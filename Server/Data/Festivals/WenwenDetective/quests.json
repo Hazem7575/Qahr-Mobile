@@ -1,0 +1,521 @@
+{
+ "_note": "WenwenDetective overlay (2026-10-14). Order, slots, counts, maps, points and prizes come from client Questinfo.ini 5847-5852. Every text comes from the official server script strings in client ini\\Server_Key.lua tPlotEditorPlotEvent_DelText[5847..5852]. Prize = Questinfo Prize of EVERY quest: [item 4060001,0,0,0,3,..] UniversalRuneEssence (flag 3 = bound) + [item 3600709] Bubble Hammer, once per quest per character. Written out explicitly with final=false, because the engine otherwise pays a chain (next/autoAccept) only at its end. Entry = the Goosie Adventure window, island 3 'Titan Realm' (Base\\WenwenDetective\\WenwenDetectiveUi.cs), or Wenwen on 1002614. Each finished quest auto-accepts the next one, which moves you to its map (official: one Titan Realm copy per chapter).",
+ "npcTeleports": {
+  "8853001": [
+   {
+    "text": "Back to Twin City",
+    "map": 1002,
+    "x": 368,
+    "y": 441
+   }
+  ],
+  "8853011": [
+   {
+    "text": "Back to Twin City",
+    "map": 1002,
+    "x": 368,
+    "y": 441
+   }
+  ],
+  "8853021": [
+   {
+    "text": "Back to Twin City",
+    "map": 1002,
+    "x": 368,
+    "y": 441
+   }
+  ],
+  "8853031": [
+   {
+    "text": "Back to Twin City",
+    "map": 1002,
+    "x": 368,
+    "y": 441
+   }
+  ],
+  "8853041": [
+   {
+    "text": "Back to Twin City",
+    "map": 1002,
+    "x": 368,
+    "y": 441
+   }
+  ],
+  "8853051": [
+   {
+    "text": "Back to Twin City",
+    "map": 1002,
+    "x": 368,
+    "y": 441
+   }
+  ],
+  "8853101": [
+   {
+    "text": "Back to Twin City",
+    "map": 1002,
+    "x": 368,
+    "y": 441
+   }
+  ],
+  "8853111": [
+   {
+    "text": "Back to Twin City",
+    "map": 1002,
+    "x": 368,
+    "y": 441
+   }
+  ]
+ },
+ "quests": {
+  "5847": {
+   "_name": "Huge Footprint",
+   "prize": {
+    "items": [
+     {
+      "id": 4060001,
+      "count": 1,
+      "bound": true
+     },
+     {
+      "id": 3600709,
+      "count": 1
+     }
+    ]
+   },
+   "final": false,
+   "_deviation": "Questinfo Prequest=5846 (Wenwen's Magic Bean plot, Server_Key 5846): 5846 is not in Questinfo.ini (client or server), so the chain starts here.",
+   "prequest": "0",
+   "beginNpc": 8853001,
+   "finishNpc": 8853001,
+   "finishMap": 1002614,
+   "finishX": 196,
+   "finishY": 113,
+   "beginText": "Though our two feet may have some subtle differences, they can`t be completely different. It seems there`s a problem with this footprint!",
+   "progressText": "Have you checked those footprints, adventurer?",
+   "finishText": "Here you are again, just the right time. I guess this must be a titan`s footprint! Could it be that... there are also geese in the Titan Realm? Wow, that`s so cool!",
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8853001,
+     "slot": 3,
+     "name": "Wenwen"
+    },
+    {
+     "type": "talk",
+     "npc": 8853002,
+     "slot": 1,
+     "name": "Footprints"
+    },
+    {
+     "type": "talk",
+     "npc": 8853001,
+     "slot": 2,
+     "after": 1,
+     "name": "Wenwen"
+    }
+   ],
+   "next": 5848,
+   "autoAccept": true
+  },
+  "5848": {
+   "_name": "Detective Tool",
+   "prize": {
+    "items": [
+     {
+      "id": 4060001,
+      "count": 1,
+      "bound": true
+     },
+     {
+      "id": 3600709,
+      "count": 1
+     }
+    ]
+   },
+   "final": false,
+   "beginNpc": 8853011,
+   "finishNpc": 8853011,
+   "finishMap": 1002615,
+   "finishX": 212,
+   "finishY": 182,
+   "onAccept": {
+    "teleport": {
+     "map": 1002615,
+     "x": 215,
+     "y": 185
+    }
+   },
+   "beginText": "I`ve thought about it, investigating the footprint will need some tools! Goose Detective has many detective tools. Can you help borrow the Invincible Magnifying Glass, Versatile Measuring Device, and Detective Handbook?",
+   "progressText": "If you see Wenwen, remember to remind it not to forget to return the detective tools to me!",
+   "finishText": "Hehe! You sure have a way with people! Alright, I`m going to look for clues now, see you later!",
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8853011,
+     "slot": 1,
+     "name": "Wenwen"
+    },
+    {
+     "type": "talk",
+     "npc": 8853012,
+     "slot": 2,
+     "name": "Detective Tool"
+    },
+    {
+     "type": "talk",
+     "npc": 8853011,
+     "slot": 3,
+     "after": 2,
+     "name": "Wenwen"
+    }
+   ],
+   "next": 5849,
+   "autoAccept": true
+  },
+  "5849": {
+   "_name": "Goose Feather",
+   "prize": {
+    "items": [
+     {
+      "id": 4060001,
+      "count": 1,
+      "bound": true
+     },
+     {
+      "id": 3600709,
+      "count": 1
+     }
+    ]
+   },
+   "final": false,
+   "beginNpc": 8853021,
+   "finishNpc": 8853021,
+   "finishMap": 1002616,
+   "finishX": 147,
+   "finishY": 226,
+   "onAccept": {
+    "teleport": {
+     "map": 1002616,
+     "x": 150,
+     "y": 229
+    }
+   },
+   "beginText": "I followed the footprints and found some feathers along the way. I want to collect more feathers for research. Can you help me?",
+   "progressText": "After some searching, you found 1 Feather. Keep looking elsewhere!",
+   "finishText": "Thank you! Next, I`ll carefully study these feathers. I`ll let you know once I have any results!",
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8853021,
+     "slot": 3,
+     "name": "Wenwen"
+    },
+    {
+     "type": "talk",
+     "npc": 8853022,
+     "slot": 1,
+     "count": 2,
+     "name": "Feathers"
+    },
+    {
+     "type": "talk",
+     "npc": 8853021,
+     "slot": 2,
+     "after": 1,
+     "name": "Wenwen"
+    }
+   ],
+   "next": 5850,
+   "autoAccept": true
+  },
+  "5850": {
+   "_name": "Baiting Plan",
+   "prize": {
+    "items": [
+     {
+      "id": 4060001,
+      "count": 1,
+      "bound": true
+     },
+     {
+      "id": 3600709,
+      "count": 1
+     }
+    ]
+   },
+   "final": false,
+   "beginNpc": 8853031,
+   "finishNpc": 8853031,
+   "finishMap": 1002617,
+   "finishX": 147,
+   "finishY": 226,
+   "onAccept": {
+    "teleport": {
+     "map": 1002617,
+     "x": 150,
+     "y": 229
+    }
+   },
+   "beginText": "I can guarantee that these feathers are from our Goose Park! We can conduct an experiment to verify this conclusion. The goosies in Goose Park love Tasty Grass and Yummy Berries. Why don`t you go collect some? Maybe it will lure out this mysterious figure!",
+   "progressText": "We already have the Tasty Grass, but we`re still missing the Yummy Berry. Can you go collect it?",
+   "finishText": "Place these treats nearby. Next, just wait patiently for its appearance!",
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8853031,
+     "slot": 4,
+     "name": "Wenwen"
+    },
+    {
+     "type": "talk",
+     "npc": 8853032,
+     "slot": 1,
+     "name": "Tasty Grass"
+    },
+    {
+     "type": "talk",
+     "npc": 8853033,
+     "slot": 2,
+     "after": 1,
+     "name": "Yummy Berry"
+    },
+    {
+     "type": "talk",
+     "npc": 8853031,
+     "slot": 3,
+     "after": 2,
+     "name": "Wenwen"
+    }
+   ],
+   "next": 5851,
+   "autoAccept": true
+  },
+  "5851": {
+   "_name": "Mysterious Figure",
+   "prize": {
+    "items": [
+     {
+      "id": 4060001,
+      "count": 1,
+      "bound": true
+     },
+     {
+      "id": 3600709,
+      "count": 1
+     }
+    ]
+   },
+   "final": false,
+   "_deviation": "[2026-10-15] Official slot 1 'Defeat [mob MysteriousFigure,1002618,172,290]' is a real kill again: festival monster MysteriousFigure (monsters\\MysteriousFigure.ini, DERIVED look/stats, spawns.json at 172,290). Mimi (official DynaNpcName1) stands there for slot 2.",
+   "beginNpc": 8853041,
+   "finishNpc": 8853041,
+   "finishMap": 1002618,
+   "finishX": 172,
+   "finishY": 290,
+   "onAccept": {
+    "teleport": {
+     "map": 1002618,
+     "x": 182,
+     "y": 300
+    }
+   },
+   "beginText": "That mysterious figure has appeared! Go and take a look",
+   "progressText": "It looks very aggressive! It`s rushing towards you!",
+   "finishText": "Waaah, I`m sorry! Please don`t hit me! I got lost and couldn`t find my way home... I was afraid of being bullied, so I disguised myself as a big goose... Could you... could you take me home?",
+   "objectives": [
+    {
+     "type": "kill",
+     "monster": "MysteriousFigure",
+     "count": 1,
+     "slot": 1,
+     "map": 1002618,
+     "name": "Mysterious Figure"
+    },
+    {
+     "type": "talk",
+     "npc": 8853041,
+     "slot": 2,
+     "after": 1,
+     "name": "Mimi"
+    }
+   ],
+   "next": 5852,
+   "autoAccept": true
+  },
+  "5852": {
+   "_name": "The Way Home",
+   "prize": {
+    "items": [
+     {
+      "id": 4060001,
+      "count": 1,
+      "bound": true
+     },
+     {
+      "id": 3600709,
+      "count": 1
+     }
+    ]
+   },
+   "final": false,
+   "beginNpc": 8853051,
+   "finishNpc": 8853051,
+   "finishMap": 1002619,
+   "finishX": 173,
+   "finishY": 290,
+   "onAccept": {
+    "teleport": {
+     "map": 1002619,
+     "x": 176,
+     "y": 293
+    }
+   },
+   "beginText": "This... this map, looks so complicated! What should I do... I seem to not understand the map...",
+   "progressText": "This spot has already been marked. Please proceed to the next waypoint!",
+   "finishText": "Great, thank you! I can finally go home now!",
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8853051,
+     "slot": 1,
+     "name": "Mimi"
+    },
+    {
+     "type": "talk",
+     "npc": 8853052,
+     "slot": 2,
+     "count": 3,
+     "after": 1,
+     "name": "Way Home"
+    },
+    {
+     "type": "talk",
+     "npc": 8853051,
+     "slot": 3,
+     "after": 2,
+     "name": "Mimi"
+    }
+   ]
+  },
+  "5861": {
+   "_name": "Journey of Wonder I",
+   "_source": "Questinfo.ini 5861 (official order/slots/points), texts tPlotEditorPlotEvent_DelText[5861]. BeginNpcId=0 officially (auto-start when entering the cave) -> begun by Flynn / the window island 2.",
+   "_prize": "Questinfo Prize is EMPTY. DERIVED: the official texts say the chest holds treasures needing 2 bag spaces (MsgBox5) and that Dinowolf Isle gives Bubble Hammers (tChildrenDayNpc2024 Text1310) -> 1 UniversalRuneEssence (B) + 1 Bubble Hammer, like the Titan Realm chapters.",
+   "prize": {
+    "items": [
+     {
+      "id": 4060001,
+      "count": 1,
+      "bound": true
+     },
+     {
+      "id": 3600709,
+      "count": 1
+     }
+    ]
+   },
+   "final": false,
+   "prequest": "0",
+   "beginNpc": 8853101,
+   "finishNpc": 8853101,
+   "finishMap": 1002628,
+   "finishX": 31,
+   "finishY": 49,
+   "beginText": "Let me tell you, this cave hides treasures! But there`s a Fierce Eagle guarding the chests. If you can defeat it, all those treasures will be ours.",
+   "progressText": "The key to the chest is hidden on the eagle. Go defeat this ferocious fellow!",
+   "finishText": "Wow! You`re so amazing! I really admire you!",
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8853101,
+     "slot": 2,
+     "name": "Goosie"
+    },
+    {
+     "type": "kill",
+     "monster": "Eagle",
+     "count": 1,
+     "slot": 1,
+     "after": 2,
+     "map": 1002628,
+     "name": "Eagle"
+    },
+    {
+     "type": "talk",
+     "npc": 8853102,
+     "slot": 3,
+     "after": 1,
+     "name": "Chest"
+    },
+    {
+     "type": "talk",
+     "npc": 8853101,
+     "slot": 4,
+     "after": 3,
+     "name": "Goosie"
+    }
+   ],
+   "next": 5862,
+   "autoAccept": true
+  },
+  "5862": {
+   "_name": "Journey of Wonder II",
+   "_source": "Questinfo.ini 5862, texts tPlotEditorPlotEvent_DelText[5862]. Official 9 chests (DynaNpcName 'Chest 1..9'), 3 real: here 1 'RealChests' NPC opened 3 times + 6 fake chests that only answer the official MsgBox7 line; the snakes (MsgBox6) roam around them.",
+   "_prize": "Questinfo Prize is EMPTY. DERIVED (MsgBox5: 3 bag spaces): 1 UniversalRuneEssence (B) + 2 Bubble Hammers.",
+   "prize": {
+    "items": [
+     {
+      "id": 4060001,
+      "count": 1,
+      "bound": true
+     },
+     {
+      "id": 3600709,
+      "count": 2
+     }
+    ]
+   },
+   "final": false,
+   "prequest": "0",
+   "beginNpc": 8853111,
+   "finishNpc": 8853111,
+   "finishMap": 1002629,
+   "finishX": 37,
+   "finishY": 49,
+   "onAccept": {
+    "teleport": {
+     "map": 1002629,
+     "x": 34,
+     "y": 52
+    }
+   },
+   "beginText": "There were only 3 chests here, but suddenly a group of little monsters appeared out of nowhere. Could you help me find those 3 real chests?",
+   "progressText": "Have you found the real chest?",
+   "finishText": "Fantastic! You managed to defeat the monsters hiding in the chest and found all the treasures. You`re truly remarkable!",
+   "objectives": [
+    {
+     "type": "talk",
+     "npc": 8853111,
+     "slot": 1,
+     "name": "Goosie"
+    },
+    {
+     "type": "talk",
+     "npc": 8853112,
+     "slot": 2,
+     "count": 3,
+     "after": 1,
+     "name": "RealChests"
+    },
+    {
+     "type": "talk",
+     "npc": 8853111,
+     "slot": 3,
+     "after": 2,
+     "name": "Goosie"
+    }
+   ]
+  }
+ },
+ "_note2": "[2026-10-15] + Journey of Wonder 5861/5862 (merged from JourneyOfWonder; Dinowolf Isle = island 2 of the window), 5851 is a real kill of MysteriousFigure."
+}

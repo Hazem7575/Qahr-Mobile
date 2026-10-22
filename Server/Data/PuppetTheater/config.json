@@ -1,0 +1,1559 @@
+{
+ "_note": "PuppetTheater (Halloween 2025 Strings of Terror) server config. Every number marked DERIVED: the client has no table for it. Official: item ids, store CP prices (luauirewardshow 302001xxx), training reward lists (301001-301003xxx, counts as shown), box contents (itemtype tips), 150 SP daily, level 80, 2 Soulthreads first Finale / top damage 2 Soulthreads + 1D Solar Steel Box, 'Every 10 SP' conversion.",
+ "minLevel": 80,
+ "spDaily": 150,
+ "spPerStep": 10,
+ "_spPerStep": "DERIVED (STR_LUAUI_QQWS_ZGZ_TLXH 'Each exploration consumes %s SP' has no number)",
+ "plainSoulChance": 60,
+ "chestSoul": 2,
+ "encounterSoul": 1,
+ "artifactSoul": 2,
+ "bossFirstSoul": 3,
+ "_rewards": "DERIVED Soulthread amounts; event cells pay only the first time (re-exploring pays plain cells only)",
+ "rating": {
+  "S": 60,
+  "A": 180,
+  "_": "DERIVED seconds (official 'Defeat the boss within 3 rounds' is a turn battle)"
+ },
+ "bossMinutes": 15,
+ "trainCost": 1,
+ "trainPoints": 50,
+ "skillMax": 150,
+ "extraMax": 0,
+ "_train": "video: 1 Soulthread per UPG, the button spends all ('N UPG xN', cap maxUpgPerClick DERIVED), 50 Terror Points per UPG, all 5 puppets awake from day 1, Level Reward up to L150",
+ "attrPerLevel": [
+  200,
+  20,
+  20,
+  15,
+  15
+ ],
+ "tiers": {
+  "1": [
+   {
+    "syb": 301001001,
+    "item": 3328247,
+    "count": 100
+   },
+   {
+    "syb": 301001004,
+    "item": 3347151,
+    "count": 52
+   },
+   {
+    "syb": 301001007,
+    "item": 3347158,
+    "count": 8
+   },
+   {
+    "syb": 301001010,
+    "item": 3009102,
+    "count": 1
+   },
+   {
+    "syb": 301001013,
+    "item": 4060001,
+    "count": 40
+   },
+   {
+    "syb": 301001016,
+    "item": 3346829,
+    "count": 5
+   },
+   {
+    "syb": 301001019,
+    "item": 3354678,
+    "count": 4
+   },
+   {
+    "syb": 301001022,
+    "item": 3314207,
+    "count": 2
+   }
+  ],
+  "2": [
+   {
+    "syb": 301002001,
+    "item": 3328247,
+    "count": 80
+   },
+   {
+    "syb": 301002004,
+    "item": 3347151,
+    "count": 40
+   },
+   {
+    "syb": 301002007,
+    "item": 3347158,
+    "count": 6
+   },
+   {
+    "syb": 301002010,
+    "item": 3009100,
+    "count": 8
+   },
+   {
+    "syb": 301002013,
+    "item": 4060001,
+    "count": 30
+   },
+   {
+    "syb": 301002016,
+    "item": 3346829,
+    "count": 4
+   },
+   {
+    "syb": 301002019,
+    "item": 3354678,
+    "count": 3
+   },
+   {
+    "syb": 301002022,
+    "item": 3321077,
+    "count": 16
+   }
+  ],
+  "3": [
+   {
+    "syb": 301003001,
+    "item": 3341018,
+    "count": 6
+   },
+   {
+    "syb": 301003004,
+    "item": 3009100,
+    "count": 5
+   },
+   {
+    "syb": 301003007,
+    "item": 4060001,
+    "count": 20
+   },
+   {
+    "syb": 301003010,
+    "item": 3346829,
+    "count": 2
+   },
+   {
+    "syb": 301003013,
+    "item": 3354678,
+    "count": 2
+   },
+   {
+    "syb": 301003016,
+    "item": 3314207,
+    "count": 1
+   },
+   {
+    "syb": 301003019,
+    "item": 3003126,
+    "count": 6
+   },
+   {
+    "syb": 301003022,
+    "item": 3002926,
+    "count": 1
+   }
+  ]
+ },
+ "_tiers": "OFFICIAL 8-item lists (luauirewardshow 301001-301003, video 02:11/02:25), Contribution Pack + Class Awakening Box restored (official first). Which list a puppet shows = puppetList (DERIVED: only 3 lists for 5 puppets). Per UPG the chosen item x max(1, count / perUpgDivisor) (DERIVED: video 07:40 '+3 Stone (B) x2' for 2 UPG with the list showing 5).",
+ "milestones": [],
+ "_milestones": "video 07:59-08:04 Points Reward: Terror Box every 1000 points (repeatable); 5000/10000/20000/40000/60000 Octave Bells 1/2/3/5/8, 40000 also 200 UniversalRuneEssence. The second item of 5000-60000 (emblem/crystals/gift bag) is not identifiable: left out",
+ "store": [[3354671, 95, 0, 0], [3354672, 28, 0, 0], [3354689, 12999, 0, 0], [3354690, 8999, 0, 0]],
+ "finale": {
+  "poolHp": 250000,
+  "minutes": 10,
+  "firstSoul": 2,
+  "cleanupSoul": 1,
+  "topSoul": 2,
+  "topBox": 3354673,
+  "minPuppetLevel": 5,
+  "enemy": 52,
+  "look": 327,
+  "atk": 900,
+  "_note": "Marionette HP 250000 (video 07:20); 10 rounds a day; damage dealt goes to the server pool"
+ },
+ "_finale": "poolHp/minutes/cleanupSoul DERIVED (official is cross-server, 10 rounds); local server only",
+ "adventure": {
+  "one": [
+   50,
+   1
+  ],
+  "two": 2,
+  "three": [
+   [
+    3600813,
+    5
+   ],
+   [
+    3354679,
+    1
+   ],
+   [
+    3354672,
+    1
+   ]
+  ],
+  "vaultSp": 30,
+  "map": 12818,
+  "x": 230,
+  "y": 236,
+  "spots": [
+   [
+    236,
+    236
+   ],
+   [
+    232,
+    230
+   ],
+   [
+    220,
+    240
+   ]
+  ]
+ },
+ "_adventure": "DERIVED amounts: 1 fragment = 50% rage / 50% 1 Soulthread, 2 = 2 Soulthreads, 3 = choose; Vault Palace Visit = 30 SP once a day",
+ "spConvertChance": 50,
+ "_spConvertChance": "DERIVED ('Every 10 SP has a chance to convert into 1 Soulthread')",
+ "randomSoulPack": [
+  [
+   3,
+   45
+  ],
+  [
+   4,
+   35
+  ],
+  [
+   8,
+   19
+  ],
+  [
+   100,
+   1
+  ]
+ ],
+ "levels": [
+  {
+   "level": 1,
+   "name": "Jester`s Maze",
+   "layout": [
+    "........",
+    "........",
+    "........",
+    ".S.Noo.E",
+    ".oo..oo.",
+    "...o.X..",
+    "...XC...",
+    "........"
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 18,
+     "story": 1
+    }
+   ],
+   "encounters": [
+    {
+     "event": 19,
+     "special": 1
+    },
+    {
+     "event": 20,
+     "special": 2
+    }
+   ],
+   "artifact": null,
+   "boss": {
+    "family": 993301,
+    "map": 1004398,
+    "x": 108,
+    "y": 73
+   },
+   "story": [],
+   "_layout": "OFFICIAL (video kEw6sUNFMe8)",
+   "battle": {
+    "enemy": 35,
+    "name": "Spider Queen",
+    "look": 951,
+    "hp": 1500,
+    "atk": 260
+   }
+  },
+  {
+   "level": 2,
+   "name": "Puppet Garden",
+   "layout": [
+    "........",
+    "....oX..",
+    "..oNo.o.",
+    ".Soo.oX.",
+    "...o....",
+    "..oo.oE.",
+    ".o.oo...",
+    "..Co...."
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 22,
+     "story": 2
+    }
+   ],
+   "encounters": [
+    {
+     "event": 23,
+     "special": 3
+    },
+    {
+     "event": 24,
+     "special": 4
+    }
+   ],
+   "artifact": null,
+   "boss": {
+    "family": 993302,
+    "map": 1004398,
+    "x": 102,
+    "y": 88
+   },
+   "story": [
+    9186,
+    9187,
+    9188
+   ],
+   "_layout": "OFFICIAL (video kEw6sUNFMe8)",
+   "battle": {
+    "enemy": 36,
+    "name": "Fox Marionette",
+    "look": 104,
+    "hp": 3500,
+    "atk": 320
+   }
+  },
+  {
+   "level": 3,
+   "name": "Menagerie Factory",
+   "layout": [
+    "........",
+    "........",
+    "...Xo...",
+    ".Soo.N.E",
+    "...oo.o.",
+    ".....oo.",
+    "....X.o.",
+    ".....Co."
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 28,
+     "story": 3
+    }
+   ],
+   "encounters": [
+    {
+     "event": 26,
+     "special": 6
+    },
+    {
+     "event": 27,
+     "special": 5
+    }
+   ],
+   "artifact": null,
+   "boss": {
+    "family": 993303,
+    "map": 1004400,
+    "x": 75,
+    "y": 88
+   },
+   "story": [],
+   "_layout": "OFFICIAL (video kEw6sUNFMe8)",
+   "battle": {
+    "enemy": 37,
+    "name": "Bone Dragon",
+    "look": 263,
+    "hp": 6000,
+    "atk": 380
+   }
+  },
+  {
+   "level": 4,
+   "name": "Midnight Stage",
+   "layout": [
+    "........",
+    "....oX..",
+    "...Xo.o.",
+    ".SoN..oE",
+    "..o..X..",
+    "...ooo..",
+    "....C...",
+    "........"
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 30,
+     "story": 4
+    }
+   ],
+   "encounters": [
+    {
+     "event": 31,
+     "special": 7
+    },
+    {
+     "event": 32,
+     "special": 8
+    },
+    {
+     "event": 33,
+     "special": 9
+    }
+   ],
+   "artifact": null,
+   "boss": {
+    "family": 993304,
+    "map": 1004399,
+    "x": 133,
+    "y": 153
+   },
+   "story": [
+    9189,
+    9190,
+    9191
+   ],
+   "_layout": "DERIVED (not in the video): same style, own shape",
+   "battle": {
+    "enemy": 38,
+    "name": "Nixie Marionette",
+    "look": 487,
+    "hp": 9000,
+    "atk": 440
+   }
+  },
+  {
+   "level": 5,
+   "name": "Noctis Bazaar",
+   "layout": [
+    "........",
+    "........",
+    "..oo.X..",
+    ".So.Xo..",
+    "..X.o.oE",
+    "..oN.oo.",
+    "...oC...",
+    "........"
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 35,
+     "story": 5
+    }
+   ],
+   "encounters": [
+    {
+     "event": 36,
+     "special": 10
+    },
+    {
+     "event": 37,
+     "special": 11
+    },
+    {
+     "event": 38,
+     "special": 12
+    }
+   ],
+   "artifact": null,
+   "boss": {
+    "family": 993305,
+    "map": 1004400,
+    "x": 93,
+    "y": 89
+   },
+   "story": [
+    9192,
+    9193,
+    9194
+   ],
+   "_layout": "DERIVED (not in the video): same style, own shape",
+   "battle": {
+    "enemy": 39,
+    "name": "Dream Fiend",
+    "look": 226,
+    "hp": 12500,
+    "atk": 500
+   }
+  },
+  {
+   "level": 6,
+   "name": "Jester`s Maze (Dark)",
+   "layout": [
+    "........",
+    "........",
+    "........",
+    ".S.NoA.E",
+    ".YX..by.",
+    "...Y.X..",
+    "...BC...",
+    "........"
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 41,
+     "story": 6
+    }
+   ],
+   "encounters": [
+    {
+     "event": 42,
+     "special": 13
+    },
+    {
+     "event": 43,
+     "special": 14
+    }
+   ],
+   "artifact": {
+    "event": 11,
+    "text": 6
+   },
+   "boss": {
+    "family": 993306,
+    "map": 1004401,
+    "x": 101,
+    "y": 56
+   },
+   "story": [],
+   "_layout": "DERIVED (not in the video): same style, own shape, doors/keepers on Dark boards only",
+   "battle": {
+    "enemy": 40,
+    "name": "Nightmare Cavalry",
+    "look": 900,
+    "hp": 16500,
+    "atk": 560
+   }
+  },
+  {
+   "level": 7,
+   "name": "Puppet Garden (Dark)",
+   "layout": [
+    "........",
+    "....oX..",
+    "..oNo.Y.",
+    ".SAo.oX.",
+    "...o....",
+    "..oY.yE.",
+    ".B.ob...",
+    "..Co...."
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 46,
+     "story": 7
+    }
+   ],
+   "encounters": [
+    {
+     "event": 47,
+     "special": 15
+    },
+    {
+     "event": 48,
+     "special": 16
+    }
+   ],
+   "artifact": {
+    "event": 12,
+    "text": 7
+   },
+   "boss": {
+    "family": 993307,
+    "map": 1004401,
+    "x": 130,
+    "y": 132
+   },
+   "story": [
+    9195,
+    9196,
+    9197
+   ],
+   "_layout": "DERIVED (not in the video): same style, own shape, doors/keepers on Dark boards only",
+   "battle": {
+    "enemy": 41,
+    "name": "Vibrant Lion Marionette",
+    "look": 490,
+    "hp": 21000,
+    "atk": 620
+   }
+  },
+  {
+   "level": 8,
+   "name": "Menagerie Factory (Dark)",
+   "layout": [
+    "........",
+    "........",
+    "...Xo...",
+    ".SAo.N.E",
+    "...oY.y.",
+    ".....ob.",
+    "....X.Y.",
+    ".....CB."
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 51,
+     "story": 8
+    }
+   ],
+   "encounters": [
+    {
+     "event": 52,
+     "special": 17
+    },
+    {
+     "event": 54,
+     "special": 18
+    }
+   ],
+   "artifact": {
+    "event": 13,
+    "text": 8
+   },
+   "boss": {
+    "family": 993308,
+    "map": 1004403,
+    "x": 106,
+    "y": 90
+   },
+   "story": [],
+   "_layout": "DERIVED (not in the video): same style, own shape, doors/keepers on Dark boards only",
+   "battle": {
+    "enemy": 42,
+    "name": "Cauldron Spirit",
+    "look": 403,
+    "hp": 26000,
+    "atk": 680
+   }
+  },
+  {
+   "level": 9,
+   "name": "Midnight Stage (Dark)",
+   "layout": [
+    "........",
+    "........",
+    "...BC...",
+    "...Y.X..",
+    ".YX..by.",
+    ".S.NoA.E",
+    "........",
+    "........"
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 58,
+     "story": 11
+    }
+   ],
+   "encounters": [
+    {
+     "event": 57,
+     "special": 20
+    },
+    {
+     "event": 59,
+     "special": 19
+    }
+   ],
+   "artifact": {
+    "event": 14,
+    "text": 9
+   },
+   "boss": {
+    "family": 993309,
+    "map": 1004402,
+    "x": 133,
+    "y": 153
+   },
+   "story": [
+    9198,
+    9199
+   ],
+   "_layout": "DERIVED (not in the video): same style, own shape, doors/keepers on Dark boards only",
+   "battle": {
+    "enemy": 43,
+    "name": "Nether Phoenix Marionette",
+    "look": 493,
+    "hp": 31500,
+    "atk": 740
+   }
+  },
+  {
+   "level": 10,
+   "name": "Noctis Bazaar (Dark)",
+   "layout": [
+    "........",
+    "..Co....",
+    ".B.ob...",
+    "..oY.yE.",
+    "...o....",
+    ".SAo.oX.",
+    "..oNo.Y.",
+    "....oX.."
+   ],
+   "chest": 10,
+   "npc": [
+    {
+     "event": 64,
+     "story": 13
+    }
+   ],
+   "encounters": [
+    {
+     "event": 65,
+     "special": 21
+    },
+    {
+     "event": 66,
+     "special": 22
+    }
+   ],
+   "artifact": {
+    "event": 15,
+    "text": 10
+   },
+   "boss": {
+    "family": 993310,
+    "map": 1004403,
+    "x": 93,
+    "y": 89
+   },
+   "story": [
+    9200,
+    9201
+   ],
+   "_layout": "DERIVED (not in the video): same style, own shape, doors/keepers on Dark boards only",
+   "battle": {
+    "enemy": 44,
+    "name": "Archon",
+    "look": 984,
+    "hp": 37500,
+    "atk": 800
+   }
+  }
+ ],
+ "_plainSoulChance": "DERIVED: the video shows a Soulthread on most plain cells",
+ "encounterReward": [[3009100, 2], [3009100, 2], [3333529, 1]],
+ "_encounterReward": "video 01:12 / 04:22: encounters gave GinsengFruit x2 (twice) and LeopardChiLiquor(B) in chat; one row picked at random (weights DERIVED)",
+ "_puppetList": "OFFICIAL (co.99 news 2025-10-22): Papet = list 1, Blaze & Gilt = list 2, Abyss & Stone = list 3",
+ "puppetList": [1, 2, 2, 3, 3],
+ "perUpgDivisor": 5,
+ "maxUpgPerClick": 200,
+ "octaveBell": 3354663,
+ "bossFirst": [
+  [
+   3354663,
+   1
+  ]
+ ],
+ "_bossFirst": "video 01:55: first boss clear = Octave Bell x1 (B)",
+ "milestoneEvery": [
+  1000,
+  3354679,
+  1
+ ],
+ "levelRewards": [],
+ "_levelRewards": "video 08:38 Level Reward (per puppet): L1 3 Bells, L8 3 Bells, L25 5 / L50 8 / L150 10 Bell Dreamkey Box (L75 hidden in the video: left out)",
+ "_store": "[2026-10-15] bell exchange moved to the Octave Bell right-click (official tFragments[3354663] DebrisText, video 08:54). Soulthread/SP packs + Violet Dreamkey boxes = official CP prices (luauirewardshow 302001xxx); Octave Bell exchange (video 08:50): Mirage Shade (B) 30, Mirage Marionette (B) 60 (= the bound garment 194155), Mirage Marionette 80 (3354683, tradable), Papet 100",
+ "bellDouble": 30,
+ "_bellDouble": "DERIVED % for 'Use a single bell for a chance to double it'",
+ "_chest": "board chest cells use event 10 'Chest' (fgui_25wsj_zgz tImgList has no picture for the area chest names 17/21/25..., so the official board shows the Chest icon)",
+ "_battle": "Boss = the official pet battle window (FuiPetDaily, DlgPetDailyBattle_BindData; enemies STR_FUI_PETDAILY_BATTLE_ENEMYNAME_35-44 / 52 Evil Marionette, Papet = PETNAME_666). Looks 104/487/490/493 = official (halloween25draw t_look: the souls come from Fox/Nixie/Vibrant Lion/Nether Phoenix Marionettes), others DERIVED. HP/attack, puppet stats and damage formula DERIVED; rating S <= 3 rounds, A <= 6, B <= 10 (official tip: S within 3 rounds)",
+ "puppetBattle": {
+  "scale": 300,
+  "enemyScale": 300,
+  "_scale": "PetAttr size (client scale = size/150). 300 = official (owner screenshot: Papet fills the left half); enemyScale DERIVED",
+  "look": 246,
+  "hp": 3000,
+  "hpPerPapetLv": 200,
+  "atk": 220,
+  "atkPerSoulLv": 20,
+  "defPerSoulLv": 6,
+  "rounds": 10
+ },
+ "pointRows": [
+  [
+   5000,
+   [
+    279001000,
+    279001001
+   ]
+  ],
+  [
+   10000,
+   [
+    279001002,
+    279001003
+   ]
+  ],
+  [
+   20000,
+   [
+    279001004,
+    279001005
+   ]
+  ],
+  [
+   40000,
+   [
+    279001006,
+    279001007,
+    279001008
+   ]
+  ],
+  [
+   60000,
+   [
+    279001009,
+    279001010
+   ]
+  ],
+  [
+   80000,
+   [
+    279001011,
+    279001012
+   ]
+  ],
+  [
+   100000,
+   [
+    279001013,
+    279001014
+   ]
+  ]
+ ],
+ "_pointRows": "Points tab rows 2-8 (Cmp_Point 10768001, luauirewardshow 279001000-014 official); thresholds 5000-60000 from the video, 80000/100000 DERIVED (page 2 not shown)",
+ "levelRows": [
+  [
+   1,
+   1,
+   288001000
+  ],
+  [
+   1,
+   8,
+   288001001
+  ],
+  [
+   1,
+   25,
+   288001002
+  ],
+  [
+   1,
+   50,
+   288001003
+  ],
+  [
+   1,
+   75,
+   288001004
+  ],
+  [
+   1,
+   150,
+   288001005
+  ],
+  [
+   2,
+   1,
+   289001000
+  ],
+  [
+   2,
+   8,
+   289001001
+  ],
+  [
+   2,
+   25,
+   289001002
+  ],
+  [
+   2,
+   50,
+   289001003
+  ],
+  [
+   2,
+   75,
+   289001004
+  ],
+  [
+   2,
+   150,
+   289001005
+  ],
+  [
+   3,
+   1,
+   289001000
+  ],
+  [
+   3,
+   8,
+   289001001
+  ],
+  [
+   3,
+   25,
+   289001002
+  ],
+  [
+   3,
+   50,
+   289001003
+  ],
+  [
+   3,
+   75,
+   289001004
+  ],
+  [
+   3,
+   150,
+   289001005
+  ],
+  [
+   4,
+   1,
+   290001000
+  ],
+  [
+   4,
+   8,
+   290001001
+  ],
+  [
+   4,
+   25,
+   290001002
+  ],
+  [
+   4,
+   50,
+   290001003
+  ],
+  [
+   4,
+   75,
+   290001004
+  ],
+  [
+   4,
+   150,
+   290001005
+  ],
+  [
+   5,
+   1,
+   290001000
+  ],
+  [
+   5,
+   8,
+   290001001
+  ],
+  [
+   5,
+   25,
+   290001002
+  ],
+  [
+   5,
+   50,
+   290001003
+  ],
+  [
+   5,
+   75,
+   290001004
+  ],
+  [
+   5,
+   150,
+   290001005
+  ]
+ ],
+ "levelRepeat": [
+  150,
+  10,
+  291001000
+ ],
+ "_levelRows": "Level tab (Cmp_Point 10768003: Papet / Blaze / Gilt / Abyss / Stone L%d, then 'After level %d, every %d levels'); rewards 288001-291001 official, levels 1/8/25/50/75/150 (video), which soul uses 289 or 290 DERIVED",
+ "exploreRows": [
+  [
+   "clear",
+   1,
+   294001000
+  ],
+  [
+   "clear",
+   3,
+   295001000
+  ],
+  [
+   "clear",
+   5,
+   296001000
+  ],
+  [
+   "clear",
+   10,
+   297001000
+  ],
+  [
+   "full",
+   1,
+   294001001
+  ],
+  [
+   "full",
+   3,
+   295001001
+  ],
+  [
+   "full",
+   5,
+   296001001
+  ],
+  [
+   "full",
+   10,
+   297001001
+  ],
+  [
+   "srank",
+   1,
+   294001002
+  ],
+  [
+   "srank",
+   3,
+   295001002
+  ],
+  [
+   "srank",
+   5,
+   296001002
+  ],
+  [
+   "srank",
+   10,
+   297001002
+  ],
+  [
+   "artifact",
+   1,
+   294001003
+  ],
+  [
+   "artifact",
+   3,
+   295001003
+  ],
+  [
+   "artifact",
+   5,
+   296001003
+  ]
+ ],
+ "_exploreRows": "Exploration tab (Cmp_Point 10768004): areas clear / 100% / S-rating / soul artifacts; rewards 294001-297001 official (video 05:45: 3 + 5 Areas Clear = 3KK + 6KK medals), counts 1/3/5/10 DERIVED",
+ "rankTiers": [
+  [
+   1,
+   1,
+   287001000
+  ],
+  [
+   2,
+   3,
+   287002000
+  ],
+  [
+   4,
+   6,
+   287003000
+  ],
+  [
+   7,
+   10,
+   287004000
+  ]
+ ],
+ "rankMin": 20000,
+ "rankClaimFrom": "11-17",
+ "rankShow": {
+  "1": [
+   [
+    278001000,
+    278001001,
+    278001002
+   ],
+   [
+    278002000,
+    278002001,
+    278002002
+   ],
+   [
+    278003000,
+    278003001,
+    278003002
+   ],
+   [
+    278004000,
+    278004001,
+    278004002
+   ]
+  ],
+  "2": [
+   [
+    286001000,
+    286001001,
+    286001002
+   ],
+   [
+    286002000,
+    286002001,
+    286002002
+   ],
+   [
+    286003000,
+    286003001,
+    286003002
+   ],
+   [
+    286004000,
+    286004001,
+    286004002
+   ]
+  ],
+  "3": [
+   [
+    287001000,
+    287001001,
+    287001002
+   ],
+   [
+    287002000,
+    287002001,
+    287002002
+   ],
+   [
+    287003000,
+    287003001,
+    287003002
+   ],
+   [
+    287004000,
+    287004001,
+    287004002
+   ]
+  ]
+ },
+ "puppeteerBox": {
+  "3354658": [
+   [
+    3328247,
+    1000
+   ],
+   [
+    4060001,
+    500
+   ],
+   [
+    3322813,
+    5
+   ]
+  ],
+  "3354659": [
+   [
+    3328247,
+    800
+   ],
+   [
+    4060001,
+    300
+   ],
+   [
+    3322813,
+    3
+   ]
+  ],
+  "3354660": [
+   [
+    3328247,
+    500
+   ],
+   [
+    4060001,
+    200
+   ],
+   [
+    3322813,
+    2
+   ]
+  ],
+  "3354661": [
+   [
+    3328247,
+    300
+   ],
+   [
+    4060001,
+    100
+   ],
+   [
+    3322813,
+    1
+   ]
+  ]
+ },
+ "_rank": "Local ranking (entry 20000 pts, official tip): No.1 / 2-3 / 4-6 / 7-10 = Local Puppeteer Box 3354658-61 (contents from the box tips; 100KK medals 7-day). Claimable from 11-17 (event end) in the Ranking tab. Global/Regional rows are display only (no cross-server)",
+ "rewardSyb": {
+  "279001000": [
+   3354663,
+   1,
+   0,
+   1
+  ],
+  "279001001": [
+   3322762,
+   1,
+   10080,
+   1
+  ],
+  "279001002": [
+   3354663,
+   2,
+   0,
+   1
+  ],
+  "279001003": [
+   3009002,
+   1,
+   2880,
+   1
+  ],
+  "279001004": [
+   3354663,
+   3,
+   0,
+   1
+  ],
+  "279001005": [
+   730005,
+   1,
+   7200,
+   1
+  ],
+  "279001006": [
+   3354663,
+   5,
+   0,
+   1
+  ],
+  "279001007": [
+   3600811,
+   1,
+   0,
+   1
+  ],
+  "279001008": [
+   4060001,
+   200,
+   0,
+   1
+  ],
+  "279001009": [
+   3354663,
+   8,
+   0,
+   1
+  ],
+  "279001010": [
+   3349442,
+   3,
+   0,
+   1
+  ],
+  "279001011": [
+   3354663,
+   10,
+   0,
+   1
+  ],
+  "279001012": [
+   3349442,
+   5,
+   0,
+   1
+  ],
+  "279001013": [
+   3354663,
+   15,
+   0,
+   1
+  ],
+  "279001014": [
+   3349442,
+   10,
+   0,
+   1
+  ],
+  "298001000": [
+   3354679,
+   1,
+   0,
+   1
+  ],
+  "288001000": [
+   3354663,
+   3,
+   0,
+   1
+  ],
+  "288001001": [
+   3354663,
+   3,
+   0,
+   1
+  ],
+  "288001002": [
+   3354680,
+   5,
+   0,
+   1
+  ],
+  "288001003": [
+   3354680,
+   8,
+   0,
+   1
+  ],
+  "288001004": [
+   3354680,
+   10,
+   0,
+   1
+  ],
+  "288001005": [
+   3354680,
+   10,
+   0,
+   1
+  ],
+  "289001000": [
+   3354663,
+   2,
+   0,
+   1
+  ],
+  "289001001": [
+   3354663,
+   2,
+   0,
+   1
+  ],
+  "289001002": [
+   3354680,
+   2,
+   0,
+   1
+  ],
+  "289001003": [
+   3354680,
+   3,
+   0,
+   1
+  ],
+  "289001004": [
+   3354680,
+   5,
+   0,
+   1
+  ],
+  "289001005": [
+   3354680,
+   5,
+   0,
+   1
+  ],
+  "290001000": [
+   3354680,
+   1,
+   0,
+   1
+  ],
+  "290001001": [
+   3354663,
+   2,
+   0,
+   1
+  ],
+  "290001002": [
+   3354680,
+   2,
+   0,
+   1
+  ],
+  "290001003": [
+   3354680,
+   3,
+   0,
+   1
+  ],
+  "290001004": [
+   3354680,
+   5,
+   0,
+   1
+  ],
+  "290001005": [
+   3354680,
+   5,
+   0,
+   1
+  ],
+  "291001000": [
+   3354680,
+   1,
+   0,
+   1
+  ],
+  "294001000": [
+   3346822,
+   1,
+   0,
+   1
+  ],
+  "294001001": [
+   3346829,
+   1,
+   0,
+   1
+  ],
+  "294001002": [
+   3328247,
+   88,
+   0,
+   1
+  ],
+  "294001003": [
+   3600812,
+   1,
+   0,
+   1
+  ],
+  "295001000": [
+   3346823,
+   1,
+   0,
+   1
+  ],
+  "295001001": [
+   3009101,
+   2,
+   0,
+   1
+  ],
+  "295001002": [
+   3346830,
+   1,
+   0,
+   1
+  ],
+  "295001003": [
+   3328247,
+   300,
+   0,
+   1
+  ],
+  "296001000": [
+   3346824,
+   1,
+   0,
+   1
+  ],
+  "296001001": [
+   3346831,
+   1,
+   0,
+   1
+  ],
+  "296001002": [
+   3009104,
+   1,
+   0,
+   1
+  ],
+  "296001003": [
+   3328247,
+   1888,
+   0,
+   1
+  ],
+  "297001000": [
+   3346822,
+   1,
+   0,
+   1
+  ],
+  "297001001": [
+   3009101,
+   2,
+   0,
+   1
+  ],
+  "297001002": [
+   3328247,
+   100,
+   0,
+   1
+  ],
+  "287001000": [
+   3354658,
+   1,
+   0,
+   1
+  ],
+  "287002000": [
+   3354659,
+   1,
+   0,
+   1
+  ],
+  "287003000": [
+   3354660,
+   1,
+   0,
+   1
+  ],
+  "287004000": [
+   3354661,
+   1,
+   0,
+   1
+  ]
+ }
+}

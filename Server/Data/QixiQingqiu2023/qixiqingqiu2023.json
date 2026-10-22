@@ -1,0 +1,74 @@
+{
+  "_readme": "[QixiQingqiu2023 2026-10-15] Jade Hill (Global Qixi 2023) config, read by Base\\QixiQingqiu2023\\QixiQingqiu2023Ui.cs (re-read when the file changes). OFFICIAL = client data (Questinfo 5561-5567, Server_Key tQingQiuMainNpc / tQiXiPart2 / tQiXiPlay5 / tMassifDraw, luaui dlgchinesesaintvalentinesday, itemtype). DERIVED = chosen here (the number is server-side only).",
+  "festival": "QixiQingqiu2023",
+  "minLevel": 80,
+  "time": "Aug. 22 - Sept. 4",
+
+  "memoryQuests": [ 5561, 5562, 5563, 5564, 5565, 5566, 5567 ],
+  "playableMemories": [ 5561, 5562 ],
+  "memoryCost": [ 1, 1, 1, 1, 1, 1, 1 ],
+  "_memoryCost": "DERIVED Clue Bells per memory (the window shows 'X%s Open'; the official count is server-side only).",
+  "memoryAwards": [
+    "3380014 0 1 0,3600624 0 1 0,3344212 0 1 0",
+    "3380014 0 1 0,3600624 0 1 0,3344212 0 1 0",
+    "3380014 0 1 0,3600624 0 1 0,3344212 0 1 0",
+    "3380014 0 1 0,3600624 0 1 0,3344212 0 1 0",
+    "3380014 0 1 0,3600624 0 1 0,3344212 0 1 0",
+    "3380014 0 1 0,3600624 0 1 0,3344212 0 1 0",
+    "3342974 0 1 0,3600624 0 1 0,3344212 0 1 0"
+  ],
+  "_memoryAwards": "OFFICIAL Questinfo Prize of 5561-5567 (shown under each memory; paid by the quest engine at the finish).",
+  "jadeHill": { "map": 12184, "x": 150, "y": 165 },
+  "_jadeHill": "Peachland Life / memory 'enter' teleport: next to Dale Lord (Questinfo 151,161). OFFICIAL message tQingQiuMainNpc[Msg][Map].",
+
+  "peachland": {
+    "reward": [ "3380015 0 1", "3344212 0 5" ],
+    "_reward": "OFFICIAL tQiXiPart2_DelText[31811][Text815-817]: each daily quest = 1 Clue Bell + 5 Marital Sticks, 3 quests a day.",
+    "enemies": [
+      { "minion": "VanwardWolf", "boss": "AlphaWolf", "minionName": "Vanward Wolf", "bossName": "Alpha Wolf" },
+      { "minion": "CoyoteWizard", "boss": "AlphaCoyote", "minionName": "Coyote Wizard", "bossName": "Alpha Coyote" },
+      { "minion": "EagleAssassin", "boss": "HeadEagle", "minionName": "Eagle Assassin", "bossName": "Head Eagle" },
+      { "minion": "FoxHunter", "boss": "OneEyedChief", "minionName": "Fox Hunter", "bossName": "One-eyed Chief" }
+    ],
+    "minions": 10,
+    "_minions": "DERIVED: underlings to defeat before the boss counts (official text 'Defeat %s to bring out %s'); the day's pair rotates by day of year."
+  },
+
+  "foxTie": {
+    "stick": 3344212, "stickCost": 1, "dice": 6, "cells": 38,
+    "_dice": "OFFICIAL: 38 cells (DlgQingqiuActivityMatchUi), you start on cell 1 and the destined lover on cell 38, 1 Marital Stick per throw (the client test data shows cost 1). DERIVED: dice 1-6.",
+    "tieReward": [ "3600624 0 3" ],
+    "_tieReward": "OFFICIAL tQiXiPlay5_DelText[Mail][Content][1]: forming a tie gives 3 Marital Fruits.",
+    "cellChance": 30,
+    "cellRewards": [
+      { "item": "3342974 0 1", "weight": 10 },
+      { "item": "4060001 0 10 3", "weight": 30 },
+      { "item": "3340959 0 1", "weight": 25 },
+      { "item": "3009100 0 1", "weight": 25 },
+      { "item": "3344212 0 1", "weight": 10 }
+    ],
+    "_cellRewards": "DERIVED: the 38 cell prizes are server-side only. Items are ones the event shows (Fox Practice preview tEight_ShowReward, the Abiding Yearning Scrap the board highlights, Marital Stick); cellChance = % of cells that carry a prize; amounts kept small.",
+    "partners": [ "Destined Lover" ]
+  },
+
+  "foxPractice": {
+    "fruit": 3600624,
+    "progressPerFruit": 20,
+    "_progress": "DERIVED: per-mille of the Inner Demon bar per Marital Fruit (50 fruits load the doom). OFFICIAL: a failed crossing takes back 5% (luaUiRes[1403].rules point 5).",
+    "pointsPerFruit": 50,
+    "_points": "DERIVED Jade Hill Points per fruit (score bar 0-77777 in the window).",
+    "crossChance": 50,
+    "_crossChance": "DERIVED success % of overcoming the doom (official: 'might fail'; the Inner Demon fight itself is an instance the client has no map for).",
+    "eightPool": [
+      { "item": "4060001 0 10 3", "weight": 30 }, { "item": "3340959 0 3", "weight": 20 }, { "item": "3009100 0 3", "weight": 20 },
+      { "item": "3342974 0 1", "weight": 6 }, { "item": "3342975 0 1", "weight": 4 }, { "item": "3009102 0 1", "weight": 10 },
+      { "item": "3340960 0 1", "weight": 6 }, { "item": "3344574 0 1", "weight": 4 }
+    ],
+    "ninePool": [
+      { "item": "4060001 0 10 3", "weight": 28 }, { "item": "3340959 0 3", "weight": 18 }, { "item": "3009100 0 3", "weight": 18 },
+      { "item": "3342974 0 1", "weight": 12 }, { "item": "3342975 0 1", "weight": 8 }, { "item": "3009102 0 1", "weight": 8 },
+      { "item": "3340960 0 1", "weight": 4 }, { "item": "3344574 0 1", "weight": 2 }, { "item": "3335923 0 1", "weight": 2 }
+    ],
+    "_pools": "ITEMS + AMOUNTS OFFICIAL dlgfoxspiritdrawui tEight_ShowReward / tNine_ShowReward. WEIGHTS DERIVED; the nine-tail pool doubles the scrap weights (official eighttip 'the chance of getting garment scraps will double')."
+  }
+}

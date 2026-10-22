@@ -1,0 +1,12 @@
+# Mobile main screen (HUD) - server side switches. Read again by the server when this file changes (no restart).
+# Written by Mobile UiExplorer ("Screen layout" page) or by hand.
+#
+# hide_functions = <ids>     function ids of the client's ini\luacfg\newfuncopen (16 Arena, 17 WebHub, 11 Trials,
+#                            5 Guild, 6 Forge, 1 InPower, 3 JiangHu, 10 Spheres, 14 Ethercore, 9 Lineage, 4 Runes ...).
+#                            Their flag is cleared in MsgAction 471 at the next login / map change: the button stays
+#                            locked or hidden for players under the function's own level. Empty = everything open.
+# button.<key> = lua <Func|arg>        answer a new HUD icon (kind "server") with a Lua call
+# button.<key> = msg <text>            ... a system message
+# button.<key> = teleport <map> <x> <y>
+# button.<key> = cmd <@command>        ... a chat command (staff accounts only)
+hide_functions =

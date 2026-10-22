@@ -1,0 +1,8 @@
+{
+  "_note": "[Summer2025 2026-10-14] DERIVED values (official ones are server-side only). sowCost/quickCost = seeds per planting / Quick Planting (client test data {1,5}); woodlandWatchMax = daily Woodland Watch count (client test data 3). minLevel 80 is official.",
+  "festival": "Summer2025",
+  "minLevel": 80,
+  "sowCost": 1,
+  "quickCost": 5,
+  "woodlandWatchMax": 3
+}

@@ -1,0 +1,7 @@
+{
+  "_note": "[WhiteSnakeLegend 2026-10-14] Bless All window (Base/WhiteSnakeLegend/WhiteSnakeLegendUi.cs). Re-read on change. Official: minLevel 80 (Questinfo 8350 Lv_min). Derived: entry (a walkable cell next to the White Snake 539,398 on the official map 1003905), teleportFromMaps (cities from which the window may send you).",
+  "festival": "WhiteSnakeLegend",
+  "minLevel": 80,
+  "entry": { "map": 1003905, "x": 542, "y": 402 },
+  "teleportFromMaps": [ 1002, 1000, 1011, 1015, 1020, 1003905 ]
+}

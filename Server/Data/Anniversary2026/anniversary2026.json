@@ -1,0 +1,6 @@
+{
+  "_note": "[Anniversary2026 2026-10-14] Optional config for Base/Anniversary2026/Anniversary2026Ui.cs. minLevel is official (Requirement: Level 80). pointsMax is DERIVED from the client data file sample (fui26znqcenterdata Points {0, 99999999}).",
+  "festival": "Anniversary2026",
+  "minLevel": 80,
+  "pointsMax": 99999999
+}

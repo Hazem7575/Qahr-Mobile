@@ -1,0 +1,20 @@
+{
+  "key": "VillageRequests",
+  "name_ar": "الكريسماس العالمي (طلبات أهل Doomwoods)",
+  "name_en": "Global Christmas (Doomwoods Requests)",
+  "enabled": true,
+  "schedule": { "type": "yearly", "start": "12-17", "end": "01-06" },
+  "announce_ar": "بدأ الكريسماس العالمي! دوس على زرار Global Christmas فوق وادخل البوابة لـ Doomwoods (لفل 80+) وساعد أهل القرية في طلباتهم كل يوم.",
+  "announce_en": "Global Christmas has started! Click Global Christmas at the top and pass through the portal to Doomwoods (Level 80+) to help the citizens with their wishes every day.",
+  "end_ar": "انتهى الكريسماس العالمي. كل سنة وانتم طيبين!",
+  "end_en": "Global Christmas has ended. Merry Christmas and see you next year!",
+  "maps": [ 1002, 1003831 ],
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='10510',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='10510',['Show']=false,['Red']=0}}",
+  "_icon": "[VillageRequests 2026-10-14] official top-bar Fgui button 10510 'Global Christmas' (fguibtnconfig, img lua_2024qqsd_rukou); click 10510 Chrismas2024Main_OpenMain -> ChristmasMain window (Doom Portal / Converter / Christmas Tree). Clicks: Base/VillageRequests/VillageRequestsUi.cs",
+  "notes": "Rebuilt 2026-10-14 (VillageRequests agent). Official Christmas 2024 'Global Christmas' ([简体征服][活动脚本]全球圣诞活动 12.17-1.6), requests = 'Miracle Christmas: help the citizens out of trouble' (tChristmas2024Wish, 14 citizens [WoodsCitizen]). Doomwoods = official instance 1003831 -> doc 12696 2024xmas_new (FestivalMaps maps.txt), a private copy per player (quests.json instance Doomwoods) entered through the window's Doom Portal (ChristmasDraw2024_EnterFuben -> EnterFubenSuc, only from Twin City, Lv 80). Playable dailies: 8247 Missing Necklace, 8254 Tasty Fruit, 8255 Fresh Vegetable (repeat daily: 'Every day, citizens will come here to make wishes', tChristmas2024Wish[33691][Text1110]). Off (engine:false): 8248/8250/8252/8256/8257/8258/8259/8260 (SnowFowl / WickedSpirit / CooChicken / FuriousGhost: client level/life only, no lookface; Rebee / FearedGhost: no data at all), 8249 Photo / 8251 Rebee`sRelic / 8253 Lost&Found (no mesh in any client). Prize = official Wishflake Blessing Pack 3351462 x1 (Questinfo; the pack has no server open-script yet). See README_AR.md.",
+  "_owner": "VillageRequests agent (2026-10-14), was agent5",
+  "_quests": [ 8247, 8254, 8255 ],
+  "_questsOff": [ 8248, 8249, 8250, 8251, 8252, 8253, 8256, 8257, 8258, 8259, 8260 ],
+  "_officialMaps": { "1003831": 12696 }
+}

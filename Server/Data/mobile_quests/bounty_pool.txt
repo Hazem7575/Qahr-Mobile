@@ -1,0 +1,608 @@
+﻿# 539 offers
+# QahrMobile: Chinju bounty pool (MobileQuestBounty.cs), 2026-10-21 15:20:01
+skip	5243	Eliminate Minions	not workable: item 3338735 has no drop source
+skip	5244	Eliminate Minions	not workable: item 3338735 has no drop source
+skip	5245	Eliminate Minions	not workable: item 3338735 has no drop source
+skip	5258	Remove Hidden Danger	not workable: monster 'seadragon' is not in Monsters\
+skip	5259	Remove Hidden Danger	not workable: monster 'seadragon' is not in Monsters\
+skip	5260	Remove Hidden Danger	not workable: monster 'seadragon' is not in Monsters\
+skip	5261	Desafio Divino	not workable: scripted step: Derrota
+skip	5290	Material Collecting	not workable: item 729095 has no drop source
+skip	5291	Material Collecting	not workable: item 729095 has no drop source
+skip	5292	Material Collecting	not workable: item 729095 has no drop source
+skip	5293	Material Collecting	not workable: item 729095 has no drop source
+skip	5346	Monster Defeating	not workable: monster 'hawkking' is not in Monsters\
+skip	5347	Monster Defeating	not workable: monster 'hawkking' is not in Monsters\
+skip	5348	Monster Defeating	not workable: monster 'hawkking' is not in Monsters\
+skip	5349	Monster Defeating	not workable: monster 'hawkking' is not in Monsters\
+skip	5440	Divine Challenge	not workable: monster 'divinekylion' is not in Monsters\
+skip	5441	Divine Challenge	not workable: monster 'divinekylion' is not in Monsters\
+skip	7888	Kill monsters in the sphere	not workable: monster 'gianticeape' is not in Monsters\
+skip	7889	Kill monsters in the sphere	not workable: monster 'frostwolf' is not in Monsters\
+skip	7890	Kill monsters in the sphere	not workable: monster 'iceserpent' is not in Monsters\
+skip	7891	Kill monsters in the sphere	not workable: monster 'icesentry' is not in Monsters\
+skip	7892	Kill monsters in the sphere	not workable: monster 'polarblade' is not in Monsters\
+skip	7893	Kill monsters in the sphere	not workable: monster 'polarsuanni' is not in Monsters\
+skip	7894	Kill monsters in the sphere	not workable: monster 'crescentwolf' is not in Monsters\
+skip	7895	Kill monsters in the sphere	not workable: monster 'whiteorcish' is not in Monsters\
+skip	7896	Kill monsters in the sphere	not workable: monster 'nethertroll' is not in Monsters\
+skip	7897	Kill monsters in the sphere	not workable: monster 'gorybattler' is not in Monsters\
+skip	7898	Kill monsters in the sphere	not workable: monster 'forestwolf' is not in Monsters\
+skip	7899	Kill monsters in the sphere	not workable: monster 'wutherdemon' is not in Monsters\
+skip	7900	Kill monsters in the sphere	not workable: monster 'abyssspecter' is not in Monsters\
+skip	7901	Kill monsters in the sphere	not workable: monster 'abyssghost' is not in Monsters\
+skip	7902	Kill monsters in the sphere	not workable: monster 'evilknight' is not in Monsters\
+skip	7903	Kill monsters in the sphere	not workable: monster 'evilexponent' is not in Monsters\
+skip	7904	Kill monsters in the sphere	not workable: monster 'enchantress' is not in Monsters\
+skip	7905	Kill monsters in the sphere	not workable: monster 'hitouban' is not in Monsters\
+skip	7906	Kill monsters in the sphere	not workable: monster 'mutantorc' is not in Monsters\
+skip	7907	Kill monsters in the sphere	not workable: monster 'redscorpion' is not in Monsters\
+skip	7908	Kill monsters in the sphere	not workable: monster 'oldwyvern' is not in Monsters\
+skip	7910	Kill monsters in the sphere	not workable: monster 'oldwingman' is not in Monsters\
+skip	7911	Kill monsters in the sphere	not workable: monster 'oldunicorn' is not in Monsters\
+skip	7912	Kill monsters in the sphere	not workable: monster 'mutantflame' is not in Monsters\
+skip	7913	Kill monsters in the sphere	not workable: monster 'oldvermin' is not in Monsters\
+skip	7914	Kill monsters in the sphere	not workable: monster 'oldknight' is not in Monsters\
+skip	7915	Kill monsters in the sphere	not workable: monster 'sandscorpion' is not in Monsters\
+skip	7916	Kill monsters in the sphere	not workable: monster 'desertbirdman' is not in Monsters\
+skip	8436	Tomb Cleaning	not workable: monster 'ghostscout' is not in Monsters\
+skip	8437	Ninjutsu Application	not workable: monster 'ghostscout' is not in Monsters\
+skip	8438	Grave Riot	not workable: monster 'ghostscout' is not in Monsters\
+skip	8439	Tainted Elf	not workable: monster 'taintedelf' is not in Monsters\
+skip	8441	Escaped Evil Dragon	not workable: monster 'evildragon' is not in Monsters\
+skip	8587	Material Collecting	not workable: item 729095 has no drop source
+skip	8588	Material Collecting	not workable: item 729095 has no drop source
+skip	8589	Material Collecting	not workable: item 729095 has no drop source
+skip	8590	Material Collecting	not workable: item 729095 has no drop source
+skip	8643	Monster Defeating	not workable: monster 'hawkking' is not in Monsters\
+skip	8644	Monster Defeating	not workable: monster 'hawkking' is not in Monsters\
+skip	8645	Monster Defeating	not workable: monster 'hawkking' is not in Monsters\
+skip	8646	Monster Defeating	not workable: monster 'hawkking' is not in Monsters\
+skip	9924	Collect Worn Raider Blade I	not workable: item 3352720 has no drop source
+skip	9925	Collect Worn Raider Blade II	not workable: item 3352720 has no drop source
+skip	9926	Collect Worn Raider Blade III	not workable: item 3352720 has no drop source
+skip	9929	Clear Wolf Vale	not workable: monster 'wolfraider' is not in Monsters\
+skip	9930	Glaive Forging	not workable: monster 'remnantraider' is not in Monsters\
+skip	9931	Wolf Menace	not workable: monster 'dunewolf' is not in Monsters\
+skip	9932	Beguiled Caravan	not workable: monster 'beguiledleader' is not in Monsters\
+skip	9933	Usun Spy	not workable: monster 'usunspy' is not in Monsters\
+skip	9934	Loulan Remnants	not workable: monster 'galehowl' is not in Monsters\
+pool	5133	lv 0	star 1	type 1	Message Delivery|goal:JerkWang|0	x1
+pool	5433	lv 0	star 1	type 1	Message Delivery|goal:JerkWang|0	x1
+pool	5434	lv 0	star 1	type 1	Message Delivery|goal:JerkWang|0	x1
+pool	8442	lv 0	star 1	type 1	Message Delivery|goal:JerkWang|0	x1
+pool	8443	lv 0	star 1	type 1	Message Delivery|goal:JerkWang|0	x1
+pool	8444	lv 0	star 1	type 1	Message Delivery|goal:JerkWang|0	x1
+pool	5134	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+WineKiddo|0	x2
+pool	5435	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+WineKiddo|0	x2
+pool	5436	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+WineKiddo|0	x2
+pool	8445	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+WineKiddo|0	x2
+pool	8446	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+WineKiddo|0	x2
+pool	8447	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+WineKiddo|0	x2
+pool	5135	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+OfficerBao+LittleBen|0	x3
+pool	5437	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+OfficerBao+LittleBen|0	x3
+pool	8448	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+OfficerBao+LittleBen|0	x3
+pool	8449	lv 0	star 1	type 1	Message Delivery|goal:JerkWang+OfficerBao+LittleBen|0	x3
+pool	5136	lv 0	star 1	type 1	Message Delivery|goal:WineKiddo+CaptainChang+LittleBen|0	x3
+pool	8450	lv 0	star 1	type 1	Message Delivery|goal:WineKiddo+CaptainChang+LittleBen|0	x3
+pool	5137	lv 0	star 1	type 1	Message Delivery|goal:WineKiddo+OfficerBao+CaptainChang+LittleBen|0	x4
+pool	5438	lv 0	star 1	type 1	Message Delivery|goal:WineKiddo+OfficerBao+CaptainChang+LittleBen|0	x4
+pool	5439	lv 0	star 1	type 1	Message Delivery|goal:WineKiddo+OfficerBao+CaptainChang+LittleBen|0	x4
+pool	8451	lv 0	star 1	type 1	Message Delivery|goal:WineKiddo+OfficerBao+CaptainChang+LittleBen|0	x4
+pool	8452	lv 0	star 1	type 1	Message Delivery|goal:WineKiddo+OfficerBao+CaptainChang+LittleBen|0	x4
+pool	8453	lv 0	star 1	type 1	Message Delivery|goal:WineKiddo+OfficerBao+CaptainChang+LittleBen|0	x4
+pool	5138	lv 0	star 1	type 4	Rescue the Wounded|goal:TheWounded|0	x2
+pool	5139	lv 0	star 3	type 4	Rescue the Wounded|goal:TheWounded|0	x3
+pool	5140	lv 0	star 5	type 4	Rescue the Wounded|goal:TheWounded|0	x5
+pool	8454	lv 0	star 1	type 4	Rescue the Wounded|goal:TheWounded|0	x2
+pool	8455	lv 0	star 3	type 4	Rescue the Wounded|goal:TheWounded|0	x3
+pool	8456	lv 0	star 5	type 4	Rescue the Wounded|goal:TheWounded|0	x5
+pool	5141	lv 0	star 1	type 4	Free Hostages|goal:Hostage|0	x2
+pool	5142	lv 0	star 3	type 4	Free Hostages|goal:Hostage|0	x3
+pool	5143	lv 0	star 5	type 4	Free Hostages|goal:Hostage|0	x5
+pool	8457	lv 0	star 1	type 4	Free Hostages|goal:Hostage|0	x2
+pool	8458	lv 0	star 3	type 4	Free Hostages|goal:Hostage|0	x3
+pool	8459	lv 0	star 5	type 4	Free Hostages|goal:Hostage|0	x5
+pool	5144	lv 0	star 1	type 4	Supply Delivery|goal:DesertRefugee|0	x2
+pool	5145	lv 0	star 3	type 4	Supply Delivery|goal:DesertRefugee|0	x3
+pool	5146	lv 0	star 5	type 4	Supply Delivery|goal:DesertRefugee|0	x5
+pool	8460	lv 0	star 1	type 4	Supply Delivery|goal:DesertRefugee|0	x2
+pool	8461	lv 0	star 3	type 4	Supply Delivery|goal:DesertRefugee|0	x3
+pool	8462	lv 0	star 5	type 4	Supply Delivery|goal:DesertRefugee|0	x5
+pool	5147	lv 0	star 1	type 3	Flower Picking|goal:Flower|0	x1
+pool	5148	lv 0	star 2	type 3	Flower Picking|goal:Flower|0	x3
+pool	5149	lv 0	star 3	type 3	Flower Picking|goal:Flower|0	x5
+pool	5150	lv 0	star 5	type 3	Flower Picking|goal:Flower|0	x7
+pool	5151	lv 0	star 1	type 3	Flower Picking|goal:Flower|0	x1
+pool	5152	lv 0	star 2	type 3	Flower Picking|goal:Flower|0	x3
+pool	5153	lv 0	star 3	type 3	Flower Picking|goal:Flower|0	x5
+pool	5154	lv 0	star 5	type 3	Flower Picking|goal:Flower|0	x7
+pool	5155	lv 0	star 1	type 3	Flower Picking|goal:Flower|0	x1
+pool	5156	lv 0	star 2	type 3	Flower Picking|goal:Flower|0	x3
+pool	5157	lv 0	star 3	type 3	Flower Picking|goal:Flower|0	x5
+pool	5158	lv 0	star 5	type 3	Flower Picking|goal:Flower|0	x7
+pool	5159	lv 0	star 1	type 3	Flower Picking|goal:Flower|0	x1
+pool	5160	lv 0	star 2	type 3	Flower Picking|goal:Flower|0	x3
+pool	5161	lv 0	star 3	type 3	Flower Picking|goal:Flower|0	x5
+pool	5162	lv 0	star 5	type 3	Flower Picking|goal:Flower|0	x7
+pool	8463	lv 0	star 1	type 3	Flower Picking|goal:Flower|0	x1
+pool	8464	lv 0	star 2	type 3	Flower Picking|goal:Flower|0	x3
+pool	8465	lv 0	star 3	type 3	Flower Picking|goal:Flower|0	x5
+pool	8466	lv 0	star 5	type 3	Flower Picking|goal:Flower|0	x7
+pool	8467	lv 0	star 1	type 3	Flower Picking|goal:Flower|0	x1
+pool	8468	lv 0	star 2	type 3	Flower Picking|goal:Flower|0	x3
+pool	8469	lv 0	star 3	type 3	Flower Picking|goal:Flower|0	x5
+pool	8470	lv 0	star 5	type 3	Flower Picking|goal:Flower|0	x7
+pool	8471	lv 0	star 1	type 3	Flower Picking|goal:Flower|0	x1
+pool	8472	lv 0	star 2	type 3	Flower Picking|goal:Flower|0	x3
+pool	8473	lv 0	star 3	type 3	Flower Picking|goal:Flower|0	x5
+pool	8474	lv 0	star 5	type 3	Flower Picking|goal:Flower|0	x7
+pool	8475	lv 0	star 1	type 3	Flower Picking|goal:Flower|0	x1
+pool	8476	lv 0	star 2	type 3	Flower Picking|goal:Flower|0	x3
+pool	8477	lv 0	star 3	type 3	Flower Picking|goal:Flower|0	x5
+pool	8478	lv 0	star 5	type 3	Flower Picking|goal:Flower|0	x7
+pool	5163	lv 0	star 1	type 3	Herb Picking|goal:Herb|0	x1
+pool	5164	lv 0	star 2	type 3	Herb Picking|goal:Herb|0	x3
+pool	5165	lv 0	star 3	type 3	Herb Picking|goal:Herb|0	x5
+pool	5166	lv 0	star 5	type 3	Herb Picking|goal:Herb|0	x7
+pool	5167	lv 0	star 1	type 3	Herb Picking|goal:Herb|0	x1
+pool	5168	lv 0	star 2	type 3	Herb Picking|goal:Herb|0	x3
+pool	5169	lv 0	star 3	type 3	Herb Picking|goal:Herb|0	x5
+pool	5170	lv 0	star 5	type 3	Herb Picking|goal:Herb|0	x7
+pool	5171	lv 0	star 1	type 3	Herb Picking|goal:Herb|0	x1
+pool	5172	lv 0	star 2	type 3	Herb Picking|goal:Herb|0	x3
+pool	5173	lv 0	star 3	type 3	Herb Picking|goal:Herb|0	x5
+pool	5174	lv 0	star 5	type 3	Herb Picking|goal:Herb|0	x7
+pool	5175	lv 0	star 1	type 3	Herb Picking|goal:Herb|0	x1
+pool	5176	lv 0	star 2	type 3	Herb Picking|goal:Herb|0	x3
+pool	5177	lv 0	star 3	type 3	Herb Picking|goal:Herb|0	x5
+pool	5178	lv 0	star 5	type 3	Herb Picking|goal:Herb|0	x7
+pool	8479	lv 0	star 1	type 3	Herb Picking|goal:Herb|0	x1
+pool	8480	lv 0	star 2	type 3	Herb Picking|goal:Herb|0	x3
+pool	8481	lv 0	star 3	type 3	Herb Picking|goal:Herb|0	x5
+pool	8482	lv 0	star 5	type 3	Herb Picking|goal:Herb|0	x7
+pool	8483	lv 0	star 1	type 3	Herb Picking|goal:Herb|0	x1
+pool	8484	lv 0	star 2	type 3	Herb Picking|goal:Herb|0	x3
+pool	8485	lv 0	star 3	type 3	Herb Picking|goal:Herb|0	x5
+pool	8486	lv 0	star 5	type 3	Herb Picking|goal:Herb|0	x7
+pool	8487	lv 0	star 1	type 3	Herb Picking|goal:Herb|0	x1
+pool	8488	lv 0	star 2	type 3	Herb Picking|goal:Herb|0	x3
+pool	8489	lv 0	star 3	type 3	Herb Picking|goal:Herb|0	x5
+pool	8490	lv 0	star 5	type 3	Herb Picking|goal:Herb|0	x7
+pool	8491	lv 0	star 1	type 3	Herb Picking|goal:Herb|0	x1
+pool	8492	lv 0	star 2	type 3	Herb Picking|goal:Herb|0	x3
+pool	8493	lv 0	star 3	type 3	Herb Picking|goal:Herb|0	x5
+pool	8494	lv 0	star 5	type 3	Herb Picking|goal:Herb|0	x7
+pool	5179	lv 0	star 1	type 3	Water Fetching|goal:ABucketofWater|0	x1
+pool	5180	lv 0	star 2	type 3	Water Fetching|goal:ABucketofWater|0	x3
+pool	5181	lv 0	star 3	type 3	Water Fetching|goal:ABucketofWater|0	x5
+pool	5182	lv 0	star 5	type 3	Water Fetching|goal:ABucketofWater|0	x7
+pool	5183	lv 0	star 1	type 3	Water Fetching|goal:ABucketofWater|0	x1
+pool	5184	lv 0	star 2	type 3	Water Fetching|goal:ABucketofWater|0	x3
+pool	5185	lv 0	star 3	type 3	Water Fetching|goal:ABucketofWater|0	x5
+pool	5186	lv 0	star 5	type 3	Water Fetching|goal:ABucketofWater|0	x7
+pool	5187	lv 0	star 1	type 3	Water Fetching|goal:ABucketofWater|0	x1
+pool	5188	lv 0	star 2	type 3	Water Fetching|goal:ABucketofWater|0	x3
+pool	5189	lv 0	star 3	type 3	Water Fetching|goal:ABucketofWater|0	x5
+pool	5190	lv 0	star 5	type 3	Water Fetching|goal:ABucketofWater|0	x7
+pool	5191	lv 0	star 1	type 3	Water Fetching|goal:ABucketofWater|0	x1
+pool	5192	lv 0	star 2	type 3	Water Fetching|goal:ABucketofWater|0	x3
+pool	5193	lv 0	star 3	type 3	Water Fetching|goal:ABucketofWater|0	x5
+pool	5194	lv 0	star 5	type 3	Water Fetching|goal:ABucketofWater|0	x7
+pool	8495	lv 0	star 1	type 3	Water Fetching|goal:ABucketofWater|0	x1
+pool	8496	lv 0	star 2	type 3	Water Fetching|goal:ABucketofWater|0	x3
+pool	8497	lv 0	star 3	type 3	Water Fetching|goal:ABucketofWater|0	x5
+pool	8498	lv 0	star 5	type 3	Water Fetching|goal:ABucketofWater|0	x7
+pool	8499	lv 0	star 1	type 3	Water Fetching|goal:ABucketofWater|0	x1
+pool	8500	lv 0	star 2	type 3	Water Fetching|goal:ABucketofWater|0	x3
+pool	8501	lv 0	star 3	type 3	Water Fetching|goal:ABucketofWater|0	x5
+pool	8502	lv 0	star 5	type 3	Water Fetching|goal:ABucketofWater|0	x7
+pool	8503	lv 0	star 1	type 3	Water Fetching|goal:ABucketofWater|0	x1
+pool	8504	lv 0	star 2	type 3	Water Fetching|goal:ABucketofWater|0	x3
+pool	8505	lv 0	star 3	type 3	Water Fetching|goal:ABucketofWater|0	x5
+pool	8506	lv 0	star 5	type 3	Water Fetching|goal:ABucketofWater|0	x7
+pool	8507	lv 0	star 1	type 3	Water Fetching|goal:ABucketofWater|0	x1
+pool	8508	lv 0	star 2	type 3	Water Fetching|goal:ABucketofWater|0	x3
+pool	8509	lv 0	star 3	type 3	Water Fetching|goal:ABucketofWater|0	x5
+pool	8510	lv 0	star 5	type 3	Water Fetching|goal:ABucketofWater|0	x7
+pool	5195	lv 0	star 1	type 3	Gem Digging|goal:ColorfulGem|0	x1
+pool	5196	lv 0	star 2	type 3	Gem Digging|goal:ColorfulGem|0	x3
+pool	5197	lv 0	star 3	type 3	Gem Digging|goal:ColorfulGem|0	x5
+pool	5198	lv 0	star 5	type 3	Gem Digging|goal:ColorfulGem|0	x7
+pool	5199	lv 0	star 1	type 3	Gem Digging|goal:ColorfulGem|0	x1
+pool	5200	lv 0	star 2	type 3	Gem Digging|goal:ColorfulGem|0	x3
+pool	5201	lv 0	star 3	type 3	Gem Digging|goal:ColorfulGem|0	x5
+pool	5202	lv 0	star 5	type 3	Gem Digging|goal:ColorfulGem|0	x7
+pool	5203	lv 0	star 1	type 3	Gem Digging|goal:ColorfulGem|0	x1
+pool	5204	lv 0	star 2	type 3	Gem Digging|goal:ColorfulGem|0	x3
+pool	5205	lv 0	star 3	type 3	Gem Digging|goal:ColorfulGem|0	x5
+pool	5206	lv 0	star 5	type 3	Gem Digging|goal:ColorfulGem|0	x7
+pool	5207	lv 0	star 1	type 3	Gem Digging|goal:ColorfulGem|0	x1
+pool	5208	lv 0	star 2	type 3	Gem Digging|goal:ColorfulGem|0	x3
+pool	5209	lv 0	star 3	type 3	Gem Digging|goal:ColorfulGem|0	x5
+pool	5210	lv 0	star 5	type 3	Gem Digging|goal:ColorfulGem|0	x7
+pool	8511	lv 0	star 1	type 3	Gem Digging|goal:ColorfulGem|0	x1
+pool	8512	lv 0	star 2	type 3	Gem Digging|goal:ColorfulGem|0	x3
+pool	8513	lv 0	star 3	type 3	Gem Digging|goal:ColorfulGem|0	x5
+pool	8514	lv 0	star 5	type 3	Gem Digging|goal:ColorfulGem|0	x7
+pool	8515	lv 0	star 1	type 3	Gem Digging|goal:ColorfulGem|0	x1
+pool	8516	lv 0	star 2	type 3	Gem Digging|goal:ColorfulGem|0	x3
+pool	8517	lv 0	star 3	type 3	Gem Digging|goal:ColorfulGem|0	x5
+pool	8518	lv 0	star 5	type 3	Gem Digging|goal:ColorfulGem|0	x7
+pool	8519	lv 0	star 1	type 3	Gem Digging|goal:ColorfulGem|0	x1
+pool	8520	lv 0	star 2	type 3	Gem Digging|goal:ColorfulGem|0	x3
+pool	8521	lv 0	star 3	type 3	Gem Digging|goal:ColorfulGem|0	x5
+pool	8522	lv 0	star 5	type 3	Gem Digging|goal:ColorfulGem|0	x7
+pool	8523	lv 0	star 1	type 3	Gem Digging|goal:ColorfulGem|0	x1
+pool	8524	lv 0	star 2	type 3	Gem Digging|goal:ColorfulGem|0	x3
+pool	8525	lv 0	star 3	type 3	Gem Digging|goal:ColorfulGem|0	x5
+pool	8526	lv 0	star 5	type 3	Gem Digging|goal:ColorfulGem|0	x7
+pool	5211	lv 0	star 1	type 3	Supply Collecting|goal:ReliefSupply|0	x1
+pool	5212	lv 0	star 2	type 3	Supply Collecting|goal:ReliefSupply|0	x3
+pool	5213	lv 0	star 3	type 3	Supply Collecting|goal:ReliefSupply|0	x5
+pool	5214	lv 0	star 5	type 3	Supply Collecting|goal:ReliefSupply|0	x7
+pool	5215	lv 0	star 1	type 3	Supply Collecting|goal:ReliefSupply|0	x1
+pool	5216	lv 0	star 2	type 3	Supply Collecting|goal:ReliefSupply|0	x3
+pool	5217	lv 0	star 3	type 3	Supply Collecting|goal:ReliefSupply|0	x5
+pool	5218	lv 0	star 5	type 3	Supply Collecting|goal:ReliefSupply|0	x7
+pool	5219	lv 0	star 1	type 3	Supply Collecting|goal:ReliefSupply|0	x1
+pool	5220	lv 0	star 2	type 3	Supply Collecting|goal:ReliefSupply|0	x3
+pool	5221	lv 0	star 3	type 3	Supply Collecting|goal:ReliefSupply|0	x5
+pool	5222	lv 0	star 5	type 3	Supply Collecting|goal:ReliefSupply|0	x7
+pool	5223	lv 0	star 1	type 3	Supply Collecting|goal:ReliefSupply|0	x1
+pool	5224	lv 0	star 2	type 3	Supply Collecting|goal:ReliefSupply|0	x3
+pool	5225	lv 0	star 3	type 3	Supply Collecting|goal:ReliefSupply|0	x5
+pool	5226	lv 0	star 5	type 3	Supply Collecting|goal:ReliefSupply|0	x7
+pool	8527	lv 0	star 1	type 3	Supply Collecting|goal:ReliefSupply|0	x1
+pool	8528	lv 0	star 2	type 3	Supply Collecting|goal:ReliefSupply|0	x3
+pool	8529	lv 0	star 3	type 3	Supply Collecting|goal:ReliefSupply|0	x5
+pool	8530	lv 0	star 5	type 3	Supply Collecting|goal:ReliefSupply|0	x7
+pool	8531	lv 0	star 1	type 3	Supply Collecting|goal:ReliefSupply|0	x1
+pool	8532	lv 0	star 2	type 3	Supply Collecting|goal:ReliefSupply|0	x3
+pool	8533	lv 0	star 3	type 3	Supply Collecting|goal:ReliefSupply|0	x5
+pool	8534	lv 0	star 5	type 3	Supply Collecting|goal:ReliefSupply|0	x7
+pool	8535	lv 0	star 1	type 3	Supply Collecting|goal:ReliefSupply|0	x1
+pool	8536	lv 0	star 2	type 3	Supply Collecting|goal:ReliefSupply|0	x3
+pool	8537	lv 0	star 3	type 3	Supply Collecting|goal:ReliefSupply|0	x5
+pool	8538	lv 0	star 5	type 3	Supply Collecting|goal:ReliefSupply|0	x7
+pool	8539	lv 0	star 1	type 3	Supply Collecting|goal:ReliefSupply|0	x1
+pool	8540	lv 0	star 2	type 3	Supply Collecting|goal:ReliefSupply|0	x3
+pool	8541	lv 0	star 3	type 3	Supply Collecting|goal:ReliefSupply|0	x5
+pool	8542	lv 0	star 5	type 3	Supply Collecting|goal:ReliefSupply|0	x7
+pool	5227	lv 0	star 1	type 3	Fishing|goal:AFish|0	x1
+pool	5228	lv 0	star 2	type 3	Fishing|goal:AFish|0	x3
+pool	5229	lv 0	star 3	type 3	Fishing|goal:AFish|0	x5
+pool	5230	lv 0	star 5	type 3	Fishing|goal:AFish|0	x7
+pool	5231	lv 0	star 1	type 3	Fishing|goal:AFish|0	x1
+pool	5232	lv 0	star 2	type 3	Fishing|goal:AFish|0	x3
+pool	5233	lv 0	star 3	type 3	Fishing|goal:AFish|0	x5
+pool	5234	lv 0	star 5	type 3	Fishing|goal:AFish|0	x7
+pool	5235	lv 0	star 1	type 3	Fishing|goal:AFish|0	x1
+pool	5236	lv 0	star 2	type 3	Fishing|goal:AFish|0	x3
+pool	5237	lv 0	star 3	type 3	Fishing|goal:AFish|0	x5
+pool	5238	lv 0	star 5	type 3	Fishing|goal:AFish|0	x7
+pool	5239	lv 0	star 1	type 3	Fishing|goal:AFish|0	x1
+pool	5240	lv 0	star 2	type 3	Fishing|goal:AFish|0	x3
+pool	5241	lv 0	star 3	type 3	Fishing|goal:AFish|0	x5
+pool	5242	lv 0	star 5	type 3	Fishing|goal:AFish|0	x7
+pool	8543	lv 0	star 1	type 3	Fishing|goal:AFish|0	x1
+pool	8544	lv 0	star 2	type 3	Fishing|goal:AFish|0	x3
+pool	8545	lv 0	star 3	type 3	Fishing|goal:AFish|0	x5
+pool	8546	lv 0	star 5	type 3	Fishing|goal:AFish|0	x7
+pool	8547	lv 0	star 1	type 3	Fishing|goal:AFish|0	x1
+pool	8548	lv 0	star 2	type 3	Fishing|goal:AFish|0	x3
+pool	8549	lv 0	star 3	type 3	Fishing|goal:AFish|0	x5
+pool	8550	lv 0	star 5	type 3	Fishing|goal:AFish|0	x7
+pool	8551	lv 0	star 1	type 3	Fishing|goal:AFish|0	x1
+pool	8552	lv 0	star 2	type 3	Fishing|goal:AFish|0	x3
+pool	8553	lv 0	star 3	type 3	Fishing|goal:AFish|0	x5
+pool	8554	lv 0	star 5	type 3	Fishing|goal:AFish|0	x7
+pool	8555	lv 0	star 1	type 3	Fishing|goal:AFish|0	x1
+pool	8556	lv 0	star 2	type 3	Fishing|goal:AFish|0	x3
+pool	8557	lv 0	star 3	type 3	Fishing|goal:AFish|0	x5
+pool	8558	lv 0	star 5	type 3	Fishing|goal:AFish|0	x7
+pool	5246	lv 126	star 1	type 3	Spirit Collecting|goal:FearlessSpirit|126	x3
+pool	5247	lv 126	star 3	type 3	Spirit Collecting|goal:FearlessSpirit|126	x5
+pool	5248	lv 126	star 5	type 3	Spirit Collecting|goal:FearlessSpirit|126	x7
+pool	5249	lv 126	star 1	type 3	Spirit Collecting|goal:FearlessSpirit|126	x3
+pool	5250	lv 126	star 3	type 3	Spirit Collecting|goal:FearlessSpirit|126	x5
+pool	5251	lv 126	star 5	type 3	Spirit Collecting|goal:FearlessSpirit|126	x7
+pool	5252	lv 126	star 1	type 3	Spirit Collecting|goal:FearlessSpirit|126	x3
+pool	5253	lv 126	star 3	type 3	Spirit Collecting|goal:FearlessSpirit|126	x5
+pool	5254	lv 126	star 5	type 3	Spirit Collecting|goal:FearlessSpirit|126	x7
+pool	5255	lv 126	star 1	type 3	Spirit Collecting|goal:FearlessSpirit|126	x3
+pool	5256	lv 126	star 3	type 3	Spirit Collecting|goal:FearlessSpirit|126	x5
+pool	5257	lv 126	star 5	type 3	Spirit Collecting|goal:FearlessSpirit|126	x7
+pool	5262	lv 60	star 1	type 3	Material Collecting|thunderape|60	x5
+pool	5263	lv 60	star 2	type 3	Material Collecting|thunderape|60	x10
+pool	5264	lv 60	star 3	type 3	Material Collecting|thunderape|60	x15
+pool	5265	lv 60	star 5	type 3	Material Collecting|thunderape|60	x20
+pool	8559	lv 60	star 1	type 3	Material Collecting|thunderape|60	x5
+pool	8560	lv 60	star 2	type 3	Material Collecting|thunderape|60	x10
+pool	8561	lv 60	star 3	type 3	Material Collecting|thunderape|60	x15
+pool	8562	lv 60	star 5	type 3	Material Collecting|thunderape|60	x20
+pool	5266	lv 66	star 1	type 3	Material Collecting|snakeman|66	x5
+pool	5267	lv 66	star 2	type 3	Material Collecting|snakeman|66	x10
+pool	5268	lv 66	star 3	type 3	Material Collecting|snakeman|66	x15
+pool	5269	lv 66	star 5	type 3	Material Collecting|snakeman|66	x20
+pool	8563	lv 66	star 1	type 3	Material Collecting|snakeman|66	x5
+pool	8564	lv 66	star 2	type 3	Material Collecting|snakeman|66	x10
+pool	8565	lv 66	star 3	type 3	Material Collecting|snakeman|66	x15
+pool	8566	lv 66	star 5	type 3	Material Collecting|snakeman|66	x20
+pool	5270	lv 71	star 1	type 3	Material Collecting|sandmonster|71	x5
+pool	5271	lv 71	star 2	type 3	Material Collecting|sandmonster|71	x10
+pool	5272	lv 71	star 3	type 3	Material Collecting|sandmonster|71	x15
+pool	5273	lv 71	star 5	type 3	Material Collecting|sandmonster|71	x20
+pool	8567	lv 71	star 1	type 3	Material Collecting|sandmonster|71	x5
+pool	8568	lv 71	star 2	type 3	Material Collecting|sandmonster|71	x10
+pool	8569	lv 71	star 3	type 3	Material Collecting|sandmonster|71	x15
+pool	8570	lv 71	star 5	type 3	Material Collecting|sandmonster|71	x20
+pool	5274	lv 76	star 1	type 3	Material Collecting|hillmonster|76	x5
+pool	5275	lv 76	star 2	type 3	Material Collecting|hillmonster|76	x10
+pool	5276	lv 76	star 3	type 3	Material Collecting|hillmonster|76	x15
+pool	5277	lv 76	star 5	type 3	Material Collecting|hillmonster|76	x20
+pool	8571	lv 76	star 1	type 3	Material Collecting|hillmonster|76	x5
+pool	8572	lv 76	star 2	type 3	Material Collecting|hillmonster|76	x10
+pool	8573	lv 76	star 3	type 3	Material Collecting|hillmonster|76	x15
+pool	8574	lv 76	star 5	type 3	Material Collecting|hillmonster|76	x20
+pool	5278	lv 81	star 1	type 3	Material Collecting|rockmonster|81	x5
+pool	5279	lv 81	star 2	type 3	Material Collecting|rockmonster|81	x10
+pool	5280	lv 81	star 3	type 3	Material Collecting|rockmonster|81	x15
+pool	5281	lv 81	star 5	type 3	Material Collecting|rockmonster|81	x20
+pool	8575	lv 81	star 1	type 3	Material Collecting|rockmonster|81	x5
+pool	8576	lv 81	star 2	type 3	Material Collecting|rockmonster|81	x10
+pool	8577	lv 81	star 3	type 3	Material Collecting|rockmonster|81	x15
+pool	8578	lv 81	star 5	type 3	Material Collecting|rockmonster|81	x20
+pool	5282	lv 86	star 1	type 3	Material Collecting|bladeghost|86	x5
+pool	5283	lv 86	star 2	type 3	Material Collecting|bladeghost|86	x10
+pool	5284	lv 86	star 3	type 3	Material Collecting|bladeghost|86	x15
+pool	5285	lv 86	star 5	type 3	Material Collecting|bladeghost|86	x20
+pool	8579	lv 86	star 1	type 3	Material Collecting|bladeghost|86	x5
+pool	8580	lv 86	star 2	type 3	Material Collecting|bladeghost|86	x10
+pool	8581	lv 86	star 3	type 3	Material Collecting|bladeghost|86	x15
+pool	8582	lv 86	star 5	type 3	Material Collecting|bladeghost|86	x20
+pool	5286	lv 91	star 1	type 3	Material Collecting|birdman|91	x4
+pool	5287	lv 91	star 2	type 3	Material Collecting|birdman|91	x8
+pool	5288	lv 91	star 3	type 3	Material Collecting|birdman|91	x12
+pool	5289	lv 91	star 5	type 3	Material Collecting|birdman|91	x16
+pool	8583	lv 91	star 1	type 3	Material Collecting|birdman|91	x4
+pool	8584	lv 91	star 2	type 3	Material Collecting|birdman|91	x8
+pool	8585	lv 91	star 3	type 3	Material Collecting|birdman|91	x12
+pool	8586	lv 91	star 5	type 3	Material Collecting|birdman|91	x16
+pool	5294	lv 101	star 1	type 3	Material Collecting|banditl97|101	x4
+pool	5295	lv 101	star 2	type 3	Material Collecting|banditl97|101	x8
+pool	5296	lv 101	star 3	type 3	Material Collecting|banditl97|101	x12
+pool	5297	lv 101	star 5	type 3	Material Collecting|banditl97|101	x16
+pool	8591	lv 101	star 1	type 3	Material Collecting|banditl97|101	x4
+pool	8592	lv 101	star 2	type 3	Material Collecting|banditl97|101	x8
+pool	8593	lv 101	star 3	type 3	Material Collecting|banditl97|101	x12
+pool	8594	lv 101	star 5	type 3	Material Collecting|banditl97|101	x16
+pool	5298	lv 106	star 1	type 3	Material Collecting|tombbat|106	x4
+pool	5299	lv 106	star 2	type 3	Material Collecting|tombbat|106	x8
+pool	5300	lv 106	star 3	type 3	Material Collecting|tombbat|106	x12
+pool	5301	lv 106	star 5	type 3	Material Collecting|tombbat|106	x16
+pool	8595	lv 106	star 1	type 3	Material Collecting|tombbat|106	x4
+pool	8596	lv 106	star 2	type 3	Material Collecting|tombbat|106	x8
+pool	8597	lv 106	star 3	type 3	Material Collecting|tombbat|106	x12
+pool	8598	lv 106	star 5	type 3	Material Collecting|tombbat|106	x16
+pool	5302	lv 111	star 1	type 3	Material Collecting|bloodybat|111	x4
+pool	5303	lv 111	star 2	type 3	Material Collecting|bloodybat|111	x8
+pool	5304	lv 111	star 3	type 3	Material Collecting|bloodybat|111	x12
+pool	5305	lv 111	star 5	type 3	Material Collecting|bloodybat|111	x16
+pool	8599	lv 111	star 1	type 3	Material Collecting|bloodybat|111	x4
+pool	8600	lv 111	star 2	type 3	Material Collecting|bloodybat|111	x8
+pool	8601	lv 111	star 3	type 3	Material Collecting|bloodybat|111	x12
+pool	8602	lv 111	star 5	type 3	Material Collecting|bloodybat|111	x16
+pool	5306	lv 116	star 1	type 3	Material Collecting|bullmonster|116	x4
+pool	5307	lv 116	star 2	type 3	Material Collecting|bullmonster|116	x8
+pool	5308	lv 116	star 3	type 3	Material Collecting|bullmonster|116	x12
+pool	5309	lv 116	star 5	type 3	Material Collecting|bullmonster|116	x16
+pool	8603	lv 116	star 1	type 3	Material Collecting|bullmonster|116	x4
+pool	8604	lv 116	star 2	type 3	Material Collecting|bullmonster|116	x8
+pool	8605	lv 116	star 3	type 3	Material Collecting|bullmonster|116	x12
+pool	8606	lv 116	star 5	type 3	Material Collecting|bullmonster|116	x16
+pool	5310	lv 121	star 1	type 3	Material Collecting|bloodydevil|121	x4
+pool	5311	lv 121	star 2	type 3	Material Collecting|bloodydevil|121	x8
+pool	5312	lv 121	star 3	type 3	Material Collecting|bloodydevil|121	x12
+pool	5313	lv 121	star 5	type 3	Material Collecting|bloodydevil|121	x16
+pool	8607	lv 121	star 1	type 3	Material Collecting|bloodydevil|121	x4
+pool	8608	lv 121	star 2	type 3	Material Collecting|bloodydevil|121	x8
+pool	8609	lv 121	star 3	type 3	Material Collecting|bloodydevil|121	x12
+pool	8610	lv 121	star 5	type 3	Material Collecting|bloodydevil|121	x16
+pool	5314	lv 126	star 1	type 3	Material Collecting|icyserpent|126	x3
+pool	5315	lv 126	star 2	type 3	Material Collecting|icyserpent|126	x6
+pool	5316	lv 126	star 3	type 3	Material Collecting|icyserpent|126	x9
+pool	5317	lv 126	star 5	type 3	Material Collecting|icyserpent|126	x12
+pool	8611	lv 126	star 1	type 3	Material Collecting|icyserpent|126	x3
+pool	8612	lv 126	star 2	type 3	Material Collecting|icyserpent|126	x6
+pool	8613	lv 126	star 3	type 3	Material Collecting|icyserpent|126	x9
+pool	8614	lv 126	star 5	type 3	Material Collecting|icyserpent|126	x12
+pool	5318	lv 60	star 1	type 2	Monster Defeating|ThunderApe|60	x10
+pool	5319	lv 60	star 2	type 2	Monster Defeating|ThunderApe|60	x15
+pool	5320	lv 60	star 3	type 2	Monster Defeating|ThunderApe|60	x20
+pool	5321	lv 60	star 5	type 2	Monster Defeating|ThunderApe|60	x30
+pool	8615	lv 60	star 1	type 2	Monster Defeating|ThunderApe|60	x10
+pool	8616	lv 60	star 2	type 2	Monster Defeating|ThunderApe|60	x15
+pool	8617	lv 60	star 3	type 2	Monster Defeating|ThunderApe|60	x20
+pool	8618	lv 60	star 5	type 2	Monster Defeating|ThunderApe|60	x30
+pool	5322	lv 66	star 1	type 2	Monster Defeating|Snakeman|66	x10
+pool	5323	lv 66	star 2	type 2	Monster Defeating|Snakeman|66	x15
+pool	5324	lv 66	star 3	type 2	Monster Defeating|Snakeman|66	x20
+pool	5325	lv 66	star 5	type 2	Monster Defeating|Snakeman|66	x30
+pool	8619	lv 66	star 1	type 2	Monster Defeating|Snakeman|66	x10
+pool	8620	lv 66	star 2	type 2	Monster Defeating|Snakeman|66	x15
+pool	8621	lv 66	star 3	type 2	Monster Defeating|Snakeman|66	x20
+pool	8622	lv 66	star 5	type 2	Monster Defeating|Snakeman|66	x30
+pool	5326	lv 71	star 1	type 2	Monster Defeating|SandMonster|71	x10
+pool	5327	lv 71	star 2	type 2	Monster Defeating|SandMonster|71	x15
+pool	5328	lv 71	star 3	type 2	Monster Defeating|SandMonster|71	x20
+pool	5329	lv 71	star 5	type 2	Monster Defeating|SandMonster|71	x30
+pool	8623	lv 71	star 1	type 2	Monster Defeating|SandMonster|71	x10
+pool	8624	lv 71	star 2	type 2	Monster Defeating|SandMonster|71	x15
+pool	8625	lv 71	star 3	type 2	Monster Defeating|SandMonster|71	x20
+pool	8626	lv 71	star 5	type 2	Monster Defeating|SandMonster|71	x30
+pool	5330	lv 76	star 1	type 2	Monster Defeating|HillMonster|76	x10
+pool	5331	lv 76	star 2	type 2	Monster Defeating|HillMonster|76	x15
+pool	5332	lv 76	star 3	type 2	Monster Defeating|HillMonster|76	x20
+pool	5333	lv 76	star 5	type 2	Monster Defeating|HillMonster|76	x30
+pool	8627	lv 76	star 1	type 2	Monster Defeating|HillMonster|76	x10
+pool	8628	lv 76	star 2	type 2	Monster Defeating|HillMonster|76	x15
+pool	8629	lv 76	star 3	type 2	Monster Defeating|HillMonster|76	x20
+pool	8630	lv 76	star 5	type 2	Monster Defeating|HillMonster|76	x30
+pool	5334	lv 81	star 1	type 2	Monster Defeating|RockMonster|81	x10
+pool	5335	lv 81	star 2	type 2	Monster Defeating|RockMonster|81	x15
+pool	5336	lv 81	star 3	type 2	Monster Defeating|RockMonster|81	x20
+pool	5337	lv 81	star 5	type 2	Monster Defeating|RockMonster|81	x30
+pool	8631	lv 81	star 1	type 2	Monster Defeating|RockMonster|81	x10
+pool	8632	lv 81	star 2	type 2	Monster Defeating|RockMonster|81	x15
+pool	8633	lv 81	star 3	type 2	Monster Defeating|RockMonster|81	x20
+pool	8634	lv 81	star 5	type 2	Monster Defeating|RockMonster|81	x30
+pool	5338	lv 86	star 1	type 2	Monster Defeating|BladeGhost|86	x10
+pool	5339	lv 86	star 2	type 2	Monster Defeating|BladeGhost|86	x15
+pool	5340	lv 86	star 3	type 2	Monster Defeating|BladeGhost|86	x20
+pool	5341	lv 86	star 5	type 2	Monster Defeating|BladeGhost|86	x30
+pool	8635	lv 86	star 1	type 2	Monster Defeating|BladeGhost|86	x10
+pool	8636	lv 86	star 2	type 2	Monster Defeating|BladeGhost|86	x15
+pool	8637	lv 86	star 3	type 2	Monster Defeating|BladeGhost|86	x20
+pool	8638	lv 86	star 5	type 2	Monster Defeating|BladeGhost|86	x30
+pool	5342	lv 91	star 1	type 2	Monster Defeating|Birdman|91	x10
+pool	5343	lv 91	star 2	type 2	Monster Defeating|Birdman|91	x15
+pool	5344	lv 91	star 3	type 2	Monster Defeating|Birdman|91	x20
+pool	5345	lv 91	star 5	type 2	Monster Defeating|Birdman|91	x30
+pool	8639	lv 91	star 1	type 2	Monster Defeating|Birdman|91	x10
+pool	8640	lv 91	star 2	type 2	Monster Defeating|Birdman|91	x15
+pool	8641	lv 91	star 3	type 2	Monster Defeating|Birdman|91	x20
+pool	8642	lv 91	star 5	type 2	Monster Defeating|Birdman|91	x30
+pool	5350	lv 101	star 1	type 2	Monster Defeating|BanditL97|101	x10
+pool	5351	lv 101	star 2	type 2	Monster Defeating|BanditL97|101	x15
+pool	5352	lv 101	star 3	type 2	Monster Defeating|BanditL97|101	x20
+pool	5353	lv 101	star 5	type 2	Monster Defeating|BanditL97|101	x30
+pool	8647	lv 101	star 1	type 2	Monster Defeating|BanditL97|101	x10
+pool	8648	lv 101	star 2	type 2	Monster Defeating|BanditL97|101	x15
+pool	8649	lv 101	star 3	type 2	Monster Defeating|BanditL97|101	x20
+pool	8650	lv 101	star 5	type 2	Monster Defeating|BanditL97|101	x30
+pool	5354	lv 106	star 1	type 2	Monster Defeating|TombBat|106	x10
+pool	5355	lv 106	star 2	type 2	Monster Defeating|TombBat|106	x15
+pool	5356	lv 106	star 3	type 2	Monster Defeating|TombBat|106	x20
+pool	5357	lv 106	star 5	type 2	Monster Defeating|TombBat|106	x30
+pool	8651	lv 106	star 1	type 2	Monster Defeating|TombBat|106	x10
+pool	8652	lv 106	star 2	type 2	Monster Defeating|TombBat|106	x15
+pool	8653	lv 106	star 3	type 2	Monster Defeating|TombBat|106	x20
+pool	8654	lv 106	star 5	type 2	Monster Defeating|TombBat|106	x30
+pool	5358	lv 111	star 1	type 2	Monster Defeating|BloodyBat|111	x10
+pool	5359	lv 111	star 2	type 2	Monster Defeating|BloodyBat|111	x15
+pool	5360	lv 111	star 3	type 2	Monster Defeating|BloodyBat|111	x20
+pool	5361	lv 111	star 5	type 2	Monster Defeating|BloodyBat|111	x30
+pool	8655	lv 111	star 1	type 2	Monster Defeating|BloodyBat|111	x10
+pool	8656	lv 111	star 2	type 2	Monster Defeating|BloodyBat|111	x15
+pool	8657	lv 111	star 3	type 2	Monster Defeating|BloodyBat|111	x20
+pool	8658	lv 111	star 5	type 2	Monster Defeating|BloodyBat|111	x30
+pool	5362	lv 116	star 1	type 2	Monster Defeating|BullMonster|116	x5
+pool	5363	lv 116	star 3	type 2	Monster Defeating|BullMonster|116	x10
+pool	5364	lv 116	star 3	type 2	Monster Defeating|BullMonster|116	x10
+pool	5365	lv 116	star 5	type 2	Monster Defeating|BullMonster|116	x15
+pool	8659	lv 116	star 1	type 2	Monster Defeating|BullMonster|116	x5
+pool	8660	lv 116	star 3	type 2	Monster Defeating|BullMonster|116	x10
+pool	8661	lv 116	star 3	type 2	Monster Defeating|BullMonster|116	x10
+pool	8662	lv 116	star 5	type 2	Monster Defeating|BullMonster|116	x15
+pool	5366	lv 121	star 1	type 2	Monster Defeating|BloodyDevil|121	x10
+pool	5367	lv 121	star 2	type 2	Monster Defeating|BloodyDevil|121	x15
+pool	5368	lv 121	star 3	type 2	Monster Defeating|BloodyDevil|121	x20
+pool	5369	lv 121	star 5	type 2	Monster Defeating|BloodyDevil|121	x30
+pool	8663	lv 121	star 1	type 2	Monster Defeating|BloodyDevil|121	x10
+pool	8664	lv 121	star 2	type 2	Monster Defeating|BloodyDevil|121	x15
+pool	8665	lv 121	star 3	type 2	Monster Defeating|BloodyDevil|121	x20
+pool	8666	lv 121	star 5	type 2	Monster Defeating|BloodyDevil|121	x30
+pool	5370	lv 126	star 1	type 2	Monster Defeating|IcySerpent|126	x10
+pool	5371	lv 126	star 2	type 2	Monster Defeating|IcySerpent|126	x15
+pool	5372	lv 126	star 3	type 2	Monster Defeating|IcySerpent|126	x20
+pool	5373	lv 126	star 5	type 2	Monster Defeating|IcySerpent|126	x30
+pool	8667	lv 126	star 1	type 2	Monster Defeating|IcySerpent|126	x10
+pool	8668	lv 126	star 2	type 2	Monster Defeating|IcySerpent|126	x15
+pool	8669	lv 126	star 3	type 2	Monster Defeating|IcySerpent|126	x20
+pool	8670	lv 126	star 5	type 2	Monster Defeating|IcySerpent|126	x30
+pool	5374	lv 126	star 1	type 2	Monster Defeating|IcyBladeDevil|126	x10
+pool	5375	lv 126	star 2	type 2	Monster Defeating|IcyBladeDevil|126	x15
+pool	5376	lv 126	star 3	type 2	Monster Defeating|IcyBladeDevil|126	x20
+pool	5377	lv 126	star 5	type 2	Monster Defeating|IcyBladeDevil|126	x30
+pool	8671	lv 126	star 1	type 2	Monster Defeating|IcyBladeDevil|126	x10
+pool	8672	lv 126	star 2	type 2	Monster Defeating|IcyBladeDevil|126	x15
+pool	8673	lv 126	star 3	type 2	Monster Defeating|IcyBladeDevil|126	x20
+pool	8674	lv 126	star 5	type 2	Monster Defeating|IcyBladeDevil|126	x30
+pool	5378	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	5379	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	5380	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	5381	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	5400	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	5401	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	5402	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	5403	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	5404	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	5405	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	5406	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	5408	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	5409	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	5410	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	5411	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	5412	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	5413	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	5414	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	5415	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	5416	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	5417	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	5418	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	5419	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	5420	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	5421	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	5422	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	5423	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	8675	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	8676	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	8677	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	8678	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	8679	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	8680	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	8681	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	8682	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	8683	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	8684	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	8685	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	8687	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	8688	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	8689	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	8690	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	8691	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	8692	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	8693	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	8694	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	8695	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	8696	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	8697	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	8698	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	8699	lv 126	star 1	type 2	Monster Hunting|*|126	x50
+pool	8700	lv 126	star 2	type 2	Monster Hunting|*|126	x100
+pool	8701	lv 126	star 3	type 2	Monster Hunting|*|126	x150
+pool	8702	lv 126	star 5	type 2	Monster Hunting|*|126	x200
+pool	5407	lv 126	star 1	type 2	|*|126	x200
+pool	8686	lv 126	star 1	type 2	|*|126	x200
+pool	5782	lv 37	star 1	type 2	Kill Pheasant|Pheasant|37	x5
+pool	5783	lv 37	star 2	type 2	Kill Pheasant|Pheasant|37	x10
+pool	5784	lv 37	star 3	type 2	Kill Pheasant|Pheasant|37	x15
+pool	5785	lv 37	star 5	type 2	Kill Pheasant|Pheasant|37	x20
+pool	5786	lv 37	star 1	type 2	Kill Turtledove|Turtledove|37	x5
+pool	5787	lv 37	star 2	type 2	Kill Turtledove|Turtledove|37	x10
+pool	5788	lv 37	star 3	type 2	Kill Turtledove|Turtledove|37	x15
+pool	5789	lv 37	star 5	type 2	Kill Turtledove|Turtledove|37	x20
+pool	5790	lv 37	star 1	type 1	Deliver a Message|goal:JerkWang|37	x1
+pool	5791	lv 37	star 1	type 1	Deliver a Message|goal:JerkWang|37	x1
+pool	5792	lv 37	star 1	type 1	Deliver a Message|goal:SongQing|37	x1
+pool	5793	lv 37	star 1	type 1	Deliver a Message|goal:SongQing|37	x1
+pool	7909	lv 37	star 1	type 2	Kill monsters in the sphere|Devilman|37	x10
+pool	8431	lv 60	star 1	type 3	Collecting Ghost Core I|ghost|60	x5
+pool	8432	lv 60	star 1	type 3	Collecting Ghost Core II|ghost|60	x10
+pool	8433	lv 60	star 1	type 3	Collecting Ghost Core III|ghost|60	x20
+pool	8434	lv 60	star 1	type 1	Delivering Info|goal:Boudica|60	x1
+pool	8435	lv 60	star 1	type 1	Sending Invitation|goal:SarutobiSasuke|60	x1
+pool	8440	lv 60	star 1	type 2	Demon Summoned|Demon|60	x1
+pool	9927	lv 60	star 1	type 1	Deliver Letter|goal:LiuYi|60	x1
+pool	9928	lv 60	star 1	type 1	Return the Jade|goal:YanWushuang|60	x1

@@ -1,0 +1,27 @@
+{
+  "key": "QixiInterplane2024",
+  "name_ar": "عيد تشيشي 2024 (رحلة النجوم)",
+  "name_en": "Qixi Festival 2024 (Interplane)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Qixi: only the newest official edition (SwordSaga) runs on its yearly dates, like the official server; this older edition runs only with @festival on QixiInterplane2024. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ عيد تشيشي! دوس على زرار تشيشي اللي فوق عشان تشوف رحلة النجوم.",
+  "announce_en": "The Qixi Festival has started!",
+  "end_ar": "انتهى عيد تشيشي. نشوفكم السنة الجاية!",
+  "end_en": "The fantastical and romantic stellar journey is about to come to an end. See you again next year.",
+  "maps": [],
+  "notes": "QixiInterplane2024 (2026-10-14): official 2024 Global Qixi entry only - top-bar Fgui button 150111 (fguibtnconfig, clickfunc InterplanePlay_OpenMain), main window Fui24QixiTravel (msg 10448, Base/QixiInterplane2024/QixiInterplane2024Ui.cs). No Questinfo quests, no maps.txt rows. Starfield roaming, Excalibur forging, Starry Points and rankings are official server scripts (tInterplanePlay/tQixi2024Part5/tQixiMainNpc2024) with no reward data in the client -> polite system messages, nothing invented.",
+  "_owner": "QixiInterplane2024",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150111',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150111',['Show']=false,['Red']=0}}",
+  "icon_click": "10448</S>InterplanePlay_OpenMain",
+  "_icon": "[QixiInterplane2024 2026-10-14] official top-bar Fgui button 150111 (client fguibtnconfig FGUI_ActivityMenu['150111'], img luahdshouna_btn4); click msg 10448 InterplanePlay_OpenMain -> Base/QixiInterplane2024/QixiInterplane2024Ui.cs",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "08-06",
+    "end": "08-26",
+    "_note": "Official duration: client Cn_Res STR_FUI_24QIXI_MAIN_TIME 'Aug. 6 - Aug. 26' (lua header ERP589085 8.6-8.26). Server local time."
+  }
+}

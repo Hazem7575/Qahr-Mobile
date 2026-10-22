@@ -1,0 +1,28 @@
+{
+  "key": "FairyStories",
+  "name_ar": "حكايات الجنيّات (ليلي وروز وأوركيد)",
+  "name_en": "Fairy Stories (Lily, Rose, Orchid)",
+  "enabled": false,
+  "schedule": {
+    "type": "manual"
+  },
+  "announce_ar": "بدأ مهرجان حكايات الجنيّات!",
+  "announce_en": "The Fairy Stories festival has started!",
+  "maps": [],
+  "notes": "DISABLED (Agent 4, 2026-10-13): not playable. Quests 5007/5008/5010/5011/5013/5014 live in instances 1001852-1001854 whose doc is unknown (every quest point is walkable on 25+ docs). MirageSprite (3116) and InfernoSprite (3117) are in client monster.dat (level/life only, no lookface); ToxicSprite / HugeToxicSprite are nowhere. RoseFairy has no mesh. Questinfo gives no prize. README_AR.md lists what is missing.",
+  "_quests": [
+    5007,
+    5008,
+    5010,
+    5011,
+    5013,
+    5014
+  ],
+  "_officialMaps": [
+    1001852,
+    1001853,
+    1001854
+  ],
+  "_owner": "agent4",
+  "_batch3": "[batch3 2026-10-14] Still disabled. No button, window, event script or luaUiRes text in the client (only NPC names STR_NPC_ID_29126..29189). Instances 1001852-1001854 are unresolved in FestivalMaps\\maps.txt, ToxicSprite/HugeToxicSprite have no data and Questinfo has no prize. Nothing official to wire."
+}

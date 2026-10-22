@@ -1,0 +1,57 @@
+{
+  "key": "DragonSaga",
+  "name_ar": "ملحمة التنانين",
+  "name_en": "Dragonfest",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "09-15",
+    "end": "10-05",
+    "_note": "Official Event Time (client Cn_Res STR_FGUI_26QQSS_TIME): Sept. 15 08:59 (US)/16:59 (EU) - Oct. 5. Server local time; the US/EU hour offset is ignored."
+  },
+  "announce_ar": "بدأ مهرجان التنانين (Dragonfest)! دوس على زرار Dragonfest اللي فوق.",
+  "announce_en": "The Dragonfest has started!",
+  "maps": [],
+  "notes": "DragonSaga (2026-10-14): official Mid-Autumn 2026 Dragonfest entry only - top-bar button 150475, main window Fgui_26Qqss_Main (msg 10978, Base/DragonSaga/DragonSagaUi.cs) and Highlight Events page 10978. Story quests 9942-9960 stay OFF (no quests.json): instance NPC types 10738-10747 and monsters 24309-24314 exist only in the newer official client (not client_test, no lookface anywhere); prize items 3600877/3357159 exist in no itemtype. Schedule yearly 09-15..10-05 = Official Event Time (client Cn_Res STR_FGUI_26QQSS_TIME): Sept. 15 08:59 (US)/16:59 (EU) - Oct. 5.",
+  "_quests": [
+    9942,
+    9943,
+    9944,
+    9945,
+    9946,
+    9947,
+    9948,
+    9949,
+    9950,
+    9951,
+    9952,
+    9953,
+    9954,
+    9955,
+    9956,
+    9957,
+    9958,
+    9959,
+    9960
+  ],
+  "_officialMaps": [
+    1006058,
+    1006059,
+    1006060,
+    1006061,
+    1006062,
+    1006063,
+    1006064,
+    1006065
+  ],
+  "_owner": "agent5",
+  "end_ar": "انتهى مهرجان التنانين. نشوفكم السنة الجاية!",
+  "end_en": "The Dragonfest has come to a close. Thank you all for participating. We shall meet again next year!",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150475',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150475',['Show']=false,['Red']=0}}",
+  "icon_click": "10978</S>ZhongQiu2026Npc_OpenMainView",
+  "highlight_acts": [
+    10978
+  ],
+  "_icon": "[DragonSaga 2026-10-14] official top-bar Fgui button 150475 (client fguibtnconfig) + Highlight page ActInfo[10978]; clicks: Base/DragonSaga/DragonSagaUi.cs"
+}

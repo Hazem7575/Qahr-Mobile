@@ -1,0 +1,38 @@
+# ============================================================================
+#  AttackStudio - attack speed tuning.  Copy this file to  attackspeed.txt  to use it.
+#  Missing file OR atk_speed=0  =  the old hard-coded behaviour (always ~200 ms).
+#  Reload live (no restart):  console  reloadatkspeed  (or  atkspeed )
+#                             in game  @atkspeed        (owner only)
+#                             auto     set  watch_atkspeed=1  in hotreload.txt
+#  Edit it from the AttackStudio tool, or by hand. All times are milliseconds (ms).
+# ============================================================================
+
+# master switch. 0 = this file does nothing (old behaviour), 1 = tuning ON.
+atk_speed=0
+
+# --- global values (used when no class/weapon override below matches) ---
+base=800          # starting delay between swings, before any reduction
+floor=200         # never go faster than this (smaller = faster). Skills below can bypass it.
+per_speed=1       # ms removed for each 1 point of weapon/ring Frequency (both weapons + ring summed)
+agility_div=2     # delay -= Agility / this. 0 = Agility does not affect speed.
+twohand_add=0     # extra ms when a two-handed weapon is equipped (e.g. 100 = slower two-handers)
+
+# --- skill flags (applied after the base calc) ---
+cyclone=-150         # delta while Cyclone is up (keep negative = faster). 0 = ignore.
+celestialdance=110   # ABSOLUTE ms while Celestial Dance is up (ignores floor). 0 = ignore.
+spreadyourwings=100  # ABSOLUTE ms while Spread-Your-Wings is up (ignores floor). 0 = ignore.
+
+# --- per-class overrides (optional) ---
+# names: trojan warrior dune archer ninja monk pirate dragonwarrior thunderstriker taoist water fire windwalker
+# each class may set .base .per_speed .floor  (any you leave out falls back to the globals above)
+#class.archer.base=700
+#class.archer.floor=160
+#class.trojan.base=800
+#class.ninja.base=750
+
+# --- per-weapon overrides (optional, win over class) ---
+# types: unarmed blade sword backsword dagger club scepter bow scythe katana rapier pistol knife solusblade monkweapon other
+#weapon.bow.base=700
+#weapon.bow.per_speed=8
+#weapon.blade.per_speed=12
+#weapon.backsword.twohand... (two-hand handled by twohand_add above)

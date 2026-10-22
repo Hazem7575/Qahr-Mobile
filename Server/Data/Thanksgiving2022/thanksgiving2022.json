@@ -1,0 +1,145 @@
+{
+  "_readme": "[Thanksgiving2022 2026-10-15] Battlefront of Subjugation config. Read by Base/Thanksgiving2022/Thanksgiving2022Ui.cs (re-read when the file changes). Everything here is DERIVED (the official server-side numbers are not in the client) unless it says 'official'. Item strings: 'id plus count [3=bound]'. Player progress is in state.json (written by the server).",
+  "minLevel": 80,
+  "_minLevel": "official: tThanksNPC2022_DelText[NoLev] 'Please level up to 80 first.'",
+  "battleMap": {
+    "map": 12660,
+    "x": 221,
+    "y": 245,
+    "spread": 9,
+    "_note": "DERIVED: the official fort instance maps are not in the client. 12660 TurkeyRefuge (clanwar_new) is the official Thanksgiving 2024 map; every battle is a private copy (DynamicID). x,y = centre of the largest walkable area (DMap)."
+  },
+  "bigFortCooldownSeconds": 1800,
+  "_bigFortCooldownSeconds": "DERIVED: official texts say big forts have a cooldown ('The current fort is under cooldown'), the length is server-side.",
+  "autoFightPercent": 92,
+  "_autoFightPercent": "official: 'Mop up all unlocked forts / Ignoring cooldown time / 8% off' -> price = 92% of the warrant CP prices (15 small / 60 big, official).",
+  "depotCost1": 20,
+  "depotCost10": 200,
+  "_depotCost": "Military Depot cost in Thanksgiving Coins: DERIVED from the client test data of the depot window (DrawCost {20,200}).",
+  "store": [
+    {
+      "item": "3314207 0 1",
+      "cost": 120,
+      "limit": 20,
+      "puzzleAfter": 4
+    },
+    {
+      "item": "3009001 0 1",
+      "cost": 4,
+      "limit": 200,
+      "puzzleAfter": 4
+    },
+    {
+      "item": "4060001 0 1 3",
+      "cost": 2,
+      "limit": 500,
+      "puzzleAfter": 4
+    },
+    {
+      "item": "3328247 0 1",
+      "cost": 24,
+      "limit": 50,
+      "puzzleAfter": 4
+    },
+    {
+      "item": "730001 0 1 3",
+      "cost": 44,
+      "limit": 30,
+      "puzzleAfter": 6
+    }
+  ],
+  "_store": "Hunter Supply Store (Turkey Feathers): items + costs = official Dialog_Info['1304-1-other'].shopData; limit and puzzleAfter (exchanges before the 1 Hunter Puzzle) are DERIVED.",
+  "depot": [
+    {
+      "item": "3321077 0 5 3",
+      "weight": 140
+    },
+    {
+      "item": "3009102 0 1",
+      "weight": 120
+    },
+    {
+      "item": "3342773 0 3",
+      "weight": 140
+    },
+    {
+      "item": "3342771 0 2",
+      "weight": 90
+    },
+    {
+      "item": "3314207 0 1 3",
+      "weight": 110
+    },
+    {
+      "item": "3009103 0 1",
+      "weight": 70
+    },
+    {
+      "item": "3314248 0 1 3",
+      "weight": 90
+    },
+    {
+      "item": "3345048 0 1",
+      "weight": 40
+    },
+    {
+      "item": "3342775 0 1",
+      "weight": 25
+    },
+    {
+      "item": "3342776 0 1 3",
+      "weight": 5,
+      "rare": true
+    }
+  ],
+  "_depot": "Military Depot pool: items = official preview Dialog_Info['1304-4-other'].rewardList (without the 2023 Tribe currencies), weights DERIVED (sum 830; Big Permanent Stone (B) 0.6%). Hunter Puzzles at 10/30/50/80/120 draws are official (1304-3-other).",
+  "boxes": {
+    "3339605": {
+      "fixed": [
+        "730002 0 1 3",
+        "3328247 0 20"
+      ],
+      "_official": "Open to get 1 5-day +2 Stone (B) and 20 Awakening Spirits."
+    },
+    "3339606": {
+      "fixed": [
+        "3009001 0 2 3",
+        "4060001 0 10 3",
+        "3339557 0 1 3"
+      ],
+      "_official": "Open to get 2 2-day Bright Star Stones, 10 Universal Rune Essences (B) and 1 Hunter Puzzle (B)."
+    },
+    "3339558": {
+      "fixed": [
+        "730003 0 1 3",
+        "3009001 0 2 3",
+        "3321077 0 3 3"
+      ],
+      "_official": "Open to get 1 5-day +3 Stone (B), 2 2-day Bright Star Stones and 3 bottles of Leopard Chi Liquor (B)."
+    },
+    "3338899": {
+      "fixed": [
+        "4060001 0 20 3",
+        "3003126 0 3 3",
+        "3314212 0 1 3"
+      ],
+      "_official": "Open to get 20 Universal Rune Essences (B), 3 Senior Training Pills (B) and 1 Ginseng Essence (B)."
+    },
+    "3338900": {
+      "fixed": [
+        "3008221 0 2",
+        "730003 0 2 3"
+      ],
+      "_official": "Open to get 2 Olive Jades and 2 5-day +3 Stones (B)."
+    },
+    "3338901": {
+      "fixed": [
+        "3009102 0 2",
+        "4060001 0 6 3"
+      ],
+      "chi": 300,
+      "_official": "Open to get 300 Chi Points, 2 Moon Fruits and 6 Universal Rune Essences (B)."
+    }
+  },
+  "_boxes": "OFFICIAL contents = the client's item tips (itemtype descriptions). DERIVED only: 5-day/2-day items are given as the normal bound item (no expiring stones on this server). Use 'table'+'rolls' instead of 'fixed' for a random box."
+}

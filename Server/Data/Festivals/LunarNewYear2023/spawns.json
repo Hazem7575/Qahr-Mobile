@@ -1,0 +1,6 @@
+{
+  "spawns": [
+    { "monster": "Brigand", "map": 12021, "x": 383, "y": 316, "w": 16, "h": 16, "count": 10, "respawn": 30,
+      "_note": "5444 'Defeat [mob Brigand,1002210,391,324]' x10. Brigand = existing server type 2168 (Monsters/Brigand.ini, look 201, client monster.dat 2168 Brigand). Box fully walkable on woods.dmap." }
+  ]
+}

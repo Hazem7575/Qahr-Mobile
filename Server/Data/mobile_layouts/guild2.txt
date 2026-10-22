@@ -1,0 +1,288 @@
+# QahrMobile packet layouts: Guild members, donations, mentor and relation packets. The format is described in
+# Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgSynMemberList 10259. Request (CMsgSynMemberList::Create(action, index), 112 bytes): action u16 4 (0 = members,
+# 1 = position list), first index u32 8 (CFDlgFactionMem::QueryMember asks 0, 12, 24, ...).
+# Answer (Process), action 0: count 12, online count 16 (CHero::SetSynOnlineNum), u8 21 (0 = list done, refresh),
+# SYN_MEMBER_INFO units of 88 bytes from 24 (CHero::AddSynMember / CFComMemItem::UpdateMemInfo): uid 0, name 4 (32),
+# online u8 36, 40, 44, level 48 (GetShowLevStr), rank 52 (synmembertitle.ini 1..6 = Flags.GuildMemberRank),
+# 56, battle power 60, profession 64 (GetProfessionalName), 68, look face 72 (SetLookFace), 76, two list columns 80 / 84.
+# Action 1 has 44-byte MEMBER_INFO units instead; the server only answers action 0 style units.
+# Server (MsgGuildMembers.GuildMembersListCreate): mode 4, page 8, count 12, online 16, 0 20, units of 96 bytes from 24:
+# uid 0, name 4, online 36, nobility 40, gender 44, level 48, rank 52, donation 56, 0 60, 0 64, prestige 68, BP 72,
+# class 76, offline seconds 80, mesh 84, command 88. The server pages by 12 for this client (MsgGuildMembers.cs).
+# Units are listed one by one (12 per page); 40 / 44 / 56 / 80 / 84 meanings are from the server side only.
+# The mobile copies a received packet into a 1024-byte buffer (CNetMsg::Create, CMsgSynMemberList +4..+0x403); a
+# longer packet overwrites the data pointer at +0x404 and is ignored, so 12 units (1080 bytes) never showed: the server
+# sends a page in chunks of 6 members (Networking\Mobile\MobileGuildMembers.cs), u8 21 = 1 on all chunks but the last.
+[2278 MsgSynMemberList struct 600 552]
+4     4     u16
+8     8     u32
+12    12    u32   out
+16    16    u32   out
+21    21    u8    out   # 1 = more chunks of this page follow (no refresh yet)
+# member 1
+24    24    u32     out   # uid
+28    28    str:32  out   # name
+60    60    u8      out   # online
+64    64    u32     out   # nobility
+68    68    u32     out   # gender
+72    72    u32     out   # level
+76    76    u32     out   # rank
+80    80    u32     out   # total donation
+96    84    u32     out   # battle power
+100   88    u32     out   # class
+108   96    u32     out   # look face
+80    104   u32     out   # total donation (list column)
+92    108   u32     out   # prestige (list column)
+# member 2
+120   112   u32     out   # uid
+124   116   str:32  out   # name
+156   148   u8      out   # online
+160   152   u32     out   # nobility
+164   156   u32     out   # gender
+168   160   u32     out   # level
+172   164   u32     out   # rank
+176   168   u32     out   # total donation
+192   172   u32     out   # battle power
+196   176   u32     out   # class
+204   184   u32     out   # look face
+176   192   u32     out   # total donation (list column)
+188   196   u32     out   # prestige (list column)
+# member 3
+216   200   u32     out   # uid
+220   204   str:32  out   # name
+252   236   u8      out   # online
+256   240   u32     out   # nobility
+260   244   u32     out   # gender
+264   248   u32     out   # level
+268   252   u32     out   # rank
+272   256   u32     out   # total donation
+288   260   u32     out   # battle power
+292   264   u32     out   # class
+300   272   u32     out   # look face
+272   280   u32     out   # total donation (list column)
+284   284   u32     out   # prestige (list column)
+# member 4
+312   288   u32     out   # uid
+316   292   str:32  out   # name
+348   324   u8      out   # online
+352   328   u32     out   # nobility
+356   332   u32     out   # gender
+360   336   u32     out   # level
+364   340   u32     out   # rank
+368   344   u32     out   # total donation
+384   348   u32     out   # battle power
+388   352   u32     out   # class
+396   360   u32     out   # look face
+368   368   u32     out   # total donation (list column)
+380   372   u32     out   # prestige (list column)
+# member 5
+408   376   u32     out   # uid
+412   380   str:32  out   # name
+444   412   u8      out   # online
+448   416   u32     out   # nobility
+452   420   u32     out   # gender
+456   424   u32     out   # level
+460   428   u32     out   # rank
+464   432   u32     out   # total donation
+480   436   u32     out   # battle power
+484   440   u32     out   # class
+492   448   u32     out   # look face
+464   456   u32     out   # total donation (list column)
+476   460   u32     out   # prestige (list column)
+# member 6
+504   464   u32     out   # uid
+508   468   str:32  out   # name
+540   500   u8      out   # online
+544   504   u32     out   # nobility
+548   508   u32     out   # gender
+552   512   u32     out   # level
+556   516   u32     out   # rank
+560   520   u32     out   # total donation
+576   524   u32     out   # battle power
+580   528   u32     out   # class
+588   536   u32     out   # look face
+560   544   u32     out   # total donation (list column)
+572   548   u32     out   # prestige (list column)
+
+# CMsgSynpOffer 10146 (12 bytes): flags u32 4, value 8; bit 0x200 of the flags = "guild merit" (CHero::SetFacMerit),
+# then the donation dialog refreshes (CMsgSynpOffer::Process). The request (Create(flags)) is 12 bytes.
+# Server (MsgGuildProfile.HandlerGuildInfo, 16 bytes): 0xFFFFFFFF 4, silver donation 8, CP donation 12.
+[2372 MsgSynpOffer struct 16 12]
+4     4     u32
+8     8     u32
+
+# CMsgContribute 10143 (40 bytes, mentor rewards): action u8 4 (5 = my rewards: exp balls u64 24 (SetUpLevTimeOffer),
+# blessing u16 32 (SetGodBlessOffer), +1 stones u16 34 (SetItemAdditionOffer); 6 = all claimed; 7 / 8 = one
+# apprentice's offer with a name string), amount i64 24 on the request (Create(action, amount)).
+# Server (MsgClaim.ClaimCreate / GetClaim, 40 bytes): mode u32 4, mentor uid 8, 12, 16, exp u64 24, blessing u16 32,
+# stones u16 34 - the same offsets; only the action is a byte on the mobile (the bytes after it are not cleared).
+[2232 MsgContribute struct 40 40]
+4     4     u8
+8     8     u32
+12    12    u32
+16    16    u32
+24    24    u64
+32    32    u16
+34    34    u16
+
+# CMsgRelation 10160: requester uid 4, receiver uid 8 (must be me), level 12, battle power 16, then one byte per
+# relation: spouse 20, friend 21, partner 22, mentor 23, apprentice 24, team 25, guild 26, enemy 27
+# (CMsgRelation::Process -> CHero::PreApplyMsg). Server (MsgRelation.RelationCreate): the same offsets, name 29 after.
+[2175 MsgRelation same]
+
+# CMsgMentorPlayer 10023 (28 bytes, enlightenment): action u16 4 (0 = enlighten effect, 1 / 2 other notices),
+# enlightener uid 8, enlightened uid 12, 16, 20 / 24 (CMsgMentorPlayer::Create(action, a, b) / Process).
+# Server (MsgEnlight, 32 bytes): stamp 4, unknown 8, enlightener 12, enlightened 16, params 20 24 28; the server
+# answers with the request it got, so the mobile action rides in the server's "unknown" field.
+[2411 MsgMentorPlayer struct 32 28]
+8     4     u16
+12    8     u32
+16    12    u32
+20    16    u32
+24    20    u32
+28    24    u32
+
+# CMsgLeagueInfo 10009 (688 bytes, S->C only): treasury u64 4, gold bricks 12, award flag 16 (CHero::SetLeagueAwardFlag),
+# 20 / 24 (server ids), name 28 (32), leader 60 (32), bulletin 92 (512), title 604 (20), plunder target 624 (32),
+# invading league 656 (32) (CMsgLeagueInfo::Process -> CHero::UpdateLeagueInfo).
+# Server (MsgLeagueInfo.LeagueInfoCreate, 688 bytes): the same offsets; 16 is the Stipend there.
+[2083 MsgLeagueInfo same]
+
+# CMsgLeagueMemList 10297 (S->C): leader id 8, total 12, count u16 16, clear u8 18 (first page), then <count>
+# LEAGUE_MEMBER_INFO_EX units of 61 bytes from 19 (CMsgLeagueMemList::Process -> CLeagueAllegianceMgr::AddSynMemInfo,
+# a plain copy). Server (LeagueMemListCreate + AddItemLeagueMemList): guild id 4, leader 8, total 12, page count u16 16,
+# u8 18 = 1, units of 61 bytes from 19 (exploits, class, level u16, mesh, online u8, name 32, military rank, nobility,
+# uid, BP u16): the same packed layout.
+[2162 MsgLeagueMemList same]
+
+# CMsgLeagueSynList 10216 (S->C): total 4, count u16 8, clear u8 10, then <count> LEAGUE_SYN_INFO units of 120 bytes
+# from 11 (CMsgLeagueSynList::Process). Server (LeagueSynListCreate + AddItemLeagueSynList): total 4, page count u16 8,
+# u8 10 = 1, units of 120 bytes from 11 (uid, silver u64, members u16, level u16, name 72, leader 32).
+[2347 MsgLeagueSynList same]
+
+# CMsgLeagueOpt 10157 (18 bytes + strings, both ways): action u16 4, id 6, value 10, index 14, CNetStringPacker at 18
+# (CMsgLeagueOpt::Create(t,j) writes 14, Create(t,j,j,j) writes 6 / 14 / 10, Create(t,text,j) writes 6 + one string).
+# Server (MsgLeagueOpt.GetLeagueOpt / LeagueOptCreate): action u16 4, ID 6, UID 10, Index 14, string list 18.
+# The action numbers are the same (the mobile asks 1 guild list, 15 league rank, 16 cross-server rank, 27 officials;
+# its Process handles 5 my union, 6, 7, 8, 11, 17-19, 21, 22, 24-26, 28-30, 39, 41, 42, 44-52, 63, 67, 68, 70, 71, 73-75, 79).
+[2461 MsgLeagueOpt same]
+
+# CMsgLeagueRank 10144 (S->C): type u16 4 (0 = league rank -> AddLeagueRankInfo, 1 = cross-server rank -> AddOSRankInfo),
+# total u32 6, clear u8 10, count u16 11, then <count> RANK_LEAGUE_INFO units of 72 bytes from 13 (server id, gold
+# bricks, name 32, leader 32) (CMsgLeagueRank::Process).
+# Server UnionRank (16, type 1): type u16 4, total u16 6, page u16 8, u8 10, page count u16 11, units of 72 from 13
+# (server id, gold, name, leader) -> the page at 8 would be read as the high half of the total, so only 6 u16 is copied.
+# Server KingdomRank (15, type 0): type 4, u32 6 = 3, u8 10, count u32 11, u16 15, units of 72 from 17 (gold, name,
+# leader, u32): the gold / name / leader land on the same offsets as type 1 (the u32 before each unit is 0), so one
+# layout serves both. Units: the server sends at most 10 per page (3 for type 0); 720 bytes copied as they are.
+[2076 MsgLeagueRank struct 733 733]
+4   4   u16
+6   6   u16
+10  10  u8
+11  11  u16
+13  13  str:720
+
+# CMsgLeagueImperialCourtList 10267 (S->C): type u8 4 (0 core officials, 1 officials), count u8 5, then <count> units of
+# 61 bytes from 6: BP 0, lookface 4, merit 8, peerage 12, uid 16, level u16 20, profession 22, position u16 26,
+# online u8 28, name 29 (CMsgLeagueImperialCourtList::Process). Server (LeagueImperialCourtListCreate +
+# AddItemLeagueImperialCourtList): the same offsets.
+[2224 MsgLeagueImperialCourtList same]
+
+# CMsgLeagueAllegianceList 10032 (S->C, the league recruit list): total 4, page u16 8, count u16 10, clear u8 12, then
+# <count> LEAGUE_AD_INFO units of 592 bytes from 13: fund u64 0, uid 8, gold 12, name 16 (32), leader 48 (32),
+# declaration 80 (512) (CMsgLeagueAllegianceList::Process). Server (LeagueAllegianceListCreate +
+# AddItemLeagueAllegianceList): the same offsets.
+[2352 MsgLeagueAllegianceList same]
+
+# CMsgLeaguePalaceGuardsList 10335 (S->C): count u8 4, page u8 5, then <count> units of 59 bytes from 6: BP 0,
+# lookface 4, merit 8, peerage 12, uid 16, level u16 20, profession 22, online u8 26, name 27
+# (CMsgLeaguePalaceGuardsList::Process). Server (LeaguePalaceGuardsListCreate + AddItemLeaguePalaceGuardsList): the same.
+# The server wrote the total number of guards at 4; MsgLeagueOpt.cs now writes the units in this page.
+[2397 MsgLeaguePalaceGuardsList same]
+
+# CMsgFamily 10049: action u16 4, id 8, value 12, u64 fund 16 (action 28), CNetStringPacker string list at 16
+# (CMsgFamily ctor: SetBuf(msg+0x10); Create(t,j) / Create(t,j,j) / Create(t,j,PKw)). Process switch 1..29: 1 base info
+# (sscanf "%u %d %d %lld %d %d %d %d %d %d %d %lld" on string 0, then name, leader; string 3 "%u %d %u %u %d %d %d"),
+# 4 member list (ProcessMemList: u8 12 = clear, u16 count 16, FAM_MEMBER_INFO units of 52 bytes from 20),
+# 9 recruit, 11 join, 13 enemy list, 14/15 add/del enemy, 16 ally list, 17 ally request (2 strings), 19/20 add/del ally,
+# 22/23/27 kick/quit (ClearFamilyInfo), 24/25 announce (string), 28 fund u64 @16, 29.
+# Server (MsgClan.Info, MsgClan.cs): action u32 4, uid 8, dwparam 12, string list 16; the same action numbers.
+# The u16 action reads the low half of the server's u32 and the mobile zero-fills 6..7 (CMyMsg::Init), so the
+# packet is the same both ways.
+# Member unit (52 bytes, the same base 20 and stride on both): name 0 (32), level 32, rank u16 36, online 38, class 40;
+# mobile then reads u32 44 (first argument of CHero::GetProfessionalName) and the donation as u32 48, while the
+# server wrote the donation as u64 at 44; MsgClan.ClanMembersCreate now writes a u32 0 at 44 and the donation u32 at 48.
+[2266 MsgFamily same]
+
+# CMsgPigeon 10052: action u8 4, u8 5 (an extra flag the mobile sets on send), dwParam u32 8, string list at 12
+# (ctor: SetBuf(msg+0x10) = packet offset 12; Create(h,j,PKc,i) writes 4, 8, 5 and the string).
+# Process: action u8 4 = 3..6 (3 = sent, queue position @8 shown with string 0x18747; 4 = ...; 6 = RemovePigeon).
+# Server (MsgBroadcast.BroadcastCreate / GetBroadcast): action u32 4 (BroadTyp 1..5, same numbers), dwParam 8,
+# 0 at 12, string list 16. The mobile's byte 5 must not reach the server's u32 action, so only byte 4 goes over.
+[2321 MsgPigeon struct 16 12]
+4   4   u8
+8   8   u32
+16  12  strings
+
+# CMsgPigeonQuery 10277 (Process): u32 4 (posted as cmd 0x469), u16 8 (0 = clear the list), i16 count 10,
+# units of 256 bytes from 12: id 0, u32 4, u32 8, text 12 (StringToWString, 32 before the next field), u32 44,
+# official id u32 248 (0 = none), official rank u8 252.
+# Server (MsgBroadcastlist: BroadcastlistCreate + AddItemBroadcastlist): dwParam 4, total u16 8, count u16 10,
+# 0 at 12, units of 152 bytes from 16: id 0, index 4, entity uid 8, name 12 (32), spent CPs 44, message 48 (80),
+# 20 zero bytes, union rank 148. The server sends at most 5 units per packet; unrolled for 5.
+# The one string the mobile Process reads is at 12 (the sender name); the server's message at 48 is copied to
+# mobile 48 but Process does not read it (not found in CMsgPigeonQuery::Process).
+# DISABLED: the client closed right after a test 2060 was sent (2026-10-20 23:05); kept for reference.
+#[2060 MsgPigeonQuery struct 776 1292]
+#4    4     u32  out
+#8    8     u16  out
+#10   10    u16  out
+#16   12    u32  out
+#20   16    u32  out
+#24   20    u32  out
+#28   24    str:32 out
+#60   56    u32  out
+#64   60    str:80 out
+#164  264   u8   out
+#168  268   u32  out
+#172  272   u32  out
+#176  276   u32  out
+#180  280   str:32 out
+#212  312   u32  out
+#216  316   str:80 out
+#316  520   u8   out
+#320  524   u32  out
+#324  528   u32  out
+#328  532   u32  out
+#332  536   str:32 out
+#364  568   u32  out
+#368  572   str:80 out
+#468  776   u8   out
+#472  780   u32  out
+#476  784   u32  out
+#480  788   u32  out
+#484  792   str:32 out
+#516  824   u32  out
+#520  828   str:80 out
+#620  1032  u8   out
+#624  1036  u32  out
+#628  1040  u32  out
+#632  1044  u32  out
+#636  1048  str:32 out
+#668  1080  u32  out
+#672  1084  str:80 out
+#772  1288  u8   out
+
+# CMsgInviteTrans 10320 (20 bytes): action u8 4, string id 8, u32 12, u32 16 (Process: action 0 = MsgBox(0xeb8,
+# [12], GetStr([8])) and PostCmd(0xeb9, [16]); action 2 = system message GetStr([8])). Create(i,j,j): action u8 4,
+# 8, 12. Server (MsgStaticMessage.StaticMessageCreate): 0 at 4, message id 8 (10515...), mode 12 (= 6),
+# seconds 16; the handler reads Accept u32 at 4 (1 = OK). The seconds go to the MsgBox argument at 12.
+[2072 MsgInviteTrans struct 20 20]
+4   4   u8
+8   8   u32
+16  12  u32  out
+12  16  u32  out
+12  12  u32  in
+16  16  u32  in

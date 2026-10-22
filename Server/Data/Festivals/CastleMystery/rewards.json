@@ -1,0 +1,211 @@
+{
+  "_note": "[CastleMystery 2026-10-15] Jet [CastleStore] = OFFICIAL luacfg EmoneySaleShop[33979] (Feb. 11 - Feb. 27, 2025): every good, its price in Chocolate Candy 3352015 and monopoly (bound) are official. 'amount' 1 (the four Romantic boxes) = once per festival run here; the other goods are unlimited (official stock 2000 / 99999). Texts = tLover2025Kua_DelText[33979]. Suyi and Lord Anthony are scripted in Base/CastleMystery/CastleStartle.cs.",
+  "npcText": {
+    "8871012": {
+      "ar": "Jet: متجر القلعة اللي عمره مية سنة فتح! بدّل Chocolate Candy بجوايز. المطلوب لفل 80.",
+      "en": "Jet:\nThe century-old Castle Store is about to open. Don`t miss out!\nRequirement: Level 80"
+    }
+  },
+  "exchanges": [
+    {
+      "id": "jet_flower",
+      "npc": 8871012,
+      "text_ar": "1 Candy ← وردة محفوظة",
+      "text_en": "1 Candy -> Preserved Flower",
+      "cost": {
+        "items": [
+          {
+            "id": 3352015,
+            "count": 1
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3600766,
+            "count": 1,
+            "bound": false
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "jet_parasol",
+      "npc": 8871012,
+      "text_ar": "3600 Candy ← صندوق شمسية",
+      "text_en": "3600 Candy -> Romantic Parasol Box",
+      "cost": {
+        "items": [
+          {
+            "id": 3352015,
+            "count": 3600
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3351997,
+            "count": 1,
+            "bound": false
+          }
+        ]
+      },
+      "repeat": "festival",
+      "minLevel": 80
+    },
+    {
+      "id": "jet_flute",
+      "npc": 8871012,
+      "text_ar": "3600 Candy ← صندوق ناي",
+      "text_en": "3600 Candy -> Romantic Flute Box",
+      "cost": {
+        "items": [
+          {
+            "id": 3352015,
+            "count": 3600
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3351998,
+            "count": 1,
+            "bound": false
+          }
+        ]
+      },
+      "repeat": "festival",
+      "minLevel": 80
+    },
+    {
+      "id": "jet_string",
+      "npc": 8871012,
+      "text_ar": "3600 Candy ← صندوق وتر",
+      "text_en": "3600 Candy -> Romantic String Box",
+      "cost": {
+        "items": [
+          {
+            "id": 3352015,
+            "count": 3600
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3351999,
+            "count": 1,
+            "bound": false
+          }
+        ]
+      },
+      "repeat": "festival",
+      "minLevel": 80
+    },
+    {
+      "id": "jet_pet",
+      "npc": 8871012,
+      "text_ar": "3600 Candy ← صندوق أليف",
+      "text_en": "3600 Candy -> Romantic Pet Box",
+      "cost": {
+        "items": [
+          {
+            "id": 3352015,
+            "count": 3600
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3352000,
+            "count": 1,
+            "bound": false
+          }
+        ]
+      },
+      "repeat": "festival",
+      "minLevel": 80
+    },
+    {
+      "id": "jet_rune",
+      "npc": 8871012,
+      "text_ar": "3 Candy ← UniversalRuneEssence",
+      "text_en": "3 Candy -> UniversalRuneEssence",
+      "cost": {
+        "items": [
+          {
+            "id": 3352015,
+            "count": 3
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 4060001,
+            "count": 1,
+            "bound": true
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "jet_stone",
+      "npc": 8871012,
+      "text_ar": "3 Candy ← +1 Stone (B)",
+      "text_en": "3 Candy -> +1 Stone (B)",
+      "cost": {
+        "items": [
+          {
+            "id": 3352015,
+            "count": 3
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3346827,
+            "count": 1,
+            "bound": true
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    },
+    {
+      "id": "jet_medal",
+      "npc": 8871012,
+      "text_ar": "8 Candy ← 1KK Contribution Medal",
+      "text_en": "8 Candy -> 1KKContributionMedal",
+      "cost": {
+        "items": [
+          {
+            "id": 3352015,
+            "count": 8
+          }
+        ]
+      },
+      "give": {
+        "items": [
+          {
+            "id": 3314199,
+            "count": 1,
+            "bound": true
+          }
+        ]
+      },
+      "repeat": true,
+      "minLevel": 80
+    }
+  ]
+}

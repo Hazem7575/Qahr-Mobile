@@ -1,0 +1,14 @@
+{
+  "_note": "InnerPowerSecretland overlay (Agent 3, 2026-10-13). MysterySage 23021 is a normal Npcs.txt NPC (no festival NPC needed). BLOCKED until the Inner Power dungeon raises QuestEngineCore.OnEvent(client, \"innerpower.secretland\") on a clear (ER-6).",
+  "quests": {
+    "7108": {
+      "objectives": [
+        { "type": "event", "event": "innerpower.secretland", "count": 1, "slot": 2, "text": "Pass the inner power quest once" }
+      ],
+      "beginText": "Deep in the mountains lies the Inner Power Secretland. Clear it once and come back to me.",
+      "prize": { "expBalls": 1 },
+      "repeat": "daily",
+      "_note": "Official Prize text is 'Inner Power Books' with no item id; 1 EXP Ball is a placeholder until the owner picks a book item (candidates in itemtype.txt: 3328940 Secretland Box, 3322874 InnerPowerPack - check they open on this server first). chk_quest slot 2 = Questinfo [chk_quest 7108,1,2,1]."
+    }
+  }
+}

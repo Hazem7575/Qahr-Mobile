@@ -1,0 +1,72 @@
+# QahrMobile packet layouts: Items and skills. The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgItem 10137: = the 6609 MsgItem struct without its leading timer (id 4, data 8 (u64), action 16, time 18 ...)
+[2427 MsgItem 95]
+1   4   u32      # id
+3   8   u64      # dwParam
+6   16  u16      # action (27 = ping)
+7   18  u32      # timestamp
+8   22  u32      # dwParam2 (also the count of the list at 91)
+9   26  u32      # dwParam3
+10  30  u8       # dwparam4 (the slots start at 31)
+11  31  u32      # equipment slot 1 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+12  35  u32      # equipment slot 2 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+13  39  u32      # equipment slot 3 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+14  43  u32      # equipment slot 4 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+15  47  u32      # equipment slot 5 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+16  51  u32      # equipment slot 6 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+17  55  u32      # equipment slot 7 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+18  59  u32      # equipment slot 8 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+19  63  u32      # equipment slot 9 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+20  67  u32      # equipment slot 10 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+21  71  u32      # equipment slot 11 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+22  75  u32      # equipment slot 12 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+23  79  u32      # equipment slot 13 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+24  83  u32      # equipment slot 14 (CMsgItem::Process: SetEquipment, position 1-9, 15-19)
+26  91  list32 22   # args
+
+# CMsgItemInfo 10116: TQ's classic item struct (= the 6609 layout with u8 action/ident/position); offsets from
+# CMsgItemInfo::Process and the CItem members they fill (tools\fieldmap.py, tools\getters.py)
+[2350 MsgItemInfo 216]
+1   4    u32     # UID
+2   8    u32     # ITEM_ID (type)
+3   12   u16     # Durability (amount)
+4   14   u16     # MaximDurability (amount limit)
+5   16   u8      # Mode = ucAction (1 add, 2 trade, 3 update, 4 view, 5 active ...)
+7   18   u8      # Position
+8   19   u32     # SocketProgress (CItem::SetData)
+9   23   u8      # SocketOne (gem 1)
+10  24   u8      # SocketTwo (gem 2)
+11  25   u32     # SpellID / effect (magic 1)
+13  30   u8      # Plus (magic 3, CItem::GetAppendLev)
+14  31   u8      # Bless
+15  32   u8      # Bound (CItem::SetMonopolyPre)
+16  33   u8      # Enchant (CItem::GetAddLife)
+17  34   u32     # ProgresGreen (CItem::GetAntiMonster)
+18  38   u16     # Suspicious (CItem::SetShadiness)
+19  40   u16     # Locked (CItem::SetFlag)
+20  42   u32     # PlusProgress (CItem::SetLevExp)
+21  46   u32     # RemainingTime (CItem::SetDelTime)
+22  50   u32     # TimeLeftInMinutes
+23  54   u16     # StackSize (CItem::SetOverlay)
+24  56   u32     # PerfectionLevel (CItem::GetRefineLev)
+25  60   u32     # PerfectionProgress (CItem::SetRefineExp)
+26  64   u32     # OwnerUID (CItem::SetRefineOwner)
+27  68   str:32  # OwnerName
+28  100  str:64  # Signature (refine comment)
+30  166  u32     # RuneEXP (CItem::SetRuneLevExp)
+
+# CMsgMagicInfo 10101 (32 bytes): CHero::AddMagic(type 8, level 12, exp 4, soul 16/20/24/28); action at 14 (0..6)
+[2057 MsgMagicInfo 32]
+1   4    u32     # Experience
+2   8    u32     # ID (magic type)
+3   12   u16     # Level
+4   14   u16     # Type (action)
+5   16   u8      # UseSoul
+6   20   u32     # Soul
+7   24   u32     # HashLevelSoul
+8   28   u32     # TotalSeconds (cool down)
+
+# CMsgWeaponSkill 10041 (weapon proficiency): skill type 4, level u16 8, exp 12, next level exp 16
+# = MsgProficiency (CHero::AddNewWeaponSkill)
+[2127 MsgWeaponSkill same]

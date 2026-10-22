@@ -1,0 +1,26 @@
+{
+  "key": "SpringFestival2026",
+  "name_ar": "أسطورة الخيل (مهرجان الربيع 2026)",
+  "name_en": "Steed Legend",
+  "enabled": true,
+  "schedule": {
+    "type": "yearly",
+    "start": "02-10",
+    "end": "03-02",
+    "_note": "Official duration (client Cn_Res STR_FUI_ACTTIME_10850): Feb. 10 - 07:59 (US)/15:59 (EU), Mar. 2 (2026). The CN file header says the same (2026.2.10 - 2026.3.2). The main window shows Feb. 10 - 23:59, Feb. 28 (STR_LUAUI_SPRINGFESTIVALDRAW_TIME = the Steed Feeding part). Server local time; the US/EU hour offset is ignored."
+  },
+  "announce_ar": "بدأ مهرجان الربيع: أسطورة الخيل (Steed Legend)! دوس على الزرار اللي فوق.",
+  "announce_en": "Steed Legend has started!",
+  "end_ar": "انتهى مهرجان الربيع (أسطورة الخيل). نشوفكم السنة الجاية!",
+  "end_en": "The Spring Festival event has concluded. Thank you for your participation. We`ll meet again next year!",
+  "maps": [],
+  "notes": "SpringFestival2026 (2026-10-14, batch 3): official Global Spring Festival 2026 'Steed Legend' entry only - top-bar Fgui button 150401, main window Fgui_26ChunJie_Qrcs (msg 10850 tMsg_Info['Chunjie26'], Base/SpringFestival2026/SpringFestival2026Ui.cs) and Highlight Events page ActInfo[10850]. No Questinfo quests, no maps in maps.txt. Petal Vale / Gale Fortress dailies, Decay Beast Lair, Steed Feeding, Steed's Gift, ranking and Steed Store answer with a system message.",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150401',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150401',['Show']=false,['Red']=0}}",
+  "icon_click": "10850</S>SpringFestivalX2025_OpenView",
+  "highlight_acts": [
+    10850
+  ],
+  "_icon": "[SpringFestival2026 2026-10-14] official top-bar Fgui button 150401 (client fguibtnconfig, clickfunc SpringFestivalX2025_OpenView</N>0) + Highlight page ActInfo[10850]; clicks: Base/SpringFestival2026/SpringFestival2026Ui.cs",
+  "_owner": "batch3"
+}

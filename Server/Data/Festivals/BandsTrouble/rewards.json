@@ -1,0 +1,17 @@
+{
+  "_note": "BandsTrouble greetings = official Server_Key tPlotEditorPlotEvent_DelText[7972..7985] lines. No exchanges: the official Music Coin shop (SummerNpc2024_OpenExchangeShop 33133) and the Musical Note Chest have no contents in the client, so nothing is invented.",
+  "npcText": {
+    "8851001": { "ar": "غير الأغاني الشعبية، يا ترى هحب نوع تاني من المزيكا؟", "en": "Besides folk songs, will I fall in love with other music as well? I think I will get the answer soon!" },
+    "8851002": { "ar": "ميكو مبتعرفش غير الغنا ومبتجيش تزورني.", "en": "Miko knows nothing but singing, and doesn`t come to see me. I just got a lot of rock band records and wanted to play them for her!" },
+    "8851003": { "ar": "أسطوانة قديمة.", "en": "Playing... You can`t help but dance a waltz! But Miko seems uninterested. Try other Record Players!" },
+    "8851004": { "ar": "أسطوانة روك.", "en": "Play the record... The drumbeats and the guitar hit your heart. Miko`s eyes seem to light up." },
+    "8851005": { "ar": "ماريا عازفة جيتار ممتازة بس مش واثقة في نفسها.", "en": "Maria`s guitar skills are superb, but she is still not confident in herself." },
+    "8851006": { "ar": "محدش هياخد الجيتار بتاعي!", "en": "Go away! No one can take away my lucky guitar!" },
+    "8851007": { "ar": "كونر يا ابني، كنت عارفة إنه هينجح!", "en": "Conner, my child, I knew he would succeed!" },
+    "8851008": { "ar": "سمعت إن أم كونر بتدوّر عليّا.", "en": "I heard that Conner`s mother has been looking for me. She must want to catch me! I won`t be fooled!" },
+    "8851009": { "ar": "بتدوّر...", "en": "Searching..." },
+    "8851010": { "ar": "بعد ما خلّصت مكياج أنطونيو...", "en": "After I finished the makeup for Antonio, I went backstage to get Miko`s performance costume. Suddenly I heard a `thud`. I was startled and followed the sound to see the lighting director open the equipment room door. All the stereos inside were gone. When I went backstage, I ran into Conner. He can be my witness." },
+    "8851011": { "ar": "كنت ورا المسرح بظبط الإضاءة.", "en": "Before the stereos went missing, I was backstage adjusting the lights. Suddenly I heard a `thud`. I went out to take a look. The door to the equipment room was wide open, and all the stereos inside were gone! Maria, who was rehearsing on stage at the time, can be my witness." },
+    "8851012": { "ar": "كنت بلعب في الأوضة اللي جنبها.", "en": "After I finished cleaning up the stereos, I went to the next room to rest. Suddenly I heard a `thud`. The door to the equipment room was broken. The lighting director and the makeup artist were talking about something. I was playing games in the next room at the time. You can check my game records." }
+  }
+}

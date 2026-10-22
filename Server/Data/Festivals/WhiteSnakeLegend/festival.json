@@ -1,0 +1,43 @@
+{
+  "key": "WhiteSnakeLegend",
+  "name_ar": "أسطورة الثعبان الأبيض (Bless All)",
+  "name_en": "Bless All - White Snake Mark",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] SpringFestival: only the newest official edition (SpringFestival2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on WhiteSnakeLegend. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ مهرجان الربيع (Bless All)! افتح زرار Bless All فوق وساعد الثعبان الأبيض تلم شظايا العلامة.",
+  "announce_en": "The Spring Festival (Bless All) has started! Open the Bless All button and help the White Snake collect the mark fragments.",
+  "end_ar": "انتهى مهرجان الربيع. كل سنة وانتم طيبين!",
+  "end_en": "The Spring Festival has ended. See you next year!",
+  "maps": [
+    1002,
+    1003905
+  ],
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150235',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='150235',['Show']=false,['Red']=0}}",
+  "icon_click": "10527</S>CJMainTask2024_MainView",
+  "_icon": "[WhiteSnakeLegend 2026-10-14] official top-bar Fgui button 150235 'Bless All' (fguibtnconfig); clicks: Base/WhiteSnakeLegend/WhiteSnakeLegendUi.cs (msg 10527 tMsg_Info['NewYear25'])",
+  "notes": "2026-10-14. Spring Festival 2025 (Year of the Snake) 'Bless All', entry 1 'White Snake Mark' (Questinfo 8350-8358, Prize Fortune Knack 3351698 on 7 of them). Official dates Jan. 21 - Feb. 10 (Cn_Res STR_LUAUI_25CHUNJIE_MAIN_HDSJ). Official map 1003905 = doc 12734 2025tsf_new (FestivalMaps\\maps.txt, confidence B). NOT on this server: Green Snake Adventure, Bless All city rebuilding, Nian carnival, White Snake awakening (Radiant Pearls), Blessing Pool, points. See README_AR.md.",
+  "_owner": "WhiteSnakeLegend 2026-10-14",
+  "_quests": [
+    8350,
+    8351,
+    8352,
+    8353,
+    8354,
+    8355,
+    8356,
+    8357,
+    8358
+  ],
+  "_officialMaps": {
+    "1003905": 12734
+  },
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "01-21",
+    "end": "02-10"
+  }
+}

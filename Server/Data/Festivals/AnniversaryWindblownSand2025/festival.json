@@ -1,0 +1,27 @@
+{
+  "key": "AnniversaryWindblownSand2025",
+  "name_ar": "العيد السنوي 2025: رمال الريح (Dune)",
+  "name_en": "CO 22nd Anniversary: Wind-blown Sand",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] Anniversary: only the newest official edition (Anniversary2026) runs on its yearly dates, like the official server; this older edition runs only with @festival on AnniversaryWindblownSand2025. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأ العيد السنوي (Wind-blown Sand)! دوس على الزرار اللي فوق.",
+  "announce_en": "Celebrating CO`s 22nd anniversary, envoys from Western Regions bring congratulations! Click the anniversary button at the top.",
+  "end_ar": "انتهى حدث Wind-blown Sand. نشوفكم السنة الجاية!",
+  "end_en": "22 years of adventures! Let`s continue wielding swords and laughing through the world! See you next year!",
+  "maps": [],
+  "notes": "AnniversaryWindblownSand2025 (2026-10-14, batch 3): official 2025 anniversary 'Wind-blown Sand' (Dune / West Journey) entry only - top-bar Fgui button 10611 (WindBlownSand2025_OpenMainView, msg 10611 Anniversary25), main window Anniversary25Main (opens in Twin City/Market only, official [Sys][NoCity]). Code: Base/AnniversaryWindblownSand2025/AnniversaryWindblownSand2025Ui.cs. Real data: Luminut 3600780 bag count. Dune Search, West Journey, Blessing, store: polite message, nothing granted. Stage states (Dune open) are derived. The second 2025 anniversary button 10631 (Jubilee, May 13 - June 9) is the sibling festival AnniversaryJubilee2025.",
+  "_owner": "AnniversaryWindblownSand2025",
+  "icon_show": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='10611',['Show']=true,['Red']=0}}",
+  "icon_hide": "FguiActivityMenu_UpdateSigle|{['Code']=200,['Data']={['Id']='10611',['Show']=false,['Red']=0}}",
+  "icon_click": "10611</S>WindBlownSand2025_OpenMainView",
+  "_icon": "[AnniversaryWindblownSand2025 2026-10-14] official top-bar Fgui button 10611 (img lua_2025qqznq_btn5); clicks msg 10611 -> Base/AnniversaryWindblownSand2025/AnniversaryWindblownSand2025Ui.cs.",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "04-22",
+    "end": "05-12",
+    "_note": "Official: Cn_Res STR_LUAUI_ANNIVERSARY_MAIN_TIME / STR_FGUI_150273_1 'Duration: Apr. 22, 2025 - May 12, 2025'. Server local time."
+  }
+}

@@ -1,0 +1,55 @@
+# DreamTheater - festival NPCs (2026-10-14 official rebuild). Format id,type,mesh,map,x,y[,dynamic]
+# Spec: tools\Festivals\DreamTheater_OFFICIAL_AR.md. Positions = client Questinfo.ini (official), walk-checked on the server DMap.
+# Looks = the OFFICIAL looks: the 2024 opera cut-scenes (client Script\ValentineDay2024\*.lua AddSimplePlayer: Agnes 1062442,
+#   Leon 1061780, Odette 1061790, Maryan 1061460, Jenkins 1061470 (see below), Daisy 1060420, Oliver 35630), the ft client tags [黑天鵝之戀]
+#   (NpcX 106042 黛西, 106043 米婭母親, npc.ini 3738 幸運喵喵) and the official dynamic NPCs of npc.ini (3579 HiddenCorner,
+#   3580 SecretCorner, 3581 DirtyFloor, 3582 MessyStage, 3583 StainedDesk, 3633 Herb 靈草, 3566 TrailSpot 蹤跡點).
+#   Every mesh exists in every client. The English client shows other names for some of them (Ken, Alex, Antonio, SiWuxie,
+#   Off-keySinger, ...): the client patch (ini\NpcX.ini + ini\npc.ini) only renames those labels. No mesh here is used by Npcs.txt.
+# [DreamTheater 2026-10-15 video pass] Maryan / Jenkins use the official cut-scene looks NpcX 106146 / 106147 again: the client_test NpcX.ini of 12:01 (official 7961 type merge) has no 106148 / 106150 any more (those NPCs were invisible), and client edits may only copy official data.
+#   NpcX 106146 / 106147, but the current official client names those two types Miko / Maria (BandsTrouble, Script/SummerActive/2024/juqing*.lua):
+#   TQ re-used the ids; there is no other official Maryan / Jenkins type in any client (en / ft NpcX, npc.ini). So 106146 / 106147 are back to
+#   the official Miko / Maria in client_test + PATCH_CLIENT ini/NpcX.ini, and DreamTheater uses two copies of the same looks in FREE NpcX ids:
+#   106148 Maryan / 106150 Jenkins [SwanLakeRomance] (client patch; the owner restarts the client to see the names).
+#
+# ---- Twin City (event square). Agnes/Fluffy/Flori have no official id named by these quests -> festival range.
+8830000,2,1062440,1002,370,437  # Agnes [DreamTheater] (32649): story + Dream Theater menu (module Base\DreamTheater), 5735 + daily contracts
+8830001,2,1051180,1002,367,444  # Fluffy [TheaterShop] (32650, the pink bunny; NpcX 105118 FluffyCloud): Wish Twinkle Coin exchanges
+8830002,2,1063990,1002,381,452  # Flori [DreamFlowerShop] (look = NpcX 106399, renamed by the patch): flower certificates -> Twinkle
+#
+# ---- Recruitment 1: Zhenwu Temple 11568
+32606,2,24490,11568,248,214  # Irwin (npc.ini 2449; ft name 歐文)
+32607,2,38860,11568,418,288  # LoggingSpot / Pine (npc.ini 3886)
+# ---- Recruitment 2: Wave Chaser 11780
+32608,2,1060420,11780,216,174  # Daisy (official look NpcX 106042, ft 黛西【黑天鵝之戀】)
+32609,2,42850,11780,209,213  # BalloonFlower / herb 1 of 5739 (npc.ini 4285)
+8830012,2,36330,11780,206,210  # Figwort / herb 2 of 5739 (npc.ini 3633 Herb 靈草)
+8830013,2,36330,11780,216,220  # herb 3 of 5739 (npc.ini 3633 Herb)
+# ---- Recruitment 3: Twisted City 11222 (the horse field is a private copy: quests.json instance HorseTrainingField)
+32612,2,35630,11222,213,177  # Oliver (cut-scene mesh 35630 = npc.ini 3563)
+# ---- Recruitment 4: Dragon's Ascension 11912
+32610,2,33250,11912,391,418  # Mia (npc.ini 3325)
+32611,2,1060430,11912,346,404  # Mia`sMother (official look NpcX 106043, ft 米婭母親【黑天鵝之戀】)
+# ---- Recruitment 5/6: Warlord Shrine 11041
+32615,2,1061460,11041,79,95  # Maryan (official cut-scene look NpcX 106146, see the note above)
+32616,2,1061470,11041,111,67  # Jenkins (official cut-scene look NpcX 106147)
+# ---- Recruitment 7: Toad Mountain 10764
+32618,2,35660,10764,223,127  # LuckyKitty`sTrial (npc.ini 3566 TrailSpot 蹤跡點)
+32617,2,37380,10764,202,127  # LuckyKitty (npc.ini 3738 Armor=80730000 [SwanLakeRomance] = the official cat)
+#
+# ---- Dream Theater 12431 = official Questinfo map (FestivalMaps maps.txt -> doc 12430; cleaning/glasses = instance 1002561, same doc). dynamic=1: seen in every private copy.
+32619,2,24490,12431,107,106,1  # Irwin (theater)
+32620,2,1060420,12431,156,127,1  # Daisy (theater)
+32621,2,33250,12431,166,152,1  # Mia (theater)
+32622,2,35630,12431,163,176,1  # Oliver (theater)
+32623,2,1061460,12431,135,180,1  # Maryan (theater)
+32624,2,1061470,12431,127,128,1  # Jenkins (theater): Knight`s Covenant duel
+32625,2,37380,12431,149,126,1  # LuckyKitty (theater)
+8830003,2,1061780,12431,124,152,1  # Leon [SwanLakeRomance] (32652) + "Return to Twin City."
+8830004,2,1061790,12431,133,146,1  # Odette [SwanLakeRomance] (32653): the daily performance + Settlement (module)
+8830014,2,35810,12431,122,164,1  # DirtyFloor (npc.ini 3581)
+8830015,2,35820,12431,155,168,1  # MessyStage (npc.ini 3582)
+8830016,2,35830,12431,106,129,1  # StainedDesk (npc.ini 3583)
+8830017,2,35810,12431,127,104,1  # DirtyFloor (npc.ini 3581)
+8830018,2,35790,12431,104,147,1  # HiddenCorner (npc.ini 3579, 5754 reading glasses)
+8830019,2,35800,12431,166,124,1  # SecretCorner (npc.ini 3580, 5754 reading glasses)

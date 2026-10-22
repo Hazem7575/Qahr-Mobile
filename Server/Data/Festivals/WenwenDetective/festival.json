@@ -1,0 +1,56 @@
+{
+  "key": "WenwenDetective",
+  "name_ar": "المحقق وينوين (Goosie Adventure - Titan Realm)",
+  "name_en": "Wenwen the Detective (Titan Realm)",
+  "enabled": true,
+  "schedule": {
+    "type": "manual",
+    "_note": "[FestivalYears 2026-10-14] ChildrensDay: only the newest official edition (ChildrensDay2025) runs on its yearly dates, like the official server; this older edition runs only with @festival on WenwenDetective. Old yearly schedule kept in _schedule_yearly."
+  },
+  "announce_ar": "بدأت Goosie Adventure! دوس على زرار Goosie Adventure اللي فوق وروح Titan Realm تساعد Wenwen.",
+  "announce_en": "The Goosie Adventure has started! Click Goosie Adventure on the top bar and go to Titan Realm to help Wenwen.",
+  "end_ar": "Goosie Adventure خلصت. نشوفكم السنة الجاية!",
+  "end_en": "The happy Goosie Adventure has come to an end. Looking forward to all of them growing up into excellent adult geese!",
+  "maps": [
+    1002,
+    1002614,
+    1002615,
+    1002616,
+    1002617,
+    1002618,
+    1002619,
+    1002628,
+    1002629
+  ],
+  "icon_show": "DlgChildrenDay_ShowBtn|{['Code']=200,['Data']={['Rewardflag']=0}}",
+  "icon_hide": "StrToTable|LuaUIMgr_HideDialog(\"DlgChildrenDayBtn\")",
+  "_icon": "[WenwenDetective 2026-10-14] official Children's Day 2024 button DlgChildrenDayBtn (Dialog_Info 1490-btn, EN 'Goosie Adventure'); click msg 10406 ChildrenDayNpc2024_OpenMain -> Base\\WenwenDetective\\WenwenDetectiveUi.cs",
+  "notes": "Rebuilt 2026-10-14 (WenwenDetective agent). Official Children's Day 2024 'Goosie Adventure' (luaUiRes[1490] ActTime 'May 28 - June 10'; Server_Key tChildrenDayNpc2024 / tGiantIsland / tTrialGround). SHARED BUTTON: DlgChildrenDayBtn is shared with JourneyOfWonder (Dinowolf Isle, quests 5861/5862). JourneyOfWonder's maps 1002628/1002629 are still unresolved in maps.txt, so WenwenDetective owns the icon for now. When JourneyOfWonder becomes playable, give it the SAME icon_show/icon_hide (FestivalIcons reference-counts one key) or merge it here. Window: Base\\WenwenDetective\\WenwenDetectiveUi.cs (msg 10406). Island 3 'Titan Realm' = this quest chain (Questinfo map name TitanRealm; maps 1002614-1002619 -> doc 12519 2024tsf_new). Islands 1/2/4 (Goose Park, Dinowolf Isle, Titan Vault), the egg snatching, points, ranking and draw have no official server data -> polite 'not open' messages. Deviations (README_AR.md): 5847 prequest 5846 (Wenwen's Magic Bean plot) is not in Questinfo -> prequest 0. 5851 'Defeat MysteriousFigure' has no monster data anywhere -> visit of its spot. NPC looks are PROXIES: no client mesh is named Wenwen/Mimi/Footprints/DetectiveTool/Feathers/TastyGrass/YummyBerry/WayHome. | COMPLETE 2026-10-15: JourneyOfWonder merged (5861/5862 on Dinowolf Isle caves 1002628/1002629 = docs 12511/12512, island 2 of the window), 5851 MysteriousFigure is a real kill, festival monsters Eagle/MysteriousFigure/Snake (996701-996703, derived looks), Titan Vault (island 4) golden-egg draw with Bubble Hammers (official preview rewards MidAutumn_Config[10406]), Goosie Points + stage rewards (official 'Total' rows, derived thresholds), fragment combining (official 30/50). NPC ids 8853101-8853118 added.",
+  "_quests": [
+    5847,
+    5848,
+    5849,
+    5850,
+    5851,
+    5852,
+    5861,
+    5862
+  ],
+  "_officialMaps": [
+    1002614,
+    1002615,
+    1002616,
+    1002617,
+    1002618,
+    1002619,
+    1002628,
+    1002629
+  ],
+  "_sharedIcon": "DlgChildrenDayBtn (JourneyOfWonder is MERGED here 2026-10-15; its folder is only a pointer)",
+  "_owner": "wenwen-agent",
+  "_schedule_yearly": {
+    "type": "yearly",
+    "start": "05-28",
+    "end": "06-10"
+  }
+}

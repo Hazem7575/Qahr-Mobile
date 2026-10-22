@@ -1,0 +1,219 @@
+{
+ "_readme": "[HalloweenSenluo2023 2026-10-15] Macabre Treasury (Count Dracula 8823001, option 'Macabre Treasury (Exchange Store).'). Items = official 2023 Halloween rewards; prices DERIVED.",
+ "npcText": {
+  "8823001": {
+   "ar": "مملكة الرعب مفتوحة. بدّل عملات Macabre Coin بكنوز الخزنة.",
+   "en": "Count Dracula: The Macabre Mall has been established for a hundred years, specializing in trading mysterious and rare treasures. Exchange your Macabre Coins here."
+  }
+ },
+ "exchanges": [
+  {
+   "id": "treasury_wedding",
+   "npc": 8823001,
+   "text_ar": "صندوق Macabre Wedding",
+   "text_en": "Macabre Wedding Box (500 Macabre Coins)",
+   "cost": {
+    "items": [
+     {
+      "id": 3600645,
+      "count": 500
+     }
+    ]
+   },
+   "give": {
+    "items": [
+     {
+      "id": 3345606,
+      "count": 1,
+      "bound": true
+     }
+    ]
+   },
+   "repeat": true,
+   "minLevel": 80,
+   "_note": "Macabre Treasury: the item is an official 2023 Halloween reward (itemtype / Server_Key); the price in Macabre Coins is DERIVED"
+  },
+  {
+   "id": "treasury_rose",
+   "npc": 8823001,
+   "text_ar": "صندوق Macabre Rose",
+   "text_en": "Macabre Rose Box (500 Macabre Coins)",
+   "cost": {
+    "items": [
+     {
+      "id": 3600645,
+      "count": 500
+     }
+    ]
+   },
+   "give": {
+    "items": [
+     {
+      "id": 3345607,
+      "count": 1,
+      "bound": true
+     }
+    ]
+   },
+   "repeat": true,
+   "minLevel": 80,
+   "_note": "Macabre Treasury: the item is an official 2023 Halloween reward (itemtype / Server_Key); the price in Macabre Coins is DERIVED"
+  },
+  {
+   "id": "treasury_wings",
+   "npc": 8823001,
+   "text_ar": "صندوق Macabre Wings",
+   "text_en": "Macabre Wings Box (500 Macabre Coins)",
+   "cost": {
+    "items": [
+     {
+      "id": 3600645,
+      "count": 500
+     }
+    ]
+   },
+   "give": {
+    "items": [
+     {
+      "id": 3345608,
+      "count": 1,
+      "bound": true
+     }
+    ]
+   },
+   "repeat": true,
+   "minLevel": 80,
+   "_note": "Macabre Treasury: the item is an official 2023 Halloween reward (itemtype / Server_Key); the price in Macabre Coins is DERIVED"
+  },
+  {
+   "id": "treasury_nlfrag",
+   "npc": 8823001,
+   "text_ar": "قطعة Night Legend",
+   "text_en": "Night Legend Fragment (300 Macabre Coins)",
+   "cost": {
+    "items": [
+     {
+      "id": 3600645,
+      "count": 300
+     }
+    ]
+   },
+   "give": {
+    "items": [
+     {
+      "id": 3345620,
+      "count": 1,
+      "bound": true
+     }
+    ]
+   },
+   "repeat": true,
+   "minLevel": 80,
+   "_note": "Macabre Treasury: the item is an official 2023 Halloween reward (itemtype / Server_Key); the price in Macabre Coins is DERIVED"
+  },
+  {
+   "id": "treasury_gcfrag",
+   "npc": 8823001,
+   "text_ar": "قطعة Gory Count",
+   "text_en": "Gory Count Fragment (300 Macabre Coins)",
+   "cost": {
+    "items": [
+     {
+      "id": 3600645,
+      "count": 300
+     }
+    ]
+   },
+   "give": {
+    "items": [
+     {
+      "id": 3345619,
+      "count": 1,
+      "bound": true
+     }
+    ]
+   },
+   "repeat": true,
+   "minLevel": 80,
+   "_note": "Macabre Treasury: the item is an official 2023 Halloween reward (itemtype / Server_Key); the price in Macabre Coins is DERIVED"
+  },
+  {
+   "id": "treasury_rose1",
+   "npc": 8823001,
+   "text_ar": "Gory Rose",
+   "text_en": "Gory Rose (300 Macabre Coins)",
+   "cost": {
+    "items": [
+     {
+      "id": 3600645,
+      "count": 300
+     }
+    ]
+   },
+   "give": {
+    "items": [
+     {
+      "id": 3345621,
+      "count": 1,
+      "bound": true
+     }
+    ]
+   },
+   "repeat": true,
+   "minLevel": 80,
+   "_note": "Macabre Treasury: the item is an official 2023 Halloween reward (itemtype / Server_Key); the price in Macabre Coins is DERIVED"
+  },
+  {
+   "id": "treasury_mount",
+   "npc": 8823001,
+   "text_ar": "صندوق Mount Encore",
+   "text_en": "Mount Encore Box (3000 Macabre Coins)",
+   "cost": {
+    "items": [
+     {
+      "id": 3600645,
+      "count": 3000
+     }
+    ]
+   },
+   "give": {
+    "items": [
+     {
+      "id": 3345672,
+      "count": 1,
+      "bound": true
+     }
+    ]
+   },
+   "repeat": true,
+   "minLevel": 80,
+   "_note": "Macabre Treasury: the item is an official 2023 Halloween reward (itemtype / Server_Key); the price in Macabre Coins is DERIVED"
+  },
+  {
+   "id": "treasury_garment",
+   "npc": 8823001,
+   "text_ar": "صندوق Garment Encore",
+   "text_en": "Garment Encore Box (3000 Macabre Coins)",
+   "cost": {
+    "items": [
+     {
+      "id": 3600645,
+      "count": 3000
+     }
+    ]
+   },
+   "give": {
+    "items": [
+     {
+      "id": 3345673,
+      "count": 1,
+      "bound": true
+     }
+    ]
+   },
+   "repeat": true,
+   "minLevel": 80,
+   "_note": "Macabre Treasury: the item is an official 2023 Halloween reward (itemtype / Server_Key); the price in Macabre Coins is DERIVED"
+  }
+ ]
+}

@@ -1,0 +1,28 @@
+{
+  "key": "LanternHare",
+  "name_ar": "الأرنب الضايع والفوانيس",
+  "name_en": "Lost Hare & Lanterns",
+  "enabled": false,
+  "schedule": {
+    "type": "manual"
+  },
+  "announce_ar": "بدأ مهرجان الأرنب الضايع والفوانيس!",
+  "announce_en": "The Lost Hare & Lanterns festival has started!",
+  "maps": [],
+  "notes": "DISABLED (Agent 4, 2026-10-13): not playable. Questinfo TypeId 8 quests 4927-4932 on maps 11441/11442/11443, which are in neither client GameMap.dat (the client can't load them) and match no event doc. Monsters LittleHare/Lantern/LittleFox/GeneralFlame have no row in client monster.dat and no server data. Prizes are blessings (text only, no item id). No content files on purpose; README_AR.md lists what is missing.",
+  "_quests": [
+    4927,
+    4928,
+    4929,
+    4930,
+    4931,
+    4932
+  ],
+  "_officialMaps": [
+    11441,
+    11442,
+    11443
+  ],
+  "_owner": "agent4",
+  "_batch3": "[batch3 2026-10-14] Still disabled. Official event = Mid-Autumn 2021 'Moon Adventure' (tMoonAdventure2021, Jade Chariot item to Laurel Pavilion 11441 / Frost Yard 11442 / Moonset Hall 11443). No button or window exists in the 7957 client, the three maps are in neither client GameMap.dat, and the monsters have no data. Needs the 2021 maps in the client; nothing official to wire."
+}

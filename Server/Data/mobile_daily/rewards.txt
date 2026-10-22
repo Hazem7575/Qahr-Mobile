@@ -1,0 +1,26 @@
+# QahrMobile: activity point chests of the mobile Daily screen (CMsgActivityTaskReward 2009 claims 10..24).
+# Re-read when saved. Docs: D:\conquer\conquer-mobile\docs\DAILY_TASKS.md
+#
+# The client (activity_reward_type.dat) shows 5 chests per grade; grade = the hero's reborn count (CPlayer 0xb78,
+# Metempsychosis): ids 10..14 grade 0, 15..19 grade 1, 20..24 grade 2. index = chest 1..5 (bit index-1 of the
+# claimed mask sent in 2198 type 2 sub 2). The client's chest items (P1..P5 Active Pack 3335446 3349823 3335448
+# 3335449 3335450) do not exist on the server, so the server gives their contents with server items that both
+# item tables know.
+# items: "itemId[xCount]" separated by ";" (all bound); "cps:N" = bound CPs; "-" = nothing.
+#
+# id  grade index points items
+10    0     1     60     723017;730002
+11    0     2     120    723700;730003
+12    0     3     180    723700x2;1088001x3
+13    0     4     240    723700x3;723017
+14    0     5     300    1088000;cps:50
+15    1     1     60     723017;730002
+16    1     2     120    723700;730003
+17    1     3     180    723700x2;1088001x3
+18    1     4     240    723700x3;723017
+19    1     5     300    1088000;cps:50
+20    2     1     60     723017;730002
+21    2     2     120    723700;730003
+22    2     3     180    723700x2;1088001x3
+23    2     4     240    723700x3;723017
+24    2     5     300    1088000;cps:50

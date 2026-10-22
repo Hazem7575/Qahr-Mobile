@@ -1,0 +1,13 @@
+{
+  "_note": "[QixiQingqiu2023 2026-10-15] Peachland Life 'Natural Enemies' (Server_Key tQiXiPart2_DelText[Sys][7] '%s led %s to invade. Defeat %s to bring out %s and strike it down!'): the 4 official boss/underling pairs on Jade Hill 12184. DERIVED: boxes (open ground of the qingqiu_new DMap), counts and respawn times; the official fight is a personal script, here the pack lives on the map and the daily errand counts your kills (QixiHooks.OnKill).",
+  "spawns": [
+    { "monster": "VanwardWolf", "map": 12184, "x": 95, "y": 112, "w": 16, "h": 14, "count": 6, "respawn": 30 },
+    { "monster": "AlphaWolf", "map": 12184, "x": 95, "y": 112, "w": 16, "h": 14, "count": 1, "respawn": 120 },
+    { "monster": "CoyoteWizard", "map": 12184, "x": 132, "y": 140, "w": 16, "h": 14, "count": 6, "respawn": 30 },
+    { "monster": "AlphaCoyote", "map": 12184, "x": 132, "y": 140, "w": 16, "h": 14, "count": 1, "respawn": 120 },
+    { "monster": "EagleAssassin", "map": 12184, "x": 160, "y": 140, "w": 16, "h": 14, "count": 6, "respawn": 30 },
+    { "monster": "HeadEagle", "map": 12184, "x": 160, "y": 140, "w": 16, "h": 14, "count": 1, "respawn": 120 },
+    { "monster": "FoxHunter", "map": 12184, "x": 100, "y": 152, "w": 16, "h": 14, "count": 6, "respawn": 30 },
+    { "monster": "OneEyedChief", "map": 12184, "x": 100, "y": 152, "w": 16, "h": 14, "count": 1, "respawn": 120 }
+  ]
+}

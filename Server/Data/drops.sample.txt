@@ -1,0 +1,32 @@
+# ============================================================================
+#  File drops (Monsters\*.ini: drop_* / drop_money / drop_hp / drop_mp / [SpecialDrop])
+#  To use: copy this file to drops.txt (same folder), edit, then reload live:
+#     server console:  reloaddrops      in game (owner):  @reloaddrops      AdminApi op:  reloaddrops
+#  No drops.txt = file drops OFF (the server only gives its hard-coded drops, as before).
+#  File drops come IN ADDITION to the hard-coded drops (VIP/auto-hunt CPs, ExpBalls, DragonBalls, maps...).
+#  Bosses (Boss != 0) and event/summoned monsters (RemoveOnDead) never use the file table (see event_monsters).
+#  Items lie on the floor owned by the killer (normal pickup protection), max one table item per kill.
+# ============================================================================
+
+# master switch: 1 = on, 0 = off
+file_drops=1
+
+# scales item_chance and money_chance; also divides the [SpecialDrop] "every N" (2 = twice as often). 0.01 .. 20
+rate_multiplier=1.0
+
+# hard cap of floor items from the file table per kill (silver counts too). 0 .. 10
+max_items_per_kill=3
+
+# [SpecialDrop] counters: item every N-th kill of that monster type (server wide). 0 = off
+# careful: e.g. TombBat drops a Saddle every 4th kill, Python a PythonHeart every 5th.
+special_drop=0
+
+# % per kill for one table item: 30% the drop_hp/drop_mp potion, else equipment from the drop_* levels
+# (99 = that slot never drops; quality ~10% refined / 4.5% unique / 3.4% elite / 2.8% super, some +1/+2, sockets, bless)
+item_chance=5
+
+# % per kill for silver between drop_money/2 and drop_money (monsters with drop_money=0 never drop silver)
+money_chance=20
+
+# 1 = also monsters spawned with RemoveOnDead (event / summoned spawns)
+event_monsters=0

@@ -1,0 +1,21 @@
+# QahrMobile packet layouts: Activities, Chi, auto hunt, arena. The format is described in Networking\Mobile\MobileLayouts.Loader.cs.
+
+# CMsgTrainingVitalityInfo 10204 (Chi): action u16 4, uid 6, points 10, locks 14, count 18, units from 22
+# = MsgChiInfo.ChiInfoCreate / AddChiItem
+[2299 MsgTrainingVitalityInfo same]
+
+# CMsgStatisticDaily 10174: mode u8 4, type 5, sub 9, value 13 = MsgActivityRewardsInfo
+[2198 MsgStatisticDaily same]
+
+# CMsgActivityTask 10316: mode u8 4, count u8 5, units at 6 = MsgActivityTasks.ActivityTasksCreate
+[2250 MsgActivityTask same]
+
+# CMsgActivityTaskReward 10105: id u8 4 = MsgActivityClaims
+[2009 MsgActivityTaskReward same]
+
+# CMsgHangUp 10155 (auto hunt): action u16 4 (0..7), u64 6, exp u64 14 = MsgAutoHunt.AutoHuntCreate
+[2133 MsgHangUp same]
+
+# CMsgQualifyingDetailInfo 10191 (arena): the client asks with an empty struct; the answer is
+# today rank 4, 0, status 12, total win 16, lose 20, today win 24, battles 28, honor 32/36, points 40 = MsgArenaInfo
+[2033 MsgQualifyingDetailInfo same]

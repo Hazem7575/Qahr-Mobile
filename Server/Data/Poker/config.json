@@ -1,0 +1,227 @@
+{
+ "_readme": "[Poker 2026-10-14] New Texas Hold'em config. 'official' = copied from the client (ini/luacfg newtexas.lua NewTexasTableList) or the official server tables in Infinity[DB]\newtexas_*.txt. 'derived' = not in any client/server data, chosen by us.",
+ "enabled": true,
+ "cash": {
+  "_levels": "official: client NewTexasTableList (silver buy-in range; bet_unit = big blind)",
+  "levels": [
+   {
+    "id": 1,
+    "min_enter": 20000,
+    "max_enter": 200000,
+    "bet_unit": 200,
+    "type": 0
+   },
+   {
+    "id": 2,
+    "min_enter": 200000,
+    "max_enter": 2000000,
+    "bet_unit": 2000,
+    "type": 0
+   },
+   {
+    "id": 3,
+    "min_enter": 2000000,
+    "max_enter": 20000000,
+    "bet_unit": 20000,
+    "type": 0
+   },
+   {
+    "id": 4,
+    "min_enter": 20000000,
+    "max_enter": 200000000,
+    "bet_unit": 200000,
+    "type": 0
+   },
+   {
+    "id": 5,
+    "min_enter": 200000000,
+    "max_enter": 2000000000,
+    "bet_unit": 2000000,
+    "type": 0
+   },
+   {
+    "id": 6,
+    "min_enter": 2000000000,
+    "max_enter": 20000000000,
+    "bet_unit": 20000000,
+    "type": 0
+   },
+   {
+    "id": 9,
+    "min_enter": 20000,
+    "max_enter": 200000,
+    "bet_unit": 200,
+    "type": 1
+   },
+   {
+    "id": 10,
+    "min_enter": 200000,
+    "max_enter": 2000000,
+    "bet_unit": 2000,
+    "type": 1
+   },
+   {
+    "id": 11,
+    "min_enter": 2000000,
+    "max_enter": 20000000,
+    "bet_unit": 20000,
+    "type": 1
+   },
+   {
+    "id": 12,
+    "min_enter": 20000000,
+    "max_enter": 200000000,
+    "bet_unit": 200000,
+    "type": 1
+   },
+   {
+    "id": 13,
+    "min_enter": 200000000,
+    "max_enter": 2000000000,
+    "bet_unit": 2000000,
+    "type": 1
+   },
+   {
+    "id": 14,
+    "min_enter": 2000000000,
+    "max_enter": 20000000000,
+    "bet_unit": 20000000,
+    "type": 1
+   },
+   {
+    "id": 17,
+    "min_enter": 20000,
+    "max_enter": 200000,
+    "bet_unit": 200,
+    "type": 2
+   },
+   {
+    "id": 18,
+    "min_enter": 200000,
+    "max_enter": 2000000,
+    "bet_unit": 2000,
+    "type": 2
+   },
+   {
+    "id": 19,
+    "min_enter": 2000000,
+    "max_enter": 20000000,
+    "bet_unit": 20000,
+    "type": 2
+   },
+   {
+    "id": 20,
+    "min_enter": 20000000,
+    "max_enter": 200000000,
+    "bet_unit": 200000,
+    "type": 2
+   },
+   {
+    "id": 21,
+    "min_enter": 200000000,
+    "max_enter": 2000000000,
+    "bet_unit": 2000000,
+    "type": 2
+   },
+   {
+    "id": 22,
+    "min_enter": 2000000000,
+    "max_enter": 20000000000,
+    "bet_unit": 20000000,
+    "type": 2
+   },
+   {
+    "id": 25,
+    "min_enter": 20000,
+    "max_enter": 200000,
+    "bet_unit": 200,
+    "type": 3
+   },
+   {
+    "id": 26,
+    "min_enter": 200000,
+    "max_enter": 2000000,
+    "bet_unit": 2000,
+    "type": 3
+   },
+   {
+    "id": 27,
+    "min_enter": 2000000,
+    "max_enter": 20000000,
+    "bet_unit": 20000,
+    "type": 3
+   },
+   {
+    "id": 28,
+    "min_enter": 20000000,
+    "max_enter": 200000000,
+    "bet_unit": 200000,
+    "type": 3
+   },
+   {
+    "id": 29,
+    "min_enter": 200000000,
+    "max_enter": 2000000000,
+    "bet_unit": 2000000,
+    "type": 3
+   },
+   {
+    "id": 30,
+    "min_enter": 2000000000,
+    "max_enter": 20000000000,
+    "bet_unit": 20000000,
+    "type": 3
+   }
+  ],
+  "_derived": "rakePercent, rakeCapBigBlinds, noFlopNoDrop, actionSeconds, nextHandSeconds, maxTablesPerLevel, sitOutHandsBeforeKick, requestCooldownMs are DERIVED",
+  "rakePercent": 5,
+  "rakeCapBigBlinds": 3,
+  "noFlopNoDrop": true,
+  "actionSeconds": 15,
+  "nextHandSeconds": 6,
+  "seats": 9,
+  "maxTablesPerLevel": 50,
+  "sitOutHandsBeforeKick": 3,
+  "requestCooldownMs": 300,
+  "enabledTypes": [
+   0,
+   2
+  ],
+  "_enabledTypes": "0 = Texas Hold'em, 2 = Omaha (no-limit, DERIVED). 1 'crazy' and 3 '3-card' are off: their rules are not in the client.",
+  "otherSeatOnlineFlag": 0,
+  "_otherSeatOnlineFlag": "2471 f1 for other players' seats. 1 = client draws the seat only if it already knows the player (cross-server info); 0 = seat drawn with the client's placeholder name. Keep 0 until verified live.",
+  "addTimeMaxPerHand": 2,
+  "addTimeCostBigBlinds": 1,
+  "_addTime": "addTimeMaxPerHand official (client lua GetAddTimeTimes = 2); cost DERIVED (silver = N big blinds)"
+ },
+ "sng": {
+  "_readme": "Sit & Go. Races/buy-ins/blind seconds/return rate/prizes/starting chips are OFFICIAL from Infinity[DB]\newtexas_sng_*.txt; maxPlayers 5 / minPlayers 3 official from client lua newtexas_sng. Blind schedule starts at newtexas_sng_stage row 1 for every race (DERIVED: stage_index mapping not recoverable). enabledRaces: 31-36 normal Texas; 37-42 'crazy' and 49-54 unknown variant are off; 43-48 Omaha (variant column 2, medium confidence) off by default.",
+  "enabledRaces": [
+   31,
+   32,
+   33,
+   34,
+   35,
+   36
+  ],
+  "maxPlayers": 5,
+  "minPlayers": 3
+ },
+ "boyi": {
+  "_readme": "BoYi (Poker Level) via 2234. 249 levels official (client BoYiTip.lua). EXP values are DERIVED (not in the client): EXP to next level = expBase + expPerLevel*(level-1); a played hand gives expPerHand, winning a pot adds expPerWin. Saved in Users\\<uid>.ini [Poker] BoYi=level|exp.",
+  "expBase": 100,
+  "expPerLevel": 50,
+  "expPerHand": 10,
+  "expPerWin": 10
+ },
+ "mtt": {
+  "_readme": "MTT. OFFICIAL from Infinity[DB]\newtexas_mtt_*.txt: Gold (31, 20,000 entry, daily 09:00-12:00) and Platinum (32, 200,000, 13:00/14:00), 100,000 start chips, 120 s levels, first blind row, min 50 / max 1000 players, 90% return, guarantee 25M / 100M, prize shares (type 4 rows = 1/10000 of the pool, 'up to rank'). DERIVED: SB = BB/2 and no ante, even split of a share between the ranks a row covers, table balancing, a cancelled game is refunded at once (official text says via mail), the 'honorGuarantee' switch, minPlayersOverride (0 = official).",
+  "enabled": true,
+  "enabledRaces": [
+   31,
+   32
+  ],
+  "minPlayersOverride": 0,
+  "honorGuarantee": true
+ }
+}

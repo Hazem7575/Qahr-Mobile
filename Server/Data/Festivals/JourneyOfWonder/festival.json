@@ -1,0 +1,26 @@
+{
+  "key": "JourneyOfWonder",
+  "name_ar": "رحلة العجايب (جزيرة الذئب الديناصور)",
+  "name_en": "Journey of Wonder (Dinowolf Isle)",
+  "enabled": false,
+  "schedule": {
+    "type": "manual"
+  },
+  "announce_ar": "بدأ حدث رحلة العجايب!",
+  "announce_en": "The Journey of Wonder event has started!",
+  "maps": [],
+  "notes": "MERGED into WenwenDetective (2026-10-15, COMPLETE phase): Dinowolf Isle caves 1002628/1002629 are resolved (FestivalMaps maps.txt -> docs 12511/12512). Quests 5861/5862, their NPCs (8853101-8853118), the Eagle/Snake monsters and spawns live in Festivals/WenwenDetective (same official Children's Day 2024 event, shared button DlgChildrenDayBtn, island 2 of its window). This folder stays disabled on purpose: it only points there.",
+  "_quests": [
+    5861,
+    5862
+  ],
+  "_officialMaps": [
+    1002628,
+    1002629
+  ],
+  "_owner": "WenwenDetective (holiday group agent)",
+  "_mergedInto": "WenwenDetective",
+  "icon_show": "",
+  "icon_hide": "",
+  "_batch3": "[batch3 2026-10-14] MERGED into WenwenDetective (same official Children's Day 2024 'Goosie Adventure' event, shared button DlgChildrenDayBtn / msg 10406). No second icon here on purpose. Dinowolf Isle is island 2 of WenwenDetective's window (Base\\WenwenDetective\\WenwenDetectiveUi.cs answers 'Dinowolf Isle isn`t open on this server yet'). Quests 5861/5862 stay disabled until 1002628/1002629 get a confirmed doc in FestivalMaps\\maps.txt and the Goosie/Flynn/Wenwen meshes and the Eagle monster are known; then add them to WenwenDetective (quests.json + island 2 in its window), not here."
+}

@@ -1,0 +1,25 @@
+{
+  "_note": "[NewYear2023 2026-10-14 / COMPLETE 2026-10-15] Official 2023 Spring Festival window (client msg 10170) + Miss Bunny's wishes (DlgID 1329) + boxes. OFFICIAL (client data): Laurel Branch 3340340, level 80, 3 stories, gift targets (3 stories / 5 classes / 8000 points), 32 points and 2 Spring Ingots per wish, wish cost 32/320, the 20 wheel items and 8 stage packs, box contents (itemtype texts). Everything marked DERIVED below is a balanced value chosen on this server because the official number is server-side.",
+  "festival": "LunarNewYear2023",
+  "minLevel": 80,
+  "hubNpc": 31153,
+  "giftScoreTarget": 8000,
+  "giftClassTarget": 5,
+  "pointsPerWish": 32,
+  "laurelGrandBag": [270, 500],
+  "laurelSmallBag": [25, 50],
+  "_derived": "wheelWeights (by the official slot colours white/green/blue/purple/yellow), stageAt (wishes needed for the 8 stage packs), cardDropPermille + cardDailyCap (Spring Greeting Cards from hunting), classRewardItem/Count (Class Card set reward), piggishCount spots and the NPC spots in Festivals\LunarNewYear2023\npcs.txt, teleportFromMaps.",
+  "wheelWeights": [15, 300, 140, 60, 2, 20, 140, 3, 60, 300, 140, 15, 60, 60, 2, 140, 300, 3, 140, 60],
+  "stageAt": [10, 20, 40, 60, 100, 150, 200, 300],
+  "cardDropPermille": 30,
+  "cardDailyCap": 10,
+  "classRewardItem": 3340333,
+  "classRewardCount": 1,
+  "piggishCount": 10,
+  "teleportFromMaps": [1002, 1000, 1011, 1015, 1020, 1036, 12019, 12021, 12022, 12023, 12024],
+  "lines": [
+    { "name": "Tiger Farewell", "firstQuest": 5442, "lastQuest": 5446, "map": 12021 },
+    { "name": "Bunny Spring", "firstQuest": 5447, "lastQuest": 5449, "map": 12022 },
+    { "name": "Poised Dragon", "firstQuest": 5450, "lastQuest": 5452, "map": 12023 }
+  ]
+}
