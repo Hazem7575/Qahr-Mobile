@@ -3220,6 +3220,8 @@ namespace Qahr.Mobile.Game.MsgServer
         {
             if (global::Qahr.Mobile.Phone.MobileQuestGuide.OnLuaCall(user, data.Strings))// QahrMobile: main-story Lua calls
                 return;
+            if (global::Qahr.Mobile.Phone.MobileWeekCard.OnLua(user, msg, data.Strings))// QahrMobile: Weekly Cards "</F>MonthCard_BuyFreeMonth"
+                return;
             if (data.Strings.Contains("</F>User_OpenDialog</N>3833</N>3</N>0</N>4200001"))
             {
                 data.ObjId = user.Player.UID;

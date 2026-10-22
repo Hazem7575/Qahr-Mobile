@@ -1,0 +1,6 @@
+2026-10-22 17:46:36 test22 (1001023) BUY packs 1 cost 19 gave [Stone(+2), UniversalRuneEssence x5]
+2026-10-22 17:47:06 test22 (1001023) BUY packs 2 cost 99 gave [Lineage Crystal x8, UniversalRuneEssence x10]
+2026-10-22 17:47:19 test22 (1001023) BUY packs 3 cost 199 gave [Lineage Seal x2, UniversalRuneEssence x20]
+2026-10-22 17:47:29 test22 (1001023) FREE gave [Stone(+1)]
+2026-10-22 17:47:29 test22 (1001023) MILESTONE 3 gave [Stone(+2)]
+2026-10-22 17:48:06 test22 (1001023) BUY7 cost 1999 start 1792702800

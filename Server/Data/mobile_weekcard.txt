@@ -1,0 +1,40 @@
+# QahrMobile: Welfare > "Weekly Cards" (client CDlgWeekdayCard / CMonthAndFundMgr), server code Mobile\MobileWeekCard.cs.
+# Re-read automatically when saved. Official numbers from the client: ini\month_card_type.ini (rows 10001..10006:
+# id@@type@@points/price@@days@@buy limit@@start@@end) and ini\luacfg\weekcard.dat (week_reward: rewards = "Certain Daily",
+# clim_rewards = "Random Daily").
+#
+# card <id> <days> <buy limit> <free|iap> [active points]
+#   free = bought in the game for nothing once the player has the active points of the day (Primary card,
+#          client sends the Lua call "</F>MonthCard_BuyFreeMonth");
+#   iap  = the client pays through the phone SDK (our QahrPay recharge page); the server only grants it
+#          (MobileWeekCard.Grant, or admin.py eventdata set uid=N event=mweekcard key=t.to<id> value=<unix end>).
+# daily <id> <items...>     claimed once a day while the card runs (itemId:count[:b], :b = bound = monoly 1)
+# random <id> <items...>    one of these is added to each daily claim
+# bundle <id> <card> <card> the combo product grants both cards
+card 10001 7 99 free 240
+daily 10001 730002:1:b 3314210:15:b 3354581:1
+card 10002 7 99 iap
+daily 10002 730004:3:b 760005:9 3350625:1 3355180:10
+random 10002 3344452:1
+card 10003 7 99 iap
+daily 10003 3354734:3 4060001:70 3339816:26 3339817:5
+random 10003 3344452:3 3344434:1:b
+bundle 10004 10002 10003
+
+# ---- Monthly Cards (Welfare > Monthly Cards, client CDlgFundMonth, ini\luacfg\fund.dat fund_month_reward,
+# month_card_type.ini rows 376/377: 30 days, buy limit 99). Same packets and state as the weekly cards.
+# onbuy <card> <items...>   "Reward upon Purchase", given once per grant (when the player is online, else at login)
+# product <iap id> <card>   real-money product (ini\iap.ini) -> card, for MobileWeekCard.GrantProduct
+card 376 30 99 iap
+onbuy 376 3350346:1:b
+daily 376 3314180:2:b 3353676:70:b
+card 377 30 99 iap
+onbuy 377 3350347:1:b
+daily 377 3314180:7:b 3353676:360:b
+product 782111 376
+product 782117 377
+product 782138 10002
+product 782139 10003
+product 782140 10004
+product 782141 10002
+product 782142 10003

@@ -31,8 +31,9 @@ namespace Qahr.Mobile.Game.MsgServer
         public static unsafe ServerSockets.Packet ServerTimerCreate(this ServerSockets.Packet stream)
         {
             stream.InitWriter();
-            DateTime now = DateTime.Now;
-            stream.ProtoBufferSerialize(new MsgDataProto() { Year = (uint)(now.Year - 1900), Month = (uint)(now.Month - 1), DayOfYear = (uint)now.DayOfYear, DayOfMonth = (uint)now.Day, Hour = (uint)now.Hour, Minute = (uint)now.Minute, Second = (uint)now.Second }); // [ProtoFix 2026-10-14] fields are uint now (all values >= 0)
+            // QahrMobile: same fields + #9 = unix seconds (client CHero::SetServerTimeStamp; Weekly Cards / Daily Packs compare
+            // their times with it, it was 0 before). The type lives in Mobile\MobileWeekCard.cs so this works without a restart.
+            stream.ProtoBufferSerialize(global::Qahr.Mobile.Phone.MobileWeekCard.Time());
 
             stream.Finalize(GamePackets.MsgData);
             return stream;

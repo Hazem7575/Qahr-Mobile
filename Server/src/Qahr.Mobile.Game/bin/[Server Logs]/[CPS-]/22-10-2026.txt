@@ -1,2 +1,6 @@
 [04:04:36 PM]: 2026-10-22 16:04:36 | UID=1001023 | Name=test22 | Old=1000 | New=990 | Diff=-10 | Method=Qahr.Mobile.Game.MsgServer.MsgShopClan.Process | File=MsgShopClan.cs | Line=130
 [04:06:57 PM]: 2026-10-22 16:06:57 | UID=1001023 | Name=test22 | Old=990 | New=989 | Diff=-1 | Method=Qahr.Mobile.Game.MsgServer.MsgShopClan.Process | File=MsgShopClan.cs | Line=130
+[05:46:36 PM]: 2026-10-22 17:46:36 | UID=1001023 | Name=test22 | Old=989 | New=970 | Diff=-19 | Method=Qahr.Mobile.Phone.MobileDailyGift.BuyPacks | File=Unknown | Line=0
+[05:47:06 PM]: 2026-10-22 17:47:06 | UID=1001023 | Name=test22 | Old=970 | New=871 | Diff=-99 | Method=Qahr.Mobile.Phone.MobileDailyGift.BuyPacks | File=Unknown | Line=0
+[05:47:20 PM]: 2026-10-22 17:47:19 | UID=1001023 | Name=test22 | Old=871 | New=672 | Diff=-199 | Method=Qahr.Mobile.Phone.MobileDailyGift.BuyPacks | File=Unknown | Line=0
+[05:48:06 PM]: 2026-10-22 17:48:06 | UID=1001023 | Name=test22 | Old=5000 | New=3001 | Diff=-1999 | Method=Qahr.Mobile.Phone.MobileDailyGift.Buy7 | File=Unknown | Line=0

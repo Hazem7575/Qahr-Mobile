@@ -2078,3 +2078,4 @@
 2026-10-22 17:20:03 map 11885 loaded in 6.5 ms | dmap=5.0 name=0.1 npcs=0.4 sob=0.6 portals=0.2 traps=0.1 monsters=0.2 gc=0.0
 2026-10-22 17:29:28 map 10428 loaded in 1.7 ms | dmap=0.4 name=0.1 npcs=0.3 sob=0.5 portals=0.1 traps=0.1 monsters=0.1 gc=0.0
 2026-10-22 17:30:15 map 10250 loaded in 49.1 ms | dmap=41.4 name=0.1 npcs=4.6 sob=0.5 portals=0.2 traps=0.1 monsters=2.3 gc=0.0
+2026-10-22 17:50:30 map 3071 loaded in 27.5 ms | dmap=3.8 name=0.1 npcs=0.4 sob=0.5 portals=0.2 traps=0.1 monsters=22.4 gc=0.0

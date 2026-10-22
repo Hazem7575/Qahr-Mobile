@@ -1720,6 +1720,9 @@ namespace Qahr.Mobile
                     // QahrMobile: guild auction 2084 / 10418 (Features\GuildAuction; no [PacketAttribute]: the registry is built at startup)
                     if (global::Qahr.Mobile.GuildAuction.GuildAuctionModule.TryHandle(obj.Game, stream, PacketID))
                         return;
+                    // QahrMobile: Welfare > Weekly Cards claim, MsgUserMonthCardAction 2251 (Mobile\MobileWeekCard.cs; the PC handler is commented out)
+                    if (global::Qahr.Mobile.Phone.MobileWeekCard.TryHandle(obj.Game, stream, PacketID))
+                        return;
                     Action<Client.GameClient, ServerSockets.Packet> hinvoker;
                     if (Pool.MsgInvoker.TryGetInvoker(PacketID, out hinvoker))
                     {

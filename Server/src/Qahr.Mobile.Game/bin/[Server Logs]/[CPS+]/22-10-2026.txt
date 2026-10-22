@@ -10,3 +10,6 @@
 [05:15:24 PM]: 2026-10-22 17:15:24 | UID=1001023 | Name=test22 | Old=0 | New=989 | Diff=+989 | Method=Qahr.Mobile.Database.ServerDatabase.LoadCharacterCore | File=ServerDatabase.cs | Line=1037
 [05:29:18 PM]: 2026-10-22 17:29:18 | UID=1001023 | Name=test22 | Old=0 | New=989 | Diff=+989 | Method=Qahr.Mobile.Database.ServerDatabase.LoadCharacterCore | File=Unknown | Line=0
 [05:31:44 PM]: 2026-10-22 17:31:44 | UID=1001023 | Name=test22 | Old=0 | New=989 | Diff=+989 | Method=Qahr.Mobile.Database.ServerDatabase.LoadCharacterCore | File=Unknown | Line=0
+[05:47:57 PM]: 2026-10-22 17:47:57 | UID=1001023 | Name=test22 | Old=672 | New=5000 | Diff=+4328 | Method=Qahr.Mobile.AdminApi.AdminApiServer.Cps | File=Unknown | Line=0
+[05:55:12 PM]: 2026-10-22 17:55:12 | UID=1001023 | Name=test22 | Old=0 | New=3001 | Diff=+3001 | Method=Qahr.Mobile.Database.ServerDatabase.LoadCharacterCore | File=Unknown | Line=0
+[06:03:45 PM]: 2026-10-22 18:03:45 | UID=1001023 | Name=test22 | Old=0 | New=3001 | Diff=+3001 | Method=Qahr.Mobile.Database.ServerDatabase.LoadCharacterCore | File=Unknown | Line=0

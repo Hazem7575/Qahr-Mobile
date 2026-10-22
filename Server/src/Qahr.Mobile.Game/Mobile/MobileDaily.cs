@@ -124,6 +124,13 @@ namespace Qahr.Mobile.Phone
 
         public static void Event(Client.GameClient c, string ev) { Event(c, ev, 0); }
 
+        /// <summary>QahrMobile: today's activity points (Weekly Cards: the Primary card needs 240, MobileWeekCard.cs).</summary>
+        public static uint TodayPoints(uint uid)
+        {
+            try { var st = Get(uid); lock (st) return st.Points; }
+            catch { return 0; }
+        }
+
         static void Event(Client.GameClient c, string ev, uint map)
         {
             try

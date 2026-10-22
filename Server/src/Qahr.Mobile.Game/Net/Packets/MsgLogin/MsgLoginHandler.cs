@@ -706,6 +706,7 @@ namespace Qahr.Mobile.Game.MsgServer
                         client.Player.winnerall = true;
                     }
                     client.Send(packet.CreateUserMonthCardLogin());
+                    global::Qahr.Mobile.Phone.MobileWeekCard.OnLogin(client, packet);// QahrMobile: Welfare > Weekly Cards owned by the player
                     //client.Player.QuestGUI.SendFullGUI(packet);
                     global::Qahr.Mobile.Phone.MobileQuestGuide.OnLoginFull(client);// QahrMobile: current main-story quest -> tracker
                     client.ClientFlag &= ~Client.ServerFlag.AcceptLogin;

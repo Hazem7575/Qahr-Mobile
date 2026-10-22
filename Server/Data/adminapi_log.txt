@@ -2282,3 +2282,9 @@
 2026-10-22 17:09:51 | OK   | reloadshops | - | Applied live: 171 shops (Shop.dat) + 504 emoney shops, 14100 items.
 2026-10-22 17:14:01 | OK   | setlevel | test22 (1001023) | level 1 -> 140
 2026-10-22 17:14:59 | OK   | kick | test22 (1001023) | 
+2026-10-22 17:47:57 | OK   | cps | test22 (1001023) | set 5000: 672 -> 5000
+2026-10-22 17:54:53 | OK   | eventdata | uid=1001023 | set mweekcard t.to10001 '' -> '1793221200'
+2026-10-22 17:54:53 | OK   | eventdata | uid=1001023 | set mweekcard c.buys10001 '' -> '1'
+2026-10-22 18:03:01 | OK   | eventdata | uid=1001023 | set mweekcard t.to376 '' -> '1795212000'
+2026-10-22 18:03:01 | OK   | eventdata | uid=1001023 | set mweekcard c.buys376 '' -> '1'
+2026-10-22 18:03:01 | OK   | eventdata | uid=1001023 | set mweekcard c.pend376 '' -> '1'
