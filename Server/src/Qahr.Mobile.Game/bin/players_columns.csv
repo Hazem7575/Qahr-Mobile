@@ -1,0 +1,274 @@
+# مصدر الحقيقة الوحيد لأعمدة جدول players.
+# كل سطر: OldKey|CleanColumn|Type   (OldKey = مفتاح الـ ini القديم = اسم العمود القديم)
+# منه يتولّد players_schema.sql (أسماء واضحة) + خريطة الربط التي يستخدمها PlayerStorage.
+# إصلاحات أنواع من الفحص: KillCount/BanCount -> INT UNSIGNED ، النصوص المسلسلة -> TEXT.
+UID|UID|INT UNSIGNED
+Name|Name|VARCHAR(255)
+Spouse|SpouseName|VARCHAR(255)
+Description|Description|VARCHAR(255)
+Body|BodyType|SMALLINT UNSIGNED
+Face|FaceType|SMALLINT UNSIGNED
+Avatar|Avatar|SMALLINT UNSIGNED
+Haire|Hair|INT UNSIGNED
+HairfaceStorage|HairFaceStorage|TEXT
+AparenceType|AppearanceType|INT UNSIGNED
+MountArmorColor|MountArmorColor|INT UNSIGNED
+FrameID|FrameID|SMALLINT UNSIGNED
+ChatSkinID|ChatSkinID|INT UNSIGNED
+Emoji|Emoji|INT UNSIGNED
+Class|Class|INT UNSIGNED
+FirstClass|FirstClass|INT UNSIGNED
+SecoundeClass|SecondClass|INT UNSIGNED
+Reborn|RebornCount|TINYINT UNSIGNED
+RebornItem|RebornItem|TINYINT UNSIGNED
+Reincanation|Reincarnation|TINYINT(1)
+FRL|FirstRebornLevel|TINYINT UNSIGNED
+SRL|SecondRebornLevel|TINYINT UNSIGNED
+SubProfInfo|SubProfessionInfo|TEXT
+Level|Level|SMALLINT UNSIGNED
+Experience|Experience|BIGINT UNSIGNED
+MinHitPoints|HitPoints|INT
+MinMana|Mana|SMALLINT UNSIGNED
+Agility|Agility|SMALLINT UNSIGNED
+Strength|Strength|SMALLINT UNSIGNED
+Vitaliti|Vitality|SMALLINT UNSIGNED
+Spirit|Spirit|SMALLINT UNSIGNED
+Atributes|AttributePoints|SMALLINT UNSIGNED
+ExtraAtributes|ExtraAttributePoints|SMALLINT UNSIGNED
+Map|MapID|INT UNSIGNED
+X|PosX|SMALLINT UNSIGNED
+Y|PosY|SMALLINT UNSIGNED
+PMap|PrevMapID|INT UNSIGNED
+PMapX|PrevMapX|SMALLINT UNSIGNED
+PMapY|PrevMapY|SMALLINT UNSIGNED
+Money|Money|BIGINT UNSIGNED
+WHMoney|WarehouseMoney|BIGINT UNSIGNED
+CpsBank|ConquerPointsBank|BIGINT UNSIGNED
+ConquerPoints|ConquerPoints|INT UNSIGNED
+BoundConquerPoints|BoundConquerPoints|INT
+DominoCode|DominoCode|BIGINT UNSIGNED
+DominoCoins|DominoCoins|BIGINT
+VirtutePoints|VirtuePoints|INT UNSIGNED
+DonatePoints|DonatePoints|DOUBLE
+VipLevel|VipLevel|TINYINT UNSIGNED
+VipTime|VipTime|BIGINT
+VipTimeback|VipTimeBack|TINYINT(1)
+BlessTime|BlessTime|INT UNSIGNED
+HeavenBlessing|HeavenBlessing|INT
+LostTimeBlessing|LostTimeBlessing|BIGINT
+HuntingBlessing|HuntingBlessing|INT UNSIGNED
+OnlineTrainingPoints|OnlineTrainingPoints|INT UNSIGNED
+JoinOnflineTG|OfflineTrainingJoinTime|BIGINT
+OnlineMinutes|OnlineMinutes|INT UNSIGNED
+ExpProtection|ExpProtection|INT UNSIGNED
+RateExp|ExpRate|INT UNSIGNED
+DExpTime|DoubleExpTime|INT UNSIGNED
+BDExp|BonusDoubleExp|TINYINT UNSIGNED
+ExpBallUsed|ExpBallUsed|TINYINT UNSIGNED
+Day|Day|INT
+PkPoints|PkPoints|SMALLINT UNSIGNED
+PkName|PkName|VARCHAR(255)
+PkUID|PkUID|INT UNSIGNED
+Cursed|Cursed|INT
+KillCount|KillCount|INT UNSIGNED
+FrozenByAdmin|FrozenByAdmin|TINYINT(1)
+IsBannedChat|IsBannedChat|TINYINT(1)
+PermenantBannedChat|PermanentBannedChat|TINYINT(1)
+BannedChatStamp|BannedChatStamp|BIGINT
+BanCount|BanCount|INT UNSIGNED
+DbTry|DbTry|TINYINT(1)
+Online|Online|TINYINT UNSIGNED
+FairyForm|FairyForm|INT
+GuildID|GuildID|INT UNSIGNED
+GuildRank|GuildRank|SMALLINT UNSIGNED
+GuildDontion|GuildDonation|INT UNSIGNED
+CpsDonate|ConquerPointsDonate|INT UNSIGNED
+MoneyDonate|MoneyDonate|BIGINT
+PkDonation|PkDonation|INT UNSIGNED
+LastLogin|LastLogin|BIGINT
+CTF_Exploits|CtfExploits|INT UNSIGNED
+CTF_RCPS|CtfRedeemedCps|INT UNSIGNED
+CTF_RM|CtfRedeemedMoney|INT UNSIGNED
+CTF_R|CtfRedeemFlag|TINYINT UNSIGNED
+ClanID|ClanID|INT UNSIGNED
+ClanRank|ClanRank|SMALLINT UNSIGNED
+ClanDonation|ClanDonation|INT UNSIGNED
+UnionUID|UnionUID|INT UNSIGNED
+UnionRank|UnionRank|INT UNSIGNED
+Treasury|UnionTreasury|INT UNSIGNED
+UnionExploits|UnionExploits|INT UNSIGNED
+UnionGoldBrick|UnionGoldBrick|INT UNSIGNED
+DonationNobility|NobilityDonation|BIGINT UNSIGNED
+PaidNobility_Identifier|PaidNobilityIdentifier|INT UNSIGNED
+PaidNobility_LastNobilityDonation|PaidNobilityLastDonation|BIGINT UNSIGNED
+PaidNobility_PaidRank|PaidNobilityRank|TINYINT UNSIGNED
+PaidNobility_PeriodTime|PaidNobilityPeriodTime|BIGINT
+PaidNobility_IsActive|PaidNobilityIsActive|TINYINT(1)
+KingDomExploits|KingdomExploits|INT UNSIGNED
+BuyKingdomDeeds|BuyKingdomDeeds|TINYINT UNSIGNED
+KingDomDeeds|KingdomDeeds|INT UNSIGNED
+SavePromote|SavePromote0|INT UNSIGNED
+SavePromote1|SavePromote1|INT UNSIGNED
+SavePromote2|SavePromote2|INT UNSIGNED
+SavePromote3|SavePromote3|INT UNSIGNED
+SavePromote4|SavePromote4|INT UNSIGNED
+SavePromote5|SavePromote5|INT UNSIGNED
+SavePromote6|SavePromote6|INT UNSIGNED
+SavePromote7|SavePromote7|INT UNSIGNED
+SavePromote8|SavePromote8|INT UNSIGNED
+SavePromote9|SavePromote9|INT UNSIGNED
+SavePromote10|SavePromote10|INT UNSIGNED
+SavePromote11|SavePromote11|INT UNSIGNED
+SavePromote12|SavePromote12|INT UNSIGNED
+BlueRune|BlueRune|TINYINT UNSIGNED
+RedRune|RedRune|TINYINT UNSIGNED
+RuneFlag|RuneFlag|INT UNSIGNED
+ResinanceRuneOne|ResonanceRune1|INT UNSIGNED
+ResinanceRuneTwo|ResonanceRune2|INT UNSIGNED
+ResinanceRunethree|ResonanceRune3|INT UNSIGNED
+ResinanceRunefour|ResonanceRune4|INT UNSIGNED
+ResinanceRunefive|ResonanceRune5|INT UNSIGNED
+ChiPoints|ChiPoints|INT
+Dragon|ChiDragon|TEXT
+Pheonix|ChiPhoenix|TEXT
+Turtle|ChiTurtle|TEXT
+Tiger|ChiTiger|TEXT
+DragonTime|ChiDragonTime|BIGINT
+PhoenixTime|ChiPhoenixTime|BIGINT
+TurtleTime|ChiTurtleTime|BIGINT
+TigerTime|ChiTigerTime|BIGINT
+RetreatedDragon|ChiRetreatedDragon|TEXT
+RetreatedPhoenix|ChiRetreatedPhoenix|TEXT
+RetreatedTurtle|ChiRetreatedTurtle|TEXT
+RetreatedTiger|ChiRetreatedTiger|TEXT
+RelicCount|RelicCount|INT UNSIGNED
+RelicBoostDone|RelicBoostDone|INT UNSIGNED
+RelicSpirit|RelicSpirit|TINYINT(1)
+RateRilec|RelicRate|INT UNSIGNED
+PointRilec|RelicPoint|INT
+ResonateRilec|RelicResonance|INT UNSIGNED
+UnlockedRilec|RelicUnlocked|TINYINT(1)
+RelicTransformDay|RelicTransformDay|INT
+RelicTransformBoosts|RelicTransformBoosts|TINYINT UNSIGNED
+RelicTransformPending|RelicTransformPending|TINYINT(1)
+RelicTransformItemUID|RelicTransformItemUID|INT UNSIGNED
+RelicTransformSlot|RelicTransformSlot|TINYINT UNSIGNED
+RelicTransformAttr1|RelicTransformAttr1|INT UNSIGNED
+RelicTransformAttr2|RelicTransformAttr2|INT UNSIGNED
+RelicTransformAttr3|RelicTransformAttr3|INT UNSIGNED
+RelicTransformAttr4|RelicTransformAttr4|INT UNSIGNED
+RelicTransformAttr5|RelicTransformAttr5|INT UNSIGNED
+TailedBeastActivated|TailedBeastActivated|TINYINT(1)
+TailedBeastTotalPoints|TailedBeastTotalPoints|INT UNSIGNED
+FruitToday|TailedBeastFruitToday|INT UNSIGNED
+SpecialTitleID|SpecialTitleID|INT UNSIGNED
+SpecialWingID|SpecialWingID|INT UNSIGNED
+SpecialHaloID|SpecialHaloID|INT UNSIGNED
+SpecialFootprintID|SpecialFootprintID|INT UNSIGNED
+SpecialHaloAction|SpecialHaloActionID|INT UNSIGNED
+FootprintOpen|FootprintOpen|INT UNSIGNED
+HaloActionOpen|HaloActionOpen|INT UNSIGNED
+SpecialTitles|SpecialTitles|TEXT
+SpecialHalo|SpecialHalos|TEXT
+TitleTime|TitleTimes|TEXT
+SpecialWings|SpecialWings|TEXT
+HaloAction|HaloActions|TEXT
+SpecialFoot|SpecialFootprints|TEXT
+Achivement|Achievements|TEXT
+Flowers|Flowers|TEXT
+HundredWeapons|HundredWeapons|TEXT
+NinjaNinpo|NinjaNinpo|TEXT
+MedalStorage|MedalStorage|TEXT
+AnimaSkin|AnimaSkin|TEXT
+MyArchives|Archives|TEXT
+Collection|Collection|TEXT
+MyAstredge|Astredge|TEXT
+GuildSkill|GuildSkill|TEXT
+ExchangeShop|ExchangeShop|TEXT
+DemonEx|DemonExterminator|TEXT
+HeroRewards|HeroRewards|TEXT
+Activeness|Activeness|TEXT
+EpicTrojan|EpicTrojan|TEXT
+EnergyPoints|EnergyPoints|TEXT
+QuestWarrior|QuestWarrior|TEXT
+SecurityPass|SecurityPass|VARCHAR(255)
+PinCodeAnima|PinCodeAnima|VARCHAR(255)
+enervant|Enervant|INT UNSIGNED
+questtwin|QuestTwin|INT UNSIGNED
+questphoinex|QuestPhoenix|INT UNSIGNED
+questape|QuestApe|INT UNSIGNED
+questdeserst|QuestDesert|INT UNSIGNED
+questbird|QuestBird|INT UNSIGNED
+questone|QuestOne|INT UNSIGNED
+questtwo|QuestTwo|INT UNSIGNED
+questthree|QuestThree|INT UNSIGNED
+questfour|QuestFour|INT UNSIGNED
+EpicQuestChance|EpicQuestChance|INT UNSIGNED
+EpicNinjaQuestChance|EpicNinjaQuestChance|INT UNSIGNED
+EpicPirateQuestChance|EpicPirateQuestChance|INT UNSIGNED
+MyTowerOfMysteryLayer|TowerOfMysteryLayer|TINYINT UNSIGNED
+MyTowerOfMysteryLayerElite|TowerOfMysteryLayerElite|TINYINT UNSIGNED
+ClaimTowerAmulets|ClaimTowerAmulets|TINYINT UNSIGNED
+TOMClaimTeamReward|TowerOfMysteryClaimTeamReward|TINYINT UNSIGNED
+TowerOfMysterychallenge|TowerOfMysteryChallenge|TINYINT UNSIGNED
+TowerOfMysteryChallengeFlag|TowerOfMysteryChallengeFlag|INT UNSIGNED
+TOMSelectChallengeToday|TowerOfMysterySelectChallengeToday|TINYINT UNSIGNED
+TOMChallengeToday|TowerOfMysteryChallengeToday|TINYINT UNSIGNED
+TOMRefreshReward|TowerOfMysteryRefreshReward|INT UNSIGNED
+TOM_Reward|TowerOfMysteryReward|TINYINT UNSIGNED
+HeroPoints|HeroPoints|INT UNSIGNED
+ClassExperience|ClassExperience|INT UNSIGNED
+DeityLandLuckyPoints|DeityLandLuckyPoints|INT UNSIGNED
+DunePoints|DunePoints|INT UNSIGNED
+TaoHeavenState|TaoHeavenState|INT UNSIGNED
+QuizPoints|QuizPoints|INT UNSIGNED
+Enilghten|EnlightenPoints|SMALLINT UNSIGNED
+EnlightenReceive|EnlightenReceive|SMALLINT UNSIGNED
+WorldPoints|WorldPoints|INT UNSIGNED
+GodzillaPoints|GodzillaPoints|INT UNSIGNED
+CastlePoint|CastlePoints|INT UNSIGNED
+ScoreHuntCoins|ScoreHuntCoins|INT UNSIGNED
+OnlinePointsPK|OnlinePkPoints|INT UNSIGNED
+FlagsPointss|FlagsPoints|INT UNSIGNED
+RacePoints|RacePoints|INT UNSIGNED
+MyFootBallPoints|FootballPoints|INT UNSIGNED
+PrestigePoints|PrestigePoints|INT UNSIGNED
+HistoryChampionPoints|HistoryChampionPoints|INT UNSIGNED
+TodayChampionPoints|TodayChampionPoints|INT UNSIGNED
+ChampionPoints|ChampionPoints|INT UNSIGNED
+DailySpiritBeadItem|DailySpiritBeadItem|INT UNSIGNED
+TKills|TournamentKills|INT UNSIGNED
+HitShoot|HitShots|INT UNSIGNED
+MisShoot|MissShots|INT UNSIGNED
+ArenaKills|ArenaKills|INT UNSIGNED
+ArenaDeads|ArenaDeaths|INT UNSIGNED
+ClaimPointsArena|ClaimPointsArena|SMALLINT UNSIGNED
+JPAStamp|JpaStamp|BIGINT
+TableBetDice|TableBetDice|INT UNSIGNED
+GiveFlowersToPerformer|GiveFlowersToPerformer|INT
+DailySignUpDays|DailySignUpDays|BIGINT UNSIGNED
+DailyMonth|DailyMonth|TINYINT UNSIGNED
+DailySignUpRewards|DailySignUpRewards|TINYINT UNSIGNED
+Vote|Vote|TINYINT UNSIGNED
+VotePoints|VotePoints|TINYINT UNSIGNED
+UseChiToken|UseChiToken|TINYINT UNSIGNED
+ChiToken|ChiToken|TINYINT UNSIGNED
+JiangToken|JiangToken|TINYINT UNSIGNED
+LotteryEntries|LotteryEntries|TINYINT UNSIGNED
+TCT|TCT|TINYINT UNSIGNED
+CanChangeWindWalkerFree|CanChangeWindWalkerFree|BIGINT
+RamdanBag|RamadanBag|INT UNSIGNED
+itemRamdanBag|RamadanBagItem|INT UNSIGNED
+RewardPoints|RewardPoints|INT UNSIGNED
+ItemRewordChristmas|ChristmasRewardItem|INT UNSIGNED
+CollectionID|CollectionID|INT UNSIGNED
+PandaID|PandaID|INT UNSIGNED
+CyanJadeRing|CyanJadeRing|INT UNSIGNED
+SpouseUID|SpouseUID|INT UNSIGNED
+NameEditCount|NameEditCount|SMALLINT UNSIGNED
+ClaimStateGift|ClaimStateGift|INT UNSIGNED
+CountryID|CountryID|SMALLINT UNSIGNED
+InventorySashCount|InventorySashCount|SMALLINT UNSIGNED
+ExchangehighAvaliability|ExchangeHighAvailability|INT UNSIGNED
+WarDropeFull|WarDropFull|INT UNSIGNED
+OpenHousePack|OpenHousePack|TINYINT UNSIGNED
