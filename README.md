@@ -3,186 +3,189 @@
 > **⚠️ تنويه: هذا المشروع تطوير خاص ومستقل لأغراض شخصية وتعليمية، ولا يتبع لعبة كونكر أونلاين الأصلية ولا شركة TQ Digital / NetDragon بأي شكل، ولا يمس سيرفراتها الرسمية أو لاعبيها أو حقوقها بأي صورة من الصور.**
 
 سيرفر اللعبة وسيرفر الحسابات لـ **Qahr Online**: كونكر أونلاين موبايل، نسخة الكلاينت 1.1.2.3، والسيرفر مبني على سورس 7957.
-الريبو ده نسخة كاملة زي ما هي من فولدر `D:\Qahr Mobile\Server`، ومعاها نسخة من قاعدة البيانات.
 
-> ⚠️ **الريبو فيه كلمات سر حقيقية وملفات لاعيبة ولوجات، فلازم يفضل Private دايماً.**
+> ⚠️ **الريبو فيه كلمات سر حقيقية وملفات لاعيبة، فلازم يفضل Private دايماً.**
 
 ---
 
-## 1. محتويات الريبو
+## محتويات الريبو
 
-| المسار | المحتوى |
+| الفولدر أو الملف | فيه إيه |
 |---|---|
-| `Server/Qahr.Mobile.sln` | ملف الـ Solution (.NET 10) |
-| `Server/src/Qahr.Mobile.Game` | سورس سيرفر اللعبة، ومعاه `bin/` فيها السيرفر مبني وجاهز |
-| `Server/src/Qahr.Mobile.Login` | سورس سيرفر الحسابات، وصفحات الشحن والـ WebHub، ومعاه `bin/Debug/` |
-| `Server/src/Qahr.Mobile.Shared` | الكود المشترك، وملف الإعدادات المركزي `ServerConfig.ini` |
-| `Server/Data` | داتا اللعبة كلها (حاجات، وحوش، خرايط، NPC، محلات، مهام، أحداث) وملفات اللاعيبة |
-| `Server/scripts` | سكربتات التشغيل `run_live.ps1` و`run_cdn.ps1` |
-| `Server/Tools` | أدوات السيرفر: MobileStudio وPatchConsole وOfficialMirror |
-| `Server/libs` | مكتبات خارجية |
-| `database/qahr_mobile.sql.gz` | نسخة كاملة من قاعدة MariaDB `qahr_mobile` |
-| `extras/admin.py` | أداة الأدمن من سطر الأوامر (حفظ اللاعيبة، تليبورت، إعطاء حاجات، reload…) |
-| `extras/requirements.txt` | مكتبات بايثون اللي أداة الـ CDN محتاجاها |
+| `Server/Qahr.Mobile.sln` | ملف المشروع، بتفتحه بالـ Visual Studio |
+| `Server/src/Qahr.Mobile.Game` | سيرفر اللعبة |
+| `Server/src/Qahr.Mobile.Login` | سيرفر الحسابات، وصفحة الشحن، وصفحة الـ WebHub |
+| `Server/src/Qahr.Mobile.Shared/ServerConfig.ini` | **ملف الإعدادات الرئيسي** |
+| `Server/Data` | داتا اللعبة كلها وملفات اللاعيبة |
+| `database/qahr_mobile.sql.gz` | قاعدة البيانات |
+| `Server/Tools` و`extras` | أدوات مساعدة (مش لازمة علشان السيرفر يشتغل) |
 
 ---
 
-## 2. المطلوب على الجهاز
+# طريقة التركيب
 
-| البرنامج | النسخة | ملاحظات |
-|---|---|---|
-| **Windows** | 10 أو 11 أو Server 2019 وأحدث | السيرفر `net10.0-windows` |
-| **.NET 10 SDK** | 10.0.x (اتجرب على 10.0.402) | من https://dotnet.microsoft.com/download/dotnet/10.0. لازم الـ SDK يبقى فيه **Windows Desktop Runtime** |
-| **MariaDB** | 10.6 | ينفع MySQL 8 كمان |
-| **Python** | 3.10 أو أحدث | محتاجه بس لأداة الأدمن وسيرفر الـ CDN |
-| **Git** | أي نسخة | علشان تنسخ الريبو |
+## الخطوة 1: نزّل البرامج دي
 
----
-
-## 3. التشغيل خطوة بخطوة
-
-### 3.1 انسخ الريبو
-
-```powershell
-git clone https://github.com/Hazem7575/Qahr-Mobile.git "D:\Qahr Mobile\Repo\Qahr-Mobile"
-```
-
-### 3.2 حط فولدر Server في مكانه
-
-السيرفر متظبط إنه يشتغل من `D:\Qahr Mobile\Server`، وبيقرا الداتا من المسار `D:\conquer\QahrMobile\Data\`
-(المسار ده مكتوب في `ServerConfig.ini` وفي `Server/src/Qahr.Mobile.Game/bin/shell.ini`).
-
-```powershell
-# 1) انسخ فولدر Server لمكانه
-robocopy "D:\Qahr Mobile\Repo\Qahr-Mobile\Server" "D:\Qahr Mobile\Server" /E
-
-# 2) اعمل الاختصار (Junction) اللي السيرفر بيقرا الداتا منه
-mkdir D:\conquer
-cmd /c mklink /J "D:\conquer\QahrMobile" "D:\Qahr Mobile\Server"
-```
-
-لو حابب تحطه في مكان تاني، غيّر المسارات دي:
-- `ServerConfig.ini`: `[Server] DataFolder` و`CO2Folder` و`[AutoPatch] PatchDir`
-- `Server/src/Qahr.Mobile.Game/bin/shell.ini`: `[Database] Location` و`CO2FOLDER`
-- `Server/scripts/*.ps1`: المسارات اللي في أول كل ملف
-
-### 3.3 قاعدة البيانات
-
-```powershell
-# فك ضغط النسخة
-tar -xzf database\qahr_mobile.sql.gz      # أو: gzip -d -k database/qahr_mobile.sql.gz
-
-# اعمل المستخدم (الاسم وكلمة السر نفس اللي في ServerConfig.ini [Database])
-mysql -u root -p -e "CREATE USER 'hazem'@'localhost' IDENTIFIED BY '<نفس كلمة السر اللي في ServerConfig.ini>'; GRANT ALL ON qahr_mobile.* TO 'hazem'@'localhost'; FLUSH PRIVILEGES;"
-
-# استرجع القاعدة (النسخة بتعمل قاعدة qahr_mobile لوحدها)
-mysql -u root -p < database\qahr_mobile.sql
-```
-
-القاعدة فيها كل الجداول: الحسابات، والشخصيات، و`player_blobs` (الحاجات والبريد والمهارات…)، والمول (`recharge_packs` و`recharge_methods`)، والـ WebHub (`web_hub`)، وحالة الأحداث والكروت.
-
-### 3.4 ملف الإعدادات `ServerConfig.ini`
-
-الملف في `Server/src/Qahr.Mobile.Shared/ServerConfig.ini`، وسيرفر اللعبة وسيرفر الحسابات الاتنين بيقروه.
-
-| القسم / المفتاح | المعنى |
+| البرنامج | تجيبه منين |
 |---|---|
-| `[Server] IP` | **الـ IP اللي اللاعيبة بيدخلوا عليه** (حالياً `26.31.69.47`). غيّره لـ IP الجهاز الجديد |
-| `[Server] GamePort` = 5828 | بورت سيرفر اللعبة |
-| `[Server] LoginPort` = 16100 | بورت سيرفر الحسابات |
-| `[Server] MobileRegisterPort` = 9548 | التسجيل، واسترجاع كلمة السر، وصفحة الشحن `/qahr/shop`، والـ WebHub `/qahr/hub` |
-| `[AutoPatch] HttpPort` = 9549، و`AutoPatchPort` = 9547 | تحديثات اللعبة (PatchDir = فولدر التحديثات) |
-| `[Database]` | الاتصال بـ MySQL |
-| `[Mail]` | إيميل استرجاع كلمة السر (Gmail: `Host=smtp.gmail.com`، وكلمة سر تطبيق من حساب جوجل). لو فاضي، الخاصية مقفولة |
-| `[AdminApi] AllowWrites` | يسمح لأداة الأدمن بأوامر الكتابة |
+| **Visual Studio 2022 أو 2026** (Community مجاني) | https://visualstudio.microsoft.com. وأنت بتسطّبه، علّم على **.NET desktop development** |
+| **.NET 10 SDK** | https://dotnet.microsoft.com/download/dotnet/10.0. اختار **SDK x64 لويندوز** |
+| **MySQL** أو **MariaDB** | MariaDB 10.6 من https://mariadb.org/download، أو أي MySQL عندك |
+| **Navicat** | علشان تفتح بيه قاعدة البيانات |
+| **WinRAR** أو **7-Zip** | علشان تفك ضغط ملف القاعدة |
 
-الاتنين دول لازم يتعدّلوا لما تغيّر الـ IP:
-- `Server/src/Qahr.Mobile.Game/bin/shell.ini`: `[ServerInfo] AddresIP`
-- `Server/Data/mobile_webpages.txt`: رابط صفحة الـ WebHub (فيه الـ IP)
+---
 
-### 3.5 البناء (Build)
+## الخطوة 2: نزّل السورس
 
-ملفات `bin/` الموجودة في الريبو مبنية وجاهزة. لو عدّلت في الكود:
+1. افتح صفحة الريبو على GitHub.
+2. اضغط على الزرار الأخضر **Code**، وبعدين **Download ZIP**.
+3. فك الضغط في أي مكان، مثلاً: `D:\Qahr Mobile`. هيبقى عندك فولدر اسمه `Server` جواه.
 
-```powershell
-cd "D:\Qahr Mobile\Server"
-dotnet build src\Qahr.Mobile.Game\Qahr.Mobile.Game.csproj -c Debug
-dotnet build src\Qahr.Mobile.Login\Qahr.Mobile.Login.csproj
+> المكان اللي اختاره صاحب السيرفر هو `D:\Qahr Mobile\Server`. لو حطيته في نفس المكان ده بالظبط، هتعدي الخطوة 4 أسرع.
+
+---
+
+## الخطوة 3: قاعدة البيانات بالـ Navicat
+
+1. **فك الضغط:** روح على فولدر `database`، ودوس كليك يمين على `qahr_mobile.sql.gz` واختار **Extract Here** (بالـ WinRAR أو 7-Zip). هيطلعلك ملف اسمه `qahr_mobile.sql`.
+2. **الاتصال:** افتح **Navicat**، واضغط **Connection** ← **MySQL** (أو MariaDB)، واكتب:
+   - Host: `localhost`
+   - Port: `3306`
+   - User name: `root`
+   - Password: كلمة سر الـ root اللي اخترتها وأنت بتسطّب MySQL
+
+   وبعدين **OK**.
+3. **فتح الاتصال:** دوس دبل كليك على الاتصال اللي عملته علشان يفتح.
+4. **استيراد القاعدة:** دوس **كليك يمين على اسم الاتصال** ← **Execute SQL File...**
+   - اختار ملف `qahr_mobile.sql`.
+   - اضغط **Start**، واستنى لحد ما يكتب **Finished successfully**.
+5. **التأكد:** دوس كليك يمين على الاتصال ← **Refresh**. هتلاقي قاعدة اسمها **`qahr_mobile`** ظهرت وفيها الجداول.
+
+> القاعدة فيها الحسابات، والشخصيات، وحاجات اللاعيبة، وباقات الشحن، وأخبار الـ WebHub.
+
+---
+
+## الخطوة 4: ظبط ملف الإعدادات (بالـ Notepad)
+
+### الملف الأول: `Server\src\Qahr.Mobile.Shared\ServerConfig.ini`
+
+دوس عليه كليك يمين ← **Open with** ← **Notepad**، وغيّر السطور دي بس:
+
+**قسم `[Database]`**، بيانات الـ MySQL بتاعتك:
+```ini
+User=root
+Password=كلمة سر الـ root بتاعتك
+Name=qahr_mobile
 ```
 
-- سيرفر اللعبة بيطلع في `src\Qahr.Mobile.Game\bin\Qahr.Mobile.Game.exe`
-- سيرفر الحسابات بيطلع في `src\Qahr.Mobile.Login\bin\Debug\Qahr.Mobile.Login.exe`
+**قسم `[Server]`**:
+```ini
+IP=اكتب هنا الـ IP اللي اللاعيبة هيدخلوا عليه
+DataFolder=D:\Qahr Mobile\Server\Data\
+CO2Folder=D:\Qahr Mobile\Server\Data\
+```
+- **IP:** لو بتجرب على نفس الجهاز اكتب `127.0.0.1`. لو على راوتر البيت اكتب IP الجهاز (هتلاقيه في إعدادات الشبكة). لو على VPS اكتب IP السيرفر.
+- **DataFolder وCO2Folder:** مسار فولدر `Data` عندك، **ولازم ينتهي بـ `\`**. لو حطيت السيرفر في مكان تاني، اكتب مكانه أنت.
 
-### 3.6 التشغيل
+**قسم `[AutoPatch]`**:
+```ini
+PatchDir=D:\Qahr Mobile\Updates
+```
+اعمل فولدر فاضي بالاسم ده (أو أي اسم، واكتب مساره هنا).
 
-بالترتيب ده:
+احفظ الملف (**Ctrl + S**).
 
-```powershell
-# 1) سيرفر الحسابات (Login + التسجيل + صفحة الشحن + WebHub + التحديثات)
-Start-Process "D:\Qahr Mobile\Server\src\Qahr.Mobile.Login\bin\Debug\Qahr.Mobile.Login.exe" -WorkingDirectory "D:\Qahr Mobile\Server\src\Qahr.Mobile.Login\bin\Debug"
+### الملف التاني: `Server\src\Qahr.Mobile.Game\bin\shell.ini`
 
-# 2) سيرفر اللعبة: وضع التطوير (أي تعديل في الكود بيتطبق وهو شغال)
-powershell -ExecutionPolicy Bypass -File "D:\Qahr Mobile\Server\scripts\run_live.ps1"
-#    أو شغّل الـ exe مباشرة:
-#    Start-Process "D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\bin\Qahr.Mobile.Game.exe" -WorkingDirectory "D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\bin"
+افتحه بالـ Notepad وغيّر:
+```ini
+[ServerInfo]
+AddresIP=نفس الـ IP اللي كتبته فوق
 
-# 3) سيرفر ملفات اللعبة CDN (بورت 9550)
-powershell -ExecutionPolicy Bypass -File "D:\Qahr Mobile\Server\scripts\run_cdn.ps1"
+[Database]
+Location=D:\Qahr Mobile\Server\Data\
+CO2FOLDER=D:\Qahr Mobile\Server\Data\
+```
+احفظ.
+
+### الملف التالت: `Server\Data\mobile_webpages.txt`
+
+افتحه بالـ Notepad، وغيّر الـ IP اللي في الرابط للـ IP بتاعك، واحفظ:
+```
+2 http://IP_بتاعك:9548/qahr/hub?uid={uid}
 ```
 
-- `run_live.ps1` بيحفظ اللاعيبة، ويقفل السيرفر القديم، ويبني، ويشغّل بـ `dotnet watch`. اللوجات في `D:\Qahr Mobile\Logs\watch.log`.
-- لو عايز تقفل الـ CDN: `run_cdn.ps1 -Stop`. ولو عايز تشوف حالته: `run_cdn.ps1 -Status`.
+---
 
-### 3.7 البورتات اللي لازم تتفتح في الفايروول
+## الخطوة 5: افتح المشروع في Visual Studio
 
-| البورت | الخدمة |
+1. دوس دبل كليك على **`Server\Qahr.Mobile.sln`**، هيفتح في Visual Studio.
+2. **البناء:** من فوق اضغط **Build** ← **Build Solution** (أو **Ctrl + Shift + B**)، واستنى لحد ما يكتب تحت **Build succeeded**.
+   - لو قالك إن .NET 10 مش موجود، سطّب الـ **.NET 10 SDK** من الخطوة 1 وافتح الـ Visual Studio تاني.
+
+---
+
+## الخطوة 6: شغّل السيرفر
+
+لازم تشغّل **سيرفر الحسابات الأول**، وبعده **سيرفر اللعبة**.
+
+### الطريقة الأولى: من غير Visual Studio (الأسهل)
+
+1. **سيرفر الحسابات:** افتح فولدر `Server\src\Qahr.Mobile.Login\bin\Debug`، ودوس دبل كليك على **`Qahr.Mobile.Login.exe`**.
+2. **سيرفر اللعبة:** افتح فولدر `Server\src\Qahr.Mobile.Game\bin`، ودوس دبل كليك على **`Qahr.Mobile.Game.exe`**.
+3. **اتأكد إنه اشتغل:** استنى لحد ما شاشة سيرفر اللعبة تخلص تحميل وتلاقي فيها `listening on port 5828`.
+
+### الطريقة التانية: من Visual Studio (لو بتعدّل في الكود)
+
+1. في نافذة **Solution Explorer**، دوس كليك يمين على **Qahr.Mobile.Login** ← **Debug** ← **Start New Instance**.
+2. بعده، دوس كليك يمين على **Qahr.Mobile.Game** ← **Debug** ← **Start New Instance**.
+
+> **مهم:** متقفلش شاشة سيرفر اللعبة بالـ X وفيه لاعيبة جوه. ابعت أمر الحفظ الأول (`@save`) أو استنى الحفظ التلقائي.
+
+---
+
+## الخطوة 7: افتح البورتات في الفايروول (لو اللاعيبة من برا الجهاز)
+
+1. افتح **Start** واكتب **Windows Defender Firewall with Advanced Security** وافتحه.
+2. اضغط على **Inbound Rules** من الشمال، وبعدين **New Rule...** من اليمين.
+3. اختار **Port** ← **Next** ← **TCP**، وفي خانة **Specific local ports** اكتب:
+   ```
+   5828, 16100, 9547, 9548, 9549, 9550
+   ```
+4. **Next** ← **Allow the connection** ← **Next** ← علّم على الكل ← **Next**، وسمّيها **Qahr Mobile** ← **Finish**.
+
+| البورت | بتاع إيه |
 |---|---|
 | 5828 | سيرفر اللعبة |
 | 16100 | سيرفر الحسابات |
-| 9547 و9549 | التحديثات |
 | 9548 | التسجيل، وصفحة الشحن، والـ WebHub |
+| 9547 و9549 | التحديثات |
 | 9550 | ملفات اللعبة (CDN) |
-| 5897 | أداة الأدمن (محلي بس، **ما تفتحوش للنت**) |
 
-```powershell
-New-NetFirewallRule -DisplayName "Qahr Mobile" -Direction Inbound -Protocol TCP -LocalPort 5828,16100,9547,9548,9549,9550 -Action Allow
-```
+> لو السيرفر على راوتر بيت، لازم كمان تعمل **Port Forwarding** للبورتات دي من صفحة الراوتر لـ IP الجهاز.
 
 ---
 
-## 4. حاجات مش جوه الريبو ومطلوبة
+## حاجات مهمة لازم تعرفها
 
-| الحاجة | ليه مش موجودة | تجيبها إزاي |
-|---|---|---|
-| **CDN** (حوالي 3 جيجا، ملفات اللعبة الرسمية اللي الموبايل بينزلها أول مرة) | حجمها كبير على GitHub، وهي ملفات TQ الرسمية | `python -I Server\Tools\OfficialMirror\official_mirror.py cdn-fetch --threads 8` بينزلها في `D:\Qahr Mobile\CDN` (محتاج `pip install -r extras\requirements.txt`) |
-| **فولدر التحديثات** `D:\Qahr Mobile\Updates` | فيه ملفات أكبر من 100 ميجا | `official_mirror.py fetch` و`republish`، أو من PatchConsole |
-| **APK اللعبة ومشروع الكلاينت** (ClientSource) | حجمه 3.2 جيجا، والـ APK أكبر من حد GitHub | الكلاينت الحالي متظبط على IP `26.31.69.47`. لو غيّرت الـ IP، لازم الـ APK يتبني تاني من ClientSource بالـ IP الجديد |
+- **الـ APK (اللعبة على الموبايل):** النسخة الحالية متظبطة على الـ IP **`26.31.69.47`**. لو السيرفر بقى على IP تاني، لازم الـ APK يتبني تاني بالـ IP الجديد. مشروع الكلاينت (ClientSource) مش في الريبو ده لأن حجمه كبير.
+- **ملفات اللعبة اللي الموبايل بينزلها أول مرة (CDN):** حجمها حوالي 3 جيجا، ومش في الريبو. بتتنزل بأداة `Server\Tools\OfficialMirror`، وبتشتغل على بورت 9550.
+- **إيميل استرجاع كلمة السر:** من قسم `[Mail]` في `ServerConfig.ini`. لو استخدمت Gmail، حط `Host=smtp.gmail.com` وإيميلك، و**كلمة سر تطبيق** من إعدادات حساب جوجل (مش كلمة سر الإيميل العادية). لو سبته فاضي، الخاصية دي هتبقى مقفولة بس.
 
 ---
 
-## 5. أداة الأدمن
+## تعديل اللعبة من غير ما تلمس الكود
 
-`extras/admin.py` بتكلم سيرفر اللعبة على `127.0.0.1`، والسر والبورت بتاخدهم من `Server/Data/adminapi.txt`.
-حطها في `D:\conquer\_private\comobile\tools\admin.py`، لأن `run_live.ps1` بيدوّر عليها هناك وبيشغّلها بـ `D:\conquer\_private\comobile\venv\Scripts\python.exe`. أو عدّل المسارين اللي في `run_live.ps1`.
-
-```powershell
-python -I extras\admin.py online
-python -I extras\admin.py save all=1
-python -I extras\admin.py teleport name=test22 map=1002 x=430 y=378
-python -I extras\admin.py reloadnpcs        # reloadshops / reloaditems / reloadmonsters / reloadall
-```
-
----
-
-## 6. ملفات مهمة للتعديل من غير ما تلمس الكود
-
-| الملف أو الجدول | يتحكم في |
+| عايز تغيّر إيه | فين |
 |---|---|
-| `Data/Npcs.txt` | أماكن الـ NPC (بعدها `reloadnpcs`) |
-| `Data/new_shop_goods.txt` | حاجات المول (بعدها `reloadshops`) |
-| `Data/mobile_dailygift.txt` | Daily Packs |
-| `Data/mobile_weekcard.txt` | الكروت الأسبوعية والشهرية |
-| `Data/swapshop_boxes.txt` | محتوى صناديق Swap Shop |
-| `Data/mobile_webpages.txt` | رابط صفحة الـ WebHub |
-| جدول `recharge_packs` و`recharge_methods` | باقات الشحن وطرق الدفع |
-| جدول `web_hub` | أخبار صفحة الـ WebHub |
+| أماكن الـ NPC | `Server\Data\Npcs.txt` |
+| حاجات المول | `Server\Data\new_shop_goods.txt` |
+| Daily Packs | `Server\Data\mobile_dailygift.txt` |
+| الكروت الأسبوعية والشهرية | `Server\Data\mobile_weekcard.txt` |
+| محتوى صناديق Swap Shop | `Server\Data\swapshop_boxes.txt` |
+| باقات الشحن وأسعارها وصورها | جدول **`recharge_packs`** في Navicat |
+| طرق الدفع | جدول **`recharge_methods`** في Navicat |
+| أخبار صفحة الـ WebHub | جدول **`web_hub`** في Navicat |
+
+في **Navicat**: افتح قاعدة `qahr_mobile` ← **Tables**، ودوس دبل كليك على الجدول. عدّل في الخانة على طول، واضغط على علامة **✓** تحت علشان تحفظ. التعديلات دي بتظهر في اللعبة على طول، من غير ما تقفل السيرفر.
