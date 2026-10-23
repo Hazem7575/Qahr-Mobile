@@ -1,8 +1,8 @@
-# QahrMobile: bounty objects / talk NPCs as placed by MobileBountyGoals.cs (Npcs.txt format: uid,type,mesh,map,x,y), 2026-10-22 17:20:43
+# QahrMobile: bounty objects / talk NPCs as placed by MobileBountyGoals.cs (Npcs.txt format: uid,type,mesh,map,x,y), 2026-10-23 22:16:42
 # They are placed at run time; merging them into Npcs.txt is optional (MobileBountyGoals then finds them on the map and skips them).
-9720901,2,14260,1002,443,296
 9720902,2,17970,1002,400,290
 9720903,2,1054660,1002,521,299
+9720901,2,14260,1002,443,296
 # TheWounded (mobile NpcType4436)
 9720001,2,44360,1002,539,334
 9720002,2,44360,1002,533,344

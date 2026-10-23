@@ -2288,3 +2288,54 @@
 2026-10-22 18:03:01 | OK   | eventdata | uid=1001023 | set mweekcard t.to376 '' -> '1795212000'
 2026-10-22 18:03:01 | OK   | eventdata | uid=1001023 | set mweekcard c.buys376 '' -> '1'
 2026-10-22 18:03:01 | OK   | eventdata | uid=1001023 | set mweekcard c.pend376 '' -> '1'
+2026-10-22 18:47:48 | OK   | server | - | AdminApi started on 127.0.0.1:5897
+2026-10-22 18:51:13 | OK   | save | all | 0 players saved
+2026-10-22 18:51:38 | OK   | server | - | AdminApi started on 127.0.0.1:5897
+2026-10-22 18:54:37 | OK   | giveitem | test22 (1001023) | 1 x RockingRomance(Fantasy) [191685]
+2026-10-22 18:54:37 | OK   | giveitem | test22 (1001023) | 1 x SweetnessofLove(Eternal) [195795]
+2026-10-22 18:54:37 | OK   | giveitem | test22 (1001023) | 1 x Starry Billow (Shine) [199265]
+2026-10-22 18:54:37 | OK   | giveitem | test22 (1001023) | 1 x BlazingRomance [181105]
+2026-10-22 18:54:38 | OK   | giveitem | test22 (1001023) | 1 x Cyan Mist [199635]
+2026-10-22 18:54:38 | OK   | giveitem | test22 (1001023) | 1 x Innocent Sunflower [360323]
+2026-10-22 18:54:38 | OK   | giveitem | test22 (1001023) | 1 x ChocolateHeart [360290]
+2026-10-22 18:54:38 | OK   | giveitem | test22 (1001023) | 1 x LingeringBlossoms [360298]
+2026-10-22 18:54:38 | OK   | giveitem | test22 (1001023) | 1 x SpringRabbit [360174]
+2026-10-22 18:54:38 | OK   | giveitem | test22 (1001023) | 1 x ThunderboltTiger [360173]
+2026-10-23 14:59:35 | OK   | server | - | AdminApi started on 127.0.0.1:5897
+2026-10-23 21:49:05 | OK   | server | - | AdminApi started on 127.0.0.1:5897
+2026-10-23 22:09:46 | OK   | server | - | AdminApi started on 127.0.0.1:5897
+2026-10-23 22:09:51 | OK   | save | all | 0 players saved
+2026-10-23 22:09:59 | OK   | server | - | AdminApi started on 127.0.0.1:5897
+2026-10-23 22:11:54 | OK   | kick | test22 (1001023) | 
+2026-10-23 22:13:01 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @help | replies: @cps 1000 | @money 1000000 | @level 140 | @reborn 2 / @item 1088000 [count] | @find dragon | @heal | @vip 6 [days] / @skill 1045 [level] | @clearbag / @go twin/market/hall | @go 1002 451 365 | @goto name | @bring name / @kick name | @say text | @online | @save ...
+2026-10-23 22:13:02 | OK   | cps | test22 (1001023) | add 100: 3001 -> 3101
+2026-10-23 22:13:02 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @cps 100 | replies: test22 (1001023): CPs 3,001 -> 3,101
+2026-10-23 22:13:02 | OK   | money | test22 (1001023) | add 1000: 10000 -> 11000
+2026-10-23 22:13:02 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @money 1000 | replies: test22 (1001023): money 10,000 -> 11,000
+2026-10-23 22:13:02 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @find meteor | replies: 1088001 Meteor | 721002 SadMeteor | 723268 MeteorBox | 3311174 MeteorBag | 721269 MeteorPack | 721510 MeteorPack | 824033 MeteorBoot | 1088002 MeteorTear
+2026-10-23 22:13:03 | OK   | giveitem | test22 (1001023) | 2 x Meteor [1088001]
+2026-10-23 22:13:03 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @item 1088001 2 | replies: You received 2 Meteor from the staff. / test22 (1001023): gave 2 x Meteor [1088001]
+2026-10-23 22:13:03 | OK   | revive | test22 (1001023) | healed
+2026-10-23 22:13:03 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @heal | replies: test22 (1001023): HP/MP restored
+2026-10-23 22:13:03 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @online | replies: 1 online: test22
+2026-10-23 22:13:04 | OK   | teleport | test22 (1001023) | 1002 (407,394) -> 1036 (211,196)
+2026-10-23 22:13:04 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @go market | replies: test22 (1001023): teleported to map 1036 (211,196)
+2026-10-23 22:13:04 | OK   | teleport | test22 (1001023) | 1036 (211,196) -> 1002 (451,365)
+2026-10-23 22:13:04 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @go twin | replies: test22 (1001023): teleported to map 1002 (451,365)
+2026-10-23 22:13:04 | OK   | setlevel | test22 (1001023) | level 140 -> 140
+2026-10-23 22:13:04 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @level 140 | replies: test22 (1001023): level 140 -> 140
+2026-10-23 22:13:05 | OK   | vip | test22 (1001023) | VIP 6 until 2026-10-30 22:13
+2026-10-23 22:13:05 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @vip 6 7 | replies: You received VIP 6 (7 days). / test22 (1001023): VIP 6 until 2026-10-30 22:13
+2026-10-23 22:13:05 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @bogus 1 | replies: 
+2026-10-23 22:13:11 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @help | replies: @cps 1000 | @money 1000000 | @level 140 | @reborn 2 / @item 1088000 [count] | @find dragon | @heal | @vip 6 [days] / @skill 1045 [level] | @clearbag / @go twin/market/hall | @go 1002 451 365 | @goto name | @bring name / @kick name | @say text | @online | @save ...
+2026-10-23 22:13:11 | OK   | cps | test22 (1001023) | add 100: 3101 -> 3201
+2026-10-23 22:13:11 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @cps 100 | replies: test22 (1001023): CPs 3,101 -> 3,201
+2026-10-23 22:13:12 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @find meteor | replies: 1088001 Meteor | 721002 SadMeteor | 723268 MeteorBox | 3311174 MeteorBag | 721269 MeteorPack | 721510 MeteorPack | 824033 MeteorBoot | 1088002 MeteorTear
+2026-10-23 22:13:12 | OK   | giveitem | test22 (1001023) | 2 x Meteor [1088001]
+2026-10-23 22:13:12 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @item 1088001 2 | replies: You received 2 Meteor from the staff. / test22 (1001023): gave 2 x Meteor [1088001]
+2026-10-23 22:13:12 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @online | replies: 1 online: test22
+2026-10-23 22:13:13 | OK   | vip | test22 (1001023) | VIP 6 until 2026-11-06 22:13
+2026-10-23 22:13:13 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @vip 6 7 | replies: You received VIP 6 (7 days). / test22 (1001023): VIP 6 until 2026-11-06 22:13
+2026-10-23 22:13:13 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @go 1002 1 1 | replies: Error: (1,1) is not walkable on map 1002 - pick another spot or use force
+2026-10-23 22:13:14 | OK   | runcommand | test22 (1001023) | by unknown tool (127.0.0.1): @goto nobody | replies: Error: nobody is not online
+2026-10-23 22:14:55 | OK   | cps | test22 (1001023) | add 10000: 3201 -> 13201

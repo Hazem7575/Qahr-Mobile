@@ -5928,6 +5928,7 @@ namespace Qahr.Mobile.Game.MsgServer
             if (global::Qahr.Mobile.Thanksgiving2022.HolidayBoxes.TryUse(client, item)) return;// [Thanksgiving2022 2026-10-15] holiday group boxes/puzzles (Thanksgiving, Christmas, Wishflake 3351462, Wuqu Snow Box 3355342)
             if (global::Qahr.Mobile.NewYear2023.SpringHooks.OnUse(client, item, stream)) return;// [NewYear2023 2026-10-15] Spring Festival group boxes / event items (2023 Spring bags & boxes, Spring Greeting Card, ...)
             if (global::Qahr.Mobile.DemonInvasionMadPet.MidAutumnBoxes.OnUse(client, item)) return;// [DemonInvasionMadPet 2026-10-15] Mid-Autumn group boxes without a script (3342770/71/73/74/77, 3344996-99, 3340960)
+            if (global::Qahr.Mobile.Mall.MobileItemUse.OnUse(client, item)) return;// QahrMobile: phone-only bag items (CP boxes, random packs, potency, "not available" messages) from Data\mobile_item_use.txt
             if (global::Qahr.Mobile.Mall.SwapShopBoxes.OnUse(client, item)) return;// [QahrMobile] phone Mall Swap Shop boxes (Data\swapshop_boxes.txt)
             if (global::Qahr.Mobile.CastleMystery.CastleStartle.OnUse(client, item, stream)) return;// [CastleMystery 2026-10-15] Castle Key 3351993, key boxes 3351995/6, Romantic boxes 3351997-3352000, Dream Note 3340595
             if (global::Qahr.Mobile.DreamTheater.DreamTheaterModule.OnUseItem(client, item, stream)) return;// [DreamTheater 2026-10-15] Wish Gold/Silver/Twinkle Coins, Love Velvet, Dream ranking boxes, Love title boxes, Flower Packs

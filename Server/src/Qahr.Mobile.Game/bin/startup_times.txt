@@ -1,87 +1,86 @@
-Startup 1540 ms
-    704 ms  QuestEngine.Load
-    272 ms  Pool.ItemsBase.Loading
-     56 ms  Role.Statue.Load
-     43 ms  Server.LoadMonsters
-     41 ms  InnerPowerTable.Load
-     33 ms  Database.Shops.EShopV2File.Load
-     28 ms  Database.RanksTable.Initialize
-     25 ms  Game.MsgTournaments.MsgSchedules.Create
-     21 ms  FlowersTable.Load
-     20 ms  Database.Shops.ChampionShop.Load
-     20 ms  Game.MsgTournaments.MsgSchedules.GuildWar.CreateFurnitures
-     12 ms  Database.LeeLongRank.Load
-     10 ms  Database.AstredgeRank.Load
-      9 ms  Modules.ModuleManager.LoadAll
+Startup 1552 ms
+    694 ms  QuestEngine.Load
+    314 ms  Pool.ItemsBase.Loading
+     55 ms  Server.LoadMonsters
+     51 ms  Role.Statue.Load
+     34 ms  Database.Shops.EShopV2File.Load
+     34 ms  Database.MonkRanks.Load
+     31 ms  Game.MsgTournaments.MsgSchedules.Create
+     24 ms  Database.RanksTable.Initialize
+     18 ms  Database.Shops.ChampionShop.Load
+     18 ms  Game.MsgTournaments.MsgSchedules.GuildWar.CreateFurnitures
+     16 ms  FlowersTable.Load
+     11 ms  Database.AstredgeRank.Load
+      8 ms  Modules.ModuleManager.LoadAll
       8 ms  Database.Shops.RacePointShop.Load
-      7 ms  Database.WaterRank.Load
       7 ms  NobilityTable.Load
       7 ms  Game.MsgTournaments.MsgSchedules.SuperGuildWar.CreateFurnitures
-      7 ms  Game.MsgTournaments.MsgWarOfPlayers.Load
+      6 ms  Game.MsgTournaments.MsgWarOfPlayers.Load
       6 ms  new_shop_goods.Load
-      6 ms  Database.Shops.ShopFile.Load
       6 ms  GuildTable.Load
+      6 ms  syndicate_level.Load
+      5 ms  Database.Shops.ShopFile.Load
       5 ms  Game.MsgTournaments.MsgSchedules.GuildWar.Load
-      4 ms  Database.PrestigeRanking.Load
+      5 ms  Database.PrestigeRanking.Load
+      4 ms  RankItems.LoadAllItems
       4 ms  FileDrops.Load
       4 ms  Game.MsgTournaments.MsgSchedules.EliteGuildWar.Load
-      3 ms  MythTable.LoadMyth
-      3 ms  Database.ClanTable.Load
-      3 ms  Pool.Arena.Load
-      3 ms  Database.NinjaRank.Load
-      3 ms  Database.ArcherRank.Load
-      3 ms  Database.MonkRanks.Load
-      3 ms  ExchangeShopGoods.Load
-      3 ms  Database.DuneWandererRank.Load
-      3 ms  Database.RuneRank.Load
       3 ms  Pool.RebornInfo.Load
-      2 ms  Database.ProfessionTable.Load
-      2 ms  Database.WarriorRank.Load
-      2 ms  ItemRefineUpgrade.Load
-      2 ms  Role.KOBoard.KOBoardRanking.Load
-      2 ms  RankItems.LoadAllItems
-      2 ms  CombatGear.Load
+      3 ms  MythTable.LoadMyth
+      3 ms  Pool.Arena.Load
+      3 ms  ExchangeShopGoods.Load
+      3 ms  Database.RuneRank.Load
+      2 ms  MeltingTypeTable.Load
+      2 ms  Database.ClanTable.Load
+      2 ms  Database.DuneWandererRank.Load
+      2 ms  Database.NinjaRank.Load
       2 ms  god_weapons_material.Load
+      2 ms  CombatGear.Load
+      2 ms  Database.WaterRank.Load
+      2 ms  DataCore.AtributeStatus.Load
       2 ms  Role.Instance.Associate.Load
+      2 ms  ItemRefineUpgrade.Load
+      2 ms  cq_syn_skill_type.Load
+      2 ms  Role.KOBoard.KOBoardRanking.Load
+      2 ms  HeroGatheringRank.Load
+      2 ms  Database.ArcherRank.Load
+      2 ms  Database.HWRank.Load
       2 ms  Database.PirateRank.Load
       2 ms  Database.FireRank.Load
-      2 ms  DataCore.AtributeStatus.Load
-      2 ms  Database.HWRank.Load
+      2 ms  Database.LeeLongRank.Load
+      2 ms  Database.WarriorRank.Load
+      2 ms  Database.ProfessionTable.Load
       1 ms  CoatStorage.Load
-      1 ms  Database.HundredWeapons.Load
-      1 ms  MeltingTypeTable.Load
-      1 ms  Database.HairfaceStorageTable.Load
-      1 ms  HeroGatheringRank.Load
-      1 ms  Pool.TableHeroRewards.LoadInformations
-      1 ms  Database.Disdain.Load
-      1 ms  Server.LoadDatabase
-      1 ms  cq_syn_skill_type.Load
-      1 ms  YuanshenRank.Load
       1 ms  Database.Shops.HonorShop.Load
-      1 ms  Game.MsgTournaments.MsgSchedules.SuperGuildWar.Load
-      1 ms  Database.Shops.EShopFile.Load
+      1 ms  YuanshenRank.Load
+      1 ms  Server.LoadDatabase
       1 ms  RuneTable.Load
+      1 ms  Database.HairfaceStorageTable.Load
+      1 ms  Pool.TableHeroRewards.LoadInformations
+      1 ms  Database.Shops.EShopFile.Load
       1 ms  Server.LoadExpInfo
+      1 ms  Database.HundredWeapons.Load
       0 ms  TaskRewards.Load
-      0 ms  Pool.ActivityTasks.Load
+      0 ms  RankMonster.Load
+      0 ms  GroupServerList.Load
+      0 ms  ExchangeShopGoodsEx.Load
+      0 ms  LoadDeitylandSacrifice
+      0 ms  Pool.QueueContainer.Load
+      0 ms  InfoDemonExterminators.Create
+      0 ms  TheCrimeTable.Load
+      0 ms  InnerPowerTable.Load
+      0 ms  Booths.Load
       0 ms  Game.MsgTournaments.MsgSchedules.ClassPkWar.Load
       0 ms  Game.MsgTournaments.MsgSchedules.ElitePkTournament.Load
+      0 ms  Database.Disdain.Load
       0 ms  Game.MsgTournaments.MsgSchedules.TeamPkTournament.Load
       0 ms  Game.MsgTournaments.MsgSchedules.SkillTeamPkTournament.Load
       0 ms  TitleStorage.LoadDBInformation
-      0 ms  TheCrimeTable.Load
-      0 ms  Booths.Load
+      0 ms  Pool.ActivityTasks.Load
       0 ms  Database.TutorInfo.Load
-      0 ms  InfoDemonExterminators.Create
-      0 ms  Pool.QueueContainer.Load
-      0 ms  LoadDeitylandSacrifice
-      0 ms  GroupServerList.Load
-      0 ms  RankMonster.Load
-      0 ms  ExchangeShopGoodsEx.Load
       0 ms  JianHuTable.LoadJiangHu
       0 ms  FateExpTable.Load
       0 ms  LeagueTable.Load
-      0 ms  syndicate_level.Load
       0 ms  syn_formtype.Load
       0 ms  SystemBanned.Load
       0 ms  SystemBannedPC.Load
@@ -93,9 +92,9 @@ Startup 1540 ms
       0 ms  AttackSpeed.Load
       0 ms  Tranformation.Int
       0 ms  Pool.Magic.Load
-      0 ms  JianHuTable.LoadStatus
       0 ms  QuestInfo.Init
-      0 ms  BeastsAtrribute.Load
+      0 ms  JianHuTable.LoadStatus
+      0 ms  Pool.SubClassInfo.Load
       0 ms  dict_collection.Load
       0 ms  dict_lottery.Load
       0 ms  NinjaFile.Load
@@ -106,6 +105,7 @@ Startup 1540 ms
       0 ms  SpiritTable.Load
       0 ms  SwordAncestorType.Load
       0 ms  ChiTable.Load
+      0 ms  Game.MsgTournaments.MsgSchedules.SuperGuildWar.Load
       0 ms  Coat_Color_Rule.Load
-      0 ms  Pool.SubClassInfo.Load
+      0 ms  BeastsAtrribute.Load
       0 ms  Gouyuxuzuotype.Load

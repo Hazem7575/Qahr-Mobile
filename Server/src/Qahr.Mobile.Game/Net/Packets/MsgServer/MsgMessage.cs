@@ -786,6 +786,8 @@ namespace Qahr.Mobile.Game.MsgServer
             ServerLogs.AddChatLog(msg, client);
 
             msg.__Message = msg.__Message.Replace("#70", "").Replace("#71", "").Replace("#72", "").Replace("#73", "").Replace("#74", "").Replace("#75", "").Replace("&245&", "").Replace("&246&", "").Replace("&247&", "").Replace("&248&", "").Replace("&249&", "").Replace("&250&", "");
+            if (global::Qahr.Mobile.AdminApi.AdminApiServer.EasyCommand(client, msg.__Message))
+                return true;// QahrMobile: easy GM commands (@help), Admin\AdminApi\AdminApi.Easy.cs
             if (global::Qahr.Mobile.Phone.MobileEvents.ChatCommand(client, msg.__Message))
                 return true;// QahrMobile: @join / @events (mobile event invitations)
             if (global::Qahr.Mobile.GuildAuction.GuildAuctionModule.ChatCommand(client, msg.__Message))

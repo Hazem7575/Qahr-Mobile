@@ -939,3 +939,11 @@
 2026-10-22 17:01:45 | START | PuppetTheater | resume (server restart / reload) run=150 npcs=21 types=18 mobs=44 quests=16 engine rebuilt
 2026-10-22 17:08:12 | BOX | SwapShop | 1001023 test22 lv1 | Hot Turkey Box (3344536) -> HotTurkey
 2026-10-22 17:09:51 | START | PuppetTheater | resume (server restart / reload) run=151 npcs=21 types=18 mobs=44 quests=16 engine rebuilt
+2026-10-22 18:29:21 | BOX | SwapShop | 1001023 test22 lv140 | Christmas Melody Box (3345286) -> ChristmasMelody
+2026-10-22 18:47:50 | START | PuppetTheater | resume (server restart / reload) run=152 npcs=21 types=18 mobs=44 quests=16 engine rebuilt
+2026-10-22 18:51:40 | START | PuppetTheater | resume (server restart / reload) run=153 npcs=21 types=18 mobs=44 quests=16 engine rebuilt
+2026-10-22 18:53:40 | RANDOM | MobileItemUse | 1001023 test22 lv140 | Random Swap Pack (S) (3342879) -> Accessory Swap Ticket
+2026-10-23 14:59:37 | START | PuppetTheater | resume (server restart / reload) run=154 npcs=21 types=18 mobs=44 quests=16 engine rebuilt
+2026-10-23 21:49:07 | START | PuppetTheater | resume (server restart / reload) run=155 npcs=21 types=18 mobs=44 quests=16 engine rebuilt
+2026-10-23 22:09:48 | START | PuppetTheater | resume (server restart / reload) run=156 npcs=21 types=18 mobs=44 quests=16 engine rebuilt
+2026-10-23 22:10:01 | START | PuppetTheater | resume (server restart / reload) run=157 npcs=21 types=18 mobs=44 quests=16 engine rebuilt

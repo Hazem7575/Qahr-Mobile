@@ -1,0 +1,5 @@
+[10:13:04 PM]: Name: test22 Current Location: (1002,407,394) | Teleport Location: (1036,211,196)
+[10:13:04 PM]: Name: test22 Current Location: (1036,211,196) | Teleport Location: (1002,451,365)
+[10:16:18 PM]: Name: test22 Current Location: (1002,437,354) | Teleport Location: (1002,410,354)
+[10:16:26 PM]: Name: test22 Current Location: (1002,417,371) | Teleport Location: (1020,567,567)
+[10:16:35 PM]: Name: test22 Current Location: (1020,579,583) | Teleport Location: (1002,410,354)

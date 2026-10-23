@@ -398,7 +398,8 @@ namespace Qahr.Mobile.Role.Instance
         {
             Garment = 0,
             Mount = 1,
-            Count = 2
+            Accessory = 2,// QahrMobile: the mobile wardrobe (CWrapPackageMgr) also keeps weapon accessories (positions 15/16)
+            Count = 3
         }
 
         public ItemsType GetItemType(uint ID)
@@ -407,6 +408,9 @@ namespace Qahr.Mobile.Role.Instance
                 return ItemsType.Mount;
             if (Database.ItemType.ItemPosition(ID) == (ushort)Role.Flags.ConquerItem.Garment)
                 return ItemsType.Garment;
+            if (Database.ItemType.ItemPosition(ID) == (ushort)Role.Flags.ConquerItem.RightWeaponAccessory
+                || Database.ItemType.ItemPosition(ID) == (ushort)Role.Flags.ConquerItem.LeftWeaponAccessory)
+                return ItemsType.Accessory;// QahrMobile: only the mobile handler (MobileWardrobe) deposits these
             return ItemsType.Count;
         }
         public ConcurrentDictionary<uint, Game.MsgServer.MsgGameItem>[] Items;
@@ -458,6 +462,9 @@ namespace Qahr.Mobile.Role.Instance
             if (item != null)
                 return true;
             Items[(byte)ItemsType.Mount].TryGetValue(UID, out item);
+            if (item != null)
+                return true;
+            Items[(byte)ItemsType.Accessory].TryGetValue(UID, out item);// QahrMobile
             if (item != null)
                 return true;
             item = null;

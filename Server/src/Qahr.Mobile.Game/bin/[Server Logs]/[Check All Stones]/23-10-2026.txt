@@ -1,0 +1,36 @@
+[03:02:49 PM]: Player Name: test22 Mode ADD |Name: Stone(+2): UID: 101146422 | ID: 730002 | Plus: 0 | Bless: 0 | Anima: 0 | Perfection Level: 0 | S1: NoSocket | S2: NoSocket| Stake [ 1 ]   at System.Environment.get_StackTrace()
+   at Qahr.Mobile.Role.Instance.Inventory.Update(MsgGameItem ItemDat, AddMode mode, Packet stream, Boolean Removefull) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Gameplay\Instance\Inventory.cs:line 1680
+   at Qahr.Mobile.Role.Instance.Inventory.AddItemWitchStack(UInt32 ID, Byte Plus, UInt16 amount, Packet stream, Boolean bound) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Gameplay\Instance\Inventory.cs:line 789
+   at Qahr.Mobile.Phone.MobileWeekCard.Give(GameClient c, Packet stream, List`1 items) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Mobile\MobileWeekCard.cs:line 379
+   at Qahr.Mobile.Phone.MobileWeekCard.GiveOrOwe(GameClient c, Packet stream, List`1 items) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Mobile\MobileWeekCard.cs:line 132
+   at Qahr.Mobile.Phone.MobileWeekCard.Claim(GameClient c, Packet stream, UInt32 cardId) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Mobile\MobileWeekCard.cs:line 305
+   at Qahr.Mobile.Phone.MobileWeekCard.TryHandle(GameClient c, Packet stream, UInt16 packetId) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Mobile\MobileWeekCard.cs:line 190
+   at Qahr.Mobile.Program.Game_Receive(SecuritySocket obj, Packet stream) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Boot\Program.cs:line 1724
+   at Qahr.Mobile.ServerSockets.SecuritySocket.HandlerBufferCore(Int32 maxPackets) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Net\Sockets\ServerSockets\SecuritySocket.cs:line 543
+   at Qahr.Mobile.ServerSockets.SecuritySocket.ProcessReceiveV2(SocketAsyncEventArgs e) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Net\Sockets\ServerSockets\SecuritySocketV2.cs:line 295
+   at Qahr.Mobile.ServerSockets.SecuritySocket.ReceiveLoopV2(Boolean completed) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Net\Sockets\ServerSockets\SecuritySocketV2.cs:line 189
+   at Qahr.Mobile.ServerSockets.SecuritySocket.OnReceiveCompletedV2(Object sender, SocketAsyncEventArgs e) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Net\Sockets\ServerSockets\SecuritySocketV2.cs:line 175
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadPoolBoundHandleOverlapped.CompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
+   at System.Threading.ThreadPoolTypedWorkItemQueue.System.Threading.IThreadPoolWorkItem.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+   at System.Threading.Thread.StartCallback()
+[03:02:49 PM]: Player Name: test22 Mode ADD |Name: Stone(+1): UID: 101146423 | ID: 730001 | Plus: 0 | Bless: 0 | Anima: 0 | Perfection Level: 0 | S1: NoSocket | S2: NoSocket| Stake [ 1 ]   at System.Environment.get_StackTrace()
+   at Qahr.Mobile.Role.Instance.Inventory.Update(MsgGameItem ItemDat, AddMode mode, Packet stream, Boolean Removefull) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Gameplay\Instance\Inventory.cs:line 1680
+   at Qahr.Mobile.Role.Instance.Inventory.AddItemWitchStack(UInt32 ID, Byte Plus, UInt16 amount, Packet stream, Boolean bound) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Gameplay\Instance\Inventory.cs:line 789
+   at Qahr.Mobile.Phone.MobileDailyGift.Give(GameClient c, Packet stream, List`1 items) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Mobile\MobileDailyGift.cs:line 269
+   at Qahr.Mobile.Phone.MobileDailyGift.Free(GameClient c, Packet stream) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Mobile\MobileDailyGift.cs:line 138
+   at Qahr.Mobile.Phone.MobileDailyGift.Handle(GameClient c, Packet stream, ActionQuery data) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Mobile\MobileDailyGift.cs:line 72
+   at Qahr.Mobile.Game.MsgServer.MsgDataPacket.Process(GameClient user, Packet stream) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Net\Packets\MsgServer\MsgDataPacket.cs:line 387
+   at Qahr.Mobile.Program.Game_Receive(SecuritySocket obj, Packet stream) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Boot\Program.cs:line 1741
+   at Qahr.Mobile.ServerSockets.SecuritySocket.HandlerBufferCore(Int32 maxPackets) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Net\Sockets\ServerSockets\SecuritySocket.cs:line 543
+   at Qahr.Mobile.ServerSockets.SecuritySocket.ProcessReceiveV2(SocketAsyncEventArgs e) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Net\Sockets\ServerSockets\SecuritySocketV2.cs:line 295
+   at Qahr.Mobile.ServerSockets.SecuritySocket.ReceiveLoopV2(Boolean completed) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Net\Sockets\ServerSockets\SecuritySocketV2.cs:line 189
+   at Qahr.Mobile.ServerSockets.SecuritySocket.OnReceiveCompletedV2(Object sender, SocketAsyncEventArgs e) in D:\Qahr Mobile\Server\src\Qahr.Mobile.Game\Net\Sockets\ServerSockets\SecuritySocketV2.cs:line 175
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.ThreadPoolBoundHandleOverlapped.CompletionCallback(UInt32 errorCode, UInt32 numBytes, NativeOverlapped* nativeOverlapped)
+   at System.Threading.ThreadPoolTypedWorkItemQueue.System.Threading.IThreadPoolWorkItem.Execute()
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
+   at System.Threading.Thread.StartCallback()

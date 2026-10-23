@@ -1,0 +1,21 @@
+[10:13:01 PM]:test22 to GmStudio @help
+[10:13:02 PM]:test22 to GmStudio @cps 100
+[10:13:02 PM]:test22 to GmStudio @money 1000
+[10:13:02 PM]:test22 to GmStudio @find meteor
+[10:13:03 PM]:test22 to GmStudio @item 1088001 2
+[10:13:03 PM]:test22 to GmStudio @heal
+[10:13:04 PM]:test22 to GmStudio @online
+[10:13:04 PM]:test22 to GmStudio @go market
+[10:13:04 PM]:test22 to GmStudio @go twin
+[10:13:04 PM]:test22 to GmStudio @level 140
+[10:13:05 PM]:test22 to GmStudio @vip 6 7
+[10:13:05 PM]:test22 to GmStudio @bogus 1
+[10:13:11 PM]:test22 to GmStudio @help
+[10:13:11 PM]:test22 to GmStudio @cps 100
+[10:13:12 PM]:test22 to GmStudio @find meteor
+[10:13:12 PM]:test22 to GmStudio @item 1088001 2
+[10:13:12 PM]:test22 to GmStudio @online
+[10:13:13 PM]:test22 to GmStudio @vip 6 7
+[10:13:13 PM]:test22 to GmStudio @go 1002 1 1
+[10:13:14 PM]:test22 to GmStudio @goto nobody
+[10:14:55 PM]:test22 to All @cps 10000

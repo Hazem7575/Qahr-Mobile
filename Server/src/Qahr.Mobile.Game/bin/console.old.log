@@ -1,108 +1,64 @@
-[05:01:41] [Perf] ThreadPool min threads: worker=100 iocp=100 (cores=24)
-[05:01:41] Please Wait The Sourse is Loading ...
-[05:01:41] [Migrate] database `qahr_mobile` is ready.
-[05:01:41] [Storage] Player binary storage ready (blob mode; normalized mirror tables removed).
-[05:01:41] [Storage] Social mirror tables ready (guilds/unions/clans, 8 tables).
-[05:01:41] [Storage] Async DB mirror ON (2 workers, max queue 20000)
-[05:01:41] [Migrate] no Migrations folder found next to the exe or in the source tree - only the tracking table was ensured.
-[05:01:41] [Migrate] 3 already applied, 0 new, 0 file(s) total.
-[05:01:41] [Storage] Player read source: Db
-[05:01:41] [Storage] Player backend: MySql (players table ready, 270 cols)
-[05:01:42] [FileDrops] file drops OFF (no drops.txt).
-[05:01:42] [FestivalMaps] 96 official festival map ids loaded from maps.txt
-[05:01:42] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
-[05:01:42] [QuestEngine] 4247 quests, 5225 objectives (89.7% typed: Talk=2460 Kill=1190 Collect=659 Gather=8 Visit=254 Unknown=539 State=76 Event=25 Counter=12 KillPoints=2), engine-owned 3684 (workable 1886), hand-coded 420 (engine kill counting for 180), quests.json entries 1582, talk slots fixed 96, chain prizes trimmed 58, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 2
-[05:01:43] [QuizShow] quiz data loaded.
-[05:01:43] [Modules] loaded module: QuizShow v1.0
-[05:01:43] [RechargeShop] recharge-shop data loaded.
-[05:01:43] [Modules] loaded module: RechargeShop v1.0
-[05:01:43] [ShareVIP] shared-VIP list loaded.
-[05:01:43] [Modules] loaded module: ShareVIP v1.0
-[05:01:43] [VoteSystem] vote data loaded.
-[05:01:43] [Modules] loaded module: VoteSystem v1.0
-[05:01:43] [Modules] loaded module: FestivalIcons v1.0
-[05:01:43] [Modules] 5 module(s) loaded.
-[05:01:43]   slow load: QuestEngine.Load 699 ms
-[05:01:43]   slow load: Pool.ItemsBase.Loading 311 ms
-[05:01:43]   slow load: Role.Statue.Load 57 ms
-[05:01:43]   slow load: Server.LoadMonsters 57 ms
-[05:01:43]   slow load: Game.MsgTournaments.MsgSchedules.Create 41 ms
-[05:01:43] -------- The Sourse Version [ 7957 ]       --------
-[05:01:43] -------- The Sourse Edit By [ Mohy ElDin ] --------
-[05:01:43] --------   [ Archive Trojan ]              --------
-[05:01:43] --------   [ Archive Ninja ]               --------
-[05:01:43] --------   [ Archive Warrior ]             --------
-[05:01:43] --------   [ Archive Archer ]              --------
-[05:01:43] --------   [ Archive Taoist ]              --------
-[05:01:43] --------   [ Archive Pirate ]              --------
-[05:01:43] --------   [ Archive Dragon Warrior ]      --------
-[05:01:43] --------   [ Archive Monk ]                --------
-[05:01:43] --------   [ Archive Dune Wanderer ]       --------
-[05:01:43] --------   [ New Character Dune Wanderer ] --------
-[05:01:43] --------   [ Eonspirit System ]            --------
-[05:01:43] --------   [ Emoji System ]                --------
-[05:01:43] --------   [ LoveForEver System ]          --------
-[05:01:43] --------   [ HeartLock System ]            --------
-[05:01:43] --------   [ New Relics System ]           --------
-[05:01:43] --------   [ New Runes System ]            --------
-[05:01:43] [ The Source has Completed Downloading ]
-[05:01:43] [Mobile] 291 renumbered packets from D:\conquer\QahrMobile\Data\mobile_ids.txt
-[05:01:43] [Mobile] 4 server packet ids blocked by D:\conquer\QahrMobile\Data\mobile_block.txt
-[05:01:43] [Mobile] 146 packet layouts from 22 files in D:\conquer\QahrMobile\Data\mobile_layouts
-[05:01:43] [Threads] WakePool=1 (event-driven, kernel wait, smart timer)
-[05:01:43] [Network] NetEngine=V2 (async receive + send queue) on port 5828
-[05:01:43] [AdminApi] listening on 127.0.0.1:5897 (local only, PlayerStudio).
-[05:01:43] [HotReload] ready (console/@/AdminApi: reloadnpcs, reloadportals, reloadshops, reloaditems, reloadmonsters, reloaddrops, reloadall). Auto-watch off.
-[05:01:43] [DreamTheater] module ready (theater management, Wish Fountain, click mini-games).
-[05:01:43] [QuellDemons] ready: map 11885, ServerType 3, week kills 0, pending rewards 0
-[05:01:43] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
-[05:01:43] [Festivals] 58 festival(s), 58 valid (Infinity[DB]\Festivals). Schedules checked every minute. Commands: festival list|info|on|off|auto|reload.
-[05:01:43] [NewGuildWar] on - Sunday 14:30 for 30 min on map 1038 (Infinity[DB]\NewGuildWar\config.ini).
-[05:01:43] [GiftCenter] 5 giftable item(s), 0 record(s)
-[05:01:43] [Lottery] Golden Tree 3 bloom(s)/day, 109 client conditions | Turnover 8 usable type(s)
-[05:01:45] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
-[05:01:45] [Festivals] PuppetTheater ON (run 150)  ·  21 npc · 44 mob · 16 quest
-[05:01:50] [HotReload] reloadshops: Applied live: 171 shops (Shop.dat) + 504 emoney shops, 14100 items. (1491 ms)
-[05:01:50]     Shop.dat: 171 -> 171 shops; emoneyshop: 504 -> 504 shops.
-[05:01:50]     new_shop_goods: 4253 -> 4253 goods.
-[05:01:50]     The server now sells/validates the new lists. The shop WINDOW is drawn by the client from its own shop files: an item missing from the client's list can't be clicked until the client is patched.
-[05:02:43] ONLINE 0 │ CPU 0.2% │ RAM 468MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.3ms │ GC2 1
-[05:03:43] ONLINE 0 │ CPU 0.0% │ RAM 468MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.1ms
-[05:04:43] ONLINE 0 │ CPU 0.0% │ RAM 468MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.0ms
-[PacketStream] listening on 127.0.0.1:17957
-[PacketInject] listening on 127.0.0.1:17968 (allow: 3 targets)
-[05:04:53] [LoginToken] OK entity=1001023 age=0s
-[05:04:53] Client [ test22 ] Was Login On IP : [ 26.31.69.47 ] .
-[05:04:54] [BattlePass] season 122 on: 50 levels, 150 rewards, 14 tasks
-[05:04:54] [Mobile] main story rewards: 409 steps
-[05:04:54] [Mobile] main story: 409 quests from D:\conquer\QahrMobile\Data\mobile_quests\main_story.txt
-[05:04:54] [Mobile] mobile_functions.txt: 33 functions
-[05:04:55] [Mobile] 12 skills translated from D:\conquer\QahrMobile\Data\mobile_magic.txt
-[05:05:15] [Mobile] events: mode Limited, dialog_interval 1800s, join_window 300s
-[05:05:42] Unknown Action Type [9] MsgShopClan.
-[05:05:43] ONLINE 1 │ CPU 0.1% │ RAM 532MB │ NET 1/7 │ SAVE 2 · 22ms │ DB ok │ TICK 53.1ms │ GC2 1
-[05:06:06] [HotReload] code update applied live (1 type(s))  -> MsgShopClan  -  method-body edits are live; data edits still need their reload* command.
-[05:06:43] ONLINE 1 │ CPU 0.0% │ RAM 554MB │ NET 0/1 │ SAVE 0 │ DB ok │ TICK 0.6ms
-[05:07:04] [Mobile] quest NPC dialogs loaded: 573
-[05:07:06] [NewYear2023] springfestival2023.json: bad escape \L
-[05:07:06] [NewYear2023] springfestival2023.json: bad escape \L
-[05:07:21] [NewYear2023] springfestival2023.json: bad escape \L
-[05:07:21] [NewYear2023] springfestival2023.json: bad escape \L
-[05:07:36] [NewYear2023] springfestival2023.json: bad escape \L
-[05:07:36] [NewYear2023] springfestival2023.json: bad escape \L
-[05:07:43] ONLINE 1 │ CPU 0.0% │ RAM 555MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 2.9ms
-[05:07:51] [NewYear2023] springfestival2023.json: bad escape \L
-[05:07:51] [NewYear2023] springfestival2023.json: bad escape \L
-[05:08:06] [NewYear2023] springfestival2023.json: bad escape \L
-[05:08:06] [NewYear2023] springfestival2023.json: bad escape \L
-[05:08:21] [NewYear2023] springfestival2023.json: bad escape \L
-[05:08:21] [NewYear2023] springfestival2023.json: bad escape \L
-[05:08:36] [NewYear2023] springfestival2023.json: bad escape \L
-[05:08:36] [NewYear2023] springfestival2023.json: bad escape \L
-[05:08:43] ONLINE 1 │ CPU 0.0% │ RAM 559MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
-[05:08:51] [NewYear2023] springfestival2023.json: bad escape \L
-[05:08:51] [NewYear2023] springfestival2023.json: bad escape \L
-[05:09:06] [NewYear2023] springfestival2023.json: bad escape \L
-[05:09:06] [NewYear2023] springfestival2023.json: bad escape \L
-[05:09:21] [NewYear2023] springfestival2023.json: bad escape \L
-[05:09:21] [NewYear2023] springfestival2023.json: bad escape \L
+[10:09:44] [Perf] ThreadPool min threads: worker=100 iocp=100 (cores=24)
+[10:09:44] Please Wait The Sourse is Loading ...
+[10:09:44] [Migrate] database `qahr_mobile` is ready.
+[10:09:44] [Storage] Player binary storage ready (blob mode; normalized mirror tables removed).
+[10:09:44] [Storage] Social mirror tables ready (guilds/unions/clans, 8 tables).
+[10:09:44] [Storage] Async DB mirror ON (2 workers, max queue 20000)
+[10:09:44] [Migrate] no Migrations folder found next to the exe or in the source tree - only the tracking table was ensured.
+[10:09:44] [Migrate] 3 already applied, 0 new, 0 file(s) total.
+[10:09:44] [Storage] Player read source: Db
+[10:09:44] [Storage] Player backend: MySql (players table ready, 270 cols)
+[10:09:45] [FileDrops] file drops OFF (no drops.txt).
+[10:09:45] [FestivalMaps] 96 official festival map ids loaded from maps.txt
+[10:09:45] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
+[10:09:45] [QuestEngine] 4247 quests, 5225 objectives (89.7% typed: Talk=2460 Kill=1190 Collect=659 Gather=8 Visit=254 Unknown=539 State=76 Event=25 Counter=12 KillPoints=2), engine-owned 3684 (workable 1886), hand-coded 420 (engine kill counting for 180), quests.json entries 1582, talk slots fixed 96, chain prizes trimmed 58, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 2
+[10:09:46] [QuizShow] quiz data loaded.
+[10:09:46] [Modules] loaded module: QuizShow v1.0
+[10:09:46] [RechargeShop] recharge-shop data loaded.
+[10:09:46] [Modules] loaded module: RechargeShop v1.0
+[10:09:46] [ShareVIP] shared-VIP list loaded.
+[10:09:46] [Modules] loaded module: ShareVIP v1.0
+[10:09:46] [VoteSystem] vote data loaded.
+[10:09:46] [Modules] loaded module: VoteSystem v1.0
+[10:09:46] [Modules] loaded module: FestivalIcons v1.0
+[10:09:46] [Modules] 5 module(s) loaded.
+[10:09:46]   slow load: QuestEngine.Load 685 ms
+[10:09:46]   slow load: Pool.ItemsBase.Loading 314 ms
+[10:09:46]   slow load: Role.Statue.Load 57 ms
+[10:09:46]   slow load: Server.LoadMonsters 50 ms
+[10:09:46]   slow load: Database.Shops.EShopV2File.Load 35 ms
+[10:09:46] -------- The Sourse Version [ 7957 ]       --------
+[10:09:46] -------- The Sourse Edit By [ Mohy ElDin ] --------
+[10:09:46] --------   [ Archive Trojan ]              --------
+[10:09:46] --------   [ Archive Ninja ]               --------
+[10:09:46] --------   [ Archive Warrior ]             --------
+[10:09:46] --------   [ Archive Archer ]              --------
+[10:09:46] --------   [ Archive Taoist ]              --------
+[10:09:46] --------   [ Archive Pirate ]              --------
+[10:09:46] --------   [ Archive Dragon Warrior ]      --------
+[10:09:46] --------   [ Archive Monk ]                --------
+[10:09:46] --------   [ Archive Dune Wanderer ]       --------
+[10:09:46] --------   [ New Character Dune Wanderer ] --------
+[10:09:46] --------   [ Eonspirit System ]            --------
+[10:09:46] --------   [ Emoji System ]                --------
+[10:09:46] --------   [ LoveForEver System ]          --------
+[10:09:46] --------   [ HeartLock System ]            --------
+[10:09:46] --------   [ New Relics System ]           --------
+[10:09:46] --------   [ New Runes System ]            --------
+[10:09:46] [ The Source has Completed Downloading ]
+[10:09:46] [Mobile] 292 renumbered packets from D:\conquer\QahrMobile\Data\mobile_ids.txt
+[10:09:46] [Mobile] 4 server packet ids blocked by D:\conquer\QahrMobile\Data\mobile_block.txt
+[10:09:46] [Mobile] 146 packet layouts from 22 files in D:\conquer\QahrMobile\Data\mobile_layouts
+[10:09:46] [Threads] WakePool=1 (event-driven, kernel wait, smart timer)
+[10:09:46] [Network] NetEngine=V2 (async receive + send queue) on port 5828
+[10:09:46] [AdminApi] listening on 127.0.0.1:5897 (local only, PlayerStudio).
+[10:09:46] [HotReload] ready (console/@/AdminApi: reloadnpcs, reloadportals, reloadshops, reloaditems, reloadmonsters, reloaddrops, reloadall). Auto-watch off.
+[10:09:46] [DreamTheater] module ready (theater management, Wish Fountain, click mini-games).
+[10:09:46] [QuellDemons] ready: map 11885, ServerType 3, week kills 0, pending rewards 0
+[10:09:46] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
+[10:09:46] [Festivals] 58 festival(s), 58 valid (Infinity[DB]\Festivals). Schedules checked every minute. Commands: festival list|info|on|off|auto|reload.
+[10:09:46] [NewGuildWar] on - Sunday 14:30 for 30 min on map 1038 (Infinity[DB]\NewGuildWar\config.ini).
+[10:09:46] [GiftCenter] 5 giftable item(s), 0 record(s)
+[10:09:46] [Lottery] Golden Tree 3 bloom(s)/day, 109 client conditions | Turnover 8 usable type(s)
+[10:09:48] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
+[10:09:48] [Festivals] PuppetTheater ON (run 156)  ·  21 npc · 44 mob · 16 quest

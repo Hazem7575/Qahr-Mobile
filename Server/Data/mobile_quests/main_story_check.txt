@@ -1,4 +1,4 @@
-﻿# QahrMobile: main-story steps with a monster goal (written 2026-10-22 17:12:22 by MobileQuestStory.cs)
+﻿# QahrMobile: main-story steps with a monster goal (written 2026-10-23 22:10:52 by MobileQuestStory.cs)
 # id	name	target	count	npc map,x,y	engine objectives	problems	nearest spawn (map x,y distance)
 13513	Pheasant	Pheasant	3	1002 504,389	Kill 3 x Pheasant [slot 1]		1002 554,349 d=50
 13517	Class Skill	Pheasant	5	1002 441,379	Kill 5 x Pheasant [slot 1]		1002 524,472 d=93

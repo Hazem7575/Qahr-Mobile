@@ -1,0 +1,25 @@
+# QahrMobile: phone bag items "Use" (Systems\Mall\MobileItemUse.cs). Re-read when this file changes (no restart).
+#   <id> cps <n> | bcps <n> | potency <n> | items <spec>... | random <w>*<spec>... | msg <text>
+#   spec = id:count[:b][:minutes]; a bound item always gives bound content (cps -> bound CPs).
+
+# --- CP boxes ---
+3314180 cps 10                 # GeniusCPBox: "Open to receive 10 CPs" (bound box -> 10 bound CPs)
+
+# --- consumables ---
+3314210 potency 10             # MangoCream: "Drink it to receive 10 Potency Points"
+
+# --- random packs (no content table in the client data: our own weights) ---
+# Random Swap Pack (S): "a random number of Accessory/Hairstyle/Garment Swap Tickets"
+3342879 random 30*3342875:1 20*3342875:2 10*3342875:3 15*3342877:1 8*3342877:2 12*3342874:1 5*3342874:2
+
+# --- items of systems this server does not have: keep the item, explain ---
+3354581 msg The Spiritus system is not available on this server yet. Please keep your 100-Spiritus Ball.
+3356433 msg Meridian cultivation is not available on this server yet. Please keep your Yin Amulet.
+3339816 msg The Lineage system is not available on this server yet. Please keep your Lineage Crystals.
+3339817 msg The Lineage system is not available on this server yet. Please keep your Lineage Seals.
+4060001 msg Use the Universal Rune Essence in the Rune upgrade window (Gear > Runes).
+3342874 msg Swap Tickets are spent in the Mall's Swap Shop. They can't be used from the bag.
+3342875 msg Swap Tickets are spent in the Mall's Swap Shop. They can't be used from the bag.
+3342876 msg Swap Tickets are spent in the Mall's Swap Shop. They can't be used from the bag.
+3342877 msg Swap Tickets are spent in the Mall's Swap Shop. They can't be used from the bag.
+3342878 msg Swap Tickets are spent in the Mall's Swap Shop. They can't be used from the bag.

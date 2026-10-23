@@ -356,3 +356,17 @@
 2026-10-22 17:40:03  Elite Demons not spawned (eliteLookface 0)
 2026-10-22 18:00:03  Ghost General spawned uid 404990 at 103,171 (schedule 2026-10-22 18:00)
 2026-10-22 18:00:03  Elite Demons not spawned (eliteLookface 0)
+2026-10-22 18:20:03  Hercules Ax 18:20: still alive, not respawned
+2026-10-22 18:40:03  Xuanyuan Master 18:40: still alive, not respawned
+2026-10-22 19:00:03  Ghost General spawned uid 402630 at 103,173 (schedule 2026-10-22 19:00)
+2026-10-22 19:00:03  Elite Demons not spawned (eliteLookface 0)
+2026-10-23 15:00:00  Ghost General spawned uid 401449 at 105,172 (schedule 2026-10-23 15:00)
+2026-10-23 15:00:00  Elite Demons not spawned (eliteLookface 0)
+2026-10-23 15:20:00  Hercules Ax spawned uid 404310 at 323,373 (schedule 2026-10-23 15:20)
+2026-10-23 15:20:00  Elite Demons not spawned (eliteLookface 0)
+2026-10-23 15:40:00  Xuanyuan Master spawned uid 404313 at 280,153 (schedule 2026-10-23 15:40)
+2026-10-23 15:40:00  Elite Demons not spawned (eliteLookface 0)
+2026-10-23 16:00:00  Ghost General 16:00: still alive, not respawned
+2026-10-23 16:20:04  Hercules Ax 16:20: still alive, not respawned
+2026-10-23 22:00:00  Ghost General spawned uid 403307 at 105,172 (schedule 2026-10-23 22:00)
+2026-10-23 22:00:00  Elite Demons not spawned (eliteLookface 0)

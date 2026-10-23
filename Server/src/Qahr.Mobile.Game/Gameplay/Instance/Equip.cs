@@ -429,7 +429,10 @@ namespace Qahr.Mobile.Role.Instance
                     {
                         if (ClientItems.TryRemove(itemdata.UID, out itemdata))
                         {
-                            if (position == Flags.ConquerItem.Garment || position == Flags.ConquerItem.SteedMount)
+                            // QahrMobile: a weapon accessory worn from the mobile wardrobe (WH_ID 100) goes back to the wardrobe
+                            // like a garment; moving it to the bag would leave it in both places (dupe)
+                            if (position == Flags.ConquerItem.Garment || position == Flags.ConquerItem.SteedMount
+                                || (itemdata.WH_ID == 100 && Owner.MyWardrobe.ContainUID(itemdata.UID)))
                             {
                                 itemdata.Position = 0;
                             }

@@ -172,6 +172,13 @@ namespace Qahr.Mobile.Game.MsgServer
         {
             CoatStorage pMsg;
             stream.GetCoatStorage(out pMsg);
+            // QahrMobile: the phone numbers its wardrobe actions differently (5 = wear, 6 = take off) and also stores
+            // weapon accessories; Mobile\MobileWardrobe.cs handles 1/2/5/6 for mobile clients
+            if (global::Qahr.Mobile.Phone.MobileWardrobe.Handle(Client, stream, pMsg))
+            {
+                Database.TitleStorage.CheckUpUser(Client, stream);
+                return;
+            }
             switch ((Types)pMsg.ActionID)
             {
                 case Types.Equip:
