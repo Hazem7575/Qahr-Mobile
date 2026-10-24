@@ -85,3 +85,13 @@
 [05:10:35] ONLINE 1 │ CPU 0.0% │ RAM 535MB │ NET 0/2 │ SAVE 0 │ DB ok │ TICK 0.5ms
 [05:11:35] ONLINE 1 │ CPU 0.0% │ RAM 535MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.8ms
 [05:12:35] ONLINE 1 │ CPU 0.0% │ RAM 535MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.8ms
+[05:13:35] ONLINE 1 │ CPU 0.0% │ RAM 536MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.8ms
+[05:14:35] ONLINE 1 │ CPU 0.0% │ RAM 536MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[05:15:35] ONLINE 1 │ CPU 0.0% │ RAM 558MB │ NET 0/0 │ SAVE 1 · 11ms │ DB ok │ TICK 0.7ms
+[05:16:35] [HotReload] code update applied live (2 type(s))  -> GroupServerList, <>c  -  method-body edits are live; data edits still need their reload* command.
+[05:16:35] ONLINE 1 │ CPU 0.0% │ RAM 567MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[05:17:35] ONLINE 1 │ CPU 0.0% │ RAM 567MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[05:18:35] ONLINE 1 │ CPU 0.0% │ RAM 568MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[05:19:35] ONLINE 1 │ CPU 0.0% │ RAM 568MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 3.0ms
+[05:20:35] ONLINE 1 │ CPU 0.0% │ RAM 570MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[05:21:35] ONLINE 1 │ CPU 0.0% │ RAM 571MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms

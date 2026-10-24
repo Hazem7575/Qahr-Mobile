@@ -74,6 +74,14 @@ namespace Qahr.Mobile.Database
                if (obj.Name.Contains("Realm"))
                    InterServer = obj;
            }
+           // QahrMobile: a ServerName with no row here left MyServerInfo null and every login crashed (LoadMap)
+           if (MyServerInfo == null)
+           {
+               MyServerInfo = GroupServers.Values.Where(s => !s.Name.Contains("Realm")).OrderBy(s => s.ID).FirstOrDefault();
+               MyConsole.WriteLine("[Server] ServerConfig.ini ServerName '" + Program.ServerConfig.ServerName + "' is not in Data\\client_config.ini"
+                   + (MyServerInfo != null ? ": using row '" + MyServerInfo.Name + "'. Put the same name in both files." : " and the file has no server row."),
+                   ConsoleColor.Red);
+           }
        }
     }
 }

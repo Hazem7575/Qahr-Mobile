@@ -8,6 +8,7 @@ param([switch]$Stop, [switch]$Status, [int]$Port = 9550)
 $Root    = 'D:\Qahr Mobile\Server'
 $Python  = 'D:\conquer\_private\comobile\venv\Scripts\python.exe'
 $Tool    = Join-Path $Root 'Tools\OfficialMirror\official_mirror.py'
+$Exe     = Join-Path $Root 'Tools\OfficialMirror\OfficialMirror.exe'   # the published build (no Python needed)
 $DataDir = 'D:\Qahr Mobile\CDN'
 $PidFile = Join-Path $DataDir 'cdn_serve.pid'
 $OutLog  = Join-Path $DataDir 'cdn_serve.log'
@@ -34,8 +35,10 @@ if ($Stop) {
 }
 if ($null -ne $p) { Write-Output "RUNNING pid=$($p.Id) port=$Port (already)"; exit 0 }
 
-$argsList = @('-I', "`"$Tool`"", 'cdn-serve', '--port', "$Port", '--bind', '0.0.0.0')
-$proc = Start-Process -FilePath $Python -ArgumentList $argsList -WindowStyle Hidden -PassThru `
+$serve = @('cdn-serve', '--port', "$Port", '--bind', '0.0.0.0')
+if (Test-Path $Exe) { $Run = $Exe; $argsList = $serve }
+else { $Run = $Python; $argsList = @('-I', "`"$Tool`"") + $serve }
+$proc = Start-Process -FilePath $Run -ArgumentList $argsList -WindowStyle Hidden -PassThru `
         -RedirectStandardOutput $OutLog -RedirectStandardError $ErrLog
 Set-Content -Path $PidFile -Value $proc.Id -Encoding ascii
 for ($i = 0; $i -lt 20; $i++) {

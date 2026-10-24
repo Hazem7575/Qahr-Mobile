@@ -417,3 +417,5 @@
 2026-10-24 16:40:00  Xuanyuan Master spawned uid 404325 at 281,153 (schedule 2026-10-24 16:40)
 2026-10-24 16:40:00  Elite Demons not spawned (eliteLookface 0)
 2026-10-24 17:00:00  Ghost General 17:00: still alive, not respawned
+2026-10-24 17:20:00  Hercules Ax spawned uid 404319 at 323,373 (schedule 2026-10-24 17:20)
+2026-10-24 17:20:00  Elite Demons not spawned (eliteLookface 0)
