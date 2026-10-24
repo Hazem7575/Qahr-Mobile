@@ -1,6 +1,6 @@
 // ============================================================================
 //  [SummerWhales 2026-10-14] The official Summer 2022 "Summer Adventure" (Summer Beach Adventure) entry and window, shown
-//  while the festival SummerWhales (Infinity[DB]\Festivals\SummerWhales, quests 5113-5115 on map 11829) runs.
+//  while the festival SummerWhales (Data\Festivals\SummerWhales, quests 5113-5115 on map 11829) runs.
 //
 //  Official client (luaui\dialog\dlgsummeractivities, decrypted):
 //    button   DlgSummerBtn (Dialog_Info 1255-btn, EN "Summer Adventure"), pushed by festival.json icon_show:
@@ -20,7 +20,7 @@
 //  NOT on this server (system message, nothing granted): rankings, Cool Waterfall, Whale Vortex (cross server).
 //  Scallop Beach (quest 5113, official "Feed 5 [mob Scallop][chk_item 3336088,5]"): the Scallop NPC of the festival gives
 //  one official Scallop 3336088 per click while 5113 is active and the bag holds fewer than 5 (rate limited).
-//  Config (derived values): Infinity[DB]\SummerWhales\summerwhales.json.
+//  Config (derived values): Data\SummerWhales\summerwhales.json.
 //
 //  Hooks (tagged [SummerWhales 2026-10-14]):
 //    Base\LuaUi\LuaPush.cs HandleCallback  -> if (SummerWhales.SummerWhalesUi.OnRaw(client, data)) return true;
@@ -59,7 +59,7 @@ namespace Qahr.Mobile.SummerWhales
         /// <summary>The whole summerwhales.json (SummerWhalesWish reads its "wish" / "transform" / "items" parts).</summary>
         public static Dictionary<string, object> RawConfig { get { var c = Cfg; return _raw; } }
         public const string TxtOverPublic = TxtOver;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "SummerWhales", "summerwhales.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "SummerWhales", "summerwhales.json"); } }
         public static Config Cfg
         {
             get
@@ -240,7 +240,7 @@ namespace Qahr.Mobile.SummerWhales
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
                 return false;
             }
         }

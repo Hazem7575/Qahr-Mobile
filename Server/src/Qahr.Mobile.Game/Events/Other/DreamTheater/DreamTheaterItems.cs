@@ -48,7 +48,7 @@ namespace Qahr.Mobile.DreamTheater
                 if (id == TitleOnlyLove || id == TitleSincereLove || id == TitleTrueLove) { OpenTitleBox(c, stream, id); return true; }
                 if (cfg.FlowerPacks.ContainsKey(id)) { OpenFlowerPack(c, stream, id); return true; }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
 
@@ -66,7 +66,7 @@ namespace Qahr.Mobile.DreamTheater
                 if (CountItem(c, npcid) == 0) { Msg(c, "You don`t have this item in your inventory."); return true; }
                 VelvetDialog(c, stream, option);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
 

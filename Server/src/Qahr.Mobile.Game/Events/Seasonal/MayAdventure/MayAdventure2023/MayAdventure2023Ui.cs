@@ -19,7 +19,7 @@
 //    ways     AnniversaryAdventure_Way</N>1 Daily Sign-in Pack, </N>2 100/200 Active Points Pack, </N>3 CP Mall.
 //    public   MayThemeAdventure_EnterThing1/2 (Ahriman Battle / Lava Land (CS), 16/18/20 h) - their maps are not in
 //             FestivalMaps\maps.txt and Lava Land is cross-server: polite message.
-//  Rules / numbers: MayAdventureCore.cs; derived values: Infinity[DB]\MayAdventure2023\mayadventure.json.
+//  Rules / numbers: MayAdventureCore.cs; derived values: Data\MayAdventure2023\mayadventure.json.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10236), one tagged line (unchanged since 2026-10-14).
 // ============================================================================
@@ -106,7 +106,7 @@ namespace Qahr.Mobile.MayAdventure2023
                         return true;
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
 
@@ -201,7 +201,7 @@ namespace Qahr.Mobile.MayAdventure2023
                 Msg(c, "Congrats! You received " + Kit.Names(o.Given) + "!");
                 ShowRewards(c, o.Given);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ Anniversary Store

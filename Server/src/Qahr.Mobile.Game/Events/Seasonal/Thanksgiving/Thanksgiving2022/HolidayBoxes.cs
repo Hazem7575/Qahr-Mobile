@@ -28,8 +28,8 @@ namespace Qahr.Mobile.Thanksgiving2022
             lock (_initLock)
             {
                 if (_init) return;
-                try { Thanksgiving2022Ui.RegisterBoxes(); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
-                foreach (var a in Extra) { try { a(); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } } }
+                try { Thanksgiving2022Ui.RegisterBoxes(); } catch (Exception e) { MyConsole.SaveException(e); }
+                foreach (var a in Extra) { try { a(); } catch (Exception e) { MyConsole.SaveException(e); } }
                 _init = true;
             }
         }
@@ -52,7 +52,7 @@ namespace Qahr.Mobile.Thanksgiving2022
             if (!_h.TryGetValue(item.ITEM_ID, out h)) return false;
             if (HKit.Throttled("box", c.Player.UID, 300)) return true;
             try { return h(c); }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return true; }
+            catch (Exception e) { MyConsole.SaveException(e); return true; }
         }
 
         /// <summary>Standard "open one box": room check, take 1, give, log. Returns true (handled) always.</summary>

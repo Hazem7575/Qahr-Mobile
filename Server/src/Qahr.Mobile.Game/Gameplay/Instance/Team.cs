@@ -384,6 +384,11 @@ namespace Qahr.Mobile.Role.Instance
             client = member.client;
             return true;
         }
+        public void TeleportTeam(Place place, uint dinamic = 0, Func<Client.GameClient, bool> pr = null)
+        {
+            TeleportTeam((ushort)place.Map, place.X, place.Y, dinamic, pr);
+        }
+
         public void TeleportTeam(ushort map, ushort x, ushort y, uint dinamic = 0, Func<Client.GameClient, bool> pr = null)
         {
             foreach (var member in Temates)

@@ -16,7 +16,7 @@
 //             (Dialog_Info["1220-other"]: cost 1 / 10 Dream Conch, 20 wheel items). SummerActive2023Page_DrawReward</N>1|10.
 //             +30 Dream Points per wish (official). Wheel weights DERIVED (slot colour). No stage list (the client's default
 //             stage table belongs to another event): RewardList = {}.
-//  State per character: Infinity[DB]\Summer2023\players.json. Config: Infinity[DB]\Summer2023\summer2023.json.
+//  State per character: Data\Summer2023\players.json. Config: Data\Summer2023\summer2023.json.
 // ============================================================================
 using System;
 using System.Collections.Concurrent;
@@ -57,7 +57,7 @@ namespace Qahr.Mobile.Summer2023
             public Config() { Weights = Colour.Select(c => c == 5 ? 2L : c == 4 ? 8L : c == 3 ? 20L : c == 2 ? 35L : 50L).ToArray(); }
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(SummerWhales.FestPlayerStore.RootOverride ?? Program.ServerConfig.DbLocation, "Summer2023", "summer2023.json"); } }
+        static string CfgFile { get { return Path.Combine(SummerWhales.FestPlayerStore.RootOverride ?? global::Qahr.Mobile.Festivals.FestivalLoader.Root, "Summer2023", "summer2023.json"); } }
         public static Config Cfg
         {
             get

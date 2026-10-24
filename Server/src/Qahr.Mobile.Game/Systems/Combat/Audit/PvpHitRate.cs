@@ -15,7 +15,7 @@ namespace Qahr.Mobile.CombatAudit2
     ///   accuracy = attacker Status.Accuracy (weapon +N "Agility" column of ItemAdd.ini, ~0..46, + rune Deadly Sight 50..200)
     ///   dodge    = target Status.Dodge (boots itemtype dodge 0..~40 + boots +N 0..20)
     /// Every constant is DERIVED (the official server values are not in the client) and lives in
-    /// Infinity[DB]\CombatAudit2\pvp_hitrate.txt (re-read when the file changes). Missing/bad file = the defaults below.
+    /// Data\CombatAudit2\pvp_hitrate.txt (re-read when the file changes). Missing/bad file = the defaults below.
     /// </summary>
     public static class PvpHitRate
     {

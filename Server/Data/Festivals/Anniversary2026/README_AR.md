@@ -20,4 +20,4 @@
 الكويز، و Naval Drill، و Residential Area، و Stargazing في Luoxing Pagoda (Star Raft)، وتجنيد الأبطال وفتح الطرق والجوايز بتاعتها، والرانكنج. خريطة Anniversary Sail مش في `maps.txt`.
 
 ## الكونفيج
-`Infinity[DB]\Anniversary2026\anniversary2026.json`: `minLevel` (80 رسمي) و`pointsMax` (**مستنتج**).
+`Data\Anniversary2026\anniversary2026.json`: `minLevel` (80 رسمي) و`pointsMax` (**مستنتج**).

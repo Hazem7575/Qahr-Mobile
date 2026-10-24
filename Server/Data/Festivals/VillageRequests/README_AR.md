@@ -32,7 +32,7 @@
   - الشباك ونداءاته، ورسايل البوابة (`tChristmasDraw2024_DelText`)، والمواعيد، وشرط اللفل 80.
 - **الخريطة:** 1003831 Doomwoods = 12696 `2024xmas_new` (maps.txt، ثقة B). كل النقط walkable، ما عدا TastyFruit (96,131): ده object على خلية مقفولة، وجنبه خليتين بيتمشي عليهم.
 - **مشتق:**
-  - مكان الوصول (181,46)، ومدة النسخة 60 دقيقة، ومكان الخروج، ودخول Market 1036، ومهلة البوابة. الإعدادات في `Infinity[DB]\VillageRequests\villagerequests.json`، والـ instance في `quests.json`.
+  - مكان الوصول (181,46)، ومدة النسخة 60 دقيقة، ومكان الخروج، ودخول Market 1036، ومهلة البوابة. الإعدادات في `Data\VillageRequests\villagerequests.json`، والـ instance في `quests.json`.
   - **SunflowerCluster:** شكل Sunflower (npc.ini 1318، الـ id اللي بعد Lillian على طول). PROXY.
   - **TastyFruit 1888 / FreshVegetable 4219:** بالاسم، وأرقامهم جنب مواطنين Doomwoods.
   - **الـ greeting:** هو نص الطلب الرسمي (IntentionDesp).

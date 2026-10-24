@@ -248,7 +248,7 @@ namespace Qahr.Mobile.Game.MsgServer
 
                                     }
                                 }
-                                else if (Phone.MobileEvents.IsMobile(user))
+                                else if (Phone.MobileClient.Is(user))
                                 {
                                     // QahrMobile: the mobile "Team Up" button sends JoinRequest also when the target has no
                                     // team (official server: make a team and invite). Create the team, then invite.

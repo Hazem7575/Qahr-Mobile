@@ -1,7 +1,7 @@
 // ============================================================================
 //  [NewYear2023 2026-10-15] Shared helpers of the Spring Festival group (LunarNewYear2023, SpringFestival2024,
 //  WhiteSnakeLegend, SpringFestival2026):
-//    SpringStore  per-character counters, one JSON file per festival (Infinity[DB]\<Folder>\players.json). Every change is
+//    SpringStore  per-character counters, one JSON file per festival (Data\<Folder>\players.json). Every change is
 //                 written at once (temp file + replace) BEFORE the caller grants anything: a crash, a relog or a duplicate
 //                 packet can never repeat a grant. All access is under one lock per store.
 //    SpringGive   item grants: bag space first, then the existing inventory methods (logged to festivals_log.txt).
@@ -36,7 +36,7 @@ namespace Qahr.Mobile.NewYear2023
             _folder = folder; _fileName = fileName;
             _be = new EventData.LegacyBackend(EventData.LegacyBackend.KeyFor(folder, fileName, "players.json"), () => FilePath, EventData.LegacyFormat.JsonRootCounters);
         }
-        string FilePath { get { return Path.Combine(RootOverride ?? Program.ServerConfig.DbLocation, _folder, _fileName); } }
+        string FilePath { get { return Path.Combine(RootOverride ?? global::Qahr.Mobile.Festivals.FestivalLoader.Root, _folder, _fileName); } }
         public object Sync { get { return _sync; } }
         public string EventKey { get { return _be.Event; } }
 
@@ -253,7 +253,7 @@ namespace Qahr.Mobile.NewYear2023
                 _npcs[k] = np;
                 return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return false; }
+            catch (Exception e) { MyConsole.SaveException(e); return false; }
         }
         public static bool HasNpc(uint uid, uint mapId) { return _npcs.ContainsKey(NpcKey(uid, mapId)); }
         public static void RemoveNpc(uint uid, uint mapId)
@@ -269,7 +269,7 @@ namespace Qahr.Mobile.NewYear2023
                     map.RemoveNpc(np, rec.GetStream());
                 try { new HotReload.MapCells().RestoreAround(map, x, y); } catch { }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ personal monsters
@@ -310,7 +310,7 @@ namespace Qahr.Mobile.NewYear2023
                 catch { }
                 return mob;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return null; }
+            catch (Exception e) { MyConsole.SaveException(e); return null; }
         }
 
         /// <summary>MonsterRole.Dead: our personal monster (forgotten now), or null.</summary>

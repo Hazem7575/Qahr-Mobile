@@ -1224,7 +1224,7 @@ namespace Qahr.Mobile.Game.MsgServer
                     if (client.Player.Map == 10364 || client.Player.Map == 13249 || client.Player.Map == 12602 || client.Player.Map == 12275 || client.Player.Map == 3030 || client.Player.Map == 10741 || client.Player.Map == 12546 || client.Player.Map == 3071 || client.Player.Map == 10741 || client.Player.Map == 10133 || client.Player.Map == 12602 || client.Player.Map == 12546 || client.Player.Map == 12799 || client.Player.Map == 12816 || client.Player.Map == 13140 || client.Player.Map == 12800 || client.Player.Map == 66666 || client.Player.Map == 33333 || client.Player.Map == 22222 || client.Player.Map == 88888)
                     {
                         client.Player.Revive(msg);
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         return;
                     }
                     bool ReviveHere = data.dwParam == 1;
@@ -1300,7 +1300,7 @@ namespace Qahr.Mobile.Game.MsgServer
                         }
                         if (client.Player.OnMyOwnServer == false)
                         {
-                            client.Teleport((ushort)410, 354, 1002);
+                            client.Teleport(Places.TwinCity);
                             return;
                         }
                        
@@ -1319,17 +1319,17 @@ namespace Qahr.Mobile.Game.MsgServer
                         }
                         if (client.Player.Map == 6011)
                         {
-                            client.Teleport(410, 354, 1002);
+                            client.Teleport(Places.TwinCity);
                             return;
                         }
                         if (client.Player.Map == 1038)// gw map
                         {
-                            client.Teleport(410, 354, 1002, 0, true, true);
+                            client.Teleport(Places.TwinCity, 0, true, true);
                         }
                         else if (client.Player.Map == 3868)//super gw
                         {
                             if (MsgTournaments.MsgSchedules.SuperGuildWar.Proces == MsgTournaments.ProcesType.Dead)
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             else
                             {
                                 var map = Pool.ServerMaps[1038];
@@ -1342,13 +1342,13 @@ namespace Qahr.Mobile.Game.MsgServer
                             {
                                 if (client.Map.Reborn_Map == 0)
                                 {
-                                    client.Teleport(410, 354, 1002);
+                                    client.Teleport(Places.TwinCity);
                                     return;
                                 }
                                 var map = Pool.ServerMaps[client.Map.Reborn_Map];
                                 if (map == null)// reborn map not loadable (not in GameMap.dat)
                                 {
-                                    client.Teleport(410, 354, 1002);
+                                    client.Teleport(Places.TwinCity);
                                     return;
                                 }
                                 client.Teleport(map.Reborn_X, map.Reborn_Y, map.Reborn_Map);
@@ -1368,13 +1368,13 @@ namespace Qahr.Mobile.Game.MsgServer
                                         if (map.Reborn_X != 0)
                                             client.Teleport(map.Reborn_X, map.Reborn_Y, map.Reborn_Map);
                                         else
-                                            client.Teleport(410, 354, 1002);
+                                            client.Teleport(Places.TwinCity);
                                     }
                                 }
                             }
                         }
                         if (client.Player.X == 0 || client.Player.Y == 0)//invalid map reborn
-                            client.Teleport(410, 354, 1002);
+                            client.Teleport(Places.TwinCity);
                     }
                 }
             }
@@ -2280,7 +2280,7 @@ namespace Qahr.Mobile.Game.MsgServer
                         if (client.Player.Map == 1038)// gw map
                         {
                             if (MsgTournaments.MsgSchedules.GuildWar.Proces == MsgTournaments.ProcesType.Dead)
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             else
                             {
                                 var map = Pool.ServerMaps[1038];
@@ -2290,7 +2290,7 @@ namespace Qahr.Mobile.Game.MsgServer
                         else if (client.Player.Map == 1138)//super gw
                         {
                             if (MsgTournaments.MsgSchedules.SuperGuildWar.Proces == MsgTournaments.ProcesType.Dead)
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             else
                             {
                                 var map = Pool.ServerMaps[1038];
@@ -2300,7 +2300,7 @@ namespace Qahr.Mobile.Game.MsgServer
                         else
                         {
                             if (client.Player.Map == 601)
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             else
                             {
                                 if (client.Map.Reborn_X != 0)
@@ -2319,17 +2319,17 @@ namespace Qahr.Mobile.Game.MsgServer
                                             if (map.Reborn_X != 0)
                                                 client.Teleport(map.Reborn_X, map.Reborn_Y, map.Reborn_Map);
                                             else
-                                                client.Teleport(410, 354, 1002);
+                                                client.Teleport(Places.TwinCity);
                                         }
                                     }
                                     else
                                     {
 
-                                        client.Teleport(410, 354, 1002);
+                                        client.Teleport(Places.TwinCity);
                                     }
                                 }
                                 if (client.Player.X == 0 || client.Player.Y == 0)//invalid map reborn
-                                    client.Teleport(410, 354, 1002);
+                                    client.Teleport(Places.TwinCity);
                             }
                         }
                     }
@@ -2404,7 +2404,7 @@ namespace Qahr.Mobile.Game.MsgServer
             {
                 client.SendSysMesage("Invalid Portal : X = " + Portal_X + ", Y= " + Portal_Y + " Map = " + client.Player.Map + "", MsgMessage.ChatMode.System, MsgMessage.MsgColor.yellow);
             }
-            client.Teleport(410, 354, 1002);
+            client.Teleport(Places.TwinCity);
         }
         [DataAttribute(ActionType.ChangeLookface)]
         public unsafe static void ChangeLookface(Client.GameClient client, ServerSockets.Packet msg, ActionQuery data)
@@ -2664,7 +2664,7 @@ namespace Qahr.Mobile.Game.MsgServer
 
             if (client.Map == null)
             {
-                client.Teleport(410, 354, 1002);
+                client.Teleport(Places.TwinCity);
                 return;
 
             }
@@ -2836,7 +2836,7 @@ namespace Qahr.Mobile.Game.MsgServer
             {
                 if (Role.Core.GetDistance(client.Player.X, client.Player.Y, 43, 31) <= 4)
                 {
-                    client.Player.MessageBox("Are you sure you want return to Twin City?", p => { p.Teleport(410, 354, 1002); p.SendSysMesage(" you were teleported back to Twin City."); });
+                    client.Player.MessageBox("Are you sure you want return to Twin City?", p => { p.Teleport(Places.TwinCity); p.SendSysMesage(" you were teleported back to Twin City."); });
                 }
             }
             if (client.Player.ActivePick)
@@ -2854,15 +2854,15 @@ namespace Qahr.Mobile.Game.MsgServer
             #endregion
             if (client.Player.Map == 10428 && Role.Core.GetDistance(client.Player.X, client.Player.Y, 61, 66) <= 2)
             {
-                client.Player.MessageBox("Are you sure you want to leave the alien world and return to Twin City?", p => { p.Teleport(410, 354, 1002); p.SendSysMesage("With a flash of light, you were teleported back to Twin City."); });
+                client.Player.MessageBox("Are you sure you want to leave the alien world and return to Twin City?", p => { p.Teleport(Places.TwinCity); p.SendSysMesage("With a flash of light, you were teleported back to Twin City."); });
             }
             if (client.Player.Map == 11041 && Role.Core.GetDistance(client.Player.X, client.Player.Y, 87, 76) <= 2)
             {
-                client.Player.MessageBox("Are you sure you want return to Twin City?", p => { p.Teleport(410, 354, 1002); p.SendSysMesage(" you were teleported back to Twin City."); });
+                client.Player.MessageBox("Are you sure you want return to Twin City?", p => { p.Teleport(Places.TwinCity); p.SendSysMesage(" you were teleported back to Twin City."); });
             }
             if (client.Player.Map == 11223 && Role.Core.GetDistance(client.Player.X, client.Player.Y, 179, 173) <= 2)
             {
-                client.Player.MessageBox("Are you sure you want return to Twin City?", p => { p.Teleport(410, 354, 1002); p.SendSysMesage(" you were teleported back to Twin City."); });
+                client.Player.MessageBox("Are you sure you want return to Twin City?", p => { p.Teleport(Places.TwinCity); p.SendSysMesage(" you were teleported back to Twin City."); });
             }
             if (client.SaveMele != null)
             {

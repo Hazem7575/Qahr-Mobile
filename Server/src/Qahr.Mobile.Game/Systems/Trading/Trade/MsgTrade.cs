@@ -161,7 +161,7 @@ namespace Qahr.Mobile.Game.MsgServer
                 return;
             Trade trade = new Trade();
             stream.GetTradeInfo(out trade);
-            bool mobileUser = Phone.MobileTrade.IsMobile(user);// QahrMobile: the mobile uses other action numbers (MobileTrade.cs)
+            bool mobileUser = Phone.MobileClient.Is(user);// QahrMobile: the mobile uses other action numbers (MobileTrade.cs)
             if (mobileUser) { trade.Action = Phone.MobileTrade.FromMobile(user, trade.Action, trade.UID); Phone.MobileTrade.Normalize(trade); }
             if (user.Player.UID == trade.UID)
             {

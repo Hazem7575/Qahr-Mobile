@@ -21,4 +21,4 @@
 3. mesh الـ NPC 35871.
 4. قرار في الجايزة: item حقيقي بدل الـ Blessing.
 
-_Agent 4 (13-10-2026). المصادر: `Infinity[DB]\Questinfo.ini`، و`client_test\ini\monster.dat` و`npc.ini` و`NpcX.ini` و`GameMap.dat`، و`tools\QuestAudit\maps_added.json`._
+_Agent 4 (13-10-2026). المصادر: `Data\Questinfo.ini`، و`client_test\ini\monster.dat` و`npc.ini` و`NpcX.ini` و`GameMap.dat`، و`tools\QuestAudit\maps_added.json`._

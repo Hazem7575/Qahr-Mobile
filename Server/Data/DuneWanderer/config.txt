@@ -1,0 +1,34 @@
+# Dune Wanderer rules (Mobile\DuneWanderer\DuneConfig.cs). From the client's luacfg/xiakejuexing + xiake_draw, plus
+# a few server values (marked *). Re-read when saved.
+#   skill <n 1 main/2 yang/3 yin> <mobile skill> <Lv0> <Lv1> <Lv2> <Lv3> <cost0..3>
+#        level = connected acupoints of the group (main = meridian 1, yang = 2+3, yin = 4+5) reaching Lv1/Lv2/Lv3.
+#        cost<lev> = Yang AND Yin points for the main skill's 7-day special effect (Demon Subjugation) at that level.
+#   hole <meridian> <connected acupoints for hole 1> <hole 2> <hole 3>      glyph holes of that meridian (no item cost)
+#   boost <lowest quality> <rate 1/10000>    all 6 acupoints of a meridian owned: its stats + rate
+#   switch <item> <amount>                   Yin/Yang switch cost
+#   exchange <CPs per point>                 Yang/Yin points bought with CPs
+#   draw <item> <wish unlock draws> <wish guarantee draws>
+#   skilldays <days> *                       how long the special effect lasts
+#   glyphbag <max glyphs> *                  the client refuses a draw with less than 10 free places
+#   amulet <item> <yang|yin> <points> *      using the item adds points (the client has no amount: 1 point = its
+#                                            10 CPs mall price, the same rate as the CP exchange)
+skill 1 26430  0 3 5 6  100 500 1000 1500
+skill 2 26410  0 4 8 12  0 0 0 0
+skill 3 26420  0 4 8 12  0 0 0 0
+hole 1 2 4 6
+hole 2 2 4 6
+hole 3 2 4 6
+hole 4 2 4 6
+hole 5 2 4 6
+boost 1 100
+boost 2 200
+boost 3 300
+boost 4 400
+boost 5 500
+switch 3356431 10
+exchange 10
+draw 3356430 200 70
+skilldays 7
+glyphbag 200
+amulet 3356432 yang 1
+amulet 3356433 yin 1

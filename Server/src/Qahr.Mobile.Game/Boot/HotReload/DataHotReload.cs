@@ -503,7 +503,7 @@ namespace Qahr.Mobile.HotReload
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
                 return null;
             }
         }
@@ -548,7 +548,7 @@ namespace Qahr.Mobile.HotReload
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
         }
     }

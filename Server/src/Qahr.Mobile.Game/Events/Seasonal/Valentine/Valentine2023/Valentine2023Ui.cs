@@ -15,7 +15,7 @@
 //    replies  DlgLoverDayMain_UpdateAnySunData|{Data={SunIndex,SunState,ArrowNum,ActScore}}, DlgLoverDayMain_ResetShootSun,
 //             DlgLoverDayMain_KillBossCallFunc|{Data={BossIndex,DropItemInfo,ArrowInfo,ScoreNum}} (KillBossTip).
 //
-//  Playable here (numbers: Infinity[DB]\Valentine2023\recital.json, "derived" where the client has none):
+//  Playable here (numbers: Data\Valentine2023\recital.json, "derived" where the client has none):
 //    - 4 of the 6 instrument spirits per Recital day; a click spawns that spirit (monster types 996301-996306, Festivals\
 //      Valentine2023\monsters, derived looks) next to the player in Twin City (official NoMap text). Kill credit = the spawn
 //      owner with the top damage (Boss=1 keeps per-player damage). Reward: Performance Inspiration + Dream Note + points.
@@ -26,7 +26,7 @@
 //      bag are used automatically when power is short (daily limit derived, official Limit text).
 //    - Time Shift: all 4 spirits must be defeated (official Trans[1]); it starts a new Recital day (new spirits, dark notes).
 //      Golden Masquerade (the night half, Modern Plaza) is not on this server: the shift skips it (derived).
-//  State: Infinity[DB]\Valentine2023\state.json (per character, per event year). Every grant checks bag space first and is
+//  State: Data\Valentine2023\state.json (per character, per event year). Every grant checks bag space first and is
 //  recorded before it is given; requests are throttled per player.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10139, after CastleMystery), one tagged line.
@@ -79,7 +79,7 @@ namespace Qahr.Mobile.Valentine2023
                 new uint[] { 723694, 1, 1 } };
         }
         static Config _cfg; static string _cfgStamp;
-        static string DataDir { get { return Path.Combine(Program.ServerConfig.DbLocation, Festival); } }
+        static string DataDir { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, Festival); } }
         public static Config Cfg
         {
             get
@@ -338,7 +338,7 @@ namespace Qahr.Mobile.Valentine2023
                 }
                 Msg(c, "This part of the Starlight Recital isn`t open on this server.");
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
 
@@ -424,7 +424,7 @@ namespace Qahr.Mobile.Valentine2023
         static void Tick()
         {
             try { Sweep(); if (_dirty && (++_ticks % 30) == 0) Save(); }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
         /// <summary>Settles dead / expired spirits (the server timer every second; the harness calls it directly).</summary>
         public static void Sweep()

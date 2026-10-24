@@ -3979,9 +3979,10 @@ namespace Qahr.Mobile.Role
         public ulong WHMoney;
         public ulong CpsBank;
         public bool IsAsasin = false;
+        /// <summary>A staff character (GameClient.IsGm): cannot be attacked, sees NPC ids, ...</summary>
         public bool IsGameMaster()
         {
-            return Name.Contains("[GM]") || Name.Contains("[TQ]");
+            return Owner != null && Owner.IsGm;
         }
         public bool IsHelpDesk()
         {

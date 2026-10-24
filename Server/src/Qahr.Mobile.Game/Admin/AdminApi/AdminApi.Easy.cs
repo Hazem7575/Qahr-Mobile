@@ -8,7 +8,8 @@
 //    @item 1088000 [count] [name]  give an item         @find dragon            search item ids by name
 //    @heal [name]               revive / full HP+MP     @vip 6 [days] [name]    VIP level (0 = remove)
 //    @skill 1045 [level] [name] learn a skill           @clearbag [name]        empty the bag
-//    @go twin | market | hall   go to a place           @go 1002 451 365        go to map x y
+//    @vippts 100 [name]         add VIP points (Mobile\Vip\VipPoints.cs)
+//    @go twin | market | hall   go to a place (Data\places.txt)   @go 1002 451 365   go to map x y
 //    @goto name                 go to a player          @bring name             bring a player to you
 //    @kick name                 kick a player           @say text               message to everyone
 //    @online                    who is online           @save                   save everyone
@@ -24,17 +25,10 @@ namespace Qahr.Mobile.AdminApi
 {
     public static partial class AdminApiServer
     {
-        private static readonly Dictionary<string, uint[]> EasyPlaces = new Dictionary<string, uint[]>(StringComparer.OrdinalIgnoreCase)
-        {
-            { "twin",   new uint[] { 1002, 451, 365 } },
-            { "market", new uint[] { 1036, 211, 196 } },
-            { "hall",   new uint[] { 11412, 46, 51 } },
-        };
-
         private static readonly string[] EasyHelp =
         {
             "@cps 1000 | @money 1000000 | @level 140 | @reborn 2",
-            "@item 1088000 [count] | @find dragon | @heal | @vip 6 [days]",
+            "@item 1088000 [count] | @find dragon | @heal | @vip 6 [days] | @vippts 100",
             "@skill 1045 [level] | @clearbag",
             "@go twin/market/hall | @go 1002 451 365 | @goto name | @bring name",
             "@kick name | @say text | @online | @save",
@@ -86,9 +80,20 @@ namespace Qahr.Mobile.AdminApi
                 case "reborn": return Dispatch("reborn", EasyArgs(c, args, 1, "count"));
                 case "vip":
                     {
-                        // @vip level [days] [name]
+                        // @vip = the VIP window (as for every player); @vip level [days] [name] = set a timed VIP
+                        if (args.Count == 0) return null;
                         int numbers = args.Count >= 2 && IsNumber(args[1]) ? 2 : 1;
                         return Dispatch("vip", EasyArgs(c, args, numbers, "level", "days"));
+                    }
+                case "vippts":
+                    {
+                        // @vippts 100 [name] = add VIP points (raises the permanent VIP level like a VIP card)
+                        var a = EasyArgs(c, args, 1, "amount");
+                        int amount = int.Parse(a.Raw["amount"].ToString());
+                        var who = FindOnline(a);
+                        if (who == null) throw new AdminError("player is not online");
+                        long total = Phone.VipPoints.AddPoints(who, amount, "gm " + c.Player.Name);
+                        return Ok(who.Player.Name + " has " + total + " VIP points (VIP " + Phone.VipPoints.LevelFor(total) + ").");
                     }
                 case "heal": return Dispatch("revive", EasyArgs(c, args, 0));
                 case "clearbag": return Dispatch("clearinventory", EasyArgs(c, args, 0));
@@ -111,10 +116,10 @@ namespace Qahr.Mobile.AdminApi
                     }
                 case "go":
                     {
-                        uint[] place;
-                        if (args.Count >= 1 && EasyPlaces.TryGetValue(args[0], out place))
-                            return Dispatch("teleport", EasyArgs(c, new List<string> { place[0].ToString(), place[1].ToString(), place[2].ToString() }, 3, "map", "x", "y"));
-                        if (args.Count < 3) throw new AdminError("write: @go twin / market / hall, or @go map x y");
+                        Place place;
+                        if (args.Count >= 1 && Places.TryGet(args[0], out place))
+                            return Dispatch("teleport", EasyArgs(c, new List<string> { place.Map.ToString(), place.X.ToString(), place.Y.ToString() }, 3, "map", "x", "y"));
+                        if (args.Count < 3) throw new AdminError("write: @go " + string.Join(" / ", Places.Names) + ", or @go map x y");
                         return Dispatch("teleport", EasyArgs(c, args, 3, "map", "x", "y"));
                     }
                 case "goto":
@@ -136,6 +141,11 @@ namespace Qahr.Mobile.AdminApi
                     if (args.Count == 0) throw new AdminError("write: @say your message");
                     return Dispatch("broadcast", new AdminArgs(new Dictionary<string, object>(StringComparer.OrdinalIgnoreCase)
                         { { "text", string.Join(" ", args) }, { "mode", "center" } }));
+                case "lua":
+                    // UI testing: a raw client Lua call, e.g. @lua Fgui_CumulativeAward_Open|{['Code']=200,...}
+                    if (args.Count == 0) throw new AdminError("write: @lua Function|arguments");
+                    LuaUi.LuaPush.Send(c, string.Join(" ", args));
+                    return Ok("Lua call sent.");
             }
             return null; // not an easy command
         }

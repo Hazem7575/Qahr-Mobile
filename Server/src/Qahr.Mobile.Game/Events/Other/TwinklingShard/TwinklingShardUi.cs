@@ -1,7 +1,7 @@
 // ============================================================================
 //  [TwinklingShard 2026-10-14] The official Christmas 2025 "Twinkling Fest" window (client msg 10831
 //  tMsg_Info["Christmas25"], Fgui ChristmasMainUI, top-bar button FGUI_ActivityMenu["150381"], Highlight page ActInfo 10831).
-//  Shown while the festival TwinklingShard (Questinfo 9500-9514, Infinity[DB]\Festivals\TwinklingShard) runs.
+//  Shown while the festival TwinklingShard (Questinfo 9500-9514, Data\Festivals\TwinklingShard) runs.
 //
 //  Official client (luaui\fairygui\window\christmasmainui, decrypted):
 //    click   10831 Christmas2025Interface_ClientOpenMain -> Fui_ChristmasMainUI_Open|{Code=200,Data={
@@ -16,11 +16,11 @@
 //            _ClientGuide</N>1|2 (CP shop guide), ChristmasLottery_OpenView (Aurora Fireworks).
 //  Entering an area starts its first quest (official BeginNpcId=0) and teleports there; the quests are engine quests
 //  (repeat daily) in the festival quests.json. A shard counts as collected when the area's last quest was finished during
-//  the current festival run (read from Infinity[DB]\festivals_log.txt "QUEST" lines, written by the festival module on
+//  the current festival run (read from Data\festivals_log.txt "QUEST" lines, written by the festival module on
 //  every festival quest finish, plus the live quest log).
 //  NOT on this server (answered with a system message, nothing invented): Stellar Court encounters, Aurora Fireworks
 //  (cannons, Twinkling Points, ranking), the CP shop guide. Points are 0.
-//  Config (derived values): Infinity[DB]\TwinklingShard\twinklingshard.json. Claims: Infinity[DB]\TwinklingShard\claims.txt.
+//  Config (derived values): Data\TwinklingShard\twinklingshard.json. Claims: Data\TwinklingShard\claims.txt.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10831), tagged.
 // ============================================================================
@@ -73,7 +73,7 @@ namespace Qahr.Mobile.TwinklingShard
         }
 
         static Config _cfg; static string _stamp;
-        static string Dir { get { return Path.Combine(Program.ServerConfig.DbLocation, "TwinklingShard"); } }
+        static string Dir { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "TwinklingShard"); } }
         static string CfgFile { get { return Path.Combine(Dir, "twinklingshard.json"); } }
         static string ClaimFile { get { return Path.Combine(Dir, "claims.txt"); } }
         static string FestLog { get { return Path.Combine(Program.ServerConfig.DbLocation, "festivals_log.txt"); } }
@@ -221,7 +221,7 @@ namespace Qahr.Mobile.TwinklingShard
                             }
                     }
                 }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                catch (Exception e) { MyConsole.SaveException(e); }
                 HashSet<uint> s;
                 return _logDone.TryGetValue(uid, out s) ? new HashSet<uint>(s) : new HashSet<uint>();
             }
@@ -273,7 +273,7 @@ namespace Qahr.Mobile.TwinklingShard
                         else if (p.Length >= 3 && p[0] == "UNDO") s.Remove(p[1] + "|" + p[2]);
                     }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return _claims = s;
         }
         static string RunKey(Festivals.FestivalManager.RunState run) { return run.Run + "@" + run.Started.ToString("yyyyMMddHHmm", CultureInfo.InvariantCulture); }
@@ -389,7 +389,7 @@ namespace Qahr.Mobile.TwinklingShard
                 if (Claims().Contains(key)) { Msg(c, "You have already claimed this reward."); return; }
                 if (!c.Inventory.HaveSpace(1)) { Msg(c, "Your inventory is full. Please make 1 slot and try again."); return; }
                 try { AppendClaim("CLAIM", RunKey(run), c.Player.UID, c.Player.Name); }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } Msg(c, "Please try again later."); return; }
+                catch (Exception e) { MyConsole.SaveException(e); Msg(c, "Please try again later."); return; }
                 Claims().Add(key);
                 bool ok = false;
                 try
@@ -397,7 +397,7 @@ namespace Qahr.Mobile.TwinklingShard
                     using (var rec = new ServerSockets.RecycledPacket())
                         ok = c.Inventory.AddItemWitchStack(cfg.RewardItem, 0, 1, rec.GetStream(), true);
                 }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                catch (Exception e) { MyConsole.SaveException(e); }
                 if (!ok)
                 {
                     Claims().Remove(key);

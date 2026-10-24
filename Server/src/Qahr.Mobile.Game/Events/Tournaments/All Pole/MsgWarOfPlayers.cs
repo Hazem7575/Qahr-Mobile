@@ -37,7 +37,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
             RoundOwner = null;
             WarOfPlayers = new System.SafeDictionary<uint, Info>();
             Proces = ProcesType.Alive;
-            MsgSchedules.SendInvitation("Dark Flag Base", " ", 410, 354, 1002, 0, 60); // QahrMobile: PC spot 360,298 is water on the mobile Twin City; Twin City square
+            MsgSchedules.SendInvitation("Dark Flag Base", " ", Places.TwinCity, 0, 60); // QahrMobile: PC spot 360,298 is water on the mobile Twin City; Twin City square
             Furnitures[Role.SobNpc.StaticMesh.Pole].Name = "DarkFlagBase";
 
             //MsgSchedules.SendSysMesage("WarOfPlayers has been begun.", MsgServer.MsgMessage.ChatMode.BroadcastMessage);

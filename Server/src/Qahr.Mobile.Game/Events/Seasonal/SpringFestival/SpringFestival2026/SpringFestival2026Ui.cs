@@ -22,7 +22,7 @@
 //
 //  NOT on this server (answered with a system message, nothing invented): Petal Vale / Gale Fortress dailies
 //  (Bloom/Ebony Steed instances), Decay Beast Lair, Steed Feeding, Steed's Gift, ranking and Steed Store.
-//  Config (optional): Infinity[DB]\SpringFestival2026\springfestival2026.json {festival, minLevel, purgePearl}.
+//  Config (optional): Data\SpringFestival2026\springfestival2026.json {festival, minLevel, purgePearl}.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10850 + 10511 enter button), tagged.
 // ============================================================================
@@ -47,7 +47,7 @@ namespace Qahr.Mobile.SpringFestival2026
             public uint PurgePearl = 3355569;    // itemtype "Purge Pearl" (Decay Beast Lair ticket)
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "SpringFestival2026", "springfestival2026.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "SpringFestival2026", "springfestival2026.json"); } }
         public static Config Cfg
         {
             get

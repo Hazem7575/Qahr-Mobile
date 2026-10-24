@@ -24,7 +24,7 @@ namespace Qahr.Mobile.FruitMachine
     ///        5 repeated uint32 extra stops+1 (Luck game: 3/5/7/22), 6 repeated Reward{1 uint32 type, 2 u64 amount, 3 uint32}}
     ///
     /// Everything the client defines (ring, payouts, Rate, MaxBet, Luck counts) is used as-is. The hidden server odds are
-    /// DERIVED (not official) from a target RTP in Infinity[DB]\FruitMachine\config.json (re-read automatically when the
+    /// DERIVED (not official) from a target RTP in Data\FruitMachine\config.json (re-read automatically when the
     /// file changes; no restart needed to tune odds).
     /// </summary>
     public static class FruitMachineModule

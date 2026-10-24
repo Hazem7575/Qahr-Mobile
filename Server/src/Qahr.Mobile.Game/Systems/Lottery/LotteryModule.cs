@@ -38,7 +38,7 @@ namespace Qahr.Mobile.Lottery
                     if (LotteryCommon.PendingCount(c.Player.UID) > 0) LotteryCommon.Deliver(c);
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             finally { Interlocked.Exchange(ref busy, 0); }
         }
     }

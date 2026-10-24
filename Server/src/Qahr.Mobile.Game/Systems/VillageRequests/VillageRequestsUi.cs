@@ -18,7 +18,7 @@
 //  private copy per player). The QuestEngine enters instances only from NPC teleports / quest actions, so the portal
 //  calls its EnterInstance through reflection (no change to QuestEngine.cs). NOT on this server (system message, nothing
 //  granted): the Material Converter, the Christmas Tree wishes / draws, Xmas Points and rankings.
-//  Config (derived values): Infinity[DB]\VillageRequests\villagerequests.json.
+//  Config (derived values): Data\VillageRequests\villagerequests.json.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10510), tagged [VillageRequests 2026-10-14].
 // ============================================================================
@@ -46,7 +46,7 @@ namespace Qahr.Mobile.VillageRequests
             public int PortalSeconds = 30;                                  // derived: EnterFubenSuc must follow EnterFuben
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "VillageRequests", "villagerequests.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "VillageRequests", "villagerequests.json"); } }
         public static Config Cfg
         {
             get
@@ -178,7 +178,7 @@ namespace Qahr.Mobile.VillageRequests
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
                 Msg(c, "Doomwoods isn`t open yet.");
                 return false;
             }

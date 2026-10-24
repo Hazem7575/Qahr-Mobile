@@ -8,7 +8,7 @@ namespace Qahr.Mobile
     /// "test tool" you gate on this) are only allowed in Development. Production is the SAFE DEFAULT: when the mode file
     /// is missing or unreadable, the server is treated as Production and those tools stay off.
     ///
-    /// Config: Infinity[DB]\servermode.txt  — one line, either:
+    /// Config: Data\servermode.txt  — one line, either:
     ///   mode=development     (or dev)      -> test tools allowed
     ///   mode=production      (or prod)     -> test tools locked (default)
     /// A bare word "development"/"production" also works. Re-read at most every 5 seconds.

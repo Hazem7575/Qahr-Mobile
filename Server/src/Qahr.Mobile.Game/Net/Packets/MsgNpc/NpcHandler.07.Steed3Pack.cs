@@ -3647,7 +3647,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.CreateBoxDialog("You`ve~found~some~powder.~Hurry~to~deliver~it~to~Taoist~Shine.");
                             client.Inventory.Add(stream, 721712);
                         }
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
 
                         break;
                     }
@@ -3676,7 +3676,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.CreateBoxDialog("You`ve~found~some~powder.~Hurry~to~deliver~it~to~Taoist~Shine.");
                             client.Inventory.Add(stream, 721712);
                         }
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -3704,7 +3704,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.CreateBoxDialog("You`ve~found~some~powder.~Hurry~to~deliver~it~to~Taoist~Shine.");
                             client.Inventory.Add(stream, 721712);
                         }
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
 
                         break;
                     }
@@ -3733,7 +3733,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.CreateBoxDialog("You`ve~found~some~powder.~Hurry~to~deliver~it~to~Taoist~Shine.");
                             client.Inventory.Add(stream, 721712);
                         }
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
 
                         break;
                     }
@@ -3820,7 +3820,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 4:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         client.CreateBoxDialog("Mo~Mo~took~the~Bezoar~and~returned~home.~Hurry~to~find~Aunt~Zhang~to~claim~your~reward!");
                         client.Inventory.Remove(721714, 1, stream);
                         client.Inventory.Remove(721712, 1, stream);

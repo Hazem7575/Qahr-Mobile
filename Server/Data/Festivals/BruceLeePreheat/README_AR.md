@@ -17,4 +17,4 @@
 
 ## الكود
 - `Infinity [Sourse]\Base\BruceLeePreheat\BruceLeePreheatUi.cs` + سطر واحد في `LuaPush.HandleCallback` (msg 10127).
-- كونفيج اختياري: `Infinity[DB]\BruceLeePreheat\bruceleepreheat.json` `{festival, minLevel}`.
+- كونفيج اختياري: `Data\BruceLeePreheat\bruceleepreheat.json` `{festival, minLevel}`.

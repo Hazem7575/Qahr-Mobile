@@ -1,0 +1,39 @@
+# VIP points and levels (Mobile\Vip\VipPoints.cs). Re-read when this file is saved.
+# VIP 1 is the free level every player has. Points raise the permanent VIP level; a timed VIP (@vip / packs) can be
+# higher for its days and falls back to the points level when it ends.
+#
+#   window <activity id> <quiet activity ids ...>
+#       The level rewards are shown in the client's Welfare window, tab "Credit Rebate" (Mobile\Vip\VipWelfareUi.cs),
+#       using one of the client's activities (ini/operateactivity.ini + ini/operating_prize.dat). The client takes the
+#       number of rows and the points of each row from that activity, so the "level" lines below must have the SAME
+#       count and points. 1218 = 6 rows: 30 100 300 1000 2000 5000 (others: 1220 = 2000 5000 10000 20000 40000 70000).
+#       Quiet ids are marked "not running" so the client's activity query fits in one packet (it lists every
+#       activity of the ini that is not marked, 272 of them, and only sends up to 252).
+window 1218  74 63 64 65 66 68 71 310 180 178 173 175 370 398 80 574 634 644 632 665 666 668 702 760 761 757 790 779 780 833
+#
+#   level <vip> <total points> <reward items ...>     reward = id:count[:b]  (b = bound), claimed once per level
+#                                                     (the window shows up to 5 items per level)
+level 2   30     1088001:5:b 723744:1:b
+level 3   100    1088000:1:b 1088001:10:b
+level 4   300    1088000:2:b 723744:3:b
+level 5   1000   1088000:3:b 1088001:20:b
+level 6   2000   1088000:5:b 723744:5:b
+level 7   5000   1088000:10:b 723744:10:b
+#
+#   perk  <vip> <text>    what the level gives, shown in the VIP menu ("VIP levels and privileges"). Text only: keep it
+#                         the same as the game code (MonsterRole kill CPs/drops, MobileVipMenu services, NPC checks).
+perk 1  Free for every player. 50% chance of +1 CP for every monster you kill.
+perk 2  VIP services: city teleport, repair all and the remote warehouse (VIP menu > VIP services).
+perk 3  The VIP 2 privileges, plus the VIP 3 level reward.
+perk 4  +1 CP for every monster you kill. DragonBalls go straight to your bag. VIP hairstyles (level 4).
+perk 5  The VIP 4 privileges, plus the VIP 5 level reward.
+perk 6  +2 CPs for every monster you kill. ExpBalls go straight to your bag, a DragonBall drop gives 215 CPs. VIP 6 hairstyles.
+perk 7  The VIP 6 privileges, plus 20000 prestige.
+#
+#   card  <item id> <points> <price in CPs>           using the item adds the points; the VIP menu sells it for CPs
+card 723745   10    30     # 1-Star VIP Pack
+card 723746   30    85     # 2-Star VIP Pack
+card 723747   60    160    # 3-Star VIP Pack
+card 723748   100   250    # 4-Star VIP Pack
+card 723749   200   480    # 5-Star VIP Pack
+card 723750   500   1150   # 6-Star VIP Pack

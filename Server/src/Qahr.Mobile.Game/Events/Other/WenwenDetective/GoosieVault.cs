@@ -7,8 +7,8 @@
 //    MidAutumn_Config[10406]["PreviewReward"][1] (eggs) and [2] (golden egg); stage rewards = ["Total"][1..9]; nMaxScore 120000;
 //    Bubble Machine Fragment 3348595: 30 -> permanent unbound Bubble Machine; Spring Goosie Fragment 3348596: 30 -> 3-star
 //    Spring Goosie (B), 50 -> 5-star Spring Goosie (Cute) (itemtype texts); texts tChildrenDayBigKu_DelText[Sys].
-//  DERIVED (Infinity[DB]\WenwenDetective\goosie.json): reward weights, Goosie Points per egg, stage thresholds, 1 hammer per egg.
-//  State: Infinity[DB]\WenwenDetective\state.json (per character per festival run). Security: uid from the session, whitelisted
+//  DERIVED (Data\WenwenDetective\goosie.json): reward weights, Goosie Points per egg, stage thresholds, 1 hammer per egg.
+//  State: Data\WenwenDetective\state.json (per character per festival run). Security: uid from the session, whitelisted
 //  arguments, hammers taken before the eggs are rolled, stage claims recorded before the reward, bag space first, 400 ms throttle.
 // ============================================================================
 using System;
@@ -67,7 +67,7 @@ namespace Qahr.Mobile.WenwenDetective
             public uint BubbleFragments = 30, GoosieFragments3 = 30, GoosieFragments5 = 50;// official
         }
         static Config _cfg; static string _stamp;
-        static string Dir { get { return Path.Combine(Program.ServerConfig.DbLocation, "WenwenDetective"); } }
+        static string Dir { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "WenwenDetective"); } }
         public static Config Cfg
         {
             get
@@ -279,7 +279,7 @@ namespace Qahr.Mobile.WenwenDetective
                     Msg(c, "Congratulations! You obtained " + s + "!");
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
     }

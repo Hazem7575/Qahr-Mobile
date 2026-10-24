@@ -6,8 +6,8 @@
 //    point stages 1000 (repeat, x/999), 5000, 10000, 20000, 40000, 60000, 80000, 120000 (childermas25rankdata PointConfig),
 //    renovation reward per structure = its pack + 20 Moonglass (luauirewardshow 192/193/194001001 + 19x001002),
 //    operation revenue tiers 25/50/75/100 Moonglass (luauirewardshow 190001002..005), event Moonglass 5 (190002000),
-//    store tables (Infinity[DB]\ChildrensDay2025\stores.json = EmoneySaleShop.lua 342501/342502/34250), box contents (itemtype texts).
-//  DERIVED (not in the client, editable in Infinity[DB]\ChildrensDay2025\childrensday2025.json): quality thresholds between
+//    store tables (Data\ChildrensDay2025\stores.json = EmoneySaleShop.lua 342501/342502/34250), box contents (itemtype texts).
+//  DERIVED (not in the client, editable in Data\ChildrensDay2025\childrensday2025.json): quality thresholds between
 //    0 and the official 1050, event chance, event Moonglass ranges, revenue per quality, stage rewards, fragment recipes,
 //    Starwish Pack odds, Vault Palace spots.
 // ============================================================================
@@ -79,7 +79,7 @@ namespace Qahr.Mobile.ChildrensDay2025
 
         // ------------------------------------------------------------------ load
         static DreamParkConfig _cfg; static string _stamp;
-        static string Dir { get { return Path.Combine(Program.ServerConfig.DbLocation, "ChildrensDay2025"); } }
+        static string Dir { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "ChildrensDay2025"); } }
         public static DreamParkConfig Cfg
         {
             get

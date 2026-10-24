@@ -12,7 +12,7 @@
 //                reward costs 1; Anniversary Bread (1/2/100) adds Grit Points; packs cost 50/100 Grit to open.
 //    Reputation  Foison Village (Bleak Valley): levels at 50/100/150/200/300 Reputation -> 50/100/150/200/300 Spark Logs;
 //                the level gives a Log Sale Pack discount (Log Sale Pack = 40-50 Spark Logs).
-//  DERIVED (Infinity[DB]\BleakValleyVillage\bleakvalley.json): start Grit 200, Faith Crystal chance, Reputation per
+//  DERIVED (Data\BleakValleyVillage\bleakvalley.json): start Grit 200, Faith Crystal chance, Reputation per
 //  quest, Log Sale Pack price / discount / daily limit, Dragonette expedition time and rewards, Silver Key chance.
 //  Event state belongs to one festival run (a new run starts fresh); the cumulative / reputation claims are per run.
 // ============================================================================

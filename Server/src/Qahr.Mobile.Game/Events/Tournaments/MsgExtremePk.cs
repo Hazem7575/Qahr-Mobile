@@ -30,7 +30,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                Map = Pool.ServerMaps[1505];
                DinamicID = Map.GenerateDynamicID();
 
-               MsgSchedules.SendInvitation("ExtremePk", "ConquerPoints", 410, 354, 1002, 0, 60);
+               MsgSchedules.SendInvitation("ExtremePk", "ConquerPoints", Places.TwinCity, 0, 60);
 
              
                StartTimer= DateTime.Now;
@@ -120,7 +120,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
 
                            }
                            x++;
-                           user.Teleport(410, 354, 1002);
+                           user.Teleport(Places.TwinCity);
                        }
                    }
                    Process = ProcesType.Dead;

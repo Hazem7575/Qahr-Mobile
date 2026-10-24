@@ -1,5 +1,5 @@
 // ============================================================================
-//  [HalloweenSenluo2023 2026-10-15] Macabre Realm data: the editable DERIVED numbers (Infinity[DB]\HalloweenSenluo2023\
+//  [HalloweenSenluo2023 2026-10-15] Macabre Realm data: the editable DERIVED numbers (Data\HalloweenSenluo2023\
 //  config.json, read on change) and the per-character / server-wide state (players.json, written atomically).
 //  Everything official (item ids, texts, maps, NPC looks) lives in the code with its source; only numbers the client
 //  does not carry (odds, amounts, costs, progress steps) are in config.json, each marked "derived".
@@ -39,7 +39,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
 
         public static HsConfig Current = new HsConfig();
         static DateTime _stamp = DateTime.MinValue, _next = DateTime.MinValue;
-        public static string Folder { get { return Path.Combine(Program.ServerConfig.DbLocation, "HalloweenSenluo2023"); } }
+        public static string Folder { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "HalloweenSenluo2023"); } }
         public static string File_ { get { return Path.Combine(Folder, "config.json"); } }
 
         public static HsConfig Get()

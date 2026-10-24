@@ -73,7 +73,7 @@ namespace Qahr.Mobile.Unanswered.B1
 
         public static void Log(Exception e)
         {
-            try { MyConsole.SaveException(e); } catch { }
+            MyConsole.SaveException(e);
         }
 
         /// <summary>Common handler body: ready check, throttle, build, send. Nothing else happens.</summary>

@@ -1,6 +1,6 @@
 // ============================================================================
 //  [ChildrensDay2025 2026-10-15] Per-character Dream Park progress, one record per uid, reset when a NEW festival run starts.
-//  File: Infinity[DB]\ChildrensDay2025\state.json (rewritten atomically after every change; tmp + replace).
+//  File: Data\ChildrensDay2025\state.json (rewritten atomically after every change; tmp + replace).
 //  Every caller takes DreamParkState.Sync for the whole read-check-deduct-grant-save sequence.
 // ============================================================================
 using System;
@@ -34,7 +34,7 @@ namespace Qahr.Mobile.ChildrensDay2025
         public static Func<DateTime> Clock;                  // harness
         public static DateTime Now { get { var c = Clock; return c != null ? c() : DateTime.Now; } }
         public static string Today { get { return Now.ToString("yyyy-MM-dd", CultureInfo.InvariantCulture); } }
-        static string FilePath { get { return Path.Combine(Program.ServerConfig.DbLocation, "ChildrensDay2025", "state.json"); } }
+        static string FilePath { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "ChildrensDay2025", "state.json"); } }
 
         static void Load()
         {
@@ -122,7 +122,7 @@ namespace Qahr.Mobile.ChildrensDay2025
             try
             {
                 string line = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) + " " + (c != null && c.Player != null ? c.Player.UID + " " + c.Player.Name : "-") + " | " + what;
-                File.AppendAllText(Path.Combine(Program.ServerConfig.DbLocation, "ChildrensDay2025", "log.txt"), line + Environment.NewLine, Encoding.UTF8);
+                File.AppendAllText(Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "ChildrensDay2025", "log.txt"), line + Environment.NewLine, Encoding.UTF8);
             }
             catch { }
         }

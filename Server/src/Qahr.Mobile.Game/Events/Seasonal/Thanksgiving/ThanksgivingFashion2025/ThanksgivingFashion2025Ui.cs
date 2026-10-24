@@ -23,7 +23,7 @@
 //  Points bar max = config pointsMax (derived, default 1 = empty bar; the official stage table is server-side).
 //  NOT on this server (system message, nothing granted): Splendor Pavilion, Pinnacle Tower, Land of Fortune,
 //  Skyreach Hunt (realm map not mapped), rankings, Arena / Top Master voting, Skyreach Vault.
-//  Config (optional): Infinity[DB]\ThanksgivingFashion2025\thanksgivingfashion2025.json {festival, pointsMax}.
+//  Config (optional): Data\ThanksgivingFashion2025\thanksgivingfashion2025.json {festival, pointsMax}.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10789), tagged [ThanksgivingFashion2025 2026-10-14].
 // ============================================================================
@@ -48,7 +48,7 @@ namespace Qahr.Mobile.ThanksgivingFashion2025
             public uint PointsMax = 1;                  // derived: no official stage table in the client
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "ThanksgivingFashion2025", "thanksgivingfashion2025.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "ThanksgivingFashion2025", "thanksgivingfashion2025.json"); } }
         public static Config Cfg
         {
             get

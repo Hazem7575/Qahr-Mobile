@@ -1,4 +1,4 @@
-// Martial Token (BattlePass) - season config loader: Infinity[DB]\BattlePass\BattlePass.ini
+// Martial Token (BattlePass) - season config loader: Data\BattlePass\BattlePass.ini
 // The file says, line by line, which values are OFFICIAL (client ini\BattlePass.lua) and which are DERIVED.
 using System;
 using System.Collections.Generic;

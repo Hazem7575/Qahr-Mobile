@@ -15,7 +15,7 @@
 // HUD refresh 10 s, pre-war countdown 10 min, Honor Pillar uid / look, no buff pillars / gate repair / soul shackle
 // (no server objects for them on this map). Sign-up: there is no sign-up UI in this client - every guild whose
 // members fight on the map takes part (guild level >= MinGuildLevel).
-// Config: Infinity[DB]\NewGuildWar\config.ini   State: Infinity[DB]\NewGuildWar\state.txt   Log: log.txt
+// Config: Data\NewGuildWar\config.ini   State: Data\NewGuildWar\state.txt   Log: log.txt
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -112,7 +112,7 @@ namespace Qahr.Mobile.NewGuildWar
             {
                 if (!string.IsNullOrEmpty(RootOverride)) return RootOverride;
                 string db = Program.ServerConfig.DbLocation;
-                if (string.IsNullOrEmpty(db)) db = Path.Combine(Environment.CurrentDirectory, "Infinity[DB]");
+                if (string.IsNullOrEmpty(db)) db = Path.Combine(Environment.CurrentDirectory, "Data");
                 return Path.Combine(db, "NewGuildWar");
             }
         }
@@ -158,12 +158,12 @@ namespace Qahr.Mobile.NewGuildWar
                 _timer = new Timer(_ => Tick(), null, 5000, 1000);
                 var c = Config;
                 MyConsole.WriteLine("[NewGuildWar] " + (c.Enabled != 0 ? "on" : "off") + " - " + (DayOfWeek)c.Day + " " + (c.StartHHMM / 100).ToString("00") + ":" + (c.StartHHMM % 100).ToString("00")
-                    + " for " + c.DurationMin + " min on map " + c.Map + " (Infinity[DB]\\NewGuildWar\\config.ini).", ConsoleColor.Cyan);
+                    + " for " + c.DurationMin + " min on map " + c.Map + " (Data\\NewGuildWar\\config.ini).", ConsoleColor.Cyan);
             }
             catch (Exception e) { Error(e); }
         }
 
-        public static void Error(Exception e) { try { MyConsole.SaveException(e); } catch { } }
+        public static void Error(Exception e) { MyConsole.SaveException(e); }
 
         static readonly object _logLock = new object();
         public static void Log(string line)

@@ -14,7 +14,6 @@
 
 # --- items of systems this server does not have: keep the item, explain ---
 3354581 msg The Spiritus system is not available on this server yet. Please keep your 100-Spiritus Ball.
-3356433 msg Meridian cultivation is not available on this server yet. Please keep your Yin Amulet.
 3339816 msg The Lineage system is not available on this server yet. Please keep your Lineage Crystals.
 3339817 msg The Lineage system is not available on this server yet. Please keep your Lineage Seals.
 4060001 msg Use the Universal Rune Essence in the Rune upgrade window (Gear > Runes).
@@ -23,3 +22,91 @@
 3342876 msg Swap Tickets are spent in the Mall's Swap Shop. They can't be used from the bag.
 3342877 msg Swap Tickets are spent in the Mall's Swap Shop. They can't be used from the bag.
 3342878 msg Swap Tickets are spent in the Mall's Swap Shop. They can't be used from the bag.
+
+# ---- Swap Shop boxes (Mall shop 6, paid with swap tickets): box -> its item, from the client tipsmode.dat ItemCopyMode
+3344520 items 191685:1:b   # Rocking Romance Box -> RockingRomance(Fantasy)
+3344521 items 195795:1:b   # Sweetness of Love Box -> SweetnessofLove(Eternal)
+3344522 items 191695:1:b   # Snow Serenity Box -> Snow Serenity (Pride)
+3344523 items 199265:1:b   # Starry Billow Box -> Starry Billow (Shine)
+3344524 items 195175:1:b   # Glory of Raptors Box -> GloryofRaptors(Signed)
+3344525 items 191745:1:b   # Vigor of Celtics Box -> VigorofCeltics(Signed)
+3344526 items 181095:1:b   # Arabic Pride Box -> ArabicPride
+3344527 items 181105:1:b   # Blazing Romance Box -> BlazingRomance
+3344528 items 199565:1:b   # Walnut Magic Box -> Walnut Magic (Star)
+3344529 items 199635:1:b   # Cyan Mist Box -> Cyan Mist
+3344530 items 199145:1:b   # Frozen Crest Box -> Frozen Crest
+3344531 items 195875:1:b   # Budding Flower Box -> BuddingFlower
+3344533 items 360323:1   # Innocent Sunflower Box -> Innocent Sunflower
+3344534 items 360290:1   # Chocolate Heart Box -> ChocolateHeart
+3344535 items 360298:1   # Lingering Blossoms Box -> LingeringBlossoms
+3344536 items 360050:1   # Hot Turkey Box -> Hot Turkey
+3344512 items 200833:1:b   # Furious Cloud Box -> Furious Cloud (Storm)
+3344513 items 200743:1:b   # Celestial Crane Box -> Celestial Crane
+3344514 items 200845:1:b   # Radiant Husky Box -> RadiantHusky
+3344515 items 200685:1:b   # Fiery Beast Box -> FieryBeast
+3344516 items 200563:1:b   # Victor Alpaca Box -> VictorAlpaca
+3344517 items 200684:1:b   # Snow Lotus Box -> SnowLotus
+3344518 items 200846:1:b   # Beating Dream Box -> StarRoosterMelodyDream
+3344519 items 200768:1:b   # Dragon Whelp Box -> Dragon Whelp
+3345285 items 192575:1:b   # FortuneWish Box -> FortuneWish
+3345286 items 195025:1:b   # Christmas Melody Box -> ChristmasMelody
+3345281 items 200777:1:b   # Lunar Deer Box -> Lunar Deer (Glow)
+3345282 items 200817:1:b   # Feather Miracle Box -> Splendid Feather Miracle
+3345283 items 200673:1:b   # Midnight Ordeal Box -> Midnight Ordeal
+3345284 items 200665:1:b   # Shining Lion Box -> Shining Lion
+3346191 items 360174:1:b   # Spring Rabbit Box -> Spring Rabbit
+3346192 items 360034:1:b   # Good Evening Bear Box -> GoodEveningBear
+3346193 items 360173:1:b   # Thunderbolt Tiger Box -> Thunderbolt Tiger
+3346194 items 360172:1:b   # Fancy Pinwheel Box -> FancyPinwheel
+3346513 items 200490:1:b   # Turkey Run Box -> TurkeyRun
+3346514 items 200491:1:b   # Santa Joy Sleigh Box -> SantaJoySleigh(LimitedEdition)
+3346515 items 194995:1:b   # Chivalrous Dream Box -> ChivalrousDream
+3346516 items 196385:1:b   # Dragon Roar Box -> DragonRoar
+3346508 items 360154:1:b   # Ultra Racket Box -> UltraRacket
+3346509 items 360152:1:b   # Cat Hammer Box -> CatHammer
+3346510 items 360151:1:b   # Cucumber Hammer Box -> CucumberHammer
+3346511 items 360087:1:b   # Hammer of Discipline Box -> HammerofDiscipline
+3346512 items 360149:1:b   # Rod of Roses Box -> RodofRoses
+3347577 items 200476:1:b   # Drummer Panda Pack -> DrummerPanda
+3347578 items 200763:1:b   # Feather Miracle Pack -> Feather Miracle
+3347579 items 200625:1:b   # Giant Fish Pack -> GiantFish
+3347580 items 195415:1:b   # Blossom Romance Pack -> BlossomRomance
+3347581 items 194475:1:b   # Angelic Robe Pack -> AngelicRobe
+3347582 items 196185:1:b   # Final Survivor Pack -> FinalSurvivor
+3347583 items 360103:1:b   # Cloudy Dragon Pack -> CloudyDragon
+3347584 items 360039:1:b   # Tennis Racket Pack -> TennisRacket
+3347585 items 360153:1:b   # Racoon Racket Pack -> RacoonRacket
+3347586 items 350081:1:b   # Carp Fish Pole Pack -> CarpFishPole(2-handed)
+3347587 items 350012:1:b   # Blue Guitar Pack -> BlueGuitar(2-handed)
+3348432 items 200553:1:b   # Cute Monkey Pack -> CuteMonkey
+3348433 items 200500:1:b   # Fuleco Pack -> Fuleco
+3348434 items 200877:1:b   # Hungry Dragon (Glow) Pack -> Hungry Dragon (Glow)
+3348435 items 193725:1:b   # Immortal Robe Pack -> ImmortalRobe
+3348436 items 196015:1:b   # Baby Rat Pack -> BabyRat
+3348437 items 195585:1:b   # Commander Robe Pack -> CommanderRobeGarment
+3348438 items 191965:1:b   # Crystal Love (Star) Pack -> Crystal Love (Star)
+3348439 items 189735:1:b   # Sunlight Swimwear Pack -> SunlightSwimwear(Bubble)
+3348440 items 199255:1:b   # Rosy Haze (Splendor) Pack -> Rosy Haze (Splendor)
+3348441 items 360031:1:b   # Backpack Pack -> Backpack
+3348442 items 360027:1:b   # Invincible Fist Pack -> InvincibleFist
+3348443 items 350017:1:b   # Palm Leaf Fan Pack -> PalmLeafFan(2-handed)
+3348444 items 360405:1:b   # Golden Ether Pack -> Golden Ether (1-Handed)
+3324039 items 360216:1   # Tomato Umbrella Box -> Tomato Umbrella
+3344796 items 360405:1   # Fallen Love Box -> Golden Ether (1-Handed)
+3342150 items 360405:1   # Dream Fright Hairstyle -> Golden Ether (1-Handed)
+3344795 items 360405:1   # Magic Fate Box -> Golden Ether (1-Handed)
+3348428 items 200690:1:b   # Iridescent Ox Pack -> Iridescent Ox
+3310398 items 200493:1:b   # Vigorous Turkey Pack -> VigorousTurkey
+3307734 items 200503:1:b   # Wine Gourd Pack -> WineGourd
+3351422 items 200549:1:b   # Soul Kylin Pack -> SoulKylin
+3327005 items 195945:1:b   # Jingle Pack -> Jingle
+3351423 items 194685:1:b   # Legend of BC Warriors Pack -> LegendofBCWarriors
+3351424 items 194675:1:b   # Myth of DC Cavaliers Pack -> MythofDCCavaliers
+3351425 items 195575:1:b   # Commander Robe (Wealth) Pack -> CommanderRobe(Wealth)
+3351426 items 360401:1:b:43200   # 30D Cool Surfboard Pack -> Cool Surfboard (1-Handed)
+3344566 items 360400:1:b:43200   # 30D Block Sword (Dazzle) Box -> Block Sword (Dazzle) (1-handed)
+3347093 items 360308:1:b:43200   # 30D Snow Ward (Bright) Box -> SnowWard(Bright)
+3347092 items 360393:1:b:43200   # 30D Superb Ducking Box -> Superb Duckling (1-Handed)
+3354634 items 350229:1:b:43200   # 30D Shadow Dance Box -> Shadow Dance (2H)
+3354636 items 350215:1:b:43200   # 30D Bubble Machine Box -> Bubble Machine (2H)
+3354635 items 350224:1:b:43200   # 30D Rainbow Foal Box -> Rainbow Foal (2H)

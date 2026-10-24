@@ -88,7 +88,7 @@
 - **12021:** مفيش `maps\12021.ini`. لو اللاعب مات هناك بيرجع توين سيتي، زي باقي خرايط 12xxx.
 - **ناقص:** الجزء الرسمي "خريطة الحدث" 12019 (`2023tsf_new`). مفيش ليه مهام في `Questinfo`، فماستخدمناهوش.
 
-_Agent 4 (13-10-2026). المصادر: `Infinity[DB]\Questinfo.ini`، و`client_test\ini\GameMap.dat` و`npc.ini` و`monster.dat` (3-Way)، و`Infinity[DB]\Monsters\Brigand.ini`، وفحص الـ walkability على `Infinity[DB]\map\map\*.DMap`._
+_Agent 4 (13-10-2026). المصادر: `Data\Questinfo.ini`، و`client_test\ini\GameMap.dat` و`npc.ini` و`monster.dat` (3-Way)، و`Data\Monsters\Brigand.ini`، وفحص الـ walkability على `Data\map\map\*.DMap`._
 
 ## تتبّع المهمة في الكلاينت (14-10-2026)
 - الكلاينت بيتتبّع المهمة ويمشي لوحده للـ NPC بالـ id والخريطة والمكان المكتوبين في `ini\Questinfo.ini` بتاعه.
@@ -123,5 +123,5 @@ _Agent 4 (13-10-2026). المصادر: `Infinity[DB]\Questinfo.ini`، و`client_
 - الجوايز المؤقتة (+4 Stone 5 أيام، Radiant Star Stone يومين) بتتدي بنفس المدة من `AddTime`.
 - شباك الأمنيات بيظهر بعنوان "Castle Treasure" ومدة 5.12-5.25: ده من الكلاينت نفسه (نفس الشباك المشترك)، مش من السيرفر.
 
-**الإعدادات:** `Infinity[DB]\NewYear2023\springfestival2023.json`. **الحالة لكل شخصية:** `Infinity[DB]\NewYear2023\players.json`.
+**الإعدادات:** `Data\NewYear2023\springfestival2023.json`. **الحالة لكل شخصية:** `Data\NewYear2023\players.json`.
 **الكود:** `Base\NewYear2023\` (SpringFestival2023.cs، SpringFestival2023Wish.cs، SpringStore.cs، SpringHooks.cs).

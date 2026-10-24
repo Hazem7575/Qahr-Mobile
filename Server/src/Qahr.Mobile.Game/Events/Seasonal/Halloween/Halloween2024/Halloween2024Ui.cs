@@ -24,7 +24,7 @@
 //  NOT on this server (system message, nothing granted): Witch House beast cultivation, Grimloft exchange, Silent Hill,
 //  Midnight Duel, Devil Valley (cross-server), Thrills Ranking, CP / Anima shops. Thrill Points are 0: nothing awards them.
 //  Quests 5924-5933 (tHalloweenNightmare) are not part of this festival (no evidence they belong to 2024).
-//  Config (optional, derived values): Infinity[DB]\Halloween2024\halloween2024.json {festival, minLevel}.
+//  Config (optional, derived values): Data\Halloween2024\halloween2024.json {festival, minLevel}.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10482), tagged [Halloween2024 2026-10-14].
 // ============================================================================
@@ -47,7 +47,7 @@ namespace Qahr.Mobile.Halloween2024
             public int MinLevel = 80;   // official "Requirement: Level 80" (tHalloweenNpc2024_DelText[33387][Text114])
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "Halloween2024", "halloween2024.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "Halloween2024", "halloween2024.json"); } }
         public static Config Cfg
         {
             get

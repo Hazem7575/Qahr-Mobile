@@ -25,7 +25,7 @@
 //             then every 2000, up to 500 times; items = Dialog_Info["1303-rank-item"].Total).
 //    daily    2 Silver Warrants once a day on opening the window (Msg107/112 "log in again to get 2 Silver Warrants").
 //    puzzle   Hunter Puzzle 3339557: 25 -> Turkey Hunter (B) 199775, 50 -> Turkey Hunter (Terminator) 199785.
-//  DERIVED (Infinity[DB]\Thanksgiving2022\thanksgiving2022.json): the battle map (12660 TurkeyRefuge, the official
+//  DERIVED (Data\Thanksgiving2022\thanksgiving2022.json): the battle map (12660 TurkeyRefuge, the official
 //  Thanksgiving fort map ids are not in the client), wave sizes, time limits that the texts don't give, cooldown, draw
 //  odds + cost, shop limits / puzzle targets, box contents, monster looks/stats.
 //  NOT on this server: the cross-server parts (Sharpen Weapon, Turkey Counsellor) and the global/local ranking pages.

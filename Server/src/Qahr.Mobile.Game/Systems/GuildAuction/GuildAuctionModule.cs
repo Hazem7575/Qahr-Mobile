@@ -54,7 +54,7 @@ namespace Qahr.Mobile.GuildAuction
             if (text == null || !text.StartsWith("@gauction", StringComparison.OrdinalIgnoreCase)) return false;
             try
             {
-                if (client == null || client.Player == null || !(client.IsStaffAccount || client.Player.Name.Contains("[GM]"))) return false;
+                if (client == null || client.Player == null || !client.IsStaffAccount) return false;
                 Wire();
                 Tell(client, Command(client, text.Substring(9).Trim()));
             }

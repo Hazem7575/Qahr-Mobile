@@ -25,7 +25,7 @@
 - **رسمي:** المهام والنصوص والجوايز والنقط (Questinfo)، الـ meshes (npc.ini)، المواعيد، شرط اللفل 80، الدخول من توين سيتي / Summer Beach، كل رسايل الشباك (`tSummerActivePage_DelText[105]`).
 - **الخريطة:** 11829 SummerBeach = doc 12116 `2014vipholiday` (maps.txt، ثقة B). كل النقط الرسمية walkable.
 - **مشتق:**
-  - مكان الوصول (172,153)، وcooldown الـ Scallop (1.5 ث)، واسم الـ Func. كلهم في `Infinity[DB]\SummerWhales\summerwhales.json`.
+  - مكان الوصول (172,153)، وcooldown الـ Scallop (1.5 ث)، واسم الـ Func. كلهم في `Data\SummerWhales\summerwhales.json`.
   - "Back to Twin City" عند Cassio (زي باقي المهرجانات).
   - **WhaleTraining 30733:** مفيش mesh بالاسم ده. حطّينا Russ `[OldFisherman]` (npc.ini 4434) لأن نص 5115 بيقول "مع الصياد". PROXY.
   - **StrandedWhale 30728:** شكل Cassie (4429، أول واحد من الحيتان الخمسة `[StrandedWhale]`).
@@ -47,12 +47,12 @@
   - صلاة واحدة بـ **49 Wish Conch**، و10 صلوات بـ **490**.
   - كل صلاة بتدي: **1 Ambergris** + **49 Favor** + أيتم واحد من العجلة.
 - **رسمي:** التكلفة، والـ Ambergris، والـ Favor (نص DrawInfo)، والـ 20 أيتم بتوع العجلة، والـ 8 جوايز بتوع المراحل، وكل الرسايل. كلهم من `valentinesdayinfo` و`luauires_en`.
-- **مشتق** (في `Infinity[DB]\SummerWhales\summerwhales.json`):
+- **مشتق** (في `Data\SummerWhales\summerwhales.json`):
   - أوزان العجلة، حسب لون الخانة: أصفر 5، أحمر 25، أبيض 50.
   - عدد الصلوات لكل مرحلة: 10، 20، 30، 50، 80، 120، 160، 200.
   - `favorMax` = 9800.
 - **ملاحظة:** خانة 14 (`194825`) مش موجودة في itemtype بتاعنا، فعمرها ما بتطلع.
-- **جايزة المرحلة:** مرة واحدة للشخصية. بتتسجّل في `Infinity[DB]\SummerWhales\players.json` **قبل** ما الأيتم يتدي.
+- **جايزة المرحلة:** مرة واحدة للشخصية. بتتسجّل في `Data\SummerWhales\players.json` **قبل** ما الأيتم يتدي.
 
 ## تحويل الـ Ambergris — شغّال بعد الريستارت
 - **Garment:**

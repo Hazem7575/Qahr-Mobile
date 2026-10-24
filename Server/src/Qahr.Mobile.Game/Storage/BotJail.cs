@@ -109,7 +109,7 @@ namespace Qahr.Mobile.Database
             if (CanOutBotJail(client))
             {
                 // خروج من الجيل
-                client.Teleport(410, 354, 1002);
+                client.Teleport(Places.TwinCity);
 
                 Qahr.Mobile.Game.MsgTournaments.MsgSchedules.SendSysMesage(
                     "Player " + client.Player.Name + " has left Bot Jail.",

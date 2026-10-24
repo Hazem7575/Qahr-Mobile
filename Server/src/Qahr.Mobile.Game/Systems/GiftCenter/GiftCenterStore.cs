@@ -1,6 +1,6 @@
 // [GiftCenter 2026-10-14] Gift Center data: config, catalog (client hairface_storage_type) and the persistent record store.
 //
-// Files (Infinity[DB]\GiftCenter\):
+// Files (Data\GiftCenter\):
 //   GiftCenter.ini   config (official values from the client's Face.lua / hairface_storage_type; derived values marked)
 //   records.txt      every record + per-player settings (atomic rewrite on each change)
 //   _claims.log      append-only ledger of claimed record ids (a claim survives a rollback of records.txt)

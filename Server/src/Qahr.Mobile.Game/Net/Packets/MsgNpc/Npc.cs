@@ -301,7 +301,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                         client.SendSysMesage("You have to be in your own house to be able to display it.", MsgServer.MsgMessage.ChatMode.System, MsgServer.MsgMessage.MsgColor.red);
                         return;
                     }
-                    if (client.Player.Name.Contains("[GM]"))
+                    if (client.IsGm)
                     {
                         Npc np2 = Npc.Create();
                         np2.UID = client.MoveNpcUID;

@@ -25,7 +25,7 @@
 //  [2026-10-15] Vault Palace Visit teleports to Vault Palace 12818 (the official Windrise statue spot). The rest answers with the
 //  exact reason (Reason()): the 2026 World Cup items (Field Whistle, Pitch Point Box, Cheer Coin, prizes 3356639+/3600869) are newer
 //  than this client's itemtype, the pitch map 13319 (2026worldcup_new) is not in client_test GameMap.dat, Lucky Cheer is real-match betting.
-//  Config (optional): Infinity[DB]\WorldCup2026\worldcup2026.json {firstHalf, secondHalf, minLevel, firstHalfTime, secondHalfTime}.
+//  Config (optional): Data\WorldCup2026\worldcup2026.json {firstHalf, secondHalf, minLevel, firstHalfTime, secondHalfTime}.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10900 + 10511 enter button), tagged.
 // ============================================================================
@@ -52,7 +52,7 @@ namespace Qahr.Mobile.WorldCup2026
             public string SecondHalfTime = "06-30 00:00 07-20 23:59";  // official 6.30-7.20
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "WorldCup2026", "worldcup2026.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "WorldCup2026", "worldcup2026.json"); } }
         public static Config Cfg
         {
             get

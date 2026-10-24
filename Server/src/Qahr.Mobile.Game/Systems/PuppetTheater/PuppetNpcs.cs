@@ -3,7 +3,7 @@
 //  Strange Spectator, Broken Puppet's Puppet Adventure), the points dialog and the event boxes.
 //  Official: every text (Server_Key tHalloween2025Npc / Kua / Guai / Lottery), store goods + CP prices
 //  (luauirewardshow 302001xxx), training reward lists (301001-301003xxx), box contents (itemtype tips).
-//  DERIVED numbers: Infinity[DB]\PuppetTheater\config.json.  See PuppetTheaterGame.cs for the rules of every grant.
+//  DERIVED numbers: Data\PuppetTheater\config.json.  See PuppetTheaterGame.cs for the rules of every grant.
 // ============================================================================
 using System;
 using System.Collections.Generic;
@@ -568,7 +568,7 @@ namespace Qahr.Mobile.PuppetTheater
                 if (i < 0 || killer.Player.Map != PT.Cfg.AdvMap) return;
                 GotFragment(killer, i);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
         public static void GotFragment(Client.GameClient c, int i)
         {

@@ -1,7 +1,7 @@
 // [GuildRecruit 2026-10-14] shared helpers for the guild / union recruitment systems:
 //   guild join applications (2351 + MsgSyndicate 55..59 + 2342), recruitment board (2019 / 2048),
 //   union join applications (2384 + MsgLeagueOpt 8/11/82/83/85/86/87) and league order status (2393).
-// Data + config live in Infinity[DB]\GuildRecruit\ (config.ini, *.txt stores, log.txt).
+// Data + config live in Data\GuildRecruit\ (config.ini, *.txt stores, log.txt).
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -10,7 +10,7 @@ using System.Text;
 
 namespace Qahr.Mobile.GuildRecruit
 {
-    /// <summary>Editable values (Infinity[DB]\GuildRecruit\config.ini). "official" = taken from the client text,
+    /// <summary>Editable values (Data\GuildRecruit\config.ini). "official" = taken from the client text,
     /// "derived" = picked because the client does not carry the server value.</summary>
     public sealed class RecruitConfig
     {
@@ -78,7 +78,7 @@ namespace Qahr.Mobile.GuildRecruit
             {
                 if (!string.IsNullOrEmpty(RootOverride)) return RootOverride;
                 string db = Program.ServerConfig.DbLocation;
-                if (string.IsNullOrEmpty(db)) db = Path.Combine(Environment.CurrentDirectory, "Infinity[DB]");
+                if (string.IsNullOrEmpty(db)) db = Path.Combine(Environment.CurrentDirectory, "Data");
                 return Path.Combine(db, "GuildRecruit");
             }
         }
@@ -129,7 +129,7 @@ namespace Qahr.Mobile.GuildRecruit
 
         public static void Error(Exception e)
         {
-            try { MyConsole.SaveException(e); } catch { }
+            MyConsole.SaveException(e);
         }
 
         /// <summary>Tab separated field without tabs / newlines.</summary>

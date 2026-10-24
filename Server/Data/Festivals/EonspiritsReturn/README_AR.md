@@ -32,4 +32,4 @@
    - وتتضاف كلها لـ `KnownEvents`.
 3. بعدها `quests.json` فيه objectives من نوع `event` بالمفاتيح دي. وخلّي بالك: المهام ملهاش جايزة رسمية.
 
-_Agent 4 (13-10-2026). المصادر: `Infinity[DB]\Questinfo.ini`، والسورس (`Client\GameClient.cs` و`Enums.cs` و`MY System\Yuanshen`)._
+_Agent 4 (13-10-2026). المصادر: `Data\Questinfo.ini`، والسورس (`Client\GameClient.cs` و`Enums.cs` و`MY System\Yuanshen`)._

@@ -7,7 +7,7 @@
   - `Game\MsgNpc\Procesor.cs`: `CastleStartle.OnItemDialog` (بعد SpringHooks.OnItemDialog) و`CastleStartle.OnNpc` (بعد SpringHooks.OnNpc).
   - `MY System\MsgItem\MsgItemUsuagePacket.cs`: `CastleStartle.OnUse` (بعد SpringHooks.OnUse).
   - نسخة احتياطية: `Backups_Systems\20261015_094714_CastleMystery_hooks\`.
-- **الأرقام:** `Infinity[DB]\CastleMystery\castle.json`. الحالة: `Infinity[DB]\CastleMystery\state.json`.
+- **الأرقام:** `Data\CastleMystery\castle.json`. الحالة: `Data\CastleMystery\state.json`.
 
 ## بيتلعب إزاي (لفل 80+)
 1. **القصة 8422-8429** (زي ما كانت) في نسخة خاصة من 1003099 (doc 12814)، من زرار Fgui 10139 أو من Suyi "Head to Auter Castle." أو من قايمة ItemGet في الشباك (`ValentinesDay2025Story_EnterInsatnce`).

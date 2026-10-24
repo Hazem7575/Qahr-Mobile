@@ -119,7 +119,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
             {
                 if (user != null && user.Player.Map == MapID)
                 {
-                    user.Teleport(410, 354, 1002);
+                    user.Teleport(Places.TwinCity);
                 }
             }
 

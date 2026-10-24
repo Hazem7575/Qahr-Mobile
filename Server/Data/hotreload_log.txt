@@ -1521,3 +1521,167 @@
         Shop.dat: 171 -> 171 shops; emoneyshop: 504 -> 504 shops.
         new_shop_goods: 4253 -> 4253 goods.
         The server now sells/validates the new lists. The shop WINDOW is drawn by the client from its own shop files: an item missing from the client's list can't be clicked until the client is patched.
+2026-10-23 23:03:00 | OK   | reloadnpcs | Applied live: 54 removed. | 166 ms
+        removed 20499 @1002 (577,586) mesh 47496 type 2
+        removed 16849 @1002 (211,399) mesh 30890 type 2
+        removed 15745 @1002 (217,432) mesh 24546 type 2
+        removed 10021 @1002 (459,291) mesh 1054856 type 2
+        removed 10031 @1002 (410,656) mesh 270 type 2
+        removed 10050 @1002 (437,442) mesh 10936 type 29
+        removed 5600 @1002 (423,401) mesh 77906 type 2
+        removed 7996 @1002 (523,708) mesh 9670 type 2
+        removed 7997 @1002 (480,710) mesh 9670 type 2
+        removed 20005 @1002 (365,322) mesh 8350 type 2
+        removed 10026 @1002 (426,265) mesh 9340 type 31
+        removed 7927 @1002 (435,661) mesh 8630 type 2
+        removed 21670 @1002 (508,569) mesh 21670 type 2
+        removed 23971 @1002 (499,539) mesh 1064790 type 2
+        removed 24271 @1002 (499,532) mesh 15970 type 2
+        removed 25850 @1002 (572,589) mesh 1053830 type 2
+        removed 25859 @1002 (583,580) mesh 23580 type 2
+        removed 25860 @1002 (379,591) mesh 1053840 type 2
+        removed 31033 @1002 (462,690) mesh 20570 type 2
+        removed 31838 @1002 (445,668) mesh 25770 type 2
+        removed 33778 @1002 (55,465) mesh 20520 type 2
+        removed 35540 @1002 (433,517) mesh 1063560 type 2
+        removed 35541 @1002 (289,699) mesh 22270 type 2
+        removed 36636 @1002 (431,705) mesh 9670 type 2
+        removed 32100 @1002 (647,344) mesh 24430 type 2
+        removed 34562 @1002 (472,558) mesh 12590 type 2
+        removed 9600001 @1002 (425,378) mesh 1063226 type 2
+        removed 9600002 @1002 (434,379) mesh 3666 type 2
+        removed 9600003 @1002 (430,368) mesh 15376 type 2
+        removed 9600004 @1002 (413,389) mesh 1065116 type 2
+        removed 9600005 @1002 (451,379) mesh 1051376 type 2
+        removed 9600006 @1002 (455,392) mesh 1056246 type 2
+        removed 9600007 @1002 (433,404) mesh 1386 type 2
+        removed 9600008 @1002 (461,401) mesh 1050156 type 2
+        removed 9600009 @1002 (439,427) mesh 14666 type 2
+        removed 9600010 @1002 (452,441) mesh 1063046 type 2
+        removed 9600015 @1002 (430,404) mesh 1064867 type 2
+        removed 9600016 @1002 (456,368) mesh 1064640 type 2
+        removed 9600018 @1002 (499,330) mesh 1050156 type 2
+        removed 9600019 @1002 (390,347) mesh 26976 type 2
+        removed 9600020 @1002 (442,334) mesh 1061446 type 2
+        removed 9600021 @1002 (437,342) mesh 12186 type 2
+        removed 9600022 @1002 (440,340) mesh 21556 type 2
+        removed 9600023 @1002 (443,347) mesh 46836 type 2
+        removed 15459 @1002 (459,352) mesh 19776 type 60
+        removed 15460 @1002 (463,352) mesh 19786 type 60
+        removed 15461 @1002 (467,352) mesh 19796 type 60
+        removed 15462 @1002 (471,352) mesh 19806 type 60
+        removed 4699 @1002 (443,246) mesh 1064200 type 2
+        removed 999990 @1002 (428,358) mesh 991016 type 2
+        removed 999992 @1002 (416,358) mesh 991026 type 2
+        removed 999993 @1002 (419,358) mesh 991036 type 2
+        removed 999994 @1002 (422,358) mesh 991046 type 2
+        removed 999995 @1002 (425,358) mesh 991056 type 2
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-24 11:24:54 | OK   | reloadnpcs | Applied live: 6 moved, 34 added, 27 removed, 5 changed. | 171 ms
+        removed 25057 @1002 (440,387) mesh 65400 type 2
+        removed 25087 @1002 (424,355) mesh 27210 type 2
+        removed 26571 @1002 (386,330) mesh 990030 type 2
+        removed 26809 @1002 (449,372) mesh 990040 type 2
+        removed 30916 @1002 (373,347) mesh 19050 type 2
+        removed 30919 @1002 (409,392) mesh 42260 type 2
+        removed 31038 @1002 (455,392) mesh 56350 type 2
+        removed 32307 @1002 (370,322) mesh 56340 type 2
+        removed 32364 @1002 (455,374) mesh 41680 type 2
+        removed 32368 @1002 (356,352) mesh 14350 type 2
+        removed 33844 @1002 (416,362) mesh 50770 type 2
+        removed 33973 @1002 (416,362) mesh 50770 type 2
+        removed 34601 @1002 (353,349) mesh 11200 type 2
+        removed 36758 @1002 (386,376) mesh 36040 type 2
+        removed 36811 @1002 (356,352) mesh 14350 type 2
+        removed 36908 @1002 (397,391) mesh 60970 type 2
+        removed 15389 @1002 (436,390) mesh 19150 type 2
+        removed 21351 @1002 (435,368) mesh 19150 type 2
+        removed 28187 @1002 (464,387) mesh 38590 type 2
+        removed 28329 @1002 (461,387) mesh 45990 type 2
+        removed 28948 @1002 (385,332) mesh 54930 type 2
+        removed 30750 @1002 (359,345) mesh 60970 type 2
+        removed 31861 @1002 (434,404) mesh 18850 type 2
+        removed 31940 @1002 (434,404) mesh 60190 type 2
+        removed 31975 @1002 (434,404) mesh 60190 type 2
+        removed 33371 @1002 (455,366) mesh 60320 type 2
+        removed 34113 @1002 (454,379) mesh 50940 type 2
+        changed 4488 @1002: mesh 54426->26976, type 2->2
+        changed 4 @1002: mesh 1054720->1065280, type 32->32
+        changed 10002 @1002: mesh 1061080->54850, type 2->2
+        moved   22677 1002(447,377) -> 1002(355,331) + look changed
+        changed 3100 @1002: mesh 8900->1050280, type 2->2
+        moved   19634 1002(429,388) -> 1002(394,315)
+        moved   20536 1002(429,399) -> 1002(428,405)
+        moved   27788 1002(464,387) -> 1002(367,311)
+        moved   36772 1002(370,344) -> 1002(372,345) + look changed
+        changed 36773 @1002: mesh 20270->11120, type 2->2
+        moved   9439 1002(457,347) -> 1002(442,361) + look changed
+        added   4434 @1002 (351,358) mesh 1050326 type 2 (line 790)
+        added   423 @1002 (412,361) mesh 1065140 type 1 (line 798)
+        added   30156 @1002 (402,391) mesh 10946 type 2 (line 811)
+        added   4504 @1002 (389,365) mesh 1063020 type 2 (line 905)
+        added   805 @1002 (364,327) mesh 1056 type 2 (line 1106)
+        added   9600001 @1002 (425,378) mesh 1063226 type 2 (line 1699)
+        added   9600002 @1002 (434,379) mesh 3666 type 2 (line 1700)
+        added   9600003 @1002 (430,368) mesh 15376 type 2 (line 1701)
+        added   9600004 @1002 (413,389) mesh 1065116 type 2 (line 1702)
+        added   9600006 @1002 (455,392) mesh 1056246 type 2 (line 1703)
+        added   9600007 @1002 (434,404) mesh 1386 type 2 (line 1704)
+        added   15459 @1002 (478,391) mesh 23136 type 60 (line 1705)
+        added   15460 @1002 (478,372) mesh 23146 type 60 (line 1706)
+        added   15461 @1002 (478,379) mesh 23156 type 60 (line 1707)
+        added   15462 @1002 (478,386) mesh 23166 type 60 (line 1708)
+        added   9600050 @1002 (421,405) mesh 1063186 type 2 (line 1709)
+        added   30161 @1002 (409,370) mesh 1065136 type 2 (line 1710)
+        added   9600051 @1002 (388,385) mesh 1065266 type 2 (line 1711)
+        added   9600052 @1002 (388,383) mesh 6336 type 2 (line 1712)
+        added   7676 @1002 (470,379) mesh 1063126 type 2 (line 1713)
+        added   7675 @1002 (471,385) mesh 1063136 type 2 (line 1714)
+        added   9600053 @1002 (470,366) mesh 34606 type 2 (line 1715)
+        ... (more notes in hotreload_log.txt are cut)
+2026-10-24 11:27:01 | OK   | reloadnpcs | Applied live: 1 added. | 152 ms
+        added   9600066 @1002 (373,350) mesh 11136 type 2 (line 1728)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-24 11:28:25 | OK   | reloadnpcs | Applied live: 1 removed. | 156 ms
+        removed 36480 @1002 (385,318) mesh 990050 type 2
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-24 12:19:43 | OK   | reloadnpcs | Applied live: 1 moved, 5 removed. | 156 ms
+        removed 26486 @1002 (450,387) mesh 990020 type 2
+        removed 32483 @1002 (441,379) mesh 49480 type 2
+        removed 36803 @1002 (441,379) mesh 49480 type 2
+        removed 36812 @1002 (424,341) mesh 13910 type 2
+        removed 18965 @1002 (450,390) mesh 39080 type 2
+        moved   9600040 1002(431,372) -> 1002(434,370)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-24 12:23:23 | OK   | reloadnpcs | Applied live: 1 moved. | 164 ms
+        moved   9600058 1002(382,314) -> 1002(384,316)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-24 13:14:28 | OK   | reloadnpcs | Applied live: 2 moved, 14 added. | 166 ms
+        moved   7879 1002(431,249) -> 1002(431,246)
+        moved   30917 1002(437,296) -> 1002(417,296)
+        added   26228 @1002 (438,264) mesh 1061840 type 2 (line 964)
+        added   9600020 @1002 (445,336) mesh 1061446 type 2 (line 1723)
+        added   4699 @1002 (443,246) mesh 1064200 type 2 (line 1724)
+        added   9600067 @1002 (443,348) mesh 1051626 type 2 (line 1725)
+        added   9600068 @1002 (454,348) mesh 1064366 type 2 (line 1726)
+        added   9600069 @1002 (455,343) mesh 22636 type 2 (line 1727)
+        added   9600070 @1002 (449,340) mesh 1055406 type 2 (line 1728)
+        added   9600071 @1002 (442,335) mesh 1062846 type 2 (line 1729)
+        added   9600072 @1002 (434,265) mesh 1065236 type 2 (line 1730)
+        added   9600073 @1002 (388,235) mesh 1466 type 2 (line 1731)
+        added   9600074 @1002 (414,287) mesh 1065426 type 2 (line 1732)
+        added   9600075 @1002 (411,289) mesh 1064286 type 2 (line 1733)
+        added   9600076 @1002 (413,296) mesh 1065436 type 2 (line 1734)
+        added   9600077 @1002 (402,291) mesh 1065386 type 2 (line 1735)
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-24 13:15:58 | OK   | reloadnpcs | Applied live: 1 removed. | 157 ms
+        removed 26228 @1002 (438,264) mesh 1061840 type 2
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.
+2026-10-24 13:20:50 | OK   | reloadnpcs | Applied live: 6 removed. | 168 ms
+        removed 18786 @1002 (429,291) mesh 1054630 type 2
+        removed 24095 @1002 (423,289) mesh 1029280 type 2
+        removed 25083 @1002 (438,250) mesh 27170 type 2
+        removed 25317 @1002 (425,270) mesh 42260 type 2
+        removed 36383 @1002 (433,344) mesh 63500 type 2
+        removed 5682 @1002 (434,246) mesh 64100 type 2
+        Maps that are not loaded yet will use the new Npcs.txt when a player first enters them.

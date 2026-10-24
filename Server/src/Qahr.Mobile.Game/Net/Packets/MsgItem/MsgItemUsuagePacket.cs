@@ -4137,7 +4137,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[Headgear]") && ((Item.ITEM_ID / 1000) % 10) == 1) || (Item.DBInfo.Name.Contains("(Headgear)") && ((Item.ITEM_ID / 1000) % 10) == 1))
@@ -4176,7 +4176,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (Database.ItemType.ItemPosition(Item.ITEM_ID) == (ushort)Role.Flags.ConquerItem.Necklace)
@@ -4218,7 +4218,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[Necklace]") && ((Item.ITEM_ID / 1000) % 10) == 2) || (Item.DBInfo.Name.Contains("(Necklace)") && ((Item.ITEM_ID / 1000) % 10) == 2))
@@ -4257,7 +4257,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (Database.ItemType.ItemPosition(Item.ITEM_ID) == (ushort)Role.Flags.ConquerItem.Armor)
@@ -4299,7 +4299,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[Armor]") && ((Item.ITEM_ID / 1000) % 10) == 3) || (Item.DBInfo.Name.Contains("(Armor)") && ((Item.ITEM_ID / 1000) % 10) == 3))
@@ -4338,7 +4338,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (Database.ItemType.ItemPosition(Item.ITEM_ID) == (ushort)Role.Flags.ConquerItem.RightWeapon)
@@ -4380,7 +4380,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[1-handed]") && ((Item.ITEM_ID / 1000) % 10) == 4) || (Item.DBInfo.Name.Contains("(1-handed)") && ((Item.ITEM_ID / 1000) % 10) == 4))
@@ -4419,7 +4419,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (Database.ItemType.ItemPosition(Item.ITEM_ID) == (ushort)Role.Flags.ConquerItem.LeftWeapon && !Database.ItemType.IsShield(Item.ITEM_ID))
@@ -4461,7 +4461,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[2-handed]") && ((Item.ITEM_ID / 1000) % 10) == 5) || (Item.DBInfo.Name.Contains("(2-handed)") && ((Item.ITEM_ID / 1000) % 10) == 5))
@@ -4500,7 +4500,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (Database.ItemType.ItemPosition(Item.ITEM_ID) == (ushort)Role.Flags.ConquerItem.LeftWeapon && Database.ItemType.IsShield(Item.ITEM_ID))
@@ -4542,7 +4542,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[Shield]") && ((Item.ITEM_ID / 1000) % 10) == 6) || (Item.DBInfo.Name.Contains("(Shield)") && ((Item.ITEM_ID / 1000) % 10) == 6))
@@ -4581,7 +4581,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (Database.ItemType.ItemPosition(Item.ITEM_ID) == (ushort)Role.Flags.ConquerItem.Ring)
@@ -4623,7 +4623,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[Ring]") && ((Item.ITEM_ID / 1000) % 10) == 7) || (Item.DBInfo.Name.Contains("(Ring)") && ((Item.ITEM_ID / 1000) % 10) == 7))
@@ -4662,7 +4662,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (Database.ItemType.ItemPosition(Item.ITEM_ID) == (ushort)Role.Flags.ConquerItem.Boots)
@@ -4704,7 +4704,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[Boot]") && ((Item.ITEM_ID / 1000) % 10) == 8) || (Item.DBInfo.Name.Contains("(Boots)") && ((Item.ITEM_ID / 1000) % 10) == 8))
@@ -4743,7 +4743,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (ItemID > 0)
@@ -4844,7 +4844,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[Necklace]") && ((Item.ITEM_ID / 1000) % 10) == 2) || (Item.DBInfo.Name.Contains("(Necklace)") && ((Item.ITEM_ID / 1000) % 10) == 2))
@@ -4883,7 +4883,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (Database.ItemType.ItemPosition(Item.ITEM_ID) == (ushort)Role.Flags.ConquerItem.Ring)
@@ -4925,7 +4925,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if ((Item.DBInfo.Name.Contains("[Ring]") && ((Item.ITEM_ID / 1000) % 10) == 7) || (Item.DBInfo.Name.Contains("(Ring)") && ((Item.ITEM_ID / 1000) % 10) == 7))
@@ -4964,7 +4964,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                             {
                                                 ItemID = 0;
                                             }
-                                            if (client.Player.Name.Contains("[GM]") || client.HelpDesk || client.ProjectManager)
+                                            if (client.IsGm)
                                                 ItemID = Itemlevel6[(uint)Pool.GetRandom.Next(0, Itemlevel6.Length)];
                                         }
                                         if (ItemID > 0)
@@ -5924,12 +5924,11 @@ namespace Qahr.Mobile.Game.MsgServer
             if (global::Qahr.Mobile.FoolsKit.Kit.OnUse(client, item, stream)) return;// [AprilFools2023 2026-10-15] Trick Maze items (Trick Amulet, fragments, Clown Masks, packs)
             if (global::Qahr.Mobile.ChildrensDay2025.DreamParkItems.OnUse(item, client, stream)) return;// [ChildrensDay2025 2026-10-15] Dream Park boxes/packs/fragments 3353011-3353020, 3353031-38, 3353100-05
             if (global::Qahr.Mobile.WenwenDetective.GoosieVault.OnUse(item, client, stream)) return;// [WenwenDetective 2026-10-15] Bubble Machine / Spring Goosie fragments 3348595/3348596 + gifts 3348650/3348651/3348803
-            if (global::Qahr.Mobile.HalloweenSenluo2023.HsKit.OnUseItem(client, item, stream)) return;// [HalloweenSenluo2023 2026-10-15] Macabre Realm boxes (Infinity[DB]/<festival>/boxes.json of the Halloween group)
+            if (global::Qahr.Mobile.HalloweenSenluo2023.HsKit.OnUseItem(client, item, stream)) return;// [HalloweenSenluo2023 2026-10-15] Macabre Realm boxes (Data/<festival>/boxes.json of the Halloween group)
             if (global::Qahr.Mobile.Thanksgiving2022.HolidayBoxes.TryUse(client, item)) return;// [Thanksgiving2022 2026-10-15] holiday group boxes/puzzles (Thanksgiving, Christmas, Wishflake 3351462, Wuqu Snow Box 3355342)
             if (global::Qahr.Mobile.NewYear2023.SpringHooks.OnUse(client, item, stream)) return;// [NewYear2023 2026-10-15] Spring Festival group boxes / event items (2023 Spring bags & boxes, Spring Greeting Card, ...)
             if (global::Qahr.Mobile.DemonInvasionMadPet.MidAutumnBoxes.OnUse(client, item)) return;// [DemonInvasionMadPet 2026-10-15] Mid-Autumn group boxes without a script (3342770/71/73/74/77, 3344996-99, 3340960)
             if (global::Qahr.Mobile.Mall.MobileItemUse.OnUse(client, item)) return;// QahrMobile: phone-only bag items (CP boxes, random packs, potency, "not available" messages) from Data\mobile_item_use.txt
-            if (global::Qahr.Mobile.Mall.SwapShopBoxes.OnUse(client, item)) return;// [QahrMobile] phone Mall Swap Shop boxes (Data\swapshop_boxes.txt)
             if (global::Qahr.Mobile.CastleMystery.CastleStartle.OnUse(client, item, stream)) return;// [CastleMystery 2026-10-15] Castle Key 3351993, key boxes 3351995/6, Romantic boxes 3351997-3352000, Dream Note 3340595
             if (global::Qahr.Mobile.DreamTheater.DreamTheaterModule.OnUseItem(client, item, stream)) return;// [DreamTheater 2026-10-15] Wish Gold/Silver/Twinkle Coins, Love Velvet, Dream ranking boxes, Love title boxes, Flower Packs
             if (global::Qahr.Mobile.QixiKit.Hooks.UseItem(client, item, stream)) return;// [QixiRomance2022 2026-10-15] Qixi group items/boxes (Silk 3336394, Apollo`s Blessing 3336395, harp packs, Love Vow/Golden Plume/Love Sound boxes)
@@ -8831,7 +8830,7 @@ namespace Qahr.Mobile.Game.MsgServer
                 }
                 else
                 {
-                    if (global::Qahr.Mobile.MayAdventure2023.FestivalBoxOpen.TryOpen(client, item)) { } else// [MayAdventure2023 2026-10-15] festival boxes without a script (Infinity[DB]\MayAdventure2023 boxes.json)
+                    if (global::Qahr.Mobile.MayAdventure2023.FestivalBoxOpen.TryOpen(client, item)) { } else// [MayAdventure2023 2026-10-15] festival boxes without a script (Data\MayAdventure2023 boxes.json)
                     switch (item.ITEM_ID)
                     {
                         #region ItemUse
@@ -19542,7 +19541,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                     return;
                                 }
                                 client.Inventory.Update(item, Role.Instance.AddMode.REMOVE, stream);
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
 
                                 break;
                             }
@@ -19649,7 +19648,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                     return;
                                 }
                                 client.Inventory.Update(item, Role.Instance.AddMode.REMOVE, stream);
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                                 break;
                             }
                         case 1060026:
@@ -19665,7 +19664,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                     return;
                                 }
                                 client.Inventory.Update(item, Role.Instance.AddMode.REMOVE, stream);
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                                 break;
                             }
                         case 1060027:
@@ -19681,7 +19680,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                     return;
                                 }
                                 client.Inventory.Update(item, Role.Instance.AddMode.REMOVE, stream);
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                                 break;
                             }
                         case 1060028:

@@ -50,7 +50,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                 CreateMaps();
                 Mode = ProcesType.Idle;
 
-                MsgSchedules.SendInvitation("DisCity", "Experience,Special Rewards", 410, 354, 1002, 0, 60);
+                MsgSchedules.SendInvitation("DisCity", "Experience,Special Rewards", Places.TwinCity, 0, 60);
 
 
                 FinishTime= DateTime.Now.AddMinutes(5);

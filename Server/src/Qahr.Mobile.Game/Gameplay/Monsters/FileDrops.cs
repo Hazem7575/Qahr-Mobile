@@ -5,7 +5,7 @@
 //  is commented out in MonsterRole.Dead (#region DropItem) and every real drop is hard-coded there instead.
 //  This class brings the file table back, OFF by default, IN ADDITION to the hard-coded drops (never instead).
 //
-//  Config: Infinity[DB]\drops.txt (missing file = OFF = the old behaviour). See drops.sample.txt.
+//  Config: Data\drops.txt (missing file = OFF = the old behaviour). See drops.sample.txt.
 //      file_drops=0|1          master switch (0 = nothing here runs)
 //      rate_multiplier=1.0     scales item_chance / money_chance and divides the [SpecialDrop] "every N" (0.01..20)
 //      max_items_per_kill=3    hard cap on floor items this class puts down per kill (money included, 0..10)

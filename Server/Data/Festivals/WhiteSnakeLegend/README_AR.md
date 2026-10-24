@@ -43,4 +43,4 @@
 - `quests.json`
 - `rewards.json`
 - الكود: `Base\WhiteSnakeLegend\WhiteSnakeLegendUi.cs`
-- الإعدادات: `Infinity[DB]\WhiteSnakeLegend\whitesnakelegend.json`
+- الإعدادات: `Data\WhiteSnakeLegend\whitesnakelegend.json`

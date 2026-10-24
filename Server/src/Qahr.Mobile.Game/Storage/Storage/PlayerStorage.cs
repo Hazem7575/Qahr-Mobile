@@ -391,7 +391,7 @@ namespace Qahr.Mobile.Database.Storage
                         if (c != null && !c.Fake && c.Player != null && c.FullLoading) ids.Add(c.Player.UID);
                     SyncOnline(ids);
                 }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                catch (Exception e) { MyConsole.SaveException(e); }
                 System.Threading.Thread.Sleep(15000);
             }
         }

@@ -279,7 +279,7 @@ namespace Qahr.Mobile.Unanswered.B7
                 }
                 // 5 accept / 6 revoke / 7 reject: nothing exists to change -> ignored.
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [PacketAttribute(IdAuctionItem)]
@@ -294,7 +294,7 @@ namespace Qahr.Mobile.Unanswered.B7
                 var ans = AnswerAuctionItem(req);
                 if (ans != null) client.Send(Build(stream, ans, IdAuctionItem));
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [PacketAttribute(IdAuctionQuery)]
@@ -310,7 +310,7 @@ namespace Qahr.Mobile.Unanswered.B7
                 stream.Finalize(IdAuctionQuery);
                 client.Send(stream);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [PacketAttribute(IdAuctionDirList)]
@@ -325,7 +325,7 @@ namespace Qahr.Mobile.Unanswered.B7
                 var ans = AnswerAuctionDirList(req);
                 if (ans != null) client.Send(Build(stream, ans, IdAuctionDirList));
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [PacketAttribute(IdPresentList)]
@@ -341,7 +341,7 @@ namespace Qahr.Mobile.Unanswered.B7
                 if (ans == null || !B7Throttle.Allow(client, 5, ListIntervalMs)) return;
                 client.Send(Build(stream, ans, IdPresentList));
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [PacketAttribute(IdPresentUser)]
@@ -357,7 +357,7 @@ namespace Qahr.Mobile.Unanswered.B7
                 if (ans == null || !B7Throttle.Allow(client, 6, ListIntervalMs)) return;
                 client.Send(Build(stream, ans, IdPresentUser));
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [PacketAttribute(IdSceneChat)]
@@ -395,7 +395,7 @@ namespace Qahr.Mobile.Unanswered.B7
                     }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
     }
 }

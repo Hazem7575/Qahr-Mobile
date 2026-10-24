@@ -43,6 +43,11 @@
 # queries back; CreateAwardMsg type 2 count 1 id 14) = B6OperatingAct (same struct as the PC client).
 [2421 MsgOperatingAct same]
 
+# CMsgOperatingActInfo 10037: type u16 4, count u16 6, records from 8. type 0 = activity list (14 B: actId u32,
+# flag u16, begin u32, end u32 as YYMMDDHHMM; clears the user info), type 1 = user info (12 B: actId u32, claimed level
+# u16, pad u16, amount u32) read by the Welfare "Credit Rebate" panel (CDlgTopUpPrivilege) = Mobile\Vip\VipWelfareUi.
+[2004 MsgOperatingActInfo same]
+
 # ---------------------------------------------------------------- slot machine
 
 # CMsgSlotAction 10184 (12 bytes): Create(action u8 4, npc u32 8, bet u8 5); Process action 1 = error box (u8 5)

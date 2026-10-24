@@ -1,7 +1,7 @@
 // ============================================================================
 //  AdminApi - local player-administration endpoint used by tools\PlayerStudio.
 //
-//  OFF unless Infinity[DB]\adminapi.txt exists (see adminapi.sample.txt):
+//  OFF unless Data\adminapi.txt exists (see adminapi.sample.txt):
 //      port=5899
 //      secret=<at least 16 random characters>
 //  The listener binds 127.0.0.1 ONLY (never the LAN/Internet). One request per TCP connection:
@@ -13,10 +13,10 @@
 //  on the GM's socket thread and change OTHER players directly), each action calls the same game
 //  methods those commands use: UpdateLevel, Inventory.Add/AddItemWitchStack, Teleport, Revive,
 //  SystemBannedAccount, SendGlobalPacket, ...
-//  Every action is appended to Infinity[DB]\adminapi_log.txt.
+//  Every action is appended to Data\adminapi_log.txt.
 //  Offline edits (level/money/CPs/position only) go through the same IniFile + OnIniChanged path the
 //  @ChatBanned command uses, under ServerDatabase.SavingObj, only when the player is in neither
-//  GamePoll nor DisconnectPool, and after a timestamped backup in Infinity[DB]\BackUp\AdminApi\.
+//  GamePoll nor DisconnectPool, and after a timestamped backup in Data\BackUp\AdminApi\.
 // ============================================================================
 using System;
 using System.Collections.Generic;
@@ -117,11 +117,11 @@ namespace Qahr.Mobile.AdminApi
                 catch (ThreadAbortException) { return; }
                 catch (Exception e)
                 {
-                    try { MyConsole.SaveException(e); } catch { }
+                    MyConsole.SaveException(e);
                 }
                 finally
                 {
-                    try { if (c != null) c.Close(); } catch { }
+                    try { if (c != null) c.Close(); } catch (Exception err) { MyConsole.SaveException(err); }
                 }
             }
         }
@@ -159,14 +159,14 @@ namespace Qahr.Mobile.AdminApi
             // else stays the one-line-JSON protocol PlayerStudio uses.
             if (firstLine.StartsWith("GET ", StringComparison.Ordinal) || firstLine.StartsWith("HEAD ", StringComparison.Ordinal) || firstLine.StartsWith("POST ", StringComparison.Ordinal))
             {
-                try { HandleHttp(ns, firstLine, all.ToArray(), started); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                try { HandleHttp(ns, firstLine, all.ToArray(), started); } catch (Exception e) { MyConsole.SaveException(e); }
                 return;
             }
 
             string text = firstLine.Trim();
             Dictionary<string, object> result;
             Dictionary<string, object> req = null;
-            try { req = AdminJson.Parse(text) as Dictionary<string, object>; } catch { }
+            try { req = AdminJson.Parse(text) as Dictionary<string, object>; } catch (Exception err) { MyConsole.SaveException(err); }
             if (req == null) { Reply(ns, Fail("bad request (expected one JSON object)")); return; }
 
             object sec;
@@ -194,7 +194,7 @@ namespace Qahr.Mobile.AdminApi
             {
                 result = Fail("server error: " + e.Message);
                 Log(op, Target(args), "ERROR: " + e, false);
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
             Reply(ns, result);
         }
@@ -278,7 +278,7 @@ namespace Qahr.Mobile.AdminApi
                 lock (_logLock)
                     File.AppendAllText(DbFile("adminapi_log.txt"), line, Encoding.UTF8);
             }
-            catch { }
+            catch (Exception err) { MyConsole.SaveException(err); }
         }
 
         // ------------------------------------------------------------------ dispatch
@@ -322,7 +322,7 @@ namespace Qahr.Mobile.AdminApi
                 case "save": return SaveOp(a);
                 case "massgive": return MassGive(a);
                 case "massmessage": return MassMessage(a);
-                // [GmStudio] GM chat commands from the tool (Base\AdminApi\AdminApi.Gm.cs)
+                // [GmStudio] GM chat commands from the tool (Admin\AdminApi\AdminApi.Gm.cs)
                 case "listgms": return ListGms();
                 case "nearby": return Nearby(a);// AdminApi.Mobile.cs
                 case "createguild": return CreateGuild(a);// AdminApi.Mobile.cs
@@ -341,16 +341,16 @@ namespace Qahr.Mobile.AdminApi
                 case "reloadatkspeed":// [AttackSpeed] attackspeed.txt (AttackStudio "apply live")
                 case "reloadrates":// [LiveRates 2026-10-17] re-read ServerConfig.ini [Rates] with no restart
                 case "reloadall": return HotReloadOp(op, a);
-                // [Festivals] Base\AdminApi\AdminApi.Festivals.cs
+                // [Festivals] Admin\AdminApi\AdminApi.Festivals.cs
                 case "festivals": return FestivalsList();
                 case "festival": return FestivalOp(a);
                 case "reloadfestivals": return FestivalsReload();
                 case "mirrorbin": return MirrorBin(); // [Storage backfill 2026-10-16] one-time DB mirror of all players' .bin files
                 case "blobbackfill": return BlobBackfill(); // [DB-only 2026-10-17] one-time copy of every .bin into player_blobs
                 case "blobverify": return BlobVerify(a);    // [DB-only 2026-10-17] compare a player's .bin vs its DB blob
-                case "festtest": return FestTestOp(a); // [FestTest 2026-10-15] dev-only festival test driver, BaseAdminApiAdminApi.FestTest.cs
-                case "eventdata": return EventDataOp(a); // [EventData 2026-10-15] Base\AdminApi\AdminApi.EventData.cs
-                case "compensate": return CompensateOp(a); // [Compensation 2026-10-15] Base\AdminApi\AdminApi.Compensate.cs
+                case "festtest": return FestTestOp(a); // [FestTest 2026-10-15] dev-only festival test driver, Admin\AdminApi\AdminApi.FestTest.cs
+                case "eventdata": return EventDataOp(a); // [EventData 2026-10-15] Admin\AdminApi\AdminApi.EventData.cs
+                case "compensate": return CompensateOp(a); // [Compensation 2026-10-15] Admin\AdminApi\AdminApi.Compensate.cs
                 default: throw new AdminError("unknown op '" + op + "'");
             }
         }
@@ -373,7 +373,7 @@ namespace Qahr.Mobile.AdminApi
                     if (Pool.LevelInfo.TryGetValue(Database.DBLevExp.Sort.User, out t) && t.Count > 0)
                         return Math.Min(140, (int)t.Keys.Max());
                 }
-                catch { }
+                catch (Exception err) { MyConsole.SaveException(err); }
                 return 140;
             }
         }
@@ -427,7 +427,7 @@ namespace Qahr.Mobile.AdminApi
                     Database.ServerDatabase.SaveClient(c);
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         private static Dictionary<string, object> Row(Client.GameClient c)
@@ -455,7 +455,7 @@ namespace Qahr.Mobile.AdminApi
             return d;
         }
 
-        private static int SafeInt(Func<int> f) { try { return f(); } catch { return 0; } }
+        private static int SafeInt(Func<int> f) { try { return f(); } catch (Exception err) { MyConsole.SaveException(err); return 0; } }
 
         private static string ItemName(uint id)
         {
@@ -516,7 +516,7 @@ namespace Qahr.Mobile.AdminApi
             d["maxLevel"] = MaxLevel;
 
             d["ramMb"] = proc.WorkingSet64 / (1024 * 1024);
-            try { d["gcMb"] = GC.GetTotalMemory(false) / (1024 * 1024); } catch { }
+            try { d["gcMb"] = GC.GetTotalMemory(false) / (1024 * 1024); } catch (Exception err) { MyConsole.SaveException(err); }
 
             // CPU% over the wall-time since the previous status call, across all cores.
             double cpu = 0;
@@ -535,7 +535,7 @@ namespace Qahr.Mobile.AdminApi
                     _cpuTicks = cpuNow;
                 }
             }
-            catch { }
+            catch (Exception err) { MyConsole.SaveException(err); }
             if (cpu < 0) cpu = 0; else if (cpu > 100) cpu = 100;
             d["cpuPct"] = Math.Round(cpu, 1);
             d["cores"] = Environment.ProcessorCount;
@@ -715,7 +715,7 @@ namespace Qahr.Mobile.AdminApi
                 if (eq < 0) { if (kv == key) return ""; continue; }
                 if (kv.Substring(0, eq) == key)
                 {
-                    try { return Uri.UnescapeDataString(kv.Substring(eq + 1)); } catch { return kv.Substring(eq + 1); }
+                    try { return Uri.UnescapeDataString(kv.Substring(eq + 1)); } catch (Exception err) { MyConsole.SaveException(err); return kv.Substring(eq + 1); }
                 }
             }
             return null;
@@ -760,6 +760,7 @@ namespace Qahr.Mobile.AdminApi
             double ts = (double)args.Long("ts", 0);
             double nowMs = (DateTime.UtcNow - EpochUtc).TotalMilliseconds;
             if (ts <= 0 || Math.Abs(nowMs - ts) > 60000) return Fail("stale request (check clock / replay)");
+            if (!FirstUseOfSignature(sig)) { Log("exec", "-", "replayed request refused", false); return Fail("replayed request"); }
 
             if (SharedConfig.Int("AdminApi", "AllowWrites", 0) != 1)
             {
@@ -775,6 +776,26 @@ namespace Qahr.Mobile.AdminApi
         }
 
         private static readonly DateTime EpochUtc = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
+
+        // A signed request is valid for 60 s (its "ts"); each signature is accepted once, so a captured
+        // "cps" / "givepackage" request cannot be sent again inside that window.
+        private static readonly Dictionary<string, DateTime> UsedSignatures = new Dictionary<string, DateTime>();
+
+        private static bool FirstUseOfSignature(string sig)
+        {
+            DateTime now = DateTime.UtcNow;
+            lock (UsedSignatures)
+            {
+                if (UsedSignatures.Count > 1000)
+                    foreach (var old in UsedSignatures.Where(kv => kv.Value < now).Select(kv => kv.Key).ToList())
+                        UsedSignatures.Remove(old);
+                DateTime until;
+                if (UsedSignatures.TryGetValue(sig, out until) && until >= now)
+                    return false;
+                UsedSignatures[sig] = now.AddSeconds(120);
+                return true;
+            }
+        }
 
         private static string HmacHex(string msg)
         {
@@ -804,19 +825,19 @@ namespace Qahr.Mobile.AdminApi
             // uid -> live client, so online rows carry accurate bag space + CPs for the pre-charge warnings.
             var live = new Dictionary<uint, Client.GameClient>();
             foreach (var c in OnlineClients())
-                try { live[c.Player.UID] = c; } catch { }
+                try { live[c.Player.UID] = c; } catch (Exception err) { MyConsole.SaveException(err); }
 
             var rows = new List<object>();
             foreach (var row in global::Qahr.Mobile.Database.Storage.PlayerStorage.ListPlayers((search ?? "").Trim(), limit))
             {
                 object uidO; uint uid = 0;
-                if (row.TryGetValue("uid", out uidO)) { try { uid = Convert.ToUInt32(uidO); } catch { } }
+                if (row.TryGetValue("uid", out uidO)) { try { uid = Convert.ToUInt32(uidO); } catch (Exception err) { MyConsole.SaveException(err); } }
                 Client.GameClient c;
                 bool on = live.TryGetValue(uid, out c);
                 row["online"] = on;
                 if (on)
                 {
-                    try { row["cps"] = c.Player.ConquerPoints; row["boundCps"] = c.Player.BoundConquerPoints; } catch { }
+                    try { row["cps"] = c.Player.ConquerPoints; row["boundCps"] = c.Player.BoundConquerPoints; } catch (Exception err) { MyConsole.SaveException(err); }
                     int free = BagFree(c);
                     row["bagUsed"] = BagMax - free;
                     row["bagFree"] = free;
@@ -842,7 +863,7 @@ namespace Qahr.Mobile.AdminApi
         private static int BagFree(Client.GameClient c)
         {
             try { return Math.Max(0, BagMax - c.Inventory.ClientItems.Count); }
-            catch { return 0; }
+            catch (Exception err) { MyConsole.SaveException(err); return 0; }
         }
 
         private static bool HttpSecretOk(string query)
@@ -854,7 +875,7 @@ namespace Qahr.Mobile.AdminApi
                 if (kv.Substring(0, eq) == "secret")
                 {
                     try { return SecretEquals(Uri.UnescapeDataString(kv.Substring(eq + 1))); }
-                    catch { return false; }
+                    catch (Exception err) { MyConsole.SaveException(err); return false; }
                 }
             }
             return false;
@@ -882,7 +903,7 @@ namespace Qahr.Mobile.AdminApi
             var list = new List<object>();
             foreach (var c in OnlineClients().OrderByDescending(x => x.Player.Level))
             {
-                try { list.Add(Row(c)); } catch { }
+                try { list.Add(Row(c)); } catch (Exception err) { MyConsole.SaveException(err); }
             }
             var d = Ok();
             d["players"] = list;
@@ -959,12 +980,12 @@ namespace Qahr.Mobile.AdminApi
                     if (!string.IsNullOrEmpty(first.Name)) return first.Name.Replace('~', ' ');
                 }
             }
-            catch { }
+            catch (Exception err) { MyConsole.SaveException(err); }
             return "Skill " + id;
         }
 
-        private static string SafeStr(Func<string> f) { try { return f() ?? ""; } catch { return ""; } }
-        private static bool SafeBool(Func<bool> f) { try { return f(); } catch { return false; } }
+        private static string SafeStr(Func<string> f) { try { return f() ?? ""; } catch (Exception err) { MyConsole.SaveException(err); return ""; } }
+        private static bool SafeBool(Func<bool> f) { try { return f(); } catch (Exception err) { MyConsole.SaveException(err); return false; } }
 
         private static object BanInfo(uint uid)
         {
@@ -1047,7 +1068,7 @@ namespace Qahr.Mobile.AdminApi
                 }
                 return kv;
             }
-            catch { return null; }
+            catch (Exception err) { MyConsole.SaveException(err); return null; }
         }
 
         private static string Get(Dictionary<string, string> kv, string k, string def)
@@ -1097,7 +1118,7 @@ namespace Qahr.Mobile.AdminApi
             d["atr"] = GetL(kv, "Atributes");
             d["pk"] = GetL(kv, "PkPoints");
             long vt = GetL(kv, "VipTime");
-            try { d["vipExpire"] = DateTime.FromBinary(vt); } catch { }
+            try { d["vipExpire"] = DateTime.FromBinary(vt); } catch (Exception err) { MyConsole.SaveException(err); }
             d["chatBanned"] = Get(kv, "IsBannedChat", "False").Equals("True", StringComparison.OrdinalIgnoreCase);
             d["lastSaved"] = File.GetLastWriteTime(f);
             return d;
@@ -1418,7 +1439,7 @@ namespace Qahr.Mobile.AdminApi
             return Ok(Who(c) + ": inventory cleared (" + n + " items)");
         }
 
-        // ------------------------------------------------------------------ packages (Infinity[DB]\packages.json)
+        // ------------------------------------------------------------------ packages (Data\packages.json)
         private sealed class PackageDef
         {
             public string Name, Description;
@@ -1550,7 +1571,7 @@ namespace Qahr.Mobile.AdminApi
             ushort y = (ushort)a.Need("y", 0, ushort.MaxValue);
             if (!Pool.ServerMaps.ContainsKey(map)) throw new AdminError("map " + map + " is not loaded on the server");
             bool walkable = true;
-            try { walkable = Pool.ServerMaps[map].ValidLocation(x, y); } catch { }
+            try { walkable = Pool.ServerMaps[map].ValidLocation(x, y); } catch (Exception err) { MyConsole.SaveException(err); }
             if (!walkable && !a.Bool("force"))
                 throw new AdminError("(" + x + "," + y + ") is not walkable on map " + map + " - pick another spot or use force");
             var c = FindOnline(a);
@@ -1622,7 +1643,7 @@ namespace Qahr.Mobile.AdminApi
             }
             Database.SystemBannedAccount.RemoveBan(uid);
             Database.SystemBannedAccount.AddBan(uid, name, (uint)hours, reason);
-            try { Database.SystemBannedAccount.Save(); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            try { Database.SystemBannedAccount.Save(); } catch (Exception e) { MyConsole.SaveException(e); }
             if (c != null)
             {
                 c.SendSysMesage("Your account was banned by the staff.", Game.MsgServer.MsgMessage.ChatMode.System, Game.MsgServer.MsgMessage.MsgColor.white);
@@ -1636,7 +1657,7 @@ namespace Qahr.Mobile.AdminApi
         {
             uint uid = a.Has("uid") ? (uint)a.Need("uid", 1, uint.MaxValue) : ResolveOfflineUid(a);
             if (!Database.SystemBannedAccount.RemoveBanS(uid)) throw new AdminError("uid " + uid + " is not banned");
-            try { Database.SystemBannedAccount.Save(); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            try { Database.SystemBannedAccount.Save(); } catch (Exception e) { MyConsole.SaveException(e); }
             Log("unban", "uid=" + uid, "ban removed", true);
             return Ok("uid " + uid + " unbanned");
         }
@@ -1762,7 +1783,7 @@ namespace Qahr.Mobile.AdminApi
                     else c.SendSysMesage(text, Game.MsgServer.MsgMessage.ChatMode.System, Game.MsgServer.MsgMessage.MsgColor.yellow);
                     n++;
                 }
-                catch { }
+                catch (Exception err) { MyConsole.SaveException(err); }
             }
             Log("massmessage", "all", n + " players: " + text, true);
             return Ok("message sent to " + n + " players");

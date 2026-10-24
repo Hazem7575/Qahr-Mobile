@@ -1,5 +1,5 @@
 // ============================================================================
-//  [Festivals] data side: one folder per festival under Infinity[DB]\Festivals\<Key>\ (schema: _schema.json).
+//  [Festivals] data side: one folder per festival under Data\Festivals\<Key>\ (schema: _schema.json).
 //
 //      festival.json   key, names, enabled, schedule (manual | range | yearly | weekly + hours), announcements, maps
 //      npcs.txt        Npcs.txt lines (ids 8800000-8899999, or [FestivalTrack] the official id a festival quest names in
@@ -173,7 +173,7 @@ namespace Qahr.Mobile.Festivals
         public string StopEn { get { return string.IsNullOrWhiteSpace(EndEn) ? "The " + NameEn + " festival has ended." : EndEn; } }
     }
 
-    /// <summary>[Festivals] reads and validates Infinity[DB]\Festivals\*\.</summary>
+    /// <summary>[Festivals] reads and validates Data\Festivals\*\.</summary>
     public static class FestivalLoader
     {
         public const uint NpcIdMin = 8800000, NpcIdMax = 8899999;
@@ -195,6 +195,9 @@ namespace Qahr.Mobile.Festivals
             {
                 string name = Path.GetFileName(dir);
                 if (name.StartsWith("_") || name.StartsWith(".")) continue;
+                // an event's own data (config, player state) also lives in Festivals\<event>; only folders with
+                // a festival.json are festival definitions
+                if (!File.Exists(Path.Combine(dir, "festival.json"))) continue;
                 FestivalDef def;
                 try { def = LoadOne(dir, festivalTypes); }
                 catch (Exception e) { def = new FestivalDef { Key = name, Folder = dir }; def.Errors.Add("load failed: " + e.Message); }
@@ -332,7 +335,7 @@ namespace Qahr.Mobile.Festivals
         }
         static string BigMapError(uint map)
         {
-            return "map id " + map + " is not in Infinity[DB]\\FestivalMaps\\maps.txt (or its map file is missing): 7-digit official ids need a row there";
+            return "map id " + map + " is not in Data\\FestivalMaps\\maps.txt (or its map file is missing): 7-digit official ids need a row there";
         }
 
         static void ParseNpcs(FestivalDef def, string file)
@@ -351,7 +354,7 @@ namespace Qahr.Mobile.Festivals
                 uint uid, mesh, map; byte type; ushort x, y;
                 if (p.Length < 6 || !uint.TryParse(p[0], out uid) || !byte.TryParse(p[1], out type) || !uint.TryParse(p[2], out mesh) || !uint.TryParse(p[3], out map) || !ushort.TryParse(p[4], out x) || !ushort.TryParse(p[5], out y))
                 { def.Errors.Add("npcs.txt line " + n + ": expected id,type,mesh,map,x,y[,dynamic] (got '" + Short(raw) + "')"); continue; }
-                // [FestivalMaps 2026-10-14] a 7-digit official instance id is accepted when Infinity[DB]\FestivalMaps\maps.txt maps it to a doc
+                // [FestivalMaps 2026-10-14] a 7-digit official instance id is accepted when Data\FestivalMaps\maps.txt maps it to a doc
                 if (map > ushort.MaxValue && !BigMapKnown(map)) { def.Errors.Add("npcs.txt line " + n + ": " + BigMapError(map)); continue; }
                 // [FestivalTrack] an id outside the festival range is accepted only when it is the OFFICIAL id of an NPC that
                 // one of this festival's quests names in Questinfo.ini (checked in CheckOfficialNpcIds after quests.json)
@@ -383,7 +386,7 @@ namespace Qahr.Mobile.Festivals
                 catch (Exception e) { def.Errors.Add("monsters\\" + fn + " does not parse: " + e.Message); continue; }
                 if (fam == null) { def.Errors.Add("monsters\\" + fn + ": invalid (id, name and level are required and attack_min <= attack_max)"); continue; }
                 if ((fam.ID < MonsterIdMin || fam.ID > MonsterIdMax) && fam.ID >= 100000) def.Errors.Add("monsters\\" + fn + ": id " + fam.ID + " is outside the festival range " + MonsterIdMin + "-" + MonsterIdMax);// [MonsterHp 2026-10-15] official client monster.dat ids (<100000) are allowed so the client draws the HP bar
-                if (fams != null && fams.ContainsKey(fam.ID) && (festivalTypes == null || !festivalTypes.Contains(fam.ID))) def.Errors.Add("monsters\\" + fn + ": id " + fam.ID + " already exists in Infinity[DB]\\Monsters");
+                if (fams != null && fams.ContainsKey(fam.ID) && (festivalTypes == null || !festivalTypes.Contains(fam.ID))) def.Errors.Add("monsters\\" + fn + ": id " + fam.ID + " already exists in Data\\Monsters");
                 if (existingNames.Contains(fam.Name)) def.Errors.Add("monsters\\" + fn + ": name '" + fam.Name + "' is already a normal monster name");
                 if (def.Monsters.Any(m => m.ID == fam.ID)) def.Errors.Add("monsters\\" + fn + ": id " + fam.ID + " is repeated in this festival");
                 if (def.Monsters.Any(m => string.Equals(m.Name, fam.Name, StringComparison.OrdinalIgnoreCase))) def.Errors.Add("monsters\\" + fn + ": name '" + fam.Name + "' is repeated in this festival");

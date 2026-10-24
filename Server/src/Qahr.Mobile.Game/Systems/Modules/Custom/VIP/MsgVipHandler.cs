@@ -162,7 +162,7 @@ namespace Qahr.Mobile.Game.MsgServer
             switch (Location)
             {
                 case VIPTeleportLocations.TwinCity:
-                case VIPTeleportLocations.TCSquare: user.Teleport(410, 354, 1002); break;
+                case VIPTeleportLocations.TCSquare: user.Teleport(Places.TwinCity); break;
                 case VIPTeleportLocations.WPAltar: user.Teleport(439, 666, 1002); break;
                 case VIPTeleportLocations.WPApparation: user.Teleport(250, 656, 1002); break;
                 case VIPTeleportLocations.WPPoltergiest: user.Teleport(104, 581, 1002); break;

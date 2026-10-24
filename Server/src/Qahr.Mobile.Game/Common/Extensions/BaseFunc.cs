@@ -137,43 +137,13 @@ namespace Qahr.Mobile
 
             // Banned words, matched case-insensitively (e.g. "gm", "Gm" must be rejected too).
             string lower = name.ToLowerInvariant();
-            string[] banned = { "gm", "pm", "system", "none", "clicker", "speedhack", "aimbot",
-                "cheatengine", "hack", "engine", "cheat", "speed", "gmpm", "moksha", "tq",
-                "tqgmpm", "tqpm", "tqgm", "guard1", "guard", "kosamk" };
+            // (also covers longer words that contain them: gmpm, tqgm, speedhack, cheatengine, guard1 ...)
+            string[] banned = { "gm", "pm", "tq", "system", "none", "clicker", "aimbot", "hack", "engine", "cheat",
+                "speed", "moksha", "guard", "kosamk" };
             for (int i = 0; i < banned.Length; i++)
                 if (lower.Contains(banned[i]))
                     return false;
 
-            if (name.Contains("GM") ||
-                name.Contains("PM") ||
-                name.Contains("SYSTEM") ||
-                 name.Contains("None") ||
-                  name.Contains("Clicker") ||
-                   name.Contains("SpeedHack") ||
-                    name.Contains("Aimbot") ||
-                    name.Contains("CheatEngine") ||
-                    name.Contains("Hack") ||
-                    name.Contains("Engine") ||
-                    name.Contains("Cheat") ||
-                    name.Contains("clicker") ||
-                    name.Contains("speed") ||
-                     name.Contains("GM") ||
-                      name.Contains("PM") ||
-                       name.Contains("GMPM") ||
-                        name.Contains("Moksha") ||
-                        name.Contains("TQ") ||
-                        name.Contains("TQGMPM") ||
-                        name.Contains("TQPM") ||
-                        name.Contains("TQGM") ||
-                        name.Contains("guard1") ||
-                        name.Contains("Guard") ||
-                        name.Contains("Guard1") ||
-                        name.Contains("Guard") ||
-                        name.Contains("Kosamk") ||
-                        name.Contains("kosamk") ||
-             
-                name.Contains("{") || name.Contains("}") || name.Contains("[") || name.Contains("]"))
-                return false;
             if (name.Length > 16 && ExceptedSize)
                 return false;
             for (int x = 0; x < name.Length; x++)

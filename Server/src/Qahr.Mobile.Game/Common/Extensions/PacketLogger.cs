@@ -15,7 +15,7 @@ namespace Qahr.Mobile
     /// logged in SecuritySocket.Send (before encryption), so no cipher work is needed.
     ///
     /// Toggle at RUNTIME (no rebuild/restart): create "packetlog.txt" in the DB folder
-    /// (Program.ServerConfig.DbLocation, i.e. Infinity[DB]\). Delete it to stop. Re-checked every 3s.
+    /// (Program.ServerConfig.DbLocation, i.e. Data\). Delete it to stop. Re-checked every 3s.
     /// Optional lines in packetlog.txt:
     ///   ids=1009,2226      only these packet ids (empty/missing = all)
     ///   skip=2036,2020     never these ids (default skips MsgPing 2036 and MsgTick 2020)
@@ -257,7 +257,7 @@ namespace Qahr.Mobile
     /// <summary>
     /// Live plaintext packet stream for PacketStudio (tools\PacketStudio). Opt-in, local only.
     ///
-    /// ON:  create Infinity[DB]\packetstream.txt (see packetstream.sample.txt). OFF: delete it.
+    /// ON:  create Data\packetstream.txt (see packetstream.sample.txt). OFF: delete it.
     ///      Re-checked every 3 s together with packetlog.txt. Listens on 127.0.0.1 only.
     ///      Lines: port=17957  secret=...(>= 8 chars, required)  player=Name  ids=1,2  skip=2036
     ///             dir=both|in|out  queue=50000 (frames buffered per client before drop-oldest)

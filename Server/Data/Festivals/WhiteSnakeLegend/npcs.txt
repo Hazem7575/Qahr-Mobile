@@ -1,6 +1,6 @@
 # WhiteSnakeLegend (Spring Festival 2025 "Bless All" - White Snake Mark story). id,type,mesh,map,x,y   (2026-10-14)
 # Every NPC is -1 in Questinfo (instance NPC) -> festival range 8863001-8863099.
-# Map = the official instance id 1003905; Infinity[DB]\FestivalMaps\maps.txt sends doc 12734 (2025tsf_new, Snake year).
+# Map = the official instance id 1003905; Data\FestivalMaps\maps.txt sends doc 12734 (2025tsf_new, Snake year).
 # Positions = the official Questinfo points, all walkable (r0) on 2025tsf_new.dmap.
 # mesh = client npc.ini [NpcTypeN] x10 / NpcX.ini [N] x10.
 8863001,2,1100010,1003905,539,398  # WhiteSnake (NpcX 110001 [WhiteSnakeMark]) - every begin/finish of the story

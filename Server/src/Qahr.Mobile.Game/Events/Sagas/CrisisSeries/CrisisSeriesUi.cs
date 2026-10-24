@@ -18,7 +18,7 @@
 //  8773/8778/8783 (Miller), each fought in a private copy of its official instance map (quests.json instances).
 //  The board opens at the boss cell (the event cells before it have no official data); boxes, board monsters,
 //  rewards page and the Castle Spirit answer with a system message. Questinfo has no prize for these quests.
-//  Config (derived values): Infinity[DB]\CrisisSeries\crisis.json.
+//  Config (derived values): Data\CrisisSeries\crisis.json.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10553), tagged.
 // ============================================================================
@@ -54,7 +54,7 @@ namespace Qahr.Mobile.CrisisSeries
             public HashSet<uint> TeleportFrom = new HashSet<uint> { 1002, 1000, 1011, 1015, 1020, 1036 };
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "CrisisSeries", "crisis.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "CrisisSeries", "crisis.json"); } }
         public static Config Cfg
         {
             get

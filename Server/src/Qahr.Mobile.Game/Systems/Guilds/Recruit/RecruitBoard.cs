@@ -9,7 +9,7 @@
 //        +0x24c char[0x20] leader name, +0x26c u64 guild fund, +0x278 u32 level, +0x27c u32 members,
 //        +0x280 u16 auto-join + 5 x u16 requirements (same order as 2019), +0x28c u32 bid. Client ends with PostCmd(3243).
 // Cost (official text): at least 500,000 silver, paid from the Guild Fund ("Insufficient Guild Fund"), ad lasts 7 days,
-// higher bids are listed first. Only the guild leader can publish. State: Infinity[DB]\GuildRecruit\ads.txt.
+// higher bids are listed first. Only the guild leader can publish. State: Data\GuildRecruit\ads.txt.
 using System;
 using System.Collections.Generic;
 using System.Linq;

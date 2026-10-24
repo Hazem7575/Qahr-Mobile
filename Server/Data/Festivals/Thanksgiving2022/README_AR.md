@@ -5,8 +5,8 @@
 - **الكود:** `Base\Thanksgiving2022\` وفيه:
   - `Thanksgiving2022Ui.cs`: الحدث نفسه.
   - `HolidayKit.cs` و`HolidayBattles.cs` و`HolidayBoxes.cs`: أدوات مشتركة لمجموعة الأعياد بتاعتي.
-- **الإعدادات المشتقة:** `Infinity[DB]\Thanksgiving2022\thanksgiving2022.json`.
-- **تقدّم اللاعبين:** `Infinity[DB]\Thanksgiving2022\state.json`، والسيرفر هو اللي بيكتبه.
+- **الإعدادات المشتقة:** `Data\Thanksgiving2022\thanksgiving2022.json`.
+- **تقدّم اللاعبين:** `Data\Thanksgiving2022\state.json`، والسيرفر هو اللي بيكتبه.
 
 ## بلوكات الـ id المحجوزة لمجموعة الأعياد (Thanksgiving/Christmas/VillageRequests/TwinklingShard)
 - **وحوش:** `995000-995299`. المستخدم هنا `995001-995021`.

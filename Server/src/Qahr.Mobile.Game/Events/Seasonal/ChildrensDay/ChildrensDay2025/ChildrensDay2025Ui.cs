@@ -13,7 +13,7 @@
 //    rank      fairygui\window\childermas25rank: Fgui_Childermas25Rank_PointData / _AchieveData / _RankRewardData (same msg 10664).
 //  Rules (official Cn_Res STR_FUI_CHILD_TXT_33): 1 Starwish Stone per renovation or decision = 50 Dream Points; 1 operation per day;
 //  better quality = better operation reward; VIP Dream Store at 15000 points; ranking from 20000 points.
-//  Numbers that are not in the client: DreamParkConfig (derived, Infinity[DB]\ChildrensDay2025\childrensday2025.json).
+//  Numbers that are not in the client: DreamParkConfig (derived, Data\ChildrensDay2025\childrensday2025.json).
 //
 //  Security: uid from client.Player.UID only; building/decision/count values are whitelisted; every action re-checks the
 //  festival, the level, the bag (space and Starwish Stones), takes the stones BEFORE granting, saves the state under one lock;
@@ -104,7 +104,7 @@ namespace Qahr.Mobile.ChildrensDay2025
                     }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             Msg(c, "This part of Dream Park isn`t open on this server yet.");
             return true;
         }

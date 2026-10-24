@@ -7397,7 +7397,7 @@ china !
                     }
                 case 1:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
 

@@ -1,6 +1,6 @@
 # TwinklingShard (Christmas 2025 "Twinkling Fest" - Twinkling Shard Search). id,type,mesh,map,x,y   (2026-10-14)
 # Every NPC is -1 in Questinfo (instance NPC) -> festival range 8862001-8862099.
-# Maps = the official instance ids of Questinfo; Infinity[DB]\FestivalMaps\maps.txt sends docs 13150-13154 (A: GameMapEx names).
+# Maps = the official instance ids of Questinfo; Data\FestivalMaps\maps.txt sends docs 13150-13154 (A: GameMapEx names).
 # Positions = the official Questinfo points, all walkable (r0) on the server DMaps.
 # mesh = client npc.ini [NpcTypeN] x10 / NpcX.ini [N] x10. The client has an exact entry for every NPC of this event
 #   (npc.ini block 10419-10442, EN names match Questinfo) except the three noted below.

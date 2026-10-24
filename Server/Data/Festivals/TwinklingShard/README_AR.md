@@ -21,7 +21,7 @@
 - **الجايزة:** لما تلم الـ 5 شظايا في نفس الدورة بتاخد Wuqu Snow Box (3355342) مرة واحدة لكل شخصية. ده الرسمي: luauirewardshow 341006000، والنص Text133.
   - الشظية بتتحسب لما تخلص آخر مهمة في منطقتها: 9502 أو 9505 أو 9508 أو 9511 أو 9514.
   - بنعرف ده من سطور `QUEST` في `festivals_log.txt` اللي بعد بداية الدورة، ومن سجل المهام الحالي.
-  - السجل بيتحفظ في `Infinity[DB]\TwinklingShard\claims.txt`.
+  - السجل بيتحفظ في `Data\TwinklingShard\claims.txt`.
 
 ## الرسمي والمشتق
 - **رسمي:**
@@ -60,4 +60,4 @@
 - `quests.json`
 - `rewards.json`
 - الكود: `Base\TwinklingShard\TwinklingShardUi.cs`
-- الإعدادات: `Infinity[DB]\TwinklingShard\twinklingshard.json`
+- الإعدادات: `Data\TwinklingShard\twinklingshard.json`

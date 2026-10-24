@@ -1,7 +1,7 @@
 // [FestivalMaps 2026-10-14] official festival map ids (static ids missing from GameMap.dat + 7-digit instance ids)
 // -> the map doc the client renders.
 //
-// Data: Infinity[DB]\FestivalMaps\maps.txt, one row per map id (tab separated):
+// Data: Data\FestivalMaps\maps.txt, one row per map id (tab separated):
 //     id  wireDoc  officialDoc  file  confidence  evidence
 //   id          the official map id used by Questinfo.ini (e.g. 1003981)
 //   wireDoc     the doc id the server sends (MsgMapInfo.BaseID / teleport MapID). It is the official doc when our client's

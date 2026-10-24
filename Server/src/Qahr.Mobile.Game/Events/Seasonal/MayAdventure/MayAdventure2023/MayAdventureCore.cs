@@ -9,7 +9,7 @@
 //  (DlgMayAdventureShop, +3/+5/+7/+8 Stones named in the shop lua), board reward preview = Dialog_Info["1380-2-other"],
 //  rank reward preview = Dialog_Info["1379-rank-item"].Rank[10238], requirement 2nd rebirth, adventures only in
 //  Twin City, not in a team / booth / blue name ([MsgBox][IntoMap/IntoTeam/IntoBooth/IntoBlue]).
-//  Derived (Infinity[DB]\MayAdventure2023\mayadventure.json): every weight / count of the pools, the daily move limit,
+//  Derived (Data\MayAdventure2023\mayadventure.json): every weight / count of the pools, the daily move limit,
 //  shop prices and limits, Courage Points per supply draw, tokens of the daily sign-in / Active Points packs.
 //
 //  Event state (board position, Courage Points, shop purchases) belongs to one festival run: a new run starts fresh.

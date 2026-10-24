@@ -101,7 +101,7 @@ namespace Qahr.Mobile.BleakValleyVillage
                 map.AddNpc(np);
                 return np;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return null; }
+            catch (Exception e) { MyConsole.SaveException(e); return null; }
         }
         static void Remove(Npc np)
         {
@@ -189,7 +189,7 @@ namespace Qahr.Mobile.BleakValleyVillage
                         return true;
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             Msg(c, "This part of the Celebration Realm isn`t open on this server yet.");
             return true;
         }
@@ -330,7 +330,7 @@ namespace Qahr.Mobile.BleakValleyVillage
         [NpcAttribute((NpcID)OfficerId)]
         public static void ReputationOfficer(Client.GameClient client, ServerSockets.Packet stream, byte Option, string Input, uint id)
         {
-            try { Officer(client, stream, Option); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            try { Officer(client, stream, Option); } catch (Exception e) { MyConsole.SaveException(e); }
         }
         [NpcAttribute((NpcID)ExitId)]
         public static void BleakExit(Client.GameClient client, ServerSockets.Packet stream, byte Option, string Input, uint id)
@@ -341,7 +341,7 @@ namespace Qahr.Mobile.BleakValleyVillage
                 if (Option == 0) { d.AddText("Go back to Twin City?").AddOption("Yes.", 1).AddOption("Stay a while.", 255).AddAvatar(10).FinalizeDialog(); return; }
                 if (Option == 1 && client.Player.Map == BleakMap) client.Teleport(368, 441, 1002, 0);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         static string Status(Client.GameClient c, int v)

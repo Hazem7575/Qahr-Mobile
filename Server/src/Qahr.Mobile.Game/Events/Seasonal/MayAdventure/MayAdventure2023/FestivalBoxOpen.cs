@@ -1,6 +1,6 @@
 // ============================================================================
 //  [MayAdventure2023 2026-10-15] FestivalBoxOpen: open handlers for festival boxes that have no script.
-//  Data: Infinity[DB]\MayAdventure2023\boxes.json (re-read when it changes):
+//  Data: Data\MayAdventure2023\boxes.json (re-read when it changes):
 //    { "boxes": [ { "item": 3342013, "fixed": ["3341961 0 6 3", "730005 0 2 3"], "random": [ {"item":"...","weight":n} ],
 //                   "_source": "official item text ..." } ] }
 //    fixed = always given; random = ONE weighted pick (weights derived). Item strings "id 0 count monopoly" (3 = bound).
@@ -53,7 +53,7 @@ namespace Qahr.Mobile.MayAdventure2023
         {
             if (_reg) return;
             _reg = true;
-            try { BleakValleyVillage.BleakValleyVillageUi.RegisterBoxes(); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            try { BleakValleyVillage.BleakValleyVillageUi.RegisterBoxes(); } catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         public static bool Handles(uint item) { EnsureRegistered(); return _code.ContainsKey(item) || Config.Get().Boxes.ContainsKey(item); }
@@ -80,7 +80,7 @@ namespace Qahr.Mobile.MayAdventure2023
                 Kit.Msg(c, "Congrats! You received " + Kit.Names(got) + "!");
                 return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return true; }
+            catch (Exception e) { MyConsole.SaveException(e); return true; }
         }
 
         /// <summary>The rule (also used by the harness): space first, take 1 box, then give.</summary>

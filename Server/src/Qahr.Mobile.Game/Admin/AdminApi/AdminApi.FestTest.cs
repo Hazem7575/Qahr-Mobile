@@ -1,3 +1,4 @@
+using System;
 ﻿// ============================================================================
 //  AdminApi - [FestTest 2026-10-15] DEVELOPMENT-ONLY test driver for festival scripts (locked in production mode).
 //  Lets a local test tool press what a player would press, through the same server hooks the packets use:
@@ -55,7 +56,7 @@ namespace Qahr.Mobile.AdminApi
                     if (mode == "remove") handled = c.HairfaceStorage.Remove(hid, t);
                     else if (mode == "add") handled = PuppetTheater.PuppetEvents.GrantHairface(c, t, hid, 0, "festtest") != "none";
                     else if (mode == "has") handled = c.HairfaceStorage.Exists(hid, t);
-                    if (mode == "remove") try { Database.ServerDatabase.SaveHairfaceStorage(c); } catch { }
+                    if (mode == "remove") try { Database.ServerDatabase.SaveHairfaceStorage(c); } catch (Exception err) { MyConsole.SaveException(err); }
                     what = "hairface " + mode + " " + (int)t + ":" + hid;
                 }
                 else if (action == "realnpc")

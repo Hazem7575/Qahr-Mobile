@@ -37,7 +37,7 @@ namespace Qahr.Mobile.NewYear2023
             }
             finally { Interlocked.Exchange(ref _ticking, 0); }
         }
-        static void Log(Exception e) { try { MyConsole.SaveException(e); } catch { } }
+        static void Log(Exception e) { MyConsole.SaveException(e); }
 
         /// <summary>LuaPush.HandleCallback. True = answered.</summary>
         public static bool OnLua(Client.GameClient c, uint msgId, string func, string[] args)

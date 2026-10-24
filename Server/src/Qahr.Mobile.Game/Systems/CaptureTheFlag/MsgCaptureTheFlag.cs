@@ -143,7 +143,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                 foreach (var user in Pool.GamePoll.Values)
                 {
                     if (user.Player.Map == MapID && user.Player.DynamicID == 0)
-                        user.Teleport(410, 354, 1002);
+                        user.Teleport(Places.TwinCity);
                 }
             }
         }

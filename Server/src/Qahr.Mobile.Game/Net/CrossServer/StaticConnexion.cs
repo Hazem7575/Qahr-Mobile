@@ -122,7 +122,7 @@ namespace Qahr.Mobile.MsgInterServer
                                 {
                                     Core.IsCrossPkOpen = true;
                                     Core.JoinCrossEliteStamp = DateTime.Now.AddMinutes(60 * 5);
-                                    Qahr.Mobile.Game.MsgTournaments.MsgSchedules.SendInvitation("Cross Elite PK Tournament", "Special Accessory/Boots, CPs, etc", 410, 354, 1002, 0, 60);
+                                    Qahr.Mobile.Game.MsgTournaments.MsgSchedules.SendInvitation("Cross Elite PK Tournament", "Special Accessory/Boots, CPs, etc", Places.TwinCity, 0, 60);
                                     break;
                                 }
                             }

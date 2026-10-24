@@ -20,4 +20,4 @@
    - NPC واحد Richy في `npcs.txt` (mesh 1051320 عند 1002 351,473، بعد فحص الـ walkability).
    - `quests.json` فيه objective `{"type":"event","event":"mythforge","slot":1}`، والجايزة 40703081.
 
-_Agent 4 (13-10-2026). المصادر: `Infinity[DB]\Questinfo.ini`، و`itemtype.txt`، و`client_test\ini\NpcX.ini`، و`Base\QuestEngine\QuestEngineData.cs`._
+_Agent 4 (13-10-2026). المصادر: `Data\Questinfo.ini`، و`itemtype.txt`، و`client_test\ini\NpcX.ini`، و`Base\QuestEngine\QuestEngineData.cs`._

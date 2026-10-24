@@ -1,8 +1,8 @@
 // [TeamArena 2026-10-14] Team Arena (Team Qualifier) - per-player records, ranking, daily settlement, persistence.
 //
-// Data: Infinity[DB]\TeamArena\TeamArena.dat   (one line per player, written atomically: .tmp -> replace, .bak kept)
-//       Infinity[DB]\TeamArena\TeamArenaHonorRewards.ini  (copy of the client's ini\TeamArenaHonorRewards.ini, OFFICIAL)
-//       Infinity[DB]\TeamArena\logs\teamarena_yyyy-MM-dd.log  (every grant / spend / settlement)
+// Data: Data\TeamArena\TeamArena.dat   (one line per player, written atomically: .tmp -> replace, .bak kept)
+//       Data\TeamArena\TeamArenaHonorRewards.ini  (copy of the client's ini\TeamArenaHonorRewards.ini, OFFICIAL)
+//       Data\TeamArena\logs\teamarena_yyyy-MM-dd.log  (every grant / spend / settlement)
 using System;
 using System.Collections.Generic;
 using System.Globalization;

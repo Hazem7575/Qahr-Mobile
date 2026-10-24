@@ -40,7 +40,7 @@ namespace Qahr.Mobile.Database
             Game.MsgTournaments.MsgArena.UpdateRank();
         }
 
-        // Daily honor by rank, from Infinity[DB]\HonorRewards.ini (same table as the client: "rank=honor/..."),
+        // Daily honor by rank, from Data\HonorRewards.ini (same table as the client: "rank=honor/..."),
         // only for players who fought that day. The old "points * 5" gave ~20,000 honor for a single win
         // to anyone off 4000 points, so two accounts could farm unlimited honor.
         private static Dictionary<int, uint> _honorByRank;

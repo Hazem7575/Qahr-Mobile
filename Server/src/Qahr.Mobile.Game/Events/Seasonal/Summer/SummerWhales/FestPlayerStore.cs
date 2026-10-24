@@ -1,7 +1,7 @@
 // ============================================================================
 //  [SummerWhales 2026-10-15] Small per-character counter store for the festival mini-games of this agent's group
 //  (SummerWhales / Summer2023 / BandsTrouble / Summer2025 / SportsMeet2024 / ArenaSports).
-//  One JSON file per festival: { "<uid>": { "<counter>": <long>, ... }, ... } under Infinity[DB]\<Festival>\players.json.
+//  One JSON file per festival: { "<uid>": { "<counter>": <long>, ... }, ... } under Data\<Festival>\players.json.
 //  Every change is written at once (temp file + replace) BEFORE the caller grants anything, so a crash, a relog or a
 //  duplicate packet can never repeat a grant. All access is under one lock per store.
 // ============================================================================
@@ -26,7 +26,7 @@ namespace Qahr.Mobile.SummerWhales
         public static string RootOverride;
         public FestPlayerStore(string folder, string fileName = "players.json")
         {
-            _file = Path.Combine(RootOverride ?? Program.ServerConfig.DbLocation, folder, fileName);
+            _file = Path.Combine(RootOverride ?? global::Qahr.Mobile.Festivals.FestivalLoader.Root, folder, fileName);
             _be = new EventData.LegacyBackend(EventData.LegacyBackend.KeyFor(folder, fileName, "players.json"), () => _file, EventData.LegacyFormat.JsonRootCounters);
         }
         /// <summary>The OLD file (only read once by the migration).</summary>

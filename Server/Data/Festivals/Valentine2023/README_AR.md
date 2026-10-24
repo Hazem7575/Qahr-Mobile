@@ -3,7 +3,7 @@
 **الحالة:** `enabled: true`، `yearly` من 02-14 لـ 02-27 (الرسمي: `luaUiRes_EN[1334].ActTime` = "Feb. 14 - Feb. 27").
 - تشغيل يدوي: `@festival on Valentine2023`.
 - **محتاج بيلد جديد للسيرفر:** `Base\Valentine2023\Valentine2023Ui.cs` (نفس الملف، اتوسّع، مفيش ملف جديد للـ csproj). سطر الهوك في `LuaPush.cs` موجود من قبل.
-- **الأرقام:** `Infinity[DB]\Valentine2023\recital.json` (السيرفر بيعيد قراية الملف لو اتغيّر). الحالة: `Infinity[DB]\Valentine2023\state.json`.
+- **الأرقام:** `Data\Valentine2023\recital.json` (السيرفر بيعيد قراية الملف لو اتغيّر). الحالة: `Data\Valentine2023\state.json`.
 
 ## بيتلعب إزاي (لفل 80+، الشباك الرسمي DlgLoverDayMain)
 1. **أرواح الآلات (4 من 6 كل يوم Recital):** تدوس على الروح، فالروح بتطلع جنبك في توين سيتي ("Piano Spirit made a gorgeous appearance!"). لو مش في توين سيتي: النص الرسمي "Please go to Twin City to join in the Romance Feast."

@@ -148,7 +148,7 @@ namespace Qahr.Mobile.ChildrensDay2025
                     while (left > 0) { uint n = Math.Min(left, Math.Min(s, 60000u)); c.Inventory.AddItemWitchStack(g.Id, 0, (ushort)n, stream, g.Bound); left -= n; }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return "FAILED " + g.Id; }
+            catch (Exception e) { MyConsole.SaveException(e); return "FAILED " + g.Id; }
             return QuestEngine.QuestGrammar.ItemName(g.Id) + (g.Count > 1 ? " x" + g.Count : "");
         }
         public static string GiveAll(Client.GameClient c, IEnumerable<Grant> grants, ServerSockets.Packet stream)
@@ -236,7 +236,7 @@ namespace Qahr.Mobile.ChildrensDay2025
                     Msg(c, "Congratulations! You obtained " + got + "!");
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
     }

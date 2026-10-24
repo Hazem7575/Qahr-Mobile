@@ -3612,7 +3612,7 @@ namespace Qahr.Mobile.Game.MsgMonster
                             {
                                 // [FileDrops] the AddGroundItem below reserved a floor cell (Item flag) for an item that is
                                 // never dropped -> 5% of kills leaked a blocked cell forever. Disabled; the file table now
-                                // runs from FileDrops.OnKill below (Infinity[DB]\drops.txt, OFF by default).
+                                // runs from FileDrops.OnKill below (Data\drops.txt, OFF by default).
                                 // bool drop = true;
                                 // if (killer.Map.AddGroundItem(ref xx, ref yy) && drop)
                                 // {
@@ -3625,7 +3625,7 @@ namespace Qahr.Mobile.Game.MsgMonster
                         #endregion
                     }
                     // [FileDrops] drop_* / drop_money / [SpecialDrop] from Monsters\*.ini, IN ADDITION to the hard-coded drops
-                    // above. Off unless Infinity[DB]\drops.txt has file_drops=1. Skips bosses/event mobs; never throws.
+                    // above. Off unless Data\drops.txt has file_drops=1. Skips bosses/event mobs; never throws.
                     FileDrops.OnKill(this, killer, stream);
                     #endregion
                 }

@@ -6,7 +6,7 @@
 //    - IBag           the bag operations a grant needs (count / take / space / give). ClientBag = the real inventory,
 //                     the harness uses a fake bag, so every rule (deduct before grant, space first, limits) is tested
 //                     against the real code path.
-//    - Store          per-player key/value state: Infinity[DB]\<folder>\players.txt (uid TAB k=v;k=v), atomic save
+//    - Store          per-player key/value state: Data\<folder>\players.txt (uid TAB k=v;k=v), atomic save
 //    - Throttle, crypto weighted pick (Qahr.Mobile.Lottery.LotteryCommon), festival log lines, config helpers.
 //  Rule for every caller: hold the festival lock, check bag space FIRST, take the cost, Commit the state, then give.
 // ============================================================================
@@ -239,7 +239,7 @@ namespace Qahr.Mobile.AnnivKit
             readonly string _rel; readonly Func<Dictionary<string, object>, T> _read; readonly Func<T> _def;
             T _cfg; string _stamp;
             public CfgCache(string relPath, Func<Dictionary<string, object>, T> read, Func<T> def) { _rel = relPath; _read = read; _def = def; }
-            public string File { get { return Path.Combine(Program.ServerConfig.DbLocation ?? "", _rel); } }
+            public string File { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, _rel); } }
             public T Get()
             {
                 try
@@ -261,7 +261,7 @@ namespace Qahr.Mobile.AnnivKit
     }
 
     /// <summary>[EventData 2026-10-15] Per-player key/value state of one festival, kept in the unified EventStore (MySQL;
-    /// section = folder[.file], values in its Strings). The old Infinity[DB]\&lt;folder&gt;\&lt;file&gt; is imported once and
+    /// section = folder[.file], values in its Strings). The old Data\&lt;folder&gt;\&lt;file&gt; is imported once and
     /// renamed *.migrated. Set marks the value dirty; Commit writes this store's changed players to MySQL (throws on failure).</summary>
     public sealed class Store
     {
@@ -277,7 +277,7 @@ namespace Qahr.Mobile.AnnivKit
         }
         public object Sync { get { return _sync; } }
         /// <summary>The OLD file (only read once by the migration).</summary>
-        public string FilePath { get { return Path.Combine(Program.ServerConfig.DbLocation ?? "", _folder, _file); } }
+        public string FilePath { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, _folder, _file); } }
         public string EventKey { get { return _be.Event; } }
 
         public string Get(uint uid, string k, string def = "") { _be.EnsureMigrated(); return EventData.EventStore.GetString(uid, _be.Event, k, def); }

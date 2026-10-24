@@ -1,0 +1,4 @@
+# "Download & Get Rewards" window of the mobile client (Mobile\Welfare\MobileDownloadReward.cs). Once per character.
+# The client shows the items of ini\luacfg\info.lua DownloadPrize; keep this line the same so players get what they see.
+#   items <id:count[:b]> ...     (b = bound)
+items 1088000:1:b 1088001:10:b 3342879:3

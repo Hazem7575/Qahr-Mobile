@@ -168,7 +168,7 @@ namespace Qahr.Mobile.Game.MsgServer.AttackHandler.CheckAttack
             if (attacked.Map == 9855 && attacked.DynamicID == 0)
                 return false;
 
-            if (attacked.Name.Contains("[GM]") || attacked.Name.Contains("[PM]"))
+            if (attacked.IsGameMaster())
             {
                 return false;
             }

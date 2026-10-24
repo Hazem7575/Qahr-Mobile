@@ -28,7 +28,7 @@
 //  - Engine-spawned monsters (personal story bosses, instance monsters) belong to one player: only the owner (or
 //    the owner's team) gets quest credit, they drop no loot, they despawn after their time, a player has at most
 //    the quest's count alive and a re-summon has a cooldown.
-//  - Engine finishes are logged to Infinity[DB]\questengine_log.txt.
+//  - Engine finishes are logged to Data\questengine_log.txt.
 // ============================================================================
 using System;
 using System.Collections.Concurrent;
@@ -63,7 +63,7 @@ namespace Qahr.Mobile.QuestEngine
                 catch (Exception e)
                 {
                     MyConsole.WriteLine("[QuestEngine] load failed (engine disabled until a reload works): " + e.Message, ConsoleColor.Yellow);
-                    try { MyConsole.SaveException(e); } catch { }
+                    MyConsole.SaveException(e);
                 }
             }
         }
@@ -412,7 +412,7 @@ namespace Qahr.Mobile.QuestEngine
                     }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         static readonly ConcurrentDictionary<string, DateTime> KillRuns = new ConcurrentDictionary<string, DateTime>();
@@ -550,7 +550,7 @@ namespace Qahr.Mobile.QuestEngine
                     }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         /// <summary>After any progress: bounty bookkeeping, onComplete actions (once) and the "objectives complete" notice.</summary>
@@ -636,7 +636,7 @@ namespace Qahr.Mobile.QuestEngine
                     }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ NPC dialogs
@@ -797,7 +797,7 @@ namespace Qahr.Mobile.QuestEngine
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
                 return false;
             }
         }
@@ -944,7 +944,7 @@ namespace Qahr.Mobile.QuestEngine
                 if (!CanAcceptEngine(c, t, q, out why)) { Msg(c, "[Quest] " + why); return false; }
                 return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return true; }
+            catch (Exception e) { MyConsole.SaveException(e); return true; }
         }
         /// <summary>Quest-panel accept, after a successful QuestGUI.Accept: onAccept actions of engine-owned quests.</summary>
         public static void AfterPanelAccept(Client.GameClient c, uint id)
@@ -960,7 +960,7 @@ namespace Qahr.Mobile.QuestEngine
                     OnAccepted(c, q, rec.GetStream());
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         /// <summary>[LuaUi] the begin NPC's "I accept." from a client Lua window (Dream Theater: Agnes in DlgWhiteDayMain):
@@ -978,7 +978,7 @@ namespace Qahr.Mobile.QuestEngine
                 using (var rec = new ServerSockets.RecycledPacket())
                     return AcceptQuest(c, q, out why, rec.GetStream());
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } why = "This quest is not available."; return false; }
+            catch (Exception e) { MyConsole.SaveException(e); why = "This quest is not available."; return false; }
         }
 
         static void FollowUp(Client.GameClient c, QuestTable t, EngineQuest q, ServerSockets.Packet stream)
@@ -1307,7 +1307,7 @@ namespace Qahr.Mobile.QuestEngine
                         using (var rec = new ServerSockets.RecycledPacket())
                             np.Send(rec.GetStream());// a player already inside (re-placed) sees it at once
                     }
-                    catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                    catch (Exception e) { MyConsole.SaveException(e); }
                 }
         }
         static void RemoveInstanceNpcs(InstanceRec r)
@@ -1340,7 +1340,7 @@ namespace Qahr.Mobile.QuestEngine
             foreach (var kv in Instances.ToArray())
             {
                 if (t != null && t.Instances.ContainsKey(kv.Value.Def.Name)) continue;
-                try { CloseInstance(kv.Value, true); n++; } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                try { CloseInstance(kv.Value, true); n++; } catch (Exception e) { MyConsole.SaveException(e); }
             }
             return n;
         }
@@ -1693,7 +1693,7 @@ namespace Qahr.Mobile.QuestEngine
                     else Msg(c, "[Quest] " + msg);
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ Bounty Hall
@@ -1724,7 +1724,7 @@ namespace Qahr.Mobile.QuestEngine
                 }
                 return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return true; }
+            catch (Exception e) { MyConsole.SaveException(e); return true; }
         }
         static List<PrizeItem> PrizeItemsPreview(EngineQuest q)
         {
@@ -1753,7 +1753,7 @@ namespace Qahr.Mobile.QuestEngine
                     }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             OnEvent(c, "bountyDone");// R7: quests that ask for a finished bounty
         }
 
@@ -1792,7 +1792,7 @@ namespace Qahr.Mobile.QuestEngine
                 }
                 if (removed.Count > 0) Visited.TryRemove(c.Player.UID, out _);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ commands / log

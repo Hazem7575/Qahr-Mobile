@@ -45,7 +45,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                     {
                         if (user.Player.Map == 3071)
                         {
-                            user.Teleport(410, 354, 1002);
+                            user.Teleport(Places.TwinCity);
                         }
                     }
                     catch

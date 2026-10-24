@@ -1,5 +1,5 @@
 // ============================================================================
-//  [QuestEngine] data side: turns Questinfo.ini (+ Infinity[DB]\QuestEngine\quests.json) into typed objectives,
+//  [QuestEngine] data side: turns Questinfo.ini (+ Data\QuestEngine\quests.json) into typed objectives,
 //  prizes and drop rules, so quests work from DATA instead of one hand-written NPC script per quest.
 //
 //  Intention grammar (verified against the 2,190 quests of Questinfo.ini, see tools\QuestAudit\engine):
@@ -320,7 +320,7 @@ namespace Qahr.Mobile.QuestEngine
         public List<uint> ServerTypes;  // Questinfo ShowServerType (null = every server type)
         public bool AllowParsedCps;
         public uint[] Prequests = new uint[0];
-        // ---- [Festivals] overlay (Base\Festivals): the festival that owns this quest; FestivalOff = that festival
+        // ---- [Festivals] overlay (Events\Framework): the festival that owns this quest; FestivalOff = that festival
         // is not running -> the quest is Disabled (no offer / counting / finish / prize) but keeps its daily/weekly reset
         public string Festival;
         public bool FestivalOff;
@@ -1419,7 +1419,7 @@ namespace Qahr.Mobile.QuestEngine
         }
 
         // ------------------------------------------------------------ [Festivals] overlays
-        /// <summary>[Festivals] one festival's quests.json as the QuestEngine sees it (Base\Festivals publishes these).</summary>
+        /// <summary>[Festivals] one festival's quests.json as the QuestEngine sees it (Events\Framework publishes these).</summary>
         public sealed class QuestOverlay
         {
             public string Key;                                   // festival key
@@ -1428,7 +1428,7 @@ namespace Qahr.Mobile.QuestEngine
             public List<string> MonsterNames = new List<string>();// its monster types (registered while active)
             public List<uint> NpcIds = new List<uint>();          // its NPCs (placed while active)
         }
-        /// <summary>[Festivals] set by Base\Festivals\FestivalManager; null = no festivals.</summary>
+        /// <summary>[Festivals] set by Events\Framework\FestivalManager; null = no festivals.</summary>
         public static Func<List<QuestOverlay>> OverlayProvider;
         static List<QuestOverlay> FestivalOverlays()
         {

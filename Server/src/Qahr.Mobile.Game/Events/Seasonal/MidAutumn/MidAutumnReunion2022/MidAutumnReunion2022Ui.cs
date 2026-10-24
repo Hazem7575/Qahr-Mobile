@@ -2,7 +2,7 @@
 //  [MidAutumnReunion2022 2026-10-15] The official 2022 Global Mid-Autumn "Reunion Under Moon" (Hou Yi shoots the Sun
 //  Ravens), client msg 10052 tMsg_Info["MidAutumnFestival"] + 10049 tMsg_Info["MidAutumn_Common"] (elixir / stage
 //  rewards), lua dialogs luaui\dialog\dlgmidautumnfestival + dlgmidautumcommon (ActivityId 10049). Runs while the festival
-//  MidAutumnReunion2022 (Infinity[DB]\Festivals\MidAutumnReunion2022) runs.  PHASE COMPLETE: the whole day loop is playable.
+//  MidAutumnReunion2022 (Data\Festivals\MidAutumnReunion2022) runs.  PHASE COMPLETE: the whole day loop is playable.
 //
 //  Official client data used (luaui, decrypted; luaUiRes[1272] / [1273][10049]; Server_Key tMidAutumnArchery2022_DelText):
 //    main     DlgShootingSunUi_OpenMain|{Code=100,Data={ViewTip,SunData={10 x {State}},BossData={<=4 x {Index 1..6,State}},
@@ -21,7 +21,7 @@
 //             MidAutumn_Config[10049].PreviewReward[1]/[2]) -> DlgMidAutumnElixir_RefineData.
 //    stages   ZhongQiu2022Cross_OpenRankInterface -> DlgMidAutumnRank_BindData; 10049 ZhongQiu2022Cross_ClimbStageReward
 //             </N>10049</N>i, Rank.Total[1..8] at 1000/3000/5000/10000/30000/50000/100000/every 2000 more (luaUiRes Total).
-//  DERIVED (all in Infinity[DB]\MidAutumnReunion2022\midautumnreunion2022.json, marked there): which 4 beasts a day holds,
+//  DERIVED (all in Data\MidAutumnReunion2022\midautumnreunion2022.json, marked there): which 4 beasts a day holds,
 //  beast map/stats/looks, arrows/points per beast, Sun Raven Essences per shot, bonus distribution, Moon Point regen,
 //  rounds per day, the night materials (the night window of this client was re-used by Valentine), elixir odds/points.
 //  NOT here: global/local ranking mail rewards (cross-server), CP purchases of Moon Points / materials, Moon Palace.
@@ -82,7 +82,7 @@ namespace Qahr.Mobile.MidAutumnReunion2022
             };
         }
         static Config _cfg; static string _stamp;
-        public static string DataDir { get { return Path.Combine(Program.ServerConfig.DbLocation, "MidAutumnReunion2022"); } }
+        public static string DataDir { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "MidAutumnReunion2022"); } }
         static string CfgFile { get { return Path.Combine(DataDir, "midautumnreunion2022.json"); } }
         public static Config CfgOverride;// harness
         public static Config Cfg

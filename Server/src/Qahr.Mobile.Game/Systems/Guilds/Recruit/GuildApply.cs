@@ -8,7 +8,7 @@
 //   RecruitmentON  = "Recruitment on. Auto-recruit all heroes who meet requirements."  -> join at once
 //   RecruitmentOFF = "Recruitment off. No application will be accepted."                -> refused
 //   neither        -> the application waits for a leader / deputy / manager.
-// State: Infinity[DB]\GuildRecruit\guild_apply.txt (one line per application).
+// State: Data\GuildRecruit\guild_apply.txt (one line per application).
 using System;
 using System.Collections.Generic;
 using System.Linq;

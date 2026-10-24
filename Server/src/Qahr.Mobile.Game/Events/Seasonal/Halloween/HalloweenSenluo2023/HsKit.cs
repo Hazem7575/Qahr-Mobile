@@ -71,7 +71,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
             {
                 if (HsZones.OnNpc(c, stream, npcid, option, input)) return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return false;
         }
 
@@ -83,7 +83,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
             {
                 if (HsBoxes.OnUse(c, item, stream)) return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return false;
         }
 
@@ -191,7 +191,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
                         ok = c.Inventory.Add(stream, g.Id, 1, 0, 0, 0, Role.Flags.Gem.NoSocket, Role.Flags.Gem.NoSocket, g.Bound);
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } ok = false; }
+            catch (Exception e) { MyConsole.SaveException(e); ok = false; }
             if (!ok) return null;
             return Name(g.Id) + (g.Count > 1 ? " x" + g.Count : "");
         }
@@ -293,7 +293,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
                     gm.View.EnterMap<Role.IMapObj>(np);
                     using (var rec = new ServerSockets.RecycledPacket()) np.Send(rec.GetStream());
                 }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                catch (Exception e) { MyConsole.SaveException(e); }
                 r.Npcs.Add(np);
                 return np;
             }
@@ -397,7 +397,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
             }
             HsCopy cur;
             if (Copies.TryGetValue(r.Owner, out cur) && ReferenceEquals(cur, r)) Copies.TryRemove(r.Owner, out cur);
-            try { var oc = r.OnClose; if (oc != null) oc(r); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            try { var oc = r.OnClose; if (oc != null) oc(r); } catch (Exception e) { MyConsole.SaveException(e); }
             Game.MsgNpc.Npc[] npcs; HsMob[] mobs;
             lock (r.Sync) { npcs = r.Npcs.ToArray(); r.Npcs.Clear(); mobs = r.Mobs.ToArray(); }
             foreach (var np in npcs) DespawnNpc(r, np);
@@ -459,7 +459,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
                         if (died != null && r.OnKill != null)
                             foreach (var m in died) r.OnKill(r, m, c);
                     }
-                    catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                    catch (Exception e) { MyConsole.SaveException(e); }
                 }
             }
             finally { Interlocked.Exchange(ref _ticking, 0); }

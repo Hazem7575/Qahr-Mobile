@@ -53,7 +53,7 @@
 - كل الأعداد بتتشيك: ×1 أو ×10 بس، وGiant Pills وMooncakes لازم تكون في الشنطة، ولا رقم سالب ولا رقم كبير.
 - الخصم قبل التسليم، والمساحة قبل الخصم.
 - المراحل والـ stages بتتسجل قبل الجايزة، فمينفعش تتكرر بالـ relog أو بتكرار الباكت.
-- فيه throttle. الحالة بتتحفظ في `Infinity[DB]\DemonInvasionMadPet\players.json`، والكونفيج في `config.json`.
+- فيه throttle. الحالة بتتحفظ في `Data\DemonInvasionMadPet\players.json`، والكونفيج في `config.json`.
 
 ## الكود
 - **الملفات:**

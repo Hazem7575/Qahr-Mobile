@@ -2465,7 +2465,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                         {
                             client.Player.InElitePk = true;
                             client.Player.InTeamPk = false;
-                            client.Teleport(410, 354, 1002);
+                            client.Teleport(Places.TwinCity);
                         }
                         break;
                     }
@@ -2499,7 +2499,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                 case 3:
                     {
 
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -2530,7 +2530,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 3:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -2561,7 +2561,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 3:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -3985,7 +3985,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             {
                                 case 0: client.Teleport(386, 662, 1011); break;
                                 case 1: client.Teleport(294, 505, 1000); break;
-                                case 2: client.Teleport(410, 354, 1002); break;
+                                case 2: client.Teleport(Places.TwinCity); break;
                                 default: client.Teleport(303, 379, 1015); break;
                             }
                         }
@@ -4000,7 +4000,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 3:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -7440,7 +7440,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 10:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -7534,7 +7534,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 1:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -7566,7 +7566,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 3:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -7598,7 +7598,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 3:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -7668,7 +7668,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 4:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -7736,7 +7736,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 4:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -7809,7 +7809,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 4:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }

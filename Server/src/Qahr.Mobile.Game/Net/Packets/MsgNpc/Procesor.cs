@@ -172,6 +172,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     {
                         var stream = rec.GetStream();
                         if (global::Qahr.Mobile.Phone.MobileQuestStoryNpc.OnFarClick(action.client, action.npcid, action.option)) return;// QahrMobile: main-story finish NPC clicked from far away -> walk there
+                        if (global::Qahr.Mobile.Phone.VipPoints.OnNpc(action.client, stream, action.npcid, action.option)) return;// QahrMobile: VIP shop dialog (VipPoints.cs)
                         if (global::Qahr.Mobile.Phone.MobileVipMenu.OnNpc(action.client, stream, action.npcid, action.option, action.input)) return;// QahrMobile: the "@vip" dialog (MobileVipMenu.cs)
                         if (global::Qahr.Mobile.QixiKit.Hooks.OnNpc(action.client, stream, action.npcid, action.option, action.input)) return;// [QixiRomance2022 2026-10-15] Qixi group NPCs (Weaver Girl / Orphee ...) + Silk/Blessing item dialogs
 
@@ -189,7 +190,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                                 Game.MsgNpc.Npc _obj;
                                 if (action.client.Map.SearchNpcInScreen((uint)action.npcid, action.client.Player.X, action.client.Player.Y, out _obj))
                                 {
-                                    if (action.client.ProjectManager || action.client.Player.Name.Contains("[GM]"))
+                                    if (action.client.IsGm)
                                         action.client.SendSysMesage("ID NPC ( " + action.npcid + " ) X ( " + _obj.X + " ) Y ( " + _obj.Y + " )", MsgServer.MsgMessage.ChatMode.System, MsgServer.MsgMessage.MsgColor.red);
                                     if (action.npcid >= (ushort)NpcID.Crystal1 && action.npcid <= (ushort)NpcID.Crystal5)
                                     {
@@ -233,7 +234,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             action.client.Player.MessageCancel = null;
                             return;
                         }
-                        if (action.client.Player.IsGameMaster() || action.client.Player.Name.Contains("[GM]"))
+                        if (action.client.IsGm)
                             action.client.SendSysMesage("ID NPC ( " + action.npcid + " )", MsgServer.MsgMessage.ChatMode.System, MsgServer.MsgMessage.MsgColor.red);
 
                         //if (action.npcid == (uint)NpcID.GoldBoxWar || action.npcid == (uint)NpcID.ScorePlayer)
@@ -1194,7 +1195,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                         // [InstanceNpc] DynamicID-aware: an NPC inside a private copy answers only the players in that copy
                         if (action.client.Map.SearchNpcInScreen((uint)action.npcid, action.client.Player.X, action.client.Player.Y, action.client.Player.DynamicID, out obj))
                         {
-                            if (action.client.ProjectManager || action.client.Player.Name.Contains("[GM]"))
+                            if (action.client.IsGm)
                                 action.client.SendSysMesage("ID NPC ( " + action.npcid + " ) X ( " + obj.X + " ) Y ( " + obj.Y + " )", MsgServer.MsgMessage.ChatMode.System, MsgServer.MsgMessage.MsgColor.red);
                             if (action.client.Player.Map == 1026 || action.client.Player.Map == 1027 || action.client.Player.Map == 1028)
                             {
@@ -1205,7 +1206,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                                 var Map = Pool.ServerMaps[action.client.Player.Map];
                                 action.client.Player.SendString(stream, MsgServer.MsgStringPacket.StringID.Effect, true, "accession2");
                                 Map.RemoveNpc(obj, stream);
-                                action.client.Teleport(410, 354, 1002);
+                                action.client.Teleport(Places.TwinCity);
                             }
                             if (action.client.Player.Map == 3030)
                             {

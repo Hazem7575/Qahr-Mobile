@@ -1,7 +1,7 @@
 // [Poker 2026-10-14] Silver <-> table chips escrow. Guarantees that a buy-in is never lost or paid twice, also across
 // a server crash or restart:
 //
-//   * Infinity[DB]\Poker\escrow.txt  (journal, rewritten atomically) - one line per table session:
+//   * Data\Poker\escrow.txt  (journal, rewritten atomically) - one line per table session:
 //         sessionId|uid|tableId|chips|state(O=open,C=closed)|utcTicks
 //     "chips" is what the player owns at the table outside the current hand (updated at buy-in, top-up, hand end,
 //     leave). A crash in the middle of a hand therefore voids that hand.

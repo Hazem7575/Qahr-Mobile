@@ -1,5 +1,5 @@
 // [Poker 2026-10-14] New Texas Sit & Go.
-// Official data (read-only): Infinity[DB]\newtexas_sng_race.txt (buy-in, blind level seconds, return rate, players),
+// Official data (read-only): Data\newtexas_sng_race.txt (buy-in, blind level seconds, return rate, players),
 // newtexas_sng_stage.txt (row 0 = starting chips, rows 1.. = big blind / small blind), newtexas_sng_prize.txt
 // (rank -> per-10000 share of the pool); client lua newtexas_sng (max_player 5, hall "type" 5..8 per race).
 // Protocol (spec_tourney.txt): sign-up / leave arrive as 9119 CMsgDominoAct with f5 = 5..8; replies 9119 f1=1/4,

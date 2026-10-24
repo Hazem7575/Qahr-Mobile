@@ -470,8 +470,8 @@ namespace Qahr.Mobile
             Step("YuanshenLottery.Load", () => YuanshenLottery.Load());
             Step("YuanshenRank.Load", () => YuanshenRank.Load());
             Step("Server.LoadMonsters", () => Server.LoadMonsters());
-            Step("FileDrops.Load", () => Game.MsgMonster.FileDrops.Load());// [FileDrops] Infinity[DB]\drops.txt (missing = off)
-            Step("AttackSpeed.Load", () => global::Qahr.Mobile.Combat.AttackSpeedConfig.Load());// [AttackSpeed] Infinity[DB]\attackspeed.txt (missing = off)
+            Step("FileDrops.Load", () => Game.MsgMonster.FileDrops.Load());// [FileDrops] Data\drops.txt (missing = off)
+            Step("AttackSpeed.Load", () => global::Qahr.Mobile.Combat.AttackSpeedConfig.Load());// [AttackSpeed] Data\attackspeed.txt (missing = off)
             Step("Tranformation.Int", () => Tranformation.Int());
             Step("Pool.Magic.Load", () => magicBoot.GetAwaiter().GetResult());// [FastBoot 2026-10-15] started in the background above
             Step("QuestInfo.Init", () => questInfoBoot.GetAwaiter().GetResult());// [FastBoot 2026-10-15] started in the background above; waits + rethrows its exception here

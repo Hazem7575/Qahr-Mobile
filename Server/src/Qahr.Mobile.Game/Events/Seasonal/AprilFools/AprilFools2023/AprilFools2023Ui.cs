@@ -16,7 +16,7 @@
 //    points    DlgFoolsDayPointsRankUi (FoolsDayPointsAndRankConfig["10113"]): stage rewards 500..77777 (+ every 5000), claimed on
 //              msg 10311 HalloweenNpc2023_ClimbStageReward (only while this window was opened by Tricky Wit, see OnStageLua)
 //  The fights take place in a private copy of NightmareMaze 11414 (the Ordeal Maze floors 11944-11952 are not in any client
-//  GameMap.dat). Monster looks / stats, room spots, counts, Dungeon Breaker odds and points are DERIVED: Infinity[DB]\AprilFools2023\config.json.
+//  GameMap.dat). Monster looks / stats, room spots, counts, Dungeon Breaker odds and points are DERIVED: Data\AprilFools2023\config.json.
 //
 //  Hooks: LuaPush.HandleCallback (10113, and 10311 for the stage claim), Procesor (virtual dialogs + Lyon), PoolProcesses (tick),
 //         MsgItemUsuagePacket.UseItem (Trick Amulet / fragments / masks / packs) - see FoolsKit.cs.
@@ -154,7 +154,7 @@ namespace Qahr.Mobile.AprilFools2023
 
         // ------------------------------------------------------------------ config
         static Af23Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, Festival, "config.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, Festival, "config.json"); } }
         public static Af23Config Cfg
         {
             get

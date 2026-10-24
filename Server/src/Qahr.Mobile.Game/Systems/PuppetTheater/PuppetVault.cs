@@ -102,7 +102,7 @@ namespace Qahr.Mobile.PuppetTheater
                     if (!PT.Running) return;
                     using (var rec = new ServerSockets.RecycledPacket()) Visited(c, rec.GetStream(), theme);
                 }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                catch (Exception e) { MyConsole.SaveException(e); }
             });
             return "visiting";
         }
@@ -146,7 +146,7 @@ namespace Qahr.Mobile.PuppetTheater
                 }
                 PT.Log(c, "HERO", "statue on the Global Halloween spot");
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
     }
 }

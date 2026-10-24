@@ -1,5 +1,5 @@
 # WenwenDetective (2026-10-14). Format id,type,mesh,map,x,y  - every NPC of these quests is -1 (instance NPC) in Questinfo -> festival range 8853xxx.
-# Maps = the official ids 1002614-1002619 (Infinity[DB]\FestivalMaps\maps.txt -> doc 12519 TitanRealm(CS), 2024tsf_new), used directly as
+# Maps = the official ids 1002614-1002619 (Data\FestivalMaps\maps.txt -> doc 12519 TitanRealm(CS), 2024tsf_new), used directly as
 #   shared event maps (nothing else stands on them; each quest has its own map id, like the official instances).
 # Positions = client Questinfo.ini (official), every cell walkable (r0) on the server DMap.
 # LOOKS = PROXIES (review in game / MapStudio, replace if a better one is found). No client npc.ini / NpcX.ini type is named after these NPCs:

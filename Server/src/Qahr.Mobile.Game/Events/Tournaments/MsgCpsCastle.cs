@@ -20,7 +20,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
             if (Process == ProcesType.Dead)
             {
                 StartTimer = DateTime.Now;
-                MsgSchedules.SendInvitation("Shadow Castle Event", " ", 410, 354, 1002, 0, 60); // QahrMobile: PC spot 368,298 is water on the mobile Twin City; Twin City square
+                MsgSchedules.SendInvitation("Shadow Castle Event", " ", Places.TwinCity, 0, 60); // QahrMobile: PC spot 368,298 is water on the mobile Twin City; Twin City square
                 MsgSchedules.SendSysMesage("Shadow Castle Event has now begun!", MsgServer.MsgMessage.ChatMode.Center, MsgServer.MsgMessage.MsgColor.red);
 
                 Process = ProcesType.Alive;

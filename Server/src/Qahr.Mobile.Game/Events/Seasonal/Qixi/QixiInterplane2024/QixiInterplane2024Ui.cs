@@ -20,7 +20,7 @@
 //  events, compass treasure hunts), Excalibur forging, Starry Points and the rankings. The server scripts
 //  (tInterplanePlay / tQixi2024Part5 / tQixiMainNpc2024) and their reward tables are not in the client, the Sword
 //  Deity NPC 33197 and the Vault Palace map are not on this server. So every starfield shows "Not open yet." and the
-//  points are 0. Config (optional, derived values): Infinity[DB]\QixiInterplane2024\qixiinterplane2024.json.
+//  points are 0. Config (optional, derived values): Data\QixiInterplane2024\qixiinterplane2024.json.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10448), tagged.
 // ============================================================================
@@ -44,7 +44,7 @@ namespace Qahr.Mobile.QixiInterplane2024
             public int SwordEffect = 1; // derived: Excalibur light of the first domain (tSwordEf[1]); nobody forges here
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "QixiInterplane2024", "qixiinterplane2024.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "QixiInterplane2024", "qixiinterplane2024.json"); } }
         public static Config Cfg
         {
             get

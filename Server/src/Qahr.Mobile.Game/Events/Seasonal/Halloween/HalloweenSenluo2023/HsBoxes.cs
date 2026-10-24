@@ -1,6 +1,6 @@
 // ============================================================================
 //  [HalloweenSenluo2023 2026-10-15] open handlers for festival boxes that have no server script, driven by data:
-//  Infinity[DB]\<FestivalKey>\boxes.json (re-read on change) for the festivals of this agent group.
+//  Data\<FestivalKey>\boxes.json (re-read on change) for the festivals of this agent group.
 //    { "boxes": [ { "id": 3345658, "name": "Xuanyuan Box", "festival": "HalloweenSenluo2023",
 //                   "give": [ {"id":730003,"count":2,"bound":true,"minutes":7200} ],      fixed contents
 //                   "coins": [10,50], "points": 99,                                       festival currency (callback)
@@ -27,7 +27,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
             public readonly List<Entry> Pool = new List<Entry>();
         }
 
-        /// <summary>The festivals whose Infinity[DB]\&lt;key&gt;\boxes.json is read.</summary>
+        /// <summary>The festivals whose Data\&lt;key&gt;\boxes.json is read.</summary>
         public static readonly string[] Keys = { "HalloweenSenluo2023", "Halloween2024", "PuppetTheater", "FairyStories", "EonspiritsReturn", "InnerPowerSecretland", "GearMythforging" };
 
         /// <summary>Festival currency (coins / points) per festival key: (client, coins, points, stream).</summary>
@@ -58,7 +58,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
                 bool changed = false;
                 foreach (var k in Keys)
                 {
-                    string f = Path.Combine(Program.ServerConfig.DbLocation, k, "boxes.json");
+                    string f = Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, k, "boxes.json");
                     DateTime st = File.Exists(f) ? File.GetLastWriteTimeUtc(f) : DateTime.MinValue;
                     DateTime old;
                     if (!_stamps.TryGetValue(k, out old) || old != st) { _stamps[k] = st; changed = true; }
@@ -67,7 +67,7 @@ namespace Qahr.Mobile.HalloweenSenluo2023
                 var all = new Dictionary<uint, Box>();
                 foreach (var k in Keys)
                 {
-                    string f = Path.Combine(Program.ServerConfig.DbLocation, k, "boxes.json");
+                    string f = Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, k, "boxes.json");
                     if (!File.Exists(f)) continue;
                     try
                     {

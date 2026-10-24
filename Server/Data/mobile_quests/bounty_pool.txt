@@ -1,5 +1,5 @@
 ﻿# 539 offers
-# QahrMobile: Chinju bounty pool (MobileQuestBounty.cs), 2026-10-21 15:20:01
+# QahrMobile: Chinju bounty pool (MobileQuestBounty.cs), 2026-10-24 14:01:10
 skip	5243	Eliminate Minions	not workable: item 3338735 has no drop source
 skip	5244	Eliminate Minions	not workable: item 3338735 has no drop source
 skip	5245	Eliminate Minions	not workable: item 3338735 has no drop source

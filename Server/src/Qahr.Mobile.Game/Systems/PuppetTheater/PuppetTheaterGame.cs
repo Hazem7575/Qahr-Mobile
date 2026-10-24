@@ -3,7 +3,7 @@
 //    Maze      : the official 8x8 hex exploration board (Fgui_25Wsj_Zgz, InterfaceID 10771003, ClickGrid on msg 10768)
 //                for the 10 official areas (STR_LUAUI_QQWS_ZGZ_LEVEL_1..10). Official event ids / names / texts
 //                (Cn_Res STR_LUAUI_QQWS_ZGZ_NAME_*, tHalloween2025Exploration, FUI_GBJQ_TXT_25QQWS_ZGZ_*); the layouts,
-//                SP per step and Soulthread amounts are DERIVED (Infinity[DB]\PuppetTheater\config.json).
+//                SP per step and Soulthread amounts are DERIVED (Data\PuppetTheater\config.json).
 //    Boss      : "Challenge boss" -> the official story quests 9186-9201 (FestivalStory.StoryEntry, quests.json) and
 //                afterwards a private boss copy of the area map (FoolsKit.Arena) with an S/A/B rating.
 //    Home      : Puppet Home training (Halloween25Draw 15034901): 5 puppets, official reward lists 301001-301003xxx.
@@ -11,7 +11,7 @@
 //    NPCs      : Suyi / Elise (Puppet Store, official CP prices) / Strange Spectator in Twin City, Broken Puppet
 //                (Puppet Adventure) in the Vault Palace.  Items: the event boxes (official contents from the item tips).
 //  Every grant: player lock -> festival running -> validation -> bag space -> take the cost / record state -> give (logged
-//  in Infinity[DB]\PuppetTheater\log.txt).  State: Infinity[DB]\PuppetTheater\players.txt (FoolsKit.Store; uid 0 = server).
+//  in Data\PuppetTheater\log.txt).  State: Data\PuppetTheater\players.txt (FoolsKit.Store; uid 0 = server).
 //  Hooks (one line each, in the shared April Fools kit): FoolsKit.Kit.OnDialog -> OnDialog, FoolsKit.Kit.OnUse -> OnUse.
 // ============================================================================
 using System;
@@ -78,13 +78,13 @@ namespace Qahr.Mobile.PuppetTheater
         public static bool Running { get { try { return Festivals.FestivalManager.IsRunning(Festival); } catch { return false; } } }
         public static string Today { get { return DateTime.Now.ToString("yyyyMMdd", CultureInfo.InvariantCulture); } }
 
-        // ------------------------------------------------------------------ texts (official, Infinity[DB]\PuppetTheater\texts.json)
+        // ------------------------------------------------------------------ texts (official, Data\PuppetTheater\texts.json)
         static Dictionary<string, string> _tx; static string _txStamp;
         public static string T(string key, string def = "")
         {
             try
             {
-                var fi = new FileInfo(Path.Combine(Program.ServerConfig.DbLocation, Festival, "texts.json"));
+                var fi = new FileInfo(Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, Festival, "texts.json"));
                 string stamp = fi.Exists ? fi.Length + ":" + fi.LastWriteTimeUtc.Ticks : "none";
                 if (_tx == null || stamp != _txStamp)
                 {
@@ -106,7 +106,7 @@ namespace Qahr.Mobile.PuppetTheater
             {
                 try
                 {
-                    var fi = new FileInfo(Path.Combine(Program.ServerConfig.DbLocation, Festival, "config.json"));
+                    var fi = new FileInfo(Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, Festival, "config.json"));
                     string stamp = fi.Exists ? fi.Length + ":" + fi.LastWriteTimeUtc.Ticks : "none";
                     if (_cfg != null && stamp == _cfgStamp) return _cfg;
                     var c = new PtConfig();
@@ -265,12 +265,12 @@ namespace Qahr.Mobile.PuppetTheater
                 if (option == 255 || !_dlg.TryGetValue(c.Player.UID, out h) || h.Key != npcid || h.Value == null) return true;
                 if (Kit.Throttled(c.Player.UID, "ptdlg", 250)) return true;
                 if (!Running && npcid != DlgInfo) { Msg(c, T("Npc[34646][Text121]")); return true; }// DlgInfo = item choices (boxes keep working after the event)
-                try { lock (Kit.Lock(c.Player.UID)) h.Value(c, s, option); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                try { lock (Kit.Lock(c.Player.UID)) h.Value(c, s, option); } catch (Exception e) { MyConsole.SaveException(e); }
                 return true;
             }
             if ((npcid < Suyi || npcid > VaultPortal) && PuppetVault.ThemeOf(npcid) == 0 && npcid != PuppetSeer.Seer || option != 0) return false;
             if (!Kit.NpcInView(c, npcid)) return false;
-            try { PuppetNpcs.Open(c, s, npcid == SuyiMarket ? Suyi : npcid == EliseMarket ? Elise : npcid); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            try { PuppetNpcs.Open(c, s, npcid == SuyiMarket ? Suyi : npcid == EliseMarket ? Elise : npcid); } catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
 

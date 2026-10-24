@@ -5,7 +5,7 @@
 //  AntonioTexts.cs); this client`s Questinfo has no 7978-7984 entries, so the client can`t list them as quests. They are
 //  played here as a server-side story: every chapter is a list of steps (talk pages with the official texts and options,
 //  searches with the official messages, fights with the official Discord Group monsters), progress per character in
-//  Infinity[DB]\BandsTrouble\players.json (keys ant_ch / ant_st / ant_pg), saved before anything is given.
+//  Data\BandsTrouble\players.json (keys ant_ch / ant_st / ant_pg), saved before anything is given.
 //  Maps: 7978-7979 Antonio`s home = official instance 1003043 (doc 12547 family, contiguous BandsTrouble block 12544..12549,
 //  maps.txt), 7980-7984 the Stage 1003045 (doc 12549). The NPCs are festival NPCs on those maps (npcs.txt 8851013-8851028).
 //  DERIVED (README): the order of the steps where the texts don`t say it, the NPC cells, the PROXY meshes of Antonio /
@@ -286,7 +286,7 @@ namespace Qahr.Mobile.BandsTrouble
                 }
                 return mob;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return null; }
+            catch (Exception e) { MyConsole.SaveException(e); return null; }
         }
     }
 }

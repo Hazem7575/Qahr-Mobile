@@ -501,7 +501,7 @@ namespace Qahr.Mobile.GiftCenter
                     }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ================================================================== packet entry points
@@ -515,7 +515,7 @@ namespace Qahr.Mobile.GiftCenter
                 try { req = stream.ProtoBufferDeserialize(new GcPresentPB()); } catch { return; }
                 Handle2423(client, req);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         /// <summary>Called from the 2050 handler (MY System\Unanswered\B7\B7Social.cs).</summary>
@@ -528,7 +528,7 @@ namespace Qahr.Mobile.GiftCenter
                 try { req = stream.ProtoBufferDeserialize(new GcPresentListPB()); } catch { return; }
                 Handle2050(client, req);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         /// <summary>Called from the 2090 handler (MY System\Unanswered\B7\B7Social.cs).</summary>
@@ -541,7 +541,7 @@ namespace Qahr.Mobile.GiftCenter
                 try { req = stream.ProtoBufferDeserialize(new GcPresentUserPB()); } catch { return; }
                 Handle2090(client, req);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
     }
 }

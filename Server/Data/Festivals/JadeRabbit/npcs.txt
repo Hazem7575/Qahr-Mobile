@@ -1,5 +1,5 @@
 # JadeRabbit (2026-10-14). Format id,type,mesh,map,x,y  - every NPC of these quests is -1 (instance NPC) in Questinfo -> festival range 8865xxx.
-# Maps = the official ids (Infinity[DB]\FestivalMaps\maps.txt: 1003074 -> doc 12599 ninja02_new, 1003075 -> 12600 gsjx05_new, 1003078 -> 12603 2019midaut01_new).
+# Maps = the official ids (Data\FestivalMaps\maps.txt: 1003074 -> doc 12599 ninja02_new, 1003075 -> 12600 gsjx05_new, 1003078 -> 12603 2019midaut01_new).
 #   They are used directly as shared event maps (nothing else stands on them), like LunarNewYear2023.
 # Positions = client Questinfo.ini (official), every cell walkable (r0) on the server DMap, no NPC within 3 cells.
 # Meshes = client npc.ini [NpcTypeN] x10, exact names AND the 2024 event tags:

@@ -201,7 +201,7 @@ namespace Qahr.Mobile.ServerSockets
                 {
                     if (Alive)
                     {
-                        // [PacketLogger] server->client, plaintext (before encryption). Off unless Infinity[DB]\packetlog.txt exists.
+                        // [PacketLogger] server->client, plaintext (before encryption). Off unless Data\packetlog.txt exists.
                         if (PacketLogger.Enabled)
                             PacketLogger.Log(true, Game, msg.Memory, msg.Size);
                         PerfMetrics.PacketOut(msg.Size);

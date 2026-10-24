@@ -323,7 +323,7 @@ namespace Qahr.Mobile.Lottery
                 try { req = stream.ProtoBufferDeserialize(new LtCardsOptPB()); } catch { return; }
                 Handle2102(client, req);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         /// <summary>Called from the 2069 handler in MY System\Unanswered\B1\B1Rankings.cs.</summary>

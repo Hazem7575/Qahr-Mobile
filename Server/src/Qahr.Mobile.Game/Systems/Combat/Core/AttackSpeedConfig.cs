@@ -1,5 +1,5 @@
 // ============================================================================
-//  [AttackSpeed] Data-driven melee/auto-attack pace, tuned from Infinity[DB]\attackspeed.txt - SWITCHABLE.
+//  [AttackSpeed] Data-driven melee/auto-attack pace, tuned from Data\attackspeed.txt - SWITCHABLE.
 //
 //  Background: Role\Instance\Equip.cs AttackSpeed(bool) returned the ms between swings. As written it was
 //  effectively always 200 ms (a 200 floor clamp applied right after a 200 base), so weapon Frequency, the
@@ -9,7 +9,7 @@
 //  OFF by default (missing file OR atk_speed=0 = the old hard-coded behaviour runs instead). See
 //  attackspeed.sample.txt. Equip.AttackSpeed only calls Compute() when Config.Enabled is true.
 //
-//  Config: Infinity[DB]\attackspeed.txt
+//  Config: Data\attackspeed.txt
 //      atk_speed=0|1            master switch (0 = this file does nothing, old code runs)
 //      base=800                 global base delay (ms) before any reduction
 //      floor=200                never return less than this (ms); the skill overrides below ignore it

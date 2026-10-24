@@ -1,5 +1,5 @@
 # Live packet stream for PacketStudio (PacketLogger.cs -> PacketStream)
-# To turn it ON: copy this file as  packetstream.txt  in the same folder (Infinity[DB]) and set a secret.
+# To turn it ON: copy this file as  packetstream.txt  in the same folder (Data) and set a secret.
 # To turn it OFF: delete packetstream.txt. Takes effect within 3 seconds (after the server was built
 # with this feature and restarted once).
 #

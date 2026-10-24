@@ -13,7 +13,7 @@
 //             CastleBeat2023_SweepCastle i; CastleBeat2023_StrategyRewardView i -> DlgSenluoPalaceRewardUi_OpenViewData;
 //             CastleBeat2023_StrategyReward i; Halloween2023Lord_OpenBossPage -> DlgSenluoBossDetailUi_OpenViewData;
 //             Halloween2023Lord_Into / Halloween2023Lord_Sweep; CastleBeat2023_BossEffectReturn (ack, nothing to do).
-//  The gameplay is in HsZones.cs; numbers that the client does not carry are in Infinity[DB]\HalloweenSenluo2023\config.json.
+//  The gameplay is in HsZones.cs; numbers that the client does not carry are in Data\HalloweenSenluo2023\config.json.
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10311), one tagged line (unchanged).
 // ============================================================================
 using System;

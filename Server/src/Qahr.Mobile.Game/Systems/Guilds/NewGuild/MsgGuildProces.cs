@@ -183,7 +183,7 @@ namespace Qahr.Mobile.Game.MsgServer
                         user.Player.MyGuild.Info.SilverFund += (long)UID;
                         user.Player.MyGuild.SendThat(user.Player);
                         user.Player.MyGuild.AddMessage("STR_SYNDICATE_EVENT_DONATE_MONEY@@" + user.Player.Name + "@@" + UID.ToString() + "@@");
-                        if (global::Qahr.Mobile.Phone.MobileEvents.IsMobile(user)) user.Send(stream.GuildRequestCreate(MsgGuildProces.GuildAction.SilverDonate, UID, new int[4]));// QahrMobile: the echo makes CMsgSyndicate::Process show the tip, count the daily attempt (CHero::SetSynDonateNum) and refresh the donation window
+                        if (global::Qahr.Mobile.Phone.MobileClient.Is(user)) user.Send(stream.GuildRequestCreate(MsgGuildProces.GuildAction.SilverDonate, UID, new int[4]));// QahrMobile: the echo makes CMsgSyndicate::Process show the tip, count the daily attempt (CHero::SetSynDonateNum) and refresh the donation window
                         break;
                     }
                 case MsgGuildProces.GuildAction.Show:
@@ -202,7 +202,7 @@ namespace Qahr.Mobile.Game.MsgServer
                         user.Player.MyGuild.Info.ConquerPointFund += UID;
                         user.Player.MyGuild.SendThat(user.Player);
                         user.Player.MyGuild.AddMessage("STR_SYNDICATE_EVENT_DONATE_EMONEY@@" + user.Player.Name + "@@" + UID.ToString() + "@@");
-                        if (global::Qahr.Mobile.Phone.MobileEvents.IsMobile(user)) user.Send(stream.GuildRequestCreate(MsgGuildProces.GuildAction.CpDonate, UID, new int[4]));// QahrMobile: echo, as for the silver donation
+                        if (global::Qahr.Mobile.Phone.MobileClient.Is(user)) user.Send(stream.GuildRequestCreate(MsgGuildProces.GuildAction.CpDonate, UID, new int[4]));// QahrMobile: echo, as for the silver donation
                         break;
                     }
                 case MsgGuildProces.GuildAction.RequestAllied:

@@ -84,7 +84,7 @@ namespace Qahr.Mobile.PuppetTheater
                     }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             PT.Msg(c, "This part of Strings of Terror isn`t open on this server.");
             return true;
         }

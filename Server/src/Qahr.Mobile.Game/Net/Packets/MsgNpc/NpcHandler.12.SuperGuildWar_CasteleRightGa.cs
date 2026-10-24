@@ -2988,7 +2988,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 1:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
 
@@ -6635,7 +6635,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 1:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
                 case 2:

@@ -22,12 +22,12 @@
    - Daily Sign-in Pack: مرة في اليوم.
    - 100 / 200 Active Points Pack: مرة في اليوم لكل واحدة (بنقرا الـ ActivityPoints الحقيقية).
    - CP Mall: رسالة إن صناديق الشجاعة مش بتتباع هنا.
-7. **الصناديق** (لو حد معاه): +Stone / Star / Stone / Awakening / Contribution Courage Box، وRandom Pearl Pack، وCourage Pack. بتتفتح بالمحتوى المكتوب في نص الأيتم الرسمي. الملف: `Infinity[DB]\MayAdventure2023\boxes.json`.
+7. **الصناديق** (لو حد معاه): +Stone / Star / Stone / Awakening / Contribution Courage Box، وRandom Pearl Pack، وCourage Pack. بتتفتح بالمحتوى المكتوب في نص الأيتم الرسمي. الملف: `Data\MayAdventure2023\boxes.json`.
 
 ## الرسمي والمشتق
 **رسمي:** شكل اللوحة وأنواع الخانات، تكلفة 1/5 توكن، 30 نقطة لكل مغامرة، الشروط ورسايلها، أصناف الجوايز (المعاينة ونصوص الأيتمز ولوا الشوب)، جوايز وشرايح الترتيب، محتوى الصناديق الثابتة.
 
-**مشتق (في `Infinity[DB]\MayAdventure2023\mayadventure.json`):** أوزان وكميات الجوايز، حد 60 خطوة في اليوم، أسعار وحدود الشوب، 10 نقط لكل سحب، توكنز الـ Sign-in (2) والـ Active Points (3 و5)، وأوزان الصناديق العشوائية. كوبونات الـ CPs بتاعة May Sale 2023 اتشالت لأن المهرجان ده مش موجود عندنا.
+**مشتق (في `Data\MayAdventure2023\mayadventure.json`):** أوزان وكميات الجوايز، حد 60 خطوة في اليوم، أسعار وحدود الشوب، 10 نقط لكل سحب، توكنز الـ Sign-in (2) والـ Active Points (3 و5)، وأوزان الصناديق العشوائية. كوبونات الـ CPs بتاعة May Sale 2023 اتشالت لأن المهرجان ده مش موجود عندنا.
 
 ## مش ممكن ولي
 - **مشاهد المغامرات** (Zombie Master، Ghost Fire House، ...): هي المهام 5924-5933 ومالهاش ماب في الكلاينت، فالمغامرة بتخلص فورًا بجايزتها.
@@ -36,5 +36,5 @@
 
 ## الملفات
 - **الكود:** `Base\MayAdventure2023\MayAdventure2023Ui.cs` و`MayAdventureCore.cs` و`FestivalBoxOpen.cs` و`AnnivKit.cs` (أدوات مشتركة لمجموعة الذكرى السنوية).
-- **الحالة:** `Infinity[DB]\MayAdventure2023\players.txt` و`ranks.txt`.
+- **الحالة:** `Data\MayAdventure2023\players.txt` و`ranks.txt`.
 - **الهوكات:** سطر LuaPush (msg 10236) زي ما هو، وسطر جديد في `MsgItemUsuagePacket.cs` لفتح الصناديق.

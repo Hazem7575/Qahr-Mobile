@@ -9,7 +9,7 @@
 //    Lord Anthony (npc.ini 10029, tLover2025Kua_DelText[34030]): the stories; after a chat he gives a key ([Sys][ADNTip]).
 //    Item texts: Castle Key "Use to enter the castle and obtain treasures"; Fine box = 10 + 1 keys; Grand box = 50 + 5 keys;
 //        Romantic Parasol / Flute / String Box = choose one of the named items; Romantic Pet Box = the 3 pets of Suyi's text.
-//  DERIVED (Infinity[DB]\CastleMystery\castle.json): the treasure table of a Castle Key (Chocolate Candy amounts + odds,
+//  DERIVED (Data\CastleMystery\castle.json): the treasure table of a Castle Key (Chocolate Candy amounts + odds,
 //  Castle Points per key), Anthony's key once a day, NPC spots in Twin City. Not here: Love Garden / rankings (cross-server
 //  "Kua" parts), the Castle Key draw window (no 2025 DlgID data in this client).
 //  Every grant: bag space first, cost taken first, state recorded before the give, per-player throttle.
@@ -50,7 +50,7 @@ namespace Qahr.Mobile.CastleMystery
             public List<Draw> Table = new List<Draw> { new Draw { Candy = 20, Weight = 600 }, new Draw { Candy = 50, Weight = 250 }, new Draw { Candy = 100, Weight = 100 }, new Draw { Candy = 300, Weight = 40 }, new Draw { Candy = 1000, Weight = 10 } };
         }
         static Config _cfg; static string _stamp;
-        static string DataDir { get { return Path.Combine(Program.ServerConfig.DbLocation, "CastleMystery"); } }
+        static string DataDir { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "CastleMystery"); } }
         public static Config Cfg
         {
             get
@@ -241,7 +241,7 @@ namespace Qahr.Mobile.CastleMystery
                 if (Throttled(c.Player.UID, 300)) return true;
                 if (npcid == Suyi) SuyiDialog(c, stream, option); else AnthonyDialog(c, stream, option);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
 
@@ -455,7 +455,7 @@ namespace Qahr.Mobile.CastleMystery
                 c.ActiveNpc = item.ITEM_ID;
                 ItemDialog(c, stream, item.ITEM_ID, 0);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
         public static bool OnItemDialog(Client.GameClient c, ServerSockets.Packet stream, uint npcid, byte option, string input)
@@ -469,7 +469,7 @@ namespace Qahr.Mobile.CastleMystery
                 if (Throttled(c.Player.UID, 300)) return true;
                 ItemDialog(c, stream, npcid, option);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
         static void ItemDialog(Client.GameClient c, ServerSockets.Packet stream, uint id, byte option)

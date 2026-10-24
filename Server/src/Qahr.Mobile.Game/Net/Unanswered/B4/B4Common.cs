@@ -82,7 +82,7 @@ namespace Qahr.Mobile.Unanswered.B4
 
         public static void Log(Exception e)
         {
-            try { MyConsole.SaveException(e); } catch { }
+            MyConsole.SaveException(e);
         }
     }
 }

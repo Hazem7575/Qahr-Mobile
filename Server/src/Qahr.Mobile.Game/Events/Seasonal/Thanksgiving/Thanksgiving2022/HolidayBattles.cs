@@ -126,7 +126,7 @@ namespace Qahr.Mobile.Thanksgiving2022
                 foreach (var run in _runs.Values.ToArray())
                 {
                     try { Step(run); }
-                    catch (Exception e) { try { MyConsole.SaveException(e); } catch { } Finish(run, false); }
+                    catch (Exception e) { MyConsole.SaveException(e); Finish(run, false); }
                 }
             }
             finally { Monitor.Exit(_tickLock); }
@@ -173,7 +173,7 @@ namespace Qahr.Mobile.Thanksgiving2022
             lock (run.Mobs) { foreach (var m in run.Mobs) { try { World.Remove(m); } catch { } } run.Mobs.Clear(); }
             var c = World.Online(run.Owner);
             if (!ok && c != null && !string.IsNullOrEmpty(run.Spec.FailText)) HKit.Center(c, run.Spec.FailText);
-            try { if (run.Done != null) run.Done(run, ok); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            try { if (run.Done != null) run.Done(run, ok); } catch (Exception e) { MyConsole.SaveException(e); }
             if (c != null && c.Player != null && World.Inside(c, run.Spec.Map, run.Dyn))
             {
                 uint map = run.BackMap; ushort x = run.BackX, y = run.BackY;

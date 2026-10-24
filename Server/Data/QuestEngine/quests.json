@@ -3849,7 +3849,7 @@
      "min": 1
     }
    ],
-   "_note": "Prequest=4177 (itself) in both server and client data -> can never be accepted; integrator: set Prequest=0 in Infinity[DB]\\Questinfo.ini [4177]. Archive unlock is done by the Trojan NPC option 4 (HundredWeapons.Unlocked).",
+   "_note": "Prequest=4177 (itself) in both server and client data -> can never be accepted; integrator: set Prequest=0 in Data\\Questinfo.ini [4177]. Archive unlock is done by the Trojan NPC option 4 (HundredWeapons.Unlocked).",
    "prequest": "0",
    "engine": false,
    "engineV2": "auto",
@@ -9378,7 +9378,7 @@
   },
   "11478": {
    "_name": "Almighty Warrior - Warlord Advent",
-   "_note": "DATA BUG: Prequest=11502 (the Nostalgia Hero Trace) -> normal-server players who finish 11477 can never accept 11478. Integrator: set Prequest=11477|11502 in Infinity[DB]\\Questinfo.ini [11478].",
+   "_note": "DATA BUG: Prequest=11502 (the Nostalgia Hero Trace) -> normal-server players who finish 11477 can never accept 11478. Integrator: set Prequest=11477|11502 in Data\\Questinfo.ini [11478].",
    "prequest": "11477|11502",
    "engine": false,
    "engineV2": "auto",

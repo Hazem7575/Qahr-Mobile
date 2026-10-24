@@ -1,6 +1,6 @@
 // ============================================================================
 //  [DreamTheater] the parts of the official 2024 "Dream Theater / Swan Lake Romance" event that are not plain quests.
-//  Spec: tools\Festivals\DreamTheater_OFFICIAL_AR.md. Data: Infinity[DB]\Festivals\DreamTheater\ (theater.json + quests.json).
+//  Spec: tools\Festivals\DreamTheater_OFFICIAL_AR.md. Data: Data\Festivals\DreamTheater\ (theater.json + quests.json).
 //
 //  - click mini-games of the festival quests (official texts of client ini\Server_Key.lua tPlotEditorPlotEvent_DelText):
 //      5739 herbs ("Collecting.....", 3 herb NPCs)            -> QuestEngine event "dtHerb"
@@ -14,9 +14,9 @@
 //      (>= 30000 points, settled Mar 25 08:00, claimed at Agnes until the event ends).
 //      Odette (theater): the daily performance after the two daily contracts -> Settlement (Theater Points, Funds, Silver Coins).
 //  Everything works only while the festival "DreamTheater" runs. Choices come only from this module's own dialog state; every
-//  reward checks bag space first and is recorded before it is given (state Infinity[DB]\Festivals\_dreamtheater\state.json).
+//  reward checks bag space first and is recorded before it is given (state Data\Festivals\_dreamtheater\state.json).
 //
-//  Hooks (one line each, outside Base\Festivals / Base\QuestEngine):
+//  Hooks (one line each, outside Events\Framework / Systems\Quests\Engine):
 //      MY System\Program.cs  before FestivalManager.Start()  -> DreamTheaterModule.Init();
 //      Game\MsgNpc\Procesor.cs before FestivalManager.OnNpc   -> if (DreamTheaterModule.OnNpc(...)) return;
 // ============================================================================
@@ -79,7 +79,7 @@ namespace Qahr.Mobile.DreamTheater
             catch (Exception e)
             {
                 MyConsole.WriteLine("[DreamTheater] init failed (module off): " + e.Message, ConsoleColor.Yellow);
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
         }
 
@@ -310,7 +310,7 @@ namespace Qahr.Mobile.DreamTheater
                 MailRanking();
                 if (_dirty) SaveState(); SweepDuels();
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
         static void Log(Client.GameClient c, string what)
         {
@@ -410,7 +410,7 @@ namespace Qahr.Mobile.DreamTheater
         public static bool OnNpc(Client.GameClient c, ServerSockets.Packet stream, uint npcid, byte option, string input)
         {
             if (c == null || c.Player == null || npcid < 32606) return false;
-            try { if (option == 0 && Running && Reenter(c, npcid)) return true; } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            try { if (option == 0 && Running && Reenter(c, npcid)) return true; } catch (Exception e) { MyConsole.SaveException(e); }
             bool ours = npcid == Agnes || npcid == Odette || npcid == UntamedHorse || npcid == DocileHorse || npcid == TheaterJenkins
                         || HerbNpcs.Contains(npcid) || CleanNpcs.Contains(npcid) || GlassNpcs.Contains(npcid);
             if (!ours) return false;
@@ -440,7 +440,7 @@ namespace Qahr.Mobile.DreamTheater
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
                 return false;
             }
         }
@@ -819,7 +819,7 @@ namespace Qahr.Mobile.DreamTheater
         }
         /// <summary>[DreamTheater 2026-10-15] Official tWhiteDayLua Email: once the ranking is frozen every listed player gets a system mail
         /// (title "Dream Ranking", Content[n]) with 1 Dream Splendid/Starry/Glowy/Lucky Box, through the mailbox engine
-        /// (Base\AdminApi\AdminApi.Compensate.cs CompEngine: once per player in MySQL, queued for offline players). Sent once a season.</summary>
+        /// (Admin\AdminApi\AdminApi.Compensate.cs CompEngine: once per player in MySQL, queued for offline players). Sent once a season.</summary>
         public static int MailRanking()
         {
             var cfg = Cfg;
@@ -853,7 +853,7 @@ namespace Qahr.Mobile.DreamTheater
                     try { Festivals.FestivalManager.Log("THEATER", Key, rank[i].Uid + " " + rank[i].Name + " | ranking No." + no + " (" + rank[i].Points + " pts) mailed " + rr.Box); } catch { }
                     sent++;
                 }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                catch (Exception e) { MyConsole.SaveException(e); }
             }
             SaveState();
             return sent;
@@ -1096,7 +1096,7 @@ namespace Qahr.Mobile.DreamTheater
                     if (!Running) return;
                     using (var rec = new ServerSockets.RecycledPacket()) effect(rec.GetStream());
                 }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                catch (Exception e) { MyConsole.SaveException(e); }
             });
         }
 

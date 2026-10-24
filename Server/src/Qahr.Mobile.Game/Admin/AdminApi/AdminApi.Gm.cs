@@ -4,7 +4,7 @@
 //  op "listgms"   -> the online staff characters (who can run a command).
 //  op "runcommand"-> {"as":"<online GM name or uid>","command":"@level 140"[,"caller":"GmStudio@PC"]}
 //     Runs the text through MsgMessage.ChatCommands(client, msg) exactly as if that GM typed it in
-//     chat: same staff check (IsStaffAccount, or the legacy "[GM]" name rule ChatCommands uses),
+//     chat: same staff check (IsStaffAccount, the account State),
 //     same owner gates (client.IsOwner inside the commands), same chat-ban refusal as MsgHandler,
 //     same GM chat log (ServerLogs.AddChatLog). Like every other AdminApi op it runs on the single
 //     AdminApi thread, the way chat commands run on the GM's socket thread.
@@ -50,7 +50,7 @@ namespace Qahr.Mobile.AdminApi
                 for (int i = 0; i < body.Length; i++) body[i] = m[4 + i];
                 AddCaptured(body);
             }
-            catch { }
+            catch (Exception err) { MyConsole.SaveException(err); }
         }
 
         internal static void CaptureOutgoing(Client.GameClient client, byte[] buffer)
@@ -67,7 +67,7 @@ namespace Qahr.Mobile.AdminApi
                 Buffer.BlockCopy(buffer, 4, body, 0, body.Length);
                 AddCaptured(body);
             }
-            catch { }
+            catch (Exception err) { MyConsole.SaveException(err); }
         }
 
         private static void AddCaptured(byte[] protoBody)
@@ -86,7 +86,7 @@ namespace Qahr.Mobile.AdminApi
         /// <summary>The exact gate MsgMessage.ChatCommands uses for the GM command block.</summary>
         internal static bool CanUseGmCommands(Client.GameClient c)
         {
-            return c != null && c.Player != null && (c.IsStaffAccount || (c.Player.Name ?? "").Contains("[GM]"));
+            return c != null && c.Player != null && c.IsStaffAccount;
         }
 
         private static Dictionary<string, object> GmRow(Client.GameClient c)
@@ -114,7 +114,7 @@ namespace Qahr.Mobile.AdminApi
             var list = new List<object>();
             foreach (var c in OnlineGms())
             {
-                try { list.Add(GmRow(c)); } catch { }
+                try { list.Add(GmRow(c)); } catch (Exception err) { MyConsole.SaveException(err); }
             }
             var d = Ok(list.Count == 0 ? "no staff GM is online" : list.Count + " staff GM(s) online");
             d["gms"] = list;

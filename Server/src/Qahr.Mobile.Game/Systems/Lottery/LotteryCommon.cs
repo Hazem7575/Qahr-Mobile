@@ -2,7 +2,7 @@
 // config file, crypto RNG, per-client throttle, the prize ledger + pending-delivery store, and the log.
 //
 // Prizes are never given straight from a draw. Every win is first written to the append-only ledger
-// (Infinity[DB]\Lottery\_wins.log) and to pending.txt, then delivered. Delivery marks the prize delivered and saves
+// (Data\Lottery\_wins.log) and to pending.txt, then delivered. Delivery marks the prize delivered and saves
 // BEFORE the item is added, so a crash / duplicate packet / relog can lose nothing and repeat nothing. A full bag keeps
 // the prize pending and it is delivered automatically when there is room (official Server_Cn_Res
 // STR_GLOBALLOTTERY_BACKPACK_FULL / STR_CARDSLOTTERY_BACKPACK_FULL: "...login again to receive a reward").

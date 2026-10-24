@@ -1,9 +1,0 @@
-# Server run mode. Copy this file as  servermode.txt  in Infinity[DB]\ to change the mode.
-# If servermode.txt is missing, the server runs as PRODUCTION (safe default: test tools locked).
-#
-#   mode=development   -> developer/test tools are ALLOWED (e.g. the PacketStudio packet injector)
-#   mode=production    -> all test tools are LOCKED, even if their own config files exist
-#
-# Re-read at most every 5 seconds, so you can switch without a restart.
-
-mode=production

@@ -11,7 +11,7 @@ namespace Qahr.Mobile.ServerTools
     /// Opens the ScriptHazem tools (tools\*\publish\*.exe) on the server PC.
     /// In game: "@tool" (owner account only) shows a dialog listing the tools; in the console: "tool" lists them,
     /// "tool &lt;number|name&gt;" opens one. The tools folder is found by walking up from the server exe
-    /// (Sourse\tools), or set in Infinity[DB]\tools.ini: "Folder=D:\path\to\tools".
+    /// (Sourse\tools), or set in Data\tools.ini: "Folder=D:\path\to\tools".
     /// A tool that is already running is brought to the front instead of opened twice.
     /// </summary>
     public static class ToolLauncher
@@ -130,7 +130,7 @@ namespace Qahr.Mobile.ServerTools
             var list = List();
             if (list.Count == 0)
             {
-                MyConsole.WriteLine("[tool] No tools found. Put Folder=<tools path> in Infinity[DB]\\tools.ini", ConsoleColor.Yellow);
+                MyConsole.WriteLine("[tool] No tools found. Put Folder=<tools path> in Data\\tools.ini", ConsoleColor.Yellow);
                 return;
             }
             if (args.Length < 2)

@@ -20,7 +20,7 @@
 //  NOT on this server (answered with a system message, nothing invented): the seven Sword Realm instances (their NPC
 //  types and wave/aura monsters exist in no client data with a look; the prize items 3356909 / 3356910 exist in no
 //  itemtype), Qixi Points, the ranking, the Sword Forge and the Sword Bond Store.
-//  Config (derived values): Infinity[DB]\SwordSaga\swordsaga.json (optional).
+//  Config (derived values): Data\SwordSaga\swordsaga.json (optional).
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10950 + 10511 enter button), tagged.
 // ============================================================================
@@ -54,7 +54,7 @@ namespace Qahr.Mobile.SwordSaga
             public int RealmsPerDay = 3;
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "SwordSaga", "swordsaga.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "SwordSaga", "swordsaga.json"); } }
         public static Config Cfg
         {
             get

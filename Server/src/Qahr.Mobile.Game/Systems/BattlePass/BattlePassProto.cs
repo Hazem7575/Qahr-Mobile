@@ -111,7 +111,7 @@ namespace Qahr.Mobile.BattlePass
                 if (req == null) return;
                 BattlePassManager.OnClientMsg(client, req);
             }
-            catch (System.Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (System.Exception e) { MyConsole.SaveException(e); }
         }
 
         [PacketAttribute(Game.GamePackets.MsgBattlePassTask)]
@@ -124,7 +124,7 @@ namespace Qahr.Mobile.BattlePass
                 if (req == null) return;
                 BattlePassManager.OnClientTaskMsg(client, req);
             }
-            catch (System.Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (System.Exception e) { MyConsole.SaveException(e); }
         }
     }
 }

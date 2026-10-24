@@ -17,9 +17,9 @@ namespace Qahr.Mobile.FragmentWheel
     /// [Souvenir Medal Fragment] (itemtype 3327170), 1 EXP per spin, first spin of every level is free,
     /// prizes = Super Gem / Dragon Ball (B) / +4 Stone (B).
     /// Derived (not in the client): prize weights/counts per level, EXP only from the current level's wheel,
-    /// min player level, cooldowns -> Infinity[DB]\FragmentWheel\config.json (re-read when the file changes).
+    /// min player level, cooldowns -> Data\FragmentWheel\config.json (re-read when the file changes).
     ///
-    /// State per character (wheel level, EXP, free spin used) -> Infinity[DB]\FragmentWheel\state.txt
+    /// State per character (wheel level, EXP, free spin used) -> Data\FragmentWheel\state.txt
     /// (append-only journal "uid|level|exp|freeUsed|seq", the last line of a uid wins, compacted at load).
     ///
     /// Security: uid from client.Player.UID only; the option byte is checked against the menu the server itself
@@ -54,14 +54,14 @@ namespace Qahr.Mobile.FragmentWheel
         public static void Daisy(Client.GameClient client, ServerSockets.Packet stream, byte Option, string Input, uint id)
         {
             try { OnDaisy(client, stream, Option); }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [NpcAttribute((NpcID)WheelId)]
         public static void Wheel(Client.GameClient client, ServerSockets.Packet stream, byte Option, string Input, uint id)
         {
             try { OnWheel(client, stream, Option); }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         const string Line = "—————————————————————————————\n";
@@ -241,7 +241,7 @@ namespace Qahr.Mobile.FragmentWheel
                 // 2) grant through the normal item path (stack/bound handled there)
                 bool ok = false;
                 try { ok = c.Inventory.AddItemWitchStack(prizeItem, 0, (ushort)prize.Count, stream, prize.Bound); }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                catch (Exception e) { MyConsole.SaveException(e); }
                 string itemName = ItemName(prizeItem);
                 Log(c, string.Format("spin L{0} {1} cost={2} wheel {3}:{4}->{5}:{6}{7} prize={8}x{9} ({10}{11}) grant={12}",
                     lv, free ? "FREE" : "paid", cost, oldLevel, oldExp, ns.Level, ns.Exp, levelUp ? " LEVEL-UP" : "",

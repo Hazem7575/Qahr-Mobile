@@ -161,7 +161,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 1:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         client.CreateBoxDialog("You`re~in~Twin~City,~300~years~ago.");
                         break;
                     }
@@ -596,7 +596,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 1:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         client.CreateBoxDialog("You`re~in~Twin~City,~300~years~ago.");
                         break;
                     }
@@ -7567,12 +7567,12 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 1:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
                 case 2:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
 
@@ -7596,12 +7596,12 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 1:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
                 case 2:
                     {
-                        client.Teleport(410, 354, 1036);
+                        client.Teleport(Places.Market);
                         break;
                     }
 

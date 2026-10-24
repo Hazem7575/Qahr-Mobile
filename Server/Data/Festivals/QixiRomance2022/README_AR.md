@@ -15,7 +15,7 @@
 
 ## رسمي ولا مشتق
 - **رسمي:** كل الأيتمز والجوايز والكميات، تكلفة الأغاني، العزف المجاني اليومي، جدول الورد والحد اليومي، مراحل Love Points، حد الترتيب، النصوص.
-- **مشتق (في `Infinity[DB]\QixiRomance2022\qixiromance2022.json`):**
+- **مشتق (في `Data\QixiRomance2022\qixiromance2022.json`):**
   - نسبة كل تصليح 4% (ده الرقم الافتراضي اللي في كود الكلاينت نفسه) = 25 تصليح للجزء.
   - النقط: 100 لكل تصليح/صيانة/Plectrum.
   - احتمالات الجوايز (weights)، وأقصى عدد في Maintain all = 50.
@@ -37,7 +37,7 @@
 - هوكين جداد (سطر واحد لكل واحد):
   - `Game\MsgNpc\Procesor.cs` → `QixiKit.Hooks.OnNpc`.
   - `MY System\MsgItem\MsgItemUsuagePacket.cs` → `QixiKit.Hooks.UseItem`.
-- حالة اللاعبين: `Infinity[DB]\QixiRomance2022\players.txt` (موسم لكل سنة).
+- حالة اللاعبين: `Data\QixiRomance2022\players.txt` (موسم لكل سنة).
 
 ## IDs محجوزة لمجموعة Qixi
 - NPCs: `8872000-8872199` (2022 = 8872001-8872009).

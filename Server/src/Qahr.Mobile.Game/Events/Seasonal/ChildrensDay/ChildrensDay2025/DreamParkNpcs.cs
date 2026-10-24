@@ -1,11 +1,11 @@
 // ============================================================================
-//  [ChildrensDay2025 2026-10-15] Dream Park NPCs (placed by Infinity[DB]\Festivals\ChildrensDay2025\npcs.txt, ids 8866001-8866013):
+//  [ChildrensDay2025 2026-10-15] Dream Park NPCs (placed by Data\Festivals\ChildrensDay2025\npcs.txt, ids 8866001-8866013):
 //    8866001 Suyi (official NpcX 110102, script tChildren2025Npc[34299]) Twin City: guide + today's progress, Open Dream Park,
 //            Dream Store (official NewExchangeShopInfo[342501]), VIP Dream Store ([342502], needs 15000 Dream Points), points & ranking.
 //    8866002 Prince Puff (NpcX 110104, tChildrenDay2025Part5[34250]) Twin City: park merchandise (EmoneySaleShopInfo[34250], CPs).
 //    8866003 Flora (NpcX 110103, tChildren2025Npc[34300]) Vault Palace 12818: Starlight Blessing progress, back to Twin City.
 //    8866011..13 Saluting Gun / Firework / Balloon (npc.ini 10181/10182/10183) Vault Palace: the 3 daily Starlight Blessings.
-//  Texts = official Server_Key lines. Goods/prices/limits = official tables (Infinity[DB]\ChildrensDay2025\stores.json).
+//  Texts = official Server_Key lines. Goods/prices/limits = official tables (Data\ChildrensDay2025\stores.json).
 //  DERIVED: NPC spots (no official coordinates in the client; walkable cells checked on the DMap), the Starlight Blessing
 //  "mystery reward" (= 1 Starwish Pack, an official event item), store limits counted per character per festival run.
 //  Routing: one hook line in Game\MsgNpc\Procesor.cs before FestivalManager.OnNpc (these ids are festival NPCs).
@@ -102,7 +102,7 @@ namespace Qahr.Mobile.ChildrensDay2025
                     Route(c, stream, cfg, npcid, p, option);
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
 

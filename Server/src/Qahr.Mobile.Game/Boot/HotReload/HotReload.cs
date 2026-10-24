@@ -13,7 +13,7 @@
 //      reloaddrops     drops.txt        -> file drop switch / rates ([FileDrops], Game\Monster\FileDrops.cs)
 //      reloadall       npcs + portals + shops + items + monsters + drops
 //  Triggers: server console (reloadnpcs ...), in-game owner command (@reloadnpcs ...), AdminApi op
-//  (same names, returns the summary JSON) and an optional FileSystemWatcher (Infinity[DB]\hotreload.txt).
+//  (same names, returns the summary JSON) and an optional FileSystemWatcher (Data\hotreload.txt).
 //
 //  Safety rules:
 //  - One reload at a time (lock Sync). Every reload is wrapped: an error aborts it and is logged; it never
@@ -24,7 +24,7 @@
 //  - Shared tables are replaced by publishing a fully built new object (reference swap) or by updating fields of
 //    existing objects in place; no Dictionary that packet threads read is mutated while they may read it.
 //  - Player data is never touched.
-//  Every reload is appended to Infinity[DB]\hotreload_log.txt.
+//  Every reload is appended to Data\hotreload_log.txt.
 // ============================================================================
 using System;
 using System.Collections.Generic;
@@ -166,7 +166,7 @@ namespace Qahr.Mobile.HotReload
             {
                 result.Ok = false;
                 result.Error = "server error: " + e.Message;
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
             finally
             {
@@ -316,7 +316,7 @@ namespace Qahr.Mobile.HotReload
         private static int _debounceMs = 1000;
 
         /// <summary>
-        /// Reads Infinity[DB]\hotreload.txt (optional). Everything is OFF by default:
+        /// Reads Data\hotreload.txt (optional). Everything is OFF by default:
         ///   watch_npcs=1  watch_portals=1  watch_shops=1  watch_items=1  watch_monsters=1  debounce_ms=1000
         /// When a watched file changes, the matching reload runs ~debounce_ms after the last change.
         /// </summary>

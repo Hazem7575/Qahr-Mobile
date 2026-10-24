@@ -1,64 +1,333 @@
-[10:09:44] [Perf] ThreadPool min threads: worker=100 iocp=100 (cores=24)
-[10:09:44] Please Wait The Sourse is Loading ...
-[10:09:44] [Migrate] database `qahr_mobile` is ready.
-[10:09:44] [Storage] Player binary storage ready (blob mode; normalized mirror tables removed).
-[10:09:44] [Storage] Social mirror tables ready (guilds/unions/clans, 8 tables).
-[10:09:44] [Storage] Async DB mirror ON (2 workers, max queue 20000)
-[10:09:44] [Migrate] no Migrations folder found next to the exe or in the source tree - only the tracking table was ensured.
-[10:09:44] [Migrate] 3 already applied, 0 new, 0 file(s) total.
-[10:09:44] [Storage] Player read source: Db
-[10:09:44] [Storage] Player backend: MySql (players table ready, 270 cols)
-[10:09:45] [FileDrops] file drops OFF (no drops.txt).
-[10:09:45] [FestivalMaps] 96 official festival map ids loaded from maps.txt
-[10:09:45] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
-[10:09:45] [QuestEngine] 4247 quests, 5225 objectives (89.7% typed: Talk=2460 Kill=1190 Collect=659 Gather=8 Visit=254 Unknown=539 State=76 Event=25 Counter=12 KillPoints=2), engine-owned 3684 (workable 1886), hand-coded 420 (engine kill counting for 180), quests.json entries 1582, talk slots fixed 96, chain prizes trimmed 58, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 2
-[10:09:46] [QuizShow] quiz data loaded.
-[10:09:46] [Modules] loaded module: QuizShow v1.0
-[10:09:46] [RechargeShop] recharge-shop data loaded.
-[10:09:46] [Modules] loaded module: RechargeShop v1.0
-[10:09:46] [ShareVIP] shared-VIP list loaded.
-[10:09:46] [Modules] loaded module: ShareVIP v1.0
-[10:09:46] [VoteSystem] vote data loaded.
-[10:09:46] [Modules] loaded module: VoteSystem v1.0
-[10:09:46] [Modules] loaded module: FestivalIcons v1.0
-[10:09:46] [Modules] 5 module(s) loaded.
-[10:09:46]   slow load: QuestEngine.Load 685 ms
-[10:09:46]   slow load: Pool.ItemsBase.Loading 314 ms
-[10:09:46]   slow load: Role.Statue.Load 57 ms
-[10:09:46]   slow load: Server.LoadMonsters 50 ms
-[10:09:46]   slow load: Database.Shops.EShopV2File.Load 35 ms
-[10:09:46] -------- The Sourse Version [ 7957 ]       --------
-[10:09:46] -------- The Sourse Edit By [ Mohy ElDin ] --------
-[10:09:46] --------   [ Archive Trojan ]              --------
-[10:09:46] --------   [ Archive Ninja ]               --------
-[10:09:46] --------   [ Archive Warrior ]             --------
-[10:09:46] --------   [ Archive Archer ]              --------
-[10:09:46] --------   [ Archive Taoist ]              --------
-[10:09:46] --------   [ Archive Pirate ]              --------
-[10:09:46] --------   [ Archive Dragon Warrior ]      --------
-[10:09:46] --------   [ Archive Monk ]                --------
-[10:09:46] --------   [ Archive Dune Wanderer ]       --------
-[10:09:46] --------   [ New Character Dune Wanderer ] --------
-[10:09:46] --------   [ Eonspirit System ]            --------
-[10:09:46] --------   [ Emoji System ]                --------
-[10:09:46] --------   [ LoveForEver System ]          --------
-[10:09:46] --------   [ HeartLock System ]            --------
-[10:09:46] --------   [ New Relics System ]           --------
-[10:09:46] --------   [ New Runes System ]            --------
-[10:09:46] [ The Source has Completed Downloading ]
-[10:09:46] [Mobile] 292 renumbered packets from D:\conquer\QahrMobile\Data\mobile_ids.txt
-[10:09:46] [Mobile] 4 server packet ids blocked by D:\conquer\QahrMobile\Data\mobile_block.txt
-[10:09:46] [Mobile] 146 packet layouts from 22 files in D:\conquer\QahrMobile\Data\mobile_layouts
-[10:09:46] [Threads] WakePool=1 (event-driven, kernel wait, smart timer)
-[10:09:46] [Network] NetEngine=V2 (async receive + send queue) on port 5828
-[10:09:46] [AdminApi] listening on 127.0.0.1:5897 (local only, PlayerStudio).
-[10:09:46] [HotReload] ready (console/@/AdminApi: reloadnpcs, reloadportals, reloadshops, reloaditems, reloadmonsters, reloaddrops, reloadall). Auto-watch off.
-[10:09:46] [DreamTheater] module ready (theater management, Wish Fountain, click mini-games).
-[10:09:46] [QuellDemons] ready: map 11885, ServerType 3, week kills 0, pending rewards 0
-[10:09:46] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
-[10:09:46] [Festivals] 58 festival(s), 58 valid (Infinity[DB]\Festivals). Schedules checked every minute. Commands: festival list|info|on|off|auto|reload.
-[10:09:46] [NewGuildWar] on - Sunday 14:30 for 30 min on map 1038 (Infinity[DB]\NewGuildWar\config.ini).
-[10:09:46] [GiftCenter] 5 giftable item(s), 0 record(s)
-[10:09:46] [Lottery] Golden Tree 3 bloom(s)/day, 109 client conditions | Turnover 8 usable type(s)
-[10:09:48] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
-[10:09:48] [Festivals] PuppetTheater ON (run 156)  ·  21 npc · 44 mob · 16 quest
+[03:53:58] [Perf] ThreadPool min threads: worker=100 iocp=100 (cores=24)
+[03:53:58] Please Wait The Sourse is Loading ...
+[03:53:58] [Migrate] database `qahr_mobile` is ready.
+[03:53:58] [Storage] Player binary storage ready (blob mode; normalized mirror tables removed).
+[03:53:58] [Storage] Social mirror tables ready (guilds/unions/clans, 8 tables).
+[03:53:58] [Storage] Async DB mirror ON (2 workers, max queue 20000)
+[03:53:58] [Migrate] no Migrations folder found next to the exe or in the source tree - only the tracking table was ensured.
+[03:53:58] [Migrate] 3 already applied, 0 new, 0 file(s) total.
+[03:53:58] [Storage] Player read source: Db
+[03:53:58] [Storage] Player backend: MySql (players table ready, 270 cols)
+[03:53:58] [FileDrops] file drops OFF (no drops.txt).
+[03:53:59] [FestivalMaps] 96 official festival map ids loaded from maps.txt
+[03:53:59] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
+[03:53:59] [QuestEngine] 4247 quests, 5225 objectives (89.7% typed: Talk=2460 Kill=1190 Collect=659 Gather=8 Visit=254 Unknown=539 State=76 Event=25 Counter=12 KillPoints=2), engine-owned 3684 (workable 1748), hand-coded 420 (engine kill counting for 180), quests.json entries 1582, talk slots fixed 96, chain prizes trimmed 58, parsed CPs blocked 3, hidden by server type 101, aliases 6, instances 2
+[03:54:00] [QuizShow] quiz data loaded.
+[03:54:00] [Modules] loaded module: QuizShow v1.0
+[03:54:00] [RechargeShop] recharge-shop data loaded.
+[03:54:00] [Modules] loaded module: RechargeShop v1.0
+[03:54:00] [ShareVIP] shared-VIP list loaded.
+[03:54:00] [Modules] loaded module: ShareVIP v1.0
+[03:54:00] [VoteSystem] vote data loaded.
+[03:54:00] [Modules] loaded module: VoteSystem v1.0
+[03:54:00] [Modules] loaded module: FestivalIcons v1.0
+[03:54:00] [Modules] 5 module(s) loaded.
+[03:54:00]   slow load: QuestEngine.Load 852 ms
+[03:54:00]   slow load: Pool.ItemsBase.Loading 278 ms
+[03:54:00]   slow load: Role.Statue.Load 53 ms
+[03:54:00]   slow load: Server.LoadMonsters 45 ms
+[03:54:00]   slow load: Database.Shops.EShopV2File.Load 42 ms
+[03:54:00] -------- The Sourse Version [ 7957 ]       --------
+[03:54:00] -------- The Sourse Edit By [ Mohy ElDin ] --------
+[03:54:00] --------   [ Archive Trojan ]              --------
+[03:54:00] --------   [ Archive Ninja ]               --------
+[03:54:00] --------   [ Archive Warrior ]             --------
+[03:54:00] --------   [ Archive Archer ]              --------
+[03:54:00] --------   [ Archive Taoist ]              --------
+[03:54:00] --------   [ Archive Pirate ]              --------
+[03:54:00] --------   [ Archive Dragon Warrior ]      --------
+[03:54:00] --------   [ Archive Monk ]                --------
+[03:54:00] --------   [ Archive Dune Wanderer ]       --------
+[03:54:00] --------   [ New Character Dune Wanderer ] --------
+[03:54:00] --------   [ Eonspirit System ]            --------
+[03:54:00] --------   [ Emoji System ]                --------
+[03:54:00] --------   [ LoveForEver System ]          --------
+[03:54:00] --------   [ HeartLock System ]            --------
+[03:54:00] --------   [ New Relics System ]           --------
+[03:54:00] --------   [ New Runes System ]            --------
+[03:54:00] [ The Source has Completed Downloading ]
+[03:54:00] [Mobile] 292 renumbered packets from D:\conquer\QahrMobile\Data\mobile_ids.txt
+[03:54:00] [Mobile] 4 server packet ids blocked by D:\conquer\QahrMobile\Data\mobile_block.txt
+[03:54:00] [Mobile] 147 packet layouts from 22 files in D:\conquer\QahrMobile\Data\mobile_layouts
+[03:54:00] [Threads] WakePool=1 (event-driven, kernel wait, smart timer)
+[03:54:00] [Network] NetEngine=V2 (async receive + send queue) on port 5828
+[03:54:00] [AdminApi] listening on 127.0.0.1:5897 (local only, PlayerStudio).
+[03:54:00] [HotReload] ready (console/@/AdminApi: reloadnpcs, reloadportals, reloadshops, reloaditems, reloadmonsters, reloaddrops, reloadall). Auto-watch off.
+[03:54:00] [DreamTheater] module ready (theater management, Wish Fountain, click mini-games).
+[03:54:00] [QuellDemons] ready: map 11885, ServerType 3, week kills 0, pending rewards 0
+[03:54:00] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
+[03:54:00] [Festivals] 58 festival(s), 58 valid (Data\Festivals). Schedules checked every minute. Commands: festival list|info|on|off|auto|reload.
+[03:54:00] [NewGuildWar] on - Sunday 14:30 for 30 min on map 1038 (Data\NewGuildWar\config.ini).
+[03:54:00] [GiftCenter] 5 giftable item(s), 0 record(s)
+[03:54:00] [Lottery] Golden Tree 3 bloom(s)/day, 109 client conditions | Turnover 8 usable type(s)
+[03:54:02] [QuestUnblock] lua/text goals -> kill 101, any-monster kill 14, talk 94; default prizes 1124
+[03:54:02] [Festivals] PuppetTheater ON (run 180)  ·  21 npc · 44 mob · 16 quest
+[03:55:00] ONLINE 0 │ CPU 0.2% │ RAM 415MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.3ms │ GC2 3
+[03:56:00] ONLINE 0 │ CPU 0.0% │ RAM 414MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.0ms
+[03:57:00] ONLINE 0 │ CPU 0.0% │ RAM 414MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.0ms
+[03:58:00] ONLINE 0 │ CPU 0.0% │ RAM 457MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.0ms
+[03:59:00] ONLINE 0 │ CPU 0.0% │ RAM 458MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.0ms
+[04:00:00] ONLINE 0 │ CPU 0.0% │ RAM 463MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.0ms │ GC2 1
+[PacketStream] listening on 127.0.0.1:17957
+[PacketInject] listening on 127.0.0.1:17968 (allow: 3 targets)
+[04:00:09] [LoginToken] OK entity=1001023 age=0s
+[04:00:09] Client [ test22 ] Was Login On IP : [ 26.31.69.47 ] .
+[04:00:09] [BattlePass] season 122 on: 50 levels, 150 rewards, 14 tasks
+[04:00:09] [Mobile] main story: 409 steps, 409 with rewards
+[04:00:09] [Mobile] quest markers: 372 personal quest NPCs are shown only to players on their step
+[04:00:09] [Mobile] mobile_functions.txt: 33 functions
+[04:00:11] [Mobile] 12 skills translated (mobile_magic.txt)
+[04:00:11] [Mobile] events: mode Limited, dialog_interval 1800s, join_window 300s
+[04:01:00] ONLINE 1 │ CPU 0.1% │ RAM 480MB │ NET 2/8 │ SAVE 0 │ DB ok │ TICK 57.8ms
+[04:02:00] ONLINE 1 │ CPU 0.0% │ RAM 480MB │ NET 0/2 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:02:41] [VipPoints] test22 +200 (gm test22) = 350
+[04:03:00] ONLINE 1 │ CPU 0.0% │ RAM 482MB │ NET 0/1 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:04:00] ONLINE 1 │ CPU 0.0% │ RAM 483MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:05:00] ONLINE 1 │ CPU 0.0% │ RAM 482MB │ NET 0/0 │ SAVE 1 · 27ms │ DB ok │ TICK 0.7ms
+[04:06:00] ONLINE 1 │ CPU 0.0% │ RAM 482MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:07:00] ONLINE 1 │ CPU 0.0% │ RAM 483MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:08:00] ONLINE 1 │ CPU 0.0% │ RAM 483MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:09:00] ONLINE 1 │ CPU 0.0% │ RAM 483MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:10:00] ONLINE 1 │ CPU 0.0% │ RAM 483MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:11:00] ONLINE 1 │ CPU 0.0% │ RAM 484MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:12:00] ONLINE 1 │ CPU 0.0% │ RAM 484MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.9ms
+[04:13:00] ONLINE 1 │ CPU 0.0% │ RAM 485MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:14:00] ONLINE 1 │ CPU 0.0% │ RAM 485MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 3.3ms
+[04:15:00] ONLINE 1 │ CPU 0.0% │ RAM 485MB │ NET 0/0 │ SAVE 1 · 9ms │ DB ok │ TICK 0.6ms
+[04:16:00] ONLINE 1 │ CPU 0.0% │ RAM 486MB │ NET 0/1 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:17:00] ONLINE 1 │ CPU 0.0% │ RAM 486MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.8ms
+[04:18:00] ONLINE 1 │ CPU 0.0% │ RAM 487MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.8ms
+[04:19:00] ONLINE 1 │ CPU 0.0% │ RAM 487MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:20:00] ONLINE 1 │ CPU 0.0% │ RAM 488MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:21:00] ONLINE 1 │ CPU 0.0% │ RAM 461MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 10.1ms │ GC2 1
+[04:22:00] ONLINE 1 │ CPU 0.0% │ RAM 461MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:23:00] ONLINE 1 │ CPU 0.0% │ RAM 461MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:24:00] ONLINE 1 │ CPU 0.0% │ RAM 463MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:25:00] ONLINE 1 │ CPU 0.0% │ RAM 463MB │ NET 0/0 │ SAVE 1 · 11ms │ DB ok │ TICK 0.7ms
+[04:26:00] ONLINE 1 │ CPU 0.0% │ RAM 463MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:27:00] ONLINE 1 │ CPU 0.0% │ RAM 463MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.8ms
+[04:28:00] ONLINE 1 │ CPU 0.0% │ RAM 464MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.9ms
+[04:29:00] ONLINE 1 │ CPU 0.0% │ RAM 464MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:30:00] ONLINE 1 │ CPU 0.0% │ RAM 464MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:31:00] ONLINE 1 │ CPU 0.0% │ RAM 464MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.8ms
+[04:32:00] ONLINE 1 │ CPU 0.0% │ RAM 464MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:33:00] ONLINE 1 │ CPU 0.0% │ RAM 464MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:34:00] ONLINE 1 │ CPU 0.0% │ RAM 464MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:35:00] ONLINE 1 │ CPU 0.0% │ RAM 464MB │ NET 0/0 │ SAVE 1 · 7ms │ DB ok │ TICK 0.6ms
+[04:36:00] ONLINE 1 │ CPU 0.0% │ RAM 462MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:37:00] ONLINE 1 │ CPU 0.0% │ RAM 462MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.9ms
+[04:38:00] ONLINE 1 │ CPU 0.0% │ RAM 463MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:39:00] ONLINE 1 │ CPU 0.0% │ RAM 463MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 1.1ms
+[04:40:00] ONLINE 1 │ CPU 0.0% │ RAM 464MB │ NET 0/1 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:41:00] ONLINE 1 │ CPU 0.0% │ RAM 465MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:41:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:41:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:42:00] ONLINE 1 │ CPU 0.0% │ RAM 468MB │ NET 0/2 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:42:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:42:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:42:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:42:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:42:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:42:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:42:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:42:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:43:00] ONLINE 1 │ CPU 0.0% │ RAM 466MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:43:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:43:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:43:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:43:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:43:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:43:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:43:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:43:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:44:00] ONLINE 1 │ CPU 0.0% │ RAM 466MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:44:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:44:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:44:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:44:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:44:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:44:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:44:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:44:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:45:00] ONLINE 1 │ CPU 0.0% │ RAM 467MB │ NET 0/0 │ SAVE 1 · 10ms │ DB ok │ TICK 0.8ms
+[04:45:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:45:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:45:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:45:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:45:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:45:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:45:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:45:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:46:00] ONLINE 1 │ CPU 0.0% │ RAM 467MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.5ms
+[04:46:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:46:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:46:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:46:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:46:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:46:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:46:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:46:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:47:00] ONLINE 1 │ CPU 0.0% │ RAM 468MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.9ms
+[04:47:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:47:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:47:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:47:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:47:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:47:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:47:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:47:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:48:00] ONLINE 1 │ CPU 0.0% │ RAM 468MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.8ms
+[04:48:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:48:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:48:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:48:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:48:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:48:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:48:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:48:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:49:00] ONLINE 1 │ CPU 0.0% │ RAM 468MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:49:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:49:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:49:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:49:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:49:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:49:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:49:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:49:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:50:00] ONLINE 1 │ CPU 0.0% │ RAM 469MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:50:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:50:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:50:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:50:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:50:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:50:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:50:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:50:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:51:00] ONLINE 1 │ CPU 0.0% │ RAM 471MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:51:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:51:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:51:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:51:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:51:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:51:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:51:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:51:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:52:00] ONLINE 1 │ CPU 0.0% │ RAM 471MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[04:52:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:52:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:52:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:52:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:52:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:52:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:52:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:52:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:53:00] ONLINE 1 │ CPU 0.0% │ RAM 471MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:53:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:53:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:53:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:53:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:53:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:53:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:53:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:53:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:00] ONLINE 1 │ CPU 0.0% │ RAM 472MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:54:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:38] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:38] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:41] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:41] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:47] [Mobile] quest NPC dialogs loaded: 573
+[04:54:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:54:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:55:00] ONLINE 1 │ CPU 0.0% │ RAM 475MB │ NET 1/2 │ SAVE 1 · 10ms │ DB ok │ TICK 14.1ms
+[04:55:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:55:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:55:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:55:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:55:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:55:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:55:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:55:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:56:00] ONLINE 1 │ CPU 0.0% │ RAM 477MB │ NET 0/1 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:56:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:56:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:56:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:56:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:56:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:56:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:56:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:56:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:57:00] ONLINE 1 │ CPU 0.0% │ RAM 477MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.8ms
+[04:57:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:57:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:57:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:57:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:57:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:57:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:57:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:57:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:58:00] ONLINE 1 │ CPU 0.0% │ RAM 477MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:58:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:58:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:58:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:58:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:58:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:58:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:58:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:58:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:59:00] ONLINE 1 │ CPU 0.0% │ RAM 478MB │ NET 0/1 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[04:59:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:59:10] [NewYear2023] springfestival2023.json: bad escape \L
+[04:59:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:59:25] [NewYear2023] springfestival2023.json: bad escape \L
+[04:59:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:59:40] [NewYear2023] springfestival2023.json: bad escape \L
+[04:59:55] [NewYear2023] springfestival2023.json: bad escape \L
+[04:59:55] [NewYear2023] springfestival2023.json: bad escape \L
+[05:00:00] ONLINE 1 │ CPU 0.0% │ RAM 478MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[05:00:10] [NewYear2023] springfestival2023.json: bad escape \L
+[05:00:10] [NewYear2023] springfestival2023.json: bad escape \L
+[05:00:25] [NewYear2023] springfestival2023.json: bad escape \L
+[05:00:25] [NewYear2023] springfestival2023.json: bad escape \L
+[05:00:40] [NewYear2023] springfestival2023.json: bad escape \L
+[05:00:40] [NewYear2023] springfestival2023.json: bad escape \L
+[05:00:55] [NewYear2023] springfestival2023.json: bad escape \L
+[05:00:55] [NewYear2023] springfestival2023.json: bad escape \L
+[05:01:00] ONLINE 1 │ CPU 0.0% │ RAM 479MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.6ms
+[05:01:10] [NewYear2023] springfestival2023.json: bad escape \L
+[05:01:10] [NewYear2023] springfestival2023.json: bad escape \L
+[05:01:25] [NewYear2023] springfestival2023.json: bad escape \L
+[05:01:25] [NewYear2023] springfestival2023.json: bad escape \L
+[05:01:40] [NewYear2023] springfestival2023.json: bad escape \L
+[05:01:40] [NewYear2023] springfestival2023.json: bad escape \L
+[05:01:55] [NewYear2023] springfestival2023.json: bad escape \L
+[05:01:55] [NewYear2023] springfestival2023.json: bad escape \L
+[05:02:00] ONLINE 1 │ CPU 0.0% │ RAM 479MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.7ms
+[05:02:10] [NewYear2023] springfestival2023.json: bad escape \L
+[05:02:10] [NewYear2023] springfestival2023.json: bad escape \L
+[05:02:25] [NewYear2023] springfestival2023.json: bad escape \L
+[05:02:25] [NewYear2023] springfestival2023.json: bad escape \L
+[05:02:30] [Mobile] 292 renumbered packets from D:\conquer\QahrMobile\Data\mobile_ids.txt
+[05:02:30] [Mobile] 4 server packet ids blocked by D:\conquer\QahrMobile\Data\mobile_block.txt
+[05:02:30] [Mobile] 147 packet layouts from 22 files in D:\conquer\QahrMobile\Data\mobile_layouts
+[05:02:40] [NewYear2023] springfestival2023.json: bad escape \L
+[05:02:40] [NewYear2023] springfestival2023.json: bad escape \L
+[05:02:55] [NewYear2023] springfestival2023.json: bad escape \L
+[05:02:55] [NewYear2023] springfestival2023.json: bad escape \L
+[05:03:00] ONLINE 1 │ CPU 0.0% │ RAM 480MB │ NET 0/1 │ SAVE 0 │ DB ok │ TICK 0.9ms
+[05:03:10] [NewYear2023] springfestival2023.json: bad escape \L
+[05:03:10] [NewYear2023] springfestival2023.json: bad escape \L
+[05:03:25] [NewYear2023] springfestival2023.json: bad escape \L
+[05:03:25] [NewYear2023] springfestival2023.json: bad escape \L
+[05:03:40] [NewYear2023] springfestival2023.json: bad escape \L
+[05:03:40] [NewYear2023] springfestival2023.json: bad escape \L
+[05:03:55] [NewYear2023] springfestival2023.json: bad escape \L
+[05:03:55] [NewYear2023] springfestival2023.json: bad escape \L
+[05:04:00] ONLINE 1 │ CPU 0.0% │ RAM 480MB │ NET 0/0 │ SAVE 0 │ DB ok │ TICK 0.9ms
+[05:04:10] [NewYear2023] springfestival2023.json: bad escape \L
+[05:04:10] [NewYear2023] springfestival2023.json: bad escape \L

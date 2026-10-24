@@ -1,7 +1,7 @@
 ﻿// ============================================================================
 //  [AprilFools2023 2026-10-15] FoolsKit: shared server pieces of the April Fools group
 //  (AprilFools2023 Tricky Wit, AliceRescue Wonderland, AprilFools2025 Fool`s Paradise, AprilFools2026 Astral Dream).
-//    - Store   : per-player state file Infinity[DB]\<Key>\players.txt (uid TAB key=value;key=value, atomic save)
+//    - Store   : per-player state file Data\<Key>\players.txt (uid TAB key=value;key=value, atomic save)
 //    - Items   : count / take / bag space / grant (AddItemWitchStack, logs), weighted picks
 //    - Arena   : private DynamicID copies of a map + personal monsters + "all dead" callbacks (no loot: drop_* = 0 in the inis)
 //    - Hooks   : OnTick (PoolProcesses), OnDialog (Procesor, virtual dialog ids), OnUse (MsgItemUsuagePacket.UseItem)
@@ -138,7 +138,7 @@ namespace Qahr.Mobile.FoolsKit
                 MsgGameItem it = null;
                 foreach (var x in c.Inventory.ClientItems.Values) if (x.ITEM_ID == id) { it = x; break; }
                 if (it == null) return false;
-                try { c.Inventory.Update(it, Role.Instance.AddMode.REMOVE, stream); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return false; }
+                try { c.Inventory.Update(it, Role.Instance.AddMode.REMOVE, stream); } catch (Exception e) { MyConsole.SaveException(e); return false; }
             }
             return true;
         }
@@ -168,7 +168,7 @@ namespace Qahr.Mobile.FoolsKit
             {
                 string line = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) + "\t" + festival + "\t" + what + "\t"
                     + (c != null && c.Player != null ? c.Player.UID + " " + c.Player.Name : "-") + "\t" + detail;
-                string dir = Path.Combine(Program.ServerConfig.DbLocation, festival);
+                string dir = Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, festival);
                 lock (_logSync)
                 {
                     Directory.CreateDirectory(dir);
@@ -183,7 +183,7 @@ namespace Qahr.Mobile.FoolsKit
         public static void OnTick(Client.GameClient c)
         {
             if (c == null || c.Player == null) return;
-            try { AprilFools2023.AprilFools2023Ui.Tick(c); Arena.Tick(c); PuppetTheater.PT.Tick(c); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }// [PuppetTheater 2026-10-15] re-entry hints / stuck players
+            try { AprilFools2023.AprilFools2023Ui.Tick(c); Arena.Tick(c); PuppetTheater.PT.Tick(c); } catch (Exception e) { MyConsole.SaveException(e); }// [PuppetTheater 2026-10-15] re-entry hints / stuck players
         }
 
         public delegate bool DialogHandler(Client.GameClient c, ServerSockets.Packet stream, byte option, string input);
@@ -208,7 +208,7 @@ namespace Qahr.Mobile.FoolsKit
             if (!LastDialog.TryGetValue(c.Player.UID, out last) || last != npcid) return true;
             if (!_dialogs.TryGetValue(npcid, out h) || h == null) return true;
             try { h(c, stream, option, input); }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return true;
         }
         public const uint VirtualFirst = 8892090, VirtualLast = 8892099;
@@ -233,14 +233,14 @@ namespace Qahr.Mobile.FoolsKit
                 if (AprilFools2023.AprilFools2023Items.OnUse(c, item, stream)) return true;
                 if (PuppetTheater.PT.OnUse(c, item, stream)) return true;// [PuppetTheater 2026-10-15] Strings of Terror boxes
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return false;
         }
     }
 
     // ====================================================================== per-player state
     /// <summary>[EventData 2026-10-15] Per-player state of one festival, kept in the unified EventStore (MySQL, section
-    /// = festival key, values in its Strings). The old Infinity[DB]\&lt;Key&gt;\players.txt is imported once and renamed
+    /// = festival key, values in its Strings). The old Data\&lt;Key&gt;\players.txt is imported once and renamed
     /// *.migrated. Set is written to MySQL before it returns (a player's write that fails throws => the caller grants nothing).</summary>
     public sealed class Store
     {
@@ -250,7 +250,7 @@ namespace Qahr.Mobile.FoolsKit
 
         public Store(string festival)
         {
-            _path = Path.Combine(Program.ServerConfig.DbLocation ?? "", festival, "players.txt");
+            _path = Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, festival, "players.txt");
             _be = new EventData.LegacyBackend(festival, () => _path, EventData.LegacyFormat.KvText);
         }
         /// <summary>The OLD file (only read once by the migration).</summary>

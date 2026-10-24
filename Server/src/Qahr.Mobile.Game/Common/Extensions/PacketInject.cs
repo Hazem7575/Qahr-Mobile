@@ -24,7 +24,7 @@ namespace Qahr.Mobile
     ///     characters the owner explicitly listed, never real players.
     /// Injecting a malformed packet can disconnect or glitch the target client, so list TEST accounts only.
     ///
-    /// ON:  create Infinity[DB]\packetinject.txt  with  secret=...(>=8)  allow=TestChar,12345  [port=17958]
+    /// ON:  create Data\packetinject.txt  with  secret=...(>=8)  allow=TestChar,12345  [port=17958]
     /// OFF: delete the file. Re-checked every ~3 s with packetlog.txt / packetstream.txt. Needs one restart after the
     ///      build that added this file.
     ///

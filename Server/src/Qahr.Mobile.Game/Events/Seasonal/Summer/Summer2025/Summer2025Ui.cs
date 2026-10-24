@@ -27,7 +27,7 @@
 //  REAL data only: seed count from the bag (the seed items 3354230/3354231 are NOT in this client's itemtype, so it is 0).
 //  NOT on this server (system message, nothing granted): planting/harvest (no seeds exist), Flickerwood instance,
 //  Woodland Watch, Undying Blight, points ranking, shops.
-//  Config (optional, derived values): Infinity[DB]\Summer2025\summer2025.json.
+//  Config (optional, derived values): Data\Summer2025\summer2025.json.
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10707 SummerDraw2025_* / Summer2025_* / SummerActive2025*, and 10511 act 10707).
 // ============================================================================
 using System;
@@ -58,7 +58,7 @@ namespace Qahr.Mobile.Summer2025
             public uint WatchMax = 3;                // derived (client test data)
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "Summer2025", "summer2025.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "Summer2025", "summer2025.json"); } }
         public static Config Cfg
         {
             get

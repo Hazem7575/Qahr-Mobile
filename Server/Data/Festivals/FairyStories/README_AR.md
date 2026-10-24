@@ -41,4 +41,4 @@
 3. mesh لـ RoseFairy.
 4. قرار من الأونر في الجايزة، لأن الرسمي مالوش جايزة.
 
-_Agent 4 (13-10-2026). المصادر: `Infinity[DB]\Questinfo.ini`، و`client_test\ini\monster.dat` (3-Way) و`npc.ini` و`NpcX.ini` و`GameMap.dat`، وفحص الـ walkability على `Infinity[DB]\map\map\*.DMap`._
+_Agent 4 (13-10-2026). المصادر: `Data\Questinfo.ini`، و`client_test\ini\monster.dat` (3-Way) و`npc.ini` و`NpcX.ini` و`GameMap.dat`، وفحص الـ walkability على `Data\map\map\*.DMap`._

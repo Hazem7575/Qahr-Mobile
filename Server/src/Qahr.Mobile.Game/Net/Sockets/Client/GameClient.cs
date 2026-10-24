@@ -99,7 +99,7 @@ namespace Qahr.Mobile.Client
 
         public void TeleportTC()
         {
-            Teleport(410, 354, 1002, 0, true, false);
+            Teleport(Places.TwinCity, 0, true, false);
 
 
         }
@@ -675,10 +675,6 @@ namespace Qahr.Mobile.Client
             get { return _tet; }
             set
             {
-                if (Player.Name == "TEST[GM]")
-                {
-
-                }
                 _tet = value;
             }
         }
@@ -1619,6 +1615,12 @@ namespace Qahr.Mobile.Client
         internal void ProtectAttack(int StampMiliSecounds)
         {
             Protect = DateTime.Now.AddMilliseconds(StampMiliSecounds);
+        }
+
+        /// <summary>Teleport to a named place (Data\places.txt, e.g. Places.TwinCity).</summary>
+        public void Teleport(Place place, uint DinamycID = 0, bool revive = true, bool CanTeleport = false)
+        {
+            Teleport(place.X, place.Y, place.Map, DinamycID, revive, CanTeleport);
         }
 
         public void Teleport(ushort x, ushort y, uint MapID, uint DinamycID = 0, bool revive = true, bool CanTeleport = false)
@@ -2578,6 +2580,9 @@ namespace Qahr.Mobile.Client
             get { return (byte)OnLogin.AccountHash; }
         }
 
+        /// <summary>Logged in from the mobile client (set by MobileProtocol.Login). Use Phone.MobileClient.Is(c) when c can be null.</summary>
+        public bool IsMobile { get; set; }
+
         /// <summary>Real staff account (GameMaster / GameHelper / ProjectManager) by account State.</summary>
         public bool IsStaffAccount
         {
@@ -2650,11 +2655,8 @@ namespace Qahr.Mobile.Client
         {
             get
             {
-                // Prefer the authoritative account State; the name check is kept only as a legacy
-                // fallback so existing staff keep access.
-                // TODO(security): once every staff account has its accounts.State set correctly,
-                // remove the Name.Contains("[GM]") fallback entirely (it is forgeable).
-                return Player != null && (IsStaffAccount || ProjectManager || HelpDesk || Player.Name.Contains("[GM]"));
+                // Staff by the account State (accounts.State 3/5/255) or the PM / HelpDesk flags, never by the name.
+                return Player != null && (IsStaffAccount || ProjectManager || HelpDesk);
             }
         }
 

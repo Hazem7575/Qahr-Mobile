@@ -20,4 +20,4 @@
 - أقصى قيمة لشريط النقط 120000. ده آخر مستوى في `pointsrankdata` `CONST_POINTS_AWARD_DATA[10486]`.
 - Stage = -1.
 - رسالة الليفل ورسايل "مش مفتوح".
-- الإعدادات: `Infinity[DB]\Thanksgiving2024\thanksgiving2024.json`.
+- الإعدادات: `Data\Thanksgiving2024\thanksgiving2024.json`.

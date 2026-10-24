@@ -125,56 +125,6 @@ namespace Qahr.Mobile
             System.Console.Write("\n\n");
 
         }
-        public static bool NameStrCheck(string name, bool ExceptedSize = true)
-        {
-            if (name == null)
-                return false;
-            if (name == "")
-                return false;
-            string ValidChars = "[^A-Za-z0-9ء-ي*~.&.$]$";
-            System.Text.RegularExpressions.Regex r = new System.Text.RegularExpressions.Regex(ValidChars);
-            if (r.IsMatch(name))
-                return false;
-            if (name.ToLower().Contains("gm"))
-                return false;
-            if (name.ToLower().Contains("pm"))
-                return false;
-            if (name.ToLower().Contains("p~m"))
-                return false;
-            if (name.ToLower().Contains("p!m"))
-                return false;
-            if (name.ToLower().Contains("g~m"))
-                return false;
-            if (name.ToLower().Contains("g!m"))
-                return false;
-            if (name.ToLower().Contains("help"))
-                return false;
-            if (name.ToLower().Contains("desk"))
-                return false;
-            if (name.ToLower().Contains("abdallah"))
-                return false;
-            if (name.Contains('/'))
-                return false;
-            if (name.Contains(@"\"))
-                return false;
-            if (name.Contains(@"'"))
-                return false;
-            //    if (name.Contains('#'))
-            //      return false;
-            if (name.Contains("GM") ||
-                name.Contains("PM") ||
-                name.Contains("None") ||
-                name.Contains("Yousef") ||
-                name.Contains("SYSTEM") ||
-                name.Contains("{") || name.Contains("}") || name.Contains("[") || name.Contains("]"))
-                return false;
-            if (name.Length > 16 && ExceptedSize)
-                return false;
-            for (int x = 0; x < name.Length; x++)
-                if (name[x] == 25)
-                    return false;
-            return true;
-        }
         public static class ServerConfig
         {
             public static string LogginKey = "C238xs65pjy7HU9Q";// QahrMobile: the mobile client's initial CAST5 key (libCQ2ClientEn, next to "TQClient")
@@ -499,7 +449,7 @@ namespace Qahr.Mobile
                 #endregion
 
                 Server.FullLoading = true;
-                // [AdminApi] local player-admin endpoint for tools\PlayerStudio (off unless Infinity[DB]\adminapi.txt exists, 127.0.0.1 only)
+                // [AdminApi] local player-admin endpoint for tools\PlayerStudio (off unless Data\adminapi.txt exists, 127.0.0.1 only)
                 BootScreen.StepStart("AdminApi");
                 // [FastBoot 2026-10-15] the parsed-ini cache (the same one Server.Initialize uses: every read still checks the
                 // file's size + write time, writers invalidate it) also covers the module starts below - the festivals parse
@@ -508,15 +458,15 @@ namespace Qahr.Mobile
                 if (bootIniCache) WindowsAPI.IniCache.Begin();
                 try {
                 global::Qahr.Mobile.AdminApi.AdminApiServer.Start();
-                // [HotReload] optional file watchers (off unless Infinity[DB]\hotreload.txt turns them on)
+                // [HotReload] optional file watchers (off unless Data\hotreload.txt turns them on)
                 global::Qahr.Mobile.HotReload.HotReloadManager.Start();
-                // [Festivals] Infinity[DB]\Festivals\<key>\ - loads, then checks the schedules every minute (live on/off)
+                // [Festivals] Data\Festivals\<key>\ - loads, then checks the schedules every minute (live on/off)
                 global::Qahr.Mobile.DreamTheater.DreamTheaterModule.Init();// [DreamTheater] quest event keys before the festival quests are built
                 global::Qahr.Mobile.QuellDemons.QuellDemonsModule.Init();// [QuellDemons 2026-10-14] Infernix Ruins bosses (schedule, ranking, mail rewards)
                 global::Qahr.Mobile.Festivals.FestivalManager.Start();
-                global::Qahr.Mobile.NewGuildWar.NgwEngine.Start();// [NewGuildWar 2026-10-14] New Guild War schedule (Infinity[DB]\NewGuildWar\config.ini)
-                global::Qahr.Mobile.GiftCenter.GiftCenterModule.Start();// [GiftCenter 2026-10-14] gift records + login push (Infinity[DB]\GiftCenter)
-                global::Qahr.Mobile.Lottery.LotteryModule.Start();// [Lottery 2026-10-14] Golden Tree schedule + flop lottery (Infinity[DB]\Lottery)
+                global::Qahr.Mobile.NewGuildWar.NgwEngine.Start();// [NewGuildWar 2026-10-14] New Guild War schedule (Data\NewGuildWar\config.ini)
+                global::Qahr.Mobile.GiftCenter.GiftCenterModule.Start();// [GiftCenter 2026-10-14] gift records + login push (Data\GiftCenter)
+                global::Qahr.Mobile.Lottery.LotteryModule.Start();// [Lottery 2026-10-14] Golden Tree schedule + flop lottery (Data\Lottery)
                 }
                 finally
                 {
@@ -1649,7 +1599,7 @@ namespace Qahr.Mobile
                     if (obj.Game == null)
                         return;
                     ushort PacketID = stream.ReadUInt16();
-                    // [PacketLogger] client->server, already decrypted. Off unless Infinity[DB]\packetlog.txt exists.
+                    // [PacketLogger] client->server, already decrypted. Off unless Data\packetlog.txt exists.
                     if (PacketLogger.Enabled)
                         PacketLogger.Log(false, obj.Game, stream.Memory, stream.Size);
                     // QahrMobile: the mobile client's login (10124), then mobile id -> server id for every other packet
@@ -1714,14 +1664,17 @@ namespace Qahr.Mobile
                     // whitelist drop here stalls login. Left off for stability; revisit with the full,
                     // verified pre-AcceptLogin packet list before re-enabling PreLoginAllowedPackets.
 
-                    // QahrMobile: mobile-only messages (no server packet id), Networking\Mobile\MobileOnly.cs
+                    // QahrMobile: mobile-only messages (no server packet id), Mobile\Social\MobileOnly.cs
                     if (PacketID == mobilePacketId && Phone.MobileOnly.Handle(obj.Game, stream, PacketID))
                         return;
-                    // QahrMobile: guild auction 2084 / 10418 (Features\GuildAuction; no [PacketAttribute]: the registry is built at startup)
+                    // QahrMobile: guild auction 2084 / 10418 (Systems\GuildAuction; no [PacketAttribute]: the registry is built at startup)
                     if (global::Qahr.Mobile.GuildAuction.GuildAuctionModule.TryHandle(obj.Game, stream, PacketID))
                         return;
-                    // QahrMobile: Welfare > Weekly Cards claim, MsgUserMonthCardAction 2251 (Mobile\MobileWeekCard.cs; the PC handler is commented out)
+                    // QahrMobile: Welfare > Weekly Cards claim, MsgUserMonthCardAction 2251 (Mobile\Welfare\MobileWeekCard.cs; the PC handler is commented out)
                     if (global::Qahr.Mobile.Phone.MobileWeekCard.TryHandle(obj.Game, stream, PacketID))
+                        return;
+                    // QahrMobile: Dune Wanderer window 10395 / 10396 / 10438 (Mobile\DuneWanderer\DuneNet.cs)
+                    if (global::Qahr.Mobile.DuneWanderer.DuneNet.TryHandle(obj.Game, stream, PacketID))
                         return;
                     Action<Client.GameClient, ServerSockets.Packet> hinvoker;
                     if (Pool.MsgInvoker.TryGetInvoker(PacketID, out hinvoker))

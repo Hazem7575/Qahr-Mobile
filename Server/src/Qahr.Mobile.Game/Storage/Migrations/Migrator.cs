@@ -94,7 +94,7 @@ namespace Qahr.Mobile.Database.Migrations
             catch (Exception e)
             {
                 Warn("FAILED: " + e.Message);
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
         }
 

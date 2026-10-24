@@ -40,7 +40,7 @@
 - **رسمي:**
   - الخطوات والأماكن والـ slots والنصوص (Questinfo و`tPlotEditorPlotEvent_DelText`).
   - الجوايز المعروضة، وأعداد الفراجمنتس، ومعادلة البيضة الدهبي، و120000.
-- **مستنتج** (`Infinity[DB]\WenwenDetective\goosie.json` اختياري):
+- **مستنتج** (`Data\WenwenDetective\goosie.json` اختياري):
   - أوزان الجوايز، ونقط البيضة، وحدود المراحل (100 / 300 / 600 / 1000 / 2000 / 4000 / 6000 / 10000، والصف 9 كل 2000).
   - جايزة 5861 (URE + Bubble Hammer) و5862 (URE + 2 Bubble Hammer). الـ Prize في Questinfo فاضي، والنص الرسمي بيقول إن الصندوق فيه كنوز (مساحتين / 3 مساحات)، وإن Dinowolf Isle بتدّي Bubble Hammers.
   - 3348803 بيدّي Bubble Machine 1H، لأن الكلاينت بيقول "اختار" ومفيش شباك اختيار.

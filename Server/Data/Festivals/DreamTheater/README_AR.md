@@ -52,7 +52,7 @@
 | `rewards.json` | Fluffy و Flori والتحيات الرسمية |
 | `npcs.txt` | 31 NPC. Maryan/Jenkins رجعوا NpcX 106146/106147 (الأشكال الرسمية) |
 | `monsters\` | BlackBear 22400 (شكل 312 = باندا بروب أزرق زي الفيديو، **DERIVED**)، GoldArmBirdman 22395 (= Birdman الرسمي)، KnightJenkins 22396 |
-| `Infinity[DB]\FestivalMaps\maps.txt` | 1002560 / 1002565 / 1002566 اتحلّوا |
+| `Data\FestivalMaps\maps.txt` | 1002560 / 1002565 / 1002566 اتحلّوا |
 | الكود | `Base\DreamTheater\DreamTheaterModule.cs` / `DreamTheaterLua.cs` / `DreamTheaterItems.cs` |
 | hooks | `Procesor.cs` (OnNpc + OnItemDialog)، `MsgItemUsuagePacket.cs` (OnUseItem)، `RoleView.cs` (ظهور NPCs المسرح) |
 

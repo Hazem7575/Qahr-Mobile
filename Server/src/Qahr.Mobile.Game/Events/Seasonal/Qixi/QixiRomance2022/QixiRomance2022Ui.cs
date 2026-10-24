@@ -1,9 +1,9 @@
 // ============================================================================
 //  [QixiRomance2022 2026-10-15] Global Qixi 2022 "Romantic Season" (Ethereal Harp / Orphee), client msg 10044
 //  tMsg_Info["QiXiFestival"], lua dialogs luaui\dialog\dlgqixifestival (Dialog_Info 1266-1270).
-//  Runs while the festival QixiRomance2022 (Infinity[DB]\Festivals\QixiRomance2022) runs.
+//  Runs while the festival QixiRomance2022 (Data\Festivals\QixiRomance2022) runs.
 //
-//  PLAYABLE (server-validated, config Infinity[DB]\QixiRomance2022\qixiromance2022.json, state players.txt):
+//  PLAYABLE (server-validated, config Data\QixiRomance2022\qixiromance2022.json, state players.txt):
 //    main window  Qixi2022Page_MainView -> DlgQiXiFestivalMain_OpenUI {points, star energy, open starfield, total, unlock fx,
 //                 harp repaired, red dots, guide} from the player's real state.
 //    repair       Qixi2022Page_FixView -> DlgQiXiFestivalRepair_OpenUI; Qixi2022Page_Fix</N>part</N>1|2|3 = repair /
@@ -63,7 +63,7 @@ namespace Qahr.Mobile.QixiRomance2022
             public List<Grant> PerformancePack = new List<Grant>(), MemoryPackPool = new List<Grant>();
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "QixiRomance2022", "qixiromance2022.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "QixiRomance2022", "qixiromance2022.json"); } }
         public static Config Cfg
         {
             get

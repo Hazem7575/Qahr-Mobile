@@ -1,7 +1,7 @@
 // [Poker 2026-10-14] BoYi (casino / "Poker Level") level and EXP - 2234 CMsgBetLevel.
 // Client (spec_tourney 3.1): f1=0 info for uid f3 (reply f4 = level, f5 = EXP u64); f1=1 = hero update (level-up
 // animation when f4 grows). Level count (249) is official (client BoYiTip.lua); the EXP needed per level and the EXP a
-// hand gives are NOT in the client -> DERIVED, config "boyi" in Infinity[DB]\Poker\config.json.
+// hand gives are NOT in the client -> DERIVED, config "boyi" in Data\Poker\config.json.
 // Saved in the character file ([Poker] BoYi=level|exp) by the same SaveClient hook as the escrow marker.
 using System;
 using System.Collections.Concurrent;

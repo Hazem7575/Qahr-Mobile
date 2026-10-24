@@ -20,7 +20,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
             if (Process == ProcesType.Dead)
             {
                 StartTimer = DateTime.Now;
-                MsgSchedules.SendInvitation("Flags War", "", 410, 354, 1002, 0, 60); // QahrMobile: PC spot 346,300 is water on the mobile Twin City; Twin City square
+                MsgSchedules.SendInvitation("Flags War", "", Places.TwinCity, 0, 60); // QahrMobile: PC spot 346,300 is water on the mobile Twin City; Twin City square
                 MsgSchedules.SendSysMesage("Flags War has started now!", MsgServer.MsgMessage.ChatMode.Center, MsgServer.MsgMessage.MsgColor.red);
 
                 Process = ProcesType.Alive;

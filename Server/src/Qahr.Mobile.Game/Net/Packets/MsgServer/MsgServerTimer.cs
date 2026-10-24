@@ -32,7 +32,7 @@ namespace Qahr.Mobile.Game.MsgServer
         {
             stream.InitWriter();
             // QahrMobile: same fields + #9 = unix seconds (client CHero::SetServerTimeStamp; Weekly Cards / Daily Packs compare
-            // their times with it, it was 0 before). The type lives in Mobile\MobileWeekCard.cs so this works without a restart.
+            // their times with it, it was 0 before). The type lives in Mobile\Welfare\MobileWeekCard.cs so this works without a restart.
             stream.ProtoBufferSerialize(global::Qahr.Mobile.Phone.MobileWeekCard.Time());
 
             stream.Finalize(GamePackets.MsgData);

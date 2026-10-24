@@ -20,7 +20,7 @@
 //  Arena), Dragon Arena / Bestiary, the Dragon's Recognition story instances (their NPC types 10738-10747 and monsters
 //  24309-24314 exist only in the newer official client, without lookface; the prize items 3600877 / 3357159 exist in no
 //  itemtype), Dragonfest Points, the ranking and the Dragon Vault store. Points are 0 because nothing awards them.
-//  Config (derived values): Infinity[DB]\DragonSaga\dragonsaga.json (optional).
+//  Config (derived values): Data\DragonSaga\dragonsaga.json (optional).
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10978 + 10511 enter button), tagged.
 // ============================================================================
@@ -47,7 +47,7 @@ namespace Qahr.Mobile.DragonSaga
             public uint PointsMax = 50000;       // official: Dragon Vault "Unlocks at 50,000 pts" (tExShop[10978][UnLock][2])
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "DragonSaga", "dragonsaga.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "DragonSaga", "dragonsaga.json"); } }
         public static Config Cfg
         {
             get

@@ -26,7 +26,7 @@ namespace Qahr.Mobile.MaintNpc
                 d.AddText("Description: Complete specific hunting quests to earn fabulous rewards and luxurious mount armor.\n");
                 d.AddOption("Okay.", 255).AddAvatar(Face).FinalizeDialog();
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [NpcAttribute((NpcID)23746)]
@@ -61,7 +61,7 @@ namespace Qahr.Mobile.MaintNpc
                         break;
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [NpcAttribute((NpcID)30767)]
@@ -74,7 +74,7 @@ namespace Qahr.Mobile.MaintNpc
                 d.AddText("The Awakening quests are not open on this server yet.");
                 d.AddOption("Think twice.", 255).AddAvatar(Face).FinalizeDialog();
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
     }
 }

@@ -102,7 +102,7 @@ namespace Qahr.Mobile.Role.Instance
 
         public int AttackSpeed(bool physical)
         {
-            // [AttackSpeed] data-driven tuning (Infinity[DB]\attackspeed.txt). OFF by default -> the old code below runs.
+            // [AttackSpeed] data-driven tuning (Data\attackspeed.txt). OFF by default -> the old code below runs.
             var atkCfg = Qahr.Mobile.Combat.AttackSpeedConfig.Config;
             if (atkCfg != null && atkCfg.Enabled)
                 return atkCfg.Compute(Owner.Player.Class, RightWeapon, LeftWeapon, SpeedR, SpeedL, SpeedRing,
@@ -1489,6 +1489,7 @@ namespace Qahr.Mobile.Role.Instance
                 AddMythSoulAtributes();
                 AddJadeAtributes();
                 RunePirateAtributes();
+                global::Qahr.Mobile.DuneWanderer.DuneStats.Apply(Owner);// QahrMobile: meridians, acupoints, glyphs, talents (Mobile\DuneWanderer)
                 Owner.Status.MaxHitpoints += Owner.CalculateHitPoint();
                 Owner.Status.MaxMana += Owner.CalculateMana();
 

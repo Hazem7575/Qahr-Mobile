@@ -1,4 +1,4 @@
-// [Poker 2026-10-14] One editable config: Infinity[DB]\Poker\config.json (re-read when the file changes).
+// [Poker 2026-10-14] One editable config: Data\Poker\config.json (re-read when the file changes).
 // Values copied from the client (official) and values the client does not carry (derived) are marked in the file.
 using System;
 using System.Collections.Generic;

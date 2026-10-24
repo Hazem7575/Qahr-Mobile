@@ -1,0 +1,4 @@
+[02:42:08 PM]: 2026-10-24 14:42:08 | UID=1001023 | Name=test22 | Old=163203 | New=163173 | Diff=-30 | Method=Qahr.Mobile.Phone.VipPoints.Buy | File=VipPoints.cs | Line=241
+[02:42:09 PM]: 2026-10-24 14:42:09 | UID=1001023 | Name=test22 | Old=163173 | New=163088 | Diff=-85 | Method=Qahr.Mobile.Phone.VipPoints.Buy | File=VipPoints.cs | Line=241
+[05:09:09 PM]: 2026-10-24 17:09:09 | UID=1001023 | Name=test22 | Old=163092 | New=163082 | Diff=-10 | Method=Qahr.Mobile.DuneWanderer.DuneMeridians.Exchange | File=DuneMeridians.cs | Line=97
+[05:09:31 PM]: 2026-10-24 17:09:31 | UID=1001023 | Name=test22 | Old=163082 | New=2 | Diff=-163080 | Method=Qahr.Mobile.DuneWanderer.DuneMeridians.Exchange | File=DuneMeridians.cs | Line=97

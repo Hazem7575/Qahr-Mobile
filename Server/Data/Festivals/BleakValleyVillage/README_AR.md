@@ -49,7 +49,7 @@
 - IDs الـ NPCs وأماكنهم، ونصوص المهام وأهدافها.
 - الأيتمز وجوايزها، وشبابيك الكلاينت.
 
-**مشتق** (في `Infinity[DB]\BleakValleyVillage\bleakvalley.json` و`quests.json` و`spawns.json`):
+**مشتق** (في `Data\BleakValleyVillage\bleakvalley.json` و`quests.json` و`spawns.json`):
 - Grit البداية، ونسبة Faith Crystal، والسمعة لكل مهمة (10)، وجايزة المهمة (40 Log).
 - سعر Log Sale Pack وخصمه وحده اليومي.
 - رحلة Dragonette (الوقت والجوايز)، ونسبة Silver Key.
@@ -68,4 +68,4 @@
   - سطر LuaPush لـ msg 10217 (موجود من قبل).
   - سطر LuaPush جديد لـ msg 10218.
   - Reputation Officer وExit بيتحطوا تلقائي طول ما المهرجان شغال.
-- **الحالة:** `Infinity[DB]\BleakValleyVillage\players.txt`.
+- **الحالة:** `Data\BleakValleyVillage\players.txt`.

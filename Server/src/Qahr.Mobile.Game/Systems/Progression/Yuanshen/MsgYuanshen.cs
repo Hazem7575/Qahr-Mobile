@@ -81,7 +81,7 @@ namespace Qahr.Mobile.Game.MsgServer
             {
                 var stream = rec.GetStream();
                 uint[] Tasks = new uint[] { 07884, 07885, 07886, 13960, 13961, 13962, 13963, 13964, 13965, 13966, 13967, };
-                if (global::Qahr.Mobile.Phone.MobileEvents.IsMobile(User))// QahrMobile: one list packet (action 3, status 1); accept+finish re-ran the mobile guide per quest
+                if (global::Qahr.Mobile.Phone.MobileClient.Is(User))// QahrMobile: one list packet (action 3, status 1); accept+finish re-ran the mobile guide per quest
                 {
                     global::Qahr.Mobile.Phone.MobileQuestStory.SendFinishedList(User, Tasks);
                     return;

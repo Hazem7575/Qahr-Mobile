@@ -29,7 +29,7 @@
   - الـ lookface من `fgui_25bsqrj_jxmxdata` `BossId` (299، 976، 166 / 439، 191، 184 / 285، 291، 150). ترتيبهم هو نفس ترتيب الـ 9 bosses في `monster.dat`، وDemonstar=166 بيطابق "Devil - Demonstar".
   - NPC الـ DemonHeart: `npc.ini NpcType10059` (mesh 100590).
   - الزرار والشباك والـ callbacks من luaui. الـ Chicken Bun هو 3352187 (`luauirewardshow 136001000`)، والعداد اللي في الشباك هو العدد اللي في الشنطة.
-- **مشتق (في `Infinity[DB]\CrisisSeries\crisis.json` وفي `monsters\*.ini`):**
+- **مشتق (في `Data\CrisisSeries\crisis.json` وفي `monsters\*.ini`):**
   - هجوم ودفاع الـ bosses: attack 2500-3500، defence2 4000.
   - الأماكن اللي يبدأ منها التحدي (المدن بس، ومش من جوه نسخة).
   - مكان الدخول جوه النسخة (12 خطوة من الـ boss) والخروج لـ TC (439,478).

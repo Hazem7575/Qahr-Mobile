@@ -5,7 +5,7 @@
 //
 //    HKit        bag counts, take / give (bag space checked first), CP spend, Lua item strings ("id plus count [3=bound]"),
 //                weighted draws, throttles, two-click confirmation, festival log lines.
-//    PlayerStore per-festival persistent state (Infinity[DB]\<Folder>\state.json): uid -> { key: long }. Written
+//    PlayerStore per-festival persistent state (Data\<Folder>\state.json): uid -> { key: long }. Written
 //                atomically (tmp + replace) on every change, under one lock, BEFORE a reward is handed out.
 //    Battles     private DynamicID copies of a real map: waves of festival monsters, a time limit, success / failure
 //                callbacks. One battle per player; kills are polled (no shared kill hook is needed).
@@ -234,7 +234,7 @@ namespace Qahr.Mobile.Thanksgiving2022
         }
 
         // ------------------------------------------------------------------ config helpers
-        public static string DbDir(string folder) { return Path.Combine(Program.ServerConfig.DbLocation, folder); }
+        public static string DbDir(string folder) { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, folder); }
         public static List<HItem> Items(object arr)
         {
             var l = new List<HItem>();

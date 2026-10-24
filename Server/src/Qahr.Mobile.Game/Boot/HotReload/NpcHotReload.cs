@@ -1,5 +1,5 @@
 // ============================================================================
-//  NpcHotReload - live reload of Infinity[DB]\Npcs.txt.
+//  NpcHotReload - live reload of Data\Npcs.txt.
 //
 //  How NPCs live in memory:
 //  - Each loaded map (Role.GameMap, maps load lazily on first visit) keeps its NPCs in map.View (MapView =
@@ -152,7 +152,7 @@ namespace Qahr.Mobile.HotReload
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
         }
 
@@ -314,7 +314,7 @@ namespace Qahr.Mobile.HotReload
                     {
                         result.Add("errors");
                         result.Note("error on " + c + ": " + e.Message);
-                        try { MyConsole.SaveException(e); } catch { }
+                        MyConsole.SaveException(e);
                     }
                 }
             }

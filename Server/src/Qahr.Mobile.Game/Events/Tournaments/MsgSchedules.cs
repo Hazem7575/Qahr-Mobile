@@ -84,6 +84,12 @@ namespace Qahr.Mobile.Game.MsgTournaments
             SkillTeamPkTournament = new MsgSkillTeamPkTournament();
             //ClanPhoenix = new MsgClanPhoenix();
         }
+        /// <summary>Invitation that sends the players who accept to a named place (Data\places.txt).</summary>
+        internal static void SendInvitation(string Name, string Prize, Place place, ushort DinamicID, int Secounds, Game.MsgServer.MsgStaticMessage.Messages messaj = Game.MsgServer.MsgStaticMessage.Messages.None)
+        {
+            SendInvitation(Name, Prize, place.X, place.Y, (ushort)place.Map, DinamicID, Secounds, messaj);
+        }
+
         internal static void SendInvitation(string Name, string Prize, ushort X, ushort Y, ushort map, ushort DinamicID, int Secounds, Game.MsgServer.MsgStaticMessage.Messages messaj = Game.MsgServer.MsgStaticMessage.Messages.None)
         {
             string Message = "" + Name + (" Just Started Do You Want To Join Now !");
@@ -209,7 +215,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                         {
                             if (user.Map.ID == 10133)
                             {
-                                user.Teleport(410, 354, 1002);
+                                user.Teleport(Places.TwinCity);
                             }
                         }
                     }
@@ -232,7 +238,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                         {
                             if (user.Map.ID == 10741)
                             {
-                                user.Teleport(410, 354, 1002);
+                                user.Teleport(Places.TwinCity);
                             }
                         }
                     }
@@ -255,7 +261,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                         {
                             if (user.Map.ID == 2071)
                             {
-                                user.Teleport(410, 354, 1002);
+                                user.Teleport(Places.TwinCity);
                             }
                         }
                     }
@@ -279,7 +285,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                         {
                             if (user.Map.ID == 3071)
                             {
-                                user.Teleport(410, 354, 1002);
+                                user.Teleport(Places.TwinCity);
                             }
                         }
                     }

@@ -8,11 +8,11 @@
 //   decide  : MsgLeagueOpt Index = row id: 82 agree hero / 85 agree guild (row has f6 != 0, @0xaf9a30) / 83 refuse,
 //             86 agree all / 87 refuse all (CDlgLeagueEnrolling buttons 6504/6505 @0xad252c/@0xad259f).
 //   Only the union leader (Emperor rank) decides (derived: the client shows the dialog to whoever gets bit1).
-// State: Infinity[DB]\GuildRecruit\league_apply.txt.
+// State: Data\GuildRecruit\league_apply.txt.
 //
 // 2393 CMsgTokenUpdate: Ids -> Infos {Token, Used, Seconds left}; the client stores cooldown = now + Seconds*1000.
 // League orders (tokens 101/102/103/106/204/205/206) are issued through MsgLeagueToken 2305, whose server handler is an
-// empty stub today, so no order has ever been issued: the status comes from LeagueOrders (Infinity[DB]\GuildRecruit\
+// empty stub today, so no order has ever been issued: the status comes from LeagueOrders (Data\GuildRecruit\
 // league_orders.txt) which is empty until an order system calls LeagueOrders.RecordUse.
 using System;
 using System.Collections.Generic;

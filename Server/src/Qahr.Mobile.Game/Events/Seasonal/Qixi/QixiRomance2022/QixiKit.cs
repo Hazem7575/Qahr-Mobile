@@ -1,7 +1,7 @@
 // ============================================================================
 //  [QixiRomance2022 2026-10-15] QixiKit: shared server pieces of the five Qixi festivals of this group
 //  (QixiRomance2022, QixiQingqiu2023, QixiInterplane2024, Qixi2025, SwordSaga). One place for:
-//    - the per-player state file   Infinity[DB]\<Key>\players.txt   (uid TAB key=value;key=value, atomic save)
+//    - the per-player state file   Data\<Key>\players.txt   (uid TAB key=value;key=value, atomic save)
 //    - item helpers (count / take / bag space / grant, timed + bound + blessed items, official "id 0 n mono mins act" strings)
 //    - crypto RNG weighted picks (Qahr.Mobile.Lottery.LotteryCommon), per-player throttle, festival log lines.
 //  Every grant: caller holds the festival lock, checks bag space FIRST, deducts, records the state, then grants.
@@ -196,7 +196,7 @@ namespace Qahr.Mobile.QixiKit
     }
 
     /// <summary>[EventData 2026-10-15] Per-player key/value state of one festival, kept in the unified EventStore (MySQL;
-    /// section = folder[.file], values in its Strings). The old Infinity[DB]\&lt;folder&gt;\&lt;file&gt; is imported once and
+    /// section = folder[.file], values in its Strings). The old Data\&lt;folder&gt;\&lt;file&gt; is imported once and
     /// renamed *.migrated. Set marks the value dirty; Commit writes this store's changed players to MySQL (throws on failure).</summary>
     public sealed class PlayerStore
     {
@@ -212,7 +212,7 @@ namespace Qahr.Mobile.QixiKit
         }
         public object Sync { get { return _sync; } }
         /// <summary>The OLD file (only read once by the migration).</summary>
-        public string FilePath { get { return Path.Combine(Program.ServerConfig.DbLocation ?? "", _folder, _file); } }
+        public string FilePath { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, _folder, _file); } }
         public string EventKey { get { return _be.Event; } }
 
         public string Get(uint uid, string k, string def = "") { _be.EnsureMigrated(); return EventData.EventStore.GetString(uid, _be.Event, k, def); }

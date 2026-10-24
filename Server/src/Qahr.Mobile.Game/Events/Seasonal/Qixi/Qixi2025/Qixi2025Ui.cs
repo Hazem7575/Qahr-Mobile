@@ -17,7 +17,7 @@
 //
 //  NOT on this server (answered with a system message, nothing invented): Worldly Dream instances, Magpie Bridge
 //  draw, beast nurturing / reincarnation / handbook, stage rewards, ranking and Worldly Store.
-//  Config (optional): Infinity[DB]\Qixi2025\qixi2025.json {festival, minLevel, starwaySand}.
+//  Config (optional): Data\Qixi2025\qixi2025.json {festival, minLevel, starwaySand}.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10726), tagged.
 // ============================================================================
@@ -40,7 +40,7 @@ namespace Qahr.Mobile.Qixi2025
             public uint StarwaySand = 3353900;   // itemtype "Starway Sand" (repairs the Magpie Bridge)
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "Qixi2025", "qixi2025.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "Qixi2025", "qixi2025.json"); } }
         public static Config Cfg
         {
             get

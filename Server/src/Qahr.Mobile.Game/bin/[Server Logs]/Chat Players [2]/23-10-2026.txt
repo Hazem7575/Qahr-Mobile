@@ -19,3 +19,7 @@
 [10:13:13 PM]:test22 to GmStudio @go 1002 1 1
 [10:13:14 PM]:test22 to GmStudio @goto nobody
 [10:14:55 PM]:test22 to All @cps 10000
+[10:19:42 PM]:test22 to All @cps 50000
+[10:19:59 PM]:test22 to All @cps 100000
+[10:20:25 PM]:test22 to All @help
+[10:22:20 PM]:test22 to All @help

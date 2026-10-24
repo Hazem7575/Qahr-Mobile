@@ -414,6 +414,8 @@ namespace Qahr.Mobile.Role
                 }
                 else if (obj.ObjType == MapObjectType.Npc)
                 {
+                    if (Phone.MobileQuestMarkers.Hide(Owner, obj.UID))
+                        return false;// QahrMobile: invisible "~" quest markers only for players on that step (Mobile\Quests\MobileQuestMarkers.cs)
                     if (obj.Map == 1015 && obj.UID == (uint)Game.MsgNpc.NpcID.LittleBen)
                     {
                         if (Owner.Player.QuestGUI.CheckQuest(6129, MsgQuestList.QuestListItem.QuestStatus.Finished))

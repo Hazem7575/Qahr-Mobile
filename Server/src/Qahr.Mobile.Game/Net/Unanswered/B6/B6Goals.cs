@@ -110,7 +110,7 @@ namespace Qahr.Mobile.Unanswered.B6
                 try { req = stream.ProtoBufferDeserialize(new GoalSchedulePB()); } catch { return; }// malformed: drop
                 client.Send(Build(stream, AnswerSchedule(req), IdSchedule));
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [PacketAttribute(IdQuery)]
@@ -123,7 +123,7 @@ namespace Qahr.Mobile.Unanswered.B6
                 try { req = stream.ProtoBufferDeserialize(new GoalQueryPB()); } catch { return; }
                 client.Send(Build(stream, AnswerQuery(req), IdQuery));
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         [PacketAttribute(IdNumReward)]
@@ -144,7 +144,7 @@ namespace Qahr.Mobile.Unanswered.B6
                     try { MyConsole.WriteLine("[B6] refused 2546 claim uid=" + client.Player.UID); } catch { }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
     }
 }

@@ -1,6 +1,6 @@
 // [TeamArena 2026-10-14] Team Arena (Team Qualifier) - editable settings.
 //
-// File: Infinity[DB]\TeamArena\TeamArenaConfig.ini  (key=value, '#' comments). Missing file/keys -> defaults below.
+// File: Data\TeamArena\TeamArenaConfig.ini  (key=value, '#' comments). Missing file/keys -> defaults below.
 // Values marked OFFICIAL come from the 7957 client (Cn_Res.ini texts / Conquer.exe code / itemtype descriptions).
 // Values marked DERIVED are not in the client; they are balanced choices and can be edited here.
 using System;

@@ -1,6 +1,6 @@
 // Martial Token (BattlePass) - server logic. Protocol: BattlePassProto.cs. Season data: BattlePassConfig.cs.
 // Per-player state is saved in the character file (Users\<uid>.ini, [BattlePass] State=) by SaveClient and loaded by
-// LoadCharacterCore. Every reward / task / token / store action is appended to Infinity[DB]\BattlePass\_claims.log, and
+// LoadCharacterCore. Every reward / task / token / store action is appended to Data\BattlePass\_claims.log, and
 // rewards already written there are never given twice (also after a rollback of the character file).
 // Nothing the client sends is trusted: it only names a reward index or task index; level, token, price, count and
 // item always come from the config.
@@ -56,7 +56,7 @@ namespace Qahr.Mobile.BattlePass
                 string raw = reader.ReadBigString(Section, Key, "");
                 states[client.Player.UID] = Parse(raw);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         public static void SaveToIni(Client.GameClient client, WindowsAPI.IniFile writer)
@@ -70,7 +70,7 @@ namespace Qahr.Mobile.BattlePass
                 lock (s) text = Serialize(s);
                 writer.WriteString(Section, Key, text);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         static string Serialize(BpState s)
@@ -226,7 +226,7 @@ namespace Qahr.Mobile.BattlePass
                 BattlePassPackets.Send(client, BattlePassPackets.MsgBattlePass, new BpMsg { Type = 0, Value = On ? BattlePassConfig.SeasonId : 0 });
                 Get(client);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         static void SendUser(Client.GameClient client, BpState s, ulong gained)
@@ -454,7 +454,7 @@ namespace Qahr.Mobile.BattlePass
                 for (int i = 0; i + 1 < changed.Count; i += 2)
                     BattlePassPackets.Send(client, BattlePassPackets.MsgBattlePassTask, new BpTaskMsg { Type = 2, Values = new ulong[] { changed[i], changed[i + 1] } });
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ Point Store (exchange shop paid with Hero Points)
@@ -492,7 +492,7 @@ namespace Qahr.Mobile.BattlePass
                 SendUser(client, s, 0);
                 return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return false; }
+            catch (Exception e) { MyConsole.SaveException(e); return false; }
         }
 
         // ------------------------------------------------------------------ ledger / log
@@ -509,7 +509,7 @@ namespace Qahr.Mobile.BattlePass
                     if (p.Length >= 6 && p[4] == "REWARD") ledger.Add(p[5]);
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         static bool LedgerHas(string key)
@@ -541,7 +541,7 @@ namespace Qahr.Mobile.BattlePass
                     + "|" + what + "|" + rest + "|L" + s.Level + " pts " + s.LevelPoints + " hero " + s.HeroPoints + " token " + s.Privilege;
                 File.AppendAllText(LedgerFile, line + Environment.NewLine, Encoding.UTF8);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
     }
 }

@@ -7,7 +7,7 @@
 //                   logic only talks to this, so a harness can run every rule against a fake player.
 //    ClientIo       the real implementation over Client.GameClient (stack-safe take, stack/timed give, space check).
 //    ItemSpec       the client's item string "id addamount num monopoly savetime active" (luacfg / luaui tables).
-//    PlayerStore    per-player key/value state in ONE json file per festival (Infinity[DB]\<Festival>\players.json),
+//    PlayerStore    per-player key/value state in ONE json file per festival (Data\<Festival>\players.json),
 //                   written atomically on every change (tmp + replace). Survives relogs and restarts.
 //    PrivateFight   one personal monster in a private copy (own DynamicID) of a map: teleport in, spawn, poll the kill,
 //                   callback once, send the player back. Used for the beast / boss challenges of the event windows.
@@ -143,7 +143,7 @@ namespace Qahr.Mobile.MidAutumnReunion2022
                     return true;
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return false; }
+            catch (Exception e) { MyConsole.SaveException(e); return false; }
         }
         public void Lua(uint msgId, string call) { LuaUi.LuaPush.Send(c, call, msgId); }
         public void Msg(string text) { try { c.SendSysMesage(text, MsgMessage.ChatMode.System, MsgMessage.MsgColor.yellow); } catch { } }
@@ -406,7 +406,7 @@ namespace Qahr.Mobile.MidAutumnReunion2022
                         if (f.Mob != null && !f.Mob.Alive)
                         {
                             f.Done = true; f.LeaveAt = now.AddSeconds(3);
-                            if (inside) { try { if (f.OnKill != null) f.OnKill(c); } catch (Exception e) { try { MyConsole.SaveException(e); } catch { } } }
+                            if (inside) { try { if (f.OnKill != null) f.OnKill(c); } catch (Exception e) { MyConsole.SaveException(e); } }
                             continue;
                         }
                         if (now >= f.Expires || (f.OutsideSince != DateTime.MinValue && (now - f.OutsideSince).TotalSeconds > 20))
@@ -415,7 +415,7 @@ namespace Qahr.Mobile.MidAutumnReunion2022
                             Cancel(f.Owner);
                         }
                     }
-                    catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                    catch (Exception e) { MyConsole.SaveException(e); }
                 }
             }
             finally { Interlocked.Exchange(ref _busy, 0); }

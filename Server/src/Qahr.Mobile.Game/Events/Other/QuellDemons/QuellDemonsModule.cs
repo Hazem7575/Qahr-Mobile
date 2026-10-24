@@ -11,7 +11,7 @@
 //    - Server_Key tNewServerBossAct: spawn points (257,251) (104,172) (323,374) (280,153) (378,262) in the Infernix Ruins, the
 //      broadcasts, the mail titles, the ChgMap rules (Twin City / Market only, <= 100M silver, "The place is currently calm").
 //    - Dialog_Info["1274-other"]: GoldCupItem 2100253 (Infernix Trophy), Server_Key: 200 Infernix Crystals (3332119).
-//  Everything else (map 11885, attack/defence, reward amounts) is DERIVED and lives in Infinity[DB]\QuellDemons\quelldemons.json.
+//  Everything else (map 11885, attack/defence, reward amounts) is DERIVED and lives in Data\QuellDemons\quelldemons.json.
 //  The boss lookfaces are not in any client source: a boss whose lookface is 0 in the config is not spawned.
 //
 //  Server -> client: LuaPush (MsgAction 2099 / 258), dwParam 10053:
@@ -104,7 +104,7 @@ namespace Qahr.Mobile.QuellDemons
             public BossCfg Boss(int i) { return i >= 0 && i < BossCount ? Bosses[i] : null; }
         }
         static Config _cfg; static string _cfgStamp;
-        public static string Folder { get { return Path.Combine(Program.ServerConfig.DbLocation, "QuellDemons"); } }
+        public static string Folder { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "QuellDemons"); } }
         static string ConfigFile { get { return Path.Combine(Folder, "quelldemons.json"); } }
         static string StateFile { get { return Path.Combine(Folder, "state.json"); } }
         static string LogFile { get { return Path.Combine(Folder, "quelldemons_log.txt"); } }
@@ -218,7 +218,7 @@ namespace Qahr.Mobile.QuellDemons
             if (V(d, "minDamageForReward") != null) c.MinDamageForReward = U(V(d, "minDamageForReward"));
         }
 
-        // ------------------------------------------------------------------ persistent state (Infinity[DB]\QuellDemons\state.json)
+        // ------------------------------------------------------------------ persistent state (Data\QuellDemons\state.json)
         public sealed class Pending
         {
             public string Id = ""; public uint Uid; public string Name = "";
@@ -343,7 +343,7 @@ namespace Qahr.Mobile.QuellDemons
             catch (Exception e)
             {
                 MyConsole.WriteLine("[QuellDemons] init failed (module off): " + e.Message, ConsoleColor.Yellow);
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
         }
 
@@ -368,7 +368,7 @@ namespace Qahr.Mobile.QuellDemons
                 DeliverAll();
                 lock (_lock) if (_dirty) SaveState();
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             finally { Interlocked.Exchange(ref _ticking, 0); }
         }
 
@@ -430,7 +430,7 @@ namespace Qahr.Mobile.QuellDemons
 
         // ------------------------------------------------------------------ monster types
         static readonly Dictionary<uint, MonsterFamily> _families = new Dictionary<uint, MonsterFamily>();
-        /// <summary>Our monster type (Infinity[DB]\QuellDemons\monsters\&lt;id&gt;-*.ini), registered in Pool.MonsterFamilies when missing
+        /// <summary>Our monster type (Data\QuellDemons\monsters\&lt;id&gt;-*.ini), registered in Pool.MonsterFamilies when missing
         /// (festival/hot reload replace that dictionary).</summary>
         public static MonsterFamily Family(uint id)
         {
@@ -576,7 +576,7 @@ namespace Qahr.Mobile.QuellDemons
                 lock (_lock) SaveState();
                 DeliverAll();
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
         static void Drops(Client.GameClient killer, MonsterRole monster, BossCfg b)
         {
@@ -680,7 +680,7 @@ namespace Qahr.Mobile.QuellDemons
             catch (Exception e)
             {
                 Log("deliver " + p.Id + " FAILED after dequeue: " + e.Message);
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
         }
 
@@ -788,7 +788,7 @@ namespace Qahr.Mobile.QuellDemons
                 LuaUi.LuaPush.Send(client, "DlgCoolClothesBossUi_OpenMainView|" + MainData(-1), LuaMsg);
                 return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return false; }
+            catch (Exception e) { MyConsole.SaveException(e); return false; }
         }
 
         /// <summary>LuaPush.HandleCallback hook for msg 10053. True = answered here.</summary>
@@ -838,7 +838,7 @@ namespace Qahr.Mobile.QuellDemons
                         }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return true; }
+            catch (Exception e) { MyConsole.SaveException(e); return true; }
             return false;
         }
 

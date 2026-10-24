@@ -22,7 +22,7 @@
 //  Data[4] = {2,0,8} "Quest (0/8)" is DERIVED (8 = the window's 8 pictures; the official chapter count is server-side).
 //  NOT on this server (system message, nothing granted): Fool`s Paradise story (tPlotEditor), Pleasure Vault (CS,
 //  tAprilFoolsKua2025), Wonder Box wishes (reward pool is server-side only), ranking, Joyful Gift Shop.
-//  Config (optional, derived values): Infinity[DB]\AprilFools2025\aprilfools2025.json.
+//  Config (optional, derived values): Data\AprilFools2025\aprilfools2025.json.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10568 + 10510 DrawClient_* with act 10568 only), tagged.
 //  It sits BEFORE the VillageRequests line, which otherwise takes every DrawClient_* on 10510.
@@ -53,7 +53,7 @@ namespace Qahr.Mobile.AprilFools2025
             public int StoryParts = 8;                                              // derived: the window's 8 pictures
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "AprilFools2025", "aprilfools2025.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "AprilFools2025", "aprilfools2025.json"); } }
         public static Config Cfg
         {
             get

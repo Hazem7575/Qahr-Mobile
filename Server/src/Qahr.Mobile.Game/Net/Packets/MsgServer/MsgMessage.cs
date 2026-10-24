@@ -397,7 +397,7 @@ namespace Qahr.Mobile.Game.MsgServer
             {
                 MyConsole.WriteException(e);
             }
-            if (!client.Player.Name.Contains("[GM]"))
+            if (!client.IsGm)
             {
                 if ((msg.__Message.Contains("http:") || msg.__Message.Contains("www.")) || msg.__Message.Contains(".com"))
                 {
@@ -791,9 +791,9 @@ namespace Qahr.Mobile.Game.MsgServer
             if (global::Qahr.Mobile.Phone.MobileEvents.ChatCommand(client, msg.__Message))
                 return true;// QahrMobile: @join / @events (mobile event invitations)
             if (global::Qahr.Mobile.GuildAuction.GuildAuctionModule.ChatCommand(client, msg.__Message))
-                return true;// QahrMobile: @gauction (guild auction, GM only), Features\GuildAuction
+                return true;// QahrMobile: @gauction (guild auction, GM only), Systems\GuildAuction
             if (global::Qahr.Mobile.Phone.MobileDaily.ChatCommand(client, msg.__Message))
-                return true;// QahrMobile: @mdaily (mobile daily activity test, GM), Networking\Mobile\MobileDaily.cs
+                return true;// QahrMobile: @mdaily (mobile daily activity test, GM), Mobile\Welfare\MobileDaily.cs
             if (msg.__Message.StartsWith("@"))
             {
 
@@ -805,7 +805,7 @@ namespace Qahr.Mobile.Game.MsgServer
             // keeping the legacy name check only as a fallback. Destructive, server-wide commands below
             // (restartall*, ban/banip/kick, interip, exit) are additionally gated on client.IsOwner so a
             // forged [GM] name can never trigger them.
-            if (client.IsStaffAccount || client.Player.Name.Contains("[GM]"))
+            if (client.IsStaffAccount)
             {
                 msg.__Message = msg.__Message.Replace("#70", "").Replace("#71", "").Replace("#72", "").Replace("#73", "").Replace("#74", "").Replace("#75", "").Replace("&245&", "").Replace("&246&", "").Replace("&247&", "").Replace("&248&", "").Replace("&249&", "").Replace("&250&", "");
                 if (msg.__Message.StartsWith("@"))
@@ -3630,7 +3630,7 @@ namespace Qahr.Mobile.Game.MsgServer
                                 {
                                     switch (data[1].ToLower())
                                     {
-                                        case "tc": client.Teleport(410, 354, 1002); break;
+                                        case "tc": client.Teleport(Places.TwinCity); break;
                                         case "pc": client.Teleport(195, 260, 1011); break;
                                         case "ac":
                                         case "am": client.Teleport(566, 563, 1020); break;

@@ -26,7 +26,7 @@
 //  event points 0, haze 0/10, no nightmare beasts (state 1 = hidden; which beasts the night holds is server-side).
 //  NOT on this server (system message, nothing granted or taken): Dispel Haze, beasts, Astral Wheel / day view,
 //  crafting Dream Essences (reward pool server-side), ranking, Astral Store.
-//  Config (optional): Infinity[DB]\AprilFools2026\aprilfools2026.json {festival, openFromMaps}.
+//  Config (optional): Data\AprilFools2026\aprilfools2026.json {festival, openFromMaps}.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10052, only the functions below), tagged [AprilFools2026 2026-10-14].
 // ============================================================================
@@ -55,7 +55,7 @@ namespace Qahr.Mobile.AprilFools2026
             public HashSet<uint> OpenFrom = new HashSet<uint> { 1002 };   // official [NoMap] "You can only enter the Astral Dream from Twin City."
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "AprilFools2026", "aprilfools2026.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "AprilFools2026", "aprilfools2026.json"); } }
         public static Config Cfg
         {
             get

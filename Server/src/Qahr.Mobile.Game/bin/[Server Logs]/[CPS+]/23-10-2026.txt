@@ -6,3 +6,5 @@
 [10:13:02 PM]: 2026-10-23 22:13:02 | UID=1001023 | Name=test22 | Old=3001 | New=3101 | Diff=+100 | Method=Qahr.Mobile.AdminApi.AdminApiServer.Cps | File=AdminApi.cs | Line=1265
 [10:13:11 PM]: 2026-10-23 22:13:11 | UID=1001023 | Name=test22 | Old=3101 | New=3201 | Diff=+100 | Method=Qahr.Mobile.AdminApi.AdminApiServer.Cps | File=AdminApi.cs | Line=1265
 [10:14:55 PM]: 2026-10-23 22:14:55 | UID=1001023 | Name=test22 | Old=3201 | New=13201 | Diff=+10000 | Method=Qahr.Mobile.AdminApi.AdminApiServer.Cps | File=AdminApi.cs | Line=1265
+[10:19:42 PM]: 2026-10-23 22:19:42 | UID=1001023 | Name=test22 | Old=13201 | New=63201 | Diff=+50000 | Method=Qahr.Mobile.AdminApi.AdminApiServer.Cps | File=AdminApi.cs | Line=1265
+[10:19:59 PM]: 2026-10-23 22:19:59 | UID=1001023 | Name=test22 | Old=63201 | New=163201 | Diff=+100000 | Method=Qahr.Mobile.AdminApi.AdminApiServer.Cps | File=AdminApi.cs | Line=1265

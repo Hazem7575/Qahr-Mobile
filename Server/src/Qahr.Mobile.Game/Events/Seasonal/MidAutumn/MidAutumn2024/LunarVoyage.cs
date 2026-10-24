@@ -17,7 +17,7 @@
 //  NOT on this server (answered with a system message): the Jade Rabbit voyage (Exploration window, Voyage Points, endings),
 //  the ranking (ZhongQiu2024Kua_StageView), Bounty Park (cross-server) and the Treasure Attic shop. Voyage Points are 0 and
 //  every ending is "not achieved" because nothing awards them yet.
-//  Config (derived values): Infinity[DB]\MidAutumn2024\lunarvoyage.json.
+//  Config (derived values): Data\MidAutumn2024\lunarvoyage.json.
 //
 //  Hooks: Base\LuaUi\LuaPush.cs TopBarData (+ ids while running) and HandleCallback (msg 10459), both tagged.
 // ============================================================================
@@ -48,7 +48,7 @@ namespace Qahr.Mobile.MidAutumn2024
             public string[][] EndingRewards = Endings.Select(n => Enumerable.Repeat("", n).ToArray()).ToArray();
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "MidAutumn2024", "lunarvoyage.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "MidAutumn2024", "lunarvoyage.json"); } }
         public static Config Cfg
         {
             get

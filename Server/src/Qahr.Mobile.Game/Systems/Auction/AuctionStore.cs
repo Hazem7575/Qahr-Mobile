@@ -1,6 +1,6 @@
 // [Auction 2026-10-14] Auction House data: config, listings (escrow), ledger and logs.
 //
-// Files (Infinity[DB]\Auction\):
+// Files (Data\Auction\):
 //   Auction.ini        config. "official" = from the 7957 client (Cn_Res.ini / Info.ini defaults / client code),
 //                      "derived" = server-side numbers the client does not carry (marked in the file).
 //   listings.txt       every listing + its escrowed item (ClientItems.DBItem bytes, base64). Rewritten atomically

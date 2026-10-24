@@ -1,5 +1,5 @@
 # SummerWhales (2026-10-14). id,type,mesh,map,x,y   mesh = client npc.ini [NpcTypeN] x10
-# Map 11829 SummerBeach (official id, Questinfo) = doc 12116 2014vipholiday (Infinity[DB]\FestivalMaps\maps.txt).
+# Map 11829 SummerBeach (official id, Questinfo) = doc 12116 2014vipholiday (Data\FestivalMaps\maps.txt).
 # Positions = the official Questinfo.ini points, cell walkable on 2014vipholiday.DMap (checked 2026-10-14).
 30727,2,44280,11829,172,149  # Cassio (official id, BeginNpcId/FinishNpcId of 5111-5115). npc.ini 4428 Cassio [CapturedWhaleKing] - exact name. HIGH
 30728,2,44290,11829,100,245  # StrandedWhale (official id, 5114). npc.ini 4429 Cassie [StrandedWhale] (first of the 5 stranded whales 4429-4433). SAME-TAG

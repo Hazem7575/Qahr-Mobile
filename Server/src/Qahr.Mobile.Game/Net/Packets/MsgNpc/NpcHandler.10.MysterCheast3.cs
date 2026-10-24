@@ -145,7 +145,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.DailyHeavenChance += 1;
                             if (client.Player.DailyHeavenChance == 5)
                             {
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             }
                             client.Player.SendString(stream, MsgStringPacket.StringID.Effect, true, "eidolon");
                         }
@@ -209,7 +209,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.DailyHeavenChance += 1;
                             if (client.Player.DailyHeavenChance == 5)
                             {
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             }
 
                         }
@@ -348,7 +348,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.DailyHeavenChance += 1;
                             if (client.Player.DailyHeavenChance == 5)
                             {
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             }
                             client.Player.SendString(stream, MsgStringPacket.StringID.Effect, true, "eidolon");
                         }
@@ -412,7 +412,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.DailyHeavenChance += 1;
                             if (client.Player.DailyHeavenChance == 5)
                             {
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             }
 
                         }
@@ -551,7 +551,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.DailyHeavenChance += 1;
                             if (client.Player.DailyHeavenChance == 5)
                             {
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             }
                             client.Player.SendString(stream, MsgStringPacket.StringID.Effect, true, "eidolon");
                         }
@@ -615,7 +615,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.DailyHeavenChance += 1;
                             if (client.Player.DailyHeavenChance == 5)
                             {
-                                client.Teleport(410, 354, 1002);
+                                client.Teleport(Places.TwinCity);
                             }
 
                         }
@@ -652,7 +652,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 6:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
                 case 2:
@@ -745,7 +745,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 9:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
                 case 1:
@@ -1614,7 +1614,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 2:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
                 case 1:
@@ -1962,7 +1962,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 61:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
                 case 50:
@@ -2487,7 +2487,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 2:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         client.Player.QuestGUI.Accept(ActiveQuest, 0);
                         break;
                     }
@@ -2746,7 +2746,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 3:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
                 case 4:
@@ -7325,7 +7325,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 3:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         break;
                     }
             }
@@ -7491,7 +7491,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 1:
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
 
 
 
@@ -8245,7 +8245,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                     }
                 case 3:
                     {
-                        client.Teleport(410, 354, 1002, 0, true, true);
+                        client.Teleport(Places.TwinCity, 0, true, true);
                         break;
                     }
             }

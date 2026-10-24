@@ -81,7 +81,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                 // one invite for the whole event (was one per war)
                 foreach (var client in Pool.GamePoll.Values)
                 {
-                    client.Player.MessageBox("", new Action<Client.GameClient>(p => p.Teleport(410, 354, 1002, 0)), null, 60, MsgServer.MsgStaticMessage.Messages.ClassPk);
+                    client.Player.MessageBox("", new Action<Client.GameClient>(p => p.Teleport(Places.TwinCity, 0)), null, 60, MsgServer.MsgStaticMessage.Messages.ClassPk);
                 }
                 Proces = ProcesType.Idle;
             }
@@ -316,7 +316,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
 
                     MsgSchedules.SendSysMesage("Congratulations, to " + client.Player.Name + " Won " + Typ.ToString() + " Class PK War (" + Level.ToString() + ") , he received Top " + Typ.ToString() + " and 1 CP.", MsgServer.MsgMessage.ChatMode.TopLeftSystem, MsgServer.MsgMessage.MsgColor.white);
 
-                    client.Teleport(410, 354, 1002, 0);
+                    client.Teleport(Places.TwinCity, 0);
                 }
             }
         }

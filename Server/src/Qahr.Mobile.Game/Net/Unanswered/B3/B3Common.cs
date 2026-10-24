@@ -48,7 +48,7 @@ namespace Qahr.Mobile.Unanswered.B3
 
         public static void Log(Exception e)
         {
-            try { MyConsole.SaveException(e); } catch { }
+            MyConsole.SaveException(e);
         }
     }
 }

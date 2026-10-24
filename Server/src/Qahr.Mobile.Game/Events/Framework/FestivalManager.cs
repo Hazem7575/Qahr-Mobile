@@ -8,7 +8,7 @@
 //       players in view get MsgNpcInfo at once, players walking in see it through the normal view scan),
 //    3. its spawn boxes get their monsters through MobCollection.Add (respawning normally while it runs),
 //    4. its quests.json is published to the QuestEngine as an overlay (QuestGrammar.OverlayProvider + Rebuild),
-//    5. announcement (center + system chat, Arabic and English) and a line in Infinity[DB]\festivals_log.txt.
+//    5. announcement (center + system chat, Arabic and English) and a line in Data\festivals_log.txt.
 //  END: the quests are switched off first (so nothing can be finished while the rest goes away), then every
 //    monster of its spawns (and any live monster of its own types on a loaded map) is removed (RemoveEntity to the
 //    players in view), its NPCs are removed (GameMap.RemoveNpc + the DMap cells restored like NpcHotReload), its
@@ -23,10 +23,10 @@
 //  continues with its saved progress the next time the festival runs. Daily/weekly festival quests still reset.
 //
 //  Schedule: checked every minute (server local time). Manual on/off overrides are kept in
-//  Infinity[DB]\Festivals\_state.json ("on" = running whatever the schedule says, "off" = stopped, "auto" clears).
+//  Data\Festivals\_state.json ("on" = running whatever the schedule says, "off" = stopped, "auto" clears).
 //  Rewards: festival quest prizes are paid only through the engine finish (once per character unless repeat);
 //  exchanges (rewards.json) only while running, next to the NPC, cost first, once per character unless repeat,
-//  each claim recorded in Infinity[DB]\Festivals\_claims.txt BEFORE the reward is given.
+//  each claim recorded in Data\Festivals\_claims.txt BEFORE the reward is given.
 //
 //  Commands: owner @festival list | info <key> | on <key> | off <key> | auto <key> | reload
 //            console festival ... (same) ; AdminApi festivals / festival {key, action} / reloadfestivals
@@ -93,12 +93,12 @@ namespace Qahr.Mobile.Festivals
                 Init();
                 _timer = new Timer(_ => Tick(), null, 1000, 60000); // [FestivalFastStart 2026-10-15] first check 1 s after start (was 15 s): players logging in right after a restart got the icons late
                 int valid = _defs.Values.Count(d => d.Valid);
-                MyConsole.WriteLine("[Festivals] " + _defs.Count + " festival(s), " + valid + " valid (Infinity[DB]\\Festivals). Schedules checked every minute. Commands: festival list|info|on|off|auto|reload.", ConsoleColor.Cyan);
+                MyConsole.WriteLine("[Festivals] " + _defs.Count + " festival(s), " + valid + " valid (Data\\Festivals). Schedules checked every minute. Commands: festival list|info|on|off|auto|reload.", ConsoleColor.Cyan);
             }
             catch (Exception e)
             {
                 MyConsole.WriteLine("[Festivals] start failed (module off): " + e.Message, ConsoleColor.Yellow);
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
         }
 
@@ -182,7 +182,7 @@ namespace Qahr.Mobile.Festivals
         {
             if (Interlocked.Exchange(ref _ticking, 1) == 1) return;
             try { Evaluate(true); }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             finally { Interlocked.Exchange(ref _ticking, 0); }
         }
 
@@ -235,7 +235,7 @@ namespace Qahr.Mobile.Festivals
             catch (Exception e)
             {
                 r.Notes.Add("start error: " + e.Message);
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
             int run;
             lock (_runs) { _runs.TryGetValue(d.Key, out run); run++; _runs[d.Key] = run; }
@@ -375,12 +375,12 @@ namespace Qahr.Mobile.Festivals
         {
             try
             {
-                // [FestivalIcons 2026-10-14] tracked per player + shared buttons ref-counted (Base\Festivals\FestivalIcons.cs)
+                // [FestivalIcons 2026-10-14] tracked per player + shared buttons ref-counted (Events\Framework\FestivalIcons.cs)
                 if (d == null || string.IsNullOrWhiteSpace(d.IconShow)) return;
                 int n = show ? FestivalIcons.Show(d.IconShow) : FestivalIcons.Hide(d.IconShow, d.IconHide, RunningIconShows());
                 if (n != 0) Log(show ? "ICON" : (n < 0 ? "ICONKEEP" : "ICONOFF"), d.Key, n < 0 ? "shared button still used by a running festival" : n + " player(s)");
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
         /// <summary>[FestivalIcons 2026-10-14] the icon_show calls of the running festivals.</summary>
         static List<string> RunningIconShows()
@@ -392,7 +392,7 @@ namespace Qahr.Mobile.Festivals
         {
             if (c == null || c.Player == null) return;
             try { FestivalIcons.Login(c, RunningIconShows()); }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
         /// <summary>The Highlight Events pages (ActInfo ids) of the running festivals, in festival order, no duplicates.</summary>
         public static List<string> RunningHighlightActs()
@@ -541,7 +541,7 @@ namespace Qahr.Mobile.Festivals
             catch (Exception e)
             {
                 MyConsole.WriteLine("[Festivals] quest engine rebuild failed: " + e.Message, ConsoleColor.Yellow);
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
                 return "rebuild failed: " + e.Message;
             }
         }
@@ -576,7 +576,7 @@ namespace Qahr.Mobile.Festivals
             {
                 if (c == null || c.Player == null || c.Player.QuestGUI == null) continue;
                 try { SendQuestStates(c, ids); n++; }
-                catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+                catch (Exception e) { MyConsole.SaveException(e); }
             }
             return n;
         }
@@ -646,7 +646,7 @@ namespace Qahr.Mobile.Festivals
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
                 return true;
             }
         }
@@ -938,7 +938,7 @@ namespace Qahr.Mobile.Festivals
                     }
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ commands
@@ -969,7 +969,7 @@ namespace Qahr.Mobile.Festivals
                 switch (verb)
                 {
                     case "list":
-                        if (_defs.Count == 0) { lines.Add("[Festivals] no festival folders in Infinity[DB]\\Festivals."); break; }
+                        if (_defs.Count == 0) { lines.Add("[Festivals] no festival folders in Data\\Festivals."); break; }
                         foreach (var d in _defs.Values.OrderBy(x => x.Key)) lines.Add(Summary(d));
                         break;
                     case "info":
@@ -1006,7 +1006,7 @@ namespace Qahr.Mobile.Festivals
             catch (Exception e)
             {
                 lines.Add("[Festivals] error: " + e.Message);
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
             }
             return lines;
         }

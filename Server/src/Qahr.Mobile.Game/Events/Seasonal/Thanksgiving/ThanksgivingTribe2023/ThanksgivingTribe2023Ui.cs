@@ -23,7 +23,7 @@
 //    crowns  Thorn Crown (3346153, tip): 30 -> Patrolling Shadow (B)/Blazing Sun (B) box, 50 -> the 5-star (Ruling)/(Dawn) box;
 //            the boxes (3346148/49/51/52, tips) open into the garments 191895/191915/191935/191925.
 //    boxes   Platinum / Gold / Blackgold Treasure Box (3346145-47) and Compass Treasure Box (3346144): official tips.
-//  DERIVED (Infinity[DB]\ThanksgivingTribe2023\thanksgivingtribe2023.json): points per step, cell / treasure / encounter
+//  DERIVED (Data\ThanksgivingTribe2023\thanksgivingtribe2023.json): points per step, cell / treasure / encounter
 //  rewards and odds, boss level rewards, runestone CP prices, draw cost + odds, Timo goods (from the official preview) and
 //  prices, encounter battles (map 12660, monsters in Festivals\ThanksgivingTribe2023\monsters).
 //  NOT on this server: Arena (CS), global / local / tribe ranking rewards (mailed by the official server at the end).

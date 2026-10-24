@@ -4,7 +4,7 @@
 //  button DlgFellLaurelBtn, tMsg_Info["MidAutumnFestival"] = 10052; Cultivation stage rewards = DlgMidAutumnRank ActivityId 10295
 //  (CallServer 10295). Texts luaUiRes[1425] / [1410] / [1273][10295]. Runs while the festival DemonInvasionMadPet runs.
 //
-//  Playable now (all rules / items from the client; numbers it lacks are DERIVED in Infinity[DB]\DemonInvasionMadPet\config.json):
+//  Playable now (all rules / items from the client; numbers it lacks are DERIVED in Data\DemonInvasionMadPet\config.json):
 //    hew      MidTree2023_ChouType</N>1|10: 1 Lunar Spirit Pill 3600628 per hew (rule 2) -> 1 treasure of "Normal Hewing Rewards"
 //             (DlgFellLaurelPreReward tReward1) + 15 Cultivation; Divine Axe (rule 3/4): an attempt instead of a pill -> "Divine Axe
 //             Hewing Rewards" (tReward2) + 45 Cultivation. Reply DlgFellLaurelUi_PlayFellTree {FellTreeList={'item,tier'}}; the client
@@ -80,7 +80,7 @@ namespace Qahr.Mobile.DemonInvasionMadPet
         }
         static Config _cfg; static string _stamp;
         public static Config CfgOverride;
-        static string DataDir { get { return Path.Combine(Program.ServerConfig.DbLocation, "DemonInvasionMadPet"); } }
+        static string DataDir { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "DemonInvasionMadPet"); } }
         static string CfgFile { get { return Path.Combine(DataDir, "config.json"); } }
         public static Config Cfg
         {

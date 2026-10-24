@@ -22,7 +22,7 @@
 //  NOT on this server (system message, nothing granted): the Finale Feast story, Turkey Refuge, Wish of Fertility (CS),
 //  the rankings, the shops. Fertility Points are 0: nothing awards them. Stage = -1 (the story is not available here).
 //  Points bar max 120000 = top cumulative tier of pointsrankdata CONST_POINTS_AWARD_DATA[10486] (derived, config).
-//  Config (optional): Infinity[DB]\Thanksgiving2024\thanksgiving2024.json {festival, minLevel, pointsMax}.
+//  Config (optional): Data\Thanksgiving2024\thanksgiving2024.json {festival, minLevel, pointsMax}.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10486), tagged [Thanksgiving2024 2026-10-14].
 // ============================================================================
@@ -46,7 +46,7 @@ namespace Qahr.Mobile.Thanksgiving2024
             public uint PointsMax = 120000;     // derived: last tier of CONST_POINTS_AWARD_DATA[10486]
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "Thanksgiving2024", "thanksgiving2024.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "Thanksgiving2024", "thanksgiving2024.json"); } }
         public static Config Cfg
         {
             get

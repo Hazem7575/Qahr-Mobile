@@ -1,0 +1,62 @@
+[09:57:20 AM]:test22 to GmStudio @help
+[10:10:19 AM]:test22 to GmStudio @go market
+[10:10:20 AM]:test22 to GmStudio @go hall
+[10:10:20 AM]:test22 to GmStudio @go twin
+[10:10:20 AM]:test22 to GmStudio @go nowhere
+[10:10:21 AM]:test22 to GmStudio @cps 1
+[10:10:39 AM]:test22 to GmStudio @go hall
+[10:10:39 AM]:test22 to GmStudio @go twin
+[10:57:41 AM]:test22 to GmStudio @cps 1
+[10:57:41 AM]:test22 to GmStudio @go market
+[10:57:42 AM]:test22 to GmStudio @go twin
+[01:34:21 PM]:test22 to GmStudio @lua Fgui_CumulativeAward_Open|{['Code']=200,['Data']={3,450,1000,1,{{100,2},{300,2},{600,1},{1000,0},{2000,0},{4000,0}},0,{'1088000 0 5'}}}
+[01:58:24 PM]:test22 to GmStudio @vip
+[01:58:58 PM]:test22 to GmStudio @vip
+[01:59:26 PM]:test22 to GmStudio @lua QahrVipLv_Open/{['Code']=200,['Data']={1,0,100,1,{{100,0,{'1088001 0 5'}}},0,{'723745 0 1'},723745}}
+[01:59:41 PM]:test22 to GmStudio @lua QahrVipLv_Open|{['Code']=200,['Data']={1,0,100,1,{{100,0,{'1088001 0 5'}}},0,{'723745 0 1'},723745}}
+[02:05:06 PM]:test22 to All @vip
+[02:05:29 PM]:test22 to All @vip 6 200
+[02:09:03 PM]:test22 to GmStudio @vip
+[02:22:19 PM]:test22 to All @vippt 500
+[02:22:27 PM]:test22 to GmStudio @vippts 150
+[02:22:27 PM]:test22 to GmStudio @vip
+[02:23:12 PM]:test22 to All @vippts 500
+[02:31:49 PM]:test22 to All @vippts 500
+[02:31:53 PM]:test22 to GmStudio @vippts 150
+[02:31:53 PM]:test22 to GmStudio @vip
+[02:32:56 PM]:test22 to GmStudio @vippts 150 nobodyxx
+[02:32:56 PM]:test22 to GmStudio @online
+[02:33:18 PM]:test22 to GmStudio @help
+[02:35:30 PM]:test22 to All @vip 500
+[02:35:58 PM]:test22 to GmStudio @help
+[02:35:58 PM]:test22 to GmStudio @vippts 150
+[02:36:05 PM]:test22 to GmStudio @vip
+[02:36:42 PM]:test22 to GmStudio @vip
+[02:37:59 PM]:test22 to GmStudio @lua StrToTable|(function() QC=AppFacade:retrieveMediator('CumulativeAwardMediator'):getViewComponent():getContentPane():getChild('com_yuandingjiangli') end)()
+[02:37:59 PM]:test22 to GmStudio @lua StrToTable|(function() S='' for i=0,QC:numChildren()-1 do o=QC:getChildAt(i) S=S..o:getName()..(o:isVisible() and ' ' or '(h) ') end Public_CallServerFunc(19993,'QahrVipLv_Dbg</N>'..S) end)()
+[02:38:22 PM]:test22 to GmStudio @lua StrToTable|(function() b=QC:getChild('btn_meirijiangli') k=QC:getController('c_day_award') a=QC:getChild('com_award') end)()
+[02:38:23 PM]:test22 to GmStudio @lua StrToTable|(function() Public_CallServerFunc(19993,'QahrVipLv_Dbg</N>'..b:getX()..'_'..b:getY()..'_'..k:getSelectedIndex()..'_'..a:getX()..'_'..a:getY()) end)()
+[02:38:36 PM]:test22 to GmStudio @lua StrToTable|(function() b:setVisible(true) end)()
+[02:38:53 PM]:test22 to GmStudio @lua StrToTable|(function() b:setLuaText('VIP Shop') S='' for i=0,b:numChildren()-1 do o=b:getChildAt(i) S=S..o:getName()..'_'..o:getWidth()..'x'..o:getHeight()..'_' end Public_CallServerFunc(19993,'QahrVipLv_Dbg</N>'..S) end)()
+[02:39:44 PM]:test22 to GmStudio @lua StrToTable|(function() Public_CallServerFunc(19993,'QahrVipLv_Shop') end)()
+[02:40:06 PM]:test22 to GmStudio @vip
+[02:40:09 PM]:test22 to GmStudio @lua StrToTable|(function() QC=AppFacade:retrieveMediator('CumulativeAwardMediator'):getViewComponent():getContentPane():getChild('com_yuandingjiangli') b=QC:getChild('btn_meirijiangli') end)()
+[02:40:10 PM]:test22 to GmStudio @lua StrToTable|(function() b:setVisible(true) b:setLuaText('VIP Shop') b:setTouchable(true) b:addClickListener(function() Public_CallServerFunc(19993,'QahrVipLv_Shop') end) end)()
+[03:11:50 PM]:test22 to GmStudio @lua StrToTable|(function() if not QvF then QvF=Fund_GetActClose end Fund_GetActClose=function(a,...) if a==3 then return false end return QvF(a,...) end end)()
+[03:11:51 PM]:test22 to GmStudio @lua StrToTable|(function() if not QvP then QvP=TopupPrivilege_GetItemPosition end TopupPrivilege_GetItemPosition=function(k,k2) if k=='id' then return 1218 end return QvP(k,k2) end end)()
+[03:11:52 PM]:test22 to GmStudio @lua LuaUIMgr_OpenWindow|646,10
+[03:12:22 PM]:test22 to GmStudio @lua StrToTable|(function() if not QvS then QvS=TopupPrivilege_GetSketchInfo end TopupPrivilege_GetSketchInfo=function(lv,k) if k=='image' then return 'MainUI_Vip'..(lv+1)..'Pic' end return QvS(lv,k) end end)()
+[03:12:22 PM]:test22 to GmStudio @lua LuaUIMgr_OpenWindow|646,10
+[03:36:10 PM]:test22 to GmStudio @lua StrToTable|(function() TopupPrivilege_GetSketchInfo=function(lv,k) if k=='image' then return 'fuli_tqdj'..(lv+1)..'pic' end return QvS(lv,k) end end)()
+[03:36:11 PM]:test22 to GmStudio @lua LuaUIMgr_OpenWindow|646,1000
+[03:36:14 PM]:test22 to GmStudio @lua StrToTable|(function() g_objLuaUIMgrCop:PostCmd(3312,4013) end)()
+[03:36:27 PM]:test22 to GmStudio @lua StrToTable|(function() Public_CallServerFunc(19993,'QahrVipLv_Dbg</N>cop='..type(g_objLuaUIMgrCop)..'_mgr='..type(g_objLuaUIMgr)) end)()
+[03:37:09 PM]:test22 to GmStudio @lua StrToTable|(function() Public_CallServerFunc(19993,'QahrVipLv_Dbg</N>id='..tostring(TopupPrivilege_GetItemPosition('id'))..'_max='..tostring(TopupPrivilege_GetMaxTopNum())) end)()
+[03:37:24 PM]:test22 to GmStudio @lua StrToTable|(function() QvP=TopupPrivilege_GetItemPosition TopupPrivilege_GetItemPosition=function(k,k2) if k=='id' then return 1218 end return QvP(k,k2) end TopupPrivilege_GetMaxTopNum=function() return 6 end end)()
+[03:37:24 PM]:test22 to GmStudio @lua StrToTable|(function() QvS=TopupPrivilege_GetSketchInfo TopupPrivilege_GetSketchInfo=function(lv,k) if k=='image' then return 'fuli_tqdj'..(lv+1)..'pic' end return QvS(lv,k) end end)()
+[03:37:26 PM]:test22 to GmStudio @lua StrToTable|(function() g_objLuaUIMgrCop:PostCmd(3312,4013) end)()
+[03:37:50 PM]:test22 to GmStudio @lua LuaUIMgr_OpenWindow|646,1000
+[03:37:54 PM]:test22 to GmStudio @lua StrToTable|(function() g_objLuaUIMgrCop:PostCmd(3312,4013) end)()
+[04:02:41 PM]:test22 to GmStudio @vippts 200
+[05:06:09 PM]:test22 to GmStudio @item 3356430 30
+[05:06:10 PM]:test22 to GmStudio @lua LuaUIMgr_OpenWindow|2701,0

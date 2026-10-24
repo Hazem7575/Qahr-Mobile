@@ -71,7 +71,7 @@ namespace Qahr.Mobile.FestivalStory
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
                 return false;
             }
         }

@@ -1707,7 +1707,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                     foreach (var t_gc in HistoryTeams.Values)
                         foreach (var mem in t_gc.Members.Values)
                             if (mem.client.Player.Map == WaitingAreaID)
-                                mem.client.Teleport(410, 354, 1002);
+                                mem.client.Teleport(Places.TwinCity);
                 HistoryTeams.Clear();
             }
 
@@ -1760,7 +1760,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                             {
                                 if (player.Leader.Player.InTeamPk)
                                     player.Leader.Player.InTeamPk = false;
-                                player.TeleportTeam(1002, 410, 354);
+                                player.TeleportTeam(Places.TwinCity);
                             }
 
                         }

@@ -15,7 +15,7 @@
 //  Login: EventStore.OnLogin -> CompEngine.OnLogin(uid) watches players with p: flags; a 2 s timer delivers once the
 //  client finished loading (FullLoading + warehouse). Relogs / re-sends find the claim and give nothing.
 //
-//  Files: Infinity[DB]\Compensation\campaigns\<id>.json (+ <id>.recipients.txt), Infinity[DB]\Compensation\log.txt
+//  Files: Data\Compensation\campaigns\<id>.json (+ <id>.recipients.txt), Data\Compensation\log.txt
 //
 //  op "compensate":
 //    {"action":"status"}                                              -> time, dbOk, campaigns, watching
@@ -341,14 +341,14 @@ namespace Qahr.Mobile.AdminApi
                             if (e != null) { parts.Add(e); res.Given = true; }
                         }
                     }
-                    try { c.SendSysMesage("[" + camp.Title + "] You received a compensation. Open your mailbox to claim it.", Game.MsgServer.MsgMessage.ChatMode.System, Game.MsgServer.MsgMessage.MsgColor.yellow); } catch { }
+                    try { c.SendSysMesage("[" + camp.Title + "] You received a compensation. Open your mailbox to claim it.", Game.MsgServer.MsgMessage.ChatMode.System, Game.MsgServer.MsgMessage.MsgColor.yellow); } catch (Exception err) { MyConsole.SaveException(err); }
                     SafeSave(c);
                     res.Ok = true;
                 }
                 catch (Exception e)
                 {
                     res.Error = e.Message;
-                    try { MyConsole.SaveException(e); } catch { }
+                    MyConsole.SaveException(e);
                 }
                 res.Text = c.Player.Name + " (" + uid + "): " + string.Join("; ", parts.ToArray());
                 return res;
@@ -537,7 +537,7 @@ namespace Qahr.Mobile.Compensation
                     File.AppendAllText(Path.Combine(Folder, "log.txt"), DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss", CultureInfo.InvariantCulture) + " | " + (s ?? "").Replace("\r", " ").Replace("\n", " ") + Environment.NewLine, Encoding.UTF8);
                 }
             }
-            catch { }
+            catch (Exception err) { MyConsole.SaveException(err); }
         }
 
         // ------------------------------------------------------------------ validation
@@ -664,7 +664,7 @@ namespace Qahr.Mobile.Compensation
                     if (c != null) list.Add(c);
                 }
             }
-            catch { }
+            catch (Exception err) { MyConsole.SaveException(err); }
             return list.OrderByDescending(c => c.Created).ToList();
         }
 
@@ -682,7 +682,7 @@ namespace Qahr.Mobile.Compensation
         /// <summary>Real MySQL round trip (EnsureSchema is cached, so read uid 0 fresh is not enough): a claim probe that never changes anything visible.</summary>
         public static bool DbProbe()
         {
-            try { return global::Qahr.Mobile.EventData.EventStore.IsAvailable(0) && ProbeWrite(); } catch { return false; }
+            try { return global::Qahr.Mobile.EventData.EventStore.IsAvailable(0) && ProbeWrite(); } catch (Exception err) { MyConsole.SaveException(err); return false; }
         }
         static bool ProbeWrite()
         {
@@ -711,7 +711,7 @@ namespace Qahr.Mobile.Compensation
             if (!global::Qahr.Mobile.EventData.EventStore.TryClaimOnce(0, Ev, "c:" + c.Id))
             {
                 bool exists = false;
-                try { exists = global::Qahr.Mobile.EventData.EventStore.IsAvailable(0) && global::Qahr.Mobile.EventData.EventStore.IsClaimed(0, Ev, "c:" + c.Id); } catch { }
+                try { exists = global::Qahr.Mobile.EventData.EventStore.IsAvailable(0) && global::Qahr.Mobile.EventData.EventStore.IsClaimed(0, Ev, "c:" + c.Id); } catch (Exception ex) { MyConsole.SaveException(ex); }
                 return exists ? "campaign '" + c.Id + "' was already sent (recorded in MySQL)" : "MySQL is unavailable - nothing was sent (compensation needs the database to stay once-only)";
             }
             try { Save(c); }
@@ -747,7 +747,7 @@ namespace Qahr.Mobile.Compensation
             }
             try { lock (_fileLock) File.WriteAllText(RecipFile(c.Id), sb.ToString(), Encoding.UTF8); } catch (Exception e) { Log("ERROR recipients file " + c.Id + ": " + e.Message); }
             c.SentNow = delivered; c.Queued = queued; c.Failed = failed;
-            try { Save(c); } catch { }
+            try { Save(c); } catch (Exception err) { MyConsole.SaveException(err); }
             Log("SEND " + c.Id + ": " + targets.Count + " targets, " + delivered + " delivered, " + queued + " queued, " + already + " already, " + failed + " failed");
             return new Dictionary<string, object> { { "id", c.Id }, { "targets", targets.Count }, { "delivered", delivered }, { "queued", queued }, { "already", already }, { "failed", failed }, { "failedList", failedList } };
         }
@@ -803,7 +803,7 @@ namespace Qahr.Mobile.Compensation
             {
                 // nothing reached the player: undo the claim and keep it pending (retried at the next login)
                 bool undone = global::Qahr.Mobile.EventData.EventStore.Unclaim(uid, Ev, c.Id);
-                try { global::Qahr.Mobile.EventData.EventStore.Edit(uid, Ev, s => s.Flags.Add("p:" + c.Id), true); } catch { }
+                try { global::Qahr.Mobile.EventData.EventStore.Edit(uid, Ev, s => s.Flags.Add("p:" + c.Id), true); } catch (Exception err) { MyConsole.SaveException(err); }
                 Log("GRANT FAILED " + c.Id + " uid " + uid + " (nothing given, " + (undone ? "claim undone, pending again" : "CLAIM NOT UNDONE") + "): " + g.Error);
                 return Outcome.Failed;
             }
@@ -832,7 +832,7 @@ namespace Qahr.Mobile.Compensation
                 var s = global::Qahr.Mobile.EventData.EventStore.Section(uid, Ev);
                 if (s.Flags.Any(f => f.StartsWith("p:", StringComparison.Ordinal))) Watch(uid);
             }
-            catch { }
+            catch (Exception err) { MyConsole.SaveException(err); }
         }
 
         public static int WatchCount { get { lock (_watchLock) return _watch.Count; } }
@@ -841,7 +841,7 @@ namespace Qahr.Mobile.Compensation
         {
             lock (_watchLock) _watch[uid] = Tick;
             if (AutoPump && _timer == null)
-                lock (_watchLock) if (_timer == null) _timer = new Timer(_ => { try { Pump(); } catch { } }, null, 2000, 2000);
+                lock (_watchLock) if (_timer == null) _timer = new Timer(_ => { try { Pump(); } catch (Exception err) { MyConsole.SaveException(err); } }, null, 2000, 2000);
         }
 
         /// <summary>Delivers the pending campaigns of watched players whose login finished. Drops a watch after 3 minutes (next login re-adds it).</summary>
@@ -926,7 +926,7 @@ namespace Qahr.Mobile.Compensation
             var rows = new List<object>();
             int delivered = 0, pending = 0, cancelled = 0, expired = 0, other = 0;
             var lines = new List<string>();
-            try { lock (_fileLock) if (File.Exists(RecipFile(id))) lines = File.ReadAllLines(RecipFile(id), Encoding.UTF8).ToList(); } catch { }
+            try { lock (_fileLock) if (File.Exists(RecipFile(id))) lines = File.ReadAllLines(RecipFile(id), Encoding.UTF8).ToList(); } catch (Exception err) { MyConsole.SaveException(err); }
             foreach (var line in lines)
             {
                 var parts = line.Split('\t');

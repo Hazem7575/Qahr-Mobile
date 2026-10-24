@@ -20,7 +20,7 @@
 //                  Whale Spirit 3337924 (summon Whale King (Holy) 200774 / Chi 1000 each).
 //                  DERIVED: spirits needed for Whale King (Holy); CP prices are 0 = not sold (official prices unknown).
 //  Favor (Whale Favor Points) = 49 per pray, shown in DlgSummerMain.
-//  State per character: Infinity[DB]\SummerWhales\players.json (FestPlayerStore, saved before any grant).
+//  State per character: Data\SummerWhales\players.json (FestPlayerStore, saved before any grant).
 //  Hooks: SummerWhalesUi.OnRaw (LuaPush, existing line), SummerWhalesWish.OnUse (MsgItemUsuagePacket.UseItem),
 //         SummerWhalesWish.OnItemDialog (Procesor, before the in-screen NPC search).
 // ============================================================================
@@ -379,7 +379,7 @@ namespace Qahr.Mobile.SummerWhales
                 ShowItemDialog(c, stream, item.ITEM_ID, 0);
                 return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return false; }
+            catch (Exception e) { MyConsole.SaveException(e); return false; }
         }
 
         /// <summary>Procesor hook: the answer of one of our item dialogs (npcid = item id). True = handled.</summary>
@@ -394,7 +394,7 @@ namespace Qahr.Mobile.SummerWhales
                 ShowItemDialog(c, stream, npcid, option);
                 return true;
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return true; }
+            catch (Exception e) { MyConsole.SaveException(e); return true; }
         }
 
         static void Box(Client.GameClient c, ServerSockets.Packet stream, string text)

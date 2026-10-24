@@ -45,7 +45,7 @@ namespace Qahr.Mobile.Game.MsgServer.AttackHandler.Calculate
             if (attacker == null || target == null)
                 return false;
             // [CombatAudit2 2026-10-14] was: return Role.Core.Rate(Math.Min(100, Math.Max(40, accuracy - 40 - dodge)), 100);
-            // (the clamped HIT rate was rolled as the MISS chance: >=40% miss, more accuracy = more misses). Fixed curve + derived constants: Base\CombatAudit2\PvpHitRate.cs, Infinity[DB]\CombatAudit2\pvp_hitrate.txt
+            // (the clamped HIT rate was rolled as the MISS chance: >=40% miss, more accuracy = more misses). Fixed curve + derived constants: Base\CombatAudit2\PvpHitRate.cs, Data\CombatAudit2\pvp_hitrate.txt
             return global::Qahr.Mobile.CombatAudit2.PvpHitRate.Dodged(attacker, target);
         }
         public static bool Dodged(Client.GameClient attacker, Game.MsgMonster.MonsterRole target)

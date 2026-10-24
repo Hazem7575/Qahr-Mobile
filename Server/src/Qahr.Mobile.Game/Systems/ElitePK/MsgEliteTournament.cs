@@ -1450,7 +1450,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                     if (HistoryPlayers.Count > 0)
                         foreach (var hero in HistoryPlayers.Values)
                             if (hero.Player.Map == WaitingAreaID)
-                                hero.Teleport(410, 354, 1002);
+                                hero.Teleport(Places.TwinCity);
                     HistoryPlayers.Clear();
                 }
             }
@@ -1491,7 +1491,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                             {
                                 if (Client.Player.InTeamPk)
                                     Client.Player.InTeamPk = false;
-                                Client.Teleport(410, 354, 1002);
+                                Client.Teleport(Places.TwinCity);
                             }
                             Top8[0] = this.Players.Values.FirstOrDefault().ElitePKStats;
                         }
@@ -1575,7 +1575,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                                                     foreach (var player in removers)
                                                     {
                                                         Players.Remove(player.Player.UID);
-                                                        player.Teleport(410, 354, 1002);
+                                                        player.Teleport(Places.TwinCity);
                                                     }
 
                                                     Matches.Clear();
@@ -1698,7 +1698,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                                                     foreach (var player in removers)
                                                     {
                                                         Players.Remove(player.Player.UID);
-                                                        player.Teleport(410, 354, 1002);
+                                                        player.Teleport(Places.TwinCity);
                                                     }
 
                                                     Matches.Clear();
@@ -1784,7 +1784,7 @@ namespace Qahr.Mobile.Game.MsgTournaments
                                                     foreach (var player in removers)
                                                     {
                                                         Players.Remove(player.Player.UID);
-                                                        player.Teleport(410, 354, 1002);
+                                                        player.Teleport(Places.TwinCity);
                                                     }
 
                                                     State = MsgServer.MsgElitePKBrackets.GuiTyp.GUI_Top8Ranking;

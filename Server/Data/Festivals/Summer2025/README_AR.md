@@ -21,7 +21,7 @@
 ## ملحوظة على 150437
 زرار Fgui 150437 (`lua_yfyh_btn7`) بيبعت برضه على 10707، بس الفانكشن بتاعته `SummerActive2023Page_OpenMainInterface` بتفتح شباك Dream Cruise بتاع Summer2023 (Set Sail 2026). مش تبع الحدث ده، فمش بنظهره هنا، والكود بتاعنا بيسيبه لصاحبه.
 
-## مشتق (derived) في `Infinity[DB]\Summer2025\summer2025.json`
+## مشتق (derived) في `Data\Summer2025\summer2025.json`
 - `sowCost` = 1 و`quickCost` = 5: عدد البذور للزرعة. مأخوذ من بيانات الاختبار في الكلاينت.
 - `woodlandWatchMax` = 3: عداد "Woodland Watch (0/3)".
 - اختيار أيقونات Lv1 لأنواع الورد في Data[8].

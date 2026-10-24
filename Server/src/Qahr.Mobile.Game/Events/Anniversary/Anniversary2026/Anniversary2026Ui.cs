@@ -23,7 +23,7 @@
 //  Quiz: the client has NO question bank for this quiz (tAnswerQuestion has no questions in Server_Key/Cn_Res; the
 //  questions are server data), so the Revival Academy answers with a system message, like every other part:
 //  Naval Drill, Residential Area, Luoxing Pagoda Stargazing, route recruiting/claiming and rankings. Nothing invented.
-//  Config (optional): Infinity[DB]\Anniversary2026\anniversary2026.json {festival, minLevel, pointsMax}.
+//  Config (optional): Data\Anniversary2026\anniversary2026.json {festival, minLevel, pointsMax}.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10883 + 10511 enter button), tagged.
 // ============================================================================
@@ -49,7 +49,7 @@ namespace Qahr.Mobile.Anniversary2026
             public uint PointsMax = 99999999;      // DERIVED: client fui26znqcenterdata sample Points {0, 99999999}
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "Anniversary2026", "anniversary2026.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "Anniversary2026", "anniversary2026.json"); } }
         public static Config Cfg
         {
             get

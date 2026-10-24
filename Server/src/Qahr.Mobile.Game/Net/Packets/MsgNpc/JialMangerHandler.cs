@@ -79,7 +79,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                 case 3:
                     {
                         // Teleport player out of jail to TwinCity (Map 10364)
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                         client.SendSysMesage("You have been released from jail. Play fair from now on!", MsgServer.MsgMessage.ChatMode.System, MsgServer.MsgMessage.MsgColor.red);
                         break;
                     }

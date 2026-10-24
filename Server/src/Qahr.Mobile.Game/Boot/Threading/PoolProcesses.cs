@@ -49,12 +49,12 @@ namespace Qahr.Mobile.Client
                 #region [CP Castle]
                 if (Game.MsgTournaments.MsgSchedules.CpsCastle.Process == Game.MsgTournaments.ProcesType.Dead)
                 {
-                    if (client.Player.Name.Contains("[GM]"))
+                    if (client.IsGm)
                         return;
                    
                     if (client.Player.Map == 10133)
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                     }
                 }
                 #endregion 
@@ -63,12 +63,12 @@ namespace Qahr.Mobile.Client
                 #region Flags War                
                 if (Game.MsgTournaments.MsgSchedules.FlagsWar.Process == Game.MsgTournaments.ProcesType.Dead)
                 {
-                    if (client.Player.Name.Contains("[GM]"))
+                    if (client.IsGm)
                         return;
 
                     if (client.Player.Map == 2071)
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                     }
                 }
                 #endregion
@@ -80,7 +80,7 @@ namespace Qahr.Mobile.Client
 
                     if (client.Player.Map == 10741)
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                     }
                 }
                 #endregion
@@ -90,7 +90,7 @@ namespace Qahr.Mobile.Client
                 {
                     if (client.Player.Map == 3071)
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                     }
                 }
                 #endregion  
@@ -101,7 +101,7 @@ namespace Qahr.Mobile.Client
                 {
                     if (client.Player.Map == 3030)
                     {
-                        client.Teleport(410, 354, 1002);
+                        client.Teleport(Places.TwinCity);
                     }
                 }
                 #endregion  
@@ -803,7 +803,7 @@ namespace Qahr.Mobile.Client
                 #region Invalid X | Y
                 if (client.Player.X == 0 || client.Player.Y == 0)
                 {
-                    client.Teleport(410, 354, 1002);
+                    client.Teleport(Places.TwinCity);
                 }
                 #endregion                
 
@@ -7738,6 +7738,7 @@ namespace Qahr.Mobile.Client
                             client.Player.UpdateVip(stream);
                         }
                     }
+                    global::Qahr.Mobile.Phone.VipPoints.ApplyLevel(client);// QahrMobile: keep the VIP level bought with VIP points
                 }
                 #endregion
 

@@ -5,6 +5,8 @@
 //   type 1: marks every listed activity id active, then PostCmd(0xd2a). type 3/4: popup / follow-up. others ignored.
 // The server runs no "operating activity" system, so the official inactive state is type 1 with count 0:
 // nothing is marked active, the UI just refreshes (PostCmd 0xd2a). Status only, nothing is granted.
+// Exception: requests that list the VIP levels activity (Data\mobile_vip_levels.txt "window") go to
+// Mobile\Vip\VipWelfareUi (type 0 = the Welfare tab opened, type 2 = Claim the next VIP level).
 using System;
 
 namespace Qahr.Mobile.Unanswered.B6
@@ -26,6 +28,21 @@ namespace Qahr.Mobile.Unanswered.B6
             return stream;
         }
 
+        /// <summary>True when the request lists the VIP levels activity (count u16 at +8, ids u32 from +0xe).</summary>
+        static bool ListsVipActivity(ServerSockets.Packet stream)
+        {
+            uint act = Phone.VipWelfareUi.ActId;
+            if (act == 0 || stream.Size < 0xe) return false;
+            stream.Seek(8);
+            int count = stream.ReadUInt16();
+            for (int i = 0; i < count && 0xe + i * 4 + 4 <= stream.Size; i++)
+            {
+                stream.Seek(0xe + i * 4);
+                if (stream.ReadUInt32() == act) return true;
+            }
+            return false;
+        }
+
         /// <summary>True when the request deserves the empty list (a query: type 0 list or type 2 single id).</summary>
         public static bool ShouldAnswer(ushort type) { return type == TypeQuery || type == TypeSingle; }
 
@@ -39,9 +56,16 @@ namespace Qahr.Mobile.Unanswered.B6
                 stream.Seek(4);
                 ushort type = stream.ReadUInt16();
                 if (!ShouldAnswer(type)) return;// 1/3/4 are server->client types; never echo them
+                if (ListsVipActivity(stream))
+                {
+                    // the VIP levels (Welfare "Credit Rebate"): type 0 = the tab opened, type 2 = Claim (ids at +0xe)
+                    if (type == TypeSingle) Phone.VipWelfareUi.OnClaim(client);
+                    else Phone.VipWelfareUi.OnQuery(client);
+                    return;// no empty list: its PostCmd 0xcf1 would make the client clear the VIP progress
+                }
                 client.Send(BuildEmptyList(stream));
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
     }
 }

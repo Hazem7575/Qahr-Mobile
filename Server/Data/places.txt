@@ -1,0 +1,6 @@
+# Named places used by the server code (Gameplay\World\Places.cs) and by the GM command "@go <name>".
+# Re-read when this file is saved.
+#   name  map  x  y
+twin          1002   410  354   # Twin City square: the "back to town" point (revive, event end, jail release, invitations ...)
+market        1036   211  196   # Market
+hall          11412  44   51    # Services Hall (the PC NPCs)

@@ -22,7 +22,7 @@
 //  Dragon Awakening / Dragon Wishes (DlgFestivalMain2024Wish: its 7 awakening + 10 wish rewards are server tables),
 //  the Nine Sons Dragon Trial (its 9 prize items and odds are server-side), Exorcism, Year Beast, the Fortune Pool and
 //  the ranking. There are no Questinfo quests and no maps.txt rows. So all 4 tasks are "Locked" and the points are 0.
-//  Config (optional, derived values): Infinity[DB]\SpringFestival2024\springfestival2024.json.
+//  Config (optional, derived values): Data\SpringFestival2024\springfestival2024.json.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10358), tagged.
 // ============================================================================
@@ -46,7 +46,7 @@ namespace Qahr.Mobile.SpringFestival2024
             public string ActTime = "2 1~2 21";// official: "2024 2 1~2024 2 21" (month day; the year is the current one)
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "SpringFestival2024", "springfestival2024.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "SpringFestival2024", "springfestival2024.json"); } }
         public static Config Cfg
         {
             get

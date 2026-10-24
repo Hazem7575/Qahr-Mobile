@@ -8,6 +8,7 @@
 //      <id> items <spec> <spec> ... every spec is given
 //      <id> random <w>*<spec> ...   one spec is picked by weight w
 //      <id> msg <text>              the item is kept and the text is shown
+//    The Swap Shop boxes (Mall shop 6) are "items" lines at the end of the file.
 //    spec = id:count[:b][:minutes]  (b = bound; the content is also bound when the used item is bound)
 //  Hook: MsgItemUsuagePacket.cs UseItem, next to the other box lines:
 //      if (global::Qahr.Mobile.Mall.MobileItemUse.OnUse(client, item)) return;
@@ -17,7 +18,6 @@
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using Qahr.Mobile.MidAutumnReunion2022;
 
@@ -34,12 +34,9 @@ namespace Qahr.Mobile.Mall
             public List<int> Weights = new List<int>();
         }
 
-        static Dictionary<uint, Entry> _map = new Dictionary<uint, Entry>();
-        static DateTime _stamp = DateTime.MinValue;
-        static readonly object _sync = new object();
+        static readonly Phone.DataFile<Dictionary<uint, Entry>> Table =
+            new Phone.DataFile<Dictionary<uint, Entry>>("mobile_item_use.txt", "MobileItemUse", Parse);
         static readonly ConcurrentDictionary<uint, long> _last = new ConcurrentDictionary<uint, long>();
-
-        static string FilePath { get { return Path.Combine(Program.ServerConfig.DbLocation, "mobile_item_use.txt"); } }
 
         static bool ParseSpec(string s, out ItemSpec it)
         {
@@ -58,69 +55,52 @@ namespace Qahr.Mobile.Mall
             return true;
         }
 
-        static Dictionary<uint, Entry> Map()
+        static Dictionary<uint, Entry> Parse(string[] lines)
         {
-            try
+            var map = new Dictionary<uint, Entry>();
+            foreach (var line in Phone.DataFile.Clean(lines))
             {
-                var t = File.Exists(FilePath) ? File.GetLastWriteTimeUtc(FilePath) : DateTime.MinValue;
-                if (t == _stamp) return _map;
-                lock (_sync)
+                var p = Phone.DataFile.Words(line);
+                uint id;
+                if (p.Length < 3 || !uint.TryParse(p[0], out id)) continue;
+                var e = new Entry { Kind = p[1].ToLowerInvariant() };
+                switch (e.Kind)
                 {
-                    if (t == _stamp) return _map;
-                    var map = new Dictionary<uint, Entry>();
-                    if (t != DateTime.MinValue)
-                        foreach (string line in File.ReadAllLines(FilePath))
+                    case "cps": case "bcps": case "potency":
+                        if (!uint.TryParse(p[2], out e.Amount) || e.Amount == 0) continue;
+                        break;
+                    case "msg":
+                        e.Text = string.Join(" ", p.Skip(2));
+                        break;
+                    case "items":
+                        foreach (var s in p.Skip(2)) { ItemSpec it; if (ParseSpec(s, out it)) e.Items.Add(it); }
+                        if (e.Items.Count == 0) continue;
+                        break;
+                    case "random":
+                        foreach (var s in p.Skip(2))
                         {
-                            string l = line;
-                            int hash = l.IndexOf('#');
-                            if (hash >= 0) l = l.Substring(0, hash);
-                            var p = l.Split(new[] { ' ', '\t' }, StringSplitOptions.RemoveEmptyEntries);
-                            uint id;
-                            if (p.Length < 3 || !uint.TryParse(p[0], out id)) continue;
-                            var e = new Entry { Kind = p[1].ToLowerInvariant() };
-                            switch (e.Kind)
-                            {
-                                case "cps": case "bcps": case "potency":
-                                    if (!uint.TryParse(p[2], out e.Amount) || e.Amount == 0) continue;
-                                    break;
-                                case "msg":
-                                    e.Text = string.Join(" ", p.Skip(2));
-                                    break;
-                                case "items":
-                                    foreach (var s in p.Skip(2)) { ItemSpec it; if (ParseSpec(s, out it)) e.Items.Add(it); }
-                                    if (e.Items.Count == 0) continue;
-                                    break;
-                                case "random":
-                                    foreach (var s in p.Skip(2))
-                                    {
-                                        int star = s.IndexOf('*'), w;
-                                        ItemSpec it;
-                                        if (star <= 0 || !int.TryParse(s.Substring(0, star), out w) || w <= 0 || !ParseSpec(s.Substring(star + 1), out it)) continue;
-                                        e.Weights.Add(w); e.Items.Add(it);
-                                    }
-                                    if (e.Items.Count == 0) continue;
-                                    break;
-                                default:
-                                    continue;
-                            }
-                            map[id] = e;
+                            int star = s.IndexOf('*'), w;
+                            ItemSpec it;
+                            if (star <= 0 || !int.TryParse(s.Substring(0, star), out w) || w <= 0 || !ParseSpec(s.Substring(star + 1), out it)) continue;
+                            e.Weights.Add(w); e.Items.Add(it);
                         }
-                    _map = map;
-                    _stamp = t;
+                        if (e.Items.Count == 0) continue;
+                        break;
+                    default:
+                        continue;
                 }
+                map[id] = e;
             }
-            catch (Exception e)
-            {
-                MyConsole.WriteLine("[MobileItemUse] " + e.Message, ConsoleColor.Yellow);
-            }
-            return _map;
+            return map;
         }
 
         public static bool OnUse(Client.GameClient c, Game.MsgServer.MsgGameItem item)
         {
             if (c == null || c.Player == null || item == null) return false;
+            if (Phone.VipPoints.OnUseItem(c, item)) return true;// VIP cards (Data\mobile_vip_levels.txt)
+            if (DuneWanderer.DuneMeridians.OnUseItem(c, item)) return true;// Yang/Yin Amulets (Data\DuneWanderer\config.txt)
             Entry e;
-            if (!Map().TryGetValue(item.ITEM_ID, out e)) return false;
+            if (!Table.Value.TryGetValue(item.ITEM_ID, out e)) return false;
             var io = new ClientIo(c);
             string name = Kit.ItemName(item.ITEM_ID);
             if (e.Kind == "msg") { io.Msg(e.Text); return true; }

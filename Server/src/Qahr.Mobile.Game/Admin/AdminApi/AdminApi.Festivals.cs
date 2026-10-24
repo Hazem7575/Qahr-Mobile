@@ -1,12 +1,12 @@
 // ============================================================================
-//  AdminApi - [Festivals] ops (Base\Festivals\FestivalManager.cs).
+//  AdminApi - [Festivals] ops (Events\Framework\FestivalManager.cs).
 //
 //  op "festivals"        -> {"ok":true,"festivals":[{key,name_ar,name_en,valid,enabled,running,override,schedule,due,
 //                             nextStart,nextEnd,npcs,monsterTypes,spawns,quests,exchanges,started?,run?,liveNpcs?,
 //                             liveMonsters?,errors[],warnings[]}]}
 //  op "festival"         -> {"key":"SampleLantern","action":"on"|"off"|"auto"|"info"}  (on/off = manual override, kept in
-//                             Infinity[DB]\Festivals\_state.json; auto = back to the schedule). Applied live.
-//  op "reloadfestivals"  -> re-reads Infinity[DB]\Festivals\*\ (a running festival whose folder changed is restarted).
+//                             Data\Festivals\_state.json; auto = back to the schedule). Applied live.
+//  op "reloadfestivals"  -> re-reads Data\Festivals\*\ (a running festival whose folder changed is restarted).
 // ============================================================================
 using System.Collections.Generic;
 using System.Linq;

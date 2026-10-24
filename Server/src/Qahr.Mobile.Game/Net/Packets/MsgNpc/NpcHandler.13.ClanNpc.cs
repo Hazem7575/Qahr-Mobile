@@ -1812,9 +1812,9 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.SendUpdate(stream, client.Player.Money, MsgServer.MsgUpdate.DataType.Money);
                             switch (Option)
                             {
-                                case 1: client.Teleport(410, 354, 1002); break;
+                                case 1: client.Teleport(Places.TwinCity); break;
                                 case 2: client.Teleport(216, 215, 1036); break;
-                                case 3: client.Teleport(410, 354, 1002); break;
+                                case 3: client.Teleport(Places.TwinCity); break;
                                 // case 4: client.Teleport(410, 354, 1002); break;
 
                             }
@@ -1857,10 +1857,10 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.SendUpdate(stream, client.Player.Money, MsgServer.MsgUpdate.DataType.Money);
                             switch (Option)
                             {
-                                case 1: client.Teleport(410, 354, 1002); break;
+                                case 1: client.Teleport(Places.TwinCity); break;
                                 case 2: client.Teleport(216, 215, 1036); break;
                                 case 3: client.Teleport(85, 323, 1000); break;
-                                case 4: client.Teleport(410, 354, 1002); break;
+                                case 4: client.Teleport(Places.TwinCity); break;
 
                             }
                         }
@@ -1903,9 +1903,9 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.SendUpdate(stream, client.Player.Money, MsgServer.MsgUpdate.DataType.Money);
                             switch (Option)
                             {
-                                case 1: client.Teleport(410, 354, 1002); break;
+                                case 1: client.Teleport(Places.TwinCity); break;
                                 case 2: client.Teleport(216, 215, 1036); break;
-                                case 3: client.Teleport(410, 354, 1002); break;
+                                case 3: client.Teleport(Places.TwinCity); break;
                                 // case 4: client.Teleport(410, 354, 1002); break;
 
                             }
@@ -1949,9 +1949,9 @@ namespace Qahr.Mobile.Game.MsgNpc
                             client.Player.SendUpdate(stream, client.Player.Money, MsgServer.MsgUpdate.DataType.Money);
                             switch (Option)
                             {
-                                case 1: client.Teleport(410, 354, 1002); break;
+                                case 1: client.Teleport(Places.TwinCity); break;
                                 case 2: client.Teleport(216, 215, 1036); break;
-                                case 3: client.Teleport(410, 354, 1002); break;
+                                case 3: client.Teleport(Places.TwinCity); break;
                                 // case 4: client.Teleport(410, 354, 1002); break;
 
                             }
@@ -1995,7 +1995,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                                 default:
                                     {
 
-                                        client.Teleport(410, 354, 1002);
+                                        client.Teleport(Places.TwinCity);
                                         break;
                                     }
                                 case 1000:
@@ -2069,7 +2069,7 @@ namespace Qahr.Mobile.Game.MsgNpc
                                 default:
                                     {
 
-                                        client.Teleport(410, 354, 1002);
+                                        client.Teleport(Places.TwinCity);
                                         break;
                                     }
                                 case 1000:

@@ -179,7 +179,7 @@ namespace Qahr.Mobile.Unanswered.B5
                     client.Send(outp);
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ 2227 CMsgData
@@ -205,7 +205,7 @@ namespace Qahr.Mobile.Unanswered.B5
                     client.Send(outp);
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ 2151 CMsgStatisticActive
@@ -226,7 +226,7 @@ namespace Qahr.Mobile.Unanswered.B5
                 var reply = HandleStatisticActive(client.Player.UID, stream.ProtoBufferDeserialize(new B5StatisticActivePB()));
                 if (reply != null) SendProto(client, MsgStatisticActive, reply);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ 2430 CMsgInnerWebPage
@@ -257,7 +257,7 @@ namespace Qahr.Mobile.Unanswered.B5
                     return l.Substring(sp + 1).Trim().Replace("{uid}", uid.ToString());
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
             return null;
         }
 
@@ -270,7 +270,7 @@ namespace Qahr.Mobile.Unanswered.B5
                 var reply = HandleInnerWebPage(client.Player.UID, stream.ProtoBufferDeserialize(new B5InlinePagePB()));
                 if (reply != null) SendProto(client, MsgInnerWebPage, reply);
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } }
+            catch (Exception e) { MyConsole.SaveException(e); }
         }
 
         // ------------------------------------------------------------------ no-ops (client expects no reply)

@@ -32,7 +32,7 @@
 - 50 Moon Points للبوصلة، و4 خانات للوحوش، و9 شموس.
 - رينج البونص 100-500.
 
-**مشتق** (كله في `Infinity[DB]\MidAutumnReunion2022\midautumnreunion2022.json` ومكتوب جنبه "DERIVED"):
+**مشتق** (كله في `Data\MidAutumnReunion2022\midautumnreunion2022.json` ومكتوب جنبه "DERIVED"):
 - **الخريطة 12176:** مفيش اسم لـ Illusion Realm في الكلاينت. 12176 هي doc `2019midaut_new` اللي من غير اسم، في بلوك 2022 جنب MoonPalace 12170/12227. نقطة الدخول هي نص الخريطة (120,120)، ومشيت عليها بالـ DMap.
 - **أشكال الوحوش** (`monsters\*.ini`): مفيش شكل رسمي، فاخترت بالموضوع:
 

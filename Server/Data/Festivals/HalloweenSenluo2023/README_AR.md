@@ -24,7 +24,7 @@
    - Macabre Treasury: متجر بـ Macabre Coin، وهو `rewards.json`.
    - الرانكنج.
    - استلام صندوق الرانكنج (Local No.1 … No.7-10) من يوم 6 نوفمبر.
-5. **الصناديق بتتفتح** (41 صندوق، `Infinity[DB]\HalloweenSenluo2023\boxes.json`). المحتوى من نص الأيتم الرسمي، زي:
+5. **الصناديق بتتفتح** (41 صندوق، `Data\HalloweenSenluo2023\boxes.json`). المحتوى من نص الأيتم الرسمي، زي:
    - Xuanyuan Box = 2 +3 Stone لمدة 5 أيام و20 Ginseng Fruit.
    - Iron / Silver / Gold Box = 320 / 1280 / 5120 عملة ونقطة.
 6. **لو الشنطة مليانة:** الجايزة بتتحفظ وبتوصلك أول ما تفتح الشباك وفيه مكان.
@@ -43,7 +43,7 @@
 - **خرايط القاعات:** 12290 / 12286 / 12285 / 12292، وMighty Lord على 12283. دول من البلوك الرسمي 12275-12292 ("内围 挑战")، بس توزيعهم على القاعات مشتق. 12275 و12288 متسابين عشان السيرفر بيستخدمهم.
 - **شكل كل الوحوش (lookface):** متاخد من وحوش السيرفر اللي في نفس الموضوع. Black Succubus والـ relics والـ Counts وMighty Lord ملهمش صف في `monster.dat`، فالستاتس بتاعتهم مشتقة من قالب اللفل.
 - **مكان Count Dracula.**
-- **كل الأرقام** في `Infinity[DB]\HalloweenSenluo2023\config.json` (ومكتوب جنب كل رقم إنه derived): أسعار الـ CPs، والـ flames بتاعة العدّية، ونسب الجثث والمفتاح، ونسبة الختم، وأيام فتح القاعات، و5% تقدّم، وأوزان الصناديق، وأسعار الخزنة.
+- **كل الأرقام** في `Data\HalloweenSenluo2023\config.json` (ومكتوب جنب كل رقم إنه derived): أسعار الـ CPs، والـ flames بتاعة العدّية، ونسب الجثث والمفتاح، ونسبة الختم، وأيام فتح القاعات، و5% تقدّم، وأوزان الصناديق، وأسعار الخزنة.
 - **جوايز القاعات على مستوى السيرفر:** Wedding / Rose / Wings / Gold Box.
 - **صندوق Mighty Lord:** Iron لحد L3، وSilver لحد L6، وGold بعد كده.
 
@@ -65,4 +65,4 @@
 ## الكود
 - `Base\HalloweenSenluo2023\`: الملفات `HsKit.cs` و`HsData.cs` و`HsZones.cs` و`HsBoxes.cs` و`HalloweenSenluo2023Ui.cs`.
 - **الهوكات:** `LuaPush` (10311، كان موجود)، و`Game\MsgNpc\Procesor.cs` (سطر واحد)، و`MY System\MsgItem\MsgItemUsuagePacket.cs` (سطر واحد).
-- **الحالة:** `Infinity[DB]\HalloweenSenluo2023\players.json`.
+- **الحالة:** `Data\HalloweenSenluo2023\players.json`.

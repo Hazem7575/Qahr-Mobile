@@ -1,5 +1,5 @@
 {
- "_readme": "[Poker 2026-10-14] New Texas Hold'em config. 'official' = copied from the client (ini/luacfg newtexas.lua NewTexasTableList) or the official server tables in Infinity[DB]\newtexas_*.txt. 'derived' = not in any client/server data, chosen by us.",
+ "_readme": "[Poker 2026-10-14] New Texas Hold'em config. 'official' = copied from the client (ini/luacfg newtexas.lua NewTexasTableList) or the official server tables in Data\newtexas_*.txt. 'derived' = not in any client/server data, chosen by us.",
  "enabled": true,
  "cash": {
   "_levels": "official: client NewTexasTableList (silver buy-in range; bet_unit = big blind)",
@@ -195,7 +195,7 @@
   "_addTime": "addTimeMaxPerHand official (client lua GetAddTimeTimes = 2); cost DERIVED (silver = N big blinds)"
  },
  "sng": {
-  "_readme": "Sit & Go. Races/buy-ins/blind seconds/return rate/prizes/starting chips are OFFICIAL from Infinity[DB]\newtexas_sng_*.txt; maxPlayers 5 / minPlayers 3 official from client lua newtexas_sng. Blind schedule starts at newtexas_sng_stage row 1 for every race (DERIVED: stage_index mapping not recoverable). enabledRaces: 31-36 normal Texas; 37-42 'crazy' and 49-54 unknown variant are off; 43-48 Omaha (variant column 2, medium confidence) off by default.",
+  "_readme": "Sit & Go. Races/buy-ins/blind seconds/return rate/prizes/starting chips are OFFICIAL from Data\newtexas_sng_*.txt; maxPlayers 5 / minPlayers 3 official from client lua newtexas_sng. Blind schedule starts at newtexas_sng_stage row 1 for every race (DERIVED: stage_index mapping not recoverable). enabledRaces: 31-36 normal Texas; 37-42 'crazy' and 49-54 unknown variant are off; 43-48 Omaha (variant column 2, medium confidence) off by default.",
   "enabledRaces": [
    31,
    32,
@@ -215,7 +215,7 @@
   "expPerWin": 10
  },
  "mtt": {
-  "_readme": "MTT. OFFICIAL from Infinity[DB]\newtexas_mtt_*.txt: Gold (31, 20,000 entry, daily 09:00-12:00) and Platinum (32, 200,000, 13:00/14:00), 100,000 start chips, 120 s levels, first blind row, min 50 / max 1000 players, 90% return, guarantee 25M / 100M, prize shares (type 4 rows = 1/10000 of the pool, 'up to rank'). DERIVED: SB = BB/2 and no ante, even split of a share between the ranks a row covers, table balancing, a cancelled game is refunded at once (official text says via mail), the 'honorGuarantee' switch, minPlayersOverride (0 = official).",
+  "_readme": "MTT. OFFICIAL from Data\newtexas_mtt_*.txt: Gold (31, 20,000 entry, daily 09:00-12:00) and Platinum (32, 200,000, 13:00/14:00), 100,000 start chips, 120 s levels, first blind row, min 50 / max 1000 players, 90% return, guarantee 25M / 100M, prize shares (type 4 rows = 1/10000 of the pool, 'up to rank'). DERIVED: SB = BB/2 and no ante, even split of a share between the ranks a row covers, table balancing, a cancelled game is refunded at once (official text says via mail), the 'honorGuarantee' switch, minPlayersOverride (0 = official).",
   "enabled": true,
   "enabledRaces": [
    31,

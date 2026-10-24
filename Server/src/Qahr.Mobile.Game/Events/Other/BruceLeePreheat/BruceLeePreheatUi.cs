@@ -20,7 +20,7 @@
 //  no countdown (Peach Village is not on this server).
 //  NOT on this server (system message, nothing granted or taken): Beast Trials (Wind Plain / Sea of Sinking Ship /
 //  Zhenwu Temple instances), 7-Day Gift claiming, Celestial Pool wishes (Dragon Scales), Peach Village.
-//  Config (optional): Infinity[DB]\BruceLeePreheat\bruceleepreheat.json {festival, minLevel}.
+//  Config (optional): Data\BruceLeePreheat\bruceleepreheat.json {festival, minLevel}.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10127), tagged [BruceLeePreheat 2026-10-14].
 // ============================================================================
@@ -44,7 +44,7 @@ namespace Qahr.Mobile.BruceLeePreheat
             public int MinLevel = 80;// tXiaoLongPreheat_DelText[105][6]
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "BruceLeePreheat", "bruceleepreheat.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "BruceLeePreheat", "bruceleepreheat.json"); } }
         public static Config Cfg
         {
             get

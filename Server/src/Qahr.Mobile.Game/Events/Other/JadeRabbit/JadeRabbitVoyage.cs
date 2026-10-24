@@ -17,7 +17,7 @@
 //    rewards   exploration preview RewardPreviewData[150137] (Plenilune/Crescent Gems, Dewy Beauty Fragment, ...).
 //    rules     [Sys][1] "Please return to Twin City first." [Sys][2] lack of items, [Sys][4] area already completed.
 //  Story quests: the first ending of areas 1/2/6 continues on the area map (quests 8066/8067/8073, JadeRabbitUi.Goto).
-//  DERIVED (Infinity[DB]\JadeRabbit\voyage.json): success chance, points per step, reward amounts and weights, the hidden
+//  DERIVED (Data\JadeRabbit\voyage.json): success chance, points per step, reward amounts and weights, the hidden
 //  ending chance, the ending rewards (the client receives them from the server).
 //
 //  Hook: Base\MidAutumn2024\LunarVoyage.cs (msg 10459 callbacks), no new hook line.
@@ -68,7 +68,7 @@ namespace Qahr.Mobile.JadeRabbit
         }
         static Config _cfg; static string _stamp;
         public static Config CfgOverride;
-        static string DataDir { get { return Path.Combine(Program.ServerConfig.DbLocation, "JadeRabbit"); } }
+        static string DataDir { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "JadeRabbit"); } }
         static string CfgFile { get { return Path.Combine(DataDir, "voyage.json"); } }
         public static Config Cfg
         {

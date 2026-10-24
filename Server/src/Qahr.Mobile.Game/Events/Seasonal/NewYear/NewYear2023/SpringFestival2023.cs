@@ -15,10 +15,10 @@
 //    wishes    SpringFestival2023Main_*: DlgValentinesDayMainUI DlgID 1329 (SpringFestival2023Wish.cs).
 //    points    New Year Points = 32 per wish (official DrawInfo), Score of the window.
 //  Official data: luaUiRes[1329], Dialog_Info 1329-other, valentinesdayinfo 1329 tables, Server_Key, itemtype texts.
-//  Derived (config Infinity[DB]\NewYear2023\springfestival2023.json): wheel weights, stage thresholds, class-card drop
+//  Derived (config Data\NewYear2023\springfestival2023.json): wheel weights, stage thresholds, class-card drop
 //  chance / daily cap, class reward, NPC spots that the client has no data for. See Festivals\LunarNewYear2023\README_AR.md.
 //
-//  State per character: Infinity[DB]\NewYear2023\players.json (SpringStore, saved before any grant).
+//  State per character: Data\NewYear2023\players.json (SpringStore, saved before any grant).
 //  Hooks: LuaPush.HandleCallback (one tagged line -> SpringHooks.OnLua), Procesor (SpringHooks.OnNpc / OnItemDialog),
 //         MsgItemUsuagePacket.UseItem (SpringHooks.OnUse), MonsterRole.Dead (SpringHooks.OnKill).
 // ============================================================================
@@ -78,7 +78,7 @@ namespace Qahr.Mobile.NewYear2023
             public uint PacketSilver = 3;    // official "You gave out 3 Silver"
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "NewYear2023", "springfestival2023.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "NewYear2023", "springfestival2023.json"); } }
         public static Config Cfg
         {
             get

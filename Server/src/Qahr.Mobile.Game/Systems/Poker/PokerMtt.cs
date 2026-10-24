@@ -1,5 +1,5 @@
 // [Poker 2026-10-14] New Texas MTT (multi-table tournaments).
-// Official data (read-only): Infinity[DB]\newtexas_mtt_race.txt (Gold 31 / Platinum 32: entry cost, start stack,
+// Official data (read-only): Data\newtexas_mtt_race.txt (Gold 31 / Platinum 32: entry cost, start stack,
 // blind level seconds, daily HHMM schedule, return rate, guarantee, first blind row), newtexas_mtt_type.txt (min/max
 // players), newtexas_mtt_stage.txt (big blind ladder), newtexas_mtt_prize.txt (prize table: type 4 = share of the pool in
 // 1/10000, by "up to rank").

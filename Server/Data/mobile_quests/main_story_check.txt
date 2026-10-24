@@ -1,4 +1,4 @@
-﻿# QahrMobile: main-story steps with a monster goal (written 2026-10-23 22:10:52 by MobileQuestStory.cs)
+﻿# QahrMobile: main-story steps with a monster goal (written 2026-10-24 17:05:30 by MobileQuestStory.cs)
 # id	name	target	count	npc map,x,y	engine objectives	problems	nearest spawn (map x,y distance)
 13513	Pheasant	Pheasant	3	1002 504,389	Kill 3 x Pheasant [slot 1]		1002 554,349 d=50
 13517	Class Skill	Pheasant	5	1002 441,379	Kill 5 x Pheasant [slot 1]		1002 524,472 d=93
@@ -10,7 +10,7 @@
 13547	Kill Monsters	Apparition	5	1002 139,546	Kill 5 x Apparition [slot 1]		1002 176,585 d=39
 13552	Suppress Bandits	Marauder	5	1002 620,389	Kill 5 x Marauder [slot 1]		1002 620,389 d=0
 13912	Strength Certification	LieutenantChen	1	1002 452,451	Talk to LieutenantChen (npc 32287) [slot 1]		-
-13913	Strength Certification	Nightmare	1	1002 452,451	Kill 1 x Nightmare [slot 1]		1002 444,457 d=8
+13913	Strength Certification	Nightmare	1	1002 452,451	Kill 1 x Nightmare [slot 1]		1002 444,500 d=49
 13562	Suppress Bandits	Bandit	2	1011 155,241	Kill 2 x Bandit [slot 1]		1011 237,204 d=82
 13567	Eliminate Careerist	Careerist	2	1011 155,241	Kill 2 x Careerist [slot 1]		1011 124,291 d=50
 13895	Eliminate Careerist	Careerist	3	1011 155,241	Kill 3 x Careerist [slot 1]		1011 124,291 d=50
@@ -20,11 +20,11 @@
 13575	Unification Plan II	BanditL33	5	1011 155,241	Kill 5 x BanditL33 [slot 1]		1011 135,350 d=109
 13577	Clear Hideout	Bandits	4	1011 308,429	Kill 4 x Bandits [slot 1]		1011 295,424 d=13
 13584	Turmoil	Bandit	5	1002 538,476	Kill 5 x Bandit [slot 1]		1002 583,478 d=45
-13958	Twilight Towers	DarkTower	1	1002 441,379	Kill 1 x DarkTower [slot 1]		1002 523,308 d=82
+13958	Twilight Towers	DarkTower	1	1002 441,379	Kill 1 x DarkTower [slot 1]		1002 538,286 d=97
 13761	Collect Materials	EnigmaSerpent	5	12339 232,229	Kill 5 x EnigmaSerpent [slot 1] | Kill 5 x EnigmaFlyer [slot 2]		12339 232,229 d=0
 13930	Enigma Domains	Kill 3 Monsters	3	1002 441,379	Scripted step (engine can't judge): Go to [lua Kill 3 Monsters,</F>ClientTaskTemplate_QuestinfoFunc</N>13930</N>2407</N>5] in Enigma Domains[chk_quest 13930,1,1,3]	scripted step: Go to in Enigma Domains	-
-13596	Mystery	Bandit	6	1002 383,346	Kill 6 x Bandit [slot 1]		1002 470,450 d=104
-13969	Twilight Towers	DarkTower	2	1002 480,344	Kill 2 x DarkTower [slot 1]		1002 523,308 d=43
+13596	Mystery	Bandit	6	1002 383,346	Kill 6 x Bandit [slot 1]		1002 583,478 d=200
+13969	Twilight Towers	DarkTower	2	1002 480,344	Kill 2 x DarkTower [slot 1]		1002 538,286 d=58
 13935	Mutant Kelpie	MutantKelpie	1	12330 51,59	Kill 1 x MutantKelpie [slot 1]		12330 51,59 d=0
 13608	Mutant Kelpie	MutantKelpie	1	12330 51,59	Kill 1 x MutantKelpie [slot 1]		12330 51,59 d=0
 13618	Family	Bandit	3	1002 313,697	Kill 3 x Bandit [slot 1] | Kill 2 x Marauder [slot 2]		1002 329,701 d=16
@@ -37,7 +37,7 @@
 13860	Clear Obstacles	Monsters	8	12331 596,618	Scripted step (engine can't judge): Clear [lua Monsters,</F>ClientTaskTemplate_QuestinfoFunc</N>13860][chk_quest 13860,1,1,8]	scripted step: Clear	-
 13657	Kill Demon	BloodDemon	1	12331 715,744	Kill 1 x BloodDemon [slot 1]		12331 715,744 d=0
 13667	Escort	Haka	1	1002 190,543	Kill 1 x Haka [slot 1]		12338 99,77 (other map)
-13677	Travel Together	Demon	5	1002 455,374	Kill 5 x Demon [slot 1]		1002 420,455 d=81
+13677	Travel Together	Demon	5	1002 455,374	Kill 5 x Demon [slot 1]	finish NPC 32364 is not placed (Npcs.txt)	1002 382,436 d=73
 13685	Break and Stop	MagicCrystal	1	1020 682,599	Talk to MagicCrystal (npc 32370) [slot 1]		-
 13896	Break and Stop	MagicCrystal	1	1020 727,591	Talk to MagicCrystal (npc 32371) [slot 1]		-
 13897	Break and Stop	MagicCrystal	1	1020 815,554	Talk to MagicCrystal (npc 32372) [slot 1]		-

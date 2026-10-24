@@ -17,4 +17,4 @@
 - الـ NPC الرسمي Sword Deity (33197) وخريطة Vault Palace مش موجودين على السيرفر.
 
 ## مشتق (derived)
-- `Effect=1` (نور السيف بتاع أول مرحلة) في بيانات فتح الشباك، لأن محدش بيشكّل السيف هنا. ممكن يتغيّر من `Infinity[DB]\QixiInterplane2024\qixiinterplane2024.json` (`swordEffect` 1-3، اختياري).
+- `Effect=1` (نور السيف بتاع أول مرحلة) في بيانات فتح الشباك، لأن محدش بيشكّل السيف هنا. ممكن يتغيّر من `Data\QixiInterplane2024\qixiinterplane2024.json` (`swordEffect` 1-3، اختياري).

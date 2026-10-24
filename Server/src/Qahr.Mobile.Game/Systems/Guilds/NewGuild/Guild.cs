@@ -510,7 +510,7 @@ namespace Qahr.Mobile.Role.Instance
         }
         public static bool AllowCreateGuild(string Name)
         {
-            if (!Program.NameStrCheck(Name))
+            if (!BaseFunc.NameStrCheck(Name))
                 return false;
             foreach (var nname in ChangeNameRecords.Values)
                 if (nname == Name)

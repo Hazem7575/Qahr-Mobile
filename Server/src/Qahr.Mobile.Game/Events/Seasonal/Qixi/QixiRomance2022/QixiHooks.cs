@@ -61,7 +61,7 @@ namespace Qahr.Mobile.QixiKit
                     return true;
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return true; }
+            catch (Exception e) { MyConsole.SaveException(e); return true; }
             return false;
         }
 
@@ -77,7 +77,7 @@ namespace Qahr.Mobile.QixiKit
                     return QixiRomance2022Ui.UseItem(c, item, stream);
                 }
             }
-            catch (Exception e) { try { MyConsole.SaveException(e); } catch { } return true; }
+            catch (Exception e) { MyConsole.SaveException(e); return true; }
             return false;
         }
     }

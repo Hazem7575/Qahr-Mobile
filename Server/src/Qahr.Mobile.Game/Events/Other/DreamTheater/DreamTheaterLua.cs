@@ -126,7 +126,7 @@ namespace Qahr.Mobile.DreamTheater
             }
             catch (Exception e)
             {
-                try { MyConsole.SaveException(e); } catch { }
+                MyConsole.SaveException(e);
                 return true;
             }
         }

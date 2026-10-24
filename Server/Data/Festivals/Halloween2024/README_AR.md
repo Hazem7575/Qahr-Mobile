@@ -22,4 +22,4 @@
 ## مشتق (derived)
 - الرسايل المؤدبة بتاعة "مش مفتوح على السيرفر".
 - `Task={0,0}` و`Reds={}`.
-- الإعدادات: `Infinity[DB]\Halloween2024\halloween2024.json` (minLevel 80 رسمي).
+- الإعدادات: `Data\Halloween2024\halloween2024.json` (minLevel 80 رسمي).

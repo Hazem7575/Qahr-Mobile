@@ -1,7 +1,7 @@
 // ============================================================================
 //  [WhiteSnakeLegend 2026-10-14] The official Spring Festival 2025 "Bless All" window (client msg 10527
 //  tMsg_Info["NewYear25"], Fgui Fgui_25ChunJie_Main, top-bar button FGUI_ActivityMenu["150235"]).
-//  Shown while the festival WhiteSnakeLegend (Questinfo 8350-8358, Infinity[DB]\Festivals\WhiteSnakeLegend) runs.
+//  Shown while the festival WhiteSnakeLegend (Questinfo 8350-8358, Data\Festivals\WhiteSnakeLegend) runs.
 //
 //  Official client (luaui\fairygui\window\fgui_25chunjie_main, decrypted):
 //    click   10527 CJMainTask2024_MainView -> Fgui_25ChunJie_Main_OpenView|{Code=200,Data={ActList={4 x {State 0 not open /
@@ -14,7 +14,7 @@
 //  the next quests follow on their own (quests.json next + autoAccept).
 //  NOT on this server (answered with a system message, nothing invented): entries 2-4, the draw, points, Blessing Pool,
 //  the White Snake awakening (Radiant Pearls). Score / RewardScore are 0, IsWakeUp 0.
-//  Config (derived values): Infinity[DB]\WhiteSnakeLegend\whitesnakelegend.json.
+//  Config (derived values): Data\WhiteSnakeLegend\whitesnakelegend.json.
 //
 //  Hook: Base\LuaUi\LuaPush.cs HandleCallback (msg 10527), tagged.
 // ============================================================================
@@ -44,7 +44,7 @@ namespace Qahr.Mobile.WhiteSnakeLegend
             public HashSet<uint> TeleportFrom = new HashSet<uint> { 1002, 1000, 1011, 1015, 1020, 1003905 };
         }
         static Config _cfg; static string _stamp;
-        static string CfgFile { get { return Path.Combine(Program.ServerConfig.DbLocation, "WhiteSnakeLegend", "whitesnakelegend.json"); } }
+        static string CfgFile { get { return Path.Combine(global::Qahr.Mobile.Festivals.FestivalLoader.Root, "WhiteSnakeLegend", "whitesnakelegend.json"); } }
         public static Config Cfg
         {
             get

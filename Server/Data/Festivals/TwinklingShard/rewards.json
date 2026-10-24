@@ -1,5 +1,5 @@
 {
-  "_note": "No exchanges: the 15 quests have no Questinfo Prize. The only official reward of the Shard Search (Wuqu Snow Box for all 5 shards) is claimed in the Twinkling Fest window (Base\\TwinklingShard\\TwinklingShardUi.cs, config Infinity[DB]\\TwinklingShard\\twinklingshard.json). Greetings only.",
+  "_note": "No exchanges: the 15 quests have no Questinfo Prize. The only official reward of the Shard Search (Wuqu Snow Box for all 5 shards) is claimed in the Twinkling Fest window (Base\\TwinklingShard\\TwinklingShardUi.cs, config Data\\TwinklingShard\\twinklingshard.json). Greetings only.",
   "npcText": {
     "8862001": { "en": "The fires of Stellar Spire are out... we need hope.", "ar": "نار برج النجوم انطفت... محتاجين أمل." },
     "8862006": { "en": "The Twinkling Shard (Hope) glows softly.", "ar": "شظية التلألؤ (الأمل) بتنوّر بهدوء." },

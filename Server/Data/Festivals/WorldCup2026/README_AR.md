@@ -33,7 +33,7 @@
 - **13319:** محتاج إضافة `2026worldcup_new` لـ `GameMap.dat` بتاع client_test.
 
 ## الكونفيج
-`Infinity[DB]\WorldCup2026\worldcup2026.json`:
+`Data\WorldCup2026\worldcup2026.json`:
 - `minLevel` (80 رسمي).
 - `secondHalfTime` (رسمي).
 - `firstHalfTime` (**مستنتج**).
